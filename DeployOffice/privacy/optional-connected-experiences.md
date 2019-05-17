@@ -1,0 +1,95 @@
+---
+title: Prezentare generală a experiențelor conectate opționale în Office
+ms.author: danbrown
+author: DHB-MSFT
+manager: laurawi
+ms.audience: ITPro
+ms.topic: reference
+ms.service: o365-proplus-itpro
+localization_priority: Priority
+ms.collection: Ent_O365
+ms.custom:
+- Ent_Office_ProPlus
+- Ent_Office_Privacy
+description: Le oferă administratorilor Office informații despre experiențe conectate opționale, inclusiv condițiile de utilizare care se aplică.
+hideEdit: true
+ms.openlocfilehash: 217fd5b2aa29ad44c2caeea394d4cdf6dc8a824c
+ms.sourcegitcommit: e9c35e7cb930d13383817e69ef019b7cd6b06f2a
+ms.translationtype: HT
+ms.contentlocale: ro-RO
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33484398"
+---
+# <a name="overview-of-optional-connected-experiences-in-office"></a>Prezentare generală a experiențelor conectate opționale în Office
+
+Dacă aveți un cont de la locul de muncă sau de la școală, este posibil ca administratorul organizației dvs. să vă fi oferit capacitatea de a utiliza unul sau mai multe servicii cloud (denumite și „experiențe conectate opționale”) în timp ce utilizați aplicațiile Office 365 ProPlus. Aceste servicii cloud sunt opționale. Depinde de dvs. dacă le utilizați sau nu. Ele vă sunt puse la dispoziție conform condițiilor din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). În unele cazuri, se pot aplica și alte condiții. Acest articol enumeră serviciile cloud, explică condițiile de utilizare și descrie cum le puteți activa sau dezactiva în orice moment.
+
+> [!NOTE]
+> Dacă sunteți administrator, consultați [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md) pentru a afla cum să le furnizați sau să le restricționați utilizatorilor capacitatea de a utiliza experiențe conectate opționale.
+
+### <a name="if-you-use-these-services-what-terms-of-use-do-you-need-to-agree-to"></a>Dacă utilizați aceste servicii, cu ce condiții de utilizare trebuie să fiți de acord?
+
+Este important să știți că aceste servicii cloud opționale nu sunt acoperite de licența organizației dvs. de Microsoft. În schimb, vă sunt licențiate direct. Utilizând aceste servicii cloud opționale sunteți, de asemenea, de acord cu condițiile din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). În funcție de serviciile pe care le utilizați, se pot aplica și alte condiții. În majoritatea cazurilor, nu se percepe nicio taxă la utilizarea acestor servicii. Dacă se aplică totuși o taxă (cum s-ar putea întâmpla în cazul unor [Programe de completare Office](https://support.office.com/article/16278816-1948-4028-91E5-76DCA5380F8D) disponibile pentru descărcare prin Magazinul Office), veți clar informat înainte de utilizare.
+
+## <a name="experiences-that-rely-on-bing"></a>Experiențe care se bazează pe Bing
+
+Unele servicii cloud sunt pe platformă Microsoft Bing. Microsoft Bing este o firmă separată de Office 365 ProPlus și este gestionată independent de Office 365 ProPlus de către Microsoft. Experiențele pe care le susține în aplicațiile Office 365 ProPlus sunt: [Hărți 3D](https://support.office.com/article/6b56a50d-3c3e-4a9e-a527-eea62a387030), [Diagrame hartă](https://support.office.com/article/f2cfed55-d622-42cd-8ec9-ec8a358b593b), [Inserare imagini online](https://support.office.com/article/3C51EDF4-22E1-460A-B372-9329A8724344), [Inserare modele 3D online](https://support.office.com/article/ec5feb79-b0af-47f6-a885-151fcc88ac0a), [Pornire rapidă PowerPoint](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224), [Cercetare (Researcher)](https://support.office.com/article/1728f286-8702-4d72-8169-ab7677ca0e1f) și [Căutare inteligentă](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044). Aceste experiențe vă sunt licențiate conform condițiilor din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și sunt acoperite de [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). Toate interogările de căutare pe care le furnizați organizației Office 365 ProPlus în timp ce utilizați aceste servicii sunt trimise către Microsoft Bing. Acestea nu sunt legate pentru dvs. de organizația Bing.
+
+## <a name="experiences-that-rely-on-linkedin"></a>Experiențe care se bazează pe LinkedIn
+
+[Asistent pentru CV](https://support.office.com/article/444ff6f0-ef74-4a9c-9091-ffd7a9d1917a) oferă o experiență în Word, pe platformă LinkedIn. Acesta transmite idei pentru CV-ul dvs. LinkedIn este o altă firmă deținută de Microsoft. Dacă utilizați Asistentul pentru CV, [Acordul de utilizator și politica de confidențialitate LinkedIn](https://www.linkedin.com/legal/user-agreement) se aplică alături de [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). Toate interogările de căutare pe care le furnizați organizației Office 365 ProPlus în timp ce utilizați aceste servicii sunt trimise către LinkedIn. Acestea nu sunt legate pentru dvs. de organizația LinkedIn. Nu trebuie să aveți un cont LinkedIn pentru a utiliza acest serviciu cloud.
+
+Notă: Setarea de confidențialitate descrisă mai jos nu controlează experiențe care vă solicită să vă conectați contul LinkedIn la contul Microsoft de la locul de muncă sau de la școală. Pentru a controla aceste tipuri de experiențe (cum ar fi informațiile LinkedIn dintr-o [fișă de profil](https://support.office.com/article/e80f931f-5fc4-4a59-ba6e-c1e35a85b501) în Outlook), consultați [Conectați-vă la conturile LinkedIn și Microsoft](https://support.office.com/article/dc81cc70-4d64-4755-9f1c-b9536e34d381).
+
+## <a name="experiences-that-rely-on-other-microsoft-owned-online-services-andor-services-owned-by-third-parties"></a>Experiențe care se bazează pe alte servicii online deținute de Microsoft și/sau servicii deținute de terți
+
+### <a name="office-store"></a>Magazinul Office 
+
+Atunci când utilizați Magazinul Office, utilizarea site-ului magazinului propriu-zis este licențiată prin [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). Cu toate acestea, toate [Programele de completare Office](https://support.office.com/article/16278816-1948-4028-91E5-76DCA5380F8D) pe care le descărcați prin Magazinul Office sunt acoperite de condițiile de utilizare ale furnizorului programului de completare. Acestea pot fi diverse organizații sau firme, iar unele pot chiar percepe o taxă de utilizare. Va trebui să verificați permisiunile, angajamentul de respectare a confidențialității și clauzele licenței pentru fiecare program de completare pentru a afla ce condiții se aplică și pentru a decide dacă sunteți acord cu condițiile de utilizare oferite de organizație. 
+
+### <a name="insert-online-video"></a>Inserarea unui fișier video online
+
+[Inserarea unui fișier video online](https://support.office.com/article/8340EC69-4CEE-4FE1-AB96-4849154BC6DB) vă permite să inserați fișiere video în document. Experiența Inserarea unui fișier video online se supune condițiilor din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). Dacă accesați conținutul din surse terțe, se pot aplica condiții suplimentare de utilizare. De exemplu, atunci când vă conectați la YouTube, se aplică [condițiile de utilizare](https://www.youtube.com/t/terms) și [angajamentul de respectare a confidențialității](https://policies.google.com/privacy) aferente acestuia. Microsoft poate adăuga și alți furnizori de materiale video în viitor.
+
+### <a name="research"></a>Cercetare
+
+[Cercetare](https://support.office.com/article/b862efc5-9a7b-4f88-a23d-93712d6e4397) se conectează la serviciile cloud pentru a obține rezultate de căutare din dicționar, lexicon, traducere și word. Atunci când utilizați această experiență, aceasta se conectează la servicii deținute de Microsoft în mod implicit și se aplică condițiile din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). Cercetare vă permite să adăugați alți furnizori de servicii. Dacă decideți să utilizați alt furnizor de servicii, se pot aplica condiții suplimentare.
+
+> [!NOTE]
+> Opțiunea Cercetare (Research) din fila Revizuire nu este totuna cu Cercetare (Researcher) din fila Referințe. În versiunile mai noi de Office, pe lângă opțiunea Cercetare (Research) este disponibilă și o experiență denumită Cercetare (Researcher). Cercetare (Researcher) este un serviciu mai nou, pe platformă Bing, iar informații despre acest instrument sunt prezentate mai sus, în [Experiențe care se bazează pe Bing](#experiences-that-rely-on-bing).
+
+### <a name="weather-bar-in-outlook"></a>Bara meteo în Outlook
+
+[Bara meteo](https://support.office.com/article/d11b7532-7c58-489e-8103-5cc5d727b06b) în Outlook afișează prognoza meteo pentru locațiile geografice dorite. În timpul utilizării, Bara meteo în Outlook se conectează la Meteo MSN în mod implicit. MSN este deținut de Microsoft, aplicându-se condițiile din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). Atunci când utilizați Bara meteo cu Meteo MSN, Microsoft nu vă detectează locația, iar orașele pe care doriți să le afișați nu sunt corelate pentru dvs. Puteți să [modificați această setare implicită](https://docs.microsoft.com/office/client-developer/outlook/weather/extending-the-weather-bar-in-outlook) pentru a vă conecta la alți furnizori de servicii meteo. Dacă decideți să apelați la alt furnizor de servicii meteo, va trebui să consultați angajamentul de respectare a confidențialității și clauzele licenței respectivului furnizor pentru a ști ce condiții se aplică.
+
+## <a name="experiences-that-allow-you-to-submit-feedback"></a>Experiențe care vă permit să remiteți feedback
+
+### <a name="help--feedback"></a>Ajutor > Feedback
+
+Atunci când accesați **Ajutor** > **Feedback** și oferiți feedback sau alegeți să răspundeți la una dintre solicitările noastre de anchetă „Ne-ar plăcea să aflăm părerea dvs.” atunci când utilizați o aplicație Office 365 ProPlus, informațiile pe care le furnizați sunt trimise la Microsoft și se aplică condițiile din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). Atunci când remiteți feedbackul utilizând butonul Feedback, există opțiunea de a vă trimite adresa de e-mail și/sau o captură de ecran. Aceste informații nu sunt obligatorii.  
+
+#### <a name="outlook-is-an-exception"></a>Outlook este o excepție
+
+**Ajutor** > **Feedback** în Outlook este diferit de **Ajutor** > **Feedback** în alte aplicații Office 365 ProPlus. Atunci când remiteți feedbackul utilizând **Ajutor** > **Feedback** în Outlook, permiteți ca Microsoft să colecteze jurnale Outlook pentru a remedia probleme potențiale privind performanța. Aceste jurnale pot conține informații personale, cum ar fi numele, adresa de e-mail, conținutul e-mailului dvs. sau termeni de căutare. Acest serviciu vă este furnizat prin licența organizației dvs. cu Microsoft. Prin urmare, dacă alegeți să trimiteți feedback prin butonul Feedback din Outlook, nu trebuie să încheiați un acord separat cu Microsoft, iar setarea de confidențialitate descrisă în acest articol nu se aplică.
+
+### <a name="help--suggest-a-feature"></a>Ajutor > Sugerați o caracteristică
+
+Sugerați o caracteristică este o experiență care vă permite să remiteți idei cu privire la utilizarea Outlook. Sugestiile dvs. sunt furnizate direct într-un serviciu terț denumit UserVoice. Dacă trimiteți ideile utilizând Sugerați o caracteristică, se vor aplica [Condițiile de utilizare a serviciului și politica de confidențialitate ale UserVoice](https://outlook.uservoice.com/tos).
+
+## <a name="how-to-determine-if-your-admin-has-given-you-the-ability-to-use-optional-connected-experiences"></a>Cum stabiliți dacă administratorul dvs. v-a oferit capacitatea de a utiliza experiențe conectate opționale
+
+Pentru a determina dacă administratorul v-a oferit capacitatea de a utiliza experiențe conectate opționale în aplicația dvs. Office 365 ProPlus pe un dispozitiv Windows, accesați **Fișier** > **Cont** > **Confidențialitate cont** și selectați **Gestionare setări**. Dacă administratorul nu v-a oferit control, se va afișa mesajul: „Administratorul organizației dvs. vă gestionează setările de confidențialitate și a decis să dezactiveze experiențele conectate opționale”.
+
+## <a name="your-privacy-settings"></a>Setări de confidențialitate
+
+Dacă administratorul v-a oferit capacitatea de a utiliza experiențe conectate opționale în aplicația dvs. Office 365 ProPlus pe un dispozitiv Windows, accesați **Fișier** > **Cont** > **Confidențialitate cont** și selectați **Gestionare setări** pentru a vă gestiona setările în orice moment. Când sunt activate, veți avea opțiunea de a utiliza serviciile descrise în acest articol atunci când doriți să le utilizați. Când sunt dezactivate, acestea nu vor fi accesibile.
+
+## <a name="diagnostic-data"></a>Date de diagnosticare
+
+Atunci când utilizați un serviciu cloud opțional descris în acest articol, Microsoft poate colecta date de diagnosticare (cum ar fi datele de utilizare, erorile și datele despre performanță) despre performanța experienței în momentul în care ați utilizat-o. Aceste date de diagnosticare pot conține „date personale”, așa cum sunt definite de Articolul 4 din RGPD din Europa.Toate datele de diagnosticare pe care Microsoft le colectează în timpul utilizării aplicațiilor și serviciilor Office 365 ProPlus sunt pseudonimizate, conform definiției din ISO/IEC 365, secțiunea 19944:2017, standard.
+
+
+## <a name="related-topics"></a>Subiecte asociate
+
+- [Prezentare generală a controalelor de confidențialitate pentru Office 365 ProPlus](overview-privacy-controls.md)
+- [Date de serviciu obligatorii pentru Office](required-service-data.md)
