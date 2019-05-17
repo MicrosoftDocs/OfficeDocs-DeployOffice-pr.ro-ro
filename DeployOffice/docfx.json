@@ -1,0 +1,50 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.svg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
+      }
+    ],
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+      "breadcrumb_path": "/deployoffice/breadcrumb/toc.json",
+      "extendBreadcrumb": "true",
+      "bilingual_type": "hover over",
+      "searchScope": ["Deploy Office"],
+      "feedback_system": "None",
+      "hide_comments": true,
+      "feedback_github_repo": "MicrosoftDocs/OfficeDocs-DeployOffice",
+      "feedback_product_url": "https://docs.microsoft.com/de-de/deployoffice/feedback" 
+    },
+    "fileMetadata": {},
+    "template": [],
+    "dest": "OfficeDocs-OfficeProPlus",
+    "markdownEngineName": "markdig"
+  }
+}
