@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorii Office oferă informații despre gestionarea controalelor de confidențialitate în Office 365 ProPlus, utilizând setările de politică.
 hideEdit: true
-ms.openlocfilehash: 096d6a368965ecedcff3807bbbf3e90649eb8562
-ms.sourcegitcommit: 6145cfe372725bedab7bc6a80adab100561f74fd
+ms.openlocfilehash: 069b21632044354afded61ccc9b1d099cd9cda98
+ms.sourcegitcommit: 8dd9721bd618ae6e4d27f2c45c5dc8e3219858ac
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "34106900"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "34250395"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus
 
@@ -85,6 +85,9 @@ Office 365 ProPlus constă din aplicații software client și experiențe conect
 - Permiteți utilizarea de experiențe conectate în Office
 
 Dacă nu utilizați aceste setări de politică, toate experiențele conectate vor fi disponibile. Acest lucru le oferă utilizatorilor dvs. toate caracteristicile și funcționalitățile accesibile prin Office 365 ProPlus. Dar înțelegem că va trebui, probabil, să dezactivați unele experiențe conectate sau chiar pe toate pentru a satisface anumite cerințe ale organizației dvs.
+
+> [!IMPORTANT]
+> În prezent, există o problemă legată de aceste 4 setări de politică pe care ne străduim să le corectăm. Momentan, pentru a dezactiva una dintre aceste setări de politică utilizând instrumentul de Gestionare a politicilor de grup, trebuie să selectați butonul radio **Activat**, apoi să alegeți **Dezactivat** din lista verticală din secțiunea **Opțiuni**. Selectarea butonului radio **Dezactivat** nu va dezactiva aceste setări de politică.
 
 Dacă alegeți să nu le oferiți utilizatorilor dvs. unele tipuri de experiențe conectate, panglica sau comanda meniului pentru acele experiențe conectate se va estompa sau utilizatorii vor primi un mesaj de eroare atunci când încearcă să utilizeze aceste experiențe conectate. În acest caz, la Microsoft nu vor fi trimise [datele de serviciu obligatorii](required-service-data.md) pentru acele experiențe conectate.
 
