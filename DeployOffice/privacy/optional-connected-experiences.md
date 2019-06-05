@@ -3,7 +3,7 @@ title: Prezentare generală a experiențelor conectate opționale în Office
 ms.author: danbrown
 author: DHB-MSFT
 manager: laurawi
-ms.audience: ITPro
+audience: ITPro
 ms.topic: reference
 ms.service: o365-proplus-itpro
 localization_priority: Priority
@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate opționale, inclusiv condițiile de utilizare care se aplică.
 hideEdit: true
-ms.openlocfilehash: 217fd5b2aa29ad44c2caeea394d4cdf6dc8a824c
-ms.sourcegitcommit: e9c35e7cb930d13383817e69ef019b7cd6b06f2a
+ms.openlocfilehash: f1d8c16b7e267d49735814ee9d393c578dbf3c28
+ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33484398"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "34701336"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Prezentare generală a experiențelor conectate opționale în Office
 

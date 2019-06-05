@@ -3,7 +3,7 @@ title: Experiențe conectate în Office
 ms.author: danbrown
 author: DHB-MSFT
 manager: laurawi
-ms.audience: ITPro
+audience: ITPro
 ms.topic: reference
 ms.service: o365-proplus-itpro
 localization_priority: Priority
@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate pentru Office, cum ar fi experiențele care analizează conținut sau experiențele care descarcă conținut online.
 hideEdit: true
-ms.openlocfilehash: 8b3ba855a7f4a6513473011e6d7ca5ed3acc7337
-ms.sourcegitcommit: 894a18676566981183dbe2d78f7466c9bb2c6354
+ms.openlocfilehash: 3b0ac61cf01a588e3af85d1eb83d4b2fd7e8b63e
+ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "33465754"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "34701796"
 ---
 # <a name="connected-experiences-in-office"></a>Experiențe conectate în Office
 

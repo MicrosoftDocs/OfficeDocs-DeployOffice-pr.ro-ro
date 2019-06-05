@@ -3,7 +3,7 @@ title: Utilizați setările de politică pentru a gestiona controale de confiden
 ms.author: danbrown
 author: DHB-MSFT
 manager: laurawi
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: o365-proplus-itpro
 localization_priority: Priority
@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorii Office oferă informații despre gestionarea controalelor de confidențialitate în Office 365 ProPlus, utilizând setările de politică.
 hideEdit: true
-ms.openlocfilehash: a28da8a54ecb37f6fd26576ce2dfb4614521dd19
-ms.sourcegitcommit: c4147043c5e6581d58a6d09edbf95266e67dd796
+ms.openlocfilehash: 5d38a944c7fe0c2c17cb6cd50339908b1cb7ae6e
+ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "34545470"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "34701252"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus
 
