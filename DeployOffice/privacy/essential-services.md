@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre servicii esențiale în Office, cum ar fi Clic și Pornire și Licențiere, și asigură o listă de evenimente și câmpuri de date pentru aceste servicii esențiale.
 hideEdit: true
-ms.openlocfilehash: 81b5ff2e1451f910f2e9695dba488d39d27b7241
-ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
+ms.openlocfilehash: 291ec1b925b021f3d35e504d95649a7bdd34adc0
+ms.sourcegitcommit: 186aae0571f8ef5f62882b4edb10378ee8e42b6e
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34701289"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "34813350"
 ---
 # <a name="essential-services-for-office"></a>Servicii esențiale pentru Office
 
@@ -2717,6 +2717,14 @@ Se colectează următoarele câmpuri:
   - **IdentityChanged** - întotdeauna adevărată. Identitatea s-a modificat.
 
   - **TimerDetectedChange** - dacă modificarea a fost detectată prin metoda ping cu temporizare regulată.
+
+### <a name="officesystemprivacyfallbacktosettingsstore"></a>Office.System.PrivacyFallbackToSettingsStore
+
+Utilizat pentru a determina dacă există erori la citirea setărilor de confidențialitate ale utilizatorului din depozitul Roaming.
+
+Se colectează următoarele câmpuri:
+
+  - **Eticheta-** eticheta de cod care indică ce setare a revenit la depozitul de setări.
 
 ### <a name="officesystemsessiondatao365"></a>Office.System.SessionDataO365
 
