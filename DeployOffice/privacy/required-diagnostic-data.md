@@ -1901,9 +1901,9 @@ Se colectează următoarele câmpuri:
 
   - **Data\_FailureReason:long -** set predefinit de valori privind motivul nereușitei (FileIsCorrupt, BlockedByAntivirus etc.)
 
-  - **Data_FullDownloadRoundTripCount:long -** numărul de trasee dus-întors la server necesare pentru a descărca întregul document.
+  - **Data_FullDownloadRoundTripCount:long -** numărul de trasee dus-întors la server care au fost necesare pentru a descărca întregul document.
   
-  - **Data_IsProtocolRunInIncOpenMode:bool -** a fost protocolul de execuție pentru o descărcare incrementală, care este o descărcare în care s-au descărcat părți ale documentului după o afișare inițială pentru utilizator.
+  - **Data_IsProtocolRunInIncOpenMode:bool -** dacă protocolul a fost executat pentru o descărcare incrementală, care este o descărcare în care s-au descărcat părți ale documentului după o afișare inițială către utilizator.
 
   - **Data\_MethodId:long -** în plan intern, ce linie de cod a fost executată ultima
 
@@ -4121,7 +4121,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_FCreateNewFromTemplate –** este acesta un document nou din șabloane
 
-  - **Data_FErrorAfterDocWinCreation:boolean-**  s-a produs o eroare sau o excepție după ce a fost creată o fereastră de document.
+  - **Data_FErrorAfterDocWinCreation:boolean-**  s-a produs o eroare sau o excepție după ce a fost creată fereastra de document.
 
   - **Data\_FileUrlLocation –** set predefinit de valori privind locul unde este stocat documentul (NetworkShare, LocalDrive, ServerOther etc.)
 
@@ -5225,23 +5225,23 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeperformanceboot"></a>Office.Performance.Boot
 
-Colectat atunci când o aplicație Office este inițializată. Include dacă inițializarea a fost inițiată prin deschiderea unui fișier sau lansarea prin meniul Start, dacă aceasta a fost prima inițializare a aplicației, cantitatea de memorie utilizată de aplicație și dacă a existat o IU de blocare afișată utilizatorului. Utilizat pentru a măsura cât de repede se încarcă aplicațiile Office și cantitatea de memorie utilizată atunci când pornesc, pentru a vă asigura că există o experiență de utilizator acceptabilă.
+Colectat atunci când o aplicație Office este inițializată. Include dacă inițializarea a fost inițiată prin deschiderea unui fișier sau prin lansarea din meniul Start, dacă aceasta a fost prima inițializare a aplicației, cantitatea de memorie utilizată de aplicație și dacă a existat o interfață utilizator de blocare afișată utilizatorului. Utilizat pentru a măsura cât de repede se încarcă aplicațiile Office și cantitatea de memorie utilizată atunci când pornesc, pentru a vă asigura că există o experiență de utilizator acceptabilă.
 
 Se colectează următoarele câmpuri:
 
-  - **ActivationKind** - dacă aplicația a fost pornită prin lansare din meniul Start, prin deschiderea unui fișier sau prin OLE Automation.
+  - **ActivationKind** - dacă aplicația a fost pornită prin lansare din meniul Start, prin deschiderea unui fișier sau prin automatizare OLE.
 
-  - **FirstBoot** – dacă aceasta a fost prima pornire a aplicației.
+  - **FirstBoot** – dacă aceasta a fost prima inițializare a aplicației.
 
   - **InitializationDuration** – durata necesară în microsecunde pentru a inițializa prima dată procesul Office.
 
   - **InterruptionMessageId** – dacă inițializarea a fost întreruptă de o casetă de dialog care solicită introducerea utilizatorului, ID-ul casetei de dialog.
 
-  - **TotalWorkingSetMB** – volumul de memorie în megabaiți din setul de lucru al procesului.
+  - **TotalWorkingSetMB** – volumul de memorie în megabyți din setul de lucru al procesului.
 
-  - **VirtualSetMB** – volumul de memorie în megabaiți din setul virtual al procesului. (Numai MacOS/iOS)
+  - **VirtualSetMB** – volumul de memorie în megabyți din setul virtual al procesului. (Numai MacOS/iOS)
 
-  - **WorkingSetPeakMB** – cel mai mare volum de memorie în megabaiți care a fost vreodată în setul de lucru al procesului până acum.
+  - **WorkingSetPeakMB** – cel mai mare volum de memorie în megabyți care a fost vreodată în setul de lucru al procesului până acum.
 
 #### <a name="officeuxofficeinsidercanshowofficeinsiderslab"></a>Office.UX.OfficeInsider.CanShowOfficeInsiderSlab
 
@@ -5277,11 +5277,11 @@ Se colectează următoarele câmpuri:
   
   - **Data_InsiderLevelNew** – nivelul nou Insider selectat de utilizator.
   
-  - **Data_IsInternalUser** – indică dacă aplicația se execută sub acreditările unui cont @microsoft. com.
+  - **Data_IsInternalUser** – indică dacă aplicația se execută sub acreditările unui cont @microsoft.com.
   
-  - **Data_IsInternalUserInit** – indică dacă codul ar putea determina dacă aplicația se execută sub acreditările unui cont @microsoft.
+  - **Data_IsInternalUserInit** – indică dacă codul ar putea determina dacă aplicația se execută sub acreditările unui cont @microsoft.com.
   
-  - **Data_OpenNewsletterWebpage** – atunci când este activată caracteristica de abonare la newsletter-ul Office Insider, iar utilizatorul comută la un nivel Insider din producție, indică dacă a fost declanșată navigarea în browser la linkul cu abonarea la newsletterul Office Insider.
+  - **Data_OpenNewsletterWebpage** – atunci când este activată caracteristica de abonare la buletinul informativ Office Insider, iar utilizatorul comută la un nivel Insider din producție, indică dacă a fost declanșată navigarea în browser la linkul cu abonarea la buletinul informativ Office Insider.
 
 #### <a name="officevisiosharedvisiofilerender"></a>Office.Visio.Shared.VisioFileRender
 

@@ -26,7 +26,7 @@ ms.locfileid: "33828373"
 
 Microsoft se angajează să vă furnizeze informațiile și controalele de care aveți nevoie pentru a face alegeri privind modul de colectare și de utilizare a datelor dvs. atunci când utilizați Office 365 ProPlus.
 
-Începând cu versiunea 1904 din Office 365 ProPlus (care a fost lansată în canal lunar la 29 aprilie 2019), vă furnizăm controale de confidențialitate noi, actualizate și îmbunătățite pentru următoarele domenii:
+Începând cu versiunea 1904 a Office 365 ProPlus (care a fost lansată în canalul lunar la 29 aprilie 2019), vă furnizăm controale de confidențialitate noi, actualizate și îmbunătățite pentru următoarele domenii:
 - ***Date de diagnosticare*** care sunt colectate și trimise la Microsoft privind software-ul client Office utilizat pe computerele care rulează Windows în organizația dvs.
 - ***Experiențe conectate*** care utilizează funcționalitatea în cloud pentru a vă furniza caracteristici îmbunătățite de Office dvs. și utilizatorilor dvs.
 
