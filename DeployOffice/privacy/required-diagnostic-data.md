@@ -3,7 +3,7 @@ title: Date de diagnosticare obligatorii pentru Office
 ms.author: danbrown
 author: DHB-MSFT
 manager: laurawi
-ms.audience: ITPro
+audience: ITPro
 ms.topic: reference
 ms.service: o365-proplus-itpro
 localization_priority: Priority
@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre datele de diagnosticare obligatorii în Office și le furnizează o listă de evenimente și câmpuri de date.
 hideEdit: true
-ms.openlocfilehash: 9b22b428999c51b46e6f6ce662fad99f5a727b4c
-ms.sourcegitcommit: 6145cfe372725bedab7bc6a80adab100561f74fd
+ms.openlocfilehash: d42f2bd20e3e2169e58d6f5c0a563f1b117ea847
+ms.sourcegitcommit: 186aae0571f8ef5f62882b4edb10378ee8e42b6e
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "34106936"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "34813314"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Date de diagnosticare obligatorii pentru Office
 
@@ -65,6 +65,7 @@ Următorul tabel furnizează o listă de categorii pentru datele de diagnosticar
 | **Utilizarea produselor și a serviciilor**    | [Succesul caracteristicii aplicației](#application-feature-success-subtype)   | Succesul funcționalității aplicației. Limitat la deschiderea și închiderea aplicației și a documentelor, editarea fișierelor și partajarea fișierelor (colaborare). |
 | | [Starea aplicației și inițializare](#application-status-and-boot-subtype)    | Stabilește dacă au avut loc anumite evenimente de caracteristici, cum ar fi pornirea sau oprirea, și dacă respectiva caracteristică rulează.   |
 | | [Configurație accesibilitate Office](#office-accessibility-configuration-subtype)  | Caracteristici de accesibilitate în Office       |
+| | [Confidențialitate](#privacy-subtype)| Setări de confidențialitate în Office|
 | **Performanța produselor și a serviciilor**       | [Ieșire neașteptată a aplicației (cădere)](#unexpected-application-exit-crash-subtype)  | Ieșirile neașteptate ale aplicației și starea aplicației atunci când se întâmplă acest lucru.    |
 |  | [Performanța caracteristicii aplicației](#application-feature-performance-subtype)  | Timpii de răspuns slabi sau performanțele scăzute pentru scenarii precum pornirea aplicației sau deschiderea unui fișier. |
 |  | [Eroare de activitate a aplicației](#application-activity-error-subtype)   | Erorile în funcționalitatea unei caracteristici sau a unei experiențe de utilizator.  |
@@ -971,6 +972,7 @@ Iată subtipurile de date din această categorie:
 - [Succesul caracteristicii aplicației](#application-feature-success-subtype)
 - [Starea aplicației și inițializare](#application-status-and-boot-subtype)
 - [Configurație accesibilitate Office](#office-accessibility-configuration-subtype)
+- [Confidențialitate](#privacy-subtype)
 
 
 ### <a name="application-feature-success-subtype"></a>*Subtip privind succesul caracteristicii aplicației*
@@ -4000,8 +4002,12 @@ Se colectează următoarele câmpuri:
   - **Data\_CheckRequiredPartsLoaded –** durata executării metodei CheckRequiredPartsLoaded în milisecunde
 
   - **Data\_CheckWebSharingViolationForIncOpen –** durata executării metodei CheckWebSharingViolationForIncOpen în milisecunde
+   
+  - **Data_CloseAndReopenWithoutDiscard -** dacă un document a fost închis și redeschis în timpul procesului de deschidere fără a fi eliminat.
 
   - **Data\_ContentTransaction –** set predefinit de valori pentru momentul când se poate crea tranzacția (AllowedOnLoadDocument, AllowedOnOpenComplete etc.)
+
+  - **Data_CorrelationId -** un GUID a trecut la PowerPoint prin ProtocolHandler pentru corelarea telemetriei. ProtocolHandler este un proces separat care gestionează linkurile Office pentru sistemul de operare.
 
   - **Data\_CppUncaughtExceptionCount:long –** excepții native neprinse în timp ce rula activitatea
 
@@ -4911,6 +4917,50 @@ Acest eveniment indică faptul că Office Word întrerupe citirea cu voce tare a
 Se colectează următoarele câmpuri:
 
   - Fără
+
+### <a name="privacy-subtype"></a>*Subtip de confidențialitate*
+
+Setări de confidențialitate în Office 
+
+#### <a name="officeintelligentserviceprivacyconsentprivacyevent"></a>Office.IntelligentService.PrivacyConsent.PrivacyEvent
+
+Acest eveniment reprezintă o acțiune inițiată de utilizator sau de sistem, care face parte din experiența de utilizator privind confidențialitatea pentru Office. Este declanșat în casetele de dialog referitoare la confidențialitate la prima rulare, în caseta de dialog Confidențialitatea contului și în notificările de confidențialitate. Evenimentul este utilizat pentru a înțelege următoarele situații: când utilizatorii sunt de acord cu setările de confidențialitate Office, când utilizatorii modifică setările de confidențialitate Office și când setările de confidențialitate Office se actualizează în sesiunile de utilizator.
+
+Se colectează următoarele câmpuri:
+
+  - **Data_ActionId -** acțiune de utilizator într-o casetă de dialog privind confidențialitatea
+
+  - **Data_ControllerConnectedServicesState -** setare de politică de utilizator pentru experiențe de mod conectat opționale suplimentare
+
+  - **Data_DownloadedContentServiceGroupState -** setare de utilizatorului pentru conținutul descărcat 
+ 
+  - **Data_ForwardLinkId -** link la documentația de confidențialitate pentru scenariu utilizator
+
+  - **Data_HRESULT -** înregistrarea erorilor în timpul interacțiunii cu o casetă de dialog privind confidențialitatea
+
+  - **Data_IsEnterpriseUser -** categoria de licență de utilizator
+
+  - **Data_OfficeServiceConnectionState -** setare de utilizator pentru servicii conectate
+
+  - **Data_RecordRegistry -** înregistrarea afișării casetei de dialog privind confidențialitate la nivel de întreprindere
+
+  - **Data_Scenario -** scenariu de primă rulare bazat pe licența de utilizator și pe categorie
+
+  - **Data_SeenInsidersDialog -** înregistrarea afișării casetei de dialog privind confidențialitatea pentru utilizatori Insider
+
+  - **Data_SendTelemetryOption -** setare de utilizator pentru telemetrie
+
+  - **Data_SendTelemetryOptionPolicy -** setare de politică de utilizator pentru telemetrie
+
+  - **Data_UserCategory -** tip cont utilizator  
+
+  - **Data_UserCCSDisabled -** înlocuire de utilizator pentru experiențe de mod conectat opționale suplimentare
+
+   - **Data_UserContentServiceGroupState -** setare de utilizator pentru analiza conținutului
+
+  - **Data_WillShowDialogs -** înregistrarea unui utilizator care trebuie să vadă casetele de dialog privind confidențialitatea la prima rulare
+
+
 
 ## <a name="product-and-service-performance-data-events"></a>Evenimente privind datele despre performanța produselor și a serviciilor
 
