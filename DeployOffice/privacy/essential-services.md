@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre servicii esențiale în Office, cum ar fi Clic și Pornire și Licențiere, și asigură o listă de evenimente și câmpuri de date pentru aceste servicii esențiale.
 hideEdit: true
-ms.openlocfilehash: 291ec1b925b021f3d35e504d95649a7bdd34adc0
-ms.sourcegitcommit: 186aae0571f8ef5f62882b4edb10378ee8e42b6e
+ms.openlocfilehash: 14b2426d021e5c559cabd3c969f80df9131cc9b9
+ms.sourcegitcommit: 22ae0005d3106ff02949fb613b82e0245abfa49f
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "34813350"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "35817981"
 ---
 # <a name="essential-services-for-office"></a>Servicii esențiale pentru Office
 
@@ -50,7 +50,7 @@ Următorul tabel conține o listă a serviciilor esențiale pentru Office și o 
 | ------ | ---- |
 | [Autentificare](#authentication-events) | Autentificare este un serviciu multi-platformă care validează identitatea dvs. de utilizator Office.  Este necesar pentru a vă permite să vă conectați la Office, să vă activați licența de Office și să accesați fișierele stocate în cloud; oferă o experiență unitară la nivelul sesiunilor de Office și al dispozitivelor dvs.    |
 | [Clic și Pornire](#click-to-run-events) | Clic și Pornire este tehnologia de instalare utilizată pentru a instala și a actualiza Office pe Windows. Aceasta caută noi versiuni de Office și, atunci când este disponibilă o nouă versiune, o descarcă și o instalează. Clic și Pornire va detecta dacă sunt necesare actualizări Office, inclusiv actualizări de securitate, le va descărca și le va instala.     |
-| [Serviciul de configurație avansată (ECS)](#experimentation-and-configuration-service-ecs-events) | ECS oferă Microsoft capacitatea de a reconfigura instalările Office fără a fi nevoie să implementați din nou Office. Este utilizat pentru a controla implementarea treptată de caracteristici sau actualizări, în timp ce impactul implementării este monitorizat pe baza datelor de diagnosticare colectate. Este utilizat, de asemenea, pentru a atenua problemele de securitate sau de performanță cu o caracteristică sau actualizare. În plus, ECS acceptă modificările de configurare legate de datele de diagnosticare pentru a vă ajuta să vă asigurați că evenimentele corespunzătoare sunt colectate. |
+| [Serviciul de configurație avansată (ECS)](#enhanced-configuration-service-ecs-events) | ECS oferă Microsoft capacitatea de a reconfigura instalările Office fără a fi nevoie să implementați din nou Office. Este utilizat pentru a controla implementarea treptată de caracteristici sau actualizări, în timp ce impactul implementării este monitorizat pe baza datelor de diagnosticare colectate. Este utilizat, de asemenea, pentru a atenua problemele de securitate sau de performanță cu o caracteristică sau actualizare. În plus, ECS acceptă modificările de configurare legate de datele de diagnosticare pentru a vă ajuta să vă asigurați că evenimentele corespunzătoare sunt colectate. |
 | [Licențiere](#licensing-events)     | Licențiere este un serviciu bazat pe cloud care acceptă activarea Office pentru noile instalări și păstrează licența pe dispozitivele dvs. după ce Office a fost activat. Acesta înregistrează fiecare dintre dispozitivele dvs. și activează Office, verifică starea abonamentului Office și gestionează cheile de produs.    |
 | [Configurare servicii](#services-configuration-events)  | Configurare servicii oferă capacitatea de a efectua actualizări la setările de configurare Office pentru a activa sau a dezactiva caracteristici client. Este apelat de fiecare dată când pornește o aplicație Office și oferă detalii despre alte configurații și servicii Office. Configurare servicii controlează, de asemenea, ce servicii sunt desemnate ca servicii esențiale.  |
 | [Telemetrie ](#telemetry-events)  | Serviciul de telemetrie este utilizat pentru a colecta date de diagnosticare din aplicațiile Office. Acesta permite colectarea datelor de diagnosticare generate de Office, atât datele de diagnosticare obligatorii, cât și cele opționale. De asemenea, este responsabil pentru colectarea porțiunii de date de diagnosticare a serviciului din datele de serviciu necesare pentru Office.  |
@@ -1854,7 +1854,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează. Adică, instalare 
 
   - **Data\_ScenarioSubType -** ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
@@ -2395,7 +2395,7 @@ Se colectează următoarele câmpuri:
   - **Data\_targetBuild -** versiunea de Office la care încercăm să actualizăm
 
 
-## <a name="experimentation-and-configuration-service-ecs-events"></a>Evenimente Experimentation and Configuration Service (ECS)
+## <a name="enhanced-configuration-service-ecs-events"></a>Evenimente Serviciu de configurație avansată (ECS)
 
 ### <a name="officeexperimentationfeaturequerybatched"></a>Office.Experimentation.FeatureQueryBatched
 
@@ -2484,7 +2484,7 @@ Se colectează următoarele câmpuri:
 
   - **IsSessionLicensing** - indiferent dacă momentan rulează sau nu în modul de activare computer partajat 
 
-  - **LicenseCategory** - categoria de licență Office pe care o utilizează utilizatorul 
+  - **LicenseCategory** - categoria de licență Office pe care o folosește utilizatorul 
 
   - **Licenses** - lista de nume a tuturor licențelor de Office prezente pe calculator 
 
@@ -2538,7 +2538,7 @@ Se colectează următoarele câmpuri:
 
   - **Acid** - identificator GUID care reprezintă produsul Office pentru care are licență utilizatorul
 
-  - **LicenseStatus** - starea licenței Office pe care o utilizează utilizatorul
+  - **LicenseStatus** - starea licenței Office pe care o folosește utilizatorul
 
   - **MachineKey** - identificator alfanumeric al cheii de licență care a fost emise pentru utilizator
 
@@ -2616,7 +2616,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officelicensingofficeclientlicensingdolicensevalidation"></a>Office.Licensing.OfficeClientLicensing.DoLicenseValidation 
 
-Este vorba despre metadatele de licențiere colectate de pe dispozitiv la fiecare pornire care raportează indicatorul acid al licenței, starea licenței, tipul de licență și alte proprietăți ale acesteia care sunt esențiale în identificarea caracteristicilor puse la dispoziția utilizatorului. Este de importanță critică în a identifica setul de caracteristici puse la dispoziția utilizatorului, precum și dacă utilizatorului îi lipsește o anumită funcționalitate. Este utilizat, de asemenea, pentru calculele Utilizatorilor activi zilnic/lunar și pentru diferite alte rapoarte ale unor echipe la nivelul Office (marketing/DIG/licențiere) deoarece precizează produsul tip folosit de utilizator, indiferent că este un produs cu abonament sau că utilizatorului îi lipsește o funcționalitate de importanță critică.
+Este vorba despre metadatele de licențiere colectate de pe dispozitiv la fiecare pornire care raportează indicatorul acid al licenței, starea licenței, tipul de licență și alte proprietăți ale acesteia care sunt esențiale în identificarea caracteristicilor puse la dispoziția utilizatorului. Este de importanță critică în a identifica setul de caracteristici puse la dispoziția utilizatorului, precum și dacă utilizatorului îi lipsește o anumită funcționalitate. Este utilizat, de asemenea, pentru calculele Utilizatorilor activi zilnic/lunar și pentru diferite alte rapoarte ale unor echipe la nivelul Office deoarece precizează produsul tip folosit de utilizator, indiferent că este un produs cu abonament sau că utilizatorului îi lipsește o funcționalitate de importanță critică.
 
 Se colectează următoarele câmpuri:
 
@@ -2630,9 +2630,9 @@ Se colectează următoarele câmpuri:
 
   - **IsvNext** - indică dacă utilizăm noua stivă de licențiere modernă sau nu 
 
-  - **LicenseCategory** - categoria de licență Office pe care o utilizează utilizatorul 
+  - **LicenseCategory** - categoria de licență Office pe care o folosește utilizatorul 
 
-  - **LicenseStatus** - starea licenței Office pe care o utilizează utilizatorul 
+  - **LicenseStatus** - starea licenței Office pe care o folosește utilizatorul 
 
   - **LicenseType** - tipul de licență Office folosită de utilizator 
 
