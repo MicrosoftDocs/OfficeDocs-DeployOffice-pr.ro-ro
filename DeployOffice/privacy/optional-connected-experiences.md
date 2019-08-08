@@ -13,19 +13,21 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate opționale, inclusiv condițiile de utilizare care se aplică.
 hideEdit: true
-ms.openlocfilehash: f1d8c16b7e267d49735814ee9d393c578dbf3c28
-ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
+ms.openlocfilehash: e20a2cd70b8c5fbc47abac7288627cd2783855e7
+ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34701336"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36239147"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Prezentare generală a experiențelor conectate opționale în Office
 
 Dacă aveți un cont de la locul de muncă sau de la școală, este posibil ca administratorul organizației dvs. să vă fi oferit capacitatea de a utiliza unul sau mai multe servicii cloud (denumite și „experiențe conectate opționale”) în timp ce utilizați aplicațiile Office 365 ProPlus. Aceste servicii cloud sunt opționale. Depinde de dvs. dacă le utilizați sau nu. Ele vă sunt puse la dispoziție conform condițiilor din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). În unele cazuri, se pot aplica și alte condiții. Acest articol enumeră serviciile cloud, explică condițiile de utilizare și descrie cum le puteți activa sau dezactiva în orice moment.
 
 > [!NOTE]
-> Dacă sunteți administrator, consultați [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md) pentru a afla cum să le furnizați sau să le restricționați utilizatorilor capacitatea de a utiliza experiențe conectate opționale.
+> Dacă sunteți administrator, consultați următoarele articole pentru a afla cum să le furnizați sau să le restricționați utilizatorilor capacitatea de a utiliza experiențe conectate opționale:
+> - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md)
+> - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md)
 
 ### <a name="if-you-use-these-services-what-terms-of-use-do-you-need-to-agree-to"></a>Dacă utilizați aceste servicii, cu ce condiții de utilizare trebuie să fiți de acord?
 
@@ -50,6 +52,10 @@ Atunci când utilizați Magazinul Office, utilizarea site-ului magazinului propr
 ### <a name="insert-online-video"></a>Inserarea unui fișier video online
 
 [Inserarea unui fișier video online](https://support.office.com/article/8340EC69-4CEE-4FE1-AB96-4849154BC6DB) vă permite să inserați fișiere video în document. Experiența Inserarea unui fișier video online se supune condițiilor din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). Dacă accesați conținutul din surse terțe, se pot aplica condiții suplimentare de utilizare. De exemplu, atunci când vă conectați la YouTube, se aplică [condițiile de utilizare](https://www.youtube.com/t/terms) și [angajamentul de respectare a confidențialității](https://policies.google.com/privacy) aferente acestuia. Microsoft poate adăuga și alți furnizori de materiale video în viitor.
+
+### <a name="microsoft-error-reporting-program-merp"></a>Microsoft Error Reporting Program (MERP) 
+
+MERP se conectează la serviciul Watson.microsoft.com pentru a trimite date de diagnostic atunci când aplicațiile client Office care rulează pe dispozitive Mac se blochează. Este deținut de Microsoft, aplicându-se condițiile din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). MERP nu se aplică aplicațiilor client Office care rulează pe Windows.
 
 ### <a name="research"></a>Cercetare
 
@@ -80,9 +86,13 @@ Sugerați o caracteristică este o experiență care vă permite să remiteți i
 
 Pentru a determina dacă administratorul v-a oferit capacitatea de a utiliza experiențe conectate opționale în aplicația dvs. Office 365 ProPlus pe un dispozitiv Windows, accesați **Fișier** > **Cont** > **Confidențialitate cont** și selectați **Gestionare setări**. Dacă administratorul nu v-a oferit control, se va afișa mesajul: „Administratorul organizației dvs. vă gestionează setările de confidențialitate și a decis să dezactiveze experiențele conectate opționale”.
 
+Dacă utilizați Office pentru Mac, deschideți orice aplicație Office și selectați meniul de aplicații (cum ar fi Word sau Excel) > **Preferințe** > **Confidențialitate**. Aceasta va deschide caseta de dialog Setări de confidențialitate ale contului unde puteți să vizualizați opțiunile de confidențialitate.
+
 ## <a name="your-privacy-settings"></a>Setări de confidențialitate
 
 Dacă administratorul v-a oferit capacitatea de a utiliza experiențe conectate opționale în aplicația dvs. Office 365 ProPlus pe un dispozitiv Windows, accesați **Fișier** > **Cont** > **Confidențialitate cont** și selectați **Gestionare setări** pentru a vă gestiona setările în orice moment. Când sunt activate, veți avea opțiunea de a utiliza serviciile descrise în acest articol atunci când doriți să le utilizați. Când sunt dezactivate, acestea nu vor fi accesibile.
+
+Dacă utilizați Office pentru Mac, deschideți orice aplicație Office și selectați meniul de aplicații (cum ar fi Word sau Excel) > **Preferințe** > **Confidențialitate**. Aceasta va deschide caseta de dialog Setări de confidențialitate ale contului unde puteți să vizualizați opțiunile de confidențialitate.
 
 ## <a name="diagnostic-data"></a>Date de diagnosticare
 
@@ -93,3 +103,4 @@ Atunci când utilizați un serviciu cloud opțional descris în acest articol, M
 
 - [Prezentare generală a controalelor de confidențialitate pentru Office 365 ProPlus](overview-privacy-controls.md)
 - [Date de serviciu obligatorii pentru Office](required-service-data.md)
+- [Setările de confidențialitate ale contului](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b)

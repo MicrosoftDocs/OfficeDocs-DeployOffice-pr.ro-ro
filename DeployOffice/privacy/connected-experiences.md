@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate pentru Office, cum ar fi experiențele care analizează conținut sau experiențele care descarcă conținut online.
 hideEdit: true
-ms.openlocfilehash: 3b0ac61cf01a588e3af85d1eb83d4b2fd7e8b63e
-ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
+ms.openlocfilehash: 1ae21c76eb0cc4addcc0a26e7ca1330aef99eee1
+ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34701796"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36238233"
 ---
 # <a name="connected-experiences-in-office"></a>Experiențe conectate în Office
 
@@ -27,8 +27,10 @@ ms.locfileid: "34701796"
 > - Office 365 ProPlus și Office 365 Business
 > - Office 365 Personal, Office 365 pentru acasă sau alte versiuni de Office, care fac parte dintr-un abonament Office 365.
 > - Project și Visio care sunt oferite cu anumite planuri de abonament, cum ar fi planul Project Online Professional sau Visio Online Plan 2.
+>
+> Informațiile se aplică și la versiunea 16.28 sau la versiunile mai recente ale următoarelor aplicații Office pentru Mac: Excel, Outlook, OneNote, PowerPoint și Word.
 
-Office constă din aplicațiile software client și experiențele conectate proiectate pentru a vă permite să creați, să comunicați și să colaborați mai eficient. Lucrul cu alte persoane într-un document stocat pe OneDrive sau traducerea conținutului unui document Word într-o altă limbă sunt câteva exemple de experiențe conectate.
+Office constă din aplicațiile software client și experiențe conectate proiectate pentru a vă permite să creați, să comunicați și să colaborați mai eficient. Lucrul cu alte persoane într-un document stocat pe OneDrive sau traducerea conținutului unui document Word într-o altă limbă sunt câteva exemple de experiențe conectate.
 
 ## <a name="connected-experiences-that-analyze-your-content"></a>Experiențe conectate care analizează conținut
 
@@ -129,7 +131,10 @@ Dacă sunteți conectat cu un cont Microsoft, deschideți o aplicație Office, c
 
 Dacă sunteți conectat cu un cont de la locul de muncă sau de la școală, administratorul din organizația dvs. va decide dacă aceste experiențe conectate sunt disponibile pentru dvs. Nu veți vedea toate opțiunile pentru aceste experiențe conectate dacă accesați **Fișier** > **Cont** > **Confidențialitate cont** > **Gestionare setări**.
 
-Dacă sunteți administrator pentru organizația dvs., puteți utiliza setările de politică pentru a determina dacă aceste experiențe conectate sunt disponibile pentru utilizatorii dvs. Dacă nu utilizați aceste setări de politică, toate experiențele conectate vor fi disponibile pentru utilizatorii dvs. Pentru mai multe informații despre utilizarea acestor setări de politică, consultați [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md).
+> [!NOTE]
+> Dacă utilizați Office pentru Mac, deschideți orice aplicație Office și selectați meniul de aplicații (cum ar fi Word sau Excel) > **Preferințe** > **Confidențialitate**. Aceasta va deschide caseta de dialog Setări de confidențialitate ale contului unde puteți să vizualizați opțiunile de confidențialitate.
+
+Dacă sunteți administrator pentru organizația dvs., puteți utiliza setările de politică pentru a determina dacă aceste experiențe conectate sunt disponibile pentru utilizatorii dvs. Dacă nu utilizați aceste setări de politică, toate experiențele conectate vor fi disponibile pentru utilizatorii dvs. Pentru mai multe informații despre utilizarea acestor setări de politică, consultați [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md) și [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md).
 
 Dacă alegeți să dezactivați unele tipuri de experiențe conectate, fie panglica sau comanda meniului pentru acele experiențe conectate se va estompa, fie veți primi un mesaj de eroare atunci când încercați să utilizați aceste experiențe conectate.
 
@@ -141,3 +146,4 @@ Chiar dacă vă hotărâți să dezactivați aceste experiențe conectate, anumi
 - [Prezentare generală a experiențelor conectate opționale în Office](optional-connected-experiences.md)
 - [Date de serviciu obligatorii pentru Office](required-service-data.md)
 - [Servicii esențiale pentru Office](essential-services.md)
+- [Setările de confidențialitate ale contului](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b)

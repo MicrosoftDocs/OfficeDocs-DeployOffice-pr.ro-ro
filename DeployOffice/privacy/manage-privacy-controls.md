@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorii Office oferă informații despre gestionarea controalelor de confidențialitate în Office 365 ProPlus, utilizând setările de politică.
 hideEdit: true
-ms.openlocfilehash: 5d38a944c7fe0c2c17cb6cd50339908b1cb7ae6e
-ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
+ms.openlocfilehash: 55c6c6477d4c03d94048c98c961179686eb29c83
+ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34701252"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36238982"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus
 
@@ -41,6 +41,9 @@ Iată cele cinci noi setări de politică:
 - Permiteți utilizarea de experiențe conectate în Office
 
 Aceste setări de politică pot fi implementate utilizând fie Politica de grup, fie [Serviciul de politică pentru cloud Office](https://docs.microsoft.com/DeployOffice/overview-office-client-policy-service). Dacă utilizați Politica de grup, trebuie să descărcați cea mai recentă versiune a fișierelor Șablon administrativ (ADMX/ADML) de la [Centrul de descărcare Microsoft](https://www.microsoft.com/download/details.aspx?id=49030).
+
+> [!NOTE]
+> Pentru informații despre cum să gestionați controalele de confidențialitate pentru Office pentru Mac, consultați [Utilizarea preferințelor pentru a gestiona controalele de confidențialitate pentru Office pentru Mac](mac-privacy-preferences.md).
 
 Dacă utilizați instrumentul de Gestionare a politicilor de grup, toate aceste setări de politică se află în Configurație utilizator\\Politici\\Șabloane administrative\\Microsoft Office 2016\\Confidențialitate\\Centrul de autorizare.
 
@@ -117,7 +120,7 @@ Aceste experiențe conectate sunt diferite, deoarece nu sunt acoperite de acordu
 
 Puteți utiliza setarea de politică *Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office* pentru a controla dacă aceste tipuri de experiențe conectate sunt disponibile pentru utilizatorii dvs. Dacă nu configurați această setare de politică, aceste experiențe conectate opționale vor fi disponibile pentru utilizatorii dvs.
 
-Chiar dacă alegeți să puneți aceste experiențe conectate opționale la dispoziția utilizatorilor dvs., utilizatorii dvs. vor avea opțiunea de a le dezactiva ca grup, accesând **Fișier** > **Cont** > **Confidențialitate cont** > **Gestionare setări**. Utilizatorii dvs. vor avea această opțiune doar dacă sunt conectați la Office cu acreditările organizației lor (la care se face uneori referire ca la contul de la locul de muncă sau de la școală), însă nu și dacă sunt conectați cu o adresă de e-mail personală.
+Chiar dacă alegeți să puneți aceste experiențe conectate opționale la dispoziția utilizatorilor dvs., utilizatorii dvs. vor avea opțiunea de a le dezactiva ca grup, accesând [caseta de dialog pentru setările de confidențialitate](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Utilizatorii dvs. vor avea această opțiune doar dacă sunt conectați la Office cu acreditările organizației lor (la care se face uneori referire ca la contul de la locul de muncă sau de la școală), însă nu și dacă sunt conectați cu o adresă de e-mail personală.
 
 De asemenea, unele dintre aceste experiențe conectate opționale sunt considerate și experiențe conectate care analizează conținut sau care descarcă conținut online. De exemplu, Inserare imagini online este o experiență conectată opțională, pe platformă Microsoft Bing, dar este considerată și o experiență conectată care descarcă conținut online. Așadar, dacă dezactivați setarea de politică *Permiteți utilizarea de experiențe conectate în Office care descarcă conținut online*, Inserare imagini online nu va fi disponibilă pentru utilizatorii dvs. Aceasta nu va fi disponibilă, chiar dacă ați activat setarea de politică *Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office*. Pentru mai multe informații despre care experiențe conectate analizează conținut sau descarcă conținut online, consultați [Experiențe conectate în Office](connected-experiences.md).
 
@@ -174,7 +177,7 @@ Există unele modificări la interfața de utilizator (UI) a Office 365 ProPlus 
 
 ### <a name="dialog-about-optional-connected-experiences"></a>Dialog despre experiențe conectate opționale
 
-Dacă ați ales să le oferiți utilizatorilor [experiențe conectate opționale](optional-connected-experiences.md), prima dată când utilizatorii dvs. deschid o aplicație Office după ce a fost actualizată la versiunea 1904, va apărea o casetă de dialog informativă. Această casetă de dialog îi informează pe utilizatorii dvs. că le-ați oferit opțiunea de a utiliza aceste experiențe conectate opționale și le dau ocazia să știe că pot accesa **Fișier** > **Cont** > **Confidențialitate cont** pentru a modifica această setare.
+Dacă ați ales să le oferiți utilizatorilor [experiențe conectate opționale](optional-connected-experiences.md), prima dată când utilizatorii dvs. deschid o aplicație Office după ce a fost actualizată la versiunea 1904 sau o versiune mai recentă, va apărea o casetă de dialog informativă. Această casetă de dialog îi informează pe utilizatorii dvs. că le-ați oferit opțiunea de a utiliza aceste experiențe conectate opționale și le dau ocazia să știe că pot accesa **Fișier** > **Cont** > **Confidențialitate cont** pentru a modifica această setare.
 
 ### <a name="privacy-settings-removed-from-the-office-ui"></a>Setările de confidențialitate au fost eliminate din interfața de utilizator Office
 

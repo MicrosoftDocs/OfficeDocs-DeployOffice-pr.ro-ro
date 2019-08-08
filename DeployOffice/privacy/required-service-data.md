@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferiți administratorilor Office o prezentare generală a datelor de serviciu obligatorii care sunt colectate despre experiențele de mod conectat din Office.
 hideEdit: true
-ms.openlocfilehash: 9a276e00f5c852ffda00844c5e1aaa9187f581c3
-ms.sourcegitcommit: 3f5de6281b8e92c6c41a800f4374211188460320
+ms.openlocfilehash: 76c30eddecbb84fecc5cb49c9691edcebc7c13b7
+ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34701019"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36238492"
 ---
 # <a name="required-service-data-for-office"></a>Date de serviciu obligatorii pentru Office 
 
@@ -27,8 +27,10 @@ ms.locfileid: "34701019"
 > - Office 365 ProPlus și Office 365 Business
 > - Office 365 Personal, Office 365 pentru acasă sau alte versiuni de Office, care fac parte dintr-un abonament Office 365.
 > - Project și Visio care sunt oferite cu anumite planuri de abonament, cum ar fi planul Project Online Professional sau Visio Online Plan 2.
+>
+> Informațiile se aplică și la versiunea 16.28 sau la versiunile mai recente ale următoarelor aplicații Office pentru Mac: Excel, Outlook, OneNote, PowerPoint și Word.
 
-Office constă din aplicațiile software client și experiențe de mod conectat proiectate pentru a vă permite să creați, să comunicați și să colaborați mai eficient. Lucrul cu alte persoane într-un document stocat pe OneDrive pentru business sau traducerea conținutului unui document Word într-o altă limbă sunt exemple de experiențe de mod conectat.
+Office constă din aplicațiile software client și experiențe conectate proiectate pentru a vă permite să creați, să comunicați și să colaborați mai eficient. Lucrul cu alte persoane într-un document stocat pe OneDrive pentru business sau traducerea conținutului unui document Word într-o altă limbă sunt exemple de experiențe de mod conectat.
 
 Datele de serviciu obligatorii sunt esențiale, deoarece ne permit să furnizăm aceste experiențe de mod conectat în cloud, precum și să contribuim la securizarea lor și la funcționarea lor așa cum așteaptă clienții noștri. Datele de serviciu obligatorii sunt alcătuite din trei tipuri de informații.
 
@@ -64,6 +66,7 @@ Dacă sunteți administratorul organizației dvs., ați putea fi interesat și d
 
 - [Prezentare generală a controalelor de confidențialitate pentru Office 365 ProPlus](overview-privacy-controls.md)
 - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md)
+- [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md)
 
 ## <a name="examples-of-events-for-service-diagnostic-data"></a>Exemple de evenimente pentru datele de diagnosticare serviciu
 

@@ -3,7 +3,7 @@ title: Prezentare generală a controalelor de confidențialitate pentru Office 3
 ms.author: danbrown
 author: DHB-MSFT
 manager: laurawi
-ms.audience: ITPro
+audience: ITPro
 ms.topic: conceptual
 ms.service: o365-proplus-itpro
 localization_priority: Priority
@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorii Office au parte de o prezentare generală a controalelor de confidențialitate pentru Office 365 ProPlus, inclusiv pentru date de diagnosticare și experiențe conectate.
 hideEdit: true
-ms.openlocfilehash: 4752894c0fec3b9eb625476851a4d0ec40642448
-ms.sourcegitcommit: 05820eb0281c0c8591f70b9d4b285d7f292a8cf0
+ms.openlocfilehash: a362a50b3d75e0792623745ef32fb93b4e458a41
+ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "33828373"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36238942"
 ---
 # <a name="overview-of-privacy-controls-for-office-365-proplus"></a>Prezentare generală a controalelor de confidențialitate pentru Office 365 ProPlus
 
@@ -34,9 +34,11 @@ Ca parte a acestor modificări, există elemente de interfață de utilizator (U
 
 > [!IMPORTANT]
 > - Aceste modificări se aplică la Access, Excel, OneNote, Outlook, PowerPoint, Publisher și Word.
-> - Aceste modificări se aplică, de asemenea, la versiunile desktop de Project și Visio care sunt oferite cu anumite planuri de abonament, cum ar fi planul Project Online Professional sau Visio Online Plan 2.
-> - Versiunea 1904 se așteaptă să fie disponibilă în canal semianual (audiență specifică) în septembrie și în canal semianual în ianuarie 2020.
-> - Vom extinde aceste controale de confidențialitate noi și îmbunătățite pentru clienții Office suplimentari, inclusiv Teams, Office for Mac și aplicațiile noastre mobile. Vom oferi mai multe informații despre aceste modificări în lunile următoare. Vom continua să ascultăm cu atenție feedbackul dvs. și să facem îmbunătățiri pentru toți clienții Office 365 și toate serviciile.
+> - Aceste modificări se aplică și pentru următoarele:
+>   - Versiunea 16.28 sau la versiunile mai recente ale următoarelor aplicații Office pentru Mac: Excel, Outlook, OneNote, PowerPoint și Word.
+>   - Versiunea 1904 sau laversiunile mai recente ale versiunilor desktop de Project și Visio care sunt oferite cu anumite planuri de abonament, cum ar fi planul Project Online Professional sau Visio Online Plan 2.
+> - Controalele de confidențialitate lansate în versiunea 1904 se așteaptă să fie disponibile în canal semianual (audiență specifică) în septembrie 2019 și în canal semianual în ianuarie 2020.
+> - Vom extinde aceste controale de confidențialitate noi și îmbunătățite pentru clienții Office suplimentari, inclusiv Teams și aplicațiile noastre mobile. Vom oferi mai multe informații despre aceste modificări în lunile următoare. Vom continua să ascultăm cu atenție feedbackul dvs. și să facem îmbunătățiri pentru toți clienții Office 365 și toate serviciile.
 
 ## <a name="diagnostic-data-sent-from-office-365-proplus-to-microsoft"></a>Datele de diagnosticare trimise din Office 365 ProPlus la Microsoft
 
@@ -63,12 +65,12 @@ Utilizatorii dvs. nu vor putea să aleagă nivelul datelor de diagnosticare pent
 Aceste date diagnosticare nu includ numele utilizatorilor, adresele lor de e-mail sau conținutul fișierelor lor Office. Sistemul nostru creează un ID unic, care se asociază cu datele de diagnosticare ale utilizatorului. Atunci când primim date de diagnosticare care arată că una dintre aplicațiile noastre s-au defectat de 100 de ori, acest ID unic ne permite să stabilim dacă un singur utilizator a fost afectat de 100 ori sau dacă 100 de utilizatori diferiți au fost afectați o singură dată. Nu utilizăm acest ID unic pentru a identifica un anumit utilizator.
 
 Pentru a vedea ce date de diagnosticare sunt trimise la Microsoft, puteți utiliza Vizualizatorul de date de diagnosticare, pe care îl puteți descărca și instala din Microsoft Store, gratuit.
-
-Pentru mai multe informații, consultați următoarele:
+7 Pentru mai multe informații, consultați următoarele:
 
 - [Date de diagnosticare obligatorii pentru Office](required-diagnostic-data.md)
 - [Date de diagnosticare opționale pentru Office](optional-diagnostic-data.md)
-- [Utilizați setările de politică pentru a gestiona controalele de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md)
+- [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md)
+- [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md)
 - [Utilizarea Vizualizatorului de date de diagnosticare cu Office](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
 
 ## <a name="connected-experiences-for-office-365-proplus"></a>Experiențe conectate pentru Office 365 ProPlus
@@ -92,7 +94,8 @@ Utilizatorii dvs. nu vor putea să aleagă dacă să activeze aceste experiențe
 Pentru mai multe informații, consultați următoarele:
 
 - [Experiențe conectate în Office](connected-experiences.md)
-- [Utilizați setările de politică pentru a gestiona controalele de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md)
+- [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md)
+- [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md)
 
 ## <a name="optional-connected-experiences-for-office-365-proplus"></a>Experiențe conectate opționale pentru Office 365 ProPlus
 
@@ -102,12 +105,13 @@ Acestea sunt experiențe conectate opționale, care nu sunt acoperite de acordul
 
 Întrucât aceste experiențe conectate opțional sunt guvernate de termeni și condiții separate, le gestionați separat din experiențele conectate menționate mai sus. Ca administrator al organizației dvs., veți putea să utilizați o setare de politică care să vă permită să alegeți dacă doriți să puneți aceste experiențe conectate opționale ca grup la dispoziția utilizatorilor dvs.  Dacă nu configurați această setare de politică, aceste experiențe conectate opționale sunt disponibile pentru utilizatorii dvs.
 
-Chiar dacă alegeți să puneți aceste experiențe conectate opționale la dispoziția utilizatorilor dvs., utilizatorii dvs. vor avea opțiunea de a dezactiva aceste experiențe conectate ca grup, accesând **Fișier** > **Cont** > **Confidențialitate cont ** > **Gestionare setări**. Utilizatorii dvs. vor avea această opțiune doar dacă sunt conectați la Office cu acreditările organizației lor (la care se face uneori referire ca la contul de la locul de muncă sau de la școală), însă nu și dacă sunt conectați cu o adresă de e-mail personală.
+Chiar dacă alegeți să puneți aceste experiențe conectate opționale la dispoziția utilizatorilor dvs., utilizatorii dvs. vor avea opțiunea de a dezactiva aceste experiențe conectate ca grup, accesând [caseta de dialog pentru setările de confidențialitate](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b) Utilizatorii dvs. vor avea această opțiune doar dacă sunt conectați la Office cu acreditările organizației lor (la care se face uneori referire ca la contul de la locul de muncă sau de la școală), însă nu și dacă sunt conectați cu o adresă de e-mail personală.
 
 Pentru mai multe informații, consultați următoarele:
 
 - [Prezentare generală a experiențelor conectate opționale în Office](optional-connected-experiences.md)
 - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md)
+- [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md)
 
 ## <a name="required-service-data-for-connected-experiences"></a>Date de serviciu obligatorii pentru experiențe în mod conectat
 
