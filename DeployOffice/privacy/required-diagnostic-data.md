@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre datele de diagnosticare obligatorii în Office și le furnizează o listă de evenimente și câmpuri de date.
 hideEdit: true
-ms.openlocfilehash: d42f2bd20e3e2169e58d6f5c0a563f1b117ea847
-ms.sourcegitcommit: 186aae0571f8ef5f62882b4edb10378ee8e42b6e
+ms.openlocfilehash: e6078bf96c60d0f01aeaea0cabe32f135a8fa1a3
+ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "34813314"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36238909"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Date de diagnosticare obligatorii pentru Office
 
@@ -27,6 +27,8 @@ ms.locfileid: "34813314"
 > - Office 365 ProPlus și Office 365 Business
 > - Office 365 Personal, Office 365 pentru acasă sau alte versiuni de Office, care fac parte dintr-un abonament Office 365.
 > - Project și Visio care sunt oferite cu anumite planuri de abonament, cum ar fi planul Project Online Professional sau Visio Online Plan 2.
+>
+> Informațiile se aplică și la versiunea 16.28 sau la versiunile mai recente ale următoarelor aplicații Office pentru Mac: Excel, Outlook, OneNote, PowerPoint și Word.
 
 Datele de diagnosticare se folosesc pentru a păstra Office în siguranță și la zi, pentru a detecta, a diagnostica și a remedia problemele și pentru a îmbunătăți produsele. Aceste date nu includ numele sau adresa de e-mail a unui utilizator, nici conținutul fișierelor acestuia sau informații despre aplicații care nu au legătură cu Office.
 
@@ -44,7 +46,8 @@ Pentru mai multe informații despre datele de diagnosticare, consultați linkul 
 Dacă sunteți administratorul organizației dvs., ați putea fi interesat și de următoarele:
 
 - [Prezentare generală a controalelor de confidențialitate pentru Office 365 ProPlus](overview-privacy-controls.md)
-- [Utilizați setările de politică pentru a gestiona controalele de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md)
+- [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md)
+- [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md)
 
 ## <a name="categories-data-subtypes-events-and-data-fields-for-required-diagnostic-data"></a>Categorii, subtipuri de date, evenimente și câmpuri de date pentru date de diagnosticare obligatorii
 
@@ -423,6 +426,99 @@ Această categorie conține următoarele câmpuri:
 
   - **TelemetryPermissionLevel** - valoare care indică nivelul datelor de diagnosticare pentru care utilizatorul a optat. Ne permite să înțelegem la ce nivel de date de diagnosticare să ne așteptăm de la o sesiune.
 
+## <a name="data-fields-that-are-common-for-onenote-events"></a>Câmpuri de date care sunt comune pentru evenimentele OneNote
+
+Următoarele câmpuri de date sunt comune pentru toate evenimentele OneNote pe Mac, iOS și Android.
+
+> [!NOTE]
+> Atunci când utilizați Vizualizatorul de date de diagnosticare, evenimentele pentru OneNote pe Mac, iOS și Android vor apărea că au denumirea Activity, ReportData, sau Unexpected. Pentru a găsi numele real al evenimentului, selectați evenimentul și consultați câmpul EventName.
+
+- **Activity_ActivityType** - indică tipul acestui eveniment. O activitate poate fi activitate normală sau activitate cu valoare mare.
+
+- **Activity_AggMode** - comunică sistemului cum să realizeze agregarea rezultatelor activității. Ne permite să reducem volumul de informații încărcate de pe computerul unui utilizator, prin agregarea rezultatelor activității într-un singur eveniment care sunt trimise periodic.
+
+- **Activity_Count** - de câte ori s-a produs activitatea dacă numărul este de la un eveniment agregat. Ne permite să stabilim cât de des a reușit sau a eșuat o activitate pe baza modului de agregare a activității.
+
+- **Activity_CV** - valoare care identifică relația dintre activități și activități secundare. Ne permite să reconstruim relația dintre activități imbricate.
+
+- **Activity_DetachedDurationInMicroseconds** - durata de timp în care o activitate este inactivă și nu efectuează lucrări reale, dar timpul este totuși contorizat la timpul total al activității.
+
+- **Activity_DurationInMicroseconds** - perioada necesară pentru executarea activității. Ne permite să identificăm probleme de performanță care au impact negativ asupra experienței utilizatorilor.
+
+- **Activity_Expiration** - o dată în format numeric care indică momentul în care acest eveniment va înceta trimiterea de la clienți.
+
+- **Activity_FailCount** - de câte ori nu a reușit această activitate
+
+- **Activity_Name** - o denumire scurtă a unui eveniment. Permite identificarea evenimentului care a fost trimis de la client.
+
+- **Activity_Namespace** - un spațiu de nume al unui eveniment. Permite gruparea evenimentului în grupuri.
+
+- **Activity_Reason** - un șir care indică motivul pentru care o activitate se termină cu un anumit rezultat.
+
+- **Activity_Result** - o semnalizare care indică dacă activitatea a reușit, nu a reușit sau a eșuat în mod neașteptat. Ne permite să determinăm dacă acțiunile pe care le aplică utilizatorul în produs sunt reușite sau nereușite. Acest lucru ne permite să identificăm problemele care au impact asupra utilizatorului.
+
+- **Activity_State** - o semnalizare care indică dacă un eveniment este începutul unei activități a utilizatorului sau sfârșitul unei activități a utilizatorului.
+
+- **Activity_SucceedCount** -  de câte ori a reușit această activitate.
+
+- **ErrorCode** - indică un cod de eroare dacă este disponibil.
+
+- **ErrorCode2** - indică un al doilea cod de eroare dacă este disponibil.
+
+- **ErrorCode3** - indică un al treilea cod de eroare dacă este disponibil.
+
+- **ErrorTag** -  indică eticheta asociată în codul unei erori dacă este disponibilă.
+
+- **ErrorType** - indică tipul unei erori dacă este disponibil.
+
+- **EventName** - un nume unic al unui eveniment OneNote. Evenimentele OneNote utilizează acest câmp particularizat pentru a specifica un nume unic din cauza unei limitări tehnice din trecut.
+
+- **ExpFeatures** - precizează dacă un utilizator a activat sau nu un comutator de caracteristici experimentale în aplicația OneNote.
+
+- **ExpirationDate** - o dată în format numeric care indică momentul în care acest eveniment va înceta trimiterea de la clienți
+
+- **IsConsumer** - precizează dacă un utilizator este sau nu consumator
+
+- **IsEdu** - precizează dacă un utilizator este sau nu utilizator în entitatea găzduită pentru educație.
+
+- **IsIW** - precizează dacă un utilizator este sau nu utilizator întreprindere
+
+- **IsMsftInternal** - precizează dacă un utilizator este sau nu angajat Microsoft
+
+- **IsPremiumUser** - precizează dacă un utilizator are licență premium sau nu
+
+- **Namespace** - un spațiu de nume al evenimentului. Permite gruparea evenimentului în grupuri.
+
+- **Release_AppStore** - o semnalizare care indică dacă o compilare provine de la un magazin de aplicații sau nu.
+
+- **Release_Audience** - identifică un segment de public al unui grup de public dat. Ne permite să urmărim subseturi de grupuri de public pentru a evalua prevalența și stabilirea priorităților în ceea ce privește problemele.
+
+- **Release_AudienceGroup** - identifică cercul din care provin datele. Ne permite să implementăm caracteristici pe etape și să identificăm probleme potențiale înainte să ajungă la majoritatea utilizatorilor.
+
+- **Release_Channel** - canalul prin care este lansat produsul. Ne permite să identificăm dacă o problemă afectează unul dintre canalele noastre de implementare în mod diferit decât altele.
+
+- **RunningMode** - indică modul în care aplicația este lansată de utilizator sau de procesul de sistem.
+
+- **SchemaVersion** - indică o versiune curentă a schemei de telemetrie în canalul de telemetrie OneNote.
+
+- **Session_EcsETag** - indicator din sistemul flighting care reprezintă edițiile flight trimise la computer. Ne permite să identificăm ce ediții flight ar putea afecta o sesiune dată.
+
+- **Session_ImpressionId** - identifică setul de ediții flight care rulează într-o sesiune dată. Ne permite să identificăm edițiile flight individuale care rulează într-o sesiune, astfel încât să putem stabili dacă o ediție flight este sursa unei probleme care afectează utilizatorii.
+
+- **SessionCorrelationId** - identificator unic global pentru sesiunea gazdei.
+
+- **SH_ErrorCode** - indică, dacă este disponibil, un cod de eroare atunci când o activitate nu reușește.
+
+- **Tag** - etichetă număr întreg care identifică locația din cod unde este generat evenimentul de telemetrie.
+
+- **UserInfo_IdType** - un șir care indică tipul de cont al unui utilizator
+
+- **UserInfo_OMSTenantId** - entitatea găzduită la care este asociat abonamentul unui utilizator. Ne permite să clasificăm problemele și să identificăm dacă este o problemă pe scară largă sau una izolată la un set de utilizatori sau la o anumită entitate găzduită.
+
+- **UserInfo_OtherId** - o listă de pseudonime de identificare non-primare care reprezintă conturi de utilizator.
+
+- **UserInfo_OtherIdType** - o listă de tipuri de conturi non-primare.
+
 ## <a name="software-setup-and-inventory-data-events"></a>Evenimente despre instalare de software și date de inventar
 
 Iată subtipurile de date din această categorie:
@@ -451,6 +547,27 @@ Se colectează următoarele câmpuri:
 - **stare** - starea curentă a actualizării
 
 - **targetBuild** - versiunea de Office la care este actualizată
+
+#### <a name="officecompliancefileformatballotdisplayedonfirstboot"></a>Office.Compliance.FileFormatBallotDisplayedOnFirstBoot
+
+Arată dacă i-a fost afișată utilizatorului caseta de dialog pentru alegerea Formatului de fișier Office la prima/a doua încărcare de Word, Excel, PowerPoint pe Win32.  Urmărește dacă este afișată caseta de dialog FileFormat Ballot - evenimentul este trimis la prima/a doua încărcare de Word, Excel sau PPT Win32.
+
+Se colectează următoarele câmpuri.
+
+- **CountryRegion** - setarea pentru regiunea de țară a utilizatorilor în sistemul Windows
+
+- **FileFormatBallotBoxAppIDBootedOnce** - în ce aplicație (Word, Excel, PPT) a fost procesată logica de afișare pentru formatul fișierelor.
+
+- **FileFormatBallotBoxDisplayedOnFirstBoot** - care este rezultatul afișării dialogului despre formatul fișierelor (afișat/nu este afișat în mod neașteptat/nu este afișat din cauza licenței/nu este afișat din cauza locației).
+
+#### <a name="officecompliancefileformatballotoption"></a>Office.Compliance.FileFormatBallotOption
+
+Urmărește dacă este afișată caseta de dialog FileFormat Ballot - evenimentul este trimis la prima/a doua încărcare de Word, Excel sau PPT Win32.  Arată dacă a fost afișată caseta de dialog pentru alegerea Formatului de fișier Office la prima sau la a doua încărcare de Word, Excel sau PowerPoint pe Win32.
+
+Se colectează următoarele câmpuri:
+
+- **FileFormatBallotSelectedOption** - identifică opțiunea formatului de fișier (OOXML/ODF) care a fost selectată de utilizator prin intermediul casetei de dialog despre formatul fișierelor.
+
 
 #### <a name="officecorrelationmetadatautccorrelationmetadata"></a>Office.CorrelationMetadata.UTCCorrelationMetadata
 
@@ -560,6 +677,26 @@ Se colectează următoarele câmpuri:
 
 Programele de completare software și setările lor.
 
+#### <a name="exceladdindefinedfunctioncustomfunctionsallinone"></a>Excel.AddinDefinedFunction.CustomFunctionsAllInOne
+
+Colectează informații despre comportamentul în execuție al funcțiilor din programele de completare particularizate. Menține contoare pentru încercările de execuție, finalizările reușite, erorile de infrastructură și erorile de cod ale utilizatorului. Este utilizat pentru a identifica problemele de fiabilitate din produs și pentru a rezolva problemele care afectează utilizatorii.
+ 
+Se colectează următoarele câmpuri:
+
+- **AsyncBegin** - numărul de funcții asincrone inițiate
+
+- **AsyncEndAddinError** - numărul de funcții asincrone care se termină cu o eroare
+
+- **AsyncEndInfraFailure** - numărul de funcții asincrone care se termină cu erori infra.
+
+- **AsyncEndSuccess** - numărul de funcții asincrone care se termină cu succes
+
+- **AsyncRemoveCancel** - numărul de funcții asincrone care au fost anulate 
+
+- **AsyncRemoveRecycle** - numărul de funcții asincrone care au fost eliminate din cauza reciclării 
+
+- **StreamingCycles1** - contor de cicluri în flux
+
 #### <a name="officeextensibilityappcommandsappcmdprojectionstatus"></a>Office.Extensibility.AppCommands.AppCmdProjectionStatus
 
 Colectează informațiile pentru a urmări care instalări de programe de completare Office au actualizat cu succes panglica versus care nu au reușit.
@@ -569,6 +706,21 @@ Utilizat pentru a remedia problemele comune de înregistrare în care programele
 Se colectează următoarele câmpuri:
 
   - Fără
+
+#### <a name="officeextensibilityappcommandsaddsolution"></a>Office.Extensibility.AppCommands.AddSolution
+
+Colectează informațiile despre instalarea programelor de completare Office care particularizează panglica.  Folosit pentru detectarea problemelor cu modul în care programele de completare particularizate modifică panglica Office.
+ 
+Se colectează următoarele câmpuri:
+
+- **AppVersion** - versiunea aplicației
+
+- **SolutionId** - ID-ul soluției
+
+- **StoreType** - indică originea aplicației
+
+- **TelemetryId** - identificator de telemetrie bazat pe identitatea autentificată
+
 
 #### <a name="officeextensibilitycatalogexchangegetentitlements"></a>Office.Extensibility.Catalog.ExchangeGetEntitlements
 
@@ -748,7 +900,57 @@ Colectează succesul și eșecul încărcării unui program de completare de că
 
 Se colectează următoarele câmpuri:
 
-  - **Activitate HVA standard fără nicio sarcină particularizată**
+  - **Activitate HVA standard** fără nicio sarcină particularizată
+
+#### <a name="officeoutlookmacaddinapiusage"></a>Office.Outlook.Mac.AddinAPIUsage
+
+Colectează succese și eșecuri ale execuției programului de completare în Outlook. Aceste date sunt monitorizate activ pentru a garanta că Outlook funcționează corect cu programele de completare. Aceste date sunt utilizate pentru a detecta și investiga probleme.
+
+Se colectează următoarele câmpuri:
+
+- **AccountType** - tipul de cont asociat cu programul de completare 
+
+- **Cookie** - modul cookie utilizat de programul de completare
+
+- **Despid** - identificator de expediere 
+
+- **Endtime** - ora la care s-a încheiat programul de completare 
+
+- **ExecutionTime** - perioada de executare a programului de completare 
+
+- **Result** - rezultatul utilizării programului de completare în Outlook 
+
+- **StartTime** - ora la care a început programul de completare
+
+
+#### <a name="officeoutlookmacaddineventapisusage"></a>Office.Outlook.Mac.AddinEventAPIsUsage
+
+Colectează succese sau eșecuri ale execuției programului de completare în Outlook. Aceste date sunt monitorizate activ pentru a garanta că Outlook funcționează corect cu programele de completare. Aceste date sunt utilizate pentru a detecta și investiga probleme.
+
+Se colectează următoarele câmpuri:
+
+- **AddinType** - tipul de program de completare 
+
+- **EventAction** - acțiunea efectuată de programul de completare 
+
+- **EventDispid** - identificator de expediere
+
+- **EventResult** - rezultatul acțiunii efectuate de programul de completare 
+
+#### <a name="officeoutlookmacaddininstallationfrominclientstore"></a>Office.Outlook.Mac.AddInInstallationFromInClientStore
+
+Colectează succese sau eșecuri ale instalării programului de completare în Outlook. Aceste date sunt monitorizate activ pentru a garanta că Outlook funcționează corect cu programele de completare. Aceste date sunt utilizate pentru a detecta și investiga probleme.
+
+Se colectează următoarele câmpuri:
+
+- **AccountType** - tipul de cont asociat cu un program de completare 
+
+- **FailureReason** - motivul pentru eșecul la instalarea programului de completare 
+
+- **MarketplaceAssetId** identificator al programului de completare în magazin 
+
+- **Status** - starea instalării programului de completare
+
 
 #### <a name="officeprogrammabilityadd-insinternalsetconnectenterprise"></a>Office.Programmability.Add-ins.InternalSetConnectEnterprise
 
@@ -979,6 +1181,15 @@ Iată subtipurile de date din această categorie:
 
 Succesul funcționalității aplicației. Limitat la deschiderea și închiderea aplicației și a documentelor, editarea fișierelor și partajarea fișierelor (colaborare).
 
+#### <a name="officeappcompatappcompatagentupload"></a>Office.AppCompat.AppCompat.AgentUpload
+
+Generat la pornirea clientului atunci când utilizatorul final a activat Tabloul de bord de telemetrie Office.  Colectează informații despre momentul în care Agentul de telemetrie Office a încărcat date în folderul partajat. Utilizarea principală a acestui eveniment este pentru monitorizarea stării Agentului de telemetrie Office, iar utilizarea secundară a evenimentului este pentru estimarea utilizării Tabloului de bord de telemetrie Office.
+
+Se colectează următoarele câmpuri:
+
+- **UploadTime** - marca de timp a ultimei încărcări reușite efectuate de Agentul de telemetrie.
+
+
 #### <a name="officeappcompatappcompatagentscanandupload"></a>Office.AppCompat.AppCompat.AgentScanAndUpload
 
 Colectat doar atunci când utilizatorul final a activat Tabloul de bord de telemetrie Office. Colectează informații privind momentul în care se execută Agentul de telemetrie Office.  Acest lucru se colectează doar atunci când Tabloul de bord de telemetrie Office este activat și este utilizat pentru a determina starea de funcționare a agentului de telemetrie Office.
@@ -1048,6 +1259,36 @@ Se colectează următoarele câmpuri:
   - **SolutionId** - GUID care reprezintă un program de completare unic
 
   - **TelemetryId** - GUID care reprezintă un utilizator unic
+
+#### <a name="officeextensibilitycatalogexchangeprocessmanifest"></a>Office.Extensibility.Catalog.ExchangeProcessManifest
+
+Date privind procesarea unui manifest individual pentru un program de completare atribuit unui administrator de entitate găzduită O365. Utilizate la analiza problemelor clienților și la diagramele cu succesele clienților.
+ 
+Se colectează următoarele câmpuri:
+
+- **AppVersion** - versiunea aplicației
+
+- **IsAllReturnedManifestsParsed** - bool indicând că am analizat toate manifestele returnate
+
+- **IsAppCommand** - bool indicând dacă este o aplicație cu comenzi de aplicație 
+
+- **ReturnedManifestsParsed** - contorizează manifestele analizate
+
+- **SolutionId** - ID-ul soluției
+
+- **TelemetryId** - identificator de telemetrie bazat pe identitatea autentificată
+
+#### <a name="officeextensibilityodpappcommandsribbonclick"></a>Office.Extensibility.ODPAppCommandsRibbonClick
+
+Colectează dacă a avut sau nu succes clicul pe controlul programului de completare particularizat. Se utilizează pentru a detecta probleme la interacțiunea utilizatorului cu controalele programului de completare.
+ 
+Se colectează următoarele câmpuri:
+
+- **CommandActionType** - tip de comandă program de completare
+
+- **CommandLabel** - eticheta comenzii pe care s-a făcut clic
+
+- **SolutionId** - ID-ul soluției
 
 #### <a name="officefileiocsiccachedfilecsiloadfilebasic"></a>Office.FileIO.CSI.CCachedFileCsiLoadFileBasic
 
@@ -1605,6 +1846,213 @@ Se colectează următoarele câmpuri:
 
   - **Data.Log** - mesaj de jurnal particularizat care indică succesul sau eșecul pre-verificării
 
+
+#### <a name="officeonenotenavigationcreatepage"></a>Office.OneNote.Navigation.CreatePage
+
+Semnal critic utilizat pentru a monitoriza capacitatea utilizatorilor OneNote de a crea pagini în OneNote.  Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot crea o pagină, acest lucru va declanșa un incident de mare severitate.
+
+Se colectează următoarele câmpuri:
+
+- **IsAtSectionEnd** - indică dacă s-a creat sau nu o pagină nouă la sfârșitul secțiunii.
+
+- **IsBlank** - indică dacă pagina nouă este necompletată sau creată cu un șablon.
+
+- **IsRecentsView** - indică dacă o pagină este creată din recente sau nu.
+
+- **NavView** - indică dacă o pagină este creată dintr-o vizualizare de navigare sau nu.
+
+- **NoteType** - indică tipul unei pagini (notă rapidă, listă sau fotografie).
+
+- **QuickNoteType** - indică tipul unei pagini (notă rapidă, listă sau fotografie).
+
+- **RailState** - indică starea șinei de navigare OneNote atunci când se creează o pagină.
+
+- **Trigger** - indică un punct de intrare acolo unde începe acțiunea de creare a paginii.
+
+- **TriggerInfo** - indică informații suplimentare despre trigger.
+
+
+#### <a name="officeonenotenavigationcreatesection"></a>Office.OneNote.Navigation.CreateSection
+
+Semnal critic utilizat pentru a monitoriza capacitatea utilizatorilor OneNote de a crea secțiuni în OneNote.  Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot crea o pagină, acest lucru va declanșa un incident de mare severitate.
+
+Se colectează următoarele câmpuri
+
+- **NotebookID** - identificator unic al unui blocnotes.
+
+- **SectionID** - identificator unic al unei secțiuni create.
+
+- **Trigger** - indică un punct de intrare acolo unde începe acțiunea de creare a secțiunii.
+
+- **TriggerInfo** - indică informații suplimentare despre trigger.
+
+
+#### <a name="officeonenotenavigationnavigate"></a>Office.OneNote.Navigation.Navigate
+
+Semnal critic utilizat pentru a monitoriza capacitatea utilizatorilor OneNote de a naviga prin pagini în OneNote.  Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot naviga, acest lucru va declanșa un incident de mare severitate.
+
+Se colectează următoarele câmpuri:
+
+- **FromNotebook** - identificator unic al unui blocnotes.
+
+- **FromPage** - identificator unic al unei pagini.
+
+- **FromSection** - identificator unic al unei secțiuni.
+
+- **FromSectionGroup** - identificator unic al unui grup de secțiuni.
+
+- **IsCurrentUserEduStudent** - indică dacă utilizatorul curent are rol de student într-un blocnotes de educație sau nu.
+
+- **IsEduNotebook** - indică dacă pagina curentă este într-un blocnotes de educație sau nu.
+
+- **IsEduNotebookReadOnlyPage** - indică dacă pagina curentă este o pagină doar în citire într-un blocnotes de educație sau nu.
+
+- **ToNotebook** - identificator unic al unui blocnotes.
+
+- **ToPage** - identificator unic al unei pagini.
+
+- **ToSection** - identificator unic al unei secțiuni.
+
+- **ToSectionGroup** - identificator unic al unui grup de secțiuni.
+
+
+#### <a name="officeonenotenotebookmanagementcreatenotebook"></a>Office.OneNote.NotebookManagement.CreateNotebook
+
+Semnal critic utilizat pentru a monitoriza capacitatea utilizatorilor OneNote de a crea blocnotesuri în OneNote.  Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot crea blocnotesuri, acest lucru va declanșa un incident de mare severitate.
+
+Se colectează următoarele câmpuri:
+    
+- **NotebookID** - identificator unic al unui blocnotes.
+
+
+#### <a name="officeonenotenotebookmanagementopennotebook"></a>Office.OneNote.NotebookManagement.OpenNotebook
+
+Semnal critic utilizat pentru a monitoriza capacitatea utilizatorilor OneNote de a deschide blocnotesuri în OneNote.  Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot deschide blocnotesuri, acest lucru va declanșa un incident de mare severitate.
+
+Se colectează următoarele câmpuri:
+
+-  **NotebookID** - identificator unic al unui blocnotes.
+
+    
+#### <a name="officeonenotesearchsearch"></a>Office.OneNote.Search.Search
+
+ID al semnalului critic utilizat pentru a monitoriza capacitatea utilizatorilor OneNote de a găsi informații în mii de pagini și blocnotesuri.   Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot afla informații în blocnotesuri, acest lucru va declanșa un incident de mare severitate.
+
+Se colectează următoarele câmpuri:
+
+- **PageSearchResultCount** - indică numărul de rezultate ale căutării găsite într-un mod de căutare a paginilor.
+
+-  **PageTimeToFirstResultInMs** - indică intervalul de timp necesar pentru OneNote pentru a găsi prima potrivire într-un mod de căutare a paginilor.
+    
+-  **PageTimeToLastResultInMs** - indică intervalul de timp necesar pentru OneNote pentru a găsi ultima potrivire într-un mod de căutare a paginilor.
+
+-  **PageTimeToMedianResultInMs** - indică mediana intervalului de timp necesar pentru ca OneNote să găsească toate potrivirile într-un mod de căutare a paginilor.
+
+-  **SearchResultCount** - indică numărul de rezultate ale căutării.
+
+-  **TagSearchResultCount** - indică numărul de rezultate ale căutării găsite într-un mod de căutare de etichete.
+
+-  **TagTimeToFirstResultInMs** - indică intervalul de timp necesar pentru OneNote pentru a găsi prima potrivire într-un mod de căutare de etichete.
+
+-  **TagTimeToLastResultInMs** - indică intervalul de timp necesar pentru ca OneNote să găsească prima potrivire într-un mod de căutare de etichete.
+
+-  **TagTimeToMedianResultInMs** - indică mediana intervalului de timp necesar pentru ca OneNote să găsească toate potrivirile într-un mod de căutare de etichete.
+
+-  **TimeToFirstResultInMs** - indică intervalul de timp necesar pentru OneNote pentru a găsi prima potrivire.
+
+-  **TimeToLastResultInMs** - indică intervalul de timp necesar pentru OneNote pentru a găsi ultima potrivire.
+
+-  **TimeToMedianResultInMs** - indică mediana intervalului de timp necesar pentru ca OneNote să găsească toate potrivirile.
+
+
+#### <a name="officeonenotestoragenotebooksyncresult"></a>Office.OneNote.Storage.NotebookSyncResult
+ 
+Acest eveniment înregistrează rezultatul sincronizării blocnotesului. Este utilizat pentru a afla câte ținte de sincronizare unice există atunci când se calculează scorul de sincronizare OneNote.
+ 
+Se colectează următoarele câmpuri
+
+- **CachedError_Code** - un cod numerotat sau alfanumeric utilizat pentru a determina natura erorii memorate în cache și/sau motivul pentru care aceasta s-a produs
+    
+- **CachedError_Description** - o descriere a erorii memorate în cache
+
+- **CachedError_Tag** - indică unde în cod se generează eroarea memorată în cache
+
+- **CachedError_Type** - tipul erorii memorate în cache, de exemplu Win32Error etc.
+
+- **ExecutionTime** - timp în milisecunde necesare pentru a reproduce blocnotesul
+
+- **Gosid** - ID al spațiului de obiecte global
+
+- **IdentityType** - tip de identitate, de exemplu Windows Live, Org ID etc.
+
+- **InitialReplicationInSession** - dacă această reproducere este sau nu prima reproducere a blocnotesului după deschidere
+
+- **IsBackgroundSync** - este o sincronizare de fundal sau nu
+
+- **IsCachedErrorSuppressed** - este eroarea memorată în cache suprimată sau nu
+
+- **IsCachedErrorUnexpected** - este eroarea memorată în cache neașteptată sau nu
+
+- **IsNotebookErrorSuppressed** - este eroarea de sincronizare la nivel de blocnotes suprimată sau nu
+
+- **IsNotebookErrorSuppressed** - este eroarea de sincronizare la nivel de blocnotes neașteptată sau nu
+
+- **IsSectionErrorSuppressed** - este eroarea de sincronizare a secțiunii suprimată sau nu
+
+- **IsSectionErrorUnexpected** - este eroarea de sincronizare a secțiunii neașteptată sau nu
+
+- **IsUsingRealtimeSync** - sincronizarea blocnotesului utilizează sincronizarea modernă a conținutului paginilor sau nu
+
+- **LastAttemptedSync** - marca de timp când a încercat să fie sincronizat blocnotesul ultima dată
+
+- **LastBackgroundSync** - marca de timp când s-a încercat cea mai recentă sincronizare de fundal
+
+- **LastNotebookViewedDate** - data când a fost vizualizat ultima dată blocnotesul
+
+- **LastSuccessfulSync** - marca de timp când s-a sincronizat cu succes blocnotesul înainte
+
+- **NeedToRestartBecauseOfInconsistencies** - trebuie să reporniți sincronizarea din cauza inconsecvențelor sau nu
+
+- **NotebookErrorCode** - cod de eroare sincronizare la nivel de blocnotes salvat în spațiul grafic din blocnotes
+
+- **NotebookId** - ID blocnotes
+
+- **NotebookType** - tip blocnotes
+
+- **ReplicatingAgainBecauseOfInconsistencies** - sincronizarea repornește din cauza inconsecvențelor sau nu
+
+- **SectionError_Code** - un cod numerotat sau alfanumeric utilizat pentru a determina natura erorii de sincronizare a secțiunii și/sau motivul pentru care aceasta s-a produs
+
+- **SectionError_Description** - o descriere a erorii de sincronizare a secțiunii
+
+- **SectionError_Tag** - indică unde în cod se generează eroarea de sincronizare a secțiunii
+
+- **SectionError_Type** - tipul erorii de sincronizare a secțiunii, de exemplu Win32Error etc.
+
+- **Success** - s-a sincronizat blocnotesul cu succes sau nu
+
+- **SyncDestinationType** - tipul destinației de sincronizare, adică OneDrive sau SharePoint Online
+
+- **SyncId** - un număr unic pentru fiecare sincronizare de blocnotes
+
+- **SyncWasFirstInSession** - este acestă sincronizare prima sincronizare din sesiunea curentă
+
+- **SyncWasUserInitiated** - este această sincronizare inițiată de utilizator sau nu
+
+- **TenantId** - ID-ul entității găzduite SharePoint
+
+- **TimeSinceLastAttemptedSync** - perioada de la ultima încercare de sincronizare a blocnotesului
+
+- **TimeSinceLastSuccessfulSync** - perioada de la ultima sincronizare de blocnotes reușită
+
+
+#### <a name="officeonenotesystemapplifecycleapplaunch"></a>Office.OneNote.System.AppLifeCycle.AppLaunch
+
+Apoi semnal critic utilizat pentru a ne asigura că utilizatorii OneNote pot lansa cu succes aplicația.
+Telemetria se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot lansa aplicația în fereastra noastră de performanță, acest lucru va declanșa un incident de mare severitate.
+
+Se colectează următoarele câmpuri: Niciunul
+
 #### <a name="officeoutlookdesktopaccountconfigurationcreateaccountresult"></a>Office.Outlook.Desktop.AccountConfiguration.CreateAccountResult
 
 Rezultatul adăugării unui cont la Outlook într-un profil nou, din Office Backstage sau din caseta de dialog Setări cont. Datele sunt monitorizate în mod activ pentru a garanta că nu vedem valori maxime în erori. De asemenea, vom analiza datele pentru a găsi zone care necesită îmbunătățiri. Dorim să îmbunătățim această rata de succes cu ocazia fiecărei versiuni.
@@ -1670,6 +2118,68 @@ Se colectează următoarele câmpuri:
   - **StoreType** - tipul de magazin creat OST/PST/NST
 
   - **StoreVersion** - versiunea de magazin creată Small/Large/Tardis
+
+#### <a name="officeoutlookmacaccountaddworkflow"></a>Office.Outlook.Mac.AccountAddWorkflow
+
+Rezultatul adăugării unui cont în Outlook. Datele sunt monitorizate pentru a garanta că nu vedem valori maxime în erori. De asemenea, vom analiza datele pentru a găsi zone care necesită îmbunătățiri. Dorim să îmbunătățim această rata de succes cu ocazia fiecărei versiuni. 
+
+Se colectează următoarele câmpuri:
+
+- **AccountConfigMethod** - metoda de configurare a contului
+
+- **AccountType** - tipul de cont configurat.
+
+- **AccountWorkflowSession** - sesiunea în care se încearcă fluxul de lucru pentru cont
+
+- **SessionDuration** - durata sesiunii 
+
+- **ThreadID** - identificator pentru fir
+
+
+#### <a name="officeoutlookmacaccountonboardingflow"></a>Office.Outlook.Mac.AccountOnboardingFlow
+
+Rezultatul adăugării unui cont în Outlook utilizând noua experiență de configurare a conturilor. Datele sunt monitorizate pentru a garanta că nu vedem valori maxime în erori. De asemenea, vom analiza datele pentru a găsi zone care necesită îmbunătățiri. Dorim să îmbunătățim această rata de succes cu ocazia fiecărei versiuni. 
+
+Se colectează următoarele câmpuri:
+
+- **AccountConfigAutoSignIn** - configurarea automată a contului setată de administrator
+
+- **AccountConfigDomain** - domeniu specificat în timpul configurării contului 
+
+- **AccountConfigEntryPoint** - punct de intrare în care utilizatorul a introdus configurația contului 
+
+- **AccountConfigErrorCode** - cod de eroare întâlnit în timpul configurării contului 
+
+- **AccountConfigErrorString** - eroare întâlnită în timpul configurării contului
+
+- **AccountConfigMethod** - metodă de configurare a contului
+
+- **AccountConfigPhase** - etapa curentă a fluxului de lucru pentru configurarea contului
+
+- **AccountConfigPhaseFrom** - etapa inițială a fluxului de lucru pentru configurarea contului 
+
+- **AccountConfigPhaseTo** - ultima etapă a fluxului de lucru pentru configurarea contului 
+
+- **AccountType** - tip de cont configurat
+
+- **AccountWorkflowSession** - sesiunea în care se încearcă fluxul de lucru pentru cont
+
+- **SessionDuration** - durata sesiunii
+
+
+#### <a name="officeoutlookmacdeleteaccountusage"></a>Office.Outlook.Mac.DeleteAccountUsage
+
+Rezultatul ștergerii unui cont în Outlook. Datele sunt monitorizate pentru a garanta că nu vedem valori maxime în erori. De asemenea, vom analiza datele pentru a găsi zone care necesită îmbunătățiri. Dorim să îmbunătățim această rata de succes cu ocazia fiecărei versiuni. 
+
+Se colectează următoarele câmpuri:
+
+- **AccountType** - tip de cont configurat
+
+- **AccountID** - identificator cont
+
+- **DeprovisionAccount** - indică dacă este eliminat contul din server
+
+- **IsFastDelete** - indică dacă contul este șters pe firul de fundal
 
 #### <a name="officepowerpointdocoperationclose"></a>Office.PowerPoint.DocOperation.Close
 
@@ -2075,457 +2585,481 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officepowerpointdocoperationsaveas"></a>Office.PowerPoint.DocOperation.SaveAs
 
-Colectat ori de câte ori PowerPoint efectuează o Salvare ca. Include tipul de rezultat, succes sau eșec, al măsurătorilor performanței de salvare și metadatele relevante ale documentului. Erorile de salvare pot duce la pierderea unor date.
-
-Microsoft utilizează aceste date pentru a garanta faptul că această caracteristică funcționează conform așteptărilor, iar conținutul utilizatorilor a persistat cu succes.
+Colectat ori de câte ori PowerPoint efectuează o Salvare ca. Include tipul de rezultat, succes sau eșec, al măsurătorilor performanței de salvare și metadatele relevante ale documentului. Erorile de salvare pot duce la pierderea unor date.  Microsoft utilizează aceste date pentru a garanta faptul că această caracteristică funcționează conform așteptărilor, iar conținutul utilizatorilor a persistat cu succes.
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_AddDocTelemetryResult:long -** această intrare în jurnal are toate datele de telemetrie necesare pentru documente (câmpurile Data\_Doc\_\*)? Dacă nu, de ce?
+- **Data_AddDocTelemetryResult:long** - această intrare în jurnal are toate datele de telemetrie necesare pentru documente (câmpurile Data_Doc_*)? Dacă nu, de ce?
 
-  - **Data\_CppUncaughtExceptionCount:long -** excepții native neprinse în timp ce rula activitatea
+- **Data_CppUncaughtExceptionCount:long** - excepții native neprinse în timp ce rula activitatea
 
-  - **Data\_DetachedDuration:long -** timpul cât activitatea a fost detașată/nu a rulat
+- **Data_DetachedDuration:long** - timpul cât activitatea a fost detașată/nu a rulat
 
-  - **Data\_DstDoc\_AccessMode:long -** cum a fost deschis acest document (doar în citire | citire-scriere)
+- **Data_DstDoc_AccessMode:long** - cum a fost deschis acest document (doar în citire | citire-scriere)
 
-  - **Data\_DstDoc\_AssistedReadingReasons:long -** set predefinit de valori pentru care documentul a fost deschis în modul de citire asistată
+- **Data_DstDoc_AssistedReadingReasons:long** - set predefinit de valori pentru care documentul a fost deschis în modul de citire asistată
 
-  - **Data\_DstDoc\_ChunkingType:long -** cum este stocat documentul în SharePoint
+- **Data_DstDoc_ChunkingType:long** - cum este stocat documentul în SharePoint
 
-  - **Data\_DstDoc\_EdpState:long -** starea Enterprise Data Protection a documentului
+- **Data_DstDoc_EdpState:long** - starea Enterprise Data Protection a documentului
 
-  - **Data\_DstDoc\_Ext:string -** extensia documentului
+- **Data_DstDoc_Ext:string** - extensia documentului
 
-  - **Data\_DstDoc\_Extension:string -** extensia documentului
+- **Data_DstDoc_Extension:string** - extensia documentului
 
-  - **Data\_DstDoc\_FileFormat:long -** set predefinit de valori pentru formatul fișierului (mai granular decât extensia)
+- **Data_DstDoc_FileFormat:long** - set predefinit de valori pentru formatul fișierului (mai granular decât extensia)
 
-  - **Data\_DstDoc\_Fqdn:string -** unde este stocat documentul (SharePoint.com, live.net), disponibil numai pentru domeniile Office 365
+- **Data_DstDoc_Fqdn:string** - unde este stocat documentul (SharePoint.com, live.net), disponibil numai pentru domeniile Office 365
+    
+- **Data_DstDoc_FqdnHash:string** - codul hash al locului unde este stocat documentul
 
-  - **Data\_DstDoc\_FqdnHash:string -** codul hash al locului unde este stocat documentul
+- **Data_DstDoc_IdentityTelemetryId:string** - GUID unic al utilizatorului
 
-  - **Data\_DstDoc\_IdentityTelemetryId:string - **GUID unic al utilizatorului
+- **Data_DstDoc_IdentityUniqueId:string** - identificator unic al identității folosite pentru acțiunea Documente partajate
 
-  - **Data\_DstDoc\_IdentityUniqueId:string -** identificator unic al identității folosite pentru acțiunea Documente partajate
+- **Data_DstDoc_IOFlags:long** - bitmask pentru diferite semnalizări legate de IO pentru un anumit document
 
-  - **Data\_DstDoc\_IOFlags:long -** bitmask pentru diferite semnalizări legate de IO pentru un anumit document
+- **Data_DstDoc_IrmRights:long** - set predefinit de valori pentru tipul de Information Rights Management aplicat pentru acest document (Redirecționare, Răspuns, SecureReader, Editare etc.)
+    
+- **Data_DstDoc_IsCloudCollabEnabled:bool** - true dacă antetul „IsCloudCollabEnabled” a fost deja primit dintr-o solicitare OPTIONS.
 
-  - **Data\_DstDoc\_IrmRights:long -** set predefinit de valori pentru tipul de Information Rights Management aplicat pentru acest document (Redirecționare, Răspuns, SecureReader, Editare etc.)
+- **Data_DstDoc_IsIncrementalOpen:bool** - documentul a fost deschis incremental (caracteristică nouă care deschide documentul fără să-l descarce în totalitate)
 
-  - **Data\_DstDoc\_IsCloudCollabEnabled:bool -** true dacă antetul „IsCloudCollabEnabled” a fost deja primit dintr-o solicitare OPTIONS.
+- **Data_DstDoc_IsOcsSupported:bool** - dacă documentul acceptă elaborarea în comun folosind noul serviciu OCS
 
-  - **Data\_DstDoc\_IsIncrementalOpen:bool -** documentul a fost deschis incremental (caracteristică nouă care deschide documentul fără să-l descarce în totalitate)
+- **Data_DstDoc_IsOpeningOfflineCopy:bool** - verifică dacă documentul este deschis din memoria cache locală
 
-  - **Data\_DstDoc\_IsOcsSupported:bool -** dacă documentul acceptă elaborarea în comun folosind noul serviciu OCS
+- **Data_DstDoc_IsSyncBacked:bool** - dacă documentul este deschis din folderul care folosește aplicația de sincronizare inversă OneDrive
+    
+- **Data_DstDoc_Location:long** - set predefinit de valori privind locul de stocare a documentului (Local, SharePoint, WOPI, Rețea etc.)
 
-  - **Data\_DstDoc\_IsOpeningOfflineCopy:bool -** verifică dacă documentul este deschis din memoria cache locală
+- **Data_DstDoc_LocationDetails:long** - set predefinit de valori privind locația mai detaliată (folderul Temp, folderul de descărcări, Documente OneDrive, Imagini OneDrive etc.)
 
-  - **Data\_DstDoc\_IsSyncBacked:bool -** dacă documentul este deschis din folderul care folosește aplicația de sincronizare inversă OneDrive
+- **Data_DstDoc_NumberCoAuthors:long** - numărul de coautori la momentul deschiderii unui document
 
-  - **Data\_DstDoc\_Location:long -** set predefinit de valori privind locul de stocare a documentului (Local, SharePoint, WOPI, Rețea etc.)
+- **Data_DstDoc_PasswordFlags:long** - set predefinit de valori privind modul în care documentul este criptat cu o parolă (Fără, parolă pentru citire, parolă pentru editare)
 
-  - **Data\_DstDoc\_LocationDetails:long -** set predefinit de valori privind locația mai detaliată (folderul Temp, folderul de descărcări, Documente OneDrive, Imagini OneDrive etc.)
+- **Data_DstDoc_ReadOnlyReasons:long** - set predefinit de valori privind motivul pentru care acest document a fost marcat doar în citire (blocat pe server, document final, protejat prin parolă pentru editare etc.)
 
-  - **Data\_DstDoc\_NumberCoAuthors:long -** numărul de coautori la momentul deschiderii unui document
+- **Data_DstDoc_ResourceIdHash:string** - codul hash al identificatorului de resurse pentru documentele stocate în cloud
 
-  - **Data\_DstDoc\_PasswordFlags:long -** set predefinit de valori privind modul în care documentul este criptat cu o parolă (Fără, parolă pentru citire, parolă pentru editare)
+- **Data_DstDoc_ServerDocId:string** - identificatorul invariabil pentru documentele stocate în cloud
 
-  - **Data\_DstDoc\_ReadOnlyReasons:long -** set predefinit de valori privind motivul pentru care acest document a fost marcat doar în citire (blocat pe server, document final, protejat prin parolă pentru editare etc.)
+- **Data_DstDoc_ServerProtocol:long** - set predefinit de valori privind protocolul folosit în comunicarea cu serverul (Http, Cobalt, WOPI etc.)
 
-  - **Data\_DstDoc\_ResourceIdHash:string -** codul hash al identificatorului de resurse pentru documentele stocate în cloud
+- **Data_DstDoc_ServerType:long** - set predefinit de valori privind tipul serverului (SharePoint, DropBox, WOPI)
 
-  - **Data\_DstDoc\_ServerDocId:string -** identificatorul invariabil pentru documentele stocate în cloud
+- **Data_DstDoc_ServerVersion:long** - dacă serverul se bazează pe Office14, Office15, Office 16
 
-  - **Data\_DstDoc\_ServerProtocol:long -** set predefinit de valori privind protocolul folosit în comunicarea cu serverul (Http, Cobalt, WOPI etc.)
+- **Data_DstDoc_SessionId:long** - GUID generat care identifică instanța documentului din aceeași sesiune de proces
 
-  - **Data\_DstDoc\_ServerType:long -** set predefinit de valori privind tipul serverului (SharePoint, DropBox, WOPI)
+- **Data_DstDoc_SharePointServiceContext:string** - un șir opac, de obicei GridManagerID.FarmID. Util pentru corelarea jurnalelor de la client și de pe server
 
-  - **Data\_DstDoc\_ServerVersion:long -** dacă serverul se bazează pe Office14, Office15, Office 16
+- **Data_DstDoc_SizeInBytes:long** - dimensiunea documentului în octeți
 
-  - **Data\_DstDoc\_SessionId:long -** GUID generat care identifică instanța documentului din aceeași sesiune de proces
+- **Data_DstDoc_SpecialChars:long** - Bitmask ce arată caracterele speciale din adresa URL sau din calea documentului
 
-  - **Data\_DstDoc\_SharePointServiceContext:string -** un șir opac, de obicei GridManagerID.FarmID. Util pentru corelarea jurnalelor de la client și de pe server
+- **Data_DstDoc_StorageProviderId:string** - șir care identifică furnizorul de stocare al documentului, precum „DropBox”
 
-  - **Data\_DstDoc\_SizeInBytes:long -** dimensiunea documentului în octeți
+- **Data_DstDoc_StreamAvailability:long** - set predefinit de valori privind starea șirului de document (disponibil, dezactivat definitiv, indisponibil)
 
-  - **Data\_DstDoc\_SpecialChars:long -** Bitmask ce arată caracterele speciale din adresa URL sau calea documentului
+- **Data_DstDoc_UrlHash:string** - codul hash pentru adresa URL completă a documentelor stocate în cloud
 
-  - **Data\_DstDoc\_StorageProviderId:string -** șir care identifică furnizorul de stocare al documentului, precum „DropBox”
+- **Data_DstDoc_UsedWrsDataOnOpen:bool** - true dacă fișierul a fost deschis incremental folosind datele WRS prememorate în cache pentru gazdă
 
-  - **Data\_DstDoc\_StreamAvailability:long -** set predefinit de valori privind starea șirului de document (disponibil, dezactivat definitiv, indisponibil)
+- **Data_DstDoc_WopiServiceId:string** - identificatorul serviciului WOPI, de ex. „Dropbox”
 
-  - **Data\_DstDoc\_UrlHash:string -** codul hash pentru adresa URL completă a documentelor stocate în cloud
+- **Data_FileType:long** - set predefinit de valori al tipului de fișier intern
 
-  - **Data\_DstDoc\_UsedWrsDataOnOpen:bool -** true dacă fișierul a fost deschis incremental folosind datele WRS prememorate în cache pentru gazdă
+- **Data_fLifeguarded:bool** - documentul a fost vreodată protejat (caracteristică pentru a remedia automat erorile din documente, fără intervenția utilizatorului)?
 
-  - **Data\_DstDoc\_WopiServiceId:string -** identificatorul serviciului WOPI, de ex. „Dropbox”
+- **Data_FWebCreated:bool** - are acest document o semnalizare WebCreator?
 
-  - **Data\_FileType:long -** set predefinit de valori al tipului de fișier intern
+- **Data_SaveReason:long** - set predefinit de valori privind motivul pentru care s-a efectuat această salvare (AutoSave, ToOCSTransitionSave, ToCSITransitionSave etc.)
 
-  - **Data\_fLifeguarded:bool -** a fost documentul vreodată protejat (caracteristică pentru a remedia erorile din documente, fără a-i adresa solicitări utilizatorului)?
+- **Data_SaveType:long** - set predefinit de valori privind tipul de salvare (Salvare ca, Publicare, Manual, Salvare OM etc.) 
 
-  - **Data\_FWebCreated:bool -** are acest document o semnalizare WebCreator?
+- **Data_SrcDoc_AccessMode:long** - cum a fost deschis acest document (doar în citire | citire-scriere)
 
-  - **Data\_SaveReason:long -** set predefinit de valori privind motivul pentru care s-a efectuat această salvare (AutoSave, ToOCSTransitionSave, ToCSITransitionSave etc.)
+- **Data_SrcDoc_AssistedReadingReasons:long** - set predefinit de valori pentru care documentul a fost deschis în modul de citire asistată
 
-  - **Data\_SaveType:long -** set predefinit de valori privind tipul de salvare (Salvare ca, Publicare, Manual, Salvare OM etc.)
+- **Data_SrcDoc_ChunkingType:long** - cum este stocat documentul în SharePoint 
 
-  - **Data\_SrcDoc\_AccessMode:long -** cum a fost deschis acest document (doar în citire | citire-scriere)
+- **Data_SrcDoc_EdpState:long** - starea Enterprise Data Protection a documentului
 
-  - **Data\_SrcDoc\_AssistedReadingReasons:long -** set predefinit de valori pentru care documentul a fost deschis în modul de citire asistată
+- **Data_SrcDoc_Ext:string** - extensia documentului
 
-  - **Data\_SrcDoc\_ChunkingType:long -** cum este stocat documentul în SharePoint
+- **Data_SrcDoc_Extension:string** - extensia documentului
 
-  - **Data\_SrcDoc\_EdpState:long -** starea Enterprise Data Protection a documentului
+- **Data_SrcDoc_FileFormat:long** - set predefinit de valori pentru formatul fișierului (mai granular decât extensia)
 
-  - **Data\_SrcDoc\_Ext:string -** extensia documentului
+- **Data_SrcDoc_Fqdn:string** - unde este stocat documentul (SharePoint.com, live.net), disponibil numai pentru domeniile Office 365
 
-  - **Data\_SrcDoc\_Extension:string -** extensia documentului
+- **Data_SrcDoc_FqdnHash:string** - codul hash al locului unde este stocat documentul
 
-  - **Data\_SrcDoc\_FileFormat:long -** set predefinit de valori pentru formatul fișierului (mai granular decât extensia)
+- **Data_SrcDoc_IdentityTelemetryId:string** - GUID unic al utilizatorului
 
-  - **Data\_SrcDoc\_Fqdn:string -** unde este stocat documentul (SharePoint.com, live.net), disponibil numai pentru domeniile Office 365
+- **Data_SrcDoc_IdentityUniqueId:string** - identificator unic al identității folosite pentru acțiunea Documente partajate
 
-  - **Data\_SrcDoc\_FqdnHash:string -** codul hash al locului unde este stocat documentul
+- **Data_SrcDoc_IOFlags:long** - bitmask pentru diferite semnalizări legate de IO pentru un anumit document
 
-  - **Data\_SrcDoc\_IdentityTelemetryId:string - **GUID unic al utilizatorului
+- **Data_SrcDoc_IrmRights:long** - set predefinit de valori pentru tipul de Information Rights Management aplicat pentru acest document (Redirecționare, Răspuns, SecureReader, Editare etc.)
 
-  - **Data\_SrcDoc\_IdentityUniqueId:string -** identificator unic al identității folosite pentru acțiunea Documente partajate
+- **Data_SrcDoc_IsCloudCollabEnabled:bool** - true dacă antetul „IsCloudCollabEnabled” a fost deja primit dintr-o solicitare OPTIONS.
 
-  - **Data\_SrcDoc\_IOFlags:long -** bitmask pentru diferite semnalizări legate de IO pentru un anumit document
+- **Data_SrcDoc_IsIncrementalOpen:bool** - documentul a fost deschis incremental (caracteristică nouă care deschide documentul fără să-l descarce în totalitate)
 
-  - **Data\_SrcDoc\_IrmRights:long -** set predefinit de valori pentru tipul de Information Rights Management aplicat pentru acest document (Redirecționare, Răspuns, SecureReader, Editare etc.)
+- **Data_SrcDoc_IsOcsSupported:bool** - dacă documentul acceptă elaborarea în comun folosind noul serviciu OCS
 
-  - **Data\_SrcDoc\_IsCloudCollabEnabled:bool -** true dacă antetul „IsCloudCollabEnabled” a fost deja primit dintr-o solicitare OPTIONS.
+- **Data_SrcDoc_IsOpeningOfflineCopy:bool** - verifică dacă documentul este deschis din memoria cache locală
 
-  - **Data\_SrcDoc\_IsIncrementalOpen:bool -** documentul a fost deschis incremental (caracteristică nouă care deschide documentul fără să-l descarce în totalitate)
+- **Data_SrcDoc_IsSyncBacked:bool** - dacă documentul este deschis din folderul care folosește aplicația de sincronizare inversă OneDrive
 
-  - **Data\_SrcDoc\_IsOcsSupported:bool -** dacă documentul acceptă elaborarea în comun folosind noul serviciu OCS
+- **Data_SrcDoc_Location:long** - set predefinit de valori privind locul de stocare a documentului (Local, SharePoint, WOPI, Rețea etc.)
 
-  - **Data\_SrcDoc\_IsOpeningOfflineCopy:bool -** verifică dacă documentul este deschis din memoria cache locală
+- **Data_SrcDoc_LocationDetails:long** - set predefinit de valori privind locația mai detaliată (folderul Temp, folderul de descărcări, Documente OneDrive, Imagini OneDrive etc.)
 
-  - **Data\_SrcDoc\_IsSyncBacked:bool -** dacă documentul este deschis din folderul care folosește aplicația de sincronizare inversă OneDrive
+- **Data_SrcDoc_NumberCoAuthors:long** - numărul de coautori la momentul deschiderii unui document
 
-  - **Data\_SrcDoc\_Location:long -** set predefinit de valori privind locul de stocare a documentului (Local, SharePoint, WOPI, Rețea etc.)
+- **Data_SrcDoc_PasswordFlags:long** - set predefinit de valori privind modul în care documentul este criptat cu o parolă (Fără, parolă pentru citire, parolă pentru editare)
 
-  - **Data\_SrcDoc\_LocationDetails:long -** set predefinit de valori privind locația mai detaliată (folderul Temp, folderul de descărcări, Documente OneDrive, Imagini OneDrive etc.)
+- **Data_SrcDoc_ReadOnlyReasons:long** - set predefinit de valori privind motivul pentru care acest document a fost marcat doar în citire (blocat pe server, document final, protejat prin parolă pentru editare etc.)
 
-  - **Data\_SrcDoc\_NumberCoAuthors:long -** numărul de coautori la momentul deschiderii unui document
+- **Data_SrcDoc_ResourceIdHash:string** - codul hash al identificatorului de resurse pentru documentele stocate în cloud
 
-  - **Data\_SrcDoc\_PasswordFlags:long -** set predefinit de valori privind modul în care documentul este criptat cu o parolă (Fără, parolă pentru citire, parolă pentru editare)
+- **Data_SrcDoc_ServerDocId:string** - identificatorul invariabil pentru documentele stocate în cloud
 
-  - **Data\_SrcDoc\_ReadOnlyReasons:long -** set predefinit de valori privind motivul pentru care acest document a fost marcat doar în citire (blocat pe server, document final, protejat prin parolă pentru editare etc.)
+- **Data_SrcDoc_ServerProtocol:long** - set predefinit de valori privind protocolul folosit în comunicarea cu serverul (Http, Cobalt, WOPI etc.)
 
-  - **Data\_SrcDoc\_ResourceIdHash:string -** codul hash al identificatorului de resurse pentru documentele stocate în cloud
+- **Data_SrcDoc_ServerType:long** - set predefinit de valori privind tipul serverului (SharePoint, DropBox, WOPI)
 
-  - **Data\_SrcDoc\_ServerDocId:string -** identificatorul invariabil pentru documentele stocate în cloud
+- **Data_SrcDoc_ServerVersion:long** - verifică dacă serverul se bazează pe Office14, Office15 sau Office 16Data_SrcDoc_SessionId:long GUID generat care identifică instanța documentului din aceeași sesiune de proces
 
-  - **Data\_SrcDoc\_ServerProtocol:long -** set predefinit de valori privind protocolul folosit în comunicarea cu serverul (Http, Cobalt, WOPI etc.)
+- **Data_SrcDoc_SharePointServiceContext:string** - un șir opac, de obicei GridManagerID.FarmID. Util pentru corelarea jurnalelor de la client și de pe server
 
-  - **Data\_SrcDoc\_ServerType:long -** set predefinit de valori privind tipul serverului (SharePoint, DropBox, WOPI)
+- **Data_SrcDoc_SizeInBytes:long** - dimensiunea documentului în octeți
 
-  - **Data\_SrcDoc\_ServerVersion:long -** verifică dacă serverul se bazează pe Office14, Office15 sau Office 16Data\_SrcDoc\_SessionId:long GUID generat care identifică instanța documentului din aceeași sesiune de proces
+- **Data_SrcDoc_SpecialChars:long** - Bitmask ce arată caracterele speciale din adresa URL sau calea documentului
 
-  - **Data\_SrcDoc\_SharePointServiceContext:string -** un șir opac, de obicei GridManagerID.FarmID. Util pentru corelarea jurnalelor de la client și de pe server
+- **Data_SrcDoc_StorageProviderId:string** - șir care identifică furnizorul de stocare al documentului, precum „DropBox”
 
-  - **Data\_SrcDoc\_SizeInBytes:long -** dimensiunea documentului în byți
+- **Data_SrcDoc_StreamAvailability:long** - set predefinit de valori privind starea șirului de document (disponibil, dezactivat definitiv, indisponibil)
 
-  - **Data\_SrcDoc\_SpecialChars:long -** Bitmask ce arată caracterele speciale din adresa URL sau calea documentului
+- **Data_SrcDoc_UrlHash:string** - codul hash pentru adresa URL completă a documentelor stocate în cloud
 
-  - **Data\_SrcDoc\_StorageProviderId:string -** șir care identifică furnizorul de stocare al documentului, precum „DropBox”
+- **Data_SrcDoc_UsedWrsDataOnOpen:bool** - true dacă fișierul a fost deschis incremental folosind datele WRS prememorate în cache pentru gazdă
 
-  - **Data\_SrcDoc\_StreamAvailability:long -** set predefinit de valori privind starea șirului de document (disponibil, dezactivat definitiv, indisponibil)
+- **Data_SrcDoc_WopiServiceId:string** - identificatorul serviciului WOPI, de ex. „Dropbox”
 
-  - **Data\_SrcDoc\_UrlHash:string -** codul hash pentru adresa URL completă a documentelor stocate în cloud
+- **Data_StopwatchDuration:long** - timpul total al activității
 
-  - **Data\_SrcDoc\_UsedWrsDataOnOpen:bool -** true dacă fișierul a fost deschis incremental folosind datele WRS prememorate în cache pentru gazdă
+- **Data_TypeOfSaveDialog:long** - set predefinit de valori de dialog (RUN_SAVEAS_DLG,RUN_SAVEMEDIA_DLG, RUN_SAVEAS_VIDEO_DLG etc.)
 
-  - **Data\_SrcDoc\_WopiServiceId:string -** identificatorul serviciului WOPI, de ex. „Dropbox”
+- **DstDoc** - noua locație a documentului 
 
-  - **Data\_StopwatchDuration:long -** timpul total al activității
+- **SrcDoc** - locația inițială a documentului
 
-  - **Data\_TypeOfSaveDialog:long -** set predefinit de valori ale casetei de dialog (RUN\_SAVEAS\_DLG, RUN\_SAVEMEDIA\_DLG, RUN\_SAVEAS\_VIDEO\_DLG etc.)
-
-  - **DstDoc -** noua locație a documentului
-
-  - **SrcDoc -** locația inițială a documentului
 
 #### <a name="officepowerpointdocoperationsavelegacy"></a>Office.PowerPoint.DocOperation.SaveLegacy
 
-Colectat ori de câte ori PowerPoint efectuează o salvare utilizând calea de cod moștenită. Include tipul de rezultat, succes sau eșec, al măsurătorilor performanței de salvare și metadatele relevante ale documentului. Erorile de salvare pot duce la pierderea unor date. Microsoft utilizează aceste date pentru a garanta faptul că această caracteristică funcționează conform așteptărilor, iar conținutul utilizatorilor a persistat cu succes.
+Colectat ori de câte ori PowerPoint efectuează o salvare utilizând calea de cod moștenită. Include tipul de rezultat, succes sau eșec, al măsurătorilor performanței de salvare și metadatele relevante ale documentului.  Erorile de salvare pot duce la pierderea unor date.  Microsoft utilizează aceste date pentru a garanta faptul că această caracteristică funcționează conform așteptărilor, iar conținutul utilizatorilor a persistat cu succes.
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_AddDocTelemetryResult:long -** această intrare în jurnal are toate datele de telemetrie necesare pentru documente (câmpurile Data\_Doc\_\*)? Dacă nu, de ce?
+- **Data_AddDocTelemetryResult:long** - această intrare în jurnal are toate datele de telemetrie necesare pentru documente (câmpurile Data_Doc_*)? Dacă nu, de ce?
 
-  - **Data\_CppUncaughtExceptionCount:long -** excepții native neprinse în timp ce rula activitatea
+- **Data_CppUncaughtExceptionCount:long** - excepții native neprinse în timp ce rula activitatea
 
-  - **Data\_DetachedDuration:long -** timpul cât activitatea a fost detașată/nu a rulat
+- **Data_DetachedDuration:long** - timpul cât activitatea a fost detașată/nu a rulat
 
-  - **Data\_Doc\_AccessMode:long -** cum a fost deschis acest document (doar în citire | citire-scriere)
+- **Data_Doc_AccessMode:long** - cum a fost deschis acest document (doar în citire / citire-scriere)
 
-  - **Data\_Doc\_AssistedReadingReasons:long -** set predefinit de valori pentru care documentul a fost deschis în modul de citire asistată
+- **Data_Doc_AssistedReadingReasons:long** - set predefinit de valori pentru care documentul a fost deschis în modul de citire asistată
 
-  - **Data\_Doc\_ChunkingType:long -** cum este stocat documentul în SharePoint
+- **Data_Doc_ChunkingType:long** - cum este stocat documentul în SharePoint
 
-  - **Data\_Doc\_EdpState:long -** starea Enterprise Data Protection a documentului
+- **Data_Doc_EdpState:long** - starea Enterprise Data Protection a documentului
 
-  - **Data\_Doc\_Ext:string -** extensia documentului
+- **Data_Doc_Ext:string** - extensia documentului
 
-  - **Data\_Doc\_Extension:string -** extensia documentului
+- **Data_Doc_Extension:string** - extensia documentului
 
-  - **Data\_Doc\_FileFormat:long -** set predefinit de valori pentru formatul fișierului (mai granular decât extensia)
+- **Data_Doc_FileFormat:long** - set predefinit de valori pentru formatul fișierului (mai granular decât extensia)
 
-  - **Data\_Doc\_Fqdn:string -** unde este stocat documentul (SharePoint.com, live.net), disponibil numai pentru domeniile Office 365
+- **Data_Doc_Fqdn:string** - unde este stocat documentul (SharePoint.com, live.net), disponibil numai pentru domeniile Office 365
 
-  - **Data\_Doc\_FqdnHash:string -** codul hash al locului unde este stocat documentul
+- **Data_Doc_FqdnHash:string** - codul hash al locului unde este stocat documentul
 
-  - **Data\_Doc\_IdentityTelemetryId:string - **GUID unic al utilizatorului
+- **Data_Doc_IdentityTelemetryId:string** - GUID unic al utilizatorului
 
-  - **Data\_Doc\_IdentityUniqueId:string -** identificator unic al identității folosite pentru acțiunea Documente partajate
+- **Data_Doc_IdentityUniqueId:string** - identificator unic al identității folosite pentru acțiunea Documente partajate
 
-  - **Data\_Doc\_IOFlags:long -** bitmask pentru diferite semnalizări legate de IO pentru un anumit document
+- **Data_Doc_IOFlags:long** - bitmask pentru diferite semnalizări legate de IO pentru un anumit document
 
-  - **Data\_Doc\_IrmRights:long -** set predefinit de valori pentru tipul de Information Rights Management aplicat pentru acest document (Redirecționare, Răspuns, SecureReader, Editare etc.)
+- **Data_Doc_IrmRights:long** - set predefinit de valori pentru tipul de Information Rights Management aplicat pentru acest document (Redirecționare, Răspuns, SecureReader, Editare etc.)
 
-  - **Data\_Doc\_IsCloudCollabEnabled:bool -** true dacă antetul „IsCloudCollabEnabled” a fost deja primit dintr-o solicitare OPTIONS.
+- **Data_Doc_IsCloudCollabEnabled:bool** - true dacă antetul „IsCloudCollabEnabled” a fost deja primit dintr-o solicitare OPTIONS.
 
-  - **Data\_Doc\_IsIncrementalOpen:bool -** documentul a fost deschis incremental (caracteristică nouă care deschide documentul fără să-l descarce în totalitate)
+- **Data_Doc_IsIncrementalOpen:bool** - documentul a fost deschis incremental (caracteristică nouă care deschide documentul fără să-l descarce în totalitate)
 
-  - **Data\_Doc\_IsOcsSupported:bool -** dacă documentul acceptă elaborarea în comun folosind noul serviciu OCS
+- **Data_Doc_IsOcsSupported:bool** - dacă documentul acceptă elaborarea în comun folosind noul serviciu OCS
 
-  - **Data\_Doc\_IsOpeningOfflineCopy:bool -** verifică dacă documentul este deschis din memoria cache locală
+- **Data_Doc_IsOpeningOfflineCopy:bool** - verifică dacă documentul este deschis din memoria cache locală
 
-  - **Data_Doc_IsRtcAlwaysOn -** true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
+- **Data_Doc_IsRtcAlwaysOn** - true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
 
-  - **Data\_Doc\_IsSyncBacked:bool -** dacă documentul este deschis din folderul care folosește aplicația de sincronizare inversă OneDrive
+- **Data_Doc_IsSyncBacked:bool** - dacă documentul este deschis din folderul care folosește aplicația de sincronizare inversă OneDrive
 
-  - **Data\_Doc\_Location:long -** set predefinit de valori privind locul de stocare a documentului (Local, SharePoint, WOPI, Rețea etc.)
+- **Data_Doc_Location:long** - set predefinit de valori privind locul de stocare a documentului (Local, SharePoint, WOPI, Rețea etc.)
 
-  - **Data\_Doc\_LocationDetails:long -** set predefinit de valori privind locația mai detaliată (folderul Temp, folderul de descărcări, Documente OneDrive, Imagini OneDrive etc.)
+- **Data_Doc_LocationDetails:long** - set predefinit de valori privind locația mai detaliată (folderul Temp, folderul de descărcări, Documente OneDrive, Imagini OneDrive etc.)
 
-  - **Data\_Doc\_NumberCoAuthors:long -** numărul de coautori la momentul deschiderii unui document
+- **Data_Doc_NumberCoAuthors:long** - numărul de coautori la momentul deschiderii unui document
 
-  - **Data\_Doc\_PasswordFlags:long -** set predefinit de valori privind modul în care documentul este criptat cu o parolă (Fără, parolă pentru citire, parolă pentru editare)
+- **Data_Doc_PasswordFlags:long** - set predefinit de valori privind modul în care documentul este criptat cu o parolă (Niciunul, parolă pentru citire, parolă pentru editare)
 
-  - **Data\_Doc\_ReadOnlyReasons:long -** set predefinit de valori privind motivul pentru care acest document a fost marcat doar în citire (blocat pe server, document final, protejat prin parolă pentru editare etc.)
+- **Data_Doc_ReadOnlyReasons:long** - set predefinit de valori privind motivul pentru care acest document a fost marcat doar în citire (blocat pe server, document final, protejat prin parolă pentru editare etc.)
 
-  - **Data\_Doc\_ResourceIdHash:string -** codul hash al identificatorului de resurse pentru documentele stocate în cloud
+- **Data_Doc_ResourceIdHash:string** - codul hash al identificatorului de resurse pentru documentele stocate în cloud
 
-  - **Data\_Doc\_ServerDocId:string -** identificatorul invariabil pentru documentele stocate în cloud
+- **Data_Doc_ServerDocId:string** - identificator imutabil pentru documentele stocate în cloud
 
-  - **Data\_Doc\_ServerProtocol:long -** set predefinit de valori privind protocolul folosit în comunicarea cu serverul (Http, Cobalt, WOPI etc.)
+- **Data_Doc_ServerProtocol:long** - set predefinit de valori privind protocolul folosit în comunicarea cu serverul (Http, Cobalt, WOPI etc.)
 
-  - **Data\_Doc\_ServerType:long -** set predefinit de valori privind tipul serverului (SharePoint, DropBox, WOPI)
+- **Data_Doc_ServerType:long** - set predefinit de valori privind tipul serverului (SharePoint, DropBox, WOPI) 
 
-  - **Data\_Doc\_ServerVersion:long -** dacă serverul se bazează pe Office14, Office15, Office 16
+- **Data_Doc_ServerVersion:long** - dacă serverul se bazează pe Office14, Office15, Office 16
 
-  - **Data\_Doc\_SessionId:long -** GUID generat care identifică instanța documentului din aceeași sesiune de proces
+- **Data_Doc_SessionId:long** - GUID generat care identifică instanța documentului din aceeași sesiune de proces
 
-  - **Data\_Doc\_SharePointServiceContext:string -** un șir opac, de obicei GridManagerID.FarmID. Util pentru corelarea jurnalelor de la client și de pe server
+- **Data_Doc_SharePointServiceContext:string** - un șir opac, de obicei GridManagerID.FarmID. Util pentru corelarea jurnalelor de la client și de pe server
 
-  - **Data\_Doc\_SizeInBytes:long -** dimensiunea documentului în octeți
+- **Data_Doc_SizeInBytes:long** - dimensiunea documentului în octeți
 
-  - **Data\_Doc\_SpecialChars:long -** Bitmask ce arată caracterele speciale din adresa URL sau calea documentului
+- **Data_Doc_SpecialChars:long** - Bitmask ce arată caracterele speciale din adresa URL sau calea documentului
 
-  - **Data\_Doc\_StorageProviderId:string -** șir care identifică furnizorul de stocare al documentului, precum „DropBox”
+- **Data_Doc_StorageProviderId:string** - șir care identifică furnizorul de stocare a documentului, precum „DropBox”
 
-  - **Data\_Doc\_StreamAvailability:long -** set predefinit de valori privind starea șirului de document (disponibil, dezactivat definitiv, indisponibil)
+- **Data_Doc_StreamAvailability:long** - set predefinit de valori privind starea șirului de document (disponibil, dezactivat definitiv, indisponibil)
 
-  - **Data\_Doc\_UrlHash:string -** codul hash pentru adresa URL completă a documentelor stocate în cloud
+- **Data_Doc_UrlHash:string** - codul hash pentru adresa URL completă a documentelor stocate în cloud
 
-  - **Data\_Doc\_UsedWrsDataOnOpen:bool -** true dacă fișierul a fost deschis incremental folosind datele WRS prememorate în cache pentru gazdă
+- **Data_Doc_UsedWrsDataOnOpen:bool** - true dacă fișierul a fost deschis incremental folosind datele WRS prememorate în cache pentru gazdă
 
-  - **Data\_Doc\_WopiServiceId:string -** identificatorul serviciului WOPI, de ex. „Dropbox”
+- **Data_Doc_WopiServiceId:string** - identificatorul serviciului WOPI, de ex. „Dropbox”
 
-  - **Data\_DstDoc\_AccessMode:long -** cum a fost deschis acest document (doar în citire | citire-scriere)
+- **Data_DstDoc_AccessMode:long** - cum a fost deschis acest document (doar în citire | citire-scriere)
 
-  - **Data\_DstDoc\_AssistedReadingReasons:long -** set predefinit de valori pentru care documentul a fost deschis în modul de citire asistată
+- **Data_DstDoc_AssistedReadingReasons:long** - set predefinit de valori pentru care documentul a fost deschis în modul de citire asistată
 
-  - **Data\_DstDoc\_ChunkingType:long -** cum este stocat documentul în SharePoint
+- **Data_DstDoc_ChunkingType:long** - cum este stocat documentul în SharePoint
 
-  - **Data\_DstDoc\_EdpState:long -** starea Enterprise Data Protection a documentului
+- **Data_DstDoc_EdpState:long** - starea Enterprise Data Protection a documentului
 
-  - **Data\_DstDoc\_Ext:string -** extensia documentului
+- **Data_DstDoc_Ext:string** - extensia documentului
 
-  - **Data\_DstDoc\_Extension:string -** extensia documentului
+- **Data_DstDoc_Extension:string** - extensia documentului
 
-  - **Data\_DstDoc\_FileFormat:long -** set predefinit de valori pentru formatul fișierului (mai granular decât extensia)
+- **Data_DstDoc_FileFormat:long** - set predefinit de valori pentru formatul fișierului (mai granular decât extensia)
 
-  - **Data\_DstDoc\_Fqdn:string -** unde este stocat documentul (SharePoint.com, live.net), disponibil numai pentru domeniile Office 365
+- **Data_DstDoc_Fqdn:string** - unde este stocat documentul (SharePoint.com, live.net), disponibil numai pentru domeniile Office 365
+    
+- **Data_DstDoc_FqdnHash:string** - codul hash al locului unde este stocat documentul
 
-  - **Data\_DstDoc\_FqdnHash:string -** codul hash al locului unde este stocat documentul
+- **Data_DstDoc_IdentityTelemetryId:string** - GUID unic al utilizatorului
 
-  - **Data\_DstDoc\_IdentityTelemetryId:string - **GUID unic al utilizatorului
+- **Data_DstDoc_IdentityUniqueId:string** - identificator unic al identității folosite pentru acțiunea Documente partajate
 
-  - **Data\_DstDoc\_IdentityUniqueId:string -** identificator unic al identității folosite pentru acțiunea Documente partajate
+- **Data_DstDoc_IOFlags:long** - bitmask pentru diferite semnalizări legate de IO pentru un anumit document
 
-  - **Data\_DstDoc\_IOFlags:long -** bitmask pentru diferite semnalizări legate de IO pentru un anumit document
+- **Data_DstDoc_IrmRights:long** - set predefinit de valori pentru tipul de Information Rights Management aplicat pentru acest document (Redirecționare, Răspuns, SecureReader, Editare etc.)
 
-  - **Data\_DstDoc\_IrmRights:long -** set predefinit de valori pentru tipul de Information Rights Management aplicat pentru acest document (Redirecționare, Răspuns, SecureReader, Editare etc.)
+- **Data_DstDoc_IsCloudCollabEnabled:bool** - true dacă antetul „IsCloudCollabEnabled” a fost deja primit dintr-o solicitare OPTIONS.
 
-  - **Data\_DstDoc\_IsCloudCollabEnabled:bool -** true dacă antetul „IsCloudCollabEnabled” a fost deja primit dintr-o solicitare OPTIONS.
+- **Data_DstDoc_IsIncrementalOpen:bool** - documentul a fost deschis incremental (caracteristică nouă care deschide documentul fără să-l descarce în totalitate)
 
-  - **Data\_DstDoc\_IsIncrementalOpen:bool -** documentul a fost deschis incremental (caracteristică nouă care deschide documentul fără să-l descarce în totalitate)
+- **Data_DstDoc_IsOcsSupported:bool** - dacă documentul acceptă elaborarea în comun folosind noul serviciu OCS
 
-  - **Data\_DstDoc\_IsOcsSupported:bool -** dacă documentul acceptă elaborarea în comun folosind noul serviciu OCS
+- **Data_DstDoc_IsOpeningOfflineCopy:bool** - verifică dacă documentul este deschis din memoria cache locală
 
-  - **Data\_DstDoc\_IsOpeningOfflineCopy:bool -** verifică dacă documentul este deschis din memoria cache locală
+- **Data_DstDoc_IsSyncBacked:bool** - dacă documentul este deschis din folderul care folosește aplicația de sincronizare inversă OneDrive
 
-  - **Data\_DstDoc\_IsSyncBacked:bool -** dacă documentul este deschis din folderul care folosește aplicația de sincronizare inversă OneDrive
+- **Data_DstDoc_Location:long** - set predefinit de valori privind locul de stocare a documentului (Local, SharePoint, WOPI, Rețea etc.)
 
-  - **Data\_DstDoc\_Location:long -** set predefinit de valori privind locul de stocare a documentului (Local, SharePoint, WOPI, Rețea etc.)
+- **Data_DstDoc_LocationDetails:long** - set predefinit de valori privind locația mai detaliată (folderul Temp, folderul de descărcări, Documente OneDrive, Imagini OneDrive etc.)
 
-  - **Data\_DstDoc\_LocationDetails:long -** set predefinit de valori privind locația mai detaliată (folderul Temp, folderul de descărcări, Documente OneDrive, Imagini OneDrive etc.)
+- **Data_DstDoc_NumberCoAuthors:long** - numărul de coautori la momentul deschiderii unui document
 
-  - **Data\_DstDoc\_NumberCoAuthors:long -** numărul de coautori la momentul deschiderii unui document
+- **Data_DstDoc_PasswordFlags:long** - set predefinit de valori privind modul în care documentul este criptat cu o parolă (Fără, parolă pentru citire, parolă pentru editare)
 
-  - **Data\_DstDoc\_PasswordFlags:long-** set predefinit de valori privind modul în care documentul este criptat cu o parolă (Fără, parolă pentru citire, parolă pentru editare)
+- **Data_DstDoc_ReadOnlyReasons:long** - set predefinit de valori privind motivul pentru care acest document a fost marcat doar în citire (blocat pe server, document final, protejat prin parolă pentru editare etc.)
 
-  - **Data\_DstDoc\_ReadOnlyReasons:long -** set predefinit de valori privind motivul pentru care acest document a fost marcat doar în citire (blocat pe server, document final, protejat prin parolă pentru editare etc.)
+- **Data_DstDoc_ResourceIdHash:string** - codul hash al identificatorului de resurse pentru documentele stocate în cloud
 
-  - **Data\_DstDoc\_ResourceIdHash:string -** codul hash al identificatorului de resurse pentru documentele stocate în cloud
+- **Data_DstDoc_ServerDocId:string** - identificatorul invariabil pentru documentele stocate în cloud
 
-  - **Data\_DstDoc\_ServerDocId:string -** identificatorul invariabil pentru documentele stocate în cloud
+- **Data_DstDoc_ServerProtocol:long** - set predefinit de valori privind protocolul folosit în comunicarea cu serverul (Http, Cobalt, WOPI etc.)
 
-  - **Data\_DstDoc\_ServerProtocol:long -** set predefinit de valori privind protocolul folosit în comunicarea cu serverul (Http, Cobalt, WOPI etc.)
+- **Data_DstDoc_ServerType:long** - set predefinit de valori privind tipul serverului (SharePoint, DropBox, WOPI)
 
-  - **Data\_DstDoc\_ServerType:long -** set predefinit de valori privind tipul serverului (SharePoint, DropBox, WOPI)
+- **Data_DstDoc_ServerVersion:long** - dacă serverul se bazează pe Office14, Office15, Office 16
 
-  - **Data\_DstDoc\_ServerVersion:long -** dacă serverul se bazează pe Office14, Office15, Office 16
+- **Data_DstDoc_SessionId:long** - GUID generat care identifică instanța documentului din aceeași sesiune de proces
 
-  - **Data\_DstDoc\_SessionId:long -** GUID generat care identifică instanța documentului din aceeași sesiune de proces
+- **Data_DstDoc_SharePointServiceContext:string** - un șir opac, de obicei GridManagerID.FarmID. Util pentru corelarea jurnalelor de la client și de pe server
 
-  - **Data\_DstDoc\_SharePointServiceContext:string -** un șir opac, de obicei GridManagerID.FarmID. Util pentru corelarea jurnalelor de la client și de pe server
+- **Data_DstDoc_SizeInBytes:long** - dimensiunea documentului în octeți
 
-  - **Data\_DstDoc\_SizeInBytes:long -** dimensiunea documentului în octeți
+- **Data_DstDoc_SpecialChars:long** - Bitmask ce arată caracterele speciale din adresa URL sau din calea documentului
 
-  - **Data\_DstDoc\_SpecialChars:long -** Bitmask ce arată caracterele speciale din adresa URL sau calea documentului
+- **Data_DstDoc_StorageProviderId:string** - șir care identifică furnizorul de stocare al documentului, precum „DropBox”
 
-  - **Data\_DstDoc\_StorageProviderId:string -** șir care identifică furnizorul de stocare al documentului, precum „DropBox”
+- **Data_DstDoc_StreamAvailability:long** - set predefinit de valori privind starea șirului de document (disponibil, dezactivat definitiv, indisponibil)
 
-  - **Data\_DstDoc\_StreamAvailability:long -** set predefinit de valori privind starea șirului de document (disponibil, dezactivat definitiv, indisponibil)
+- **Data_DstDoc_UrlHash:string** - codul hash pentru adresa URL completă a documentelor stocate în cloud
 
-  - **Data\_DstDoc\_UrlHash:string -** codul hash pentru adresa URL completă a documentelor stocate în cloud
+- **Data_DstDoc_UsedWrsDataOnOpen:bool** - true dacă fișierul a fost deschis incremental folosind datele WRS prememorate în cache pentru gazdă
 
-  - **Data\_DstDoc\_UsedWrsDataOnOpen:bool -** true dacă fișierul a fost deschis incremental folosind datele WRS prememorate în cache pentru gazdă
+- **Data_DstDoc_WopiServiceId:string** - identificatorul serviciului WOPI, de ex. „Dropbox”
 
-  - **Data\_DstDoc\_WopiServiceId:string -** identificatorul serviciului WOPI, de ex. „Dropbox”
+- **Data_FileType:long** - set predefinit de valori al tipului de fișier intern
 
-  - **Data\_FileType:long -** set predefinit de valori al tipului de fișier intern
+- **Data_fLifeguarded:bool** - documentul a fost vreodată protejat (caracteristică pentru a remedia automat erorile din documente, fără intervenția utilizatorului)?
 
-  - **Data\_fLifeguarded:bool -** a fost documentul vreodată protejat (caracteristică pentru a remedia erorile din documente, fără a-i adresa solicitări utilizatorului)?
+- **Data_SaveReason:long** - set predefinit de valori privind motivul pentru care s-a efectuat această salvare (AutoSave, ToOCSTransitionSave, ToCSITransitionSave etc.)
 
-  - **Data\_SaveReason:long -** set predefinit de valori privind motivul pentru care s-a efectuat această salvare (AutoSave, ToOCSTransitionSave, ToCSITransitionSave etc.)
+- **Data_SaveType:long** - set predefinit de valori privind tipul de salvare (Salvare ca, Publicare, Manual, Salvare OM etc.)
 
-  - **Data\_SaveType:long -** set predefinit de valori privind tipul de salvare (Salvare ca, Publicare, Manual, Salvare OM etc.)
+- **Data_SrcDoc_AccessMode:long** - cum a fost deschis acest document (doar în citire | citire-scriere)
 
-  - **Data\_SrcDoc\_AccessMode:long -** cum a fost deschis acest document (doar în citire | citire-scriere)
+- **Data_SrcDoc_AssistedReadingReasons:long** - set predefinit de valori pentru care documentul a fost deschis în modul de citire asistată
 
-  - **Data\_SrcDoc\_AssistedReadingReasons:long -** set predefinit de valori pentru care documentul a fost deschis în modul de citire asistată
+- **Data_SrcDoc_ChunkingType:long** - cum este stocat documentul în SharePoint
 
-  - **Data\_SrcDoc\_ChunkingType:long -** cum este stocat documentul în SharePoint
+- **Data_SrcDoc_EdpState:long** - starea Enterprise Data Protection a documentului
 
-  - **Data\_SrcDoc\_EdpState:long -** starea Enterprise Data Protection a documentului
+- **Data_SrcDoc_Ext:string** - extensia documentului
 
-  - **Data\_SrcDoc\_Ext:string -** extensia documentului
+- **Data_SrcDoc_Extension:string** - extensia documentului
 
-  - **Data\_SrcDoc\_Extension:string -** extensia documentului
+- **Data_SrcDoc_FileFormat:long** - set predefinit de valori pentru formatul fișierului (mai granular decât extensia)
 
-  - **Data\_SrcDoc\_FileFormat:long -** set predefinit de valori pentru formatul fișierului (mai granular decât extensia)
+- **Data_SrcDoc_Fqdn:string** - unde este stocat documentul (SharePoint.com, live.net), disponibil numai pentru domeniile Office 365
 
-  - **Data\_SrcDoc\_Fqdn:string -** unde este stocat documentul (SharePoint.com, live.net), disponibil numai pentru domeniile Office 365
+- **Data_SrcDoc_FqdnHash:string** - codul hash al locului unde este stocat documentul 
 
-  - **Data\_SrcDoc\_FqdnHash:string -** codul hash al locului unde este stocat documentul
+- **Data_SrcDoc_IdentityTelemetryId:string** - GUID unic al utilizatorului
 
-  - **Data\_SrcDoc\_IdentityTelemetryId:string - **GUID unic al utilizatorului
+- **Data_SrcDoc_IdentityUniqueId:string** - identificator unic al identității folosite pentru acțiunea Documente partajate
 
-  - **Data\_SrcDoc\_IdentityUniqueId:string -** identificator unic al identității folosite pentru acțiunea Documente partajate
+- **Data_SrcDoc_IOFlags:long** - bitmask pentru diferite semnalizări legate de IO pentru un anumit document
 
-  - **Data\_SrcDoc\_IOFlags:long -** bitmask pentru diferite semnalizări legate de IO pentru un anumit document
+- **Data_SrcDoc_IrmRights:long** - set predefinit de valori pentru tipul de Information Rights Management aplicat pentru acest document (Redirecționare, Răspuns, SecureReader, Editare etc.)
+    
+- **Data_SrcDoc_IsCloudCollabEnabled:bool** - true dacă antetul „IsCloudCollabEnabled” a fost deja primit dintr-o solicitare OPTIONS.
 
-  - **Data\_SrcDoc\_IrmRights:long -** set predefinit de valori pentru tipul de Information Rights Management aplicat pentru acest document (Redirecționare, Răspuns, SecureReader, Editare etc.)
+- **Data_SrcDoc_IsIncrementalOpen:bool** - documentul a fost deschis incremental (caracteristică nouă care deschide documentul fără să-l descarce în totalitate)
 
-  - **Data\_SrcDoc\_IsCloudCollabEnabled:bool -** true dacă antetul „IsCloudCollabEnabled” a fost deja primit dintr-o solicitare OPTIONS.
+- **Data_SrcDoc_IsOcsSupported:bool** - dacă documentul acceptă elaborarea în comun folosind noul serviciu OCS
 
-  - **Data\_SrcDoc\_IsIncrementalOpen:bool -** documentul a fost deschis incremental (caracteristică nouă care deschide documentul fără să-l descarce în totalitate)
+- **Data_SrcDoc_IsOpeningOfflineCopy:bool** - verifică dacă documentul este deschis din memoria cache locală
 
-  - **Data\_SrcDoc\_IsOcsSupported:bool -** dacă documentul acceptă elaborarea în comun folosind noul serviciu OCS
+- **Data_SrcDoc_IsSyncBacked:bool** - dacă documentul este deschis din folderul care folosește aplicația de sincronizare inversă OneDrive
 
-  - **Data\_SrcDoc\_IsOpeningOfflineCopy:bool -** verifică dacă documentul este deschis din memoria cache locală
+- **Data_SrcDoc_Location:long** - set predefinit de valori privind locul de stocare a documentului (Local, SharePoint, WOPI, Rețea etc.)
 
-  - **Data\_SrcDoc\_IsSyncBacked:bool -** dacă documentul este deschis din folderul care folosește aplicația de sincronizare inversă OneDrive
+- **Data_SrcDoc_LocationDetails:long** - set predefinit de valori privind locația mai detaliată (folderul Temp, folderul de descărcări, Documente OneDrive, Imagini OneDrive etc.)
 
-  - **Data\_SrcDoc\_Location:long -** set predefinit de valori privind locul de stocare a documentului (Local, SharePoint, WOPI, Rețea etc.)
+- **Data_SrcDoc_NumberCoAuthors:long** - numărul de coautori la momentul deschiderii unui document
 
-  - **Data\_SrcDoc\_LocationDetails:long -** set predefinit de valori privind locația mai detaliată (folderul Temp, folderul de descărcări, Documente OneDrive, Imagini OneDrive etc.)
+- **Data_SrcDoc_PasswordFlags:long** - set predefinit de valori privind modul în care documentul este criptat cu o parolă (Fără, parolă pentru citire, parolă pentru editare)
 
-  - **Data\_SrcDoc\_NumberCoAuthors:long -** numărul de coautori la momentul deschiderii unui document
+- **Data_SrcDoc_ReadOnlyReasons:long** - set predefinit de valori privind motivul pentru care acest document a fost marcat doar în citire (blocat pe server, document final, protejat prin parolă pentru editare etc.)
 
-  - **Data\_SrcDoc\_PasswordFlags:long-** set predefinit de valori privind modul în care documentul este criptat cu o parolă (Fără, parolă pentru citire, parolă pentru editare)
+- **Data_SrcDoc_ResourceIdHash:string** - codul hash al identificatorului de resurse pentru documentele stocate în cloud
 
-  - **Data\_SrcDoc\_ReadOnlyReasons:long -** set predefinit de valori privind motivul pentru care acest document a fost marcat doar în citire (blocat pe server, document final, protejat prin parolă pentru editare etc.)
+- **Data_SrcDoc_ServerDocId:string** - identificatorul invariabil pentru documentele stocate în cloud
 
-  - **Data\_SrcDoc\_ResourceIdHash:string -** codul hash al identificatorului de resurse pentru documentele stocate în cloud
+- **Data_SrcDoc_ServerProtocol:long** - set predefinit de valori privind protocolul folosit în comunicarea cu serverul (Http, Cobalt, WOPI etc.)
 
-  - **Data\_SrcDoc\_ServerDocId:string -** identificatorul invariabil pentru documentele stocate în cloud
+- **Data_SrcDoc_ServerType:long** - set predefinit de valori privind tipul serverului (SharePoint, DropBox, WOPI)
 
-  - **Data\_SrcDoc\_ServerProtocol:long -** set predefinit de valori privind protocolul folosit în comunicarea cu serverul (Http, Cobalt, WOPI etc.)
+- **Data_SrcDoc_ServerVersion:long** - verfică dacă serverul se bazează pe Office14, Office15 sau Office 16
 
-  - **Data\_SrcDoc\_ServerType:long -** set predefinit de valori privind tipul serverului (SharePoint, DropBox, WOPI)
+- **Data_SrcDoc_SessionId:long** - GUID generat care identifică instanța documentului din aceeași sesiune de proces
 
-  - **Data\_SrcDoc\_ServerVersion:long ** dacă serverul se bazează pe Office14, Office15, Office 16
+- **Data_SrcDoc_SharePointServiceContext:string** - un șir opac, de obicei GridManagerID.FarmID. Util pentru corelarea jurnalelor de la client și de pe server
 
-  - **Data\_SrcDoc\_SessionId:long -** GUID generat care identifică instanța documentului din aceeași sesiune de proces
+- **Data_SrcDoc_SizeInBytes:long** - dimensiunea documentului în octeți
 
-  - **Data\_SrcDoc\_SharePointServiceContext:string -** un șir opac, de obicei GridManagerID.FarmID. Util pentru corelarea jurnalelor de la client și de pe server
+- **Data_SrcDoc_SpecialChars:long** - Bitmask ce arată caracterele speciale din adresa URL sau calea documentului
 
-  - **Data\_SrcDoc\_SizeInBytes:long -** dimensiunea documentului în byți
+- **Data_SrcDoc_StorageProviderId:string** - șir care identifică furnizorul de stocare al documentului, precum „DropBox”
 
-  - **Data\_SrcDoc\_SpecialChars:long -** Bitmask ce arată caracterele speciale din adresa URL sau calea documentului
+- **Data_SrcDoc_StreamAvailability:long** - set predefinit de valori privind starea șirului de document (disponibil, dezactivat definitiv, indisponibil)
 
-  - **Data\_SrcDoc\_StorageProviderId:string -** șir care identifică furnizorul de stocare al documentului, precum „DropBox”
+- **Data_SrcDoc_UrlHash:string** - codul hash pentru adresa URL completă a documentelor stocate în cloud
 
-  - **Data\_SrcDoc\_StreamAvailability:long -** set predefinit de valori privind starea șirului de document (disponibil, dezactivat definitiv, indisponibil)
+- **Data_SrcDoc_UsedWrsDataOnOpen:bool** - true dacă fișierul a fost deschis incremental folosind datele WRS prememorate în cache pentru gazdă
 
-  - **Data\_SrcDoc\_UrlHash:string -** codul hash pentru adresa URL completă a documentelor stocate în cloud
+- **Data_SrcDoc_WopiServiceId:string** - identificatorul serviciului WOPI, de ex. „Dropbox”
 
-  - **Data\_SrcDoc\_UsedWrsDataOnOpen:bool -** true dacă fișierul a fost deschis incremental folosind datele WRS prememorate în cache pentru gazdă
+- **Data_StopwatchDuration:long** - timpul total al activității
 
-  - **Data\_SrcDoc\_WopiServiceId:string -** identificatorul serviciului WOPI, de ex. „Dropbox”
+- **Data_TypeOfSaveDialog:long** - set predefinit de valori de dialog (RUN_SAVEAS_DLG, RUN_SAVEMEDIA_DLG, RUN_SAVEAS_VIDEO_DLG etc.)
 
-  - **Data\_StopwatchDuration:long -** timpul total al activității
+- **Doc** - document curent pentru Salvare
 
-  - **Data\_TypeOfSaveDialog:long -** set predefinit de valori ale casetei de dialog (RUN\_SAVEAS\_DLG, RUN\_SAVEMEDIA\_DLG, RUN\_SAVEAS\_VIDEO\_DLG etc.)
+- **DstDoc** - noua locație a documentului (în cazul Salvare ca)
 
-  - **Doc -** document curent pentru Salvare
+- **SrcDoc** - locația inițială a documentului (în cazul Salvare ca)
 
-  - **DstDoc -** noua locație a documentului (în cazul Salvare ca)
+#### <a name="officepowerpointpptmacshellprintinfo"></a>Office.PowerPoint.PPT.Mac.Shell.PrintInfo
 
-  - **SrcDoc -** locația inițială a documentului (în cazul Salvare ca)
+Colectată de fiecare dată când o operațiune de imprimare PDF sau de export PDF s-a finalizat și conține informații despre tipul de aspect, precum și despre succesul operațiunii. Aceste informații sunt esențiale pentru a identifica succesul operațiunilor de imprimare PDF și export PDF pentru aplicația noastră.
+
+Se colectează următoarele câmpuri:
+
+- **Data_ExportAsPDFSucceed** - Boolean care indică dacă exportul ca PDF a fost un succes.
+
+- **Data_SavePrintLayoutType** - tipul de aspect pagină imprimată la momentul începerii operațiunii de imprimare sau de export.
+
 
 #### <a name="officepowerpointpptsharedslideshowfailure"></a>Office.PowerPoint.PPT.Shared.SlideShow.Failure
 
-Colectarea erorilor în timpul expunerii de diapozitive. Expunerea de diapozitive este o caracteristică principală a PowerPoint. Microsoft colectează atunci când apare o eroare în timpul expunerii de diapozitive pentru a îmbunătăți experiența utilizatorului privind expunerea de diapozitive. Microsoft utilizează aceste date pentru a obține informații de diagnosticare privind locul unde apare eroarea în timp ce utilizatorul folosește expunerea de diapozitive
+Colectarea erorilor în timpul expunerii de diapozitive ca o caracteristică esențială pentru PowerPoint. Microsoft colectează informații despre momentul când apare o eroare în timpul expunerii de diapozitive pentru a îmbunătăți experiența utilizatorului privind expunerea de diapozitive. Microsoft utilizează aceste date pentru a obține informații de diagnosticare privind locul unde apare eroarea în timp ce utilizatorul folosește expunerea de diapozitive.
 
 Se colectează următoarele câmpuri:
 
-  - **CountSlideShowErrors** - numărul total de erori aferente expunerii de diapozitive
+- **CountOArtErrors** - numărul total de erori OArt
 
-  - **CountPPTErrors** - numărul total de erori PPT
+- **CountOtherErrors** - numărul total de alte erori
 
-  - **CountOArtErrors** - numărul total de erori OArt
+- **CountPPTErrors** - numărul total de erori PPT
 
-  - **CountOtherErrors** - numărul total de alte erori
+- **CountSlideShowErrors** - numărul total de erori aferente expunerii de diapozitive
 
-  - **FirstSlideShowError** - prima eroare care a apărut în expunerea de diapozitive
+- **FirstOArtError** - prima eroare care a apărut în OArt
 
-  - **FirstOArtError** - prima eroare care a apărut în OArt
+- **FirstOtherError** - prima eroare care a apărut în altă zonă
 
-  - **FirstPPTError** - prima eroare care a apărut în PPT
+- **FirstPPTError** - prima eroare care a apărut în PPT
 
-  - **FirstOtherError** - prima eroare care a apărut în altă zonă
+- **FirstSlideShowError** - prima eroare care a apărut în expunerea de diapozitive
+
+    
+#### <a name="officepowerpointrunprintoperation"></a>Office.PowerPoint.RunPrintOperation
+
+Colectată de fiecare dată când o operațiune de imprimare PDF sau de export PDF s-a finalizat și conține informații despre tipul de aspect, utilizarea numerelor de diapozitiv precum și despre succesul operațiunii. Aceste informații sunt esențiale pentru a identifica succesul operațiunilor de imprimare PDF pentru aplicația noastră.
+
+Se colectează următoarele câmpuri:
+
+- **Data_PrintWithSlideNumbers** - Boolean care indică dacă utilizatorul imprimă cu numere de diapozitiv.
+
+- **Data_SavePrintLayoutType** - tipul de aspect pagină imprimată la momentul începerii operațiunii de imprimare sau de export.
+
+- **Data_Success** - Boolean care indică dacă imprimarea a fost un succes.
+
 
 #### <a name="officeprojectprojectfilesave"></a>Office.Project.ProjectFileSave
 
@@ -2645,121 +3179,124 @@ Se colectează următoarele câmpuri:
 
   - **Data\_RequestUrl** - URL-ul resursei CDN pe care încercăm să îl regăsim
 
+
+
 #### <a name="officetranslatordocumenttranslated"></a>Office.Translator.DocumentTranslated
 
 Colectează succesul sau nereușita traducerii unui întreg document pe care un utilizator o declanșează în Translator SDX. Acest lucru este de importanță critică pentru a evalua starea caracteristicii de traducere și a reacționa la eventuale întreruperi. Monitorizați starea de funcționare a scenariului „Traducere document” în Word.
 
 Se colectează următoarele câmpuri:
 
-  - **Data.actionSource -** cum a fost declanșată traducerea selecției-
+- **Data.actionSource** - cum a fost declanșată traducerea selecției
 
-  - **Data.bodyBackgroundColor -** culoare de fundal container temă Office-
+- **Data.bodyBackgroundColor** - culoare de fundal container temă Office
 
-  - **Data.bodyForegroundColor -** culoare de prim-plan container temă Office-
+- **Data.bodyForegroundColor** - culoare de prim-plan container temă Office
 
-  - **Data.browserLang -** limbă curentă afișaj browser-
+- **Data.browserLang** - limbă curentă afișaj browser
 
-  - **Data.browserOnline -** depășit -
+- **Data.browserOnline** - depășit
 
-  - **Data.browserPlatform -** platformă browser-
+- **Data.browserPlatform** - platformă browser
 
-  - **Data.browserUserAgent -** agent utilizator browser-
+- **Data.browserUserAgent** - agent utilizator browser
 
-  - **Data.colorDepth -** adâncime culoare sistem-
+- **Data.colorDepth** - adâncime culoare sistem
 
-  - **Data.contentLanguage -** limbă detectată a conținutului de tradus-
+- **Data.contentLanguage** - limbă detectată a conținutului de tradus
 
-  - **Data.controlBackgroundColor -** culoare de fundal control temă Office-
+- **Data.controlBackgroundColor** - culoare de fundal control temă Office
 
-  - **Data.controlForegroundColor -** culoare de prim-plan container temă Office-
+- **Data.controlForegroundColor** - culoare de prim-plan container temă Office
 
-  - **Data.correlationId -** identificator unic al solicitării trimise la serviciu-
+- **Data.correlationId** - identificator unic al solicitării trimise la serviciu
 
-  - **Data.crossSessionId -** identificator unic al utilizatorului-
+- **Data.crossSessionId** - identificator unic al utilizatorului
 
-  - **Data.crossSessionStartTime -** marcă de timp UTC privind momentul în care a început sesiunea de traducere-
+- **Data.crossSessionStartTime** - marcă de timp UTC privind momentul în care a început sesiunea de traducere
 
-  - **Data.currentTime -** marcă de timp UTC privind momentul în care a fost trimis acest mesaj de telemetrie-
+- **Data.currentTime** - marcă de timp UTC privind momentul în care a fost trimis acest mesaj de telemetrie
 
-  - **Data.displayLanguage -** limbă afișaj Office-
+- **Data.displayLanguage** - limbă afișaj Office
 
-  - **Data.documentSourceLang -** limbă conținut document-
+- **Data.documentSourceLang** - limbă conținut document-
 
-  - **Data.documentTargetLang -** documentul Limbă va fi tradus în-
+- **Data.documentTargetLang** - documentul Limbă va fi tradus în-
 
-  - **Data.environment -** mediul de serviciu la care este trimisă solicitarea-
+- **Data.environment** - mediul de serviciu la care este trimisă solicitarea
 
-  - **Data.errorMessage -** mesaj de eroare raportat de serviciu-
+- **Data.errorMessage** - mesaj de eroare raportat de serviciu
 
-  - **Data.eventActionType -** tip de eveniment de telemetrie-
+- **Data.eventActionType** - tip de eveniment de telemetrie
 
-  - **Data.eventTagId -** identificator unic al liniei de cod care a produs acest mesaj de telemetrie-
+- **Data.eventTagId** - identificator unic al liniei de cod care a produs acest mesaj de telemetrie
 
-  - **Data.flights -** ediții flight activate-
+- **Data.flights** - ediții flight activate
 
-  - **Data.fileSize -** dimensiunea fișierului Word de tradus-
+- **Data.fileSize** - dimensiunea fișierului Word de tradus
 
-  - **Data.fileSource -** unde este găzduit fișierul Word (offline, online)-
+- **Data.fileSource** - unde este găzduit fișierul Word (offline, online)
 
-  - **Data.fileType -** extensia fișierului Word-
+- **Data.fileType** - extensia fișierului Word
 
-  - **Data.innerHeight"-** înălțime container panou lateral-
+- **Data.innerHeight"** - înălțime container panou lateral
 
-  - **Data.innerWidth"-** lățime container panou lateral-
+- **Data.innerWidth"** - lățime container panou lateral
 
-  - **Data.lookupSourceLang -** neutilizat pentru traducerea documentului-
+- **Data.lookupSourceLang** - neutilizat pentru traducerea documentului
 
-  - **Data.lookupTargetLang -** neutilizat pentru traducerea documentului 
+- **Data.lookupTargetLang** - neutilizat pentru traducerea documentului
 
-  - **Data.officeHost -** aplicație Office care găzduiește panoul lateral-
+- **Data.officeHost** - aplicație Office care găzduiește panoul lateral
 
-  - **Data.officeLocale -** limbă utilizatorului Office-
+- **Data.officeLocale** - limbă utilizatorului Office
 
-  - **Data.officeMachineId-** identificator unic al dispozitivului-
+- **Data.officeMachineId** - identificator unic al dispozitivului
 
-  - **Data.officePlatform -** platforma dispozitivului-
+- **Data.officePlatform** - platforma dispozitivului
 
-  - **Data.officeSessionId -** identificator al sesiunii Office-
+- **Data.officeSessionId** - identificator al sesiunii Office
 
-  - **Data.officeUserId -** identificator unic utilizator Office-
+- **Data.officeUserId** - identificator unic utilizator Office
 
-  - **Data.officeVersion -** versiune de Office-
+- **Data.officeVersion** - versiune de Office
 
-  - **Data.pageXOffset -** poziție de defilare orizontală panoul lateral din partea stângă a panoului-
+- **Data.pageXOffset** - poziție de defilare orizontală panoul lateral din partea stângă a panoului
 
-  - **Data.pageYOffset -** poziție de defilare verticală panoul lateral din partea stângă a panoului-
+- **Data.pageYOffset** - poziție de defilare verticală panoul lateral din partea stângă a panoului
 
-  - **Data.pixelDepth -** rezoluția de culori a ecranului-
+- **Data.pixelDepth** - rezoluția de culori a ecranului
 
-  - **Data.responseCode -** cod de răspuns solicitare de la serviciu la serviciu-
+- **Data.responseCode** - cod de răspuns solicitare de la serviciu
 
-  - **Data.responseTime -** timp scurs solicitare-
+- **Data.responseTime** - timp scurs solicitare 
 
-  - **Data.resultType -** rezultat solicitare-
+- **Data.resultType** - rezultat solicitare
 
-  - **Data.screenHeight -** ecran înălțime în pixeli-
+- **Data.screenHeight** - înălțime ecran în pixeli
 
-  - **Data.screenLeft -** coordonata orizontală a ferestrei față de ecran-
+- **Data.screenLeft** - coordonata orizontală a ferestrei față de ecran
 
-  - **Data.screenTop -** coordonata verticală a ferestrei față de ecran-
+- **Data.screenTop** - coordonata verticală a ferestrei față de ecran
 
-  - **Data.screenWidth -** lățime ecran în pixeli-
+- **Data.screenWidth** - lățime ecran în pixeli
 
-  - **Data.selectedTab -** care filă este selecția sau documentul selectat-
+- **Data.selectedTab** - care filă este selectată selecție sau document
 
-  - **Data.serverUrl -** URL serviciu de traducere-
+- **Data.serverUrl** - URL serviciu de traducere
 
-  - **Data.sessionId -** identificator sesiune panoul lateral-
+- **Data.sessionId** - identificator sesiune panoul lateral
 
-  - **Data.sessionStartTime -** marcă de timp UTC privind momentul în care a început sesiunea de traducere-
+- **Data.sessionStartTime** - marcă de timp UTC privind momentul în care a început sesiunea de traducere
 
-  - **Data.sourceTextHash -** codul hash al textului de tradus-
+- **Data.sourceTextHash** - codul hash al textului de tradus
 
-  - **Data.sourceTextLength -** lungime text de tradus-
+- **Data.sourceTextLength** - lungime text de tradus
 
-  - **Data.sourceTextWords -** număr de cuvinte în textul de tradus-
+- **Data.sourceTextWords** - număr de cuvinte în textul de tradus
 
-  - **Data.warningMessage -** mesaj de avertisment raportat către serviciu-
+- **Data.warningMessage** - mesaj de avertisment raportat de serviciu
+
 
 #### <a name="officetranslatortexttranslated"></a>Office.Translator.TextTranslated
 
@@ -2767,173 +3304,171 @@ Colectează succesul sau nereușita traducerii unei selecții pe care acțiunea 
 
 Se colectează următoarele câmpuri:
 
-  - **Data.actionSource -** cum a fost declanșată traducerea selecției
+- **Data.actionSource** - cum a fost declanșată traducerea selecției
 
-  - **Data.bodyBackgroundColor -** culoare de fundal container temă Office
+- **Data.bodyBackgroundColor** - culoare de fundal container temă Office
 
-  - **Data.bodyForegroundColor -** culoare de prim-plan container temă Office
+- **Data.bodyForegroundColor** - culoare de prim-plan container temă Office
 
-  - **Data.browserLang -** limbă curentă afișaj browser
+- **Data.browserLang** - limbă curentă afișaj browser
 
-  - **Data.browserOnline -** depășit
+- **Data.browserOnline** - depășit
 
-  - **Data.browserPlatform -** platformă browser
+- **Data.browserPlatform** - platformă browser
 
-  - **Data.browserUserAgent -** agent utilizator browser
+- **Data.browserUserAgent** - agent utilizator browser
 
-  - **Data.colorDepth -** adâncime culoare sistem
+- **Data.colorDepth** - adâncime culoare sistem
 
-  - **Data.contentLanguage -** limbă detectată a conținutului de tradus
+- **Data.contentLanguage** - limbă detectată a conținutului de tradus
 
-  - **Data.controlBackgroundColor -** culoare de fundal control temă Office
+- **Data.controlBackgroundColor** - culoare de fundal control temă Office
 
-  - **Data.controlForegroundColor -** culoare de prim-plan container temă Office
+- **Data.controlForegroundColor** - culoare de prim-plan container temă Office
 
-  - **Data.correlationId -** identificator unic al solicitării trimise la serviciu
+- **Data.correlationId** - identificator unic al solicitării trimise la serviciu
 
-  - **Data.crossSessionId -** identificator unic al utilizatorului
+- **Data.crossSessionId** - identificator unic al utilizatorului
 
-  - **Data.crossSessionStartTime -** marcă de timp UTC privind momentul în care a început sesiunea de traducere
+- **Data.crossSessionStartTime** - marcă de timp UTC privind momentul în care a început sesiunea de traducere
 
-  - **Data.currentTime -** marcă de timp UTC privind momentul în care a fost trimis acest mesaj de telemetrie
+- **Data.currentTime** - marcă de timp UTC privind momentul în care a fost trimis acest mesaj de telemetrie
 
-  - **Data.displayLanguage -** limbă afișaj Office
+- **Data.displayLanguage** - limbă afișaj Office
 
-  - **Data.documentSourceLang -** nu se utilizează pentru selecție
+- **Data.documentSourceLang** - nu se utilizează pentru selecție
 
-  - **Data.documentTargetLang -** nu se utilizează pentru traducere selecție
+- **Data.documentTargetLang** - nu se utilizează pentru selecție traducere
 
-  - **Data.environment -** mediul de serviciu la care este trimisă solicitarea
+- **Data.environment** - mediul de serviciu la care este trimisă solicitarea
 
-  - **Data.errorMessage -** mesaj de eroare raportat de serviciu
+- **Data.errorMessage** - mesaj de eroare raportat de serviciu
 
-  - **Data.eventActionType -** tip de eveniment de telemetrie
+- **Data.eventActionType** - tip de eveniment de telemetrie
 
-  - **Data.eventTagId"-** identificator unic al liniei de cod care a produs acest mesaj de telemetrie
+- **Data.eventTagId"** - identificator unic al liniei de cod care a produs acest mesaj de telemetrie
 
-  - **Data.flights -** ediții flight activate
+- **Data.flights** - ediții flight activate
 
-  - **Data.innerHeight-** înălțime container panou lateral
+- **Data.innerHeight** - înălțime container panou lateral
 
-  - **Data.innerWidth-** lățime container panou lateral
+- **Data.innerWidth** - lățime container panou lateral
 
-  - **Data.lookupSourceLang -** limba textului selectat în mod curent
+- **Data.lookupSourceLang** - limba textului selectat în mod curent
 
-  - **Data.lookupTargetLang -** limba textului selectat în mod curent va fi tradusă în
+- **Data.lookupTargetLang** - limba textului selectat în mod curent va fi tradusă în
 
-  - **Data.officeHost -** aplicație Office care găzduiește panoul lateral
+- **Data.officeHost** - aplicație Office care găzduiește panoul lateral
 
-  - **Data.officeLocale -** limbă utilizatorului Office
+- **Data.officeLocale** - limbă utilizatorului Office
 
-  - **Data.officeMachineId-** identificator unic al dispozitivului
+- **Data.officeMachineId** - identificator unic al dispozitivului
 
-  - **Data.officePlatform -** platforma dispozitivului
+- **Data.officePlatform** - platforma dispozitivului
 
-  - **Data.officeSessionId -** identificator al sesiunii Office
+- **Data.officeSessionId** - identificator al sesiunii Office
 
-  - **Data.officeUserId -** identificator unic utilizator Office
+- **Data.officeUserId** - identificator unic utilizator Office
 
-  - **Data.officeVersion -** versiune de Office
+- **Data.officeVersion** - versiune de Office
 
-  - **Data.pageXOffset -** poziție de defilare orizontală panoul lateral din partea stângă a panoului
+- **Data.pageXOffset** - poziție de defilare orizontală panoul lateral din partea stângă a panoului
 
-  - **Data.pageYOffset -** poziție de defilare verticală panoul lateral din partea stângă a panoului
+- **Data.pageYOffset** - poziție de defilare verticală panoul lateral din partea stângă a panoului
 
-  - **Data.pixelDepth -** rezoluția de culori a ecranului
+- **Data.pixelDepth** - rezoluția de culori a ecranului
 
-  - **Data.responseCode -** cod de răspuns solicitare de la serviciu la serviciu
+- **Data.responseCode** - cod de răspuns solicitare de la serviciu
 
-  - **Data.responseTime -** timp scurs solicitare
+- **Data.responseTime** - timp scurs solicitare
 
-  - **Data.resultType -** rezultat solicitare
+- **Data.resultType** - rezultat solicitare
 
-  - **Data.screenHeight -** ecran înălțime în pixeli
+- **Data.screenHeight** - înălțime ecran în pixeli
 
-  - **Data.screenLeft -** coordonata orizontală a ferestrei față de ecran
+- **Data.screenLeft** - coordonata orizontală a ferestrei față de ecran
 
-  - **Data.screenTop -** coordonata verticală a ferestrei față de ecran
+- **Data.screenTop** - coordonata verticală a ferestrei față de ecran
 
-  - **Data.screenWidth -** lățime ecran în pixeli
+- **Data.screenWidth** - lățime ecran în pixeli
 
-  - **Data.selectedTab -** care filă este selecția sau documentul selectat
+- **Data.selectedTab** - care filă este selectată selecție sau document
 
-  - **Data.serverUrl -** URL serviciu de traducere
+- **Data.serverUrl** - URL serviciu de traducere
 
-  - **Data.sessionId -** identificator sesiune panoul lateral
+- **Data.sessionId** - identificator sesiune panoul lateral
 
-  - **Data.sessionStartTime -** marcă de timp UTC privind momentul în care a început sesiunea de traducere
+- **Data.sessionStartTime** - marcă de timp UTC privind momentul în care a început sesiunea de traducere
 
-  - **Data.sourceTextHash -** codul hash al textului de tradus
+- **Data.sourceTextHash** - codul hash al textului de tradus
 
-  - **Data.sourceTextLength -** lungime text de tradus
+- **Data.sourceTextLength** - lungime text de tradus
 
-  - **Data.sourceTextWords -** număr de cuvinte în textul de tradus
+- **Data.sourceTextWords** - număr de cuvinte în textul de tradus
 
-  - **Data.warningMessage -** mesaj de avertisment raportat către serviciu
+- **Data.warningMessage** - mesaj de avertisment raportat de serviciu
 
 #### <a name="officewordexperimentationdocumentstatsoncloseandsuspend"></a>Office.Word.Experimentation.DocumentStatsOnCloseAndSuspend
 
-Acest eveniment înregistrează în jurnal statistici de document pentru fiecare document atunci când Office Word este închis sau suspendat.
-
-Evenimentul este utilizat pentru a corela editări în document, dimensiunea etc. cu erori de salvare documente, partajare de documente și colaborare online la documente.
+Acest eveniment înregistrează în jurnal statistici de document pentru fiecare document atunci când Office Word este închis sau suspendat.  Evenimentul este utilizat pentru a corela editări în document, dimensiunea etc. cu erori de salvare documente, partajare de documente și colaborare online la documente.
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_BkmkRefCount -** referințe număr de marcaj în document
+- **Data_BkmkRefCount** - număr de referințe în marcaj în document
 
-  - **Data\_CharacterCount -** numărul de caractere din document
+- **Data_CharacterCount** - numărul de caractere din document
 
-  - **Data\_CharactersWithSpaceCount -** număr de caractere și spații din document
+- **Data_CharactersWithSpaceCount** - număr de caractere și spații din document
 
-  - **Data\_ChartCount -** numărul de diagrame din document
+- **Data_ChartCount** - numărul de diagrame din document
 
-  - **Data\_CitationCount -** numărul de referințe din document
+- **Data_CitationCount** - numărul de referințe din document
 
-  - **Data\_DocumentLocation -** arată ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint etc.)
+- **Data_DocumentLocation** - arată ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint etc.)
 
-  - **Data\_ETW\_TrackbackTag -** identifică locul din cod de unde a fost declanșat acest eveniment (Închidere sau Suspendare)
+- **Data_ETW_TrackbackTag** - identifică locul din cod de unde a fost declanșat acest eveniment (Închidere sau Suspendare)
 
-  - **Data\_EndnoteDocCount -** numărul de note de final din document
+- **Data_EndnoteDocCount** - numărul de note de final din document
 
-  - **Data\_FootnoteDocCount -** numărul de note de subsol din document
+- **Data_FootnoteDocCount** - numărul de note de subsol din document
 
-  - **Data\_HasBibliography -** indică dacă documentul conține bibliografie
+- **Data_HasBibliography** - indică dacă documentul conține bibliografie
 
-  - **Data\_HasHeader -** indică dacă documentul conține antet
+- **Data_HasHeader** - indică dacă documentul conține antet
 
-  - **Data\_IsImeUsed -** indică dacă intrare Editorul de metodă de intrare a fost utilizat în document
+- **Data_IsImeUsed** - indică dacă intrare Editorul de metodă de intrare a fost utilizat în document
 
-  - **Data\_IsPageCountInProgress -** indică dacă numărul de pagini este în prezent în curs pentru document.
+- **Data_IsPageCountInProgress** - indică dacă numărul de pagini este în prezent în curs pentru document.
+    
+- **Data_IsTouchUsed** - indică dacă intrarea tactilă a fost utilizată în document
 
-  - **Data\_IsTouchUsed -** indică dacă intrarea tactilă a fost utilizată în document
+- **Data_IsTrackChangesOn** - indică dacă urmărirea modificărilor a fost activată pentru document
 
-  - **Data\_IsTrackChangesOn -** indică dacă urmărirea modificărilor a fost activată pentru document
+- **Data_LineCount** - numărul de linii din document
 
-  - **Data\_LineCount -** numărul de linii din document
+- **Data_MainPdod** - Identificatorul documentului din procesul Office Word
 
-  - **Data\_MainPdod -** identificatorul documentului din procesul Office Word.
+- **Data_PageCount** - numărul de pagini din document
 
-  - **Data\_PageCount -** numărul de pagini din document
+- **Data_PageNumberFieldCount** - numărul de câmpuri număr de pagină din document
 
-  - **Data\_PageNumberFieldCount -** numărul de câmpuri număr de pagină din document
+- **Data_ParagraphCount** - numărul de paragrafe din document
 
-  - **Data\_ParagraphCount -** numărul de paragrafe din document
+- **Data_PicCount** - numărul de imagini din document
 
-  - **Data\_PicCount -** numărul de imagini din document
+- **Data_RsidCount** - numărul de revizuiri identificator salvare din document
 
-  - **Data\_RsidCount -** numărul de revizuiri identificator salvare din document
+- **Data_TocCount** - număr de cuprinsuri din document
 
-  - **Data\_TocCount -** număr de cuprinsuri din document
+- **Data_UrlHash** - cod hash unidirecțional pentru crearea unui identificator naiv de document
 
-  - **Data\_UrlHash -** cod hash unidirecțional, pentru crearea unui identificator naiv de document
+- **Data_UserActionID** - acest câmp de date nu este utilizat (valoarea este întotdeauna 0).
 
-  - **Data\_UserActionID -** acest câmp de date nu este utilizat (valoarea este întotdeauna 0).
+- **Data_UserActionName** - întotdeauna „DocumentStatsOnCloseAndSuspend”
 
-  - **Data\_UserActionName -** întotdeauna „DocumentStatsOnCloseAndSuspend”
-
-  - **Data\_UserInteractionTimeMsec -** număr de milisecunde în care utilizatorul a interacționat activ cu documentul
-
-  - **Data\_WordCount -** numărul de cuvinte din document
+- **Data_UserInteractionTimeMsec** - număr de milisecunde în care utilizatorul a interacționat activ cu documentul
+    
+- **Data_WordCount** - numărul de cuvinte din document
 
 #### <a name="officewordfilenewcreatenewfile"></a>Office.Word.FileNew.CreateNewFile
 
@@ -2955,187 +3490,187 @@ Acest eveniment indică faptul că un utilizator salvează modificările într-u
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_AddDocTelemRes -** raportează dacă am putut completa corect alte valori legate de telemetria documentelor din eveniment. Utilizat pentru diagnostice privind calitatea datelor.
+- **Data_AddDocTelemRes** - raportează dacă am putut completa corect alte valori legate de telemetria documentelor din eveniment. Utilizat pentru diagnostice privind calitatea datelor.
 
-  - **Data\_DetachedDuration -** cât timp a fost activitatea detașată de fir
+- **Data_DetachedDuration** - cât timp a fost activitatea detașată de fir
 
-  - **Data\_Doc\_AccessMode -** documentul este doar în citire/editabil
+- **Data_Doc_AccessMode** - documentul este numai în citire/editabil
 
-  - **Data\_Doc\_AssistedReadingReasons -** set predefinit de valori privind motivul pentru care documentul a fost deschis în modul de citire asistată
+- **Data_Doc_AssistedReadingReasons** - set predefinit de valori privind motivul pentru care documentul a fost deschis în modul de citire asistată
+    
+- **Data_Doc_ChunkingType** - unități utilizate pentru deschiderea incrementală a documentelor
 
-  - **Data\_Doc\_ChunkingType -** unități utilizate pentru deschiderea incrementală a documentelor
+- **Data_Doc_EdpState** - setare de protecție a datelor electronice pentru document
 
-  - **Data\_Doc\_EdpState -** setare de protecție a datelor electronice pentru document
+- **Data_Doc_Ext** - extensia documentului (docx/xlsb/pptx etc.)
 
-  - **Data\_Doc\_Ext -** extensia documentului (docx/xlsb/pptx etc.)
+- **Data_Doc_FileFormat** - versiunea de protocol pentru formatul fișierului
 
-  - **Data\_Doc\_FileFormat –** versiunea de protocol pentru formatul fișierului
+- **Data_Doc_Fqdn** - numele de domeniu OneDrive sau SharePoint Online
 
-  - **Data\_Doc\_Fqdn -** numele de domeniu OneDrive sau SharePoint Online
+- **Data_Doc_FqdnHash** - codul hash unidirecțional pentru numele de domeniu identificabil al clientului
 
-  - **Data\_Doc\_FqdnHash -** codul hash într-o singură direcție pentru numele de domeniu identificabil al clientului
+- **Data_Doc_IdentityTelemetryId** - codul hash unidirecțional pentru identitatea de utilizator folosită pentru deschidere
 
-  - **Data\_Doc\_IOFlags -** rapoarte privind semnalizările memorate în cache folosite pentru a seta opțiunile de deschidere a solicitărilor
+- **Data_Doc_InitializationScenario** - înregistrează cum a fost deschis documentul
 
-  - **Data\_Doc\_IdentityTelemetryId -** codul hash într-o singură direcție pentru identitatea de utilizator folosită pentru deschidere
+- **Data_Doc_IOFlags** - rapoarte privind semnalizările memorate în cache folosite pentru a seta opțiuni de solicitare deschise
 
-  - **Data\_DstDoc\_InitializationScenario -** înregistrează cum a fost deschis documentul
+- **Data_Doc_IrmRights** - acțiunile permise de politica de protejare a datelor electronice aplicată pentru document/utilizator
+    
+- **Data_Doc_IsIncrementalOpen** - semnalizare care indică faptul că documentul a fost deschis incremental
 
-  - **Data\_Doc\_IrmRights -** acțiunile permise de politica de protejare a datelor electronice aplicată pentru document/utilizator
+- **Data_Doc_IsOcsSupported** - semnalizare care indică faptul că documentul este acceptat în serviciul de colaborare
+    
+- **Data_Doc_IsOpeningOfflineCopy** - semnalizare care indică faptul că s-a deschis copia offline a unui document
 
-  - **Data\_Doc\_IsIncrementalOpen -** semnalizare care arată că documentul a fost deschis incremental
+- **Data_Doc_IsRtcAlwaysOn** - true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
 
-  - **Data\_Doc\_IsOcsSupported -** semnalizare care arată că documentul este acceptat în serviciul de colaborare
+- **Data_Doc_IsSyncBacked** - semnalizare care indică faptul că pe computer există o copie sincronizată automat a documentului
 
-  - **Data\_Doc\_IsOpeningOfflineCopy -** semnalizare care arată că s-a deschis copia offline a unui document
+- **Data_Doc_Location** - indică ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint etc.)
 
-  - **Data_Doc_IsRtcAlwaysOn -** true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
+- **Data_Doc_LocationDetails** - indică ce Folder cunoscut a furnizat un document stocat local
 
-  - **Data\_Doc\_IsSyncBacked -** semnalizare care arată că pe computer există o copie sincronizată automat a documentului
+- **Data_Doc_NumberCoAuthors** - numărul de alți utilizatori dintr-o sesiune de editare în colaborare
 
-  - **Data\_Doc\_Location -** arată ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint etc.)
+- **Data_Doc_PasswordFlags** - arată semnalizările de parole pentru citire sau citire/scriere setate
 
-  - **Data\_Doc\_LocationDetails -** arată ce Folder cunoscut a furnizat un document stocat local
+- **Data_Doc_ReadOnlyReasons** - motivele pentru care documentul a fost deschis doar în citire
 
-  - **Data\_Doc\_NumberCoAuthors -** numărul de alți utilizatori dintr-o sesiune de editare în colaborare
+- **Data_Doc_ResourceIdHash** - identificator de document anonimizat, folosit în diagnosticarea problemelor
 
-  - **Data\_Doc\_PasswordFlags -** arată semnalizările de parole pentru citire sau citire/scriere setate
+- **Data_Doc_ServerDocId** - identificator de document anonimizat și invariabil, folosit în diagnosticarea problemelor
 
-  - **Data\_Doc\_ReadOnlyReasons -** motivele pentru care documentul a fost deschis doar în citire
+- **Data_Doc_ServerProtocol** - versiunea de protocol folosită în comunicarea cu serviciul
 
-  - **Data\_Doc\_ResourceIdHash -** un identificator de document anonimizat, folosit în diagnosticarea problemelor
+- **Data_Doc_ServerType** - tipul de server care oferă serviciul (SharePoint, OneDrive, WOPI etc.)
 
-  - **Data\_Doc\_ServerDocId -** un identificator de document anonimizat și invariabil, folosit în diagnosticarea problemelor
+- **Data_Doc_ServerVersion** - versiunea serverului care oferă serviciul
 
-  - **Data\_Doc\_ServerProtocol -** versiunea de protocol folosită în comunicarea cu serviciul
+- **Data_Doc_SessionId** - identifică o anumită sesiune de editare a documentului din sesiunea completă
 
-  - **Data\_Doc\_ServerType -** tipul de server care oferă serviciul (SharePoint, OneDrive, WOPI etc.)
+- **Data_Doc_SharePointServiceContext** - informații de diagnosticare din solicitările SharePoint Online
 
-  - **Data\_Doc\_ServerVersion -** versiunea serverului care oferă serviciul
+- **Data_Doc_SizeInBytes** - indicator privind dimensiunea documentului
 
-  - **Data\_Doc\_SessionId -** identifică o anumită sesiune de editare a documentului din sesiunea completă
+- **Data_Doc_SpecialChars** - indicator privind caracterele speciale din calea sau adresa URL a documentului
 
-  - **Data\_Doc\_SharePointServiceContext -** informații de diagnosticare din solicitările SharePoint Online
+- **Data_Doc_StreamAvailability** - indicator care arată dacă șirul documentului este disponibil/dezactivat
 
-  - **Data\_Doc\_SizeInBytes -** indicator privind dimensiunea documentului
+- **Data_Doc_SyncBackedType** - indicator privind tipul documentului (local sau bazat pe servicii)
 
-  - **Data\_Doc\_SpecialChars -** indicator privind caracterele speciale din calea sau adresa URL a documentului
+- **Data_Doc_UrlHash** - cod hash unidirecțional, pentru crearea unui identificator naiv de document
 
-  - **Data\_Doc\_StreamAvailability -** indicator care arată dacă șirul documentului este disponibil/dezactivat
+- **Data_EditorDisablingRename** - identificatorul primului editor care a provocat dezactivarea redenumirii
 
-  - **Data\_Doc\_SyncBackedType -** indicator privind tipul documentului (local sau bazat pe servicii)
+- **Data_EditorsCount** - numărul de editori din document
 
-  - **Data\_Doc\_UrlHash -** cod hash într-o singură direcție, pentru crearea unui identificator naiv de document
+- **Data_LastLoggedTag** - etichetă unică pentru site-ul de apelare a codului folosit pentru a identifica momentele când nu reușim să încercăm salvarea de două ori (folosit pentru diagnosticarea calității datelor)
 
-  - **Data\_EditorDisablingRename -** identificatorul primului editor care a provocat dezactivarea redenumirii
+- **Data_MoveDisabledReason** - eroarea care dezactivează mutarea pentru document
 
-  - **Data\_EditorsCount -** numărul de editori din document
+- **Data_MoveFlightEnabled** - dacă ediția flight este activată pentru caracteristica de mutare
 
-  - **Data\_LastLoggedTag -** etichetă unică pentru site-ul de apelare a codului folosit pentru a identifica momentele când nu reușim să încercăm salvarea de două ori (folosit pentru diagnosticarea calității datelor)
+- **Data_RenameDisabledReason** - eroare care face redenumirea să fie dezactivată pentru document
 
-  - **Data\_MoveDisabledReason -** eroarea care dezactivează mutarea pentru document
+- **Data_RenameFlightEnabled** - dacă este activată ediția flight pentru caracteristica de redenumire
 
-  - **Data\_MoveFlightEnabled -** dacă este activată ediția flight pentru caracteristica de mutare
-
-  - **Data\_RenameDisabledReason -** eroare care face redenumirea să fie dezactivată pentru document
-
-  - **Data\_RenameFlightEnabled -** dacă este activată ediția flight pentru caracteristica de redenumire
-
+    
 #### <a name="officewordfilesaveactfconfirmsavedoccoreautorecoverysave"></a>Office.Word.FileSave.ActFConfirmSaveDocCoreAutoRecoverySave
 
-Acest eveniment indică faptul că Office Word salvează un document de recuperare automată care nu a fost salvat înainte. Acesta permite ca Microsoft să detecteze erori în recuperarea automată, ceea ce este important pentru siguranța datelor din documente.
-
-Evenimentul monitorizează dacă salvarea de recuperare automată funcționează conform așteptărilor. În plus, se folosește pentru a calcula utilizatorii/dispozitivele active lunar și măsurătorile de fiabilitate cloud.
+Acest eveniment indică faptul că Office Word salvează un document de recuperare automată care nu a fost salvat înainte. Acesta permite ca Microsoft să detecteze erori în recuperarea automată, ceea ce este important pentru siguranța datelor din documente.  Evenimentul monitorizează dacă salvarea de recuperare automată funcționează conform așteptărilor. În plus, se folosește pentru a calcula utilizatorii/dispozitivele active lunar și măsurătorile de fiabilitate cloud.
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_DetachedDuration -** cât timp a fost activitatea detașată de fir
+- **Data_DetachedDuration** - cât timp a fost activitatea detașată de fir
 
-  - **Data\_Doc\_AccessMode -** documentul este doar în citire/editabil
+- **Data_Doc_AccessMode** - documentul este numai în citire/editabil
 
-  - **Data\_Doc\_AssistedReadingReasons -** set predefinit de valori privind motivul pentru care documentul a fost deschis în modul de citire asistată
+- **Data_Doc_AssistedReadingReasons** - set predefinit de valori privind motivul pentru care documentul a fost deschis în modul de citire asistată
+    
+- **Data_Doc_ChunkingType** - unități utilizate pentru deschiderea incrementală a documentelor
 
-  - **Data\_Doc\_ChunkingType -** unități utilizate pentru deschiderea incrementală a documentelor
+- **Data_Doc_EdpState** - setare de protecție a datelor electronice pentru document
 
-  - **Data\_Doc\_EdpState -** setare de protecție a datelor electronice pentru document
+- **Data_Doc_Ext** - extensia documentului (docx/xlsb/pptx etc.)
 
-  - **Data\_Doc\_Ext -** extensia documentului (docx/xlsb/pptx etc.)
+- **Data_Doc_FileFormat** - versiunea de protocol pentru formatul fișierului
 
-  - **Data\_Doc\_FileFormat –** versiunea de protocol pentru formatul fișierului
+- **Data_Doc_Fqdn** - numele de domeniu OneDrive sau SharePoint Online
 
-  - **Data\_Doc\_Fqdn -** numele de domeniu OneDrive sau SharePoint Online
+- **Data_Doc_FqdnHash** - codul hash unidirecțional pentru numele de domeniu identificabil al clientului
 
-  - **Data\_Doc\_FqdnHash -** codul hash într-o singură direcție pentru numele de domeniu identificabil al clientului
+- **Data_Doc_IdentityTelemetryId** - codul hash unidirecțional pentru identitatea de utilizator folosită pentru deschidere
 
-  - **Data\_Doc\_IdentityTelemetryId -** codul hash într-o singură direcție pentru identitatea de utilizator folosită pentru deschidere
+- **Data_Doc_InitializationScenario** - înregistrează cum a fost deschis documentul
 
-  - **Data\_DstDoc\_InitializationScenario -** înregistrează cum a fost deschis documentul
+- **Data_Doc_IOFlags** - rapoarte privind semnalizările memorate în cache folosite pentru a seta opțiuni de solicitare deschise
 
-  - **Data\_Doc\_IOFlags -** rapoarte privind semnalizările memorate în cache folosite pentru a seta opțiunile de deschidere a solicitărilor
+- **Data_Doc_IrmRights** - acțiunile permise de politica de protejare a datelor electronice aplicată pentru document/utilizator
 
-  - **Data\_Doc\_IrmRights -** acțiunile permise de politica de protejare a datelor electronice aplicată pentru document/utilizator
+- **Data_Doc_IsIncrementalOpen** - semnalizare care indică faptul că documentul a fost deschis incremental
 
-  - **Data\_Doc\_IsIncrementalOpen -** semnalizare care arată că documentul a fost deschis incremental
+- **Data_Doc_IsOcsSupported** - semnalizare care indică faptul că documentul este acceptat în serviciul de colaborare
+    
+- **Data_Doc_IsOpeningOfflineCopy** - semnalizare care indică faptul că s-a deschis copia offline a unui document
 
-  - **Data\_Doc\_IsOcsSupported -** semnalizare care arată că documentul este acceptat în serviciul de colaborare
+- **Data_Doc_IsRtcAlwaysOn** - true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
 
-  - **Data\_Doc\_IsOpeningOfflineCopy -** semnalizare care arată că s-a deschis copia offline a unui document
+- **Data_Doc_IsSyncBacked** - semnalizare care indică faptul că pe computer există o copie sincronizată automat a documentului
 
-  - **Data_Doc_IsRtcAlwaysOn -** true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
+- **Data_Doc_Location** - indică ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint etc.)
 
-  - **Data\_Doc\_IsSyncBacked -** semnalizare care arată că pe computer există o copie sincronizată automat a documentului
+- **Data_Doc_LocationDetails** - indică ce Folder cunoscut a furnizat un document stocat local
 
-  - **Data\_Doc\_Location -** arată ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint etc.)
+- **Data_Doc_NumberCoAuthors** - numărul de alți utilizatori dintr-o sesiune de editare în colaborare
 
-  - **Data\_Doc\_LocationDetails -** arată ce Folder cunoscut a furnizat un document stocat local
+- **Data_Doc_PasswordFlags** - arată semnalizările de parole pentru citire sau citire/scriere setate
 
-  - **Data\_Doc\_NumberCoAuthors -** numărul de alți utilizatori dintr-o sesiune de editare în colaborare
+- **Data_Doc_ReadOnlyReasons** - motivele pentru care documentul a fost deschis doar în citire
 
-  - **Data\_Doc\_PasswordFlags -** arată semnalizările de parole pentru citire sau citire/scriere setate
+- **Data_Doc_ResourceIdHash** - identificator de document anonimizat, folosit în diagnosticarea problemelor
 
-  - **Data\_Doc\_ReadOnlyReasons -** motivele pentru care documentul a fost deschis doar în citire
+- **Data_Doc_ServerDocId** - identificator de document anonimizat și invariabil, folosit în diagnosticarea problemelor
 
-  - **Data\_Doc\_ResourceIdHash -** un identificator de document anonimizat, folosit în diagnosticarea problemelor
+- **Data_Doc_ServerProtocol** - versiunea de protocol folosită în comunicarea cu serviciul
 
-  - **Data\_Doc\_ServerDocId -** un identificator de document anonimizat și invariabil, folosit în diagnosticarea problemelor
+- **Data_Doc_ServerType** - tipul de server care oferă serviciul (SharePoint, OneDrive, WOPI etc.)
 
-  - **Data\_Doc\_ServerProtocol -** versiunea de protocol folosită în comunicarea cu serviciul
+- **Data_Doc_ServerVersion** - versiunea serverului care oferă serviciul
 
-  - **Data\_Doc\_ServerType -** tipul de server care oferă serviciul (SharePoint, OneDrive, WOPI etc.)
+- **Data_Doc_SessionId** - identifică o anumită sesiune de editare a documentului din sesiunea completă
 
-  - **Data\_Doc\_ServerVersion -** versiunea serverului care oferă serviciul
+- **Data_Doc_SharePointServiceContext** - informații de diagnosticare din solicitările SharePoint Online
 
-  - **Data\_Doc\_SessionId -** identifică o anumită sesiune de editare a documentului din sesiunea completă
+- **Data_Doc_SizeInBytes** - indicator privind dimensiunea documentului
 
-  - **Data\_Doc\_SharePointServiceContext -** informații de diagnosticare din solicitările SharePoint Online
+- **Data_Doc_SpecialChars** - indicator privind caracterele speciale din calea sau adresa URL a documentului
 
-  - **Data\_Doc\_SizeInBytes -** indicator privind dimensiunea documentului
+- **Data_Doc_StreamAvailability** - indicator care arată dacă șirul documentului este disponibil/dezactivat
 
-  - **Data\_Doc\_SpecialChars -** indicator privind caracterele speciale din calea sau adresa URL a documentului
+- **Data_Doc_SyncBackedType** - indicator privind tipul documentului (local sau bazat pe servicii)
 
-  - **Data\_Doc\_StreamAvailability -** indicator care arată dacă șirul documentului este disponibil/dezactivat
+- **Data_Doc_UrlHash** - cod hash unidirecțional, pentru crearea unui identificator naiv de document
 
-  - **Data\_Doc\_SyncBackedType -** indicator privind tipul documentului (local sau bazat pe servicii)
+- **Data_Doc_WopiServiceId** - conține identificatorul unic al furnizorului de servicii WOPI
 
-  - **Data\_Doc\_UrlHash -** cod hash într-o singură direcție, pentru crearea unui identificator naiv de document
+- **Data_FailureClass** - întreg care reprezintă clasa de eroare pentru erorile de tranziție Office Collaboration Services (OCS)
+    
+- **Data_MainPdod** - Identificatorul documentului din procesul Office Word
 
-  - **Data\_Doc\_WopiServiceId -** conține identificatorul unic al furnizorului de servicii WOPI
+- **Data_MoveFlightEnabled** - dacă ediția flight este activată pentru caracteristica de mutare
 
-  - **Data\_FailureClass -** întreg care reprezintă clasa de eroare pentru erorile de tranziție Office Collaboration Services (OCS)
+- **Data_OCSSyncbackSaveStarted** - marcaj care arată că această salvare este legată de salvarea de sincronizare inversă
 
-  - **Data\_MainPdod -** identificatorul documentului din procesul Office Word.
+- **Data_RenameDisabledReason** - eroare care face redenumirea să fie dezactivată pentru acest document
 
-  - **Data\_MoveFlightEnabled –** dacă ediția flight este activată pentru caracteristica de mutare
+- **Data_RenameFlightEnabled** - dacă este activată ediția flight pentru caracteristica de redenumire
 
-  - **Data\_OCSSyncbackSaveStarted –** marcaj care arată că această salvare este legată de salvarea de sincronizare inversă
+- **Data_SaveInitiateKind** - întreg care arată cum s-a inițiat salvarea
 
-  - **Data\_RenameDisabledReason -** eroare care face redenumirea să fie dezactivată pentru acest document
+- **Data_SrcDocIsUnnamedOrNew** - indică dacă documentul pe care îl salvăm este nou
 
-  - **Data\_RenameFlightEnabled -** dacă este activată ediția flight pentru caracteristica de redenumire
-
-  - **Data\_SaveInitiateKind -** întreg care indică modul în care s-a inițiat salvarea
-
-  - **Data\_SrcDocIsUnnamedOrNew -** indică dacă documentul pe care îl salvăm este nou
 
 #### <a name="officewordfilesaveactfconfirmsavedoccorequerysave"></a>Office.Word.FileSave.ActFConfirmSaveDocCoreQuerySave
 
@@ -3143,113 +3678,114 @@ Acest eveniment indică faptul că Office Word îi solicită utilizatorului să 
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_AddDocTelemRes -** raportează dacă am putut completa corect alte valori legate de telemetria documentelor din eveniment. Utilizat pentru diagnostice privind calitatea datelor.
+- **Data_AddDocTelemRes** - raportează dacă am putut completa corect alte valori legate de telemetria documentelor din eveniment. Utilizat pentru diagnostice privind calitatea datelor.
 
-  - **Data\_DetachedDuration -** cât timp a fost activitatea detașată de fir
+- **Data_DetachedDuration** - cât timp a fost activitatea detașată de fir
 
-  - **Data\_Doc\_AccessMode -** documentul este doar în citire/editabil
+- **Data_Doc_AccessMode** - documentul este numai în citire/editabil
 
-  - **Data\_Doc\_AssistedReadingReasons -** set predefinit de valori privind motivul pentru care documentul a fost deschis în modul de citire asistată
+- **Data_Doc_AssistedReadingReasons** - set predefinit de valori privind motivul pentru care documentul a fost deschis în modul de citire asistată
 
-  - **Data\_Doc\_ChunkingType -** unități utilizate pentru deschiderea incrementală a documentelor
+- **Data_Doc_ChunkingType** - unități utilizate pentru deschiderea incrementală a documentelor
 
-  - **Data\_Doc\_EdpState -** setare de protecție a datelor electronice pentru document
+- **Data_Doc_EdpState** - setare de protecție a datelor electronice pentru document
 
-  - **Data\_Doc\_Ext -** extensia documentului (docx/xlsb/pptx etc.)
+- **Data_Doc_Ext** - extensia documentului (docx/xlsb/pptx etc.)
 
-  - **Data\_Doc\_FileFormat –** versiunea de protocol pentru formatul fișierului
+- **Data_Doc_FileFormat** - versiunea de protocol pentru formatul fișierului
 
-  - **Data\_Doc\_Fqdn -** numele de domeniu OneDrive sau SharePoint Online
+- **Data_Doc_Fqdn** - numele de domeniu OneDrive sau SharePoint Online
 
-  - **Data\_Doc\_FqdnHash -** codul hash într-o singură direcție pentru numele de domeniu identificabil al clientului
+- **Data_Doc_FqdnHash** - codul hash unidirecțional pentru numele de domeniu identificabil al clientului
 
-  - **Data\_Doc\_IdentityTelemetryId -** codul hash într-o singură direcție pentru identitatea de utilizator folosită pentru deschidere
+- **Data_Doc_IdentityTelemetryId** - codul hash unidirecțional pentru identitatea de utilizator folosită pentru deschidere
 
-  - **Data\_DstDoc\_InitializationScenario -** înregistrează cum a fost deschis documentul
+- **Data_Doc_InitializationScenario** - înregistrează cum a fost deschis documentul
 
-  - **Data\_Doc\_IOFlags -** rapoarte privind semnalizările memorate în cache folosite pentru a seta opțiunile de deschidere a solicitărilor
+- **Data_Doc_IOFlags** - rapoarte privind semnalizările memorate în cache folosite pentru a seta opțiuni de solicitare deschise
 
-  - **Data\_Doc\_IrmRights -** acțiunile permise de politica de protejare a datelor electronice aplicată pentru document/utilizator
+- **Data_Doc_IrmRights** - acțiunile permise de politica de protejare a datelor electronice aplicată pentru document/utilizator
 
-  - **Data\_Doc\_IsIncrementalOpen -** semnalizare care arată că documentul a fost deschis incremental
+- **Data_Doc_IsIncrementalOpen** - semnalizare care indică faptul că documentul a fost deschis incremental
 
-  - **Data\_Doc\_IsOcsSupported -** semnalizare care arată că documentul este acceptat în serviciul de colaborare
+- **Data_Doc_IsOcsSupported** - semnalizare care indică faptul că documentul este acceptat în serviciul de colaborare
+    
+- **Data_Doc_IsOpeningOfflineCopy** - semnalizare care indică faptul că s-a deschis copia offline a unui document
 
-  - **Data\_Doc\_IsOpeningOfflineCopy -** semnalizare care arată că s-a deschis copia offline a unui document
+- **Data_Doc_IsRtcAlwaysOn** - true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
 
-  - **Data_Doc_IsRtcAlwaysOn -** true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
+- **Data_Doc_IsSyncBacked** - semnalizare care indică faptul că pe computer există o copie sincronizată automat a documentului
 
-  - **Data\_Doc\_IsSyncBacked -** semnalizare care arată că pe computer există o copie sincronizată automat a documentului
+- **Data_Doc_Location** - indică ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint etc.)
 
-  - **Data\_Doc\_Location -** arată ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint etc.)
+- **Data_Doc_LocationDetails** - indică ce Folder cunoscut a furnizat un document stocat local
 
-  - **Data\_Doc\_LocationDetails -** arată ce Folder cunoscut a furnizat un document stocat local
+- **Data_Doc_NumberCoAuthors** - numărul de alți utilizatori dintr-o sesiune de editare în colaborare
 
-  - **Data\_Doc\_NumberCoAuthors -** numărul de alți utilizatori dintr-o sesiune de editare în colaborare
+- **Data_Doc_PasswordFlags** - arată semnalizările de parole pentru citire sau citire/scriere setate
 
-  - **Data\_Doc\_PasswordFlags -** arată semnalizările de parole pentru citire sau citire/scriere setate
+- **Data_Doc_ReadOnlyReasons** - motivele pentru care documentul a fost deschis doar în citire
 
-  - **Data\_Doc\_ReadOnlyReasons -** motivele pentru care documentul a fost deschis doar în citire
+- **Data_Doc_ResourceIdHash** - identificator de document anonimizat, folosit în diagnosticarea problemelor
 
-  - **Data\_Doc\_ResourceIdHash -** un identificator de document anonimizat, folosit în diagnosticarea problemelor
+- **Data_Doc_ServerDocId** - identificator de document anonimizat și invariabil, folosit în diagnosticarea problemelor
 
-  - **Data\_Doc\_ServerDocId -** un identificator de document anonimizat și invariabil, folosit în diagnosticarea problemelor
+- **Data_Doc_ServerProtocol** - versiunea de protocol folosită în comunicarea cu serviciul
 
-  - **Data\_Doc\_ServerProtocol -** versiunea de protocol folosită în comunicarea cu serviciul
+- **Data_Doc_ServerType** - tipul de server care oferă serviciul (SharePoint, OneDrive, WOPI etc.)
 
-  - **Data\_Doc\_ServerType -** tipul de server care oferă serviciul (SharePoint, OneDrive, WOPI etc.)
+- **Data_Doc_ServerVersion** - versiunea serverului care oferă serviciul
 
-  - **Data\_Doc\_ServerVersion -** versiunea serverului care oferă serviciul
+- **Data_Doc_SessionId** - identifică o anumită sesiune de editare a documentului din sesiunea completă
 
-  - **Data\_Doc\_SessionId -** identifică o anumită sesiune de editare a documentului din sesiunea completă
+- **Data_Doc_SharePointServiceContext** - informații de diagnosticare din solicitările SharePoint Online
 
-  - **Data\_Doc\_SharePointServiceContext -** informații de diagnosticare din solicitările SharePoint Online
+- **Data_Doc_SizeInBytes** - indicator privind dimensiunea documentului
 
-  - **Data\_Doc\_SizeInBytes -** indicator privind dimensiunea documentului
+- **Data_Doc_SpecialChars** - indicator privind caracterele speciale din calea sau adresa URL a documentului
 
-  - **Data\_Doc\_SpecialChars -** indicator privind caracterele speciale din calea sau adresa URL a documentului
+- **Data_Doc_StreamAvailability** - indicator care arată dacă șirul documentului este disponibil/dezactivat
 
-  - **Data\_Doc\_StreamAvailability -** indicator care arată dacă șirul documentului este disponibil/dezactivat
+- **Data_Doc_SyncBackedType** - indicator privind tipul documentului (local sau bazat pe servicii)
 
-  - **Data\_Doc\_SyncBackedType -** indicator privind tipul documentului (local sau bazat pe servicii)
+- **Data_Doc_UrlHash** - cod hash unidirecțional, pentru crearea unui identificator naiv de document
 
-  - **Data\_Doc\_UrlHash -** cod hash într-o singură direcție, pentru crearea unui identificator naiv de document
+- **Data_Doc_WopiServiceId** - conține identificatorul unic al furnizorului de servicii WOPI
 
-  - **Data\_Doc\_WopiServiceId –** conține identificatorul unic al furnizorului de servicii WOPI
+- **Data_DstDoc_AccessMode** - documentul de destinație este doar în citire/editabil
 
-  - **Data\_DstDoc\_AccessMode –** documentul de destinație este doar în citire/editabil
+- **Data_DstDoc_EdpState** - setare de protecție a datelor electronice pentru documentul de destinație
 
-  - **Data\_DstDoc\_EdpState – setare de protecție a datelor electronice pentru documentul de destinație**
+- **Data_DstDoc_Ext** - Extensia (docx/xlsb/pptx, etc.) documentului de destinație
 
-  - **Data\_DstDoc\_Ext –** Extensia (docx/xlsb/pptx, etc.) documentului de destinație
+- **Data_DstDoc_FileFormat** - Versiunea protocolului de format fișier pentru documentul de destinație
 
-  - **Data\_DstDoc\_FileFormat –** Versiunea protocolului de format fișier pentru documentul de destinație
+- **Data_DstDoc_Location** - indică serviciul care va oferi spațiu de stocare pentru documentul de destinație (OneDrive, File Server, SharePoint etc.)
 
-  - **Data\_DstDoc\_Location –** indică serviciul care va oferi spațiu de stocare pentru documentul de destinație (OneDrive, File Server, SharePoint etc.)
+- **Data_DstDoc_LocationDetails** - indică Folderul cunoscut local care a stocat documentul de destinație
 
-  - **Data\_DstDoc\_LocationDetails –** indică Folderul cunoscut local care a stocat documentul de destinație
+- **Data_DstDoc_SessionId** - identifică o anumită sesiune de editare a documentului din sesiunea completă
 
-  - **Data\_DstDoc\_SessionId –** identifică o anumită sesiune de editare a documentului din sesiunea completă
+- **Data_DstDoc_UrlHash** - cod hash într-o singură direcție pentru crearea unui identificator naiv pentru documentul de destinație
 
-  - **Data\_DstDoc\_UrlHash –** cod hash într-o singură direcție pentru crearea unui identificator naiv pentru documentul de destinație
+- **Data_FailureClass** - întreg care reprezintă clasa de eroare pentru erorile de tranziție OCS
 
-  - **Data\_FailureClass –** întreg care reprezintă clasa de eroare pentru erorile de tranziție OCS
+- **Data_LocationPickerSaveStatus** - valoare întreagă care indică acțiunea care a declanșat salvarea din caseta de dialog salvare la ieșire
 
-  - **Data\_LocationPickerSaveStatus –** valoare întreagă care indică acțiunea care a declanșat salvarea din caseta de dialog salvare la ieșire
+- **Data_MainPdod** - Identificatorul documentului din procesul Office Word
 
-  - **Data\_MainPdod –** Identificatorul documentului din procesul Office Word.
+- **Data_MoveFlightEnabled** - dacă ediția flight este activată pentru caracteristica de mutare
 
-  - **Data\_MoveFlightEnabled –** dacă ediția flight este activată pentru caracteristica de mutare
+- **Data_OCSSyncbackSaveStarted** - marcaj care arată că această salvare este legată de salvarea de sincronizare inversă 
 
-  - **Data\_OCSSyncbackSaveStarted –** marcaj care arată că această salvare este legată de salvarea de sincronizare inversă
+- **Data_RenameDisabledReason** - eroare care face redenumirea să fie dezactivată pentru acest document
 
-  - **Data\_RenameDisabledReason -** eroare care face redenumirea să fie dezactivată pentru acest document
+- **Data_RenameFlightEnabled** - dacă este activată ediția flight pentru caracteristica de redenumire
 
-  - **Data\_RenameFlightEnabled -** dacă este activată ediția flight pentru caracteristica de redenumire
+- **Data_SaveInitiateKind** - întreg care arată cum s-a inițiat salvarea
 
-  - **Data\_SaveInitiateKind -** întreg care indică modul în care s-a inițiat salvarea
+- **Data_SrcDocIsUnnamedOrNew** - indică dacă documentul pe care îl salvăm este nou
 
-  - **Data\_SrcDocIsUnnamedOrNew –** indică dacă documentul pe care îl salvăm este nou
 
 #### <a name="officewordfilesavesaveassavefile"></a>Office.Word.FileSave.SaveAsSaveFile
 
@@ -3257,257 +3793,232 @@ Acest eveniment indică faptul că Office Word salvează un document într-un do
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_AddDocTelemRes -** raportează dacă am putut completa corect alte valori legate de telemetria documentelor din eveniment. Utilizat pentru diagnostice privind calitatea datelor.
+- **Data_AddDocTelemRes** - raportează dacă am putut completa corect alte valori legate de telemetria documentelor din eveniment. Utilizat pentru diagnostice privind calitatea datelor.
 
-  - **Data\_AddDocTelemResDst –** raportează dacă am putut completa corect alte valori legate de telemetria documentelor din eveniment pentru documentul de destinație. Utilizat pentru diagnostice privind calitatea datelor.
+- **Data_AddDocTelemResDst** - raportează dacă am putut completa corect alte valori legate de telemetria documentelor din eveniment pentru documentul de destinație. Utilizat pentru diagnostice privind calitatea datelor.
 
-  - **Data\_AddDocTelemResSrc –** raportează dacă am putut completa corect alte valori legate de telemetria documentelor din eveniment pentru documentul sursă. Utilizat pentru diagnostice privind calitatea datelor.
+- **Data_AddDocTelemResSrc** - raportează dacă am putut completa corect alte valori legate de telemetria documentelor din eveniment pentru documentul sursă. Utilizat pentru diagnostice privind calitatea datelor.
 
-  - **Data\_DetachedDuration -** cât timp a fost activitatea detașată de fir
+- **Data_DetachedDuration** - cât timp a fost activitatea detașată de fir
 
-  - **Data\_Doc\_AccessMode -** documentul este doar în citire/editabil
+- **Data_Doc_AccessMode** - documentul este numai în citire/editabil
 
-  - **Data\_Doc\_AssistedReadingReasons -** set predefinit de valori privind motivul pentru care documentul a fost deschis în modul de citire asistată
+- **Data_Doc_AssistedReadingReasons** - set predefinit de valori privind motivul pentru care documentul a fost deschis în modul de citire asistată
 
-  - **Data\_Doc\_ChunkingType -** unități utilizate pentru deschiderea incrementală a documentelor
+- **Data_Doc_ChunkingType** - unități utilizate pentru deschiderea incrementală a documentelor
 
-  - **Data\_Doc\_EdpState -** setare de protecție a datelor electronice pentru document
+- **Data_Doc_EdpState** - setare de protecție a datelor electronice pentru document
 
-  - **Data\_Doc\_Ext -** extensia documentului (docx/xlsb/pptx etc.)
+- **Data_Doc_Ext** - extensia documentului (docx/xlsb/pptx etc.)
 
-  - **Data\_Doc\_FileFormat –** versiunea de protocol pentru formatul fișierului
+- **Data_Doc_FileFormat** - versiunea de protocol pentru formatul fișierului
 
-  - **Data\_Doc\_Fqdn -** numele de domeniu OneDrive sau SharePoint Online
+- **Data_Doc_Fqdn** - numele de domeniu OneDrive sau SharePoint Online
 
-  - **Data\_Doc\_FqdnHash -** codul hash într-o singură direcție pentru numele de domeniu identificabil al clientului
+- **Data_Doc_FqdnHash** - codul hash unidirecțional pentru numele de domeniu identificabil al clientului
 
-  - **Data\_Doc\_IdentityTelemetryId –** codul hash într-o singură direcție pentru identitatea de utilizator folosită pentru deschidere
+- **Data_Doc_IdentityTelemetryId** - codul hash unidirecțional pentru identitatea de utilizator folosită pentru deschidere
 
-  - **Data\_Doc\_IOFlags –** rapoarte privind marcajele memorate în cache folosite pentru a seta opțiunile de deschidere a solicitărilor
+- **Data_Doc_IOFlags** - rapoarte privind semnalizările memorate în cache folosite pentru a seta opțiuni de solicitare deschise
 
-  - **Data\_Doc\_IrmRights -** acțiunile permise de politica de protejare a datelor electronice aplicată pentru document/utilizator
+- **Data_Doc_IrmRights** - acțiunile permise de politica de protejare a datelor electronice aplicată pentru document/utilizator
 
-  - **Data\_Doc\_IsIncrementalOpen -** semnalizare care arată că documentul a fost deschis incremental
+- **Data_Doc_IsIncrementalOpen** - semnalizare care indică faptul că documentul a fost deschis incremental
 
-  - **Data\_Doc\_IsOcsSupported -** semnalizare care arată că documentul este acceptat în serviciul de colaborare
+- **Data_Doc_IsOcsSupported** - semnalizare care indică faptul că documentul este acceptat în serviciul de colaborare
 
-  - **Data\_Doc\_IsOpeningOfflineCopy -** semnalizare care arată că s-a deschis copia offline a unui document
+- **Data_Doc_IsOpeningOfflineCopy** - semnalizare care indică faptul că s-a deschis copia offline a unui document
 
-  - **Data_Doc_IsRtcAlwaysOn -** true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
+- **Data_Doc_IsRtcAlwaysOn** - true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
 
-  - **Data\_Doc\_IsSyncBacked -** semnalizare care arată că pe computer există o copie sincronizată automat a documentului
+- **Data_Doc_IsSyncBacked** - semnalizare care indică faptul că pe computer există o copie sincronizată automat a documentului
 
-  - **Data\_Doc\_Location -** arată ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint etc.)
+- **Data_Doc_Location** - indică ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint etc.)
 
-  - **Data\_Doc\_LocationDetails -** arată ce Folder cunoscut a furnizat un document stocat local
+- **Data_Doc_LocationDetails** - indică ce Folder cunoscut a furnizat un document stocat local
 
-  - **Data\_Doc\_NumberCoAuthors –** numărul de alți utilizatori dintr-o sesiune de editare în colaborare
+- **Data_Doc_NumberCoAuthors** - numărul de alți utilizatori dintr-o sesiune de editare în colaborare
 
-  - **Data\_Doc\_ReadOnlyReasons –** motivele pentru care documentul a fost deschis doar în citire
+- **Data_Doc_ReadOnlyReasons** - motivele pentru care documentul a fost deschis doar în citire
 
-  - **Data\_Doc\_ResourceIdHash -** un identificator de document anonimizat, folosit în diagnosticarea problemelor
+- **Data_Doc_ResourceIdHash** - identificator de document anonimizat, folosit în diagnosticarea problemelor
 
-  - **Data\_Doc\_ServerDocId -** un identificator de document anonimizat și invariabil, folosit în diagnosticarea problemelor
+- **Data_Doc_ServerDocId** - identificator de document anonimizat și invariabil, folosit în diagnosticarea problemelor
 
-  - **Data\_Doc\_ServerProtocol -** versiunea de protocol folosită în comunicarea cu serviciul
+- **Data_Doc_ServerProtocol** - versiunea de protocol folosită în comunicarea cu serviciul
 
-  - **Data\_Doc\_ServerType -** tipul de server care oferă serviciul (SharePoint, OneDrive, WOPI etc.)
+- **Data_Doc_ServerType** - tipul de server care oferă serviciul (SharePoint, OneDrive, WOPI etc.)
 
-  - **Data\_Doc\_ServerVersion -** versiunea serverului care oferă serviciul
+- **Data_Doc_ServerVersion** - versiunea serverului care oferă serviciul
 
-  - **Data\_Doc\_SessionId -** identifică o anumită sesiune de editare a documentului din sesiunea completă
+- **Data_Doc_SessionId** - identifică o anumită sesiune de editare a documentului din sesiunea completă
 
-  - **Data\_Doc\_SharePointServiceContext -** informații de diagnosticare din solicitările SharePoint Online
+- **Data_Doc_SharePointServiceContext** - informații de diagnosticare din solicitările SharePoint Online
 
-  - **Data\_Doc\_SizeInBytes -** indicator privind dimensiunea documentului
+- **Data_Doc_SizeInBytes** - indicator privind dimensiunea documentului
 
-  - **Data\_Doc\_SpecialChars -** indicator privind caracterele speciale din calea sau adresa URL a documentului
+- **Data_Doc_SpecialChars** - indicator privind caracterele speciale din calea sau adresa URL a documentului
 
-  - **Data\_Doc\_StreamAvailability –** indicator care arată dacă șirul documentului este disponibil/dezactivat
+- **Data_Doc_StreamAvailability** - indicator care arată dacă șirul documentului este disponibil/dezactivat
 
-  - **Data\_Doc\_UrlHash –** cod hash într-o singură direcție, pentru crearea unui identificator naiv de document
+- **Data_Doc_UrlHash** - cod hash unidirecțional, pentru crearea unui identificator naiv de document
 
-  - **Data\_DstDoc\_AccessMode –** documentul de destinație este doar în citire/editabil
+- **Data_DstDoc_AccessMode** - documentul de destinație este doar în citire/editabil
 
-  - **Data\_DstDoc\_AssistedReadingReasons –** set predefinit de valori privind motivul pentru care documentul de destinație a fost deschis în modul de citire asistată
+- **Data_DstDoc_AssistedReadingReasons** - set predefinit de valori privind motivul pentru care documentul de destinație a fost deschis în modul de citire asistată
+    
+- **Data_DstDoc_ChunkingType** - unități utilizate pentru deschiderea incrementală a documentelor
 
-  - **Data\_DstDoc\_ChunkingType –** unități utilizate pentru deschiderea incrementală a documentelor
+- **Data_DstDoc_EdpState** - setare de protecție a datelor electronice pentru documentul de destinație
 
-  - **Data\_DstDoc\_EdpState –** setare de protecție a datelor electronice pentru documentul de destinație
+- **Data_DstDoc_Ext** - extensia documentului (docx/xlsb/pptx etc.)
 
-  - **Data\_DstDoc\_Ext –** extensia documentului (docx/xlsb/pptx etc.)
+- **Data_DstDoc_FileFormat** - versiunea de protocol pentru formatul fișierului
 
-  - **Data\_DstDoc\_FileFormat –** versiunea de protocol pentru formatul fișierului
+- **Data_DstDoc_Fqdn** - numele de domeniu OneDrive sau SharePoint Online pentru documentul de destinație
 
-  - **Data\_DstDoc\_Fqdn –** numele de domeniu OneDrive sau SharePoint Online pentru documentul de destinație
+- **Data_DstDoc_FqdnHash** - cod hash într-o singură direcție pentru numele de domeniu identificabil de client pentru documentul de destinație
 
-  - **Data\_DstDoc\_FqdnHash –** cod hash într-o singură direcție pentru numele de domeniu identificabil de client pentru documentul de destinație
+- **Data_DstDoc_IdentityTelemetryId** - codul hash unidirecțional pentru identitatea de utilizator folosită pentru deschidere
 
-  - **Data\_DstDoc\_IdentityTelemetryId –** codul hash într-o singură direcție pentru identitatea de utilizator folosită pentru deschidere
+- **Data_DstDoc_InitializationScenario** - înregistrează cum a fost deschis documentul de destinație
 
-  - **Data\_DstDoc\_InitializationScenario –** înregistrează cum a fost deschis documentul de destinație
+- **Data_DstDoc_IOFlags** - rapoarte privind marcajele memorate în cache folosite pentru a seta opțiunile de deschidere a solicitărilor pentru documentul de destinație
+    
+- **Data_DstDoc_IrmRights** - acțiunile permise de politica de protejare a datelor electronice aplicată pentru documentul de destinație/utilizator
 
-  - **Data\_DstDoc\_IOFlags –** rapoarte privind marcajele memorate în cache folosite pentru a seta opțiunile de deschidere a solicitărilor pentru documentul de destinație
+- **Data_DstDoc_IsIncrementalOpen** - semnalizare care indică faptul că documentul a fost deschis incremental
 
-  - **Data\_DstDoc\_IrmRights –** acțiunile permise de politica de protejare a datelor electronice aplicată pentru documentul de destinație/utilizator
+- **Data_DstDoc_IsOcsSupported** - semnalizare care indică faptul că documentul este acceptat în serviciul de colaborare
 
-  - **Data\_DstDoc\_IsIncrementalOpen –** marcaj care arată că documentul a fost deschis incremental
+- **Data_DstDoc_IsOpeningOfflineCopy** - semnalizare care indică faptul că s-a deschis copia offline a unui document
 
-  - **Data\_DstDoc\_IsOcsSupported –** marcaj care arată că documentul este acceptat în serviciul de colaborare
+- **Data_DstDoc_IsSyncBacked** - semnalizare care arată că pe computer există o copie sincronizată automat a documentului
 
-  - **Data\_DstDoc\_IsOpeningOfflineCopy –** marcaj care arată că s-a deschis copia offline a unui document
+- **Data_DstDoc_Location** - indică serviciul care a oferit spațiul de stocare pentru documentul de destinație (OneDrive, File Server, SharePoint etc.)
 
-  - **Data\_DstDoc\_IsSyncBacked –** marcaj care arată că pe computer există o copie sincronizată automat a documentului
+- **Data_DstDoc_LocationDetails** - indică ce Folder cunoscut a furnizat un document stocat local
 
-  - **Data\_DstDoc\_Location –** indică serviciul care a oferit spațiul de stocare pentru documentul de destinație (OneDrive, File Server, SharePoint etc.)
+- **Data_DstDoc_NumberCoAuthors** - numărul de alți utilizatori dintr-o sesiune de editare în colaborare
 
-  - **Data\_DstDoc\_LocationDetails –** arată ce Folder cunoscut a furnizat un document stocat local
+- **Data_DstDoc_PasswordFlags** - arată marcajele de parole pentru citire sau citire/scriere setate pentru documentul de destinație
 
-  - **Data\_DstDoc\_NumberCoAuthors –** numărul de alți utilizatori dintr-o sesiune de editare în colaborare
+- **Data_DstDoc_ReadOnlyReasons** - motivele pentru care documentul de destinație a fost deschis doar în citire 
 
-  - **Data\_DstDoc\_PasswordFlags –** arată marcajele de parole pentru citire sau citire/scriere setate pentru documentul de destinație
+- **Data_DstDoc_ResourceIdHash** - identificator de document anonimizat, folosit în diagnosticarea problemelor
 
-  - **Data\_DstDoc\_ReadOnlyReasons –** motivele pentru care documentul de destinație a fost deschis doar în citire
+- **Data_DstDoc_ServerDocId** - identificator de document anonimizat și invariabil, folosit în diagnosticarea problemelor
 
-  - **Data\_DstDoc\_ResourceIdHash –** un identificator de document anonimizat, folosit în diagnosticarea problemelor
+- **Data_DstDoc_ServerProtocol** - versiunea de protocol folosită în comunicarea cu serviciul
 
-  - **Data\_DstDoc\_ServerDocId –** un identificator de document anonimizat și imutabil, folosit în diagnosticarea problemelor
+- **Data_DstDoc_ServerType** - tipul de server care oferă serviciul (SharePoint, OneDrive, WOPI etc.)
+    
+- **Data_DstDoc_ServerVersion** - versiunea serverului care oferă serviciul
 
-  - **Data\_DstDoc\_ServerProtocol –** versiunea de protocol folosită în comunicarea cu serviciul
+- **Data_DstDoc_SessionId** - identifică o anumită sesiune de editare a documentului din sesiunea completă
 
-  - **Data\_DstDoc\_ServerType –** tipul de server care oferă serviciul (SharePoint, OneDrive, WOPI etc.)
+- **Data_DstDoc_SharePointServiceContext** - informații de diagnosticare din solicitările SharePoint Online
 
-  - **Data\_DstDoc\_ServerVersion –** versiunea serverului care oferă serviciul
+- **Data.Doc.SizeInBytes -** indicator privind dimensiunea documentului
 
-  - **Data\_DstDoc\_SessionId –** identifică o anumită sesiune de editare a documentului din sesiunea completă
+- **Data_DstDoc_SpecialChars** - indicator privind caracterele speciale din calea sau adresa URL a documentului
 
-  - **Data\_DstDoc\_SharePointServiceContext –** informații de diagnosticare din solicitările SharePoint Online
+- **Data_DstDoc_StreamAvailability** - indicator care arată dacă șirul documentului este disponibil/dezactivat
 
-  - **Data\_DstDoc\_SizeInBytes –** indicator privind dimensiunea documentului
+- **Data_DstDoc_SyncBackedType** - indicator privind tipul documentului (local sau bazat pe servicii)
 
-  - **Data\_DstDoc\_SpecialChars –** indicator privind caracterele speciale din calea sau adresa URL a documentului
+- **Data_DstDoc_UrlHash** - cod hash într-o singură direcție pentru crearea unui identificator naiv pentru documentul de destinație
+    
+- **Data_DstDoc_WopiServiceId** - conține identificatorul unic al furnizorului de servicii WOPI
 
-  - **Data\_DstDoc\_StreamAvailability –** indicator care arată dacă șirul documentului este disponibil/dezactivat
+- **Data_FailureClass** - întreg care reprezintă clasa de eroare pentru erorile de tranziție OCS
 
-  - **Data\_DstDoc\_SyncBackedType –** indicator privind tipul documentului (local sau bazat pe servicii)
+- **Data_LocationPickerPropagateToSaveTime,spLapsedMsec** - măsoară timpul, în milisecunde, necesar pentru declanșarea salvării după ce s-a obținut un rezultat din selectorul de locații
 
-  - **Data\_DstDoc\_UrlHash –** cod hash într-o singură direcție pentru crearea unui identificator naiv pentru documentul de destinație
+- **Data_LocationPickerSaveStatus** - starea returnate de selectorul de locații
 
-  - **Data\_DstDoc\_WopiServiceId –** conține identificatorul unic al furnizorului de servicii WOPI
+- **Data_MainPdod** - identificatorul documentului din procesul Office Word
 
-  - **Data\_FailureClass –** întreg care reprezintă clasa de eroare pentru erorile de tranziție OCS
+- **Data_MoveDisabledReason** - eroarea care dezactivează mutarea pentru document
 
-  - **Data\_LocationPickerPropagateToSaveTime,spLapsedMsec –** măsoară timpul, în milisecunde, necesar pentru declanșarea salvării după ce s-a obținut un rezultat din selectorul de locații
+- **Data_MoveFlightEnabled** - dacă ediția flight este activată pentru caracteristica de mutare
 
-  - **Data\_LocationPickerSaveStatus –** starea returnate de selectorul de locații
+- **Data_RenameDisabledReason** - eroare care face redenumirea să fie dezactivată pentru acest document
 
-  - **Data\_MainPdod –** Identificatorul documentului din procesul Office Word
+- **Data_RenameFlightEnabled** - dacă este activată ediția flight pentru caracteristica de redenumire
 
-  - **Data\_MoveDisabledReason –** eroarea care dezactivează mutarea pentru document
+- **Data_SaveInitiateKind** - întreg care arată cum s-a inițiat salvarea
 
-  - **Data\_MoveFlightEnabled –** dacă ediția flight este activată pentru caracteristica de mutare
+- **Data_SrcDoc_AccessMode** - documentul sursă este doar în citire/editabil
 
-  - **Data\_RenameDisabledReason –** eroare care face redenumirea să fie dezactivată pentru acest document
+- **Data_SrcDoc_AssistedReadingReasons** - set predefinit de valori privind motivul pentru care documentul a fost deschis în modul de citire asistată
 
-  - **Data\_RenameFlightEnabled -** dacă este activată ediția flight pentru caracteristica de redenumire
+- **Data_SrcDoc_ChunkingType** - unități utilizate pentru deschiderea incrementală a documentelor
 
-  - **Data\_SaveInitiateKind –** întreg care arată cum s-a inițiat salvarea
+- **Data_SrcDoc_EdpState** - setare de protecție a datelor electronice pentru documentul sursă
 
-  - **Data\_SrcDoc\_AccessMode –** documentul sursă este doar în citire/editabil
+- **Data_SrcDoc_Ext** - Extensia documentului sursă (docx/xlsb/pptx etc.)
 
-  - **Data\_SrcDoc\_AssistedReadingReasons –** set predefinit de valori privind motivul pentru care documentul a fost deschis în modul de citire asistată
+- **Data_SrcDoc_FileFormat** - Versiunea protocolului de format fișier pentru documentul sursă
 
-  - **Data\_SrcDoc\_ChunkingType –** unități utilizate pentru deschiderea incrementală a documentelor
+- **Data_SrcDoc_Fqdn** - numele de domeniu OneDrive sau SharePoint Online pentru documentul sursă
 
-  - **Data\_SrcDoc\_EdpState –** setare de protecție a datelor electronice pentru documentul sursă
+- **Data_SrcDoc_FqdnHash** - cod hash într-o singură direcție pentru numele de domeniu identificabil de client pentru documentul sursă
 
-  - **Data\_SrcDoc\_Ext –** Extensia documentului sursă (docx/xlsb/pptx etc.)
+- **Data_SrcDoc_IdentityTelemetryId** - codul hash unidirecțional pentru identitatea de utilizator folosită pentru deschidere
 
-  - **Data\_SrcDoc\_FileFormat –** Versiunea protocolului de format fișier pentru documentul sursă
+- **Data_SrcDoc_InitializationScenario** - înregistrează cum a fost deschis documentul
 
-  - **Data\_SrcDoc\_Fqdn –** numele de domeniu OneDrive sau SharePoint Online pentru documentul sursă
+- **Data_SrcDoc_IOFlags** - rapoarte privind marcajele memorate în cache folosite pentru a seta opțiunile de deschidere a solicitărilor
 
-  - **Data\_SrcDoc\_FqdnHash –** cod hash într-o singură direcție pentru numele de domeniu identificabil de client pentru documentul sursă
+- **Data_SrcDoc_IrmRights** - acțiunile permise de politica de protejare a datelor electronice aplicată pentru document/utilizator
 
-  - **Data\_SrcDoc\_IdentityTelemetryId –** codul hash într-o singură direcție pentru identitatea de utilizator folosită pentru deschidere
+- **Data_SrcDoc_IsIncrementalOpen** - semnalizare care indică faptul că documentul a fost deschis incremental
 
-  - **Data\_SrcDoc\_InitializationScenario –** înregistrează cum a fost deschis documentul
+- **Data_SrcDoc_IsOcsSupported** - semnalizare care indică faptul că documentul este acceptat în serviciul de colaborare
 
-  - **Data\_SrcDoc\_IOFlags –** rapoarte privind marcajele memorate în cache folosite pentru a seta opțiunile de deschidere a solicitărilor
+- **Data_SrcDoc_IsOpeningOfflineCopy** - semnalizare care indică faptul că s-a deschis copia offline a unui document
 
-  - **Data\_SrcDoc\_IrmRights –** acțiunile permise de politica de protejare a datelor electronice aplicată pentru document/utilizator
+- **Data_SrcDoc_IsSyncBacked** - semnalizare care arată că pe computer există o copie sincronizată automat a documentului
+    
+- **Data_SrcDoc_Location** - arată ce serviciu a furnizat documentul sursă (OneDrive, File Server, SharePoint etc.)
 
-  - **Data\_SrcDoc\_IsIncrementalOpen –** marcaj care arată că documentul a fost deschis incremental
+- **Data_SrcDoc_LocationDetails** - indică ce Folder cunoscut a furnizat un document stocat local
 
-  - **Data\_SrcDoc\_IsOcsSupported –** marcaj care arată că documentul este acceptat în serviciul de colaborare
+- **Data_SrcDoc_NumberCoAuthors** - numărul de alți utilizatori dintr-o sesiune de editare în colaborare
 
-  - **Data\_SrcDoc\_IsOpeningOfflineCopy –** marcaj care arată că s-a deschis copia offline a unui document
+- **Data_SrcDoc_PasswordFlags** - arată semnalizările de parole pentru citire sau citire/scriere setate
 
-  - **Data\_SrcDoc\_IsSyncBacked –** marcaj care arată că pe computer există o copie sincronizată automat a documentului
+- **Data_SrcDoc_ReadOnlyReasons** - motivele pentru care documentul a fost deschis doar în citire
 
-  - **Data\_SrcDoc\_Location –** arată ce serviciu a furnizat documentul sursă (OneDrive, File Server, SharePoint etc.)
+- **Data_SrcDoc_ResourceIdHash** - identificator de document anonimizat, folosit în diagnosticarea problemelor
 
-  - **Data\_SrcDoc\_LocationDetails –** arată ce Folder cunoscut a furnizat un document stocat local
+- **Data_SrcDoc_ServerDocId** - identificator de document anonimizat și invariabil, folosit în diagnosticarea problemelor
 
-  - **Data\_SrcDoc\_NumberCoAuthors –** numărul de alți utilizatori dintr-o sesiune de editare în colaborare
+- **Data_SrcDoc_ServerProtocol** - versiunea de protocol folosită în comunicarea cu serviciul
 
-  - **Data\_SrcDoc\_PasswordFlags –** arată marcajele de parole pentru citire sau citire/scriere setate
+- **Data_SrcDoc_ServerType** - tipul de server care oferă serviciul (SharePoint, OneDrive, WOPI etc.)
 
-  - **Data\_SrcDoc\_ReadOnlyReasons –** motivele pentru care documentul a fost deschis doar în citire
+- **Data_SrcDoc_ServerVersion** - versiunea serverului care oferă serviciul
 
-  - **Data\_SrcDoc\_ResourceIdHash –** un identificator de document anonimizat, folosit în diagnosticarea problemelor
+- **Data_SrcDoc_SessionId** - identifică o anumită sesiune de editare a documentului din sesiunea completă
 
-  - **Data\_SrcDoc\_ServerDocId –** un identificator de document anonimizat și imutabil, folosit în diagnosticarea problemelor
+- **Data_SrcDoc_SharePointServiceContext** - informații de diagnosticare din solicitările SharePoint Online
 
-  - **Data\_SrcDoc\_ServerProtocol –** versiunea de protocol folosită în comunicarea cu serviciul
+- **Data_SrcDoc_SizeInBytes** - indicator privind dimensiunea documentului
 
-  - **Data\_SrcDoc\_ServerType –** tipul de server care oferă serviciul (SharePoint, OneDrive, WOPI etc.)
+- **Data_SrcDoc_SpecialChars** - indicator privind caracterele speciale din calea sau adresa URL a documentului
 
-  - **Data\_SrcDoc\_ServerVersion –** versiunea serverului care oferă serviciul
+- **Data_SrcDoc_StreamAvailability** - indicator care arată dacă șirul documentului este disponibil/dezactivat
 
-  - **Data\_SrcDoc\_SessionId –** identifică o anumită sesiune de editare a documentului din sesiunea completă
+- **Data_SrcDoc_SyncBackedType** - indicator privind tipul documentului (local sau bazat pe servicii)
 
-  - **Data\_SrcDoc\_SharePointServiceContext –** informații de diagnosticare din solicitările SharePoint Online
+- **Data_SrcDoc_UrlHash** - cod hash unidirecțional, pentru crearea unui identificator naiv de document
 
-  - **Data\_SrcDoc\_SizeInBytes –** indicator privind dimensiunea documentului
+- **Data_SrcDoc_WopiServiceId** - conține identificatorul unic al furnizorului de servicii WOPI
 
-  - **Data\_SrcDoc\_SpecialChars –** indicator privind caracterele speciale din calea sau adresa URL a documentului
+- **Data_SrcDocIsUnnamedOrNew** - indică dacă documentul pe care îl salvăm este nou
 
-  - **Data\_SrcDoc\_StreamAvailability –** indicator care arată dacă șirul documentului este disponibil/dezactivat
-
-  - **Data\_SrcDoc\_SyncBackedType –** indicator privind tipul documentului (local sau bazat pe servicii)
-
-  - **Data\_SrcDoc\_UrlHash –** cod hash într-o singură direcție, pentru crearea unui identificator naiv de document
-
-  - **Data\_SrcDoc\_WopiServiceId –** conține identificatorul unic al furnizorului de servicii WOPI
-
-  - **Data\_SrcDocIsUnnamedOrNew –** indică dacă documentul pe care îl salvăm este nou
-
-#### <a name="officewordworddocumentdirtyflagchanged"></a>Office.Word.Word.DocumentDirtyFlagChanged
-
-Acest eveniment indică faptul că Office Word editează un document care modifică starea internă a documentului în „defazată”. Astfel, Microsoft poate evalua starea de funcționare a caracteristicii pentru documentul editat. Evenimentul este un mesaj repetat din editările utilizatorului. În plus, se folosește pentru a calcula utilizatorii/dispozitivele active lunar.
-
-Se colectează următoarele câmpuri:
-
-  - **Data\_CollectionTime –** marca de timp a evenimentului
-
-  - **Data\_DocumentLocation–** tipul locației documentului
-
-  - **Data\_DocumentLocationDetails –** subtipul locației documentului
-
-  - **Data\_FAlwaysSaveEnabled –** Indică dacă s-a activat salvarea permanentă
-
-  - **Data\_FirstEditTime –** marca de timp a primei editări
-
-  - **Data\_NumberCoAuthors –** numărul de coautori care editează documentul în timpul sesiunii
-
-  - **Data\_NumberOfTimesDocumentDirtied –** numărul de editări ale documentului
-
-  - **Data\_Pdod –** identificatorul documentului din procesul Office Word
-
-  - **Data\_UrlHash –** codul hash din calea documentului
-
-  - **Data\_ViewKind –** tipul de vizualizare Word
 
 #### <a name="officevisiosharedfeatureexperimentation"></a>Office.Visio.Shared.FeatureExperimentation
 
@@ -3569,6 +4080,31 @@ Se colectează următoarele câmpuri:
 
   - **Data\_WarningShownToConvertToTable:bool** – true înseamnă că utilizatorul primește un avertisment pentru a efectua conversia datelor Excel în format de tabel
 
+#### <a name="officewordworddocumentdirtyflagchanged"></a>Office.Word.Word.DocumentDirtyFlagChanged
+
+Acest eveniment indică faptul că Office Word editează un document care modifică starea internă a documentului în „defazată”. Astfel, Microsoft poate evalua starea de funcționare a caracteristicii pentru documentul editat. Evenimentul este un mesaj repetat din editările utilizatorului. În plus, se folosește pentru a calcula utilizatorii/dispozitivele active lunar.
+
+Se colectează următoarele câmpuri:
+
+  - **Data\_CollectionTime –** marca de timp a evenimentului
+
+  - **Data\_DocumentLocation–** tipul locației documentului
+
+  - **Data\_DocumentLocationDetails –** subtipul locației documentului
+
+  - **Data\_FAlwaysSaveEnabled –** Indică dacă s-a activat salvarea permanentă
+
+  - **Data\_FirstEditTime –** marca de timp a primei editări
+
+  - **Data\_NumberCoAuthors –** numărul de coautori care editează documentul în timpul sesiunii
+
+  - **Data\_NumberOfTimesDocumentDirtied –** numărul de editări ale documentului
+
+  - **Data\_Pdod –** identificatorul documentului din procesul Office Word
+
+  - **Data\_UrlHash –** codul hash din calea documentului
+
+  - **Data\_ViewKind –** tipul de vizualizare Word
 ### <a name="application-status-and-boot-subtype"></a>*Subtipul de inițializare și starea aplicației*
 
 Stabilește dacă au avut loc anumite evenimente de caracteristici, cum ar fi pornirea sau oprirea, și dacă respectiva caracteristică rulează.
@@ -3853,6 +4389,35 @@ Se colectează următoarele câmpuri:
 
   - **Office.Visio.VisioFileSaveSync –** acest eveniment colectează statisticile sincrone de la salvarea fișierelor pentru Visio Dev16. Evenimentul este utilizat pentru a monitoriza ratele de succes/insucces sincrone de la salvarea fișierelor și le mapează cu câteva proprietăți, cum ar fi dimensiunea fișierelor și locația în care sunt salvate (de ex. în cloud sau la nivel local). Proprietățile fișierelor ne permit să depanăm și să stabilim mai rapid cauza problemelor. Acest eveniment ne ajută să monitorizăm motivele de nereușită a salvării pentru un fișier.
 
+#### <a name="officeextensibilitysandboxodpactivationhanging"></a>Office.Extensibility.Sandbox.ODPActivationHanging
+
+Colectează atunci când un program de completare Office durează prea mult să se lanseze (> 5 sec). Utilizat pentru detectarea și remedierea problemelor cu lansarea programelor de completare Office.
+ 
+Se colectează următoarele câmpuri:
+
+- **AppID** - ID-ul aplicației
+
+- **AppInfo** - date referitoare la tipul de program de completare (panou de activități sau UILess sau de conținut etc.) și la tipul de furnizor (Omen, SharePoint, sisteme de fișiere etc.)
+
+- **AppInstanceId** - ID-ul instanței aplicației 
+
+- **AssetId** - asset ID-ul aplicației
+
+- **NumberOfAddinsActivated** - contor de programe de completare activate
+
+- **RemoterType** - specifică tipul de program la distanță (de încredere, neautorizat, Win32webView, de încredere UDF etc.) utilizat pentru a activa programul de completare
+
+- **StoreType** - origine a aplicației
+
+- **TimeForAuth** - timp petrecut cu autentificarea 
+
+- **TimeForSandbox** - timp petrecut în sandbox
+
+- **TimeForServerCall** - timp petrecut cu apelarea serverului 
+
+- **TotalTime** - timp total
+
+
 #### <a name="officeoutlookdesktopexchangepuidandtenantcorrelation"></a>Office.Outlook.Desktop.ExchangePuidAndTenantCorrelation
 
 Colectează codul PUID al utilizatorului și identificatorul de entitate găzduită, o dată pe sesiune. Corelarea PUID cu entitatea găzduită este necesară pentru a înțelege și a diagnostica problemele cu Outlook pentru fiecare entitate găzduită.
@@ -3867,103 +4432,14 @@ Se colectează următoarele câmpuri:
 
   - **PUID** – codul PUID Exchange pentru a identifica în mod unic utilizatorii
 
-#### <a name="officepowerpointpptdesktopbootime"></a>Office.PowerPoint.PPT.Desktop.Bootime
 
-Colectează modul în care se inițializează PowerPoint. Acesta include inițializarea PowerPoint în vizualizarea protejată, în modul de citire asistat, din macrocomenzi, din documente imprimate, din documente noi și necompletate, din recuperarea documentelor, din automatizare și dacă este clic și pornire. De asemenea, colectează durata necesară pentru încărcarea PowerPoint. Aceste date sunt esențiale pentru a garanta că PowerPoint se descurcă bine atunci când este inițializat din moduri diferite. Microsoft utilizează aceste date pentru a surprinde timpii lungi de inițializare la deschiderea PowerPoint din moduri diferite.
+#### <a name="officeoutlookmacmacolkactivationstate"></a>Office.Outlook.Mac.MacOLKActivationState
 
-Se colectează următoarele câmpuri:
-
-  - **AssistedReading –** în modul de citire asistată
-
-  - **Automation –** din automatizare
-
-  - **Benchmark –** rulați testul de performanță
-
-  - **Blank –** document necompletat
-
-  - **BootTime –** timpul de inițializare a sesiunii
-
-  - **Embedding –** documentul de încorporare
-
-  - **IsC2R –** este clic și pornire
-
-  - **IsNew –** document nou
-
-  - **IsOpen –** este deschis
-
-  - **Macro1 –** rulați macrocomanda
-
-  - **Macro2 –** rulați macrocomanda
-
-  - **NonStandardSpaceInCmdLine** – există un spațiu nestandard în linia de comandă
-
-  - **Print –** document imprimat
-
-  - **PrintDialog –** document imprimat cu caseta de dialog
-
-  - **PrintPrinter –** document imprimat cu imprimanta
-
-  - **ProtectedView –** în vizualizarea protejată
-
-  - **Regserver –** înregistrați PowerPoint ca server COM
-
-  - **Restore –** restaurați documentul
-
-  - **Show –** afișați documentul
-
-  - **Time –** durata sesiunii
-
-  - **UnprotectedView –** în vizualizarea neprotejată
-
-#### <a name="officepowerpointppthasuserediteddocument"></a>Office.PowerPoint.PPT.HasUserEditedDocument
-
-Colectat atunci când un utilizator începe să editeze un document. Microsoft utilizează aceste date pentru a calcula utilizatorii activi care au editat un document PowerPoint
+Colectează modul în care este activat Outlook, cum ar fi cu abonament sau cu o licență de volum. Datele sunt monitorizate pentru a garanta că nu vedem valori maxime în erori. De asemenea analizăm datele pentru a găsi zone care necesită îmbunătățiri. 
 
 Se colectează următoarele câmpuri:
 
-  - **CorrelationId** – identificatorul de corelare al documentului
-
-#### <a name="officeprojectbootandopenproject"></a>Office.Project.BootAndOpenProject
-
-Proiect este inițializat prin deschiderea unui fișier. Acest eveniment indică faptul că un utilizator a deschis Office Project cu un fișier asociat. Acesta conține datele de succes critice pentru a vă asigura că Project poate să înceapă și să încarce un fișier.
-
-Se colectează următoarele câmpuri:
-
-  - **Data\_AlertTime –** durata cât a fost activă caseta de dialog de inițializare.
-
-  - **Data\_BootTime –** timpul necesar pentru a inițializa Project
-
-  - **Data\_CacheFileSize –** dacă fișierul a fost memorat în cache, dimensiunea fișierului
-
-  - **Data\_EntDocType –** tipul de fișier care a fost deschis
-
-  - **Data\_IsInCache –** dacă fișierul deschis a fost memorat în cache
-
-  - **Data\_LoadSRAs –** dacă utilizatorul vrea să încarce SRA sau nu
-
-  - **Data\_Outcome –** timpul total de inițializare și de deschidere a fișierelor.
-
-  - **Data\_OpenFromDocLib –** dacă fișierul Project deschis a fost din biblioteca de documente
-
-  - **Data\_ProjectServerVersion –** versiunea și compilarea în care se află momentan Project
-
-#### <a name="officeprojectbootproject"></a>Office.Project.BootProject
-
-Proiectul este inițializat fără a deschide un fișier. Acest eveniment indică faptul că un utilizator a deschis Office Project fără un fișier asociat. Acesta conține datele de succes critice pentru a vă asigura că Project poate să înceapă.
-
-Se colectează următoarele câmpuri:
-
-  - **Data\_BootTime –** timpul necesar pentru a inițializa Project
-
-  - **Data\_FileLoaded –** false dacă se deschide din afara spațiului sau dintr-un proiect nou, necompletat
-
-  - **Data\_IsEntOfflineWithProfile –** dacă utilizatorii sunt în SKU profesional și nu sunt conectați la server
-
-  - **Data\_IsEntOnline –** dacă sesiunea de Project este conectată la un server Project cu funcționalități de întreprindere
-
-  - **Data\_IsLocalProfile –** dacă sesiunea Project este conectată la un server Project cu funcționalități de întreprindere
-
-  - **Data\_ProjectServerVersion –** versiunea și compilarea în care se află momentan Project
+- **SetupUIActivationMethod** - metoda de activare Outlook, cum ar fi abonamentul sau licența de volum
 
 #### <a name="officepowerpointdocoperationopen"></a>Office.PowerPoint.DocOperation.Open 
 
@@ -4297,6 +4773,105 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ZRTOpenDisabledReasons –** de ce nu am putut deschide documentul din cache (Zero circuite)
 
+#### <a name="officepowerpointpptdesktopbootime"></a>Office.PowerPoint.PPT.Desktop.Bootime
+
+Colectează modul în care se inițializează PowerPoint. Acesta include inițializarea PowerPoint în vizualizarea protejată, în modul de citire asistat, din macrocomenzi, din documente imprimate, din documente noi și necompletate, din recuperarea documentelor, din automatizare și dacă este clic și pornire. De asemenea, colectează durata necesară pentru încărcarea PowerPoint. Aceste date sunt esențiale pentru a garanta că PowerPoint se descurcă bine atunci când este inițializat din moduri diferite. Microsoft utilizează aceste date pentru a surprinde timpii lungi de inițializare la deschiderea PowerPoint din moduri diferite.
+
+Se colectează următoarele câmpuri:
+
+  - **AssistedReading –** în modul de citire asistată
+
+  - **Automation –** din automatizare
+
+  - **Benchmark –** rulați testul de performanță
+
+  - **Blank –** document necompletat
+
+  - **BootTime –** timpul de inițializare a sesiunii
+
+  - **Embedding –** documentul de încorporare
+
+  - **IsC2R –** este clic și pornire
+
+  - **IsNew –** document nou
+
+  - **IsOpen –** este deschis
+
+  - **Macro1 –** rulați macrocomanda
+
+  - **Macro2 –** rulați macrocomanda
+
+  - **NonStandardSpaceInCmdLine** – există un spațiu nestandard în linia de comandă
+
+  - **Print –** document imprimat
+
+  - **PrintDialog –** document imprimat cu caseta de dialog
+
+  - **PrintPrinter –** document imprimat cu imprimanta
+
+  - **ProtectedView –** în vizualizarea protejată
+
+  - **Regserver –** înregistrați PowerPoint ca server COM
+
+  - **Restore –** restaurați documentul
+
+  - **Show –** afișați documentul
+
+  - **Time –** durata sesiunii
+
+  - **UnprotectedView –** în vizualizarea neprotejată
+
+#### <a name="officepowerpointppthasuserediteddocument"></a>Office.PowerPoint.PPT.HasUserEditedDocument
+
+Colectat atunci când un utilizator începe să editeze un document. Microsoft utilizează aceste date pentru a calcula utilizatorii activi care au editat un document PowerPoint
+
+Se colectează următoarele câmpuri:
+
+  - **CorrelationId** – identificatorul de corelare al documentului
+
+#### <a name="officeprojectbootandopenproject"></a>Office.Project.BootAndOpenProject
+
+Proiect este inițializat prin deschiderea unui fișier. Acest eveniment indică faptul că un utilizator a deschis Office Project cu un fișier asociat. Acesta conține datele de succes critice pentru a vă asigura că Project poate să înceapă și să încarce un fișier.
+
+Se colectează următoarele câmpuri:
+
+  - **Data\_AlertTime –** durata cât a fost activă caseta de dialog de inițializare.
+
+  - **Data\_BootTime –** timpul necesar pentru a inițializa Project
+
+  - **Data\_CacheFileSize –** dacă fișierul a fost memorat în cache, dimensiunea fișierului
+
+  - **Data\_EntDocType –** tipul de fișier care a fost deschis
+
+  - **Data\_IsInCache –** dacă fișierul deschis a fost memorat în cache
+
+  - **Data\_LoadSRAs –** dacă utilizatorul vrea să încarce SRA sau nu
+
+  - **Data\_Outcome –** timpul total de inițializare și de deschidere a fișierelor.
+
+  - **Data\_OpenFromDocLib –** dacă fișierul Project deschis a fost din biblioteca de documente
+
+  - **Data\_ProjectServerVersion –** versiunea și compilarea în care se află momentan Project
+
+#### <a name="officeprojectbootproject"></a>Office.Project.BootProject
+
+Proiectul este inițializat fără a deschide un fișier. Acest eveniment indică faptul că un utilizator a deschis Office Project fără un fișier asociat. Acesta conține datele de succes critice pentru a vă asigura că Project poate să înceapă.
+
+Se colectează următoarele câmpuri:
+
+  - **Data\_BootTime –** timpul necesar pentru a inițializa Project
+
+  - **Data\_FileLoaded –** false dacă se deschide din afara spațiului sau dintr-un proiect nou, necompletat
+
+  - **Data\_IsEntOfflineWithProfile –** dacă utilizatorii sunt în SKU profesional și nu sunt conectați la server
+
+  - **Data\_IsEntOnline –** dacă sesiunea de Project este conectată la un server Project cu funcționalități de întreprindere
+
+  - **Data\_IsLocalProfile –** dacă sesiunea Project este conectată la un server Project cu funcționalități de întreprindere
+
+  - **Data\_ProjectServerVersion –** versiunea și compilarea în care se află momentan Project
+
+
 #### <a name="officeprojectopenproject"></a>Office.Project.OpenProject
 
 Proiect deschide un fișier. Acest eveniment indică faptul că un utilizator deschide direct un fișier Project. Acesta conține datele de succes critice pentru a deschide fișiere în Project.
@@ -4371,249 +4946,251 @@ Se colectează următoarele câmpuri:
 
 - **parentSessionID** – GUID generat aleator pentru a identifica sesiunea de aplicație
 
+
 #### <a name="officewordfileopenopencmdfilemrupriv"></a>Office.Word.FileOpen.OpenCmdFileMruPriv
 
-Acest eveniment indică faptul că Office Word deschide un document din lista Cel mai recent utilizate (Most Recent Used – MRU). În plus, conține date esențiale despre performanța la deschiderea fișierelor și este un eveniment de pornire a aplicației din perspectiva utilizatorului. Evenimentul monitorizează dacă file-open-from-MRU funcționează așa cum vă așteptați. În plus, se folosește pentru a calcula utilizatorii/dispozitivele active lunar și măsurătorile de fiabilitate cloud.
+Acest eveniment indică faptul că Office Word deschide un document din lista Cel mai recent utilizate (Most Recent Used – MRU). În plus, conține date esențiale despre performanța la deschiderea fișierelor și este un eveniment de pornire a aplicației din perspectiva utilizatorului. Evenimentul monitorizează dacă fileopen-from-MRU funcționează așa cum trebuie. În plus, se folosește pentru a calcula utilizatorii/dispozitivele active lunar și măsurătorile de fiabilitate cloud.
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_AddDocTelemRes -** raportează dacă am putut completa corect alte valori legate de telemetria documentelor din eveniment. Utilizat pentru diagnostice privind calitatea datelor.
+- **Data_AddDocTelemRes** - raportează dacă am putut completa corect alte valori legate de telemetria documentelor din eveniment. Utilizat pentru diagnostice privind calitatea datelor.
 
-  - **Data\_BytesAsynchronous –** numărul de byți (comprimat) fără care credem că putem deschide fișierul dacă îi obținem înainte ca utilizatorul să vrea să editeze sau să salveze
+- **Data_BytesAsynchronous** - numărul de byți (comprimat) fără care credem că putem deschide fișierul dacă îi obținem înainte ca utilizatorul să vrea să editeze sau să salveze
 
-  - **Data\_BytesAsynchronousWithWork –** numărul de byți (comprimat) fără care credem că putem deschide fișierul, dar care ar necesita investiții de cod semnificative pentru a funcționa
+- **Data_BytesAsynchronousWithWork** - numărul de byți (comprimat) fără care credem că putem deschide fișierul, dar care ar necesita investiții de cod semnificative pentru a funcționa
 
-  - **Data\_BytesSynchronous –** numărul de byți (comprimat) de care avem nevoie înainte să putem deschide fișierul
+- **Data_BytesSynchronous** - numărul de byți (comprimat) de care avem nevoie înainte să putem deschide fișierul
 
-  - **Data\_BytesUnknown –** numărul de byți din componentele de documente pe care nu ne așteptăm să le găsim
+- **Data_BytesUnknown** - numărul de byți din componentele de documente pe care nu ne așteptăm să le găsim 
 
-  - **Data\_DetachedDuration –** cât timp a fost activitatea detașată de fir
+- **Data_DetachedDuration** - cât timp a fost activitatea detașată de fir
 
-  - **Data\_Doc\_AccessMode –** documentul este doar în citire/editabil
+- **Data_Doc_AccessMode** - documentul este numai în citire/editabil
 
-  - **Data\_Doc\_AssistedReadingReasons –** set predefinit de valori privind motivul pentru care documentul a fost deschis în modul de citire asistată
+- **Data_Doc_AssistedReadingReasons** - set predefinit de valori privind motivul pentru care documentul a fost deschis în modul de citire asistată
 
-  - **Data\_Doc\_ChunkingType -** unități utilizate pentru deschiderea incrementală a documentelor
+- **Data_Doc_ChunkingType** - unități utilizate pentru deschiderea incrementală a documentelor
 
-  - **Data\_Doc\_EdpState -** setare de protecție a datelor electronice pentru document
+- **Data_Doc_EdpState** - setare de protecție a datelor electronice pentru document
 
-  - **Data\_Doc\_Ext -** extensia documentului (docx/xlsb/pptx etc.)
+- **Data_Doc_Ext** - extensia documentului (docx/xlsb/pptx etc.)
 
-  - **Data\_Doc\_FileFormat –** versiunea de protocol pentru formatul fișierului
+- **Data_Doc_FileFormat** - versiunea de protocol pentru formatul fișierului
 
-  - **Data\_Doc\_Fqdn -** numele de domeniu OneDrive sau SharePoint Online
+- **Data_Doc_Fqdn** - numele de domeniu OneDrive sau SharePoint Online
 
-  - **Data\_Doc\_FqdnHash -** codul hash într-o singură direcție pentru numele de domeniu identificabil al clientului
+- **Data_Doc_FqdnHash** - codul hash unidirecțional pentru numele de domeniu identificabil al clientului
 
-  - **Data\_Doc\_IOFlags -** rapoarte privind semnalizările memorate în cache folosite pentru a seta opțiunile de deschidere a solicitărilor
+- **Data_Doc_IdentityTelemetryId** - codul hash unidirecțional pentru identitatea de utilizator folosită pentru deschidere
 
-  - **Data\_Doc\_IdentityTelemetryId -** codul hash într-o singură direcție pentru identitatea de utilizator folosită pentru deschidere
+- **Data_Doc_InitializationScenario** - înregistrează cum a fost deschis documentul
 
-  - **Data\_DstDoc\_InitializationScenario -** înregistrează cum a fost deschis documentul
+- **Data_Doc_IOFlags** - rapoarte privind semnalizările memorate în cache folosite pentru a seta opțiuni de solicitare deschise
 
-  - **Data\_Doc\_IrmRights -** acțiunile permise de politica de protejare a datelor electronice aplicată pentru document/utilizator
+- **Data_Doc_IrmRights** - acțiunile permise de politica de protejare a datelor electronice aplicată pentru document/utilizator
 
-  - **Data\_Doc\_IsIncrementalOpen -** semnalizare care arată că documentul a fost deschis incremental
+- **Data_Doc_IsIncrementalOpen** - semnalizare care indică faptul că documentul a fost deschis incremental
 
-  - **Data\_Doc\_IsOcsSupported -** semnalizare care arată că documentul este acceptat în serviciul de colaborare
+- **Data_Doc_IsOcsSupported** - semnalizare care indică faptul că documentul este acceptat în serviciul de colaborare
 
-  - **Data\_Doc\_IsOpeningOfflineCopy -** semnalizare care arată că s-a deschis copia offline a unui document
+- **Data_Doc_IsOpeningOfflineCopy** - semnalizare care indică faptul că s-a deschis copia offline a unui document
 
-  - **Data_Doc_IsRtcAlwaysOn -** true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
+- **Data_Doc_IsRtcAlwaysOn** - true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
 
-  - **Data\_Doc\_IsSyncBacked –** marcaj care arată că pe computer există o copie sincronizată automat a documentului
+- **Data_Doc_IsSyncBacked** - semnalizare care indică faptul că pe computer există o copie sincronizată automat a documentului
 
-  - **Data\_Doc\_Location –** arată ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint etc.)
+- **Data_Doc_Location** - indică ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint etc.)
 
-  - **Data\_Doc\_LocationDetails -** arată ce Folder cunoscut a furnizat un document stocat local
+- **Data_Doc_LocationDetails** - indică ce Folder cunoscut a furnizat un document stocat local
 
-  - **Data\_Doc\_NumberCoAuthors -** numărul de alți utilizatori dintr-o sesiune de editare în colaborare
+- **Data_Doc_NumberCoAuthors** - numărul de alți utilizatori dintr-o sesiune de editare în colaborare
 
-  - **Data\_Doc\_PasswordFlags -** arată semnalizările de parole pentru citire sau citire/scriere setate
+- **Data_Doc_PasswordFlags** - arată semnalizările de parole pentru citire sau citire/scriere setate
 
-  - **Data\_Doc\_ReadOnlyReasons –** motivele pentru care documentul a fost deschis doar în citire
+- **Data_Doc_ReadOnlyReasons** - motivele pentru care documentul a fost deschis doar în citire
 
-  - **Data\_Doc\_ResourceIdHash –** un identificator de document anonimizat, folosit în diagnosticarea problemelor
+- **Data_Doc_ResourceIdHash** - identificator de document anonimizat, folosit în diagnosticarea problemelor
 
-  - **Data\_Doc\_ServerDocId –** un identificator de document anonimizat și imutabil, folosit în diagnosticarea problemelor
+- **Data_Doc_ServerDocId** - identificator de document anonimizat și invariabil, folosit în diagnosticarea problemelor 
 
-  - **Data\_Doc\_ServerProtocol –** versiunea de protocol folosită în comunicarea cu serviciul
+- **Data_Doc_ServerProtocol** - versiunea de protocol folosită în comunicarea cu serviciul
 
-  - **Data\_Doc\_ServerType –** tipul de server care oferă serviciul (SharePoint, OneDrive, WOPI etc.)
+- **Data_Doc_ServerType** - tipul de server care oferă serviciul (SharePoint, OneDrive, WOPI etc.)
 
-  - **Data\_Doc\_ServerVersion –** versiunea serverului care oferă serviciul
+- **Data_Doc_ServerVersion** - versiunea serverului care oferă serviciul
 
-  - **Data\_Doc\_SessionId -** identifică o anumită sesiune de editare a documentului din sesiunea completă
+- **Data_Doc_SessionId** - identifică o anumită sesiune de editare a documentului din sesiunea completă
 
-  - **Data\_Doc\_SharePointServiceContext -** informații de diagnosticare din solicitările SharePoint Online
+- **Data_Doc_SharePointServiceContext** - informații de diagnosticare din solicitările SharePoint Online
 
-  - **Data\_Doc\_SizeInBytes -** indicator privind dimensiunea documentului
+- **Data_Doc_SizeInBytes** - indicator privind dimensiunea documentului
 
-  - **Data\_Doc\_SpecialChars -** indicator privind caracterele speciale din calea sau adresa URL a documentului
+- **Data_Doc_SpecialChars** - indicator privind caracterele speciale din adresa URL a documentului 
 
-  - **Data\_Doc\_StreamAvailability -** indicator care arată dacă șirul documentului este disponibil/dezactivat
+- **Data_Doc_SyncBackedType** - indicator privind tipul documentului (local sau bazat pe servicii)
 
-  - **Data\_Doc\_SyncBackedType -** indicator privind tipul documentului (local sau bazat pe servicii)
+- **Data_Doc_UrlHash** - cod hash unidirecțional, pentru crearea unui identificator naiv de document
 
-  - **Data\_Doc\_UrlHash -** cod hash într-o singură direcție, pentru crearea unui identificator naiv de document
+- **Data_Doc_WopiServiceId** - conține identificatorul unic al furnizorului de servicii WOPI
 
-  - **Data\_Doc\_WopiServiceId –** conține identificatorul unic al furnizorului de servicii WOPI
+- **Data_EditorDisablingRename** - identificatorul primului editor care a provocat dezactivarea redenumirii
 
-  - **Data\_EditorDisablingRename –** identificatorul primului editor care a provocat dezactivarea redenumirii
+- **Data_EditorsCount** - numărul de editori din document
 
-  - **Data\_EditorsCount –** numărul de editori din document
+- **Data_ForceReadWriteReason** - valoare întreagă care reprezintă motivul pentru care fișierul a fost forțat în modul citire/scriere
 
-  - **Data\_FSucceededAfterRecoverableFailure –** arată că deschiderea a reușit după repararea unei erori la deschiderea documentului
+- **Data_FSucceededAfterRecoverableFailure** - arată că deschiderea a reușit după repararea unei erori la deschiderea documentului
 
-  - **Data\_ForceReadWriteReason –** valoare întreagă care reprezintă motivul pentru care fișierul a fost forțat în modul citire/scriere
+- **Data_LastLoggedTag** - etichetă unică pentru site-ul de apelare a codului folosit pentru a identifica momentele când încercăm să nu realizăm deschiderea de două ori (folosit pentru diagnosticarea calității datelor)
 
-  - **Data\_LastLoggedTag –** etichetă unică pentru site-ul de apelare a codului folosit pentru a identifica momentele când încercăm să nu realizăm deschiderea de două ori (folosit pentru diagnosticarea calității datelor)
+- **Data_LinkStyles** - indică dacă asociem stiluri de șabloane
 
-  - **Data\_LinkStyles –** indică dacă asociem stiluri de șabloane
+- **Data_MainPdod** - identificatorul documentului din procesul Office Word
 
-  - **Data\_MainPdod –** Identificatorul documentului din procesul Office Word
+- **Data_Measurements** - șir codificat cu detalii de timp pentru diferitele părți ale deschiderii. Utilizat pentru a măsura performanța.
 
-  - **Data\_Measurements –** șir codificat cu detalii de timp pentru diferitele părți ale deschiderii. Utilizat pentru a măsura performanța.
+- **Data_MoveDisabledReason** - eroarea care dezactivează mutarea pentru document
 
-  - **Data\_MoveDisabledReason –** eroarea care dezactivează mutarea pentru document
+- **Data_MoveFlightEnabled** - dacă ediția flight este activată pentru caracteristica de mutare
 
-  - **Data\_MoveFlightEnabled –** dacă ediția flight este activată pentru caracteristica de mutare
+- **Data_PartsUnknown** - numărul de componente ale documentului pentru care nu am putut obține date
 
-  - **Data\_PartsUnknown –** numărul de componente ale documentului pentru care nu am putut obține date
+- **Data_RecoverableFailureInitiationLocationTag** - etichetă unică pentru site-ul de apelare a codului folosit pentru a identifica locul din cod în care încercăm să remediem fișierul înainte de a-l deschide
 
-  - **Data\_RecoverableFailureInitiationLocationTag –** etichetă unică pentru site-ul de apelare a codului folosit pentru a identifica locul din cod în care încercăm să remediem fișierul înainte de a-l deschide
+- **Data_RenameDisabledReason** - eroare care face redenumirea să fie dezactivată pentru acest document
 
-  - **Data\_RenameDisabledReason –** eroare care face redenumirea să fie dezactivată pentru acest document
+- **Data_RenameFlightEnabled** - dacă este activată ediția flight pentru caracteristica de redenumire
 
-  - **Data\_RenameFlightEnabled -** dacă este activată ediția flight pentru caracteristica de redenumire
+- **Data_SecondaryTag** - etichetă unică pentru site-ul de apelare a codului folosit pentru a adăuga date suplimentare despre erori pentru deschidere 
 
-  - **Data\_SecondaryTag –** etichetă unică pentru site-ul de apelare a codului folosit pentru a adăuga date suplimentare despre erori pentru deschidere
+- **Data_TemplateFormat** - formatul de fișier al șablonului pe care se bazează documentul
 
-  - **Data\_TemplateFormat –** formatul de fișier al șablonului pe care se bazează documentul.
+- **Data_UsesNormal** - indică dacă documentul deschis se bazează pe șablonul normal
 
-  - **Data\_UsesNormal –** indică dacă documentul deschis se bazează pe șablonul normal
+- **PathData_Doc_StreamAvailability** - indicator care arată dacă șirul documentului este disponibil/dezactivat
+
 
 #### <a name="officewordfileopenopenffileopenxstzcore"></a>Office.Word.FileOpen.OpenFFileOpenXstzCore
 
-Acest eveniment indică faptul că Office Word deschide un document pe care a făcut dublu clic un utilizator. În plus, conține date esențiale despre performanța la deschiderea fișierelor și este un eveniment de pornire a aplicației din perspectiva utilizatorului. Evenimentul monitorizează dacă file-open-from-file-double-click funcționează așa cum vă așteptați. În plus, se folosește pentru a calcula utilizatorii/dispozitivele active lunar și măsurătorile de fiabilitate cloud.
+Acest eveniment indică faptul că Office Word deschide un document pe care a făcut dublu clic un utilizator. În plus, conține date esențiale despre performanța la deschiderea fișierelor și este un eveniment de pornire a aplicației din perspectiva utilizatorului. Evenimentul monitorizează dacă file-openfrom-file-double-click funcționează așa cum vă așteptați. În plus, se folosește pentru a calcula utilizatorii/dispozitivele active lunar și măsurătorile de fiabilitate cloud.
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_AddDocTelemRes –** raportează dacă am putut completa corect alte valori legate de telemetria documentelor din eveniment. Utilizat pentru diagnostice privind calitatea datelor
+- **Data_AddDocTelemRes** - raportează dacă am putut completa corect alte valori legate de telemetria documentelor din eveniment. Utilizat pentru diagnostice privind calitatea datelor
+    
+- **Data_BytesAsynchronous** - numărul de byți (comprimat) fără care credem că putem deschide fișierul dacă îi obținem înainte ca utilizatorul să vrea să editeze sau să salveze
+    
+- **Data_BytesAsynchronousWithWork** - numărul de byți (comprimat) fără care credem că putem deschide fișierul, dar care ar necesita investiții de cod semnificative pentru a funcționa
 
-  - **Data\_BytesAsynchronous –** numărul de byți (comprimat) fără care credem că putem deschide fișierul dacă îi obținem înainte ca utilizatorul să vrea să editeze sau să salveze
+- **Data_BytesSynchronous** - numărul de byți (comprimat) de care avem nevoie înainte să putem deschide fișierul
+    
+- **Data_BytesUnknown** - numărul de byți din componentele de documente pe care nu ne așteptăm să le găsim
 
-  - **Data\_BytesAsynchronousWithWork –** numărul de byți (comprimat) fără care credem că putem deschide fișierul, dar care ar necesita investiții de cod semnificative pentru a funcționa
+- **Data_DetachedDuration** - cât timp a fost activitatea detașată de fir
 
-  - **Data\_BytesSynchronous –** numărul de byți (comprimat) de care avem nevoie înainte să putem deschide fișierul
+- **Data_Doc_AccessMode** - documentul este numai în citire/editabil
 
-  - **Data\_BytesUnknown –** numărul de byți din componentele de documente pe care nu ne așteptăm să le găsim
+- **Data_Doc_AssistedReadingReasons** - set predefinit de valori privind motivul pentru care documentul a fost deschis în modul de citire asistată
 
-  - **Data\_DetachedDuration –** cât timp a fost activitatea detașată de fir
+- **Data_Doc_ChunkingType** - unități utilizate pentru deschiderea incrementală a documentelor
 
-  - **Data\_Doc\_AccessMode –** documentul este doar în citire/editabil
+- **Data_Doc_EdpState** - setare de protecție a datelor electronice pentru document
 
-  - **Data\_Doc\_AssistedReadingReasons –** set predefinit de valori privind motivul pentru care documentul a fost deschis în modul de citire asistată
+- **Data_Doc_Ext** - extensia documentului (docx/xlsb/pptx etc.)
 
-  - **Data\_Doc\_ChunkingType -** unități utilizate pentru deschiderea incrementală a documentelor
+- **Data_Doc_FileFormat** - versiunea de protocol pentru formatul fișierului
 
-  - **Data\_Doc\_EdpState -** setare de protecție a datelor electronice pentru document
+- **Data_Doc_Fqdn** - numele de domeniu OneDrive sau SharePoint Online
 
-  - **Data\_Doc\_Ext -** extensia documentului (docx/xlsb/pptx etc.)
+- **Data_Doc_FqdnHash** - codul hash unidirecțional pentru numele de domeniu identificabil al clientului
 
-  - **Data\_Doc\_FileFormat –** versiunea de protocol pentru formatul fișierului
+- **Data_Doc_IOFlags** - rapoarte privind semnalizările memorate în cache folosite pentru a seta opțiuni de solicitare deschise
 
-  - **Data\_Doc\_Fqdn -** numele de domeniu OneDrive sau SharePoint Online
+- **Data_Doc_IdentityTelemetryId** - codul hash unidirecțional pentru identitatea de utilizator folosită pentru deschidere
 
-  - **Data\_Doc\_FqdnHash -** codul hash într-o singură direcție pentru numele de domeniu identificabil al clientului
+- **Data_Doc_InitializationScenario** - înregistrează cum a fost deschis documentul
 
-  - **Data\_Doc\_IOFlags –** rapoarte privind marcajele memorate în cache folosite pentru a seta opțiunile de deschidere a solicitărilor
+- **Data_Doc_IrmRights** - acțiunile permise de politica de protejare a datelor electronice aplicată pentru document/utilizator
 
-  - **Data\_Doc\_IdentityTelemetryId –** codul hash într-o singură direcție pentru identitatea de utilizator folosită pentru deschidere
+- **Data_Doc_IsIncrementalOpen** - semnalizare care indică faptul că documentul a fost deschis incremental
 
-  - **Data\_Doc\_InitializationScenario –** înregistrează cum a fost deschis documentul
+- **Data_Doc_IsOcsSupported** - semnalizare care indică faptul că documentul este acceptat în serviciul de colaborare
+    
+- **Data_Doc_IsOpeningOfflineCopy** - semnalizare care indică faptul că s-a deschis copia offline a unui document
 
-  - **Data\_Doc\_IrmRights -** acțiunile permise de politica de protejare a datelor electronice aplicată pentru document/utilizator
+- **Data_Doc_IsRtcAlwaysOn** - true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
 
-  - **Data\_Doc\_IsIncrementalOpen -** semnalizare care arată că documentul a fost deschis incremental
+- **Data_Doc_IsSyncBacked** - semnalizare care indică faptul că pe computer există o copie sincronizată automat a documentului
 
-  - **Data\_Doc\_IsOcsSupported -** semnalizare care arată că documentul este acceptat în serviciul de colaborare
+- **Data_Doc_Location** - indică ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint etc.)
+    
+- **Data_Doc_LocationDetails** - indică ce Folder cunoscut a furnizat un document stocat local
 
-  - **Data\_Doc\_IsOpeningOfflineCopy -** semnalizare care arată că s-a deschis copia offline a unui document
+- **Data_Doc_NumberCoAuthors** - numărul de alți utilizatori dintr-o sesiune de editare în colaborare
 
-  - **Data_Doc_IsRtcAlwaysOn -** true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
+- **Data_Doc_PasswordFlags** - arată semnalizările de parole pentru citire sau citire/scriere setate
 
-  - **Data\_Doc\_IsSyncBacked -** semnalizare care arată că pe computer există o copie sincronizată automat a documentului
+- **Data_Doc_ReadOnlyReasons** - motivele pentru care documentul a fost deschis doar în citire
 
-  - **Data\_Doc\_Location -** arată ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint etc.)
+- **Data_Doc_ResourceIdHash** - identificator de document anonimizat, folosit în diagnosticarea problemelor
 
-  - **Data\_Doc\_LocationDetails -** arată ce Folder cunoscut a furnizat un document stocat local
+- **Data_Doc_ServerDocId** - identificator de document anonimizat și invariabil, folosit în diagnosticarea problemelor
 
-  - **Data\_Doc\_NumberCoAuthors -** numărul de alți utilizatori dintr-o sesiune de editare în colaborare
+- **Data_Doc_ServerProtocol** - versiunea de protocol folosită în comunicarea cu serviciul
 
-  - **Data\_Doc\_PasswordFlags -** arată semnalizările de parole pentru citire sau citire/scriere setate
+- **Data_Doc_ServerType** - tipul de server care oferă serviciul (SharePoint, OneDrive, WOPI etc.)
+    
+- **Data_Doc_ServerVersion** - versiunea serverului care oferă serviciul 
 
-  - **Data\_Doc\_ReadOnlyReasons –** motivele pentru care documentul a fost deschis doar în citire
+- **Data_Doc_SessionId** - identifică o anumită sesiune de editare a documentului din sesiunea completă
 
-  - **Data\_Doc\_ResourceIdHash –** un identificator de document anonimizat, folosit în diagnosticarea problemelor
+- **Data_Doc_SharePointServiceContext** - informații de diagnosticare din solicitările SharePoint Online
 
-  - **Data\_Doc\_ServerDocId –** un identificator de document anonimizat și imutabil, folosit în diagnosticarea problemelor
+- **Data_Doc_SizeInBytes** - indicator privind dimensiunea documentului
 
-  - **Data\_Doc\_ServerProtocol –** versiunea de protocol folosită în comunicarea cu serviciul
+- **Data_Doc_SpecialChars** - indicator privind caracterele speciale din calea sau adresa URL a documentului
 
-  - **Data\_Doc\_ServerType -** tipul de server care oferă serviciul (SharePoint, OneDrive, WOPI etc.)
+- **Data_Doc_StreamAvailability** - indicator care arată dacă șirul documentului este disponibil/dezactivat
 
-  - **Data\_Doc\_ServerVersion –** versiunea serverului care oferă serviciul
+- **Data_Doc_SyncBackedType** - indicator privind tipul documentului (local sau bazat pe servicii)
 
-  - **Data\_Doc\_SessionId –** versiunea serverului care oferă serviciul
+- **Data_Doc_UrlHash** - cod hash unidirecțional, pentru crearea unui identificator naiv de document
 
-  - **Data\_Doc\_SharePointServiceContext-**
+- **Data_Doc_WopiServiceId** - conține identificatorul unic al furnizorului de servicii WOPI
 
-  - **Data\_Doc\_SizeInBytes –** indicator privind dimensiunea documentului
+- **Data_EditorDisablingRename** - identificatorul primului editor care a provocat dezactivarea redenumirii
 
-  - **Data\_Doc\_SpecialChars -** indicator privind caracterele speciale din calea sau adresa URL a documentului
+- **Data_EditorsCount** - numărul de editori din document
 
-  - **Data\_Doc\_StreamAvailability -** indicator care arată dacă șirul documentului este disponibil/dezactivat
+- **Data_FSucceededAfterRecoverableFailure** - arată că deschiderea a reușit după repararea unei erori la deschiderea documentului
 
-  - **Data\_Doc\_SyncBackedType -** indicator privind tipul documentului (local sau bazat pe servicii)
+- **Data_ForceReadWriteReason** - valoare întreagă care reprezintă motivul pentru care fișierul a fost forțat în modul citire/scriere
+    
+- **Data_LastLoggedTag** - etichetă unică pentru site-ul de apelare a codului folosit pentru a identifica momentele când încercăm să nu realizăm deschiderea de două ori (folosit pentru diagnosticarea calității datelor)
 
-  - **Data\_Doc\_UrlHash -** cod hash într-o singură direcție, pentru crearea unui identificator naiv de document
+- **Data_LinkStyles** - indică dacă asociem stiluri de șabloane
 
-  - **Data\_Doc\_WopiServiceId –** conține identificatorul unic al furnizorului de servicii WOPI
+- **Data_MainPdod** - identificatorul documentului din procesul Office Word
 
-  - **Data\_EditorDisablingRename –** identificatorul primului editor care a provocat dezactivarea redenumirii
+- **Data_Measurements** - șir codificat cu detalii de timp pentru diferitele părți ale deschiderii. Utilizat pentru a măsura performanța.
+    
+- **Data_MoveDisabledReason** - eroarea care dezactivează mutarea pentru document
 
-  - **Data\_EditorsCount –** numărul de editori din document
+- **Data_MoveFlightEnabled** - dacă ediția flight este activată pentru caracteristica de mutare
 
-  - **Data\_FSucceededAfterRecoverableFailure –** arată că deschiderea a reușit după repararea unei erori la deschiderea documentului
+- **Data_PartsUnknown** - numărul de componente ale documentului pentru care nu am putut obține date
 
-  - **Data\_ForceReadWriteReason –** valoare întreagă care reprezintă motivul pentru care fișierul a fost forțat în modul citire/scriere
+- **Data_RecoverableFailureInitiationLocationTag** - etichetă unică pentru site-ul de apelare a codului folosit pentru a identifica locul din cod în care încercăm să remediem fișierul înainte de a-l deschide.
 
-  - **Data\_LastLoggedTag –** etichetă unică pentru site-ul de apelare a codului folosit pentru a identifica momentele când încercăm să nu realizăm deschiderea de două ori (folosit pentru diagnosticarea calității datelor)
+- **Data_RenameDisabledReason** - eroare care face redenumirea să fie dezactivată pentru acest document
 
-  - **Data\_LinkStyles –** indică dacă asociem stiluri de șabloane
+- **Data_RenameFlightEnabled** - dacă este activată ediția flight pentru caracteristica de redenumire
 
-  - **Data\_MainPdod –** Identificatorul documentului din procesul Office Word
+- **Data_SecondaryTag** - etichetă unică pentru site-ul de apelare a codului folosit pentru a adăuga date suplimentare despre erori pentru deschidere.
 
-  - **Data\_Measurements –** șir codificat cu detalii de timp pentru diferitele părți ale deschiderii. Utilizat pentru a măsura performanța.
+- **Data_TemplateFormat** - formatul de fișier al șablonului pe care se bazează documentul
 
-  - **Data\_MoveDisabledReason –** eroarea care dezactivează mutarea pentru document
-
-  - **Data\_MoveFlightEnabled –** dacă ediția flight este activată pentru caracteristica de mutare
-
-  - **Data\_PartsUnknown –** numărul de componente ale documentului pentru care nu am putut obține date
-
-  - **Data\_RecoverableFailureInitiationLocationTag –** etichetă unică pentru site-ul de apelare a codului folosit pentru a identifica locul din cod în care încercăm să remediem fișierul înainte de a-l deschide.
-
-  - **Data\_RenameDisabledReason –** eroare care face redenumirea să fie dezactivată pentru acest document
-
-  - **Data\_RenameFlightEnabled -** dacă este activată ediția flight pentru caracteristica de redenumire
-
-  - **Data\_SecondaryTag –** etichetă unică pentru site-ul de apelare a codului folosit pentru a adăuga date suplimentare despre erori pentru deschidere.
-
-  - **Data\_TemplateFormat –** formatul de fișier al șablonului pe care se bazează documentul.
-
-  - **Data\_UsesNormal –** indică dacă documentul deschis se bazează pe șablonul normal
+- **Data_UsesNormal** - indică dacă documentul deschis se bazează pe șablonul normal.
 
 
 #### <a name="officewordfileopenopenifrinitargs"></a>Office.Word.FileOpen.OpenIfrInitArgs
@@ -4739,123 +5316,123 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officewordfileopenopenloadfile"></a>Office.Word.FileOpen.OpenLoadFile
 
-Acest eveniment indică faptul că Office Word deschide un document prin caseta de dialog Deschidere. În plus, conține date esențiale despre performanța la deschiderea fișierelor și este un eveniment de pornire a aplicației din perspectiva utilizatorului. Evenimentul monitorizează dacă file-open-from-the-open-file-dialog funcționează așa cum vă așteptați. În plus, se folosește pentru a calcula utilizatorii/dispozitivele active lunar și măsurătorile de fiabilitate cloud.
+Acest eveniment indică faptul că Office Word deschide un document prin caseta de dialog Deschidere. În plus, conține date esențiale despre performanța la deschiderea fișierelor și este un eveniment de pornire a aplicației din perspectiva utilizatorului. Evenimentul monitorizează dacă file-open-from-the-open-filedialog funcționează așa cum vă așteptați. În plus, se folosește pentru a calcula utilizatorii/dispozitivele active lunar și măsurătorile de fiabilitate cloud.
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_AddDocTelemRes -** raportează dacă am putut completa corect alte valori legate de telemetria documentelor din eveniment. Utilizat pentru diagnostice privind calitatea datelor.
+- **Data_AddDocTelemRes** - raportează dacă am putut completa corect alte valori legate de telemetria documentelor din eveniment. Utilizat pentru diagnostice privind calitatea datelor.
 
-  - **Data\_BytesAsynchronous –** numărul de byți (comprimat) fără care credem că putem deschide fișierul dacă îi obținem înainte ca utilizatorul să vrea să editeze sau să salveze
+- **Data_BytesAsynchronous** - numărul de byți (comprimat) fără care credem că putem deschide fișierul dacă îi obținem înainte ca utilizatorul să vrea să editeze sau să salveze
 
-  - **Data\_BytesAsynchronousWithWork –** numărul de byți (comprimat) fără care credem că putem deschide fișierul, dar care ar necesita investiții de cod semnificative pentru a funcționa
+- **Data_BytesAsynchronousWithWork** - numărul de byți (comprimat) fără care credem că putem deschide fișierul, dar care ar necesita investiții de cod semnificative pentru a funcționa
+    
+- **Data_BytesSynchronous** - numărul de byți (comprimat) de care avem nevoie înainte să putem deschide fișierul
 
-  - **Data\_BytesSynchronous –** numărul de byți (comprimat) de care avem nevoie înainte să putem deschide fișierul
+- **Data_BytesUnknown** - numărul de byți din componentele de documente pe care nu ne așteptăm să le găsim
 
-  - **Data\_BytesUnknown –** numărul de byți din componentele de documente pe care nu ne așteptăm să le găsim
+- **Data_DetachedDuration** - cât timp a fost activitatea detașată de fir
 
-  - **Data\_DetachedDuration –** cât timp a fost activitatea detașată de fir
+- **Data_Doc_AccessMode** - documentul este numai în citire/editabil
 
-  - **Data\_Doc\_AccessMode -** documentul este doar în citire/editabil
+- **Data_Doc_AssistedReadingReasons** - set predefinit de valori privind motivul pentru care documentul a fost deschis în modul de citire asistată
 
-  - **Data\_Doc\_AssistedReadingReasons -** set predefinit de valori privind motivul pentru care documentul a fost deschis în modul de citire asistată
+- **Data_Doc_ChunkingType** - unități utilizate pentru deschiderea incrementală a documentelor
 
-  - **Data\_Doc\_ChunkingType -** unități utilizate pentru deschiderea incrementală a documentelor
+- **Data_Doc_EdpState** - setare de protecție a datelor electronice pentru document
 
-  - **Data\_Doc\_EdpState -** setare de protecție a datelor electronice pentru document
+- **Data_Doc_Ext** - extensia documentului (docx/xlsb/pptx etc.)
 
-  - **Data\_Doc\_Ext -** extensia documentului (docx/xlsb/pptx etc.)
+- **Data_Doc_FileFormat** - versiunea de protocol pentru formatul fișierului
 
-  - **Data\_Doc\_FileFormat –** versiunea de protocol pentru formatul fișierului
+- **Data_Doc_Fqdn** - numele de domeniu OneDrive sau SharePoint Online
 
-  - **Data\_Doc\_Fqdn -** numele de domeniu OneDrive sau SharePoint Online
+- **Data_Doc_FqdnHash** - codul hash unidirecțional pentru numele de domeniu identificabil al clientului
 
-  - **Data\_Doc\_FqdnHash –** codul hash într-o singură direcție pentru numele de domeniu identificabil al clientului
+- **Data_Doc_IdentityTelemetryId** - codul hash unidirecțional pentru identitatea de utilizator folosită pentru deschidere
 
-  - **Data\_Doc\_IdentityTelemetryId –** codul hash într-o singură direcție pentru identitatea de utilizator folosită pentru deschidere
+- **Data_Doc_InitializationScenario** - înregistrează cum a fost deschis documentul
 
-  - **Data\_Doc\_InitializationScenario –** înregistrează cum a fost deschis documentul
+- **Data_Doc_IOFlags** - rapoarte privind semnalizările memorate în cache folosite pentru a seta opțiuni de solicitare deschise
 
-  - **Data\_Doc\_IOFlags -** rapoarte privind semnalizările memorate în cache folosite pentru a seta opțiunile de deschidere a solicitărilor
+- **Data_Doc_IrmRights** - acțiunile permise de politica de protejare a datelor electronice aplicată pentru document/utilizator
+    
+- **Data_Doc_IsIncrementalOpen** - semnalizare care indică faptul că documentul a fost deschis incremental
 
-  - **Data\_Doc\_IrmRights -** acțiunile permise de politica de protejare a datelor electronice aplicată pentru document/utilizator
+- **Data_Doc_IsOcsSupported** - semnalizare care indică faptul că documentul este acceptat în serviciul de colaborare
 
-  - **Data\_Doc\_IsIncrementalOpen -** semnalizare care arată că documentul a fost deschis incremental
+- **Data_Doc_IsOpeningOfflineCopy** - semnalizare care indică faptul că s-a deschis copia offline a unui document
 
-  - **Data\_Doc\_IsOcsSupported -** semnalizare care arată că documentul este acceptat în serviciul de colaborare
+- **Data_Doc_IsRtcAlwaysOn** - true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
 
-  - **Data\_Doc\_IsOpeningOfflineCopy -** semnalizare care arată că s-a deschis copia offline a unui document
+- **Data_Doc_IsSyncBacked** - semnalizare care indică faptul că pe computer există o copie sincronizată automat a documentului
 
-  - **Data_Doc_IsRtcAlwaysOn -** true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
+- **Data_Doc_Location** - indică ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint etc.)
 
-  - **Data\_Doc\_IsSyncBacked -** semnalizare care arată că pe computer există o copie sincronizată automat a documentului
+- **Data_Doc_LocationDetails** - indică ce Folder cunoscut a furnizat un document stocat local
 
-  - **Data\_Doc\_Location -** arată ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint etc.)
+- **Data_Doc_NumberCoAuthors** - numărul de alți utilizatori dintr-o sesiune de editare în colaborare
 
-  - **Data\_Doc\_LocationDetails -** arată ce Folder cunoscut a furnizat un document stocat local
+- **Data_Doc_PasswordFlags** - arată semnalizările de parole pentru citire sau citire/scriere setate
 
-  - **Data\_Doc\_NumberCoAuthors -** numărul de alți utilizatori dintr-o sesiune de editare în colaborare
+- **Data_Doc_ReadOnlyReasons** - motivele pentru care documentul a fost deschis doar în citire
 
-  - **Data\_Doc\_PasswordFlags -** arată semnalizările de parole pentru citire sau citire/scriere setate
+- **Data_Doc_ResourceIdHash** - identificator de document anonimizat, folosit în diagnosticarea problemelor
 
-  - **Data\_Doc\_ReadOnlyReasons –** motivele pentru care documentul a fost deschis doar în citire
+- **Data_Doc_ServerDocId** - identificator de document anonimizat și invariabil, folosit în diagnosticarea problemelor 
 
-  - **Data\_Doc\_ResourceIdHash –** un identificator de document anonimizat, folosit în diagnosticarea problemelor
+- **Data_Doc_ServerProtocol** - versiunea de protocol folosită în comunicarea cu serviciul
 
-  - **Data\_Doc\_ServerDocId –** un identificator de document anonimizat și imutabil, folosit în diagnosticarea problemelor
+- **Data_Doc_ServerType** - tipul de server care oferă serviciul (SharePoint, OneDrive, WOPI etc.)
 
-  - **Data\_Doc\_ServerProtocol –** versiunea de protocol folosită în comunicarea cu serviciul
+- **Data_Doc_ServerVersion** - versiunea serverului care oferă serviciul
 
-  - **Data\_Doc\_ServerType –** tipul de server care oferă serviciul (SharePoint, OneDrive, WOPI etc.)
+- **Data_Doc_SessionId** - identifică o anumită sesiune de editare a documentului din sesiunea completă
 
-  - **Data\_Doc\_ServerVersion –** versiunea serverului care oferă serviciul
+- **Data_Doc_SharePointServiceContext** - informații de diagnosticare din solicitările SharePoint Online
 
-  - **Data\_Doc\_SessionId -** identifică o anumită sesiune de editare a documentului din sesiunea completă
+- **Data_Doc_SizeInBytes** - indicator privind dimensiunea documentului
 
-  - **Data\_Doc\_SharePointServiceContext -** informații de diagnosticare din solicitările SharePoint Online
+- **Data_Doc_SpecialChars** - indicator privind caracterele speciale din calea sau adresa URL a documentului
 
-  - **Data\_Doc\_SizeInBytes -** indicator privind dimensiunea documentului
+- **Data_Doc_StreamAvailability** - indicator care arată dacă șirul documentului este disponibil/dezactivat
 
-  - **Data\_Doc\_SpecialChars -** indicator privind caracterele speciale din calea sau adresa URL a documentului
+- **Data_Doc_SyncBackedType** - indicator privind tipul documentului (local sau bazat pe servicii)
 
-  - **Data\_Doc\_StreamAvailability -** indicator care arată dacă șirul documentului este disponibil/dezactivat
+- **Data_Doc_UrlHash** - cod hash unidirecțional, pentru crearea unui identificator naiv de document
 
-  - **Data\_Doc\_SyncBackedType -** indicator privind tipul documentului (local sau bazat pe servicii)
+- **Data_EditorDisablingRename** - identificatorul primului editor care a provocat dezactivarea redenumirii
 
-  - **Data\_Doc\_UrlHash –** cod hash într-o singură direcție, pentru crearea unui identificator naiv de document
+- **Data_EditorsCount** - numărul de editori din document
 
-  - **Data\_EditorDisablingRename –** identificatorul primului editor care a provocat dezactivarea redenumirii
+- **Data_ForceReadWriteReason** - valoare întreagă care reprezintă motivul pentru care fișierul a fost forțat în modul citire/scriere
+    
+- **Data_FSucceededAfterRecoverableFailure** - arată că deschiderea a reușit după repararea unei erori la deschiderea documentului
 
-  - **Data\_EditorsCount –** numărul de editori din document
+- **Data_LastLoggedTag** - etichetă unică pentru site-ul de apelare a codului folosit pentru a identifica momentele când nu reușim să încercăm salvarea de două ori (folosit pentru diagnosticarea calității datelor)
 
-  - **Data\_ForceReadWriteReason –** valoare întreagă care reprezintă motivul pentru care fișierul a fost forțat în modul citire/scriere
+- **Data_LinkStyles** - indică dacă asociem stiluri de șabloane
 
-  - **Data\_FSucceededAfterRecoverableFailure –** arată că deschiderea a reușit după repararea unei erori la deschiderea documentului
+- **Data_MainPdod** - identificatorul documentului din procesul Office Word
 
-  - **Data\_LastLoggedTag –** etichetă unică pentru site-ul de apelare a codului folosit pentru a identifica momentele când nu reușim să încercăm salvarea de două ori (folosit pentru diagnosticarea calității datelor)
+- **Data_Measurements** - șir codificat cu detalii de timp pentru diferitele părți ale deschiderii. Utilizat pentru a măsura performanța.
 
-  - **Data\_LinkStyles –** indică dacă asociem stiluri de șabloane
+- **Data_MoveDisabledReason** - eroarea care dezactivează mutarea pentru document
 
-  - **Data\_MainPdod –** Identificatorul documentului din procesul Office Word
+- **Data_MoveFlightEnabled** - dacă ediția flight este activată pentru caracteristica de mutare
 
-  - **Data\_Measurements –** șir codificat cu detalii de timp pentru diferitele părți ale deschiderii. Utilizat pentru a măsura performanța.
+- **Data_PartsUnknown** - numărul de componente ale documentului pentru care nu am putut obține date
 
-  - **Data\_MoveDisabledReason –** eroarea care dezactivează mutarea pentru document
+- **Data_RecoverableFailureInitiationLocationTag** - etichetă unică pentru site-ul de apelare a codului folosit pentru a identifica locul din cod în care încercăm să remediem fișierul înainte de a-l deschide
 
-  - **Data\_MoveFlightEnabled –** dacă ediția flight este activată pentru caracteristica de mutare
+- **Data_RenameDisabledReason** - eroare care face redenumirea să fie dezactivată pentru acest document
 
-  - **Data\_PartsUnknown –** numărul de componente ale documentului pentru care nu am putut obține date
+- **Data_RenameFlightEnabled** - dacă este activată ediția flight pentru caracteristica de redenumire
 
-  - **Data\_RecoverableFailureInitiationLocationTag –** etichetă unică pentru site-ul de apelare a codului folosit pentru a identifica locul din cod în care încercăm să remediem fișierul înainte de a-l deschide
+- **Data_SecondaryTag** - etichetă unică pentru site-ul de apelare a codului folosit pentru a adăuga date suplimentare despre erori pentru deschidere
 
-  - **Data\_RenameDisabledReason –** eroare care face redenumirea să fie dezactivată pentru acest document
+- **Data_TemplateFormat** - formatul de fișier al șablonului pe care se bazează documentul
 
-  - **Data\_RenameFlightEnabled -** dacă este activată ediția flight pentru caracteristica de redenumire
-
-  - **Data\_SecondaryTag –** etichetă unică pentru site-ul de apelare a codului folosit pentru a adăuga date suplimentare despre erori pentru deschidere
-
-  - **Data\_TemplateFormat –** formatul de fișier al șablonului pe care se bazează documentul
-
-  - **Data\_UsesNormal** – indică dacă documentul deschis se bazează pe șablonul normal
+- **Data_UsesNormal** - indică dacă documentul deschis se bazează pe șablonul normal
 
 
 ### <a name="office-accessibility-configuration-subtype"></a>*Subtip de configurație accesibilitate Office*
@@ -4983,6 +5560,46 @@ Se colectează următoarele câmpuri:
 
 - **Event name** – categoria evenimentului și eticheta acestuia.
 
+#### <a name="officeapplesystemhealthappexitmacandios"></a>Office.Apple.SystemHealthAppExitMacAndiOS
+
+Eveniment de inițializare care captează ieșirile elegante și neelegante din aplicație pentru investigații suplimentare.
+
+Se colectează următoarele câmpuri:
+
+- **AffectedProcessResidentMemoryOnCrash** - memoria rezidentă a aplicației căzute
+
+- **AffectedProcessSessionID** - SessionID pentru procesul la ieșirea anterioară
+
+- **AffectedProcessUnsymbolicatedChecksum** - merge cu codul hash al stivei pentru simbolizare
+
+- **AffectedProcessVirtualMemoryOnCrash** - memoria virtuală a aplicației căzute
+
+- **AffectedSessionBuildNumber** - versiunea aplicației
+
+- **AffectedSessionDuration** - durata sesiunii în secunde înainte de cădere
+
+- **AffectedSessionIDSMatch** - Boolean pentru a verifica dacă ID-ul sesiunii de raportare este la fel ca cel preluat de MERP
+
+- **AffectedSessionLongBuildNumber** - număr de compilare lung
+
+- **AffectedSessionMERPSessionID** - ID-ul sesiunii de MERP
+
+- **AffectedSessionOSLocale** - setări regionale ale sistemului de operare
+
+- **AffectedSessionOSVersion** - versiunea sistemului de operare
+
+- **AffectedSessionStackHash** - codul hash pentru trasarea stivei aplicației căzute
+
+- **AffectedSessionStartTime** - Datetime pentru începutul sesiunii
+
+- **AffectedSessionUAEType** - enum care oferă informații despre ce tip de cădere a fost
+
+- **AffectedSessionVersion** - versiunea aplicației
+
+- **DeviceModel** - model de hardware
+
+- **ExitWasGraceful** - a fost elegantă ieșirea anterioară din aplicație?
+
 #### <a name="officeextensibilitycomaddinunhandledexception"></a>Office.Extensibility.COMAddinUnhandledException
 
 Eveniment generat atunci când se defectează programul de completare COM
@@ -4992,29 +5609,82 @@ Detalii globale: se utilizează pentru a calcula nivelul de pregătire global, s
 
 Se colectează următoarele câmpuri:
 
-**ScopeId** – domeniul firului curent
+- **ScopeId** – domeniul firului curent
 
-**Method** – metoda Office unde a apărut excepția
+- **Method** – metoda Office unde a apărut excepția
 
-**Interface** – interfața Office în care a apărut excepția
+- **Interface** – interfața Office în care a apărut excepția
 
-**AddinId** – ID-ul clasei programului de completare
+- **AddinId** – ID-ul clasei programului de completare
 
-**AddinProgId** – Identificator de program de completare
+- **AddinProgId** – Identificator de program de completare
 
-**AddinFriendlyName** – numele prietenos al programului de completare
+- **AddinFriendlyName** – numele prietenos al programului de completare
 
-**AddinTimeDateStamp** – marca de timp a programului de completare din metadatele DLL
+- **AddinTimeDateStamp** – marca de timp a programului de completare din metadatele DLL
 
-**AddinVersion** – versiunea programului de completare
+- **AddinVersion** – versiunea programului de completare
 
-**AddinFileName** – numele de fișier al programului de completare, exclusiv calea fișierului
+- **AddinFileName** – numele de fișier al programului de completare, exclusiv calea fișierului
 
-**VSTOAddIn** – dacă programul de completare este VSTO
+- **VSTOAddIn** – dacă programul de completare este VSTO
 
-**AddinConnectFlag** – comportamentul curent de încărcare
+- **AddinConnectFlag** – comportamentul curent de încărcare
 
-**LoadAttempts** – numărul de încercări pentru a încărca programul de completare
+- **LoadAttempts** – numărul de încercări pentru a încărca programul de completare
+
+#### <a name="officeextensibilitycomaddinunhandledexceptionenterprise"></a>Office.Extensibility.COMAddinUnhandledExceptionEnterprise
+
+Eveniment generat atunci când se defectează un program de completare COM.  Aceasta este utilizată ca numărător în calculul stării de funcționare specifice pentru întreprindere a programelor de completare, utilizată pentru a deduce în timpul programului pilot dacă programul de completare este „gata de upgrade” în cercul de producție.
+
+Următoarele câmpuri sunt colectate (rețineți că aceste câmpuri sunt scrise ca substituenți pentru a preveni defectarea scripturilor existente: AddinFriendlyName, AddinProgId, AddinVersion, AddinFileName)
+
+
+- **AddinConnectFlag** - comportamentul curent de încărcare
+
+- **AddinFileName** - câmp gol - perimat
+
+- **AddinFriendlyName** - câmp gol - perimat
+
+- **AddinId** - ID-ul clasei programului de completare
+
+- **AddinProgId** - câmp gol - perimat
+
+- **AddinTimeDateStamp** - marca de timp a programului de completare din metadatele DLL
+
+- **AddinVersion** - câmp gol - perimat
+
+- **Interface** - interfața Office în care a apărut excepția
+
+- **LoadAttempts** - numărul de încercări pentru a încărca programul de completare
+
+- **Method** - metoda Office unde a apărut excepția
+
+- **ScopeId** - domeniul firului curent
+
+- **VSTOAddIn** - dacă programul de completare este VSTO
+
+#### <a name="officeextensibilitysandboxodpactivationheartbeat"></a>Office.Extensibility.Sandbox.ODPActivationHeartbeat
+
+Programele de completare Office rulează într-un sandbox. Acest eveniment colectează informațiile despre mesajele repetate pentru activări. Atunci când un program de completare se blochează, acest eveniment colectează motivul pentru care s-a defectat în cazul în care are legătură cu sandbox-ul. Folosit pentru a investiga când comunică clienții problemele.
+ 
+Se colectează următoarele câmpuri:
+
+- **AppID** - ID-ul aplicației
+
+- **AppInfo** - date referitoare la tipul de program de completare (panou de activități sau UILess sau de conținut etc.) și la tipul de furnizor (Omen, SharePoint, sisteme de fișiere etc.)
+
+- **AppInstanceId** - ID-ul instanței aplicației 
+
+- **AssetId** - Asset ID-ul aplicației
+
+- **ErrorCode** - timp total 
+
+- **NumberOfAddinsActivated** - contor de programe de completare activate
+
+- **RemoterType** - specifică tipul de program la distanță (de încredere, neautorizat, Win32webView, de încredere UDF etc.) utilizat pentru a activa programul de completare
+
+- **StoreType** - origine a aplicației
 
 #### <a name="officeextensibilityvbatelemetrybreak"></a>Office.Extensibility.VbaTelemetryBreak
 
@@ -5024,13 +5694,24 @@ Analiză desktop: aceasta este utilizată ca numărător în calculul stării de
 
 Se colectează următoarele câmpuri:
 
-**TagId** – ID-ul etichetei de telemetrie
+- **TagId** – ID-ul etichetei de telemetrie
 
-**BreakReason** – motivul întreruperii (rulare, compilare, altă eroare)
+- **BreakReason** – motivul întreruperii (rulare, compilare, altă eroare)
 
-**SolutionType** – tipul soluției (document, șablon, program de completare pentru aplicație, program de completare COM)
+- **SolutionType** – tipul soluției (document, șablon, program de completare pentru aplicație, program de completare COM)
 
-**Data.ErrorCode** – codul de eroare raportat de motorul VBA
+- **Data.ErrorCode** – codul de eroare raportat de motorul VBA
+
+
+#### <a name="officefindtimeappfailedtostart"></a>Office.FindTime.AppFailedToStart
+
+Colectat atunci când aplicația nu reușește să pornească din cauza unei erori în timpul pornirii. Utilizat pentru a urmări excepții și căderi.  Ajută la monitorizarea și depanarea stării aplicației.
+
+Se colectează următoarele câmpuri: 
+
+- **DateTime** - marcă de timp privind momentul în care evenimentul este înregistrat în jurnal.
+
+- **EventName** - numele evenimentului conectat.
 
 #### <a name="officeoutlookdesktophangbucketmetrics"></a>Office.Outlook.Desktop.HangBucketMetrics
 
@@ -5220,6 +5901,52 @@ Se colectează următoarele câmpuri:
 
   - **ProgID** – identificator de program de completare
 
+#### <a name="officesystemsystemhealthungracefulappexitmacandios"></a>Office.System.SystemHealthUngracefulAppExitMacAndiOS
+
+Eveniment de inițializare care captează ieșirile neelegante din aplicație pentru investigații suplimentare.
+
+Se colectează următoarele câmpuri:
+
+- **AffectedProcessAppBuild** - numărul compilării
+
+- **AffectedProcessAppBuildRevision** - număr revizuire compilare
+
+- **AffectedProcessAppMajorVer** - numărul de versiune major al aplicației
+
+- **AffectedProcessAppMinorVer** - numărul de versiune minor al aplicației
+
+- **AffectedProcessAppName** - nume aplicație
+
+- **AffectedProcessResidentMemoryOnCrash** - memoria rezidentă a aplicației căzute
+
+- **AffectedProcessUnsymbolicatedChecksum** - merge cu codul hash al stivei pentru simbolizare
+
+- **AffectedProcessVirtualMemoryOnCrash** - memoria virtuală a aplicației căzute
+
+- **AffectedSessionDuration** - durata sesiunii în secunde înainte de cădere
+
+- **AffectedSessionLongBuildNumber** - număr de compilare lung
+
+- **CrashedProcessSessionID** - SessionID pentru proces la căderea aplicației
+
+- **DetectionTime** - DateTime pentru căderea aplicației
+    
+- **DeviceModel** - model de hardware
+
+- **MERPSessionID** - ID-ul sesiunii de MERP
+
+- **ReportingOsLocaleTag** - setări regionale ale sistemului de operare
+
+- **ReportingOSVerStr** - versiunea sistemului de operare
+
+- **SessionBuildNumber** - versiunea aplicației căzute
+
+- **SessionIDSMatch** - Boolean pentru a verifica dacă ID-ul sesiunii de raportare este la fel ca cel preluat de Merp
+
+- **SessionVersion** - versiunea aplicației căzute - **Stackhash** - codul hash pentru trasarea stivei aplicației căzute
+
+- **UAEType** - enum care oferă informații despre ce tip de cădere a fost
+
 #### <a name="officethisaddinstartupfailed"></a>Office.ThisAddIn.StartupFailed
 
 Colectează informațiile pentru excepția care apare la pornirea aplicației Data Streamer. Aceste date se utilizează pentru a monitoriza starea de funcționare a aplicației. Evenimentul este generat de Microsoft Data Streamer pentru programul de completare Excel.
@@ -5234,6 +5961,27 @@ Se colectează următoarele câmpuri:
 ### <a name="application-feature-performance-subtype"></a>*Subtipul de performanță al caracteristicii aplicației*
 
 Timpii de răspuns slabi sau performanțele scăzute pentru scenarii precum pornirea aplicației sau deschiderea unui fișier.
+
+#### <a name="officeextensibilityrichapimethodinvocation"></a>Office.Extensibility.RichApiMethodInvocation
+
+Atunci când clientul utilizează un program de completare Office și apelează Rich API pentru furnizarea serviciului, va fi declanșat acest eveniment. Utilizat pentru a măsura fiabilitatea serviciului, performanța și gradul de utilizare pentru invocarea metodelor Rich API.
+ 
+Se colectează următoarele câmpuri:
+
+- **Api** - nume complet API
+
+- **DispFlag** - o semnalizare bit care descrie tipul de apel de metodă (de exemplu: 0x1 = METHOD, 0x2 = PROPERTYGET, 0x4 = PROPERTYPUT, 0x8 = PROPERTYPUTREF)
+
+- **DispId** - ID-ul de expediție pentru metoda apelată
+
+- **HResult** - HResult pentru apelul de metodă
+
+- **Latency** - latența apelului, în microsecunde
+
+- **ReqId** - GUID pentru solicitarea de grup căreia îi aparține această metodă
+
+- **TypeId** - GUID pentru interfața pe care se apelează această metodă
+
 
 #### <a name="officemanageabilityserviceapplypolicy"></a>Office.Manageability.Service.ApplyPolicy
 
@@ -5273,6 +6021,29 @@ Se colectează următoarele câmpuri:
 
   - **ShowScanPstDlg** – mesajul de eroare afișat la verificarea reparării din depozit
 
+
+#### <a name="officeoutlookmacbootperf"></a>Office.Outlook.Mac.BootPerf
+
+Colectează timpul necesar pentru a inițializa Outlook. Timpul de inițializare Outlook este monitorizat activ pentru a detecta și a diagnostica regresiile. De asemenea, este utilizat pentru a diagnostica escaladările de la client și pentru a îmbunătăți performanța de inițializare în timp.
+
+Se colectează următoarele câmpuri:
+
+- **MacOLKBootPerfDuration** - timp total de încărcare
+
+- **MacOLKBootPerfID** - identificator pentru timpul de încărcare
+
+
+#### <a name="officeoutlookmacperformanceunresponsive"></a>Office.Outlook.Mac.PerformanceUnresponsive
+
+Utilizat pentru a identifica probleme care afectează utilizatorul în Outlook și care se pot manifesta prin degradarea performanței. 
+
+Se colectează următoarele câmpuri:
+
+- **Duration** - perioadă cu performanța degradată
+
+- **EventType** - tip de eveniment care se confruntă cu performanță degradată
+
+
 #### <a name="officeperformanceboot"></a>Office.Performance.Boot
 
 Colectat atunci când o aplicație Office este inițializată. Include dacă inițializarea a fost inițiată prin deschiderea unui fișier sau prin lansarea din meniul Start, dacă aceasta a fost prima inițializare a aplicației, cantitatea de memorie utilizată de aplicație și dacă a existat o interfață utilizator de blocare afișată utilizatorului. Utilizat pentru a măsura cât de repede se încarcă aplicațiile Office și cantitatea de memorie utilizată atunci când pornesc, pentru a vă asigura că există o experiență de utilizator acceptabilă.
@@ -5293,6 +6064,28 @@ Se colectează următoarele câmpuri:
 
   - **WorkingSetPeakMB** – cel mai mare volum de memorie în megabyți care a fost vreodată în setul de lucru al procesului până acum.
 
+#### <a name="officeuxofficeinsidershowofficeinsiderdlg"></a>Office.UX.OfficeInsider.ShowOfficeInsiderDlg
+
+Semnal critic care urmărește interacțiunea utilizatorului cu caseta de dialog Asociați-vă la Office Insider. Este utilizat pentru a identifica problemele cu efectuarea modificărilor inițiate de utilizator, precum asocierea la/părăsirea programului Office Insider și modificarea nivelului Office Insider.
+
+Se colectează următoarele câmpuri:
+
+- **Data_AcceptedContactMeNew** - indică dacă un utilizator a acceptat să fie contactat de către Microsoft pentru aderarea la programul Office Insider
+
+- **Data_InsiderLevel** - nivelul Insider la deschiderea casetei de dialog „Asociați-vă la Office Insider”
+
+- **Data_InsiderLevelNew** - nivelul Insider la închiderea casetei de dialog "Asociați-vă la Office Insider"
+
+- **Data_IsInternalUser** - indică dacă aplicația se execută sub acreditările unui cont Microsoft corporativ.
+
+- **Data_IsInternalUserInit** - indică dacă codul ar putea determina dacă aplicația se execută sub acreditările unui cont Microsoft corporativ.
+
+- **Data_OpenNewsletterWebpage** - indică dacă link-ul de abonare la newsletter-ul Office Insider a fost declanșat sub condiția ca utilizatorul să se fi alăturat programului Office Insider, caracteristica de abonare la newsletter este activată, iar utilizatorul nu a anulat deschiderea site-ului web Abonare newsletter Office Insider.
+    
+- **Data_RegisterInsider** - starea înregistrării Office Insider
+
+- **Data_RegisterInsiderHr** - codul rezultatului pentru înregistrarea în Office Insider
+
 #### <a name="officeuxofficeinsidercanshowofficeinsiderslab"></a>Office.UX.OfficeInsider.CanShowOfficeInsiderSlab
 
 Activitate prin care se urmărește dacă secțiunea Office Insider poate fi afișată utilizatorului de pe fila Cont din interfața cu utilizatorul Office Backstage.
@@ -5307,31 +6100,6 @@ Se colectează următoarele câmpuri:
 
   - **Data_Reason** – neutilizat
 
-#### <a name="officeuxofficeinsidershowofficeinsiderdlg"></a>Office.UX.OfficeInsider.ShowOfficeInsiderDlg
-
-Activitate prin care se urmărește utilizarea și performanța casetei de dialog Office Insider.
-
-Se colectează următoarele câmpuri:
-
-  - **Data_AcceptedContactMeNew** – atunci când optează pentru un nivel Insider și atunci când alegerea utilizatorului a fost înregistrată cu succes, indică dacă utilizatorul a acceptat să fie contactat de Microsoft.
-
-  - **Data_DialogChoice** = neutilizat
-  
-  - **Data_DialogId** = neutilizat
-  
-  - **Data_Event** – neutilizat
-  
-  - **Data_EventInfo** – neutilizat
-  
-  - **Data_InsiderLevel** – nivelul Insider când caseta de dialog este afișată pentru prima dată utilizatorului.
-  
-  - **Data_InsiderLevelNew** – nivelul nou Insider selectat de utilizator.
-  
-  - **Data_IsInternalUser** – indică dacă aplicația se execută sub acreditările unui cont @microsoft.com.
-  
-  - **Data_IsInternalUserInit** – indică dacă codul ar putea determina dacă aplicația se execută sub acreditările unui cont @microsoft.com.
-  
-  - **Data_OpenNewsletterWebpage** – atunci când este activată caracteristica de abonare la buletinul informativ Office Insider, iar utilizatorul comută la un nivel Insider din producție, indică dacă a fost declanșată navigarea în browser la linkul cu abonarea la buletinul informativ Office Insider.
 
 #### <a name="officevisiosharedvisiofilerender"></a>Office.Visio.Shared.VisioFileRender
 
@@ -5431,6 +6199,19 @@ Se colectează următoarele câmpuri:
 
   - **Data\_Timeout** – cât a durat blocarea
 
+#### <a name="officeextensibilitysandboxodperrornotification"></a>Office.Extensibility.Sandbox.ODPErrorNotification
+
+Urmărește diferitele notificări de erori primite de la sandbox. Se utilizează pentru a detecta scenariile de eroare în sandbox și acolo prin remedierea acestora, să se îmbunătățească productivitatea utilizatorului
+ 
+Se colectează următoarele câmpuri:
+
+- **AppId** - ID-ul aplicației
+
+- **AppUrl** - adresa URL a aplicației 
+
+- **Result** - cod de eroare rezultat
+
+
 #### <a name="officegraphicsarcexceptions"></a>Office.Graphics.ARCExceptions 
 
 Aceste informații de raportare a excepțiilor sunt importante pentru a evalua starea generală a stivei de elemente grafice și pentru a identifica părțile de cod în care apar erori cu o frecvență ridicată, pentru a stabili prioritatea investigațiilor. Aceste informații de raportare a excepțiilor sunt importante pentru a evalua starea generală a stivei de elemente grafice și pentru a identifica părțile de cod în care apar erori cu o frecvență ridicată. Acestea ajută inginerii să stabilească erorile de redare care afectează cei mai mulți utilizatori, permițându-ne să stabilim priorități pentru investigațiile noastre și să remediem problemele care vor aduce cele mai multe beneficii utilizatorilor.
@@ -5443,7 +6224,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_TagID** – identificatorul erorii care a apărut
 
-#### <a name="officeoutlookdesktopcalendaracceptcalsharenavigatetosharedfoldererror"></a>Office.Outlook.Desktop.Calendar.AcceptCalShareNavigateToSharedFolder\_Error
+#### <a name="officeoutlookdesktopcalendaracceptcalsharenavigatetosharedfolder_error"></a>Office.Outlook.Desktop.Calendar.AcceptCalShareNavigateToSharedFolder\_Error
 
 Colectează informații atunci când apare o eroare în timp ce se navighează la calendarul partajat. Aceste date se utilizează pentru a monitoriza starea API-ului de partajare a calendarelor și interacțiunea Outlook cu calendarele partajate.
 
@@ -5501,33 +6282,33 @@ Colectează reușitele și nereușitele acțiunilor Redirecționare, Redirecțio
 
 Se colectează următoarele câmpuri:
 
-  - **CountExceptionForward – numărul de excepții de întâlnire redirecționate**
+  - **CountExceptionForward** - numărul de excepții de întâlnire redirecționate
 
-  - **CountExceptionForwardAsiCal – numărul de excepții de întâlnire redirecționate ca iCal**
+  - **CountExceptionForwardAsiCal** - numărul de excepții de întâlnire redirecționate ca iCal
 
-  - **CountExceptionForwardInSplit – numărul de excepții de întâlnire redirecționate din meniul Scindare din panglică**
+  - **CountExceptionForwardInSplit** - numărul de excepții de întâlnire redirecționate din meniul Scindare din panglică
 
-  - **CountExceptionForwardWithAttach – numărul de excepții de întâlnire redirecționate ca atașare**
+  - **CountExceptionForwardWithAttach** - numărul de excepții de întâlnire redirecționate ca atașare
 
-  - **CountRecurringForward – numărul de întâlniri recurente redirecționate**
+  - **CountRecurringForward** - numărul de întâlniri recurente redirecționate
 
-  - **CountRecurringForwardAsiCal – numărul de întâlniri recurente redirecționate ca iCal**
+  - **CountRecurringForwardAsiCal** - numărul de întâlniri recurente redirecționate ca iCal
 
-  - **CountRecurringForwardInSplit** – numărul de întâlniri recurente redirecționate din meniul Scindare din panglică
+  - **CountRecurringForwardInSplit** - numărul de întâlniri recurente redirecționate din meniul Scindare din panglică
 
-  - **CountRecurringForwardWithAttach – numărul de întâlniri recurente redirecționate ca atașare**
+  - **CountRecurringForwardWithAttach** - numărul de întâlniri recurente redirecționate ca atașare
 
-  - **CountSingleForward – numărul de întâlniri unice redirecționate**
+  - **CountSingleForward** - numărul de întâlniri unice redirecționate
 
-  - **CountSingleForwardAsiCal – numărul de întâlniri unice redirecționate ca iCal**
+  - **CountSingleForwardAsiCal** - numărul de întâlniri unice redirecționate ca iCal
 
-  - **CountSingleForwardInSplit – numărul de întâlniri unice redirecționate din meniul Scindare din panglică**
+  - **CountSingleForwardInSplit** - numărul de întâlniri unice redirecționate din meniul Scindare din panglică
 
-  - **CountSingleForwardWithAttach – numărul de întâlniri unice redirecționate ca atașare**
+  - **CountSingleForwardWithAttach** - numărul de întâlniri unice redirecționate ca atașare
 
-  - **HResult – ErrorCode**
+  - **HResult** - ErrorCode
 
-  - **OlkViewName – indică vizualizarea Mail, Calendar sau Inspector**
+  - **OlkViewName** - indică vizualizarea Mail, Calendar sau Inspector
 
 #### <a name="officeoutlookdesktopoutlookcalendarusageerrmeetrcptreplyactionsruleo16"></a>Office.Outlook.Desktop.OutlookCalendarUsageErr.MeetRcpt.ReplyActions.Rule.O16
 
@@ -5535,33 +6316,33 @@ Colectează reușitele și nereușitele acțiunilor Răspuns, Răspuns tuturor, 
 
 Se colectează următoarele câmpuri:
 
-  - **CountExceptionReply – numărul de excepții de Răspuns la întâlnire**
+  - **CountExceptionReply** - numărul de excepții de Răspuns la întâlnire
 
-  - **CountExceptionReplyAll – numărul de excepții de Răspuns tuturor la întâlnire**
+  - **CountExceptionReplyAll** - numărul de excepții de Răspuns tuturor la întâlnire
 
-  - **CountExceptionReplyAllWithIM – numărul de excepții de Răspuns tuturor cu mesaj instantaneu la întâlnire**
+  - **CountExceptionReplyAllWithIM** - numărul de excepții de Răspuns tuturor cu mesaj instantaneu la întâlnire
 
-  - **CountExceptionReplyWithIM – numărul de excepții de Răspuns cu mesaj instantaneu la întâlnire**
+  - **CountExceptionReplyWithIM** - numărul de excepții de Răspuns cu mesaj instantaneu la întâlnire
 
-  - **CountRecurringReply – numărul de răspunsuri la întâlniri recurente**
+  - **CountRecurringReply** - numărul de răspunsuri la întâlniri recurente
 
-  - **CountRecurringReplyAll – numărul de răspunsuri de tip Răspuns tuturor la întâlniri recurente**
+  - **CountRecurringReplyAll** - numărul de răspunsuri de tip Răspuns tuturor la întâlniri recurente
 
-  - **CountRecurringReplyAllWithIM – numărul de răspunsuri tuturor cu mesaj instantaneu la întâlniri recurente**
+  - **CountRecurringReplyAllWithIM** - numărul de răspunsuri tuturor cu mesaj instantaneu la întâlniri recurente
 
-  - **CountRecurringReplyWithIM – numărul de răspunsuri cu mesaj instantaneu la întâlniri recurente**
+  - **CountRecurringReplyWithIM** - numărul de răspunsuri cu mesaj instantaneu la întâlniri recurente
 
-  - **CountSingleReply – numărul de răspunsuri la întâlniri unice**
+  - **CountSingleReply** - numărul de răspunsuri la întâlniri unice
 
-  - **CountSingleReplyAll – numărul de răspunsuri tuturor la întâlniri unice**
+  - **CountSingleReplyAll** - numărul de răspunsuri tuturor la întâlniri unice
 
-  - **CountSingleReplyAllWithIM – numărul de răspunsuri tuturor cu mesaj instantaneu la întâlniri unice**
+  - **CountSingleReplyAllWithIM** - numărul de răspunsuri tuturor cu mesaj instantaneu la întâlniri unice
 
-  - **CountSingleReplyWithIM – numărul de răspunsuri cu mesaj instantaneu la întâlniri unice**
+  - **CountSingleReplyWithIM** - numărul de răspunsuri cu mesaj instantaneu la întâlniri unice
 
-  - **HResult – ErrorCode**
+  - **HResult** - ErrorCode
 
-  - **OlkViewName – indică vizualizarea Mail, Calendar sau Inspector**
+  - **OlkViewName** - indică vizualizarea Mail, Calendar sau Inspector
 
 #### <a name="officeoutlookdesktopoutlookprivsdlgsingleuserloadfail"></a>Office.Outlook.Desktop.OutlookPrivsDlgSingleUser.LoadFail
 
@@ -5573,13 +6354,37 @@ Se colectează următoarele câmpuri:
 
   - **CountCreatePIMAccount** – de câte ori utilizatorul a creat un profil PIM
 
+#### <a name="officeoutlookmacmacolkasserts"></a>Office.Outlook.Mac.MacOLKAsserts
+
+Utilizat pentru a identifica probleme care afectează utilizatorul în Outlook și care se pot manifesta prin căderi sau prin degradarea funcționalității. 
+
+Se colectează următoarele câmpuri:
+
+- **Category** - tip de aserțiune
+
+- **CollectionTime** - momentul în care se colectează aserțiunea
+
+
+#### <a name="officeoutlookmacmacolkerrors"></a>Office.Outlook.Mac.MacOLKErrors
+
+Utilizat pentru a identifica probleme care afectează utilizatorul în Outlook și care se pot manifesta prin căderi sau prin degradarea funcționalității. 
+
+Se colectează următoarele câmpuri:
+
+- **Category** - tip de eroare
+
+- **CollectionTime** - momentul în care se colectează eroarea
+
+- **ThreadID** - identificator pentru fir
+
+
 #### <a name="officesystemsystemhealthasserts"></a>Office.System.SystemHealthAsserts
 
 Erorile pe care le identifică acest eveniment ne ajută să înțelegem când experiența clienților se degradează. Multe dintre aceste ShipAsserts duc la căderi, iar aceste informații ne ajută să le remediem. Colectează ShipAsserts din cadrul produsului, pentru a identifica erorile.
 
 Se colectează următoarele câmpuri:
 
-Count – numărul fiecărei aserțiuni raportate
+ - **Count** – numărul fiecărei aserțiuni raportate
 
   - **EndTime** – ora la care a apărut ultima aserțiune raportată
 
