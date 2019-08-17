@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorii Office au parte de o prezentare generală a controalelor de confidențialitate pentru Office 365 ProPlus, inclusiv pentru date de diagnosticare și experiențe conectate.
 hideEdit: true
-ms.openlocfilehash: a362a50b3d75e0792623745ef32fb93b4e458a41
-ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
+ms.openlocfilehash: ab024c4ce2eb4d81809880b607e084932658be3c
+ms.sourcegitcommit: 3f2319ff2f8fcde87ae5ffefa3b956a8239c4aed
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/07/2019
-ms.locfileid: "36238942"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "36441612"
 ---
 # <a name="overview-of-privacy-controls-for-office-365-proplus"></a>Prezentare generală a controalelor de confidențialitate pentru Office 365 ProPlus
 
@@ -65,7 +65,8 @@ Utilizatorii dvs. nu vor putea să aleagă nivelul datelor de diagnosticare pent
 Aceste date diagnosticare nu includ numele utilizatorilor, adresele lor de e-mail sau conținutul fișierelor lor Office. Sistemul nostru creează un ID unic, care se asociază cu datele de diagnosticare ale utilizatorului. Atunci când primim date de diagnosticare care arată că una dintre aplicațiile noastre s-au defectat de 100 de ori, acest ID unic ne permite să stabilim dacă un singur utilizator a fost afectat de 100 ori sau dacă 100 de utilizatori diferiți au fost afectați o singură dată. Nu utilizăm acest ID unic pentru a identifica un anumit utilizator.
 
 Pentru a vedea ce date de diagnosticare sunt trimise la Microsoft, puteți utiliza Vizualizatorul de date de diagnosticare, pe care îl puteți descărca și instala din Microsoft Store, gratuit.
-7 Pentru mai multe informații, consultați următoarele:
+
+Pentru mai multe informații, consultați următoarele:
 
 - [Date de diagnosticare obligatorii pentru Office](required-diagnostic-data.md)
 - [Date de diagnosticare opționale pentru Office](optional-diagnostic-data.md)
