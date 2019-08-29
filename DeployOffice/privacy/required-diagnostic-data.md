@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre datele de diagnosticare obligatorii în Office și le furnizează o listă de evenimente și câmpuri de date.
 hideEdit: true
-ms.openlocfilehash: e6078bf96c60d0f01aeaea0cabe32f135a8fa1a3
-ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
+ms.openlocfilehash: 6a03f23d77aef8f2c8f6548cf462a33194d8a4aa
+ms.sourcegitcommit: a47876f7500d1ae0270f35ee79da8ab32e57ae3a
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/07/2019
-ms.locfileid: "36238909"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "36656130"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Date de diagnosticare obligatorii pentru Office
 
@@ -954,27 +954,19 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeprogrammabilityadd-insinternalsetconnectenterprise"></a>Office.Programmability.Add-ins.InternalSetConnectEnterprise
 
-Eveniment generat atunci când un program de completare COM este încărcat pe un dispozitiv de întreprindere. Analiză desktop: \# de încărcări este utilizat ca numitor pentru calcularea stării (\# de căderi/\# de încărcări) pentru calculul măsurătorilor de stare pentru cercuri pilot și de producție în scenarii pentru întreprinderi. Aceasta solicită ca datele să fie precise, nu eșantionate întrucât numărul de dispozitive este mai mic (100-1000).
+Eveniment generat atunci când un program de completare COM este încărcat pe un dispozitiv de întreprindere. 
 
 Se colectează următoarele câmpuri:
 
+  - **Rezultatul activității** - starea de succes a conexiunii
+
   - **Add-inconnectFlag** - comportamentul curent de încărcare
-
-  - **Add-inDescription** - descrierea programului de completare
-
-  - **Add-inFileName** - numele de fișier al programului de completare, exclusiv calea fișierului
-
-  - **Add-inFriendlyName** - numele prietenos al programului de completare
 
   - **Add-inId** - ID-ul clasei programului de completare
 
-  - **Add-inProgId** - ID-ul programului de completare
-
-  - **Add-inProvider** - furnizorul programului de completare
-
   - **Add-inTimeDateStamp** - marca de timp a programului de completare din metadatele DLL
 
-  - **Add-inVersion** - versiunea programului de completare
+  - **IsBootInProgress** - dacă aplicația Office se află în procesul de pornire
 
 #### <a name="officevisiovisioaddonload"></a>Office.Visio.Visio.AddonLoad
 
@@ -3016,13 +3008,11 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officepowerpointpptmacshellprintinfo"></a>Office.PowerPoint.PPT.Mac.Shell.PrintInfo
 
-Colectată de fiecare dată când o operațiune de imprimare PDF sau de export PDF s-a finalizat și conține informații despre tipul de aspect, precum și despre succesul operațiunii. Aceste informații sunt esențiale pentru a identifica succesul operațiunilor de imprimare PDF și export PDF pentru aplicația noastră.
+Colectată de fiecare dată când o operațiune de export PDF s-a finalizat și conține informații despre succesul operațiunii. Aceste informații sunt esențiale pentru a identifica succesul operațiunilor de export PDF pentru aplicația noastră.
 
 Se colectează următoarele câmpuri:
 
 - **Data_ExportAsPDFSucceed** - Boolean care indică dacă exportul ca PDF a fost un succes.
-
-- **Data_SavePrintLayoutType** - tipul de aspect pagină imprimată la momentul începerii operațiunii de imprimare sau de export.
 
 
 #### <a name="officepowerpointpptsharedslideshowfailure"></a>Office.PowerPoint.PPT.Shared.SlideShow.Failure
@@ -5602,10 +5592,9 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeextensibilitycomaddinunhandledexception"></a>Office.Extensibility.COMAddinUnhandledException
 
-Eveniment generat atunci când se defectează programul de completare COM
+Eveniment generat când cade programul de completare COM pe o versiune de aplicații de Office pentru consumatori. 
 
-Analiză desktop: aceasta este utilizată ca numărător în calculul stării de funcționare specifice pentru întreprindere a programelor de completare, utilizată pentru a deduce în timpul programului pilot dacă programul de completare este „gata de upgrade” în cercul de producție.  
-Detalii globale: se utilizează pentru a calcula nivelul de pregătire global, specific întreprinderii, pentru un program de completare care este apoi publicat pe readyforwindows.com și alte instrumente, cum ar fi Readiness Toolkit
+Utilizare: se utilizează pentru a calcula „adoptarea” globală, care nu ține de întreprindere a Office 365 ProPlus, pentru un program de completare care este apoi publicat pe readyforwindows.com și alte instrumente, cum ar fi Readiness Toolkit. Acest lucru le permite clienților întreprindere să valideze dacă programele de completare pe care le-au implementat în organizațiile lor sunt compatibile cu cele mai recente versiuni de Office 365 ProPlus și își planifică upgrade-urile în consecință. 
 
 Se colectează următoarele câmpuri:
 
@@ -5617,15 +5606,15 @@ Se colectează următoarele câmpuri:
 
 - **AddinId** – ID-ul clasei programului de completare
 
-- **AddinProgId** – Identificator de program de completare
+- **AddinProgId** - perimat
 
-- **AddinFriendlyName** – numele prietenos al programului de completare
+- **AddinFriendlyName** - perimat
 
 - **AddinTimeDateStamp** – marca de timp a programului de completare din metadatele DLL
 
-- **AddinVersion** – versiunea programului de completare
+- **AddinVersion** - perimat
 
-- **AddinFileName** – numele de fișier al programului de completare, exclusiv calea fișierului
+- **AddinFileName** - perimat
 
 - **VSTOAddIn** – dacă programul de completare este VSTO
 
@@ -5635,34 +5624,33 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeextensibilitycomaddinunhandledexceptionenterprise"></a>Office.Extensibility.COMAddinUnhandledExceptionEnterprise
 
-Eveniment generat atunci când se defectează un program de completare COM.  Aceasta este utilizată ca numărător în calculul stării de funcționare specifice pentru întreprindere a programelor de completare, utilizată pentru a deduce în timpul programului pilot dacă programul de completare este „gata de upgrade” în cercul de producție.
+Eveniment generat când cade programul de completare COM pe o versiune de aplicații Office Enterprise.
 
-Următoarele câmpuri sunt colectate (rețineți că aceste câmpuri sunt scrise ca substituenți pentru a preveni defectarea scripturilor existente: AddinFriendlyName, AddinProgId, AddinVersion, AddinFileName)
+Utilizare: se utilizează pentru a calcula „adoptarea” globală, care nu ține de întreprindere a Office 365 ProPlus, pentru un program de completare care este apoi publicat pe readyforwindows.com și alte instrumente, cum ar fi Readiness Toolkit. Acest lucru le permite clienților întreprindere să valideze dacă programele de completare pe care le-au implementat în organizațiile lor sunt compatibile cu cele mai recente versiuni de Office 365 ProPlus și își planifică upgrade-urile în consecință. 
 
+- **ScopeId** – domeniul firului curent
 
-- **AddinConnectFlag** - comportamentul curent de încărcare
+- **Method** – metoda Office unde a apărut excepția
 
-- **AddinFileName** - câmp gol - perimat
+- **Interface** – interfața Office în care a apărut excepția
 
-- **AddinFriendlyName** - câmp gol - perimat
+- **AddinId** – ID-ul clasei programului de completare
 
-- **AddinId** - ID-ul clasei programului de completare
+- **AddinProgId** - perimat
 
-- **AddinProgId** - câmp gol - perimat
+- **AddinFriendlyName** - perimat
 
-- **AddinTimeDateStamp** - marca de timp a programului de completare din metadatele DLL
+- **AddinTimeDateStamp** – marca de timp a programului de completare din metadatele DLL
 
-- **AddinVersion** - câmp gol - perimat
+- **AddinVersion** - perimat
 
-- **Interface** - interfața Office în care a apărut excepția
+- **AddinFileName** - perimat
 
-- **LoadAttempts** - numărul de încercări pentru a încărca programul de completare
+- **VSTOAddIn** – dacă programul de completare este VSTO
 
-- **Method** - metoda Office unde a apărut excepția
+- **AddinConnectFlag** – comportamentul curent de încărcare
 
-- **ScopeId** - domeniul firului curent
-
-- **VSTOAddIn** - dacă programul de completare este VSTO
+- **LoadAttempts** – numărul de încercări pentru a încărca programul de completare
 
 #### <a name="officeextensibilitysandboxodpactivationheartbeat"></a>Office.Extensibility.Sandbox.ODPActivationHeartbeat
 
@@ -6051,6 +6039,10 @@ Colectat atunci când o aplicație Office este inițializată. Include dacă ini
 Se colectează următoarele câmpuri:
 
   - **ActivationKind** - dacă aplicația a fost pornită prin lansare din meniul Start, prin deschiderea unui fișier sau prin automatizare OLE.
+  
+  - **BootToStart** - dacă utilizatorul a ales să afișeze ecranul de start când începe această aplicație.
+
+  - **DocLocation** -când se deschide un document arată ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint etc.)
 
   - **FirstBoot** – dacă aceasta a fost prima inițializare a aplicației.
 
@@ -6063,6 +6055,36 @@ Se colectează următoarele câmpuri:
   - **VirtualSetMB** – volumul de memorie în megabyți din setul virtual al procesului. (Numai MacOS/iOS)
 
   - **WorkingSetPeakMB** – cel mai mare volum de memorie în megabyți care a fost vreodată în setul de lucru al procesului până acum.
+
+#### <a name="officeuxofficeinsidercanshowofficeinsiderslab"></a>Office.UX.OfficeInsider.CanShowOfficeInsiderSlab
+
+Activitate prin care se urmărește dacă secțiunea Office Insider poate fi afișată utilizatorului de pe fila Cont din interfața cu utilizatorul Office Backstage.
+
+Se colectează următoarele câmpuri:
+
+  - **Data_CanShow** – indică dacă secțiunea Office Insider poate fi afișată utilizatorului de pe fila Cont din interfața cu utilizatorul Office Backstage.
+  
+  - **Data_Event** – neutilizat
+
+  - **Data_EventInfo** – neutilizat
+
+  - **Data_Reason** - neutilizat
+ 
+
+#### <a name="officeuxofficeinsiderregistercurrentinsider"></a>Office.UX.OfficeInsider.RegisterCurrentInsider
+
+Semnal critic pentru urmărirea succesului sau eșecului înregistrării utilizatorilor care utilizează compilări Office Insider și nu au fost înregistrați anterior ca utilizatori Office Insider. Scenariul principal aici sunt utilizatorii Office Insider actuali care s-au alăturat programului Office Insider înainte ca înregistrarea utilizatorilor Office Insider să fie adăugată.
+
+Se colectează următoarele câmpuri:
+
+- **Data_RegisterInsider** - starea înregistrării Office Insider
+
+- **Data_RegisterInsiderHr** - codul rezultatului pentru înregistrarea în Office Insider
+
+- **Data_RegistrationStateCurrent** - starea curentă a înregistrării
+
+- **Data_RegistrationStateDesired** - starea înregistrării solicitate
+
 
 #### <a name="officeuxofficeinsidershowofficeinsiderdlg"></a>Office.UX.OfficeInsider.ShowOfficeInsiderDlg
 
@@ -6086,19 +6108,11 @@ Se colectează următoarele câmpuri:
 
 - **Data_RegisterInsiderHr** - codul rezultatului pentru înregistrarea în Office Insider
 
-#### <a name="officeuxofficeinsidercanshowofficeinsiderslab"></a>Office.UX.OfficeInsider.CanShowOfficeInsiderSlab
+- **Data_RegistrationStateCurrent** - starea curentă a înregistrării
 
-Activitate prin care se urmărește dacă secțiunea Office Insider poate fi afișată utilizatorului de pe fila Cont din interfața cu utilizatorul Office Backstage.
+- **Data_RegistrationStateDesired** - starea înregistrării solicitate
 
-Se colectează următoarele câmpuri:
 
-  - **Data_CanShow** – indică dacă secțiunea Office Insider poate fi afișată utilizatorului de pe fila Cont din interfața cu utilizatorul Office Backstage.
-  
-  - **Data_Event** – neutilizat
-
-  - **Data_EventInfo** – neutilizat
-
-  - **Data_Reason** – neutilizat
 
 
 #### <a name="officevisiosharedvisiofilerender"></a>Office.Visio.Shared.VisioFileRender

@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre servicii esențiale în Office, cum ar fi Clic și Pornire și Licențiere, și asigură o listă de evenimente și câmpuri de date pentru aceste servicii esențiale.
 hideEdit: true
-ms.openlocfilehash: 3931f44787008e076807fe59746bccf015452ac3
-ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
+ms.openlocfilehash: 785cd7f3e881d61be0ee3ee72924efb695e2f5a7
+ms.sourcegitcommit: a47876f7500d1ae0270f35ee79da8ab32e57ae3a
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/07/2019
-ms.locfileid: "36239183"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "36656202"
 ---
 # <a name="essential-services-for-office"></a>Servicii esențiale pentru Office
 
@@ -10504,8 +10504,6 @@ Se colectează următoarele câmpuri:
 
   - **sysVolSizeMB -** spațiul disponibil din volumul sistemului în MB.
 
-<!-- end list -->
-
   - **WindowsErrorReportingMachineId** - identificator computer atribuit Tehnologie Windows de raportare a erorilor al dispozitivului pe care rulează Office.
 
   - **WindowsSqmMachineId** - identificator computer atribuit Windows al dispozitivului pe care rulează Office.
@@ -11163,6 +11161,12 @@ Se colectează următoarele câmpuri:
   - **ErrorMessage** - mesaj de eroare de analizare 
 
   - **NodeName** - nodul care nu a reușit să analizeze
+
+### <a name="officetelemetrydynamicconfigpopulatedrequestignored"></a>Office.Telemetry.DynamicConfig.PopulatedRequestIgnored
+
+Acest eveniment este generat atunci când nu reușim să configurăm canalul de configurare a telemetriei.
+
+Acest eveniment nu colectează niciun câmp.
 
 ### <a name="officetelemetrydynamicconfigpopulatetreecalledagain"></a>Office.Telemetry.DynamicConfig.PopulateTreeCalledAgain
 
