@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorii Office au parte de o prezentare generală a controalelor de confidențialitate pentru Office 365 ProPlus, inclusiv pentru date de diagnosticare și experiențe conectate.
 hideEdit: true
-ms.openlocfilehash: ab024c4ce2eb4d81809880b607e084932658be3c
-ms.sourcegitcommit: 3f2319ff2f8fcde87ae5ffefa3b956a8239c4aed
+ms.openlocfilehash: 329d3de3fd4ff20518a8a49f01d7c5bfcd75342b
+ms.sourcegitcommit: de39739d7ab82666ff1389be360d74c518ae97f6
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "36441612"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "36980361"
 ---
 # <a name="overview-of-privacy-controls-for-office-365-proplus"></a>Prezentare generală a controalelor de confidențialitate pentru Office 365 ProPlus
 
@@ -36,9 +36,10 @@ Ca parte a acestor modificări, există elemente de interfață de utilizator (U
 > - Aceste modificări se aplică la Access, Excel, OneNote, Outlook, PowerPoint, Publisher și Word.
 > - Aceste modificări se aplică și pentru următoarele:
 >   - Versiunea 16.28 sau la versiunile mai recente ale următoarelor aplicații Office pentru Mac: Excel, Outlook, OneNote, PowerPoint și Word.
->   - Versiunea 1904 sau laversiunile mai recente ale versiunilor desktop de Project și Visio care sunt oferite cu anumite planuri de abonament, cum ar fi planul Project Online Professional sau Visio Online Plan 2.
-> - Controalele de confidențialitate lansate în versiunea 1904 se așteaptă să fie disponibile în canal semianual (audiență specifică) în septembrie 2019 și în canal semianual în ianuarie 2020.
-> - Vom extinde aceste controale de confidențialitate noi și îmbunătățite pentru clienții Office suplimentari, inclusiv Teams și aplicațiile noastre mobile. Vom oferi mai multe informații despre aceste modificări în lunile următoare. Vom continua să ascultăm cu atenție feedbackul dvs. și să facem îmbunătățiri pentru toți clienții Office 365 și toate serviciile.
+>   - Versiunea 1904 sau versiunile mai recente ale versiunilor desktop de Project și Visio care sunt oferite cu anumite planuri de abonament, cum ar fi planul Project Online Professional sau Visio Online Plan 2.
+> - Aceste controale de confidențialitate sunt incluse în Versiunea 1908 a Canalului semianual (audiență specifică), care a fost lansată pe 10 septembrie 2019. Acestea vor fi disponibile în Canalul semianual în ianuarie 2020.
+> - Aceste controale de confidențialitate sunt planificate să fie disponibile în a doua jumătate a lunii octombrie 2019 pentru versiunile iOS de Excel, OneNote, PowerPoint, Visio și Word. Vom oferi mai multe informații la începutul lunii octombrie.
+> - Vom extinde aceste controale de confidențialitate noi și îmbunătățite la clienți Office suplimentari, inclusiv pentru Teams și aplicațiile noastre mobile. Vom oferi mai multe informații despre aceste modificări în lunile următoare. Vom continua să ascultăm cu atenție feedbackul dvs. și să facem îmbunătățiri pentru toți clienții Office 365 și toate serviciile.
 
 ## <a name="diagnostic-data-sent-from-office-365-proplus-to-microsoft"></a>Datele de diagnosticare trimise din Office 365 ProPlus la Microsoft
 
