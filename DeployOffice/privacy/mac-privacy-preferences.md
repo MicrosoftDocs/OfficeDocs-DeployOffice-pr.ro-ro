@@ -29,7 +29,7 @@ ms.locfileid: "36246314"
 
 - ***Experiențe conectate*** care utilizează funcționalitatea în cloud pentru a vă furniza caracteristici îmbunătățite de Office dvs. și utilizatorilor dvs.
 
-În plus, există o nouă setare de preferințe corelată cu o casetă de dialog **Notificare de date necesare** pentru Microsoft actualizare automată (MAU).
+În plus, există o nouă setare de preferințe corelată cu o casetă de dialog **Notificare de date necesare** pentru Microsoft AutoUpdate (MAU).
 
 Pentru mai multe informații despre datele de diagnosticare și experiențele conectate, consultați [Prezentare generală a controalelor de confidențialitate](overview-privacy-controls.md).
 
@@ -38,24 +38,24 @@ Pentru mai multe informații despre datele de diagnosticare și experiențele co
 
 ## <a name="setting-preferences"></a>Setarea preferințelor
 
-Aceste noi setări de preferințe sunt CFPreferences API compatibile și pot fi setate utilizând `defaults`comanda din terminal sau impuse printr-un profil de configurare sau un server de gestionare a dispozitivelor mobile (MDM). Atunci când sunt impuse preferințele, utilizatorul nu poate modifica valorile și toate controalele din aplicație vor apărea dezactivate.
+Aceste noi setări de preferințe sunt compatibile cu API-ul CFPreferences și pot fi setate utilizând comanda `defaults` în terminal sau impuse printr-un profil de configurare sau un server de management al dispozitivelor mobile (MDM). Atunci când sunt impuse preferințele, utilizatorul nu poate modifica valorile și toate controalele din aplicație vor apărea dezactivate.
 
 ## <a name="preference-setting-for-diagnostic-data"></a>Setarea de preferințe pentru datele de diagnosticare 
 
-Datele de diagnosticare sunt utilizate pentru a menține Office securizat și actualizat, pentru a detecta, a diagnostica și a remedia problemele și, de asemenea, pentru a face îmbunătățiri de produs. Pentru mai multe informații, consultați [Datele de diagnosticare trimise din Office 365 ProPlus la Microsoft](overview-privacy-controls.md#diagnostic-data-sent-from-office-365-proplus-to-microsoft).
+Datele de diagnosticare sunt utilizate pentru a menține Office securizat și actualizat, pentru a detecta, a diagnostica și a remedia problemele și, de asemenea, pentru a face îmbunătățiri ale produselor. Pentru mai multe informații, consultați [Datele de diagnosticare trimise din Office 365 ProPlus la Microsoft](overview-privacy-controls.md#diagnostic-data-sent-from-office-365-proplus-to-microsoft).
 
 |||
 |:-----|:-----|
 |**Domeniu de preferințe**  | `com.microsoft.office` |
-|**Tastă**  | `DiagnosticDataTypePreference`  |
+|**Cheie**  | `DiagnosticDataTypePreference`  |
 |**Tip de date**  | Șir |
-|**Valori posibile**  | `BasicDiagnosticData` *(acest lucru setează nivelul la Necesar)* <br/> `FullDiagnosticData` *(acest lucru setează nivelul la Opțional)* <br/> `ZeroDiagnosticData` *(acest lucru setează nivelul la Niciuna)* |
+|**Valori posibile**  | `BasicDiagnosticData` *(setează nivelul la Necesare)* <br/> `FullDiagnosticData` *(setează nivelul la Opționale)* <br/> `ZeroDiagnosticData` *(setează nivelul la Niciuna)* |
 |**Disponibilitate** |16.28 și versiuni mai recente |
 
 > [!NOTE]
 > Dacă setați această preferință, se va aplica și pentru următoarele produse:
 > - Versiunea 1.00.217856 și versiuni mai recente ale Teams pentru Mac
-> - Versiunea 16.28 și versiunile ulterioare Skype for Business pentru Mac
+> - Versiunea 16.28 și versiuni mai recente ale Skype for Business pentru Mac
 
 Dacă nu setați această preferință, sunt trimise atât date de diagnostic opționale, cât și necesare către Microsoft, dacă utilizatorii cu un abonament Office 365 sunt conectați cu un cont de la locul de muncă sau de la școală sau dacă utilizatorii au o versiune cu licență în volum de Office 2019 pentru Mac. De asemenea, acești utilizatori nu pot modifica nivelul de date de diagnostic, indiferent de modul în care setați această preferință.
 
@@ -68,7 +68,7 @@ Experiențele conectate care vă analizează conținutul sunt experiențe care u
 |||
 |:-----|:-----|
 |**Domeniu de preferințe**  | `com.microsoft.office` |
-|**Tastă**  | `OfficeExperiencesAnalyzingContentPreference`  |
+|**Cheie**  | `OfficeExperiencesAnalyzingContentPreference`  |
 |**Tip de date**  | Boolean |
 |**Valori posibile**  | `TRUE` *(activat)* <br/> `FALSE` *(dezactivat)*|
 |**Disponibilitate** |16.28 și versiuni mai recente |
@@ -86,7 +86,7 @@ Experiențele conectate care descarcă conținut online sunt experiențe care v�
 |||
 |:-----|:-----|
 |**Domeniu de preferințe**  | `com.microsoft.office` |
-|**Tastă**  | `OfficeExperiencesDownloadingContentPreference`  |
+|**Cheie**  | `OfficeExperiencesDownloadingContentPreference`  |
 |**Tip de date**  | Boolean |
 |**Valori posibile**  | `TRUE` *(activat)* <br/> `FALSE` *(dezactivat)*|
 |**Disponibilitate** |16.28 și versiuni mai recente |
@@ -104,14 +104,14 @@ Pentru alți utilizatori, cum ar fi utilizatori casnici cu un abonament Office 3
 |||
 |:-----|:-----|
 |**Domeniu de preferințe**  | `com.microsoft.office` |
-|**Tastă**  | `OptionalConnectedExperiencesPreference`  |
+|**Cheie**  | `OptionalConnectedExperiencesPreference`  |
 |**Tip de date**  | Boolean |
 |**Valori posibile**  | `TRUE` *(activat)* <br/> `FALSE` *(dezactivat)*|
 |**Disponibilitate** |16.28 și versiuni mai recente |
 
-Dacă nu setați această preferință, date de diagnostic opționale și necesare sunt disponibile utilizatorilor cu un abonament Office 365 care sunt conectați cu un cont de la locul de muncă sau de la școală sau dacă utilizatorii au o versiune cu licență în volum de Office 2019 pentru Mac. Cu excepția cazului în care ați setat această preferință la,`FALSE` acești utilizatori pot alege să dezactiveze experiențe conectate opționale accesând **Preferințe** > **Confidențialitate**.
+Dacă nu setați această preferință, date de diagnostic opționale și necesare sunt disponibile utilizatorilor cu un abonament Office 365 care sunt conectați cu un cont de la locul de muncă sau de la școală sau dacă utilizatorii au o versiune cu licență în volum de Office 2019 pentru Mac. Cu excepția cazului în care ați setat această preferință la `FALSE`, acești utilizatori pot alege să dezactiveze experiențele conectate opționale accesând **Preferințe** > **Confidențialitate**.
 
-Pentru alți utilizatori, cum ar fi utilizatori casnici cu un abonament Office 365, nu există o opțiune de a dezactiva experiențe conectate opționale.
+Pentru alți utilizatori, cum ar fi utilizatori casnici cu un abonament Office 365, nu există o opțiune de a dezactiva experiențele conectate opționale.
 
 ## <a name="preference-setting-for-most-connected-experiences"></a>Setarea preferințelor pentru majoritatea experiențelor conectate
 
@@ -120,45 +120,45 @@ Puteți utiliza această preferință pentru a controla dacă majoritatea experi
 |||
 |:-----|:-----|
 |**Domeniu de preferințe**  | `com.microsoft.office` |
-|**Tastă**  | `ConnectedOfficeExperiencesPreference`  |
+|**Cheie**  | `ConnectedOfficeExperiencesPreference`  |
 |**Tip de date**  | Boolean |
 |**Valori posibile**  | `TRUE` *(activat)* <br/> `FALSE` *(dezactivat)*|
 |**Disponibilitate** |16.28 și versiuni mai recente |
 
 Dacă nu setați această preferință, toate experiențele conectate sunt disponibile pentru utilizatorii dvs., cu excepția cazului în care ați stabilit una dintre celelalte preferințe pentru experiențele conectate menționate anterior, cum ar fi `OfficeExperiencesAnalyzingContentPreference`.
 
-De exemplu, dacă setați această preferință la`FALSE`, următoarele tipuri de experiențe conectate nu vor fi disponibile pentru utilizatorii dvs.:
+De exemplu, dacă setați această preferință la `FALSE`, următoarele tipuri de experiențe conectate nu vor fi disponibile pentru utilizatorii dvs.:
 - Experiențe care analizează conținut
 - Experiențe care descarcă conținut online
 - Experiențe conectate opționale
 
 În plus, dacă setați această preferință la `FALSE`, majoritatea altor experiențe conectate sunt, de asemenea, dezactivate, cum ar fi elaborarea în comun și stocarea online. Pentru lista acestor experiențe conectate, consultați [Experiențe conectate în Office](connected-experiences.md).
 
-Dar chiar dacă setați această preferință la `FALSE`, funcționalitatea Office limitată va rămâne disponibilă, cum ar fi sincronizarea unei cutii poștale în Outlook, Teams și Skype for Business vor continua să funcționeze. [Servicii esențiale](essential-services.md), cum ar fi serviciul de licențiere care confirmă că aveți licență corectă pentru a utiliza Office, vor rămâne, de asemenea, disponibile.
+Dar chiar dacă setați această preferință la `FALSE`, funcționalitățile Office limitate vor rămâne disponibile, cum ar fi sincronizarea unei cutii poștale în Outlook, Teams și Skype for Business vor continua să funcționeze. [Serviciile esențiale](essential-services.md), cum ar fi serviciul de licențiere care confirmă că aveți licență corectă pentru a utiliza Office, vor rămâne, de asemenea, disponibile.
 
 Dacă utilizatorul are un abonament Office 365 și este conectat cu un cont de la locul de muncă sau de la școală sau dacă utilizatorul are o versiune cu licență în volum de Office 2019 pentru Mac, atunci utilizatorul nu poate dezactiva majoritatea experiențelor conectate.
 
-Pentru alți utilizatori, cum ar fi utilizatori casnici cu un abonament Office 365, utilizatorul poate alege să dezactiveze experiențe conectate accesând **Preferințe** > **Confidențialitate**.
+Pentru alți utilizatori, cum ar fi utilizatori casnici cu un abonament Office 365, utilizatorul poate alege să dezactiveze experiențele conectate accesând **Preferințe** > **Confidențialitate**.
 
-## <a name="preference-setting-for-the-required-data-notice-dialog-for-microsoft-autoupdate"></a>Setarea preferințelor pentru caseta de dialog notificare de date necesară pentru Microsoft actualizare automată
+## <a name="preference-setting-for-the-required-data-notice-dialog-for-microsoft-autoupdate"></a>Setarea preferințelor pentru caseta de dialog notificare de date necesară pentru Microsoft AutoUpdate
 
-Prima dată când este lansată versiunea 4.12 sau o versiune mai recentă de Microsoft actualizare automată (MAU), utilizatorii vor vedea un **Dialog de notificare **a datelor necesare, care le furnizează informații despre care date sunt trimise către Microsoft de către MAU.
+Prima dată când este lansată versiunea 4.12 sau o versiune mai recentă de Microsoft AutoUpdate (MAU), utilizatorii vor vedea un dialog **Notificare despre datele necesare**, care le furnizează informații despre care date din MAU sunt trimise către Microsoft.
 
-Dacă nu doriți ca utilizatorii dvs. să vadă această casetă de **Dialog notificare de date necesară** pentru Microsoft actualizare automată, puteți seta următoarea preferință. Indiferent de valoarea pe care ați setat-o, caseta de dialog nu va fi afișată pentru utilizatorii dvs.
+Dacă nu doriți ca utilizatorii dvs. să vadă această casetă de dialog **Notificare despre datele necesare** pentru Microsoft AutoUpdate, puteți seta următoarea preferință. Indiferent de valoarea pe care ați setat-o, caseta de dialog nu va fi afișată pentru utilizatorii dvs.
 
 |||
 |:-----|:-----|
 |**Domeniu de preferințe**  | `com.microsoft.autoupdate2` |
-|**Tastă**  | `AcknowledgedDataCollectionPolicy`  |
+|**Cheie**  | `AcknowledgedDataCollectionPolicy`  |
 |**Tip de date**  | Șir |
 |**Valori posibile**  | `RequiredDataOnly` <br/> `RequiredAndOptionalData`|
 |**Disponibilitate** |4.12 și versiuni mai recente |
 
-Dacă le permiteți utilizatorilor să vadă această casetă de dialog, atunci când utilizatorul alege **OK**, valoarea`RequiredDataOnly` este scrisă în`AcknowledgedDataCollectionPolicy` și caseta de dialog nu este afișată din nou pentru utilizator.
+Dacă le permiteți utilizatorilor să vadă această casetă de dialog, atunci când utilizatorul alege **OK**, valoarea `RequiredDataOnly` este scrisă în`AcknowledgedDataCollectionPolicy` și caseta de dialog nu este afișată din nou pentru utilizator.
 
 
 ## <a name="related-topics"></a>Subiecte asociate
 
-- [Referință profil de configurare (documentația pentru dezvoltatori Apple)](https://go.microsoft.com/fwlink/p/?linkid=852998)
+- [Referință privind profilul de configurare (documentația pentru dezvoltatori Apple)](https://go.microsoft.com/fwlink/p/?linkid=852998)
 - [Implementarea preferințelor pentru Office pentru Mac](../mac/deploy-preferences-for-office-for-mac.md)
 - [Setările de confidențialitate ale contului](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b#ID0EAADAAA=Mac)
