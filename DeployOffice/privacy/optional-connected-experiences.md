@@ -55,7 +55,7 @@ Atunci când utilizați Magazinul Office, utilizarea site-ului magazinului propr
 
 ### <a name="microsoft-error-reporting-program-merp"></a>Microsoft Error Reporting Program (MERP) 
 
-MERP se conectează la serviciul Watson.microsoft.com pentru a trimite date de diagnostic atunci când aplicațiile client Office care rulează pe dispozitive Mac se blochează. Este deținut de Microsoft, aplicându-se condițiile din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). MERP nu se aplică aplicațiilor client Office care rulează pe Windows.
+MERP se conectează la serviciul Watson.microsoft.com pentru a trimite date de diagnostic atunci când aplicațiile client Office care rulează pe dispozitive Mac se blochează. Este deținut de Microsoft, aplicându-se condițiile din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [Angajamentul de respectare a confidențialității Microsoft](https://privacy.microsoft.com/). MERP nu se aplică aplicațiilor client Office care rulează pe Windows.
 
 ### <a name="research"></a>Cercetare
 
@@ -86,13 +86,13 @@ Sugerați o caracteristică este o experiență care vă permite să remiteți i
 
 Pentru a determina dacă administratorul v-a oferit capacitatea de a utiliza experiențe conectate opționale în aplicația dvs. Office 365 ProPlus pe un dispozitiv Windows, accesați **Fișier** > **Cont** > **Confidențialitate cont** și selectați **Gestionare setări**. Dacă administratorul nu v-a oferit control, se va afișa mesajul: „Administratorul organizației dvs. vă gestionează setările de confidențialitate și a decis să dezactiveze experiențele conectate opționale”.
 
-Dacă utilizați Office pentru Mac, deschideți orice aplicație Office și selectați meniul de aplicații (cum ar fi Word sau Excel) > **Preferințe** > **Confidențialitate**. Aceasta va deschide caseta de dialog Setări de confidențialitate ale contului unde puteți să vizualizați opțiunile de confidențialitate.
+Dacă utilizați Office pentru Mac, deschideți orice aplicație Office și selectați meniul de aplicații (cum ar fi Word sau Excel) > **Preferințe** > **Confidențialitate**. Aceasta va deschide caseta de dialog Setări de confidențialitate ale contului, unde puteți să vizualizați opțiunile de confidențialitate.
 
 ## <a name="your-privacy-settings"></a>Setări de confidențialitate
 
 Dacă administratorul v-a oferit capacitatea de a utiliza experiențe conectate opționale în aplicația dvs. Office 365 ProPlus pe un dispozitiv Windows, accesați **Fișier** > **Cont** > **Confidențialitate cont** și selectați **Gestionare setări** pentru a vă gestiona setările în orice moment. Când sunt activate, veți avea opțiunea de a utiliza serviciile descrise în acest articol atunci când doriți să le utilizați. Când sunt dezactivate, acestea nu vor fi accesibile.
 
-Dacă utilizați Office pentru Mac, deschideți orice aplicație Office și selectați meniul de aplicații (cum ar fi Word sau Excel) > **Preferințe** > **Confidențialitate**. Aceasta va deschide caseta de dialog Setări de confidențialitate ale contului unde puteți să vizualizați opțiunile de confidențialitate.
+Dacă utilizați Office pentru Mac, deschideți orice aplicație Office și selectați meniul de aplicații (cum ar fi Word sau Excel) > **Preferințe** > **Confidențialitate**. Aceasta va deschide caseta de dialog Setări de confidențialitate ale contului, unde puteți să vizualizați opțiunile de confidențialitate.
 
 ## <a name="diagnostic-data"></a>Date de diagnosticare
 
