@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre datele de diagnosticare obligatorii în Office și le furnizează o listă de evenimente și câmpuri de date.
 hideEdit: true
-ms.openlocfilehash: 6a03f23d77aef8f2c8f6548cf462a33194d8a4aa
-ms.sourcegitcommit: a47876f7500d1ae0270f35ee79da8ab32e57ae3a
+ms.openlocfilehash: a5770d3ed30f86dfbf1cb1dfc4a45bbb15179da8
+ms.sourcegitcommit: 4abc1462753e6cb5c01642c9711d19b220dadac0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "36656130"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "37386977"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Date de diagnosticare obligatorii pentru Office
 
@@ -124,31 +124,31 @@ Această categorie conține următoarele câmpuri:
 
   - **DiagnosticConsentSourceLocation** - indică modul în care utilizatorul și-a exprimat consimțământul pentru datele de diagnosticare
 
-  - **DiagnosticConsentSourceLocation** - indică momentul în care utilizatorul și-a exprimat consimțământul pentru datele de diagnosticare
+  - **DiagnosticConsentConsentTime** - indică momentul în care utilizatorul și-a exprimat consimțământul pentru datele de diagnosticare Data va apărea ca o dată ușor de citit de către oameni sau ca dată codificată de calculator sub forma unui număr mare.
 
   - **ServiceConnectionState** - indică dacă utilizatorul a ales să utilizeze sau nu toate experiențele de mod conectat
 
   - **ServiceConnectionStateSourceLocation** -indică modul în care utilizatorul a furnizat opțiunea de a utiliza sau nu toate experiențele de mod conectat
 
-  - **ServiceConnectionStateConsentTime** - indică momentul în care utilizatorul a ales dacă să utilizeze sau nu toate experiențele de mod conectat
+  - **ServiceConnectionStateConsentTime** - indică momentul în care utilizatorul a ales dacă să utilizeze sau nu toate experiențele de mod conectat. Data va apărea ca o dată ușor de citit de către oameni sau ca dată codificată de calculator sub forma unui număr mare.
 
   - **ControllerConnectedServicesState** - indică dacă utilizatorul are acces la experiențele de mod conectat opționale
 
   - **ControllerConnectedServicesStateSourceLocation**- indică modul în care a fost efectuată opțiunea utilizatorului pentru experiențe de mod conectat opționale
 
-  - **ControllerConnectedServicesStateConsentTime** - indică momentul în care utilizatorul a ales starea experiențelor de mod conectat opționale
+  - **ControllerConnectedServicesStateConsentTime** - indică momentul în care utilizatorul a ales starea experiențelor de mod conectat opționale. Data va apărea ca o dată ușor de citit de către oameni sau ca dată codificată de calculator sub forma unui număr mare.
 
   - **UserContentDependentState** - indică dacă utilizatorul a ales să activeze sau să dezactiveze experiențe de mod conectat care analizează conținut
 
   - **UserContentDependentStateSourceLocation** - indică modul în care a fost efectuată opțiunea utilizatorului de a activa sau de a dezactiva experiențe de mod conectat care analizează conținut
 
-  - **UserContentDependentStateConsentTime** - indică momentul în care utilizatorul a optat să activeze sau să dezactiveze experiențe de mod conectat care analizează conținut
+  - **UserContentDependentStateConsentTime** - indică momentul în care utilizatorul a optat să activeze sau să dezactiveze experiențe de mod conectat care analizează conținut. Data va apărea ca o dată ușor de citit de către oameni sau ca dată codificată de calculator sub forma unui număr mare.
 
   - **DownloadContentState** - indică dacă utilizatorul a ales să activeze sau să dezactiveze experiențe de mod conectat care descarcă online conținut
 
   - **DownloadContentStateSourceLocation** - indică modul în care utilizatorul a efectuat alegerea de a activa sau dezactiva experiențe de mod conectat care descarcă conținut online
 
-  - **DownloadContentStateSourceLocation** - indică momentul în care utilizatorul a efectuat alegerea de a activa sau dezactiva experiențe de mod conectat care descarcă conținut online
+  - **DownloadContentStateSourceLocation** - indică momentul în care utilizatorul a efectuat alegerea de a activa sau dezactiva experiențe de mod conectat care descarcă conținut online Data va apărea ca o dată ușor de citit de către oameni sau ca dată codificată de calculator sub forma unui număr mare.
 
 #### <a name="device"></a>Dispozitiv 
 
@@ -305,6 +305,10 @@ Această categorie conține următoarele câmpuri:
   - **MotherboardUUIDHash** - cod hash al unui identificator unic pentru placa de bază. Ne permite să clasificăm datele pe baza pivotului de dispozitiv.
 
   - **Name** - numele dispozitivului. Ne permite să clasificăm datele pe baza pivotului de dispozitiv.
+  
+  - **NetworkCost** - indică costul sau tipul de rețea, de exemplu contorizată sau contorizată peste limită.
+  
+  - **NetworkCountry** - codul de țară al expeditorului, pe baza adresei IP necurățată a clientului.
 
   - **NumProcPhysCores** - numărul de nuclee fizice din computer. Ne permite să clasificăm datele pe baza pivotului de dispozitiv.
 
@@ -614,6 +618,65 @@ Se colectează următoarele câmpuri:
 - **sessionID** - GUID generat aleator pentru a identifica sesiunea de aplicație
 
 - **UTCReplace_AppSessionGuid** - valoare booleană constantă. Întotdeauna true.
+
+#### <a name="officeonenotefirstrunfirstrun"></a>Office.OneNote.FirstRun.FirstRun
+
+Semnal critic utilizat pentru a ne asigura că utilizatorii noi pot lansa și rula pentru prima dată cu succes OneNote.  Telemetria se colectează pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot lansa aplicația pentru prima dată, acest lucru va declanșa un incident de mare severitate.
+
+- **AfterOneDriveFrozenAccountError** - indică o eroare din OneDrive atunci când un cont este blocat.
+
+- **Attempt** - de câte ori este necesar să încercați din nou prima experiență de rulare.
+
+- **IsDefaultNotebookCreated** - indică dacă OneNote a creat un blocnotes implicit de utilizator sau nu.
+
+- **IsDelayedSignIn** - indică dacă prima rulare se află în modul de conectare întârziată, în care un utilizator nu este obligat să se conecteze.
+
+- **IsMSA** - indică dacă un cont este cont Microsoft sau nu.
+
+#### <a name="officeonenotefirstrunfirstrunformsa"></a>Office.OneNote.FirstRun.FirstRunForMSA
+
+Semnal critic utilizat pentru a ne asigura că utilizatorii consumatori noi (cont Microsoft) pot lansa și utiliza pentru prima dată cu succes OneNote.
+Cum se folosea Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot lansa aplicația pentru prima dată, acest lucru va declanșa un incident de mare severitate.
+
+Se colectează următoarele câmpuri:
+
+- **Attempt** - de câte ori este necesar să încercați din nou prima experiență de rulare.
+
+- **Error A** - obiectul eroare din OneNote indică o eroare în timpul unei erori în timpul primei execuții, dacă există.
+
+- **FAllowAddingGuide** - indică dacă OneNote va permite crearea unui blocnotes ghid sau nu.
+
+- **FrozenOneDriveAccount** - indică dacă un cont OneDrive este blocat sau nu.
+
+- **IsDefaultNotebookCreated** - indică dacă OneNote a creat un blocnotes implicit de utilizator sau nu.
+
+- **NoInternetConnection** - indică dacă un dispozitiv nu are conexiune la internet.
+
+- **ProvisioningFailure** - un obiect eroare OneNote care indică o eroare de asigurare a accesului, dacă aceasta există.
+
+- **ProvisioningFinishedTime** - indică ora de sfârșit când OneNote termină asigurarea accesului la un blocnotes în timpul primei experiențe de rulare.
+
+- **ProvisioningStartedTime** - indică ora de început când OneNote inițiază asigurarea accesului la un blocnotes în timpul primei experiențe de rulare.
+
+- **ShowSuggestedNotebooks** - indică dacă OneNote va afișa o caracteristică de blocnotes sugerată sau nu.
+
+#### <a name="officeonenotefirstrunfirstrunfororgid"></a>Office.OneNote.FirstRun.FirstRunForOrgId
+
+Semnal critic utilizat pentru a ne asigura că utilizatorii noi de tip întreprindere (AAD/OrgID) pot lansa și rula pentru prima dată cu succes OneNote.  Cum se folosea Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot lansa aplicația pentru prima dată, acest lucru va declanșa un incident de mare severitate.
+
+- **Attempt** - de câte ori este necesar să încercați din nou prima experiență de rulare.
+
+- **Error** - un obiect eroare din OneNote care indică o eroare în timpul primei execuții, dacă aceasta există.
+
+- **FAllowAddingGuide** - indică dacă OneNote va permite crearea unui blocnotes ghid sau nu.
+
+- **IsDefaultNotebookCreated** - indică dacă OneNote a creat un blocnotes implicit de utilizator sau nu.
+
+- **ProvisioningFailure** - un obiect eroare OneNote care indică o eroare de asigurare a accesului, dacă aceasta există.
+
+- **ProvisioningFinishedTime** - indică ora de sfârșit când OneNote termină asigurarea accesului la un blocnotes în timpul primei experiențe de rulare.
+
+- **ProvisioningStartedTime** - indică ora de început când OneNote inițiază asigurarea accesului la un blocnotes în timpul primei experiențe de rulare.
 
 #### <a name="officetargetedmessagingensurecached"></a>Office.TargetedMessaging.EnsureCached 
 
@@ -1173,6 +1236,489 @@ Iată subtipurile de date din această categorie:
 
 Succesul funcționalității aplicației. Limitat la deschiderea și închiderea aplicației și a documentelor, editarea fișierelor și partajarea fișierelor (colaborare).
 
+#### <a name="ipccreaterepublishinglicense"></a>IpcCreateRepublishingLicense
+
+Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează apelul API IpcCreateRepublishingLicense. 
+
+Se colectează următoarele câmpuri:
+
+- **AppInfo.ClientHierarchy** - ierarhie client care indică faptul că aplicația rulează în mediul de producție sau în mediul de dezvoltator
+
+- **AppInfo.Name** - nume aplicație
+
+- **AppInfo.Version** - versiunea aplicației
+
+- **iKey** - ID al serverului pentru servicii de înregistrare
+
+- **RMS.Duration** - timp total pentru finalizarea apelului API
+
+- **RMS.DurationWithoutExternalOps** - timp total minus operațiuni externe consumate, cum ar fi latența de rețea.
+
+- **RMS.ErrorCode** - codul de eroare returnat de apelul API, dacă există.
+
+- **RMS.HttpCall** - indică dacă există operațiune HTTP
+
+- **RMS.Result** - succes sau eșec al apelului API
+
+- **RMS.ScenarioId** - ID al scenariului definit de API
+
+- **RMS.SDKVersion** - versiunea clientului pentru Serviciul de administrare a drepturilor
+
+- **RMS.StatusCode** - cod de stare al rezultatului returnat
+
+#### <a name="ipcgetlicenseproperty"></a>IpcGetLicenseProperty
+
+Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează apelul API IpcGetLicenseProperty. 
+
+Se colectează următoarele câmpuri:
+
+- **AppInfo.ClientHierarchy** - ierarhie client care indică faptul că aplicația rulează în mediul de producție sau în mediul de dezvoltator
+
+- **AppInfo.Name** - nume aplicație.
+
+- **AppInfo.Version** - versiunea aplicației
+
+- **iKey** - ID al serverului pentru servicii de înregistrare
+
+- **RMS.Duration** - timp total pentru finalizarea apelului API
+
+- **RMS.DurationWithoutExternalOps** - timp total minus operațiuni externe consumate, cum ar fi latența de rețea.
+
+- **RMS.ErrorCode** - codul de eroare returnat de apelul API, dacă există.
+
+- **RMS.HttpCall** - indică dacă există o operațiune HTTP
+
+- **RMS.LicensePropertyType** - tip de proprietate licență
+
+- **RMS.Result** - succes sau eșec al apelului API
+
+- **RMS.ScenarioId** - ID al scenariului definit de API
+
+- **RMS.SDKVersion** - versiunea clientului pentru Serviciul de administrare a drepturilor
+
+- **RMS.StatusCode** - cod de stare al rezultatului returnat
+
+#### <a name="ipcgetserializedlicenseproperty"></a>IpcGetSerializedLicenseProperty
+
+Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează apelul API IpcGetSerializedLicenseProperty. 
+
+Se colectează următoarele câmpuri:
+
+- **AppInfo.ClientHierarchy** - ierarhie client care indică faptul că aplicația rulează în mediul de producție sau în mediul de dezvoltator
+
+- **AppInfo.Name** - nume aplicație.
+
+- **AppInfo.Version** - versiunea aplicației
+
+- **iKey** - ID al serverului pentru servicii de înregistrare
+
+- **RMS.Duration** - timp total pentru finalizarea apelului API
+
+- **RMS.DurationWithoutExternalOps** - timp total minus operațiuni externe consumate, cum ar fi latența de rețea.
+
+- **RMS.ErrorCode** - codul de eroare returnat de apelul API, dacă există.
+
+- **RMS.HttpCall** - indică dacă există o operațiune HTTP
+
+- **RMS.LicensePropertyType** - tip de proprietate licență
+
+- **RMS.Result** - succes sau eșec al apelului API
+
+- **RMS.ScenarioId** - ID al scenariului definit de API
+
+- **RMS.SDKVersion** - versiunea clientului pentru Serviciul de administrare a drepturilor
+
+- **RMS.StatusCode** - cod de stare al rezultatului returnat
+
+#### <a name="ipcgettemplateissuerlist"></a>IpcGetTemplateIssuerList
+
+Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează apelul API IpcGetTemplateIssuerList. 
+
+Se colectează următoarele câmpuri:
+
+- **AppInfo.ClientHierarchy** - ierarhie client care indică faptul că aplicația rulează în mediul de producție sau în mediul de dezvoltator
+
+- **AppInfo.Name** - nume aplicație.
+
+- **AppInfo.Version** - versiunea aplicației
+
+- **iKey** - ID al serverului pentru servicii de înregistrare
+
+- **RMS.AuthCallbackProvided** - indică dacă se furnizează apelare inversă pentru autentificare ca intrare pentru apelul API sau nu
+
+- **RMS.ConnectionInfo.ExtranetUrl** - URL de extranet pentru informațiile de conexiune
+
+- **RMS.ConnectionInfo.IntranetUrl** - URL de intranet pentru informațiile de conexiune
+
+- **RMS.ConnectionMode** - modul de conexiune între clientul Serviciu de administrare a drepturilor și server: online sau offline
+
+- **RMS.Duration** - timp total pentru finalizarea apelului API
+
+- **RMS.DurationWithoutExternalOps** - timp total minus operațiuni externe consumate, cum ar fi latența de rețea.
+
+- **RMS.ErrorCode** - codul de eroare returnat de apelul API, dacă există.
+
+- **RMS.GuestTenant** - ID-ul entității găzduite invitat pentru utilizator
+
+- **RMS.HomeTenant** - ID-ul entității găzduite domiciliu pentru utilizator
+
+- **RMS.HttpCall** - indică dacă există operațiune HTTP
+
+- **RMS.Identity.ExtranetUrl** - URL-ul de extranet pentru serverul Serviciului de administrare a drepturilor pentru utilizator, colectat în timpul obținerii unui nou Certificat de cont de drepturi de la server
+ 
+- **RMS.Identity.IntranetUrl** - URL-ul de intranet pentru serverul Serviciului de administrare a drepturilor pentru utilizator, colectat în timpul obținerii unui nou Certificat de cont de drepturi de la server
+
+- **RMS.Identity.Status** - prima dată când se obține Certificatul de cont de drepturi de la server sau când se reînnoiește Certificatul de cont de drepturi 
+
+- **RMS.Identity.Type** - tipul de cont de utilizator, cum ar fi cont Windows sau cont live
+
+- **RMS.Identity.UserProvided** - indică dacă adresa de e-mail a utilizatorului a fost furnizată sau nu în timpul obținerii unui nou Certificat de cont de drepturi de la server
+
+- **RMS.IssuerId** - ID-ul serverului Serviciului de administrare a drepturilor care emite Certificatul de cont de drepturi 
+
+- **RMS.LicenseFormat** - formatul licenței: Xrml sau Json
+
+- **RMS.RACType** - tipul Certificatului de cont de drepturi
+
+- **RMS.Result** - succes sau eșec al apelului API
+
+- **RMS.ScenarioId** - ID al scenariului definit de API
+
+- **RMS.SDKVersion** - versiunea clientului pentru Serviciul de administrare a drepturilor
+
+- **RMS.ServerType** - tipul de server al Serviciului de administrare a drepturilor
+
+- **RMS.StatusCode** - cod de stare al rezultatului returnat
+
+- **UserInfo.UserObjectId** - ID al obiectului utilizator
+
+#### <a name="ipcgettemplatelist"></a>IpcGetTemplateList
+
+Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează apelul API IpcGetTemplateList. 
+
+Se colectează următoarele câmpuri:
+
+- **AppInfo.ClientHierarchy** - ierarhie client care indică faptul că aplicația rulează în mediul de producție sau în mediul de dezvoltator
+
+- **AppInfo.Name** - nume aplicație.
+
+- **AppInfo.Version** - versiunea aplicației
+
+- **iKey** - ID al serverului pentru servicii de înregistrare
+
+- **RMS.AuthCallbackProvided** - indică dacă se furnizează apelare inversă pentru autentificare ca intrare pentru apelul API sau nu
+
+- **RMS.ConnectionInfo.ExtranetUrl** - URL de extranet pentru informațiile de conexiune
+
+- **RMS.ConnectionInfo.IntranetUrl** - URL de intranet pentru informațiile de conexiune
+
+- **RMS.ConnectionMode** - modul de conexiune între clientul Serviciu de administrare a drepturilor și server: online sau offline
+
+- **RMS.Duration** - timp total pentru finalizarea apelului API
+
+- **RMS.DurationWithoutExternalOps** - timp total minus operațiuni externe consumate, cum ar fi latența de rețea.
+
+- **RMS.ErrorCode** - codul de eroare returnat de apelul API, dacă există.
+
+- **RMS.GuestTenant** - ID-ul entității găzduite invitat pentru utilizator
+
+- **RMS.HomeTenant** - ID-ul entității găzduite domiciliu pentru utilizator
+
+- **RMS.HttpCall** - indică dacă există operațiune http
+
+- **RMS.Identity.ExtranetUrl** - URL-ul de extranet pentru serverul Serviciului de administrare a drepturilor pentru utilizator, colectat în timpul obținerii unui nou Certificat de cont de drepturi de la server
+ 
+- **RMS.Identity.IntranetUrl** - URL-ul de intranet pentru serverul Serviciului de administrare a drepturilor pentru utilizator, colectat în timpul obținerii unui nou Certificat de cont de drepturi de la server
+
+- **RMS.Identity.Status** - prima dată când se obține Certificatul de cont de drepturi de la server sau când se reînnoiește Certificatul de cont de drepturi 
+
+- **RMS.Identity.Type** - tipul de cont de utilizator, cum ar fi cont Windows sau cont live
+
+- **RMS.Identity.UserProvided** - indică dacă adresa de e-mail a utilizatorului a fost furnizată sau nu în timpul obținerii unui nou Certificat de cont de drepturi de la server
+
+- **RMS.IssuerId** - ID-ul serverului Serviciului de administrare a drepturilor care emite Certificatul de cont de drepturi 
+
+- **RMS.LicenseFormat** - formatul licenței: Xrml sau Json
+
+- **RMS.RACType** - tipul Certificatului de cont de drepturi
+
+- **RMS.Result** - succes sau eșec al apelului API
+
+- **RMS.ScenarioId** - ID al scenariului definit de API
+
+- **RMS.SDKVersion** - versiunea clientului pentru Serviciul de administrare a drepturilor
+
+- **RMS.ServerType** - tipul de server al Serviciului de administrare a drepturilor
+
+- **RMS.StatusCode** - cod de stare al rezultatului returnat
+
+- **RMS.TemplatesCount** - numărul de șabloane
+
+- **UserInfo.UserObjectId** - ID al obiectului utilizator
+
+#### <a name="ipcpcreatelicensefromscratch"></a>IpcpCreateLicenseFromScratch
+
+Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează apelul API IpcpCreateLicenseFromScratch. 
+
+Se colectează următoarele câmpuri:
+
+- **AppInfo.ClientHierarchy** - ierarhie client care indică faptul că aplicația rulează în mediul de producție sau în mediul de dezvoltator
+
+- **AppInfo.Name** - nume aplicație.
+
+- **AppInfo.Version** - versiunea aplicației
+
+- **iKey** - ID al serverului pentru servicii de înregistrare
+
+- **RMS.Duration** - timp total pentru finalizarea apelului API
+
+- **RMS.DurationWithoutExternalOps** - timp total minus operațiuni externe consumate, cum ar fi latența de rețea.
+
+- **RMS.ErrorCode** - codul de eroare returnat de apelul API, dacă există.
+
+- **RMS.GuestTenant** - ID-ul entității găzduite invitat pentru utilizator
+
+- **RMS.HomeTenant** - ID-ul entității găzduite domiciliu pentru utilizator
+
+- **RMS.HttpCall** - indică dacă există operațiune HTTP
+
+- **RMS.Identity.ExtranetUrl** - URL-ul de extranet pentru serverul Serviciului de administrare a drepturilor pentru utilizator, colectat în timpul obținerii unui nou Certificat de cont de drepturi de la server
+
+- **RMS.Identity.IntranetUrl** - URL-ul de intranet pentru serverul Serviciului de administrare a drepturilor pentru utilizator, colectat în timpul obținerii unui nou Certificat de cont de drepturi de la server
+
+- **RMS.Identity.UserProvided** - indică dacă adresa de e-mail a utilizatorului a fost furnizată sau nu în timpul obținerii unui nou Certificat de cont de drepturi de la server
+
+- **RMS.IssuerId** - ID-ul serverului Serviciului de administrare a drepturilor care emite Certificatul de cont de drepturi 
+
+- **RMS.LicenseFormat** - formatul licenței: Xrml sau Json
+
+- **RMS.RACType** - tipul Certificatului de cont de drepturi
+
+- **RMS.Result** - succes sau eșec al apelului API
+
+- **RMS.ScenarioId** - ID al scenariului definit de API
+
+- **RMS.SDKVersion** - versiunea clientului pentru Serviciul de administrare a drepturilor
+
+- **RMS.ServerType** - tipul de server al Serviciului de administrare a drepturilor
+
+- **RMS.StatusCode** - cod de stare al rezultatului returnat
+
+- **RMS.TokenProvided** - indică dacă se furnizează tokenul ca intrare pentru apelul API sau nu 
+
+- **RMS.UserProvided** - indică dacă se furnizează consumatorul ca intrare pentru apelul API sau nu 
+
+- **UserInfo.UserObjectId** - ID al obiectului utilizator 
+
+#### <a name="ipcpcreatelicensefromtemplate"></a>IpcpCreateLicenseFromTemplate
+
+Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează apelul API IpcpCreateLicenseFromTemplate.  
+
+Se colectează următoarele câmpuri:
+
+- **AppInfo.ClientHierarchy** - ierarhie client care indică faptul că aplicația rulează în mediul de producție sau în mediul de dezvoltator
+
+- **AppInfo.Name** - nume aplicație.
+
+- **AppInfo.Version** - versiunea aplicației
+
+- **iKey** - ID al serverului pentru servicii de înregistrare
+
+- **RMS.AuthCallbackProvided** - indică dacă se furnizează apelare inversă pentru autentificare ca intrare pentru apelul API sau nu
+
+- **RMS.ConnectionMode** - modul de conexiune între clientul Serviciu de administrare a drepturilor și server: online sau offline
+
+- **RMS.Duration** - timp total pentru finalizarea apelului API
+
+- **RMS.DurationWithoutExternalOps** - timp total minus operațiuni externe consumate, cum ar fi latența de rețea.
+
+- **RMS.ErrorCode** - codul de eroare returnat de apelul API, dacă există.
+
+- **RMS.HttpCall** - indică dacă există operațiune http
+
+- **RMS.Result** - succes sau eșec al apelului API
+
+- **RMS.ScenarioId** - ID al scenariului definit de API
+
+- **RMS.SDKVersion** - versiunea clientului pentru Serviciul de administrare a drepturilor
+
+- **RMS.StatusCode** - cod de stare al rezultatului returnat
+
+- **RMS.TokenProvided** - indică dacă se furnizează tokenul ca intrare pentru apelul API sau nu 
+
+- **RMS.UserProvided** - indică dacă se furnizează consumatorul ca intrare pentru apelul API sau nu 
+
+#### <a name="ipcpgettemplatelistforuser"></a>IpcpGetTemplateListForUser
+
+Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează apelul API IpcpGetTemplateListForUser.  
+
+Se colectează următoarele câmpuri:
+
+- **AppInfo.ClientHierarchy** - ierarhie client care indică faptul că aplicația rulează în mediul de producție sau în mediul de dezvoltator
+
+- **AppInfo.Name** - nume aplicație.
+
+- **AppInfo.Version** - versiunea aplicației
+
+- **iKey** - ID al serverului pentru servicii de înregistrare
+
+- **RMS.ApplicationScenarioId** - ID al scenariului furnizat de aplicație
+
+- **RMS.AuthCallbackProvided** - indică dacă se furnizează apelare inversă pentru autentificare ca intrare pentru apelul API sau nu
+
+- **RMS.ConnectionInfo.ExtranetUrl** - URL de extranet pentru informațiile de conexiune
+
+- **RMS.ConnectionInfo.IntranetUrl** - URL de intranet pentru informațiile de conexiune
+
+- **RMS.ConnectionMode** - modul de conexiune între clientul Serviciu de administrare a drepturilor și server: online sau offline
+
+- **RMS.Duration** - timp total pentru finalizarea apelului API
+
+- **RMS.DurationWithoutExternalOps** - timp total minus operațiuni externe consumate, cum ar fi latența de rețea.
+
+- **RMS.ErrorCode** - codul de eroare returnat de apelul API, dacă există.
+
+- **RMS.GuestTenant** - ID-ul entității găzduite invitat pentru utilizator
+
+- **RMS.HomeTenant** - ID-ul entității găzduite domiciliu pentru utilizator
+
+- **RMS.HttpCall** - indică dacă există o operațiune HTTP
+
+- **RMS.Identity.ExtranetUrl** - URL-ul de extranet pentru serverul Serviciului de administrare a drepturilor pentru utilizator, colectat în timpul obținerii unui nou Certificat de cont de drepturi de la server
+
+- **RMS.Identity.IntranetUrl** - URL-ul de intranet pentru serverul Serviciului de administrare a drepturilor pentru utilizator, colectat în timpul obținerii unui nou Certificat de cont de drepturi de la server
+
+- **RMS.Identity.Status** - prima dată când se obține Certificatul de cont de drepturi de la server sau când se reînnoiește Certificatul de cont de drepturi 
+
+- **RMS.Identity.Type** - tipul de cont de utilizator, cum ar fi cont Windows sau cont live
+
+- **RMS.Identity.UserProvided** - indică dacă adresa de e-mail a utilizatorului a fost furnizată sau nu în timpul obținerii unui nou Certificat de cont de drepturi de la server
+
+- **RMS.IssuerId** - ID-ul serverului Serviciului de administrare a drepturilor care emite Certificatul de cont de drepturi 
+
+- **RMS.LicenseFormat** - formatul licenței: Xrml sau Json
+
+- **RMS.RACType** - tipul Certificatului de cont de drepturi
+
+- **RMS.Result** - succes sau eșec al apelului API
+
+- **RMS.ScenarioId** - ID al scenariului definit de API
+
+- **RMS.SDKVersion** - versiunea clientului pentru Serviciul de administrare a drepturilor
+
+- **RMS.ServerType** - tipul de server al Serviciului de administrare a drepturilor
+
+- **RMS.StatusCode** - cod de stare al rezultatului returnat
+
+- **RMS.TemplatesCount** - numărul de șabloane
+
+- **RMS.TokenProvided** - indică dacă se furnizează tokenul ca intrare pentru apelul API sau nu 
+    
+- **RMS.UserProvided** - indică dacă se furnizează consumatorul ca intrare pentru apelul API sau nu 
+
+- **UserInfo.UserObjectId** - ID al obiectului utilizator 
+
+#### <a name="ipcpserializelicense"></a>IpcpSerializeLicense
+
+Colectat atunci când un user încearcă să aplice protecții IRM la document. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează apelul API IpcpSerializeLicense. 
+
+Se colectează următoarele câmpuri:
+
+- **AppInfo.ClientHierarchy** - ierarhie client care indică faptul că aplicația rulează în mediul de producție sau în mediul de dezvoltator
+
+- **AppInfo.Name** - nume aplicație.
+
+- **AppInfo.Version** - versiunea aplicației
+
+- **iKey** - ID al serverului pentru servicii de înregistrare
+
+- **RMS.ApplicationScenarioId** - ID al scenariului furnizat de aplicație
+
+- **RMS.AuthCallbackProvided** - indică dacă se furnizează apelare inversă pentru autentificare ca intrare pentru apelul API sau nu
+
+- **RMS.ConnectionMode** - modul de conexiune între clientul Serviciu de administrare a drepturilor și server: online sau offline
+
+- **RMS.ContentId** - ID-ul de conținut al documentului
+
+- **RMS.Duration** - timp total pentru finalizarea apelului API
+
+- **RMS.DurationWithoutExternalOps** - timp total minus operațiuni externe consumate, cum ar fi latența de rețea.
+
+- **RMS.ErrorCode** - codul de eroare returnat de apelul API, dacă există.
+
+- **RMS.GuestTenant** - ID-ul entității găzduite invitat pentru utilizator
+
+- **RMS.HomeTenant** - ID-ul entității găzduite domiciliu pentru utilizator
+
+- **RMS.HttpCall** - indică dacă există operațiune http
+
+- **RMS.Identity.ExtranetUrl** - URL-ul de extranet pentru serverul Serviciului de administrare a drepturilor pentru utilizator, colectat în timpul obținerii unui nou Certificat de cont de drepturi de la server
+
+- **RMS.Identity.IntranetUrl** - URL-ul de intranet pentru serverul Serviciului de administrare a drepturilor pentru utilizator, colectat în timpul obținerii unui nou Certificat de cont de drepturi de la server
+
+- **RMS.Identity.Status** - prima dată când se obține Certificatul de cont de drepturi de la server sau când se reînnoiește Certificatul de cont de drepturi 
+
+- **RMS.Identity.Type** - tipul de cont de utilizator, cum ar fi cont Windows sau cont live
+
+- **RMS.Identity.UserProvided** - indică dacă adresa de e-mail a utilizatorului a fost furnizată sau nu în timpul obținerii unui nou Certificat de cont de drepturi de la server
+
+- **RMS.IssuerId** - ID-ul serverului Serviciului de administrare a drepturilor care emite Certificatul de cont de drepturi 
+
+- **RMS.KeyHandle** - adresa de memorie pentru handle-ul de cheie
+
+- **RMS.LicenseFormat** - formatul licenței: Xrml sau Json
+
+- **RMS.RACType** - tipul Certificatului de cont de drepturi
+
+- **RMS.Result** - succes sau eșec al apelului API
+
+- **RMS.ScenarioId** - ID al scenariului definit de API
+
+- **RMS.SDKVersion** - versiunea clientului pentru Serviciul de administrare a drepturilor
+
+- **RMS.ServerType** - tipul de server al Serviciului de administrare a drepturilor
+
+- **RMS.StatusCode** - cod de stare al rezultatului returnat
+
+- **RMS.TokenProvided** - indică dacă se furnizează tokenul ca intrare pentru apelul API sau nu 
+
+- **RMS.UserProvided** - indică dacă se furnizează consumatorul ca intrare pentru apelul API sau nu 
+
+- **UserInfo.UserObjectId** - ID al obiectului utilizator 
+
+#### <a name="ipcsetlicenseproperty"></a>IpcSetLicenseProperty
+
+Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează apelul API IpcSetLicenseProperty. 
+
+Se colectează următoarele câmpuri:
+
+- **AppInfo.ClientHierarchy** - ierarhie client care indică faptul că aplicația rulează în mediul de producție sau în mediul de dezvoltator
+
+- **AppInfo.Name** - nume aplicație.
+
+- **AppInfo.Version** - versiunea aplicației
+
+- **iKey** - ID al serverului pentru servicii de înregistrare
+
+- **RMS.Duration** - timp total pentru finalizarea apelului API
+
+- **RMS.DurationWithoutExternalOps** - timp total minus operațiuni externe consumate, cum ar fi latența de rețea.
+
+- **RMS.ErrorCode** - codul de eroare returnat de apelul API, dacă există. 
+
+- **RMS.HttpCall** - indică dacă există operațiune http
+
+- **RMS.LicensePropertyType** - tip de proprietate licență
+
+- **RMS.Result** - succes sau eșec al apelului API
+
+- **RMS.ScenarioId** - ID al scenariului definit de API
+
+- **RMS.SDKVersion** - versiunea clientului pentru Serviciul de administrare a drepturilor
+
+- **RMS.StatusCode** - ID al scenariului definit de API
+
+
 #### <a name="officeappcompatappcompatagentupload"></a>Office.AppCompat.AppCompat.AgentUpload
 
 Generat la pornirea clientului atunci când utilizatorul final a activat Tabloul de bord de telemetrie Office.  Colectează informații despre momentul în care Agentul de telemetrie Office a încărcat date în folderul partajat. Utilizarea principală a acestui eveniment este pentru monitorizarea stării Agentului de telemetrie Office, iar utilizarea secundară a evenimentului este pentru estimarea utilizării Tabloului de bord de telemetrie Office.
@@ -1201,6 +1747,20 @@ Colectat doar atunci când Tabloul de bord de telemetrie Office a fost activat d
 Se colectează următoarele câmpuri:
 
   - **Data.CollectionTime** - marcă de timp privind momentul în care a fost înregistrat în jurnal un eveniment de cădere
+
+#### <a name="office_apple_cisauthticketwithidentity"></a>Office_Apple_CISAuthTicketWithIdentity
+
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru capturarea erorilor de generare a tokenurilor de autentificare în timpul InAppPurchase pe Mac (evenimentul înregistrează codul de eroare primit).  Acest eveniment este utilizat pentru detectarea și pentru a ajuta la depanarea erorilor de generare a tokenurilor de autentificare.
+
+Se colectează următoarele câmpuri:
+
+- **Data_EmptyAuthToken** - colectăm un șir reprezentând locul erorii în fluxul activare a licenței permanente.
+
+- **Data_TicketAuthError** - cod de eroare care indică cauza erorii
+
+- **Data_ValidIdentity** - dacă clientul are o identitate validă
+
+
 
 #### <a name="officeconnectdeviceactivitystart"></a>Office.ConnectDevice.Activity.Start
 
@@ -1310,6 +1870,8 @@ Se colectează următoarele câmpuri:
 
   - **Data.Doc.AssistedReadingReasons -** setați dacă documentul are implementată o protecție a datelor electronice
 
+  - **Data.Doc.AsyncOpenKind –** indică dacă s-a deschis o versiune memorată în cache a documentului cloud și ce logică de reîmprospătare asincronă s-a folosit.
+
   - **Data.Doc.ChunkingType -** unități utilizate pentru deschiderea incrementală a documentelor
 
   - **Data.Doc.EdpState -** setare de protecție a datelor electronice pentru document
@@ -1416,7 +1978,7 @@ Se colectează următoarele câmpuri:
 
   - **Data.FullyQualifiedDomainName -** depășit, înlocuit de Data\_Doc\_Fqdn
 
-  - **Data.Input.FileOpenState -** starea solicitată de aplicație (Read/ReadWrite etc.) **-**
+  - **Data.Input.FileOpenState -** starea solicitată de aplicație (Read/ReadWrite etc.)
 
   - **Data.Input.OpenAsync -** deschidere Async solicitată de aplicație
 
@@ -1561,6 +2123,8 @@ Se colectează următoarele câmpuri:
   - **Data.Doc.AccessMode -** documentul este numai în citire
 
   - **Data.Doc.AssistedReadingReasons -** setați dacă documentul are implementată o protecție a datelor electronice
+
+  - **Data.Doc.AsyncOpenKind –** indică dacă s-a deschis o versiune memorată în cache a documentului cloud și ce logică de reîmprospătare asincronă s-a folosit.
 
   - **Data.Doc.ChunkingType -** unități utilizate pentru deschiderea incrementală a documentelor
 
@@ -1817,6 +2381,84 @@ Se colectează următoarele câmpuri:
 
 - **EventName** - numele evenimentului conectat
 
+#### <a name="officelivepersonacarduseractionsopenedpersonacard"></a>Office.LivePersonaCard.UserActions.OpenedPersonaCard
+
+Înregistrat atunci când utilizatorul deschide un Card de persoană. Se utilizează pentru a observa anomalii critice în ratele de eroare la lansarea Cardului de persoană live.
+
+Se colectează următoarele câmpuri:
+
+- **Data.appContextId** - un ID generat aleatoriu utilizat pentru a identifica conturi diferite în aceeași aplicație
+
+- **Data.AppInfo.Name** - numele serviciului utilizat (fișă de profil)
+
+- **Data.cardCorrelationId** - identificatorul unic global pentru un card de persoană
+
+- **Data.cardPersonaCorrelationId** - identificatorul unic global pentru o anumită persoană afișată într-un card
+
+- **Data.clientCorrelationId** - identificatorul unic global pentru sesiunea aplicației
+
+- **Data.clientType** - tipul de dispozitiv pe care rulează aplicația.
+
+- **Data.eventId** - identificator de nume al evenimentului, de exemplu, „LivePersonaCardRenderedAction”
+
+- **Data.exportName** - nume ușor de citit pentru oameni al evenimentului acțiune a utilizatorului, de exemplu,„OpenedPersonaCard”
+
+- **Data.exportType** - categoria evenimentului pentru solicitarea de export GDPR
+
+- **Data.feature** - utilizat pentru a grupa diverse evenimente cu aceeași caracteristică (fișă de profil)
+
+- **Data.hostAppRing** - inelul prin care a fost distribuită aplicația
+
+- **Data.OTelJS.Version** - versiune de OTel logger
+
+- **Data.region** - regiunea geografică a serviciului de back-end a fișei de profil la care este conectat utilizatorul
+
+- **Data.tenantAadObjectId** - entitatea găzduită la care este legat abonamentul unui utilizator. Ne permite să clasificăm problemele și să identificăm dacă este o problemă pe scară largă sau una izolată la un set de utilizatori sau la o anumită entitate găzduită
+
+- **Data.type** - tipul evenimentului înregistrat, de exemplu, urmărire, eroare, eveniment
+
+- **Data.userAadObjectId** - identificatorul de utilizator unic global pentru un cont Microsoft Enterprise (dublură a Data.UserInfo.Id)
+
+- **Data.UserInfo.Id** - identificatorul de utilizator unic global pentru un cont Microsoft Enterprise 
+
+- **Data.UserInfo.MsaId** - identificatorul de utilizator unic global pentru un cont Microsoft consumator
+
+- **Data.UserInfo.OMSTenantId** - entitatea găzduită la care este asociat abonamentul unui utilizator. Ne permite să clasificăm problemele și să identificăm dacă este o problemă pe scară largă sau una izolată la un set de utilizatori sau la o anumită entitate găzduită
+
+- **Data.userPuid** - identificatorul de utilizator unic global pentru un cont Microsoft consumator (duplicat pentru Data.UserInfo.MsaId) 
+
+- **Data.version** - versiunea serviciului (fișă de profil)
+
+- **Data.viewType** - definește tipul de fișă de profil afișată
+
+- **NetworkCost** - indică costul/tipul rețelei (contorizată, contorizată peste limită etc.)
+
+- **NetworkCountry** - codul de țară al expeditorului, pe baza adresei IP necurățată a clientului.
+
+- **Data.properties** - metadate suplimentare colectate pentru fiecare eveniment, după cum urmează.
+
+    - **bandwidthEstimateMbps** - estimare a lățimii de bandă efective în Mbps
+
+    - **cardCorrelationId** - dublură a Data.appContextId de mai sus 
+
+    - **cardPersonaCorrelationId** - dublură a Data.cardCorrelationId de mai sus
+
+    - **consumerCorrelationId** - dublură a Data.clientCorrelationId de mai sus 
+
+    - **externalAppSessionCorrelationId** - un identificator unic global pentru aplicație, pentru a identifica toate cardurile de persoane deschise în aceeași sub-sesiune
+
+    - **immersiveProfileCorrelationId** - un identificator unic global pentru sesiunea vizualizare profil extins
+
+    - **networkEffectiveType** - tipul efectiv de conexiune de rețea, de exemplu, "slow-2g Online" pentru a identifica dacă utilizatorul este conectat la internet în timpul afișării cardului de persoană
+
+    - **networkType** - tipul de conectivitate de rețea a dispozitivului utilizat
+
+    - **personaCorrelationId** - un identificator unic global pentru persoane unice într-o sesiune
+
+    - **roundTripEstimateMs** - timp de revenire efectiv estimat al conexiunii curente în milisecunde
+
+    - **wasOpenedAsCompactCard** - utilizat pentru a identifica dacă cardul a fost deschis inițial ca vizualizare compactă
+
 
 #### <a name="officemanageabilityclient-fetchpolicyprechecks"></a>Office.Manageability.Client Fetch.PolicyPreChecks
 
@@ -1957,6 +2599,34 @@ Se colectează următoarele câmpuri:
 -  **TimeToMedianResultInMs** - indică mediana intervalului de timp necesar pentru ca OneNote să găsească toate potrivirile.
 
 
+#### <a name="officeonenotestickynotesnotecreated"></a>Office.OneNote.StickyNotes.NoteCreated
+
+Acesta este un semnal critic utilizat pentru a monitoriza capacitatea utilizatorilor de Note adezive de a crea note în aplicație.  Telemetria se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot crea o notă, acest lucru va declanșa un incident de mare severitate.
+
+Se colectează următoarele câmpuri:
+
+- **NoteLocalId** - Identificator unic distinctiv atribuit unei note în momentul în care un utilizator creează nota în cadrul aplicației.
+
+- **IsExportable** - o semnalizare care indică dacă acest eveniment a fost rezultatul unei acțiuni a utilizatorului sau nu. Ar trebui setată la True, deoarece NoteCreated este o acțiune declanșată de utilizator.
+
+- **StickyNotes-SDKVersion** - număr de versiune care indică versiunea de Note Adezive folosită de utilizator. Ne permite să identificăm ce versiuni de produs afișează o problemă, astfel încât să o putem stabili corect ca prioritate.
+
+
+#### <a name="officeonenotestickynotesnoteviewed"></a>Office.OneNote.StickyNotes.NoteViewed
+
+Acesta este un semnal critic utilizat pentru a monitoriza capacitatea utilizatorilor de Note adezive de a crea note în aplicație.  Telemetria se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot crea o notă, acest lucru va declanșa un incident de mare severitate.
+
+Se colectează următoarele câmpuri:
+
+- **HasImages** - o semnalizare care indică dacă nota vizualizată conține imagini stocate.
+
+- **IsExportable** - o semnalizare care indică dacă acest eveniment a fost rezultatul unei acțiuni a utilizatorului sau nu. Ar trebui setată la True, deoarece NoteViewed este o acțiune declanșată de utilizator.
+
+- **NoteLocalId** - Identificator unic distinctiv atribuit unei note în momentul în care un utilizator creează nota în cadrul aplicației.
+
+- **StickyNotes-SDKVersion** - număr de versiune care indică versiunea de Note Adezive folosită de utilizator. Ne permite să identificăm ce versiuni de produs afișează o problemă, astfel încât să o putem stabili corect ca prioritate.
+
+
 #### <a name="officeonenotestoragenotebooksyncresult"></a>Office.OneNote.Storage.NotebookSyncResult
  
 Acest eveniment înregistrează rezultatul sincronizării blocnotesului. Este utilizat pentru a afla câte ținte de sincronizare unice există atunci când se calculează scorul de sincronizare OneNote.
@@ -2040,8 +2710,7 @@ Se colectează următoarele câmpuri
 
 #### <a name="officeonenotesystemapplifecycleapplaunch"></a>Office.OneNote.System.AppLifeCycle.AppLaunch
 
-Apoi semnal critic utilizat pentru a ne asigura că utilizatorii OneNote pot lansa cu succes aplicația.
-Telemetria se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot lansa aplicația în fereastra noastră de performanță, acest lucru va declanșa un incident de mare severitate.
+Semnal critic utilizat pentru a ne asigura că utilizatorii OneNote pot lansa cu succes aplicația. Telemetria se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot lansa aplicația în fereastra noastră de performanță, acest lucru va declanșa un incident de mare severitate.
 
 Se colectează următoarele câmpuri: Niciunul
 
@@ -2091,13 +2760,6 @@ Se colectează următoarele câmpuri:
 
   - **Result** - rezultatul încercării de a actualiza parola. De exemplu:: „Success” sau „Fail\_AllowLessSecureAppsDisabled”
 
-#### <a name="officeoutlookdesktopprovidersloadproviderlibrary"></a>Office.Outlook.Desktop.Providers.LoadProviderLibrary
-
-Acest eveniment urmărește succesul sau eșecul MAPI când încearcă să încarce un furnizor DLL (de ex., contab32.dll, emsmdb32.dll, un DLL utilizat de un program de completare). Operațiunea MAPI responsabilă pentru încărcarea de DLL-uri de la furnizori este fundamentală pentru operațiunea obligatorie pentru Outlook, precum și extensibilitate (prin programe de completare sau furnizori de Spațiu de stocare/Transport/Agendă particularizată). Monitorizăm în mod activ succesul sau eșecul rezultat în urma acestei operațiuni pentru a ne asigura că această funcționalitate de bază MAPI continuă să funcționeze conform așteptărilor.
-
-Se colectează următoarele câmpuri:
-
-  - **Activitate HVA standard** fără nicio sarcină particularizată
 
 #### <a name="officeoutlookdesktopstorescreatenewstore"></a>Office.Outlook.Desktop.Stores.CreateNewStore
 
@@ -2193,6 +2855,8 @@ Se colectează următoarele câmpuri:
 
   - **Data\_Doc\_AssistedReadingReasons:long -** set predefinit de valori pentru care documentul a fost deschis în modul de citire asistată
 
+  - **Data_Doc_AsyncOpenKind:long –** indică dacă s-a deschis o versiune memorată în cache a documentului cloud și ce logică de reîmprospătare asincronă s-a folosit.
+
   - **Data\_Doc\_ChunkingType:long -** cum este stocat documentul în SharePoint
 
   - **Data\_Doc\_EdpState:long -** starea Enterprise Data Protection a documentului
@@ -2223,8 +2887,6 @@ Se colectează următoarele câmpuri:
 
   - **Data\_Doc\_IsOpeningOfflineCopy:bool -** verifică dacă documentul este deschis din memoria cache locală
 
-  - **Data_Doc_IsRtcAlwaysOn -** true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
-
   - **Data\_Doc\_IsSyncBacked:bool -** verifică dacă documentul este deschis din folderul care folosește aplicația de sincronizare inversă OneDrive
 
   - **Data\_Doc\_Location:long -** set predefinit de valori privind locul de stocare a documentului (Local, SharePoint, WOPI, Rețea etc.)
@@ -2239,7 +2901,9 @@ Se colectează următoarele câmpuri:
 
   - **Data\_Doc\_ResourceIdHash:string -** codul hash al identificatorului de resurse pentru documentele stocate în cloud
 
-  - **Data\_Doc\_ServerDocId:string -** identificatorul invariabil pentru documentele stocate în cloud
+  - **Data_Doc_RtcType -**  indică modul în care a fost configurat canalul în timp real (RTC) pentru fișierul curent (dezactivat, neacceptat, la cerere, activat permanent etc.).
+
+  - **Data\_Doc\_ServerDocId:string –** identificatorul imutabil pentru documentele stocate în cloud
 
   - **Data\_Doc\_ServerProtocol:long -** set predefinit de valori privind protocolul folosit în comunicarea cu serverul (Http, Cobalt, WOPI etc.)
 
@@ -2327,6 +2991,8 @@ Se colectează următoarele câmpuri:
 
   - **Data\_Doc\_AssistedReadingReasons:long -** set predefinit de valori pentru care documentul a fost deschis în modul de citire asistată
 
+  - **Data_Doc_AsyncOpenKind:long –** indică dacă s-a deschis o versiune memorată în cache a documentului cloud și ce logică de reîmprospătare asincronă s-a folosit.
+
   - **Data\_Doc\_ChunkingType:long -** cum este stocat documentul în SharePoint
 
   - **Data\_Doc\_EdpState:long -** starea Enterprise Data Protection a documentului
@@ -2357,8 +3023,6 @@ Se colectează următoarele câmpuri:
 
   - **Data\_Doc\_IsOpeningOfflineCopy:bool -** documentul este deschis din memoria cache locală?
 
-  - **Data_Doc_IsRtcAlwaysOn -** true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
-
   - **Data\_Doc\_IsSyncBacked:bool -** dacă documentul este deschis din folderul care folosește aplicația de sincronizare inversă OneDrive
 
   - **Data\_Doc\_Location:long -** set predefinit de valori privind locul de stocare a documentului (Local, SharePoint, WOPI, Rețea etc.)
@@ -2373,7 +3037,9 @@ Se colectează următoarele câmpuri:
 
   - **Data\_Doc\_ResourceIdHash:string -** codul hash al identificatorului de resurse pentru documentele stocate în cloud
 
-  - **Data\_Doc\_ServerDocId:string -** identificatorul invariabil pentru documentele stocate în cloud
+  - **Data_Doc_RtcType -**  indică modul în care a fost configurat canalul în timp real (RTC) pentru fișierul curent (dezactivat, neacceptat, la cerere, activat permanent etc.).
+
+  - **Data\_Doc\_ServerDocId:string –** identificatorul imutabil pentru documentele stocate în cloud
 
   - **Data\_Doc\_ServerProtocol:long -** set predefinit de valori privind protocolul folosit în comunicarea cu serverul (Http, Cobalt, WOPI etc.)
 
@@ -2449,6 +3115,8 @@ Se colectează următoarele câmpuri:
 
   - **Data\_Doc\_AssistedReadingReasons:long -** set predefinit de valori pentru care documentul a fost deschis în modul de citire asistată
 
+  - **Data_Doc_AsyncOpenKind:long –** indică dacă s-a deschis o versiune memorată în cache a documentului cloud și ce logică de reîmprospătare asincronă s-a folosit.
+
   - **Data\_Doc\_ChunkingType:long -** cum este stocat documentul în SharePoint
 
   - **Data\_Doc\_EdpState:long -** starea Enterprise Data Protection a documentului
@@ -2479,8 +3147,6 @@ Se colectează următoarele câmpuri:
 
   - **Data\_Doc\_IsOpeningOfflineCopy:bool -** verifică dacă documentul este deschis din memoria cache locală
 
-  - **Data_Doc_IsRtcAlwaysOn -** true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
-
   - **Data\_Doc\_IsSyncBacked:bool -** dacă documentul este deschis din folderul care folosește aplicația de sincronizare inversă OneDrive
 
   - **Data\_Doc\_Location:long -** set predefinit de valori privind locul de stocare a documentului (Local, SharePoint, WOPI, Rețea etc.)
@@ -2495,7 +3161,9 @@ Se colectează următoarele câmpuri:
 
   - **Data\_Doc\_ResourceIdHash:string -** codul hash al identificatorului de resurse pentru documentele stocate în cloud
 
-  - **Data\_Doc\_ServerDocId:string -** identificatorul invariabil pentru documentele stocate în cloud
+  - **Data_Doc_RtcType -**  indică modul în care a fost configurat canalul în timp real (RTC) pentru fișierul curent (dezactivat, neacceptat, la cerere, activat permanent etc.).
+
+  - **Data\_Doc\_ServerDocId:string –** identificatorul imutabil pentru documentele stocate în cloud
 
   - **Data\_Doc\_ServerProtocol:long -** set predefinit de valori privind protocolul folosit în comunicarea cu serverul (Http, Cobalt, WOPI etc.)
 
@@ -2591,6 +3259,8 @@ Se colectează următoarele câmpuri:
 
 - **Data_DstDoc_AssistedReadingReasons:long** - set predefinit de valori pentru care documentul a fost deschis în modul de citire asistată
 
+- **Data_DstDoc_AsyncOpenKind:long –** indică dacă s-a deschis o versiune memorată în cache a noului document cloud și ce logică de reîmprospătare asincronă s-a folosit.
+
 - **Data_DstDoc_ChunkingType:long** - cum este stocat documentul în SharePoint
 
 - **Data_DstDoc_EdpState:long** - starea Enterprise Data Protection a documentului
@@ -2674,6 +3344,8 @@ Se colectează următoarele câmpuri:
 - **Data_SrcDoc_AccessMode:long** - cum a fost deschis acest document (doar în citire | citire-scriere)
 
 - **Data_SrcDoc_AssistedReadingReasons:long** - set predefinit de valori pentru care documentul a fost deschis în modul de citire asistată
+
+- **Data_SrcDoc_AsyncOpenKind:long –** indică dacă s-a deschis o versiune memorată în cache a documentului cloud original și ce logică de reîmprospătare asincronă s-a folosit.
 
 - **Data_SrcDoc_ChunkingType:long** - cum este stocat documentul în SharePoint 
 
@@ -2768,6 +3440,8 @@ Se colectează următoarele câmpuri:
 
 - **Data_Doc_AssistedReadingReasons:long** - set predefinit de valori pentru care documentul a fost deschis în modul de citire asistată
 
+- **Data_Doc_AsyncOpenKind:long –** indică dacă s-a deschis o versiune memorată în cache a documentului cloud și ce logică de reîmprospătare asincronă s-a folosit.
+
 - **Data_Doc_ChunkingType:long** - cum este stocat documentul în SharePoint
 
 - **Data_Doc_EdpState:long** - starea Enterprise Data Protection a documentului
@@ -2798,8 +3472,6 @@ Se colectează următoarele câmpuri:
 
 - **Data_Doc_IsOpeningOfflineCopy:bool** - verifică dacă documentul este deschis din memoria cache locală
 
-- **Data_Doc_IsRtcAlwaysOn** - true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
-
 - **Data_Doc_IsSyncBacked:bool** - dacă documentul este deschis din folderul care folosește aplicația de sincronizare inversă OneDrive
 
 - **Data_Doc_Location:long** - set predefinit de valori privind locul de stocare a documentului (Local, SharePoint, WOPI, Rețea etc.)
@@ -2813,6 +3485,8 @@ Se colectează următoarele câmpuri:
 - **Data_Doc_ReadOnlyReasons:long** - set predefinit de valori privind motivul pentru care acest document a fost marcat doar în citire (blocat pe server, document final, protejat prin parolă pentru editare etc.)
 
 - **Data_Doc_ResourceIdHash:string** - codul hash al identificatorului de resurse pentru documentele stocate în cloud
+
+- **Data_Doc_RtcType** - indică modul în care a fost configurat canalul în timp real (RTC) pentru fișierul curent (dezactivat, neacceptat, la cerere, activat permanent etc.).
 
 - **Data_Doc_ServerDocId:string** - identificator imutabil pentru documentele stocate în cloud
 
@@ -2843,6 +3517,8 @@ Se colectează următoarele câmpuri:
 - **Data_DstDoc_AccessMode:long** - cum a fost deschis acest document (doar în citire | citire-scriere)
 
 - **Data_DstDoc_AssistedReadingReasons:long** - set predefinit de valori pentru care documentul a fost deschis în modul de citire asistată
+
+- **Data_DstDoc_AsyncOpenKind:long –** indică dacă s-a deschis o versiune memorată în cache a noului document cloud și ce logică de reîmprospătare asincronă s-a folosit.
 
 - **Data_DstDoc_ChunkingType:long** - cum este stocat documentul în SharePoint
 
@@ -2925,6 +3601,8 @@ Se colectează următoarele câmpuri:
 - **Data_SrcDoc_AccessMode:long** - cum a fost deschis acest document (doar în citire | citire-scriere)
 
 - **Data_SrcDoc_AssistedReadingReasons:long** - set predefinit de valori pentru care documentul a fost deschis în modul de citire asistată
+
+- **Data_SrcDoc_AsyncOpenKind:long –** indică dacă s-a deschis o versiune memorată în cache a documentului cloud original și ce logică de reîmprospătare asincronă s-a folosit.
 
 - **Data_SrcDoc_ChunkingType:long** - cum este stocat documentul în SharePoint
 
@@ -3398,6 +4076,68 @@ Se colectează următoarele câmpuri:
 
 - **Data.warningMessage** - mesaj de avertisment raportat de serviciu
 
+
+#### <a name="officevisiosharedfeatureexperimentation"></a>Office.Visio.Shared.FeatureExperimentation
+
+Urmărește configurația „flighting” a caracteristicii pentru utilizatori. Acest eveniment ne ajută să determinăm succesul sau eșecul edițiilor flight ale caracteristicilor.
+
+Se colectează următoarele câmpuri:
+
+  - **Data\_Enable:bool **– true în cazul în care caracteristica este activată pentru utilizatorul curent
+
+  - **Data\_Feature:string** – numele caracteristicii
+
+  - **Data\_Flighted:bool** – true în cazul în care caracteristica este activată
+
+  - **Data\_Licensed:bool** – true în cazul în care caracteristica este sub verificarea de licențiere
+
+  - **Data\_Subscriber:bool** – true arată că utilizatorul are licență cu abonament
+
+#### <a name="officevisiosharedrefreshsmartdiagram"></a>Office.Visio.Shared.RefreshSmartDiagram
+
+Capturează erorile de reîmprospătare a diagramei atunci când fișierul este creat prin DV. Aceasta ne ajută să depanăm erorile și problemele din reîmprospătarea datelor dintr-o diagramă DV.
+
+Se colectează următoarele câmpuri:
+
+  - **Data\_ConnectorsBasedOnSequence:bool** – true dacă diagrama reîmprospătată a fost creată inițial utilizând conectorul bazat pe opțiunea „secvență”
+
+  - **Data\_DialogError**:**string** – eroare în timpul reîmprospătării diagramei inteligente
+
+  - **Data\_FileError:string** – șir de eroare atunci când fișierul Excel conectat este nevalid
+
+  - **Data\_OverwriteSelected**:**bool** – true dacă utilizatorul a selectat opțiunea de înlocuire a diagramei în timpul reîmprospătării
+
+  - **Data\_WarningShown**:**bool** – true dacă utilizatorul a văzut vreun avertisment în timpul reîmprospătării datelor
+
+#### <a name="officevisiosharedwritebacktoexcel"></a>Office.Visio.Shared.WritebackToExcel
+
+Capturează erorile de răspuns Excel atunci când fișierul este creat prin DV. Aceasta ne ajută să depanăm erorile și problemele din răspunsul la date Excel dintr-o diagramă DV.
+
+Se colectează următoarele câmpuri:
+
+  - **Data\_ConnectorsBasedOnSequence:bool** – true atunci când conectorii sunt creați în funcție de setările de secvență
+
+  - **Data\_DataSourceType:string** – acest fișier indică dacă diagrama este creată din „Tabel” sau „Interval particularizat”
+
+  - **Data\_DialogError:string** – tip de eroare particularizată în timpul creării diagramei inteligente prin Excel
+
+  - **Data\_NoOfShapesAdded:int** – numărul de forme adăugate în timpul funcționalității writeback Excel
+
+  - **Data\_NoOfShapesDeleted:int** – numărul de forme șterse în timpul funcționalității writeback Excel
+
+  - **Data\_OverwriteSelected:bool** – true dacă utilizatorul a selectat opțiunea de înlocuire a datelor
+
+  - **Data\_SourceDataModified:bool** – true dacă s-au modificat datele sursă
+
+  - **Data\_WarningShown:bool** – true înseamnă că utilizatorul primește un avertisment privind actualizarea datelor
+
+  - **Data\_WarningShownBecauseOfPresenceOfFormula:bool** – true înseamnă că utilizatorul primește un avertisment din cauza prezenței formulei în Excel
+
+  - **Data\_WarningShownToAddNextStepID:bool** – true înseamnă că utilizatorul primește un avertisment, deoarece identificatorul pentru pasul următor lipsește din Excel
+
+  - **Data\_WarningShownToConvertToTable:bool** – true înseamnă că utilizatorul primește un avertisment pentru a efectua conversia datelor Excel în format de tabel
+
+
 #### <a name="officewordexperimentationdocumentstatsoncloseandsuspend"></a>Office.Word.Experimentation.DocumentStatsOnCloseAndSuspend
 
 Acest eveniment înregistrează în jurnal statistici de document pentru fiecare document atunci când Office Word este închis sau suspendat.  Evenimentul este utilizat pentru a corela editări în document, dimensiunea etc. cu erori de salvare documente, partajare de documente și colaborare online la documente.
@@ -3474,6 +4214,130 @@ Se colectează următoarele câmpuri:
 
   - **Data\_UsesCustomTemplate** - indică dacă documentul a fost creat pornind de la un șablon particularizat
 
+#### <a name="officewordfileopenuserinitiatedopen"></a>Office.Word.FileOpen.UserInitiatedOpen 
+
+Acest eveniment indică faptul că Office Word deschide un document la inițiativa utilizatorului și nu prin programare de către Office Word. În plus, conține date esențiale despre performanța la deschiderea fișierelor și este un eveniment de pornire a aplicației din perspectiva utilizatorului.  Evenimentul monitorizează dacă deschiderea fișierelor funcționează așa cum trebuie. În plus, se folosește pentru a calcula utilizatorii/dispozitivele active lunar și măsurătorile de fiabilitate cloud. 
+ 
+Se colectează următoarele câmpuri:
+
+- **Data_AddDocTelemRes** - raportează dacă am putut completa corect alte valori legate de telemetria documentelor din eveniment. Utilizat pentru diagnostice privind calitatea datelor. 
+
+- **Data_BytesAsynchronous** - numărul de byți (comprimat) fără care credem că putem deschide fișierul dacă îi obținem înainte ca utilizatorul să vrea să editeze sau să salveze. 
+
+- **Data_BytesAsynchronousWithWork** - numărul de byți (comprimat) fără care credem că putem deschide fișierul, dar care ar necesita investiții de cod semnificative pentru a funcționa 
+
+- **Data_BytesSynchronous** - numărul de byți (comprimat) de care avem nevoie înainte să putem deschide fișierul 
+
+- **Data_BytesUnknown** - numărul de byți din componentele de documente pe care nu ne așteptăm să le găsim. 
+
+- **Data_Doc_AccessMode** - documentul este numai în citire/editabil 
+
+- **Data_Doc_AssistedReadingReasons** - set predefinit de valori privind motivul pentru care documentul a fost deschis în modul de citire asistată 
+
+- **Data_Doc_ChunkingType** - unități utilizate pentru deschiderea incrementală a documentelor 
+
+- **Data_Doc_EdpState** - setare de protecție a datelor electronice pentru document 
+
+- **Data_Doc_Ext** - extensia documentului (docx/xlsb/pptx etc.) 
+
+- **Data_Doc_FileFormat** - versiunea de protocol pentru formatul fișierului 
+
+- **Data_Doc_Fqdn** - numele de domeniu OneDrive sau SharePoint Online 
+
+- **Data_Doc_FqdnHash** - codul hash unidirecțional pentru numele de domeniu identificabil al clientului 
+
+- **Data_Doc_IdentityTelemetryId** - codul hash unidirecțional pentru identitatea de utilizator folosită pentru deschidere 
+
+- **Data_Doc_InitializationScenario** - înregistrează cum a fost deschis documentul 
+
+- **Data_Doc_IOFlags** - rapoarte privind semnalizările memorate în cache folosite pentru a seta opțiuni de solicitare deschise 
+
+- **Data_Doc_IrmRights** - acțiunile permise de politica de protejare a datelor electronice aplicată pentru document/utilizator 
+
+- **Data_Doc_IsIncrementalOpen** - semnalizare care indică faptul că documentul a fost deschis incremental 
+
+- **Data_Doc_IsOcsSupported** - semnalizare care indică faptul că documentul este acceptat în serviciul de colaborare 
+
+- **Data_Doc_IsOpeningOfflineCopy** - semnalizare care indică faptul că s-a deschis copia offline a unui document 
+
+- **Data_Doc_IsSyncBacked** - semnalizare care indică faptul că pe computer există o copie sincronizată automat a documentului 
+
+- **Data_Doc_Location** - indică ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint) 
+
+- **Data_Doc_LocationDetails** - indică ce Folder cunoscut a furnizat un document stocat local 
+
+- **Data_Doc_NumberCoAuthors** - numărul de alți utilizatori dintr-o sesiune de editare în colaborare 
+
+- **Data_Doc_PasswordFlags** - arată semnalizările de parole pentru citire sau citire/scriere setate 
+
+- **Data_Doc_ReadOnlyReasons** - motivele pentru care documentul a fost deschis doar în citire 
+
+- **Data_Doc_ResourceIdHash** - identificator de document anonimizat, folosit în diagnosticarea problemelor 
+
+- **Data_Doc_ServerDocId** - identificator de document anonimizat și invariabil, folosit în diagnosticarea problemelor 
+
+- **Data_Doc_ServerProtocol** - versiunea de protocol folosită în comunicarea cu serviciul 
+
+- **Data_Doc_ServerType** - tipul de server care oferă serviciul (SharePoint, OneDrive, WOPI etc.) 
+
+- **Data_Doc_ServerVersion** - versiunea serverului care oferă serviciul 
+
+- **Data_Doc_SessionId** - versiunea serverului care oferă serviciul 
+
+- **Data_Doc_SharePointServiceContext** - informații de diagnosticare din solicitările SharePoint Online 
+
+- **Data_Doc_SizeInBytes** - indicator privind dimensiunea documentului 
+
+- **Data_Doc_SpecialChars** - indicator privind caracterele speciale din calea sau adresa URL a documentului 
+
+- **Data_Doc_StreamAvailability** - indicator care arată dacă șirul documentului este disponibil/dezactivat 
+
+- **Data_Doc_SyncBackedType** - indicator privind tipul documentului (local sau bazat pe servicii) 
+
+- **Data_Doc_UrlHash** - cod hash unidirecțional, pentru crearea unui identificator naiv de document 
+
+- **Data_Doc_WopiServiceId** - conține identificatorul unic al furnizorului de servicii WOPI 
+
+- **Data_EditorDisablingRename** - identificatorul primului editor care a provocat dezactivarea redenumirii 
+
+- **Data_EditorsCount** - numărul de editori din document 
+
+- **Data_ForceReadWriteReason** - valoare întreagă care reprezintă motivul pentru care fișierul a fost forțat în modul citire/scriere 
+
+- **Data_FSucceededAfterRecoverableFailure** - arată că deschiderea a reușit după repararea unei erori la deschiderea documentului 
+
+- **Data_LastLoggedTag** - etichetă unică pentru site-ul de apelare a codului folosit pentru a identifica momentele când încercăm să nu realizăm deschiderea de două ori (folosit pentru diagnosticarea calității datelor) 
+
+- **Data_LinkStyles** - indică dacă asociem stiluri de șabloane 
+
+- **Data_MainPdod** - identificatorul documentului din procesul Office Word 
+
+- **Data_Measurements** - șir codificat cu detalii de timp pentru diferitele părți ale deschiderii. Utilizat pentru a diagnostica performanța de deschidere. 
+
+- **Data_MoveDisabledReason** - eroarea care dezactivează mutarea pentru document 
+
+- **Data_MoveFlightEnabled** - dacă ediția flight este activată pentru caracteristica de mutare 
+
+- **Data_OpenInitiateKind** - tipul scenariului în care utilizatorii au pornit operațiunea de deschidere a fișierului. 
+
+- **Data_PartsUnknown** - numărul de componente ale documentului pentru care nu am putut obține date 
+
+- **Data_RecoverableFailureInitiationLocationTag** - etichetă unică pentru site-ul de apelare a codului folosit pentru a identifica locul din cod în care încercăm să remediem fișierul înainte de a-l deschide 
+
+- **Data_RenameDisabledReason** - eroare care face redenumirea să fie dezactivată pentru acest document 
+
+- **Data_RenameFlightEnabled** - dacă este activată ediția flight pentru caracteristica de redenumire 
+
+- **Data_SecondaryTag** - etichetă unică pentru site-ul de apelare a codului folosit pentru a adăuga date suplimentare despre erori pentru deschidere. 
+
+- **Data_TemplateFormat** - formatul de fișier al șablonului pe care se bazează documentul 
+
+- **Data_UsesNormal** - indică dacă documentul deschis se bazează pe șablonul normal. 
+
+- **Data_VerboseMeasurements** - șir codificat cu detalii de timp pentru diferitele părți ale deschiderii.  Utilizat pentru măsurarea performanței, activat doar pentru inelele interne. 
+
+
+
 #### <a name="officewordfilesaveactcmdgosubsaveas"></a>Office.Word.FileSave.ActCmdGosubSaveAs
 
 Acest eveniment indică faptul că un utilizator salvează modificările într-un document nou. Evenimentul monitorizează dacă salvarea într-un document nou funcționează conform așteptărilor. În plus, se folosește pentru a calcula utilizatorii/dispozitivele active lunar și măsurătorile de fiabilitate cloud.
@@ -3487,7 +4351,9 @@ Se colectează următoarele câmpuri:
 - **Data_Doc_AccessMode** - documentul este numai în citire/editabil
 
 - **Data_Doc_AssistedReadingReasons** - set predefinit de valori privind motivul pentru care documentul a fost deschis în modul de citire asistată
-    
+
+- **Data_Doc_AsyncOpenKind –** indică dacă s-a deschis o versiune memorată în cache a documentului cloud și ce logică de reîmprospătare asincronă s-a folosit.
+
 - **Data_Doc_ChunkingType** - unități utilizate pentru deschiderea incrementală a documentelor
 
 - **Data_Doc_EdpState** - setare de protecție a datelor electronice pentru document
@@ -3514,8 +4380,6 @@ Se colectează următoarele câmpuri:
     
 - **Data_Doc_IsOpeningOfflineCopy** - semnalizare care indică faptul că s-a deschis copia offline a unui document
 
-- **Data_Doc_IsRtcAlwaysOn** - true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
-
 - **Data_Doc_IsSyncBacked** - semnalizare care indică faptul că pe computer există o copie sincronizată automat a documentului
 
 - **Data_Doc_Location** - indică ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint etc.)
@@ -3529,6 +4393,8 @@ Se colectează următoarele câmpuri:
 - **Data_Doc_ReadOnlyReasons** - motivele pentru care documentul a fost deschis doar în citire
 
 - **Data_Doc_ResourceIdHash** - identificator de document anonimizat, folosit în diagnosticarea problemelor
+
+- **Data_Doc_RtcType** - indică modul în care a fost configurat canalul în timp real (RTC) pentru fișierul curent (dezactivat, neacceptat, la cerere, activat permanent etc.).
 
 - **Data_Doc_ServerDocId** - identificator de document anonimizat și invariabil, folosit în diagnosticarea problemelor
 
@@ -3578,6 +4444,8 @@ Se colectează următoarele câmpuri:
 - **Data_Doc_AccessMode** - documentul este numai în citire/editabil
 
 - **Data_Doc_AssistedReadingReasons** - set predefinit de valori privind motivul pentru care documentul a fost deschis în modul de citire asistată
+
+- **Data_Doc_AsyncOpenKind –** indică dacă s-a deschis o versiune memorată în cache a documentului cloud și ce logică de reîmprospătare asincronă s-a folosit.
     
 - **Data_Doc_ChunkingType** - unități utilizate pentru deschiderea incrementală a documentelor
 
@@ -3605,8 +4473,6 @@ Se colectează următoarele câmpuri:
     
 - **Data_Doc_IsOpeningOfflineCopy** - semnalizare care indică faptul că s-a deschis copia offline a unui document
 
-- **Data_Doc_IsRtcAlwaysOn** - true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
-
 - **Data_Doc_IsSyncBacked** - semnalizare care indică faptul că pe computer există o copie sincronizată automat a documentului
 
 - **Data_Doc_Location** - indică ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint etc.)
@@ -3620,6 +4486,8 @@ Se colectează următoarele câmpuri:
 - **Data_Doc_ReadOnlyReasons** - motivele pentru care documentul a fost deschis doar în citire
 
 - **Data_Doc_ResourceIdHash** - identificator de document anonimizat, folosit în diagnosticarea problemelor
+
+- **Data_Doc_RtcType** - indică modul în care a fost configurat canalul în timp real (RTC) pentru fișierul curent (dezactivat, neacceptat, la cerere, activat permanent etc.).
 
 - **Data_Doc_ServerDocId** - identificator de document anonimizat și invariabil, folosit în diagnosticarea problemelor
 
@@ -3676,6 +4544,8 @@ Se colectează următoarele câmpuri:
 
 - **Data_Doc_AssistedReadingReasons** - set predefinit de valori privind motivul pentru care documentul a fost deschis în modul de citire asistată
 
+- **Data_Doc_AsyncOpenKind –** indică dacă s-a deschis o versiune memorată în cache a documentului cloud și ce logică de reîmprospătare asincronă s-a folosit.
+
 - **Data_Doc_ChunkingType** - unități utilizate pentru deschiderea incrementală a documentelor
 
 - **Data_Doc_EdpState** - setare de protecție a datelor electronice pentru document
@@ -3702,8 +4572,6 @@ Se colectează următoarele câmpuri:
     
 - **Data_Doc_IsOpeningOfflineCopy** - semnalizare care indică faptul că s-a deschis copia offline a unui document
 
-- **Data_Doc_IsRtcAlwaysOn** - true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
-
 - **Data_Doc_IsSyncBacked** - semnalizare care indică faptul că pe computer există o copie sincronizată automat a documentului
 
 - **Data_Doc_Location** - indică ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint etc.)
@@ -3717,6 +4585,8 @@ Se colectează următoarele câmpuri:
 - **Data_Doc_ReadOnlyReasons** - motivele pentru care documentul a fost deschis doar în citire
 
 - **Data_Doc_ResourceIdHash** - identificator de document anonimizat, folosit în diagnosticarea problemelor
+
+- **Data_Doc_RtcType** - indică modul în care a fost configurat canalul în timp real (RTC) pentru fișierul curent (dezactivat, neacceptat, la cerere, activat permanent etc.).
 
 - **Data_Doc_ServerDocId** - identificator de document anonimizat și invariabil, folosit în diagnosticarea problemelor
 
@@ -3795,6 +4665,8 @@ Se colectează următoarele câmpuri:
 
 - **Data_Doc_AssistedReadingReasons** - set predefinit de valori privind motivul pentru care documentul a fost deschis în modul de citire asistată
 
+- **Data_Doc_AsyncOpenKind –** indică dacă s-a deschis o versiune memorată în cache a documentului cloud și ce logică de reîmprospătare asincronă s-a folosit.
+
 - **Data_Doc_ChunkingType** - unități utilizate pentru deschiderea incrementală a documentelor
 
 - **Data_Doc_EdpState** - setare de protecție a datelor electronice pentru document
@@ -3819,8 +4691,6 @@ Se colectează următoarele câmpuri:
 
 - **Data_Doc_IsOpeningOfflineCopy** - semnalizare care indică faptul că s-a deschis copia offline a unui document
 
-- **Data_Doc_IsRtcAlwaysOn** - true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
-
 - **Data_Doc_IsSyncBacked** - semnalizare care indică faptul că pe computer există o copie sincronizată automat a documentului
 
 - **Data_Doc_Location** - indică ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint etc.)
@@ -3832,6 +4702,8 @@ Se colectează următoarele câmpuri:
 - **Data_Doc_ReadOnlyReasons** - motivele pentru care documentul a fost deschis doar în citire
 
 - **Data_Doc_ResourceIdHash** - identificator de document anonimizat, folosit în diagnosticarea problemelor
+
+- **Data_Doc_RtcType** - indică modul în care a fost configurat canalul în timp real (RTC) pentru fișierul curent (dezactivat, neacceptat, la cerere, activat permanent etc.).
 
 - **Data_Doc_ServerDocId** - identificator de document anonimizat și invariabil, folosit în diagnosticarea problemelor
 
@@ -3856,6 +4728,8 @@ Se colectează următoarele câmpuri:
 - **Data_DstDoc_AccessMode** - documentul de destinație este doar în citire/editabil
 
 - **Data_DstDoc_AssistedReadingReasons** - set predefinit de valori privind motivul pentru care documentul de destinație a fost deschis în modul de citire asistată
+
+- **Data_DstDoc_AsyncOpenKind –** indică dacă s-a deschis o versiune memorată în cache a noului document cloud și ce logică de reîmprospătare asincronă s-a folosit.
     
 - **Data_DstDoc_ChunkingType** - unități utilizate pentru deschiderea incrementală a documentelor
 
@@ -3943,6 +4817,8 @@ Se colectează următoarele câmpuri:
 
 - **Data_SrcDoc_AssistedReadingReasons** - set predefinit de valori privind motivul pentru care documentul a fost deschis în modul de citire asistată
 
+- **Data_SrcDoc_AsyncOpenKind –** indică dacă s-a deschis o versiune memorată în cache a documentului cloud original și ce logică de reîmprospătare asincronă s-a folosit.
+
 - **Data_SrcDoc_ChunkingType** - unități utilizate pentru deschiderea incrementală a documentelor
 
 - **Data_SrcDoc_EdpState** - setare de protecție a datelor electronice pentru documentul sursă
@@ -4010,66 +4886,6 @@ Se colectează următoarele câmpuri:
 - **Data_SrcDocIsUnnamedOrNew** - indică dacă documentul pe care îl salvăm este nou
 
 
-#### <a name="officevisiosharedfeatureexperimentation"></a>Office.Visio.Shared.FeatureExperimentation
-
-Urmărește configurația „flighting” a caracteristicii pentru utilizatori. Acest eveniment ne ajută să determinăm succesul sau eșecul edițiilor flight ale caracteristicilor.
-
-Se colectează următoarele câmpuri:
-
-  - **Data\_Enable:bool **– true în cazul în care caracteristica este activată pentru utilizatorul curent
-
-  - **Data\_Feature:string** – numele caracteristicii
-
-  - **Data\_Flighted:bool** – true în cazul în care caracteristica este activată
-
-  - **Data\_Licensed:bool** – true în cazul în care caracteristica este sub verificarea de licențiere
-
-  - **Data\_Subscriber:bool** – true arată că utilizatorul are licență cu abonament
-
-#### <a name="officevisiosharedrefreshsmartdiagram"></a>Office.Visio.Shared.RefreshSmartDiagram
-
-Capturează erorile de reîmprospătare a diagramei atunci când fișierul este creat prin DV. Aceasta ne ajută să depanăm erorile și problemele din reîmprospătarea datelor dintr-o diagramă DV.
-
-Se colectează următoarele câmpuri:
-
-  - **Data\_ConnectorsBasedOnSequence:bool** – true dacă diagrama reîmprospătată a fost creată inițial utilizând conectorul bazat pe opțiunea „secvență”
-
-  - **Data\_DialogError**:**string** – eroare în timpul reîmprospătării diagramei inteligente
-
-  - **Data\_FileError:string** – șir de eroare atunci când fișierul Excel conectat este nevalid
-
-  - **Data\_OverwriteSelected**:**bool** – true dacă utilizatorul a selectat opțiunea de înlocuire a diagramei în timpul reîmprospătării
-
-  - **Data\_WarningShown**:**bool** – true dacă utilizatorul a văzut vreun avertisment în timpul reîmprospătării datelor
-
-#### <a name="officevisiosharedwritebacktoexcel"></a>Office.Visio.Shared.WritebackToExcel
-
-Capturează erorile de răspuns Excel atunci când fișierul este creat prin DV. Aceasta ne ajută să depanăm erorile și problemele din răspunsul la date Excel dintr-o diagramă DV.
-
-Se colectează următoarele câmpuri:
-
-  - **Data\_ConnectorsBasedOnSequence:bool** – true atunci când conectorii sunt creați în funcție de setările de secvență
-
-  - **Data\_DataSourceType:string** – acest fișier indică dacă diagrama este creată din „Tabel” sau „Interval particularizat”
-
-  - **Data\_DialogError:string** – tip de eroare particularizată în timpul creării diagramei inteligente prin Excel
-
-  - **Data\_NoOfShapesAdded:int** – numărul de forme adăugate în timpul funcționalității writeback Excel
-
-  - **Data\_NoOfShapesDeleted:int** – numărul de forme șterse în timpul funcționalității writeback Excel
-
-  - **Data\_OverwriteSelected:bool** – true dacă utilizatorul a selectat opțiunea de înlocuire a datelor
-
-  - **Data\_SourceDataModified:bool** – true dacă s-au modificat datele sursă
-
-  - **Data\_WarningShown:bool** – true înseamnă că utilizatorul primește un avertisment privind actualizarea datelor
-
-  - **Data\_WarningShownBecauseOfPresenceOfFormula:bool** – true înseamnă că utilizatorul primește un avertisment din cauza prezenței formulei în Excel
-
-  - **Data\_WarningShownToAddNextStepID:bool** – true înseamnă că utilizatorul primește un avertisment, deoarece identificatorul pentru pasul următor lipsește din Excel
-
-  - **Data\_WarningShownToConvertToTable:bool** – true înseamnă că utilizatorul primește un avertisment pentru a efectua conversia datelor Excel în format de tabel
-
 #### <a name="officewordworddocumentdirtyflagchanged"></a>Office.Word.Word.DocumentDirtyFlagChanged
 
 Acest eveniment indică faptul că Office Word editează un document care modifică starea internă a documentului în „defazată”. Astfel, Microsoft poate evalua starea de funcționare a caracteristicii pentru documentul editat. Evenimentul este un mesaj repetat din editările utilizatorului. În plus, se folosește pentru a calcula utilizatorii/dispozitivele active lunar.
@@ -4095,9 +4911,254 @@ Se colectează următoarele câmpuri:
   - **Data\_UrlHash –** codul hash din calea documentului
 
   - **Data\_ViewKind –** tipul de vizualizare Word
+
+
+#### <a name="parselicenseop"></a>ParseLicenseOp
+
+Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM.  Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează operațiunea de analiză a licențelor. 
+
+Se colectează următoarele câmpuri:
+
+- **AppInfo.ClientHierarchy** - ierarhie client care indică faptul că aplicația rulează în mediul de producție sau în mediul de dezvoltator
+
+- **AppInfo.Name** - nume aplicație
+
+- **AppInfo.Version** - versiunea aplicației
+
+- **iKey** - ID server înregistrator
+
+- **RMS.ApplicationScenarioId** - ID al scenariului furnizat de aplicație
+
+- **RMS.Duration** - timp total pentru finalizarea operațiunii
+
+- **RMS.DurationWithoutExternalOps** - timp total minus operațiuni externe consumate, cum ar fi latența de rețea.
+
+- **RMS.ErrorCode** - codul de eroare returnat de operațiune, dacă există
+
+- **RMS.HttpCall** - indică dacă există operațiune HTTP
+
+- **RMS.LicenseFormat** - formatul licenței: Xrml sau Json
+
+- **RMS.Result** - succes sau eșec al operațiunii
+
+- **RMS.ScenarioId** - ID al scenariului definit de clientul Serviciu de administrare a drepturilor
+
+- **RMS.SDKVersion** - versiunea clientului pentru Serviciul de administrare a drepturilor
+
+- **RMS.ServerType** - tipul de server al Serviciului de administrare a drepturilor 
+
+- **RMS.StatusCode** - cod de stare al rezultatului operațiunii
+
+- **RMS.VerifyCertChainDuration** - durată timp pentru a verifica lanțul de certificate
+
+- **RMS.VerifySignatureDuration** - durată timp pentru a verifica semnătura
+
+#### <a name="storeop"></a>StoreOp
+
+Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM.  Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează operațiunea de stocare a licențelor pentru Serviciul de administrare a drepturilor. 
+
+Se colectează următoarele câmpuri:
+
+- **AppInfo.ClientHierarchy** - ierarhie client care indică faptul că aplicația rulează în mediul de producție sau în mediul de dezvoltator
+
+- **AppInfo.Name** - nume aplicație.
+
+- **AppInfo.Version** - versiunea aplicației
+
+- **iKey** - ID al serverului pentru servicii de înregistrare
+
+- **RMS.ApplicationScenarioId** - ID al scenariului furnizat de aplicație
+
+- **RMS.ContentId** - ID-ul de conținut din Licența pentru utilizatorul final
+
+- **RMS.Duration** - timp total pentru finalizarea apelului API
+
+- **RMS.DurationWithoutExternalOps** - timp total minus operațiuni externe consumate, cum ar fi latența de rețea.
+
+- **RMS.ErrorCode** - codul de eroare returnat de operațiune, dacă există
+
+- **RMS.HttpCall** - indică dacă există operațiune HTTP
+
+- **RMS.LicenseFormat** - formatul licenței: Xrml sau Json
+
+- **RMS.OperationName** - nume operațiune
+
+- **RMS.Result** - succes sau eșec al operațiunii
+
+- **RMS.ScenarioId** - ID al scenariului definit de clientul Serviciu de administrare a drepturilor
+
+- **RMS.SDKVersion** - versiunea clientului pentru Serviciul de administrare a drepturilor
+
+- **RMS.ServerType** - tipul de server al Serviciului de administrare a drepturilor 
+
+- **RMS.StatusCode** - cod de stare al rezultatului operațiunii
+
+- **RMS.Url** - URL-ul serverului pentru Serviciul de administrare a drepturilor
+
+
 ### <a name="application-status-and-boot-subtype"></a>*Subtipul de inițializare și starea aplicației*
 
 Stabilește dacă au avut loc anumite evenimente de caracteristici, cum ar fi pornirea sau oprirea, și dacă respectiva caracteristică rulează.
+
+#### <a name="dnslookupop"></a>DnsLookupOp
+
+Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM.  Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează operațiunea de căutare a informațiilor DNS. 
+
+Se colectează următoarele câmpuri:
+
+- **AppInfo.ClientHierarchy** - ierarhie client care indică faptul că aplicația rulează în mediul de producție sau în mediul de dezvoltator
+
+- **AppInfo.Name** - nume aplicație.
+
+- **AppInfo.Version** - versiunea aplicației
+
+- **iKey** - ID al serverului pentru servicii de înregistrare
+
+- **RMS.ApplicationScenarioId** - ID al scenariului furnizat de aplicație
+
+- **RMS.Duration** - timp total pentru finalizarea operațiunii
+
+- **RMS.DurationWithoutExternalOps** - timp total minus operațiuni externe consumate, cum ar fi latența de rețea.
+
+- **RMS.ErrorCode** - codul de eroare returnat de operațiune, dacă există
+
+- **RMS.HttpCall** - indică dacă există operațiune http
+
+- **RMS.LicenseFormat** - formatul licenței: Xrml sau Json
+
+- **RMS.NoOfDomainsSearched** - numărul de domenii căutate  
+
+- **RMS.NoOfDomainsSkipped** - numărul de domenii ignorate 
+
+- **RMS.Result** - succes sau eșec al operațiunii
+
+- **RMS.ScenarioId** - ID al scenariului definit de clientul Serviciu de administrare a drepturilor
+
+- **RMS.SDKVersion** - versiunea clientului pentru Serviciul de administrare a drepturilor
+
+- **RMS.ServerType** - tipul de server al Serviciului de administrare a drepturilor 
+
+- **RMS.StatusCode** - cod de stare al rezultatului operațiunii
+
+#### <a name="getuserop"></a>GetUserOp
+
+Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM.  Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează operațiunea obținere a certificatelor de utilizator. 
+
+Se colectează următoarele câmpuri:
+
+- **AppInfo.ClientHierarchy** - ierarhie client care indică faptul că aplicația rulează în mediul de producție sau în mediul de dezvoltator
+
+- **AppInfo.Name** - nume aplicație
+
+- **AppInfo.Version** - versiunea aplicației
+
+- **iKey** - ID al serverului pentru servicii de înregistrare
+
+- **RMS.ApplicationScenarioId** - ID al scenariului furnizat de aplicație
+
+- **RMS.ContentId** - ID-ul de conținut
+
+- **RMS.Duration** - timp total pentru finalizarea operațiunii
+
+- **RMS.DurationWithoutExternalOps** - timp total minus operațiuni externe consumate, cum ar fi latența de rețea.
+
+- **RMS.ErrorCode** - codul de eroare returnat de operațiune
+
+- **RMS.HttpCall** - indică dacă există operațiune HTTP
+
+- **RMS.LicenseFormat** - formatul licenței: Xrml sau Json
+
+- **RMS.Result** - succes sau eșec al operațiunii
+
+- **RMS.ScenarioId** - ID al scenariului definit de clientul Serviciu de administrare a drepturilor
+
+- **RMS.SDKVersion** - versiunea clientului pentru Serviciul de administrare a drepturilor
+
+- **RMS.ServerType** - tipul de server al Serviciului de administrare a drepturilor 
+
+- **RMS.StatusCode** - cod de stare al rezultatului operațiunii
+
+- **RMS.Type** - tipul informațiilor despre utilizator
+
+#### <a name="httpop"></a>HttpOp
+
+Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM.  Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează operațiunea de solicitare http.
+
+Se colectează următoarele câmpuri:
+
+- **AppInfo.ClientHierarchy** - ierarhie client care indică faptul că aplicația rulează în mediul de producție sau în mediul de dezvoltator
+    
+- **AppInfo.Name** - nume aplicație
+
+- **AppInfo.Version** - versiunea aplicației
+
+- **iKey** - ID al serverului pentru servicii de înregistrare
+
+- **RMS.ApplicationScenarioId** - ID al scenariului furnizat de aplicație
+
+- **RMS.CallBackStatus** - starea rezultatului returnat de apelul invers de autentificare
+
+- **RMS.CallbackTime** - timpul consumat de apelul invers de autentificare 
+
+- **RMS.CorrelationId** - ID-ul de corelare a solicitării http
+
+- **RMS.DataSize** - dimensiunea datelor din solicitarea HTTP
+
+- **RMS.Duration** - timp total pentru finalizarea operațiunii
+
+- **RMS.DurationWithoutExternalOps** - timp total minus operațiuni externe consumate, cum ar fi latența de rețea.
+
+- **RMS.ErrorCode** - codul de eroare returnat de operațiune, dacă există
+
+- **RMS.HttpCall** - indică dacă există operațiune http imbricată. 
+
+- **RMS.LicenseFormat** - formatul licenței: Xrml sau Json
+
+- **RMS.OperationName** - nume operațiune
+
+- **RMS.Result** - succes sau eșec al operațiunii
+
+- **RMS.ScenarioId** - ID al scenariului definit de clientul Serviciu de administrare a drepturilor
+
+- **RMS.SDKVersion** - versiunea clientului pentru Serviciul de administrare a drepturilor
+
+- **RMS.ServerType** - tipul de server al Serviciului de administrare a drepturilor 
+
+- **RMS.StatusCode** - cod de stare al rezultatului operațiunii
+
+- **RMS.Url** - URL-ul serverului pentru Serviciul de administrare a drepturilor
+
+- **RMS.WinhttpCallbackStatus** - starea rezultatului apelului invers winhttp
+
+#### <a name="ipccreateoauth2token"></a>IpcCreateOauth2Token
+
+Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează apelul API IpcCreateOauth2Token. 
+
+Se colectează următoarele câmpuri:
+
+- **AppInfo.ClientHierarchy** - ierarhie client care indică faptul că aplicația rulează în mediul de producție sau în mediul de dezvoltator
+    
+- **AppInfo.Name** - nume aplicație.
+
+- **AppInfo.Version** - versiunea aplicației
+
+- **iKey** - ID al serverului pentru servicii de înregistrare
+
+- **RMS.Duration** - timp total pentru finalizarea apelului API
+
+- **RMS.DurationWithoutExternalOps** - timp total minus operațiuni externe consumate, cum ar fi latența de rețea.
+
+- **RMS.ErrorCode** - codul de eroare returnat de apelul API, dacă există.
+
+- **RMS.HttpCall** - indică dacă există operațiune HTTP
+
+- **RMS.Result** - succes sau eșec al apelului API
+
+- **RMS.ScenarioId** - ID al scenariului definit de API
+
+- **RMS.SDKVersion** - versiunea clientului pentru Serviciul de administrare a drepturilor
+
+- **RMS.StatusCode** - cod de stare al rezultatului returnat
 
 #### <a name="officeextensibilityofficejsappactivated"></a>Office.Extensibility.OfficeJS.Appactivated
 
@@ -4116,6 +5177,8 @@ Se colectează următoarele câmpuri:
   - **Data\_AppSizeWidth –** Adăugați**-** la lățimea ferestrei
 
   - **Data\_AppURL –** URL-ul programului de completare; înregistrează adresa URL completă pentru programele de completare din magazin și domeniul adresei URL pentru cele din afara magazinului
+
+  - **Data_Doc_AsyncOpenKind:long –** indică dacă s-a deschis o versiune memorată în cache a documentului cloud și ce logică de reîmprospătare asincronă s-a folosit.
 
   - **Data\_AuthorsCount:integer –** numărul de autori care au editat documentul în această sesiune
 
@@ -4147,9 +5210,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_Doc\_IsIncrementalOpen:bool –** : documentul a fost deschis incremental (caracteristică nouă care deschide documentul fără să-l descarce în totalitate)
 
-  - **Data\_Doc\_IsOpeningOfflineCopy:bool -** documentul este deschis din memoria cache locală?
-
-  - **Data_Doc_IsRtcAlwaysOn -** true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
+  - **Data\_Doc\_IsOpeningOfflineCopy:bool –** documentul este deschis din memoria cache locală?
 
   - **Data\_Doc\_IsSyncBacked:bool –** true când acesta este un document de server care există la nivel local și este sincronizat cu serverul (de exemplu, prin aplicațiile client OneDrive sau ODB)
 
@@ -4158,6 +5219,8 @@ Se colectează următoarele câmpuri:
   - **Data\_Doc\_LocationDetails:long –** setul predefinit de valori pentru locația mai detaliată (folderul Temp, folderul de descărcări, Documente OneDrive, Imagini OneDrive
 
   - **Data\_Doc\_ResourceIdHash:string –** codul hash al identificatorului de resursă pentru documentele stocate în cloud
+
+  - **Data_Doc_RtcType -**  indică modul în care a fost configurat canalul în timp real (RTC) pentru fișierul curent (dezactivat, neacceptat, la cerere, activat permanent etc.).
 
   - **Data\_Doc\_ServerDocId:string –** identificatorul imutabil pentru documentele stocate în cloud
 
@@ -4495,6 +5558,8 @@ Se colectează următoarele câmpuri:
 
   - **Data\_Doc\_AssistedReadingReasons:long –** set predefinit de valori pentru care documentul a fost deschis în modul de citire asistată
 
+  - **Data_Doc_AsyncOpenKind:long –** indică dacă s-a deschis o versiune memorată în cache a documentului cloud și ce logică de reîmprospătare asincronă s-a folosit.
+
   - **Data\_Doc\_ChunkingType:long –** cum este stocat documentul în SharePoint
 
   - **Data\_Doc\_EdpState:long –** starea Enterprise Data Protection a documentului
@@ -4525,8 +5590,6 @@ Se colectează următoarele câmpuri:
 
   - **Data\_Doc\_IsOpeningOfflineCopy:bool –** dacă documentul este deschis din memoria cache locală?
 
-  - **Data_Doc_IsRtcAlwaysOn -** true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
-
   - **Data\_Doc\_IsSyncBacked:bool –** dacă documentul este deschis din folderul care folosește aplicația de sincronizare OneDrive
 
   - **Data\_Doc\_Location:long –** set predefinit de valori privind locul de stocare a documentului (Local, SharePoint, WOPI, Rețea etc.)
@@ -4540,6 +5603,8 @@ Se colectează următoarele câmpuri:
   - **Data\_Doc\_ReadOnlyReasons:long –** set predefinit de valori privind motivul pentru care acest document a fost marcat doar în citire (blocat pe server, document final, protejat prin parolă pentru editare etc.)
 
   - **Data\_Doc\_ResourceIdHash:string –** codul hash al identificatorului de resurse pentru documentele stocate în cloud
+
+  - **Data_Doc_RtcType -**  indică modul în care a fost configurat canalul în timp real (RTC) pentru fișierul curent (dezactivat, neacceptat, la cerere, activat permanent etc.).
 
   - **Data\_Doc\_ServerDocId:string –** identificator imutabil pentru documentele stocate în cloud
 
@@ -4959,6 +6024,8 @@ Se colectează următoarele câmpuri:
 
 - **Data_Doc_AssistedReadingReasons** - set predefinit de valori privind motivul pentru care documentul a fost deschis în modul de citire asistată
 
+- **Data_Doc_AsyncOpenKind –** indică dacă s-a deschis o versiune memorată în cache a documentului cloud și ce logică de reîmprospătare asincronă s-a folosit.
+
 - **Data_Doc_ChunkingType** - unități utilizate pentru deschiderea incrementală a documentelor
 
 - **Data_Doc_EdpState** - setare de protecție a datelor electronice pentru document
@@ -4985,8 +6052,6 @@ Se colectează următoarele câmpuri:
 
 - **Data_Doc_IsOpeningOfflineCopy** - semnalizare care indică faptul că s-a deschis copia offline a unui document
 
-- **Data_Doc_IsRtcAlwaysOn** - true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
-
 - **Data_Doc_IsSyncBacked** - semnalizare care indică faptul că pe computer există o copie sincronizată automat a documentului
 
 - **Data_Doc_Location** - indică ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint etc.)
@@ -5000,6 +6065,8 @@ Se colectează următoarele câmpuri:
 - **Data_Doc_ReadOnlyReasons** - motivele pentru care documentul a fost deschis doar în citire
 
 - **Data_Doc_ResourceIdHash** - identificator de document anonimizat, folosit în diagnosticarea problemelor
+
+- **Data_Doc_RtcType** - indică modul în care a fost configurat canalul în timp real (RTC) pentru fișierul curent (dezactivat, neacceptat, la cerere, activat permanent etc.).
 
 - **Data_Doc_ServerDocId** - identificator de document anonimizat și invariabil, folosit în diagnosticarea problemelor 
 
@@ -5082,6 +6149,8 @@ Se colectează următoarele câmpuri:
 
 - **Data_Doc_AssistedReadingReasons** - set predefinit de valori privind motivul pentru care documentul a fost deschis în modul de citire asistată
 
+- **Data_Doc_AsyncOpenKind –** indică dacă s-a deschis o versiune memorată în cache a documentului cloud și ce logică de reîmprospătare asincronă s-a folosit.
+
 - **Data_Doc_ChunkingType** - unități utilizate pentru deschiderea incrementală a documentelor
 
 - **Data_Doc_EdpState** - setare de protecție a datelor electronice pentru document
@@ -5108,8 +6177,6 @@ Se colectează următoarele câmpuri:
     
 - **Data_Doc_IsOpeningOfflineCopy** - semnalizare care indică faptul că s-a deschis copia offline a unui document
 
-- **Data_Doc_IsRtcAlwaysOn** - true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
-
 - **Data_Doc_IsSyncBacked** - semnalizare care indică faptul că pe computer există o copie sincronizată automat a documentului
 
 - **Data_Doc_Location** - indică ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint etc.)
@@ -5123,6 +6190,8 @@ Se colectează următoarele câmpuri:
 - **Data_Doc_ReadOnlyReasons** - motivele pentru care documentul a fost deschis doar în citire
 
 - **Data_Doc_ResourceIdHash** - identificator de document anonimizat, folosit în diagnosticarea problemelor
+
+- **Data_Doc_RtcType** - indică modul în care a fost configurat canalul în timp real (RTC) pentru fișierul curent (dezactivat, neacceptat, la cerere, activat permanent etc.).
 
 - **Data_Doc_ServerDocId** - identificator de document anonimizat și invariabil, folosit în diagnosticarea problemelor
 
@@ -5203,6 +6272,8 @@ Se colectează următoarele câmpuri:
 
   - **Data\_Doc\_AssistedReadingReasons -** set predefinit de valori privind motivul pentru care documentul a fost deschis în modul de citire asistată
 
+  - **Data_Doc_AsyncOpenKind –** indică dacă s-a deschis o versiune memorată în cache a documentului cloud și ce logică de reîmprospătare asincronă s-a folosit.
+
   - **Data\_Doc\_ChunkingType -** unități utilizate pentru deschiderea incrementală a documentelor
 
   - **Data\_Doc\_EdpState –** setare de protecție a datelor electronice pentru document
@@ -5229,9 +6300,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_Doc\_IsOpeningOfflineCopy -** semnalizare care arată că s-a deschis copia offline a unui document
 
-  - **Data_Doc_IsRtcAlwaysOn -** true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
-
-  - **Data\_Doc\_IsSyncBacked -** semnalizare care arată că pe computer există o copie sincronizată automat a documentului
+  - **Data\_Doc\_IsSyncBacked –** marcaj care arată că pe computer există o copie sincronizată automat a documentului
 
   - **Data\_Doc\_Location –** arată ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint)
 
@@ -5244,6 +6313,8 @@ Se colectează următoarele câmpuri:
   - **Data\_Doc\_ReadOnlyReasons –** motivele pentru care documentul a fost deschis doar în citire
 
   - **Data\_Doc\_ResourceIdHash –** un identificator de document anonimizat, folosit în diagnosticarea problemelor
+
+  - **Data_Doc_RtcType -**  indică modul în care a fost configurat canalul în timp real (RTC) pentru fișierul curent (dezactivat, neacceptat, la cerere, activat permanent etc.).
 
   - **Data\_Doc\_ServerDocId –** un identificator de document anonimizat și imutabil, folosit în diagnosticarea problemelor
 
@@ -5326,6 +6397,8 @@ Se colectează următoarele câmpuri:
 
 - **Data_Doc_AssistedReadingReasons** - set predefinit de valori privind motivul pentru care documentul a fost deschis în modul de citire asistată
 
+- **Data_Doc_AsyncOpenKind –** indică dacă s-a deschis o versiune memorată în cache a documentului cloud și ce logică de reîmprospătare asincronă s-a folosit.
+
 - **Data_Doc_ChunkingType** - unități utilizate pentru deschiderea incrementală a documentelor
 
 - **Data_Doc_EdpState** - setare de protecție a datelor electronice pentru document
@@ -5352,8 +6425,6 @@ Se colectează următoarele câmpuri:
 
 - **Data_Doc_IsOpeningOfflineCopy** - semnalizare care indică faptul că s-a deschis copia offline a unui document
 
-- **Data_Doc_IsRtcAlwaysOn** - true în cazul în care canalul în timp real (RTC) este întotdeauna activat pentru acest fișier.
-
 - **Data_Doc_IsSyncBacked** - semnalizare care indică faptul că pe computer există o copie sincronizată automat a documentului
 
 - **Data_Doc_Location** - indică ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint etc.)
@@ -5367,6 +6438,8 @@ Se colectează următoarele câmpuri:
 - **Data_Doc_ReadOnlyReasons** - motivele pentru care documentul a fost deschis doar în citire
 
 - **Data_Doc_ResourceIdHash** - identificator de document anonimizat, folosit în diagnosticarea problemelor
+
+- **Data_Doc_RtcType** - indică modul în care a fost configurat canalul în timp real (RTC) pentru fișierul curent (dezactivat, neacceptat, la cerere, activat permanent etc.).
 
 - **Data_Doc_ServerDocId** - identificator de document anonimizat și invariabil, folosit în diagnosticarea problemelor 
 
@@ -5423,6 +6496,83 @@ Se colectează următoarele câmpuri:
 - **Data_TemplateFormat** - formatul de fișier al șablonului pe care se bazează documentul
 
 - **Data_UsesNormal** - indică dacă documentul deschis se bazează pe șablonul normal
+
+
+#### <a name="renewuserop"></a>RenewUserOp
+
+Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM.  Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează operațiunea înnoire a certificatelor de utilizator. 
+
+Se colectează următoarele câmpuri:
+
+- **AppInfo.ClientHierarchy** - ierarhie client care indică faptul că aplicația rulează în mediul de producție sau în mediul de dezvoltator
+
+- **AppInfo.Name** - nume aplicație.
+
+- **AppInfo.Version** - versiunea aplicației
+
+- **iKey** - ID server înregistrator
+
+- **RMS.ApplicationScenarioId** - ID al scenariului furnizat de aplicație
+
+- **RMS.Duration** - timp total pentru finalizarea operațiunii
+
+- **RMS.DurationWithoutExternalOps** - timp total minus operațiuni externe consumate, cum ar fi latența de rețea.
+
+- **RMS.ErrorCode** - codul de eroare returnat de operațiune, dacă există
+
+- **RMS.HttpCall** - indică dacă există o operațiune HTTP
+
+- **RMS.LicenseFormat** - formatul licenței: Xrml sau Json
+
+- **RMS.Result** - succes sau eșec al operațiunii
+
+- **RMS.ScenarioId** - ID al scenariului definit de clientul Serviciu de administrare a drepturilor
+
+- **RMS.SDKVersion** - versiunea clientului pentru Serviciul de administrare a drepturilor
+
+- **RMS.ServerType** - tipul de server al Serviciului de administrare a drepturilor 
+
+- **RMS.StatusCode** - cod de stare al rezultatului operațiunii
+
+- **RMS.Type** - tipul informațiilor despre utilizator
+
+#### <a name="servicediscoveryop"></a>ServiceDiscoveryOp
+
+Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM.  Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează operațiunea de descoperire a serviciului. 
+
+Se colectează următoarele câmpuri:
+
+- **AppInfo.ClientHierarchy** - ierarhie client care indică faptul că aplicația rulează în mediul de producție sau în mediul de dezvoltator
+
+- **AppInfo.Name** - nume aplicație.
+
+- **AppInfo.Version** - versiunea aplicației
+
+- **iKey** - ID al serverului pentru servicii de înregistrare
+
+- **RMS.ApplicationScenarioId** - ID al scenariului furnizat de aplicație
+
+- **RMS.Duration** - timp total pentru finalizarea operațiunii
+
+- **RMS.DurationWithoutExternalOps** - timp total minus operațiuni externe consumate, cum ar fi latența de rețea.
+
+- **RMS.ErrorCode** - codul de eroare returnat de operațiune, dacă există
+
+- **RMS.HttpCall** - indică dacă există operațiune HTTP
+
+- **RMS.LicenseFormat** - formatul licenței: Xrml sau Json
+
+- **RMS.OperationName** - nume operațiune
+
+- **RMS.Result** - succes sau eșec al operațiunii
+
+- **RMS.ScenarioId** - ID al scenariului definit de clientul Serviciu de administrare a drepturilor
+
+- **RMS.SDKVersion** - versiunea clientului pentru Serviciul de administrare a drepturilor
+
+- **RMS.ServerType** - tipul de server al Serviciului de administrare a drepturilor 
+
+- **RMS.StatusCode** - cod de stare al rezultatului operațiunii
 
 
 ### <a name="office-accessibility-configuration-subtype"></a>*Subtip de configurație accesibilitate Office*
@@ -5737,7 +6887,7 @@ Se colectează următoarele câmpuri:
 
   - **ElapsedHanging** – timpul de blocare petrecut în apel
 
-#### <a name="officepowerpointsession"></a>**Office.PowerPoint.Session**
+#### <a name="officepowerpointsession"></a>Office.PowerPoint.Session
 
 Se colectează utilizarea caracteristicilor pentru fiecare sesiune PowerPoint. Aceste date se utilizează pentru a calcula raportul de închideri neplanificate PowerPoint la utilizarea unei caracteristici. Raportul de închideri neplanificate PowerPoint este un semnal cheie pentru a garanta că PowerPoint funcționează așa cum vă așteptați.
 
@@ -5889,6 +7039,12 @@ Se colectează următoarele câmpuri:
 
   - **ProgID** – identificator de program de completare
 
+#### <a name="officeprogrammabilitytelemetrymacrofileopened"></a>Office.Programmability.Telemetry.MacroFileOpened 
+
+Declanșată la deschiderea unui fișier care conține macrocomenzi (VBA) pe un dispozitiv care a fost înscris la aplicațiile Office ca serviciu (OAAS) de către administratorul IT și unde Office 365 ProPlus a fost activat cu o licență de întreprindere. Evenimentul este utilizat pentru a înțelege starea fișierelor care conțin macrocomenzi (VBA) într-o entitate găzduită și este comparat cu Office.Programmability.Telemetry.VbaTelemetryBreak care urmărește erorile din fișierele care conțin VBA. 
+
+Nu se colectează câmpuri.
+
 #### <a name="officesystemsystemhealthungracefulappexitmacandios"></a>Office.System.SystemHealthUngracefulAppExitMacAndiOS
 
 Eveniment de inițializare care captează ieșirile neelegante din aplicație pentru investigații suplimentare.
@@ -5950,6 +7106,75 @@ Se colectează următoarele câmpuri:
 
 Timpii de răspuns slabi sau performanțele scăzute pentru scenarii precum pornirea aplicației sau deschiderea unui fișier.
 
+#### <a name="ipcpbootstrapuser"></a>IpcpBootstrapUser
+
+Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează apelul API IpcpBootstrapUser. 
+
+Se colectează următoarele câmpuri:
+
+- **AppInfo.ClientHierarchy** - ierarhie client care indică faptul că aplicația rulează în mediul de producție sau în mediul de dezvoltator
+
+- **AppInfo.Name** - nume aplicație.
+
+- **AppInfo.Version** - versiunea aplicației
+
+- **iKey** - ID al serverului pentru servicii de înregistrare
+
+- **RMS.ApplicationScenarioId** - ID al scenariului furnizat de aplicație
+
+- **RMS.AuthCallbackProvided** - indică dacă se furnizează apelare inversă pentru autentificare ca intrare pentru apelul API sau nu
+
+- **RMS.ConnectionInfo.ExtranetUrl** - URL de extranet din informațiile de conexiune
+
+- **RMS.ConnectionInfo.IntranetUrl** - URL de intranet din informațiile de conexiune
+
+- **RMS.ConnectionMode** - modul de conexiune între clientul Serviciu de administrare a drepturilor și server: online sau offline
+
+- **RMS.Duration** - timp total pentru finalizarea apelului API
+
+- **RMS.DurationWithoutExternalOps** - timp total minus operațiuni externe consumate, cum ar fi latența de rețea.
+
+- **RMS.ErrorCode** - codul de eroare returnat de apelul API, dacă există.
+
+- **RMS.GuestTenant** - ID-ul entității găzduite invitat pentru utilizator
+
+- **RMS.HomeTenant** - ID-ul entității găzduite domiciliu pentru utilizator
+
+- **RMS.HttpCall** - indică dacă există operațiune HTTP
+
+- **RMS.Identity.ExtranetUrl** - URL-ul de extranet pentru serverul Serviciului de administrare a drepturilor pentru utilizator, colectat în timpul obținerii unui nou Certificat de cont de drepturi de la server
+
+- **RMS.Identity.IntranetUrl** - URL-ul de intranet pentru serverul Serviciului de administrare a drepturilor pentru utilizator, colectat în timpul obținerii unui nou Certificat de cont de drepturi de la server
+
+- **RMS.Identity.Status** - prima dată când se obține Certificatul de cont de drepturi de la server sau când se reînnoiește Certificatul de cont de drepturi 
+
+- **RMS.Identity.Type** - tipul de cont de utilizator, cum ar fi cont Windows sau cont live
+
+- **RMS.Identity.UserProvided** - indică dacă adresa de e-mail a utilizatorului a fost furnizată sau nu în timpul obținerii unui nou Certificat de cont de drepturi de la server
+
+- **RMS.IssuerId** - ID-ul serverului Serviciului de administrare a drepturilor care emite Certificatul de cont de drepturi  
+
+- **RMS.LicenseFormat** - formatul licenței: Xrml sau Json
+
+- **RMS.RACType** - tipul Certificatului de cont de drepturi
+
+- **RMS.Result** - succes sau eșec al apelului API
+
+- **RMS.ScenarioId** - ID al scenariului definit de API
+
+- **RMS.SDKVersion** - versiunea clientului pentru Serviciul de administrare a drepturilor
+
+- **RMS.ServerType** - tipul de server al Serviciului de administrare a drepturilor 
+
+- **RMS.StatusCode** - cod de stare al rezultatului returnat
+
+- **RMS.TemplatesCount** - numărul de șabloane
+
+- **RMS.TokenProvided** - indică dacă se furnizează tokenul ca intrare pentru apelul API sau nu 
+
+- **RMS.UserProvided** - indică dacă se furnizează consumatorul ca intrare pentru apelul API sau nu 
+
+- **UserInfo.UserObjectId** - ID al obiectului utilizator
 #### <a name="officeextensibilityrichapimethodinvocation"></a>Office.Extensibility.RichApiMethodInvocation
 
 Atunci când clientul utilizează un program de completare Office și apelează Rich API pentru furnizarea serviciului, va fi declanșat acest eveniment. Utilizat pentru a măsura fiabilitatea serviciului, performanța și gradul de utilizare pentru invocarea metodelor Rich API.
@@ -6493,6 +7718,35 @@ Se colectează următoarele câmpuri:
   - **FirstTimeStamp** – prima oră la care a apărut eroarea
 
   - **Trackback** – un identificator unic pentru o anumită eroare
+
+#### <a name="renewidentityfailure"></a>RenewIdentityFailure
+
+Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când nu reușește înnoirea certificatelor de utilizator.
+
+Se colectează următoarele câmpuri:
+
+- **AppInfo.ClientHierarchy** - ierarhie client care indică faptul că aplicația rulează în mediul de producție sau în mediul de dezvoltator
+
+- **AppInfo.Name** - nume aplicație.
+
+- **AppInfo.Version** - versiunea aplicației
+
+- **Failure.Category** - categoria erorii „UnhandledError”
+
+- **Failure.Detail** - informațiile detaliate ale erorii
+
+- **Failure.Id** - ID eroare
+
+- **Failure.Signature** - semnătura erorii, care este aceeași cu numele evenimentului
+
+- **iKey** - ID al serverului pentru servicii de înregistrare
+
+- **RMS.HRESULT** - rezultatul reînnoirii certificatului de utilizator
+
+- **RMS.ScenarioId** - ID al scenariului definit de clientul Serviciu de administrare a drepturilor
+
+- **RMS.SDKVersion** - versiunea clientului pentru Serviciul de administrare a drepturilor
+
 
 ## <a name="device-connectivity-and-configuration-data-events"></a>Evenimente privind conectivitatea și datele de configurare ale dispozitivelor
 
