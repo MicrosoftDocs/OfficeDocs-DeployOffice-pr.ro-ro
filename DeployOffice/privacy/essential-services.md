@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre servicii esențiale în Office, cum ar fi Clic și Pornire și Licențiere, și asigură o listă de evenimente și câmpuri de date pentru aceste servicii esențiale.
 hideEdit: true
-ms.openlocfilehash: 785cd7f3e881d61be0ee3ee72924efb695e2f5a7
-ms.sourcegitcommit: a47876f7500d1ae0270f35ee79da8ab32e57ae3a
+ms.openlocfilehash: 82068f529e341a71557e65e6b7d060bab878bcbe
+ms.sourcegitcommit: 4abc1462753e6cb5c01642c9711d19b220dadac0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "36656202"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "37386931"
 ---
 # <a name="essential-services-for-office"></a>Servicii esențiale pentru Office
 
@@ -585,6 +585,27 @@ Se colectează următoarele câmpuri:
   - **Data\_PrereqFailure\_Type-** eroarea de cerință preliminară pe care am întâmpinat-o
 
   - **Data\_ProductReleaseId-** produsul pe care îl instalăm, adică Office 365 ProPlus
+
+### <a name="officeclicktorunrepomanlogger"></a>Office.ClickToRun.RepomanLogger
+
+Raportează despre starea noului canal de actualizare Clic și Pornire („Repoman”) și dacă acesta descarcă și aplică actualizări Office cu succes.
+
+Se colectează următoarele câmpuri:
+
+  - **ApplySucceeded -** adevărat în cazul în care canalul a aplicat o actualizare Office cu succes, fals dacă nu.
+  
+  - **ApplySucceeded -** adevărat în cazul în care canalul a descărcat o actualizare Office cu succes, fals dacă nu.
+
+  - **ErrorCode -** codul ultimei erori apărute în canalul Clic și Pornire Repoman.
+
+  - **ErrorDetails -**  detaliile suplimentare ale erorii pentru ultima eroare apărută în canalul Clic și Pornire Repoman.
+ 
+  - **ErrorMessage -** mesajul ultimei erori apărute în canalul Clic și Pornire Repoman.
+
+  - **OpenStreamSessionSucceeded -** adevărat în cazul în care canalul creează cu succes o sesiune pentru redarea unei actualizări Office, fals dacă nu.
+
+  - **RepomanErrorMessage -** mesajul de eroare primit de la repoman.dll.
+ 
 
 ### <a name="officeclicktorunscenarioinstalltaskconfigure"></a>Office.ClickToRun.Scenario.InstallTaskConfigure
 
@@ -2658,6 +2679,13 @@ Se colectează următoarele câmpuri:
 
   - **UnmergedConfigs** -listă de configurații care nu s-au îmbinat
 
+### <a name="officeexperimentationtriggeranalysis"></a>Office.Experimentation.TriggerAnalysis
+
+Acest eveniment contribuie la analiza domeniului de aplicare al utilizării și al indicatorilor de performanță ale produselor (cum ar fi căderile, blocările etc.) pentru subsetul de utilizatori sau de dispozitive eligibile pentru utilizarea caracteristicii, contribuind astfel la asigurarea funcționării corecte a produsului.
+
+Se colectează următoarele câmpuri:
+
+  - **FeatureGate -** identifică setul de caracteristici la care se aplică analiza trigger.
 
 ## <a name="licensing-events"></a>Evenimente de licențiere
 
@@ -10920,7 +10948,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officesystemsystemhealthungracefulapplicationexitwin32"></a>Office.System.SystemHealthUngracefulApplicationExitWin32
 
-Utilizat pentru a captura măsurători privind căderea.
+Evenimentul este declanșat de o întrerupere anormală a aplicației (de exemplu, anularea managerului de activități, suspendarea aplicației etc.) pentru aplicațiile client Office, cum ar fi, dar fără a se limita la, Word, Excel, PowerPoint și Outlook. Utilizăm măsurători ale ieșirilor neelegante din aplicație pentru a măsura starea de funcționare a produselor client Office. Acesta este un semnal esențial pentru activitate utilizat de către inginerii Office pentru a deduce stabilitatea produselor.
 
 Se colectează următoarele câmpuri:
 
@@ -10932,11 +10960,7 @@ Se colectează următoarele câmpuri:
 
   - **CrashedAppRevision -** identificator versiune compilată pentru procesul afectat.
 
-  - **CrashedConfigIds -** configurația atribuită procesului care a suferit o cădere.
-
-  - **CrashedEcsETag -** Identificator de experiment pentru procesul care a suferit o cădere.
-
-  - **CrashedImpressionId -** identificatorul de impresie al procesului care a suferit o cădere.
+  - **CrashedEcsETag -** identificator de experiment pentru procesul care a suferit o cădere.
 
   - **CrashedModuleName -** numele modulului cu erori.
 
@@ -10951,6 +10975,8 @@ Se colectează următoarele câmpuri:
   - **ExceptionAddress -** adresa din programul unde a apărut eroarea.
 
   - **ExceptionCode -** identificator de bucket pentru excepție.
+
+  - **HexCrashTag -**  identificatorul unic pentru codul căderii.
 
   - **HexExceptionAddress -** adresa în hexazecimale din programul unde a apărut eroarea.
 
@@ -10977,6 +11003,8 @@ Se colectează următoarele câmpuri:
   - **PreviousBuild -** versiune compilată instalată anterior
 
   - **UAEOSEnvironment -** identificator de mediu pentru sistemul de operare.
+
+  - **UninitLibletId –** identificatorul unic pentru componenta cu erori a căderii.
 
   - **VerifyElseCrashTag -** identificator unic al locului unde a căzut aplicația.
 
