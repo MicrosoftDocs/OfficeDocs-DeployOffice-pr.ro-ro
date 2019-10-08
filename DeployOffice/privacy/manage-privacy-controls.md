@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorii Office oferă informații despre gestionarea controalelor de confidențialitate în Office 365 ProPlus, utilizând setările de politică.
 hideEdit: true
-ms.openlocfilehash: 55c6c6477d4c03d94048c98c961179686eb29c83
-ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
+ms.openlocfilehash: 041e7c5df5bb046843b07bedc4a8ee9b3848903d
+ms.sourcegitcommit: aed9a0908021ffc80baa7159a66b63dd4f9f28e4
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/07/2019
-ms.locfileid: "36238982"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "37417344"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus
 
@@ -119,6 +119,16 @@ Rețineți că dacă dezactivați setarea de politică *Permiteți utilizarea de
 Aceste experiențe conectate sunt diferite, deoarece nu sunt acoperite de acordul comercial al organizației cu Microsoft. Experiențele conectate opționale sunt oferite de Microsoft direct utilizatorilor dvs. și sunt guvernate de [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement), nu de [Condițiile de utilizare a serviciilor online](https://www.microsoft.com/licensing/product-licensing/products). În unele cazuri, conținutul sau funcționalitățile de la terți sunt furnizate prin aceste experiențe conectate opționale și se pot aplica și alte condiții. Pentru mai multe informații, consultați [Prezentare generală a experiențelor conectate opționale în Office](optional-connected-experiences.md).
 
 Puteți utiliza setarea de politică *Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office* pentru a controla dacă aceste tipuri de experiențe conectate sunt disponibile pentru utilizatorii dvs. Dacă nu configurați această setare de politică, aceste experiențe conectate opționale vor fi disponibile pentru utilizatorii dvs.
+
+> [!NOTE]
+> Setarea politicii *Permiteți utilizarea de experiențe conectate opționale suplimentare în Office* poate fi, de asemenea, configurată să fie aplicată la următoarele aplicații Office pentru web:
+> - Excel pentru web
+> - OneNote pentru web
+> - PowerPoint pentru web
+> - Visio pentru web
+> - Word pentru web
+>
+> Aceste aplicații Office pentru web sunt planificate să înceapă să utilizeze noul control de confidențialitate pentru experiențe conectate opționale la mijlocul lunii octombrie 2019, dar setarea de politică poate fi configurată acum. Pentru a configura această setare de politică pentru aceste aplicații Office pentru web trebuie să utilizați [ Serviciul de politică pentru cloud Office](../overview-office-cloud-policy-service.md).
 
 Chiar dacă alegeți să puneți aceste experiențe conectate opționale la dispoziția utilizatorilor dvs., utilizatorii dvs. vor avea opțiunea de a le dezactiva ca grup, accesând [caseta de dialog pentru setările de confidențialitate](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Utilizatorii dvs. vor avea această opțiune doar dacă sunt conectați la Office cu acreditările organizației lor (la care se face uneori referire ca la contul de la locul de muncă sau de la școală), însă nu și dacă sunt conectați cu o adresă de e-mail personală.
 
