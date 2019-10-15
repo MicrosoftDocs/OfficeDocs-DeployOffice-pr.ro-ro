@@ -14,12 +14,12 @@ ms.custom:
 - Ent_Office_Mac
 description: Oferă informații administratorilor Office despre gestionarea controalelor de confidențialitate în Office pentru Mac.
 hideEdit: true
-ms.openlocfilehash: 01bb31f3b6c307ec1dc4762b54fea17185dcf27d
-ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
+ms.openlocfilehash: a1fdd9f7d0fe2095b3a32f61f885f724f2259188
+ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/07/2019
-ms.locfileid: "36246314"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "37510225"
 ---
 # <a name="use-preferences-to-manage-privacy-controls-for-office-for-mac"></a>Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac
 
@@ -34,7 +34,8 @@ ms.locfileid: "36246314"
 Pentru mai multe informații despre datele de diagnosticare și experiențele conectate, consultați [Prezentare generală a controalelor de confidențialitate](overview-privacy-controls.md).
 
 > [!NOTE]
-> Pentru mai multe informații despre setări similare pentru Office pe computere care rulează Windows, consultați [Utilizați setările de politică pentru a gestiona controalele de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md)
+> - Pentru mai multe informații despre setări similare pentru Office pe computere care rulează Windows, consultați [Utilizați setările de politică pentru a gestiona controalele de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md).
+> - Pentru mai multe informații despre setări similare pentru Office pe dispozitive iOS, consultați [Utilizați preferințele pentru a gestiona controalele de confidențialitate pentru Office pe dispozitivele iOS](ios-privacy-preferences.md).
 
 ## <a name="setting-preferences"></a>Setarea preferințelor
 
@@ -52,14 +53,13 @@ Datele de diagnosticare sunt utilizate pentru a menține Office securizat și ac
 |**Valori posibile**  | `BasicDiagnosticData` *(setează nivelul la Necesare)* <br/> `FullDiagnosticData` *(setează nivelul la Opționale)* <br/> `ZeroDiagnosticData` *(setează nivelul la Niciuna)* |
 |**Disponibilitate** |16.28 și versiuni mai recente |
 
+Începând cu noile instalări ale Versiunii 16.30, dacă nu setați această preferință, sunt trimise doar datele de diagnostic necesare către Microsoft, dacă utilizatorii cu abonament Office 365 sunt conectați cu un cont de la locul de muncă sau de la școală sau dacă utilizatorii au o versiune cu licență în volum de Office 2019 pentru Mac. De asemenea, acești utilizatori nu pot modifica nivelul de date de diagnostic, indiferent de modul în care setați această preferință.
+
 > [!NOTE]
-> Dacă setați această preferință, se va aplica și pentru următoarele produse:
-> - Versiunea 1.00.217856 și versiuni mai recente ale Teams pentru Mac
-> - Versiunea 16.28 și versiuni mai recente ale Skype for Business pentru Mac
+> - Dacă instalați versiunea 16.28 sau 16.29 și nu setați această preferință, către Microsoft se vor trimite atât date de diagnostic opționale cât și necesare. Dacă faceți upgrade apoi la versiunea 16.30 sau o versiune mai recentă, atât datele de diagnostic opționale, cât și cele necesare sunt trimise în continuare către Microsoft, cu excepția cazului în care utilizați această preferință pentru a seta o altă valoare.
+> - Dacă setați această preferință, ea se va aplica, de asemenea, la Versiunea 1.00.217856 și la versiuni mai recente ale Teams pentru Mac și la Versiunea 16.28 și versiunile ulterioare ale Skype for Business pentru Mac.
 
-Dacă nu setați această preferință, sunt trimise atât date de diagnostic opționale, cât și necesare către Microsoft, dacă utilizatorii cu un abonament Office 365 sunt conectați cu un cont de la locul de muncă sau de la școală sau dacă utilizatorii au o versiune cu licență în volum de Office 2019 pentru Mac. De asemenea, acești utilizatori nu pot modifica nivelul de date de diagnostic, indiferent de modul în care setați această preferință.
-
-Pentru alți utilizatori, cum ar fi utilizatori casnici cu un abonament Office 365, sunt trimise doar date de diagnosticare necesare, cu excepția cazului în care utilizatorul alege să trimită, de asemenea, date de diagnosticare opționale, accesând **Preferințe** > **Confidențialitate**.
+Pentru alți utilizatori, cum ar fi utilizatorii la domiciliu cu abonament Office 365, sunt trimise doar date de diagnosticare necesare, cu excepția cazului în care utilizatorul alege să trimită și date de diagnosticare opționale, accesând **Preferințe** > **Confidențialitate**.
 
 ## <a name="preference-setting-for-connected-experiences-that-analyze-your-content"></a>Setarea de preferințe pentru experiențe conectate care analizează conținutul
 

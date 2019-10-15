@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre datele de diagnosticare obligatorii în Office și le furnizează o listă de evenimente și câmpuri de date.
 hideEdit: true
-ms.openlocfilehash: a5770d3ed30f86dfbf1cb1dfc4a45bbb15179da8
-ms.sourcegitcommit: 4abc1462753e6cb5c01642c9711d19b220dadac0
+ms.openlocfilehash: 71b05ab46c7aa6aee2c7dbc2aa88201f50fc8b99
+ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "37386977"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "37510009"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Date de diagnosticare obligatorii pentru Office
 
@@ -48,6 +48,7 @@ Dacă sunteți administratorul organizației dvs., ați putea fi interesat și d
 - [Prezentare generală a controalelor de confidențialitate pentru Office 365 ProPlus](overview-privacy-controls.md)
 - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md)
+- [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pe dispozitivele iOS](ios-privacy-preferences.md)
 
 ## <a name="categories-data-subtypes-events-and-data-fields-for-required-diagnostic-data"></a>Categorii, subtipuri de date, evenimente și câmpuri de date pentru date de diagnosticare obligatorii
 

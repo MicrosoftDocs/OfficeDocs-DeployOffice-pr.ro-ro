@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre datele de diagnosticare opționale din Office, inclusiv exemple de evenimente.
 hideEdit: true
-ms.openlocfilehash: e4b42e97d7d954a968ad2a1366c6f64235c1d7f0
-ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
+ms.openlocfilehash: d772a649a78a88112a270e839834cbe48141217f
+ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/07/2019
-ms.locfileid: "36239018"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "37510174"
 ---
 # <a name="optional-diagnostic-data-for-office"></a>Date de diagnosticare opționale pentru Office
 
@@ -50,6 +50,7 @@ Dacă sunteți administratorul organizației dvs., ați putea fi interesat și d
 - [Prezentare generală a controalelor de confidențialitate pentru Office 365 ProPlus](overview-privacy-controls.md)
 - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md)
+- [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pe dispozitivele iOS](ios-privacy-preferences.md)
 
 ## <a name="categories-of-optional-diagnostic-data"></a>Categorii de date de diagnosticare opționale
 

@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferiți administratorilor Office o prezentare generală a datelor de serviciu obligatorii care sunt colectate despre experiențele de mod conectat din Office.
 hideEdit: true
-ms.openlocfilehash: 76c30eddecbb84fecc5cb49c9691edcebc7c13b7
-ms.sourcegitcommit: 0fd23324ba1364fa1f8dd1578adf25946adde90f
+ms.openlocfilehash: eaa659e375d3d5c29d5410ab53db7ae583df6e9d
+ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/07/2019
-ms.locfileid: "36238492"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "37510632"
 ---
 # <a name="required-service-data-for-office"></a>Date de serviciu obligatorii pentru Office 
 
@@ -67,6 +67,7 @@ Dacă sunteți administratorul organizației dvs., ați putea fi interesat și d
 - [Prezentare generală a controalelor de confidențialitate pentru Office 365 ProPlus](overview-privacy-controls.md)
 - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md)
+- [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pe dispozitivele iOS.](ios-privacy-preferences.md)
 
 ## <a name="examples-of-events-for-service-diagnostic-data"></a>Exemple de evenimente pentru datele de diagnosticare serviciu
 
