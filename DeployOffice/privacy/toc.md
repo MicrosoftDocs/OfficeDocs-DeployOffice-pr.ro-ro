@@ -2,6 +2,7 @@
 ## [Prezentare generală a controalelor de confidențialitate](overview-privacy-controls.md)
 ## [Gestionarea controalelor de confidențialitate cu setările de politică](manage-privacy-controls.md)
 ## [Gestionarea controalelor de confidențialitate cu preferințe (Mac)](mac-privacy-preferences.md)
+## [Gestionarea controalelor de confidențialitate cu preferințe (iOS)](ios-privacy-preferences.md)
 
 ## Date de diagnosticare
 ### [Date de diagnosticare obligatorii](required-diagnostic-data.md)
