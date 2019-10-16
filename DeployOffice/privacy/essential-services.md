@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre servicii esențiale în Office, cum ar fi Clic și Pornire și Licențiere, și asigură o listă de evenimente și câmpuri de date pentru aceste servicii esențiale.
 hideEdit: true
-ms.openlocfilehash: 82068f529e341a71557e65e6b7d060bab878bcbe
-ms.sourcegitcommit: 4abc1462753e6cb5c01642c9711d19b220dadac0
+ms.openlocfilehash: a482854210e5f609a41e6a810c3c3338a19586e7
+ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "37386931"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "37510477"
 ---
 # <a name="essential-services-for-office"></a>Servicii esențiale pentru Office
 
@@ -43,6 +43,7 @@ Dacă sunteți administratorul organizației dvs., ați putea fi interesat și d
 - [Prezentare generală a controalelor de confidențialitate pentru Office 365 ProPlus](overview-privacy-controls.md)
 - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md)
+- [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pe dispozitivele iOS.](ios-privacy-preferences.md)
 
 ## <a name="list-of-essential-services-for-office"></a>Listă de servicii esențiale pentru Office 
 
