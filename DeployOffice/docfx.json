@@ -12,7 +12,8 @@
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
-          "ThirdPartyNotices"
+          "ThirdPartyNotices",
+          "**/common/**"
         ]
       }
     ],
@@ -26,7 +27,8 @@
         ],
         "exclude": [
           "**/obj/**",
-          "**/includes/**"
+          "**/includes/**",
+          "**/common/**"
         ]
       }
     ],
@@ -40,7 +42,7 @@
       "feedback_system": "None",
       "hide_comments": true,
       "feedback_github_repo": "MicrosoftDocs/OfficeDocs-DeployOffice",
-      "feedback_product_url": "https://docs.microsoft.com/de-de/deployoffice/feedback" 
+      "feedback_product_url": "https://ODInsiders.uservoice.com" 
     },
     "fileMetadata": {},
     "template": [],
