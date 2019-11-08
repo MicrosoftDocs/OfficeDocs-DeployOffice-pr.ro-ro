@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorii Office au parte de o prezentare generală a controalelor de confidențialitate pentru Office 365 ProPlus, inclusiv pentru date de diagnosticare și experiențe conectate.
 hideEdit: true
-ms.openlocfilehash: 24a3d30d05fb2a1456e10d8a8036f31c25c14db7
-ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
+ms.openlocfilehash: 784bbf08626e6dc8571c416a74511c9f5feeceec
+ms.sourcegitcommit: acb22296532bbfdfcad4dc1e7162f812997fbdd1
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "37510722"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "38067376"
 ---
 # <a name="overview-of-privacy-controls-for-office-365-proplus"></a>Prezentare generală a controalelor de confidențialitate pentru Office 365 ProPlus
 
@@ -39,7 +39,8 @@ Ca parte a acestor modificări, există elemente de interfață de utilizator (U
 >   - Versiunea 1904 sau versiunile mai recente ale versiunilor desktop de Project și Visio care sunt oferite cu anumite planuri de abonament, cum ar fi planul Project Online Professional sau Visio Online Plan 2.
 > - Aceste controale de confidențialitate sunt incluse în Versiunea 1908 a Canalului semianual (audiență specifică), care a fost lansată pe 10 septembrie 2019. Acestea vor fi disponibile în Canalul semianual în ianuarie 2020.
 > - Aceste controale de confidențialitate sunt disponibile pentru versiunea 2.30 și versiunile mai recente ale versiunilor iOS de Excel, OneNote, PowerPoint și Word, precum și pentru versiunea 1.17 și versiuni mai recente de Visio Viewer pentru iOS.
-> - Majoritatea aplicațiilor Office pentru web sunt planificate să înceapă să utilizeze noul control de confidențialitate pentru [experiențe conectate opționale](optional-connected-experiences.md) la mijlocul lunii octombrie 2019. Aceste aplicații sunt următoarele: Excel pentru web, OneNote pentru web, PowerPoint pentru web, Visio pentru web și Word pentru web. Înainte de această dată, puteți utiliza [Serviciul de politică pentru cloud Office](../overview-office-cloud-policy-service.md) pentru a configura [setarea de politică](manage-privacy-controls.md#policy-setting-for-optional-connected-experiences) corespunzătoare.
+> - Aceste controale de confidențialitate sunt disponibile pentru versiunea 16.0.12226.10000 și versiunile mai recente ale versiunilor Android de Excel, PowerPoint și Word, precum și pentru versiunea 16.0.12228.20004 și versiunile mai recente de OneNote pentru Android.
+> - Majoritatea aplicațiilor Office pentru web utilizează noul control de confidențialitate pentru [experiențe conectate opționale](optional-connected-experiences.md). Aceste aplicații sunt următoarele: Excel pentru web, OneNote pentru web, PowerPoint pentru web, Visio pentru web și Word pentru web. Puteți utiliza [Serviciul de politică pentru cloud Office](../overview-office-cloud-policy-service.md) pentru a configura [setarea de politică](manage-privacy-controls.md#policy-setting-for-optional-connected-experiences) corespunzătoare.
 > - Vom extinde aceste controale de confidențialitate noi și îmbunătățite la clienți Office suplimentari, inclusiv pentru Teams și aplicațiile noastre mobile. Vom oferi mai multe informații despre aceste modificări în lunile următoare. Vom continua să ascultăm cu atenție feedbackul dvs. și să facem îmbunătățiri pentru toți clienții Office 365 și toate serviciile.
 
 ## <a name="diagnostic-data-sent-from-office-365-proplus-to-microsoft"></a>Datele de diagnosticare trimise din Office 365 ProPlus la Microsoft
@@ -75,6 +76,7 @@ Pentru mai multe informații, consultați următoarele:
 - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pe dispozitivele iOS.](ios-privacy-preferences.md)
+- [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office pe dispozitivele Android](android-privacy-controls.md)
 - [Utilizarea Vizualizatorului de date de diagnosticare cu Office](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
 
 ## <a name="connected-experiences-for-office-365-proplus"></a>Experiențe conectate pentru Office 365 ProPlus
@@ -101,6 +103,7 @@ Pentru mai multe informații, consultați următoarele:
 - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pe dispozitivele iOS.](ios-privacy-preferences.md)
+- [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office pe dispozitivele Android](android-privacy-controls.md)
 
 ## <a name="optional-connected-experiences-for-office-365-proplus"></a>Experiențe conectate opționale pentru Office 365 ProPlus
 
@@ -118,6 +121,7 @@ Pentru mai multe informații, consultați următoarele:
 - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pe dispozitivele iOS.](ios-privacy-preferences.md)
+- [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office pe dispozitivele Android](android-privacy-controls.md)
 
 ## <a name="required-service-data-for-connected-experiences"></a>Date de serviciu obligatorii pentru experiențe în mod conectat
 

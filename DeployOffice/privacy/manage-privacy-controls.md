@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorii Office oferă informații despre gestionarea controalelor de confidențialitate în Office 365 ProPlus, utilizând setările de politică.
 hideEdit: true
-ms.openlocfilehash: 5f3b63c65d43827befe58ba600c7957410f2d3c0
-ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
+ms.openlocfilehash: 31db528fe639b8685acf56d88d4a4bf8dd406bd3
+ms.sourcegitcommit: acb22296532bbfdfcad4dc1e7162f812997fbdd1
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "37510300"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "38067466"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus
 
@@ -45,6 +45,7 @@ Aceste setări de politică pot fi implementate utilizând fie Politica de grup,
 > [!NOTE]
 > - Pentru informații despre cum să gestionați controalele de confidențialitate pentru Office pentru Mac, consultați [Utilizarea preferințelor pentru a gestiona controalele de confidențialitate pentru Office pentru Mac](mac-privacy-preferences.md).
 > - Pentru mai multe informații despre setări similare pentru Office pe dispozitive iOS, consultați [Utilizați preferințele pentru a gestiona controalele de confidențialitate pentru Office pe dispozitivele iOS](ios-privacy-preferences.md).
+> - Pentru mai multe informații despre setări similare pentru Office pe dispozitivele Android, consultați [Utilizați setările de politică pentru a gestiona controalele de confidențialitate pentru Office pe dispozitivele Android](android-privacy-controls.md).
 
 
 Dacă utilizați instrumentul de Gestionare a politicilor de grup, toate aceste setări de politică se află în Configurație utilizator\\Politici\\Șabloane administrative\\Microsoft Office 2016\\Confidențialitate\\Centrul de autorizare.
