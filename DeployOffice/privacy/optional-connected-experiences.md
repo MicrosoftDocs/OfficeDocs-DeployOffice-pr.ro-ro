@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate opționale, inclusiv condițiile de utilizare care se aplică.
 hideEdit: true
-ms.openlocfilehash: f59c737a41c3075f9c29c49f623d88f9876bf32d
-ms.sourcegitcommit: acb22296532bbfdfcad4dc1e7162f812997fbdd1
+ms.openlocfilehash: 7e9207148c9f294e9a1e41d353fa3cdd8878f88c
+ms.sourcegitcommit: 5be570c4403e82352142b3297507cf314815bdea
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "38067287"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "38276501"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Prezentare generală a experiențelor conectate opționale în Office
 
@@ -47,9 +47,9 @@ Notă: Setarea de confidențialitate descrisă mai jos nu controlează experien�
 
 ## <a name="experiences-that-rely-on-other-microsoft-owned-online-services-andor-services-owned-by-third-parties"></a>Experiențe care se bazează pe alte servicii online deținute de Microsoft și/sau servicii deținute de terți
 
-### <a name="office-store"></a>Magazinul Office 
+### <a name="help--suggest-a-feature"></a>Ajutor > Sugerați o caracteristică
 
-Atunci când utilizați Magazinul Office, utilizarea site-ului magazinului propriu-zis este licențiată prin [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). Cu toate acestea, toate [Programele de completare Office](https://support.office.com/article/16278816-1948-4028-91E5-76DCA5380F8D) pe care le descărcați prin Magazinul Office sunt acoperite de condițiile de utilizare ale furnizorului programului de completare. Acestea pot fi diverse organizații sau firme, iar unele pot chiar percepe o taxă de utilizare. Va trebui să verificați permisiunile, angajamentul de respectare a confidențialității și clauzele licenței pentru fiecare program de completare pentru a afla ce condiții se aplică și pentru a decide dacă sunteți acord cu condițiile de utilizare oferite de organizație. 
+Sugerați o caracteristică este o experiență care vă permite să remiteți idei cu privire la utilizarea Outlook. Sugestiile dvs. sunt furnizate direct într-un serviciu terț denumit UserVoice. Dacă trimiteți ideile utilizând Sugerați o caracteristică, se vor aplica [Condițiile de utilizare a serviciului și politica de confidențialitate ale UserVoice](https://outlook.uservoice.com/tos).
 
 ### <a name="insert-online-video"></a>Inserarea unui fișier video online
 
@@ -58,6 +58,10 @@ Atunci când utilizați Magazinul Office, utilizarea site-ului magazinului propr
 ### <a name="microsoft-error-reporting-program-merp"></a>Microsoft Error Reporting Program (MERP) 
 
 MERP se conectează la serviciul Watson.microsoft.com pentru a trimite date de diagnostic atunci când aplicațiile client Office care rulează pe dispozitive Mac se blochează. Este deținut de Microsoft, aplicându-se condițiile din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [Angajamentul de respectare a confidențialității Microsoft](https://privacy.microsoft.com/). MERP nu se aplică aplicațiilor client Office care rulează pe Windows.
+
+### <a name="office-store"></a>Magazinul Office 
+
+Atunci când utilizați Magazinul Office, utilizarea site-ului magazinului propriu-zis este licențiată prin [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). Cu toate acestea, toate [Programele de completare Office](https://support.office.com/article/16278816-1948-4028-91E5-76DCA5380F8D) pe care le descărcați prin Magazinul Office sunt acoperite de condițiile de utilizare ale furnizorului programului de completare. Acestea pot fi diverse organizații sau firme, iar unele pot chiar percepe o taxă de utilizare. Va trebui să verificați permisiunile, angajamentul de respectare a confidențialității și clauzele licenței pentru fiecare program de completare pentru a afla ce condiții se aplică și pentru a decide dacă sunteți acord cu condițiile de utilizare oferite de organizație. 
 
 ### <a name="research"></a>Cercetare
 
@@ -70,19 +74,6 @@ MERP se conectează la serviciul Watson.microsoft.com pentru a trimite date de d
 
 [Bara meteo](https://support.office.com/article/d11b7532-7c58-489e-8103-5cc5d727b06b) în Outlook afișează prognoza meteo pentru locațiile geografice dorite. În timpul utilizării, Bara meteo în Outlook se conectează la Meteo MSN în mod implicit. MSN este deținut de Microsoft, aplicându-se condițiile din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). Atunci când utilizați Bara meteo cu Meteo MSN, Microsoft nu vă detectează locația, iar orașele pe care doriți să le afișați nu sunt corelate pentru dvs. Puteți să [modificați această setare implicită](https://docs.microsoft.com/office/client-developer/outlook/weather/extending-the-weather-bar-in-outlook) pentru a vă conecta la alți furnizori de servicii meteo. Dacă decideți să apelați la alt furnizor de servicii meteo, va trebui să consultați angajamentul de respectare a confidențialității și clauzele licenței respectivului furnizor pentru a ști ce condiții se aplică.
 
-## <a name="experiences-that-allow-you-to-submit-feedback"></a>Experiențe care vă permit să remiteți feedback
-
-### <a name="help--feedback"></a>Ajutor > Feedback
-
-Atunci când accesați **Ajutor** > **Feedback** și oferiți feedback sau alegeți să răspundeți la una dintre solicitările noastre de anchetă „Ne-ar plăcea să aflăm părerea dvs.” atunci când utilizați o aplicație Office 365 ProPlus, informațiile pe care le furnizați sunt trimise la Microsoft și se aplică condițiile din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). Atunci când remiteți feedbackul utilizând butonul Feedback, există opțiunea de a vă trimite adresa de e-mail și/sau o captură de ecran. Aceste informații nu sunt obligatorii.  
-
-#### <a name="outlook-is-an-exception"></a>Outlook este o excepție
-
-**Ajutor** > **Feedback** în Outlook este diferit de **Ajutor** > **Feedback** în alte aplicații Office 365 ProPlus. Atunci când remiteți feedbackul utilizând **Ajutor** > **Feedback** în Outlook, permiteți ca Microsoft să colecteze jurnale Outlook pentru a remedia probleme potențiale privind performanța. Aceste jurnale pot conține informații personale, cum ar fi numele, adresa de e-mail, conținutul e-mailului dvs. sau termeni de căutare. Acest serviciu vă este furnizat prin licența organizației dvs. cu Microsoft. Prin urmare, dacă alegeți să trimiteți feedback prin butonul Feedback din Outlook, nu trebuie să încheiați un acord separat cu Microsoft, iar setarea de confidențialitate descrisă în acest articol nu se aplică.
-
-### <a name="help--suggest-a-feature"></a>Ajutor > Sugerați o caracteristică
-
-Sugerați o caracteristică este o experiență care vă permite să remiteți idei cu privire la utilizarea Outlook. Sugestiile dvs. sunt furnizate direct într-un serviciu terț denumit UserVoice. Dacă trimiteți ideile utilizând Sugerați o caracteristică, se vor aplica [Condițiile de utilizare a serviciului și politica de confidențialitate ale UserVoice](https://outlook.uservoice.com/tos).
 
 ## <a name="how-to-determine-if-your-admin-has-given-you-the-ability-to-use-optional-connected-experiences"></a>Cum stabiliți dacă administratorul dvs. v-a oferit capacitatea de a utiliza experiențe conectate opționale
 
