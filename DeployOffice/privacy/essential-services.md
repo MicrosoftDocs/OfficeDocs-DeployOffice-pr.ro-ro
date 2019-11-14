@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre servicii esențiale în Office, cum ar fi Clic și Pornire și Licențiere, și asigură o listă de evenimente și câmpuri de date pentru aceste servicii esențiale.
 hideEdit: true
-ms.openlocfilehash: a482854210e5f609a41e6a810c3c3338a19586e7
-ms.sourcegitcommit: 02c4120c0b10bfe378d21d60699ae49aaef97834
+ms.openlocfilehash: 25f594865089d35cb46ebfcc9b97d6b048f6298d
+ms.sourcegitcommit: ad2bb6e42b2432a2cb9370594cd50f3a14f2fbe3
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "37510477"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "38310692"
 ---
 # <a name="essential-services-for-office"></a>Servicii esențiale pentru Office
 
@@ -44,6 +44,7 @@ Dacă sunteți administratorul organizației dvs., ați putea fi interesat și d
 - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pe dispozitivele iOS.](ios-privacy-preferences.md)
+- [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office pe dispozitivele Android](android-privacy-controls.md)
 
 ## <a name="list-of-essential-services-for-office"></a>Listă de servicii esențiale pentru Office 
 
@@ -10058,6 +10059,15 @@ Se colectează următoarele câmpuri
 Configurare servicii nu colectează niciun eveniment cu date necesare de diagnosticare a serviciului.
 
 ## <a name="telemetry-events"></a>Evenimente de telemetrie
+
+### <a name="office_firstrun_apple_telemetryoptin"></a>Office_FirstRun_Apple_TelemetryOptIn
+
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a monitoriza starea de funcționare a fluxului nostru de optare pentru telemetrie în prima experiență de rulare. Culegem un cod care denotă ce tip de opțiune de colectare a datelor de diagnostic a fost selectată de către utilizator.
+
+Se colectează următoarele câmpuri:
+
+ - **Data_EventId** - un cod care indică preferința de colectare a datelor de diagnostic selectată de utilizator.
+
 
 ### <a name="officesystemidentitychanged"></a>Office.System.IdentityChanged
 
