@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorii Office oferă informații despre gestionarea controalelor de confidențialitate în Office 365 ProPlus, utilizând setările de politică.
 hideEdit: true
-ms.openlocfilehash: 31db528fe639b8685acf56d88d4a4bf8dd406bd3
-ms.sourcegitcommit: acb22296532bbfdfcad4dc1e7162f812997fbdd1
+ms.openlocfilehash: ee02079595157af2fea8883069a640b90ff962d2
+ms.sourcegitcommit: ff396a54d8e36d71ebc4cade5014eb502952dc65
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "38067466"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "38639341"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus
 
@@ -92,9 +92,6 @@ Office 365 ProPlus constă din aplicații software client și experiențe conect
 
 Dacă nu utilizați aceste setări de politică, toate experiențele conectate vor fi disponibile. Acest lucru le oferă utilizatorilor dvs. toate caracteristicile și funcționalitățile accesibile prin Office 365 ProPlus. Dar înțelegem că va trebui, probabil, să dezactivați unele experiențe conectate sau chiar pe toate pentru a satisface anumite cerințe ale organizației dvs.
 
-> [!IMPORTANT]
-> O problemă legată de dezactivarea acestor 4 setări de politică a fost remediată recent prin publicarea de noi fișiere de șabloane administrative (ADMX/ADML) marți, 28 mai 2019. Nu uitați să descărcați și să instalați fișierele actualizate ale politicii de grup din [Centrul de descărcări Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=49030).
-
 Dacă alegeți să nu le oferiți utilizatorilor dvs. unele tipuri de experiențe conectate, panglica sau comanda meniului pentru acele experiențe conectate se va estompa sau utilizatorii vor primi un mesaj de eroare atunci când încearcă să utilizeze aceste experiențe conectate. În acest caz, la Microsoft nu vor fi trimise [datele de serviciu obligatorii](required-service-data.md) pentru acele experiențe conectate.
 
 Utilizatorii dvs. nu vor putea să aleagă dacă să activeze sau să dezactiveze aceste experiențe conectate incluse în Office 365 ProPlus dacă sunt conectați la Office cu acreditările organizației, la care se face uneori referire ca la contul de la locul de muncă sau de la școală.
@@ -131,7 +128,7 @@ Puteți utiliza setarea de politică *Permiteți utilizarea de experiențe conec
 > - Visio pentru web
 > - Word pentru web
 >
-> Aceste aplicații Office pentru web sunt planificate să înceapă să utilizeze noul control de confidențialitate pentru experiențe conectate opționale la mijlocul lunii octombrie 2019, dar setarea de politică poate fi configurată acum. Pentru a configura această setare de politică pentru aceste aplicații Office pentru web trebuie să utilizați [ Serviciul de politică pentru cloud Office](../overview-office-cloud-policy-service.md).
+> Pentru a configura această setare de politică pentru aceste aplicații Office pentru web trebuie să utilizați [ Serviciul de politică pentru cloud Office](../overview-office-cloud-policy-service.md).
 
 Chiar dacă alegeți să puneți aceste experiențe conectate opționale la dispoziția utilizatorilor dvs., utilizatorii dvs. vor avea opțiunea de a le dezactiva ca grup, accesând [caseta de dialog pentru setările de confidențialitate](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Utilizatorii dvs. vor avea această opțiune doar dacă sunt conectați la Office cu acreditările organizației lor (la care se face uneori referire ca la contul de la locul de muncă sau de la școală), însă nu și dacă sunt conectați cu o adresă de e-mail personală.
 
