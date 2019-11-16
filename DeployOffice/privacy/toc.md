@@ -1,9 +1,12 @@
 # Confidențialitate pentru Office 365 ProPlus
+
 ## [Prezentare generală a controalelor de confidențialitate](overview-privacy-controls.md)
-## [Gestionarea controalelor de confidențialitate cu setările de politică](manage-privacy-controls.md)
-## [Gestionarea controalelor de confidențialitate cu preferințe (Mac)](mac-privacy-preferences.md)
-## [Gestionarea controalelor de confidențialitate cu preferințe (iOS)](ios-privacy-preferences.md)
-## [Gestionarea controalelor de confidențialitate cu setările de politică (Android)](android-privacy-controls.md)
+
+## Gestionarea controalelor de confidențialitate
+### [Setări de politică pentru Windows](manage-privacy-controls.md)
+### [Preferințe pentru Mac](mac-privacy-preferences.md)
+### [Preferințe pentru iOS](ios-privacy-preferences.md)
+### [Setări de politică pentru Android](android-privacy-controls.md)
 
 ## Date de diagnosticare
 ### [Date de diagnosticare obligatorii](required-diagnostic-data.md)
