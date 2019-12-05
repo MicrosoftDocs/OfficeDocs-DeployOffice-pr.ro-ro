@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre datele de diagnosticare obligatorii în Office și le furnizează o listă de evenimente și câmpuri de date.
 hideEdit: true
-ms.openlocfilehash: 0437779d269d4de7132961ce2edc37363d10b309
-ms.sourcegitcommit: ff396a54d8e36d71ebc4cade5014eb502952dc65
+ms.openlocfilehash: b345c9c8f3138f9c38900dd36dc9983f83623341
+ms.sourcegitcommit: e542473cc4fe07a98874c275846f6982a6863e35
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "38639392"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "39837690"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Date de diagnosticare obligatorii pentru Office
 
@@ -3118,7 +3118,7 @@ Se colectează următoarele câmpuri:
 -  **TimeToMedianResultInMs** - indică mediana intervalului de timp necesar pentru ca OneNote să găsească toate potrivirile.
 
 
-#### <a name="officeonenotestickynotesnotecreated"></a>Office.OneNote.StickyNotes.NoteCreated
+#### <a name="officeonenotestickynotesnotecreated-on-ios-onenotestickynotesnotecreated-on-android"></a>Office.OneNote.StickyNotes.NoteCreated (pe iOS), OneNote.StickyNotes.NoteCreated (pe Android)
 
 Acesta este un semnal critic utilizat pentru a monitoriza capacitatea utilizatorilor de Note adezive de a crea note în aplicație.  Telemetria se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot crea o notă, acest lucru va declanșa un incident de mare severitate.
 
@@ -3131,7 +3131,7 @@ Se colectează următoarele câmpuri:
 - **StickyNotes-SDKVersion** - număr de versiune care indică versiunea de Note Adezive folosită de utilizator. Ne permite să identificăm ce versiuni de produs afișează o problemă, astfel încât să o putem stabili corect ca prioritate.
 
 
-#### <a name="officeonenotestickynotesnoteviewed"></a>Office.OneNote.StickyNotes.NoteViewed
+#### <a name="officeonenotestickynotesnoteviewed-on-ios-onenotestickynotesnoteviewed-on-android"></a>Office.OneNote.StickyNotes.NoteViewed (pe iOS), OneNote.StickyNotes.NoteViewed (pe Android)
 
 Acesta este un semnal critic utilizat pentru a monitoriza capacitatea utilizatorilor de Note adezive de a crea note în aplicație.  Telemetria se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot crea o notă, acest lucru va declanșa un incident de mare severitate.
 
@@ -4657,68 +4657,6 @@ Se colectează următoarele câmpuri:
   - **Data\_WarningShownToConvertToTable:bool** – true înseamnă că utilizatorul primește un avertisment pentru a efectua conversia datelor Excel în format de tabel
 
 
-#### <a name="officewordexperimentationdocumentstatsoncloseandsuspend"></a>Office.Word.Experimentation.DocumentStatsOnCloseAndSuspend
-
-Acest eveniment înregistrează în jurnal statistici de document pentru fiecare document atunci când Office Word este închis sau suspendat.  Evenimentul este utilizat pentru a corela editări în document, dimensiunea etc. cu erori de salvare documente, partajare de documente și colaborare online la documente.
-
-Se colectează următoarele câmpuri:
-
-- **Data_BkmkRefCount** - număr de referințe în marcaj în document
-
-- **Data_CharacterCount** - numărul de caractere din document
-
-- **Data_CharactersWithSpaceCount** - număr de caractere și spații din document
-
-- **Data_ChartCount** - numărul de diagrame din document
-
-- **Data_CitationCount** - numărul de referințe din document
-
-- **Data_DocumentLocation** - arată ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint etc.)
-
-- **Data_ETW_TrackbackTag** - identifică locul din cod de unde a fost declanșat acest eveniment (Închidere sau Suspendare)
-
-- **Data_EndnoteDocCount** - numărul de note de final din document
-
-- **Data_FootnoteDocCount** - numărul de note de subsol din document
-
-- **Data_HasBibliography** - indică dacă documentul conține bibliografie
-
-- **Data_HasHeader** - indică dacă documentul conține antet
-
-- **Data_IsImeUsed** - indică dacă intrare Editorul de metodă de intrare a fost utilizat în document
-
-- **Data_IsPageCountInProgress** - indică dacă numărul de pagini este în prezent în curs pentru document.
-    
-- **Data_IsTouchUsed** - indică dacă intrarea tactilă a fost utilizată în document
-
-- **Data_IsTrackChangesOn** - indică dacă urmărirea modificărilor a fost activată pentru document
-
-- **Data_LineCount** - numărul de linii din document
-
-- **Data_MainPdod** - Identificatorul documentului din procesul Office Word
-
-- **Data_PageCount** - numărul de pagini din document
-
-- **Data_PageNumberFieldCount** - numărul de câmpuri număr de pagină din document
-
-- **Data_ParagraphCount** - numărul de paragrafe din document
-
-- **Data_PicCount** - numărul de imagini din document
-
-- **Data_RsidCount** - numărul de revizuiri identificator salvare din document
-
-- **Data_TocCount** - număr de cuprinsuri din document
-
-- **Data_UrlHash** - cod hash unidirecțional pentru crearea unui identificator naiv de document
-
-- **Data_UserActionID** - acest câmp de date nu este utilizat (valoarea este întotdeauna 0).
-
-- **Data_UserActionName** - întotdeauna „DocumentStatsOnCloseAndSuspend”
-
-- **Data_UserInteractionTimeMsec** - număr de milisecunde în care utilizatorul a interacționat activ cu documentul
-    
-- **Data_WordCount** - numărul de cuvinte din document
-
 #### <a name="officewordfilenewcreatenewfile"></a>Office.Word.FileNew.CreateNewFile
 
 Acest eveniment indică faptul că un document nou este creat în Office Word și urmărește succesul sau nereușita operațiunii. Evenimentul este utilizat pentru a monitoriza dacă crearea noului document funcționează conform așteptărilor. În plus, se folosește pentru a calcula utilizatorii/dispozitivele active lunar și măsurătorile de fiabilitate cloud.
@@ -4952,102 +4890,6 @@ Se colectează următoarele câmpuri:
 - **Data_RenameFlightEnabled** - dacă este activată ediția flight pentru caracteristica de redenumire
 
     
-#### <a name="officewordfilesaveactfconfirmsavedoccoreautorecoverysave"></a>Office.Word.FileSave.ActFConfirmSaveDocCoreAutoRecoverySave
-
-Acest eveniment indică faptul că Office Word salvează un document de recuperare automată care nu a fost salvat înainte. Acesta permite ca Microsoft să detecteze erori în recuperarea automată, ceea ce este important pentru siguranța datelor din documente.  Evenimentul monitorizează dacă salvarea de recuperare automată funcționează conform așteptărilor. În plus, se folosește pentru a calcula utilizatorii/dispozitivele active lunar și măsurătorile de fiabilitate cloud.
-
-Se colectează următoarele câmpuri:
-
-- **Data_DetachedDuration** - cât timp a fost activitatea detașată de fir
-
-- **Data_Doc_AccessMode** - documentul este numai în citire/editabil
-
-- **Data_Doc_AssistedReadingReasons** - set predefinit de valori privind motivul pentru care documentul a fost deschis în modul de citire asistată
-
-- **Data_Doc_AsyncOpenKind –** indică dacă s-a deschis o versiune memorată în cache a documentului cloud și ce logică de reîmprospătare asincronă s-a folosit.
-    
-- **Data_Doc_ChunkingType** - unități utilizate pentru deschiderea incrementală a documentelor
-
-- **Data_Doc_EdpState** - setare de protecție a datelor electronice pentru document
-
-- **Data_Doc_Ext** - extensia documentului (docx/xlsb/pptx etc.)
-
-- **Data_Doc_FileFormat** - versiunea de protocol pentru formatul fișierului
-
-- **Data_Doc_Fqdn** - numele de domeniu OneDrive sau SharePoint Online
-
-- **Data_Doc_FqdnHash** - codul hash unidirecțional pentru numele de domeniu identificabil al clientului
-
-- **Data_Doc_IdentityTelemetryId** - codul hash unidirecțional pentru identitatea de utilizator folosită pentru deschidere
-
-- **Data_Doc_InitializationScenario** - înregistrează cum a fost deschis documentul
-
-- **Data_Doc_IOFlags** - rapoarte privind semnalizările memorate în cache folosite pentru a seta opțiuni de solicitare deschise
-
-- **Data_Doc_IrmRights** - acțiunile permise de politica de protejare a datelor electronice aplicată pentru document/utilizator
-
-- **Data_Doc_IsIncrementalOpen** - semnalizare care indică faptul că documentul a fost deschis incremental
-
-- **Data_Doc_IsOcsSupported** - semnalizare care indică faptul că documentul este acceptat în serviciul de colaborare
-    
-- **Data_Doc_IsOpeningOfflineCopy** - semnalizare care indică faptul că s-a deschis copia offline a unui document
-
-- **Data_Doc_IsSyncBacked** - semnalizare care indică faptul că pe computer există o copie sincronizată automat a documentului
-
-- **Data_Doc_Location** - indică ce serviciu a furnizat documentul (OneDrive, File Server, SharePoint etc.)
-
-- **Data_Doc_LocationDetails** - indică ce Folder cunoscut a furnizat un document stocat local
-
-- **Data_Doc_NumberCoAuthors** - numărul de alți utilizatori dintr-o sesiune de editare în colaborare
-
-- **Data_Doc_PasswordFlags** - arată semnalizările de parole pentru citire sau citire/scriere setate
-
-- **Data_Doc_ReadOnlyReasons** - motivele pentru care documentul a fost deschis doar în citire
-
-- **Data_Doc_ResourceIdHash** - identificator de document anonimizat, folosit în diagnosticarea problemelor
-
-- **Data_Doc_RtcType** - indică modul în care a fost configurat canalul în timp real (RTC) pentru fișierul curent (dezactivat, neacceptat, la cerere, activat permanent etc.).
-
-- **Data_Doc_ServerDocId** - identificator de document anonimizat și invariabil, folosit în diagnosticarea problemelor
-
-- **Data_Doc_ServerProtocol** - versiunea de protocol folosită în comunicarea cu serviciul
-
-- **Data_Doc_ServerType** - tipul de server care oferă serviciul (SharePoint, OneDrive, WOPI etc.)
-
-- **Data_Doc_ServerVersion** - versiunea serverului care oferă serviciul
-
-- **Data_Doc_SessionId** - identifică o anumită sesiune de editare a documentului din sesiunea completă
-
-- **Data_Doc_SharePointServiceContext** - informații de diagnosticare din solicitările SharePoint Online
-
-- **Data_Doc_SizeInBytes** - indicator privind dimensiunea documentului
-
-- **Data_Doc_SpecialChars** - indicator privind caracterele speciale din calea sau adresa URL a documentului
-
-- **Data_Doc_StreamAvailability** - indicator care arată dacă șirul documentului este disponibil/dezactivat
-
-- **Data_Doc_SyncBackedType** - indicator privind tipul documentului (local sau bazat pe servicii)
-
-- **Data_Doc_UrlHash** - cod hash unidirecțional, pentru crearea unui identificator naiv de document
-
-- **Data_Doc_WopiServiceId** - conține identificatorul unic al furnizorului de servicii WOPI
-
-- **Data_FailureClass** - întreg care reprezintă clasa de eroare pentru erorile de tranziție Office Collaboration Services (OCS)
-    
-- **Data_MainPdod** - Identificatorul documentului din procesul Office Word
-
-- **Data_MoveFlightEnabled** - dacă ediția flight este activată pentru caracteristica de mutare
-
-- **Data_OCSSyncbackSaveStarted** - marcaj care arată că această salvare este legată de salvarea de sincronizare inversă
-
-- **Data_RenameDisabledReason** - eroare care face redenumirea să fie dezactivată pentru acest document
-
-- **Data_RenameFlightEnabled** - dacă este activată ediția flight pentru caracteristica de redenumire
-
-- **Data_SaveInitiateKind** - întreg care arată cum s-a inițiat salvarea
-
-- **Data_SrcDocIsUnnamedOrNew** - indică dacă documentul pe care îl salvăm este nou
-
 
 #### <a name="officewordfilesaveactfconfirmsavedoccorequerysave"></a>Office.Word.FileSave.ActFConfirmSaveDocCoreQuerySave
 
@@ -7358,7 +7200,7 @@ Se colectează următoarele câmpuri:
 
 Eveniment generat când cade programul de completare COM pe o versiune de aplicații de Office pentru consumatori. 
 
-Utilizare: se utilizează pentru a calcula „adoptarea” globală, care nu ține de întreprindere a Office 365 ProPlus, pentru un program de completare care este apoi publicat pe readyforwindows.com și alte instrumente, cum ar fi Readiness Toolkit. Acest lucru le permite clienților întreprindere să valideze dacă programele de completare pe care le-au implementat în organizațiile lor sunt compatibile cu cele mai recente versiuni de Office 365 ProPlus și își planifică upgrade-urile în consecință. 
+Utilizare: se utilizează pentru a calcula „adoptarea” globală, care nu ține de întreprindere a Office 365 ProPlus, pentru un program de completare care este apoi utilizat de instrumente, cum ar fi Readiness Toolkit. Acest lucru le permite clienților întreprindere să valideze dacă programele de completare pe care le-au implementat în organizațiile lor sunt compatibile cu cele mai recente versiuni de Office 365 ProPlus și își planifică upgrade-urile în consecință. 
 
 Se colectează următoarele câmpuri:
 
@@ -7390,7 +7232,7 @@ Se colectează următoarele câmpuri:
 
 Eveniment generat când cade programul de completare COM pe o versiune de aplicații Office Enterprise.
 
-Utilizare: se utilizează pentru a calcula „adoptarea” globală, care nu ține de întreprindere a Office 365 ProPlus, pentru un program de completare care este apoi publicat pe readyforwindows.com și alte instrumente, cum ar fi Readiness Toolkit. Acest lucru le permite clienților întreprindere să valideze dacă programele de completare pe care le-au implementat în organizațiile lor sunt compatibile cu cele mai recente versiuni de Office 365 ProPlus și își planifică upgrade-urile în consecință. 
+Utilizare: se utilizează pentru a calcula „adoptarea” globală, care nu ține de întreprindere a Office 365 ProPlus, pentru un program de completare care este apoi utilizat de instrumente, cum ar fi Readiness Toolkit. Acest lucru le permite clienților întreprindere să valideze dacă programele de completare pe care le-au implementat în organizațiile lor sunt compatibile cu cele mai recente versiuni de Office 365 ProPlus și își planifică upgrade-urile în consecință. 
 
 - **ScopeId** – domeniul firului curent
 
@@ -7430,7 +7272,9 @@ Se colectează următoarele câmpuri:
 
 - **AssetId** - Asset ID-ul aplicației
 
-- **ErrorCode** - timp total 
+- **ErrorCode** - timp total
+
+- **IsDebug** - indică dacă sesiunea este o sesiune de depanare
 
 - **NumberOfAddinsActivated** - contor de programe de completare activate
 
