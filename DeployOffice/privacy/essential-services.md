@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre servicii esențiale în Office, cum ar fi Clic și Pornire și Licențiere, și asigură o listă de evenimente și câmpuri de date pentru aceste servicii esențiale.
 hideEdit: true
-ms.openlocfilehash: 25f594865089d35cb46ebfcc9b97d6b048f6298d
-ms.sourcegitcommit: ad2bb6e42b2432a2cb9370594cd50f3a14f2fbe3
+ms.openlocfilehash: 4410d94ea0179200fce0cd4dd16aebd62a21a2f6
+ms.sourcegitcommit: 4ec332a6f7457f08aa17fdbb7ee7f308a449887f
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "38310692"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "39962857"
 ---
 # <a name="essential-services-for-office"></a>Servicii esențiale pentru Office
 
@@ -423,6 +423,37 @@ Se colectează următoarele câmpuri:
   - **Wamapi** - identifică ce WAM API este apelat
 
   - **Wamtelemetrybatch** - momentan neutilizat. În viitor, permite componentei WAM să expedieze informații suplimentare referitoare la evenimentul de autentificare.
+
+### <a name="onenotesigninssoexternalappsaccountfound"></a>OneNote.SignIn.SSOExternalAppsAccountFound
+ 
+Acest eveniment este înregistrat când un cont cu un simbol de reîmprospătare valid se găsește în lista de conturi furnizate de TokenSharingManager.  Acest scenariu este specific pentru Sign-on unic (SSO).
+ 
+Se colectează următoarele câmpuri:
+ 
+- **AccountType** - înregistrează tipul de cont
+
+- **ProviderPackageID** - înregistrează ID-ul pachetului aplicației care a furnizat acest cont
+
+### <a name="onenotesigninssoexternalappsinvalidaccount"></a>OneNote.SignIn.SSOExternalAppsInvalidAccount
+
+Acest eveniment se înregistrează când a apărut o eroare atunci când s-a încercat obținerea unui simbol de reîmprospătare pentru un cont din lista de conturi furnizate de TokenSharingManager. Acest scenariu este specific pentru Sign-on unic (SSO)
+ 
+Se colectează următoarele câmpuri:
+ 
+- **RawError** - înregistrează eroarea brută obținută la încercarea de a obține un simbol de reîmprospătare cu contul dat
+
+### <a name="onenotestickynotesfetchtokencompleted"></a>OneNote.StickyNotes.FetchTokenCompleted
+ 
+Acest eveniment este înregistrat după autentificare, atunci când preluarea simbolului de reîmprospătare s-a încheiat.
+ 
+Se colectează următoarele câmpuri:
+ 
+- **ErrorMessage** - dacă preluarea simbolului nu a reușit, aici s-ar înregistra mesajul de eroare 
+
+- **Result** - înregistrează rezultatul tentativei de preluare a simbolului
+
+- **StickyNoteAccountType** - înregistrează tipul contului pentru care aplicația încerca să preia simbolul de reîmprospătare
+
 
 ## <a name="click-to-run-events"></a>Evenimente Clic și Pornire
 
@@ -2531,13 +2562,19 @@ Raportează acțiunea care stabilește intrarea colectată utilizând CollectPar
 
 - **PRID -** valoarea șirului care reprezintă ID-ul de lansare a produsului solicitat într-un scenariu de instalare de către consumatorului (de exemplu, „O365ProPlusRetail”)
 
-- **ProductsToAdd -** șirul serializat care instruiește clientul C2R despre combinațiile de produse/culturi pe care ar trebui să le instaleze
+- **PridsToMigrateFromCentennial-** șir de produse Office pentru migrare de la instalări Magazin la Clic și Pornire
+
+- **ProductsToAdd –**   șirul serializat care instruiește clientul C2R despre combinațiile de produse/culturi pe care ar trebui să le instaleze
+
+- **ProductsToMigrateFromO15C2R -**  șir de produse și culturi Office pentru migrare de la o instalare Office 2013 Clic și Pornire
 
 - **ProductsToRemove -** șirul serializat care instruiește clientul C2R despre combinațiile de produse/culturi pe care ar trebui să le dezinstaleze
 
 - **SharedComputerLicensing -** boolean care indică dacă un administrator IT a solicitat configurarea pentru a activa caracteristica „SharedComputerLicensing”
 
 - **ShouldActivate -** boolean care indică dacă un administrator IT a solicitat o încercare de activare automată a licențelor în configuration.xml
+
+- **ShouldUninstallCentennial -** semnalizare booleană care indică dacă produsele Office de la Magazin ar trebui dezinstalate
 
 - **VersionToInstall -** valoarea șirului din versiunea Office „16.0.xxxxx.yyyyy” care este instalată
  
@@ -2602,15 +2639,21 @@ Raportează parametrii utilizați pentru instalarea Office
 
 - **PlatformToInstall -** șir care indică decizia finală privind instalarea Office x86 sau x64
 
+- **PRID –**    valoarea șirului care reprezintă ID-ul de lansare a produsului solicitat într-un scenariu de instalare de către consumator (de exemplu, „O365ProPlusRetail”)
+
+- **PridsToMigrateFromCentennial-** șir de produse Office pentru migrare de la instalări Magazin la Clic și Pornire
+
+- **ProductsToAdd –**   șirul serializat care instruiește clientul C2R despre combinațiile de produse/culturi pe care ar trebui să le instaleze
+
+- **ProductsToMigrateFromO15C2R -** șir de produse și culturi Office pentru migrare de la o instalare Office 2013 Clic și Pornire
+
 - **ProductsToRemove -** șirul serializat care instruiește clientul C2R despre combinațiile de produse/culturi pe care ar trebui să le dezinstaleze
-
-- **PRID -** valoarea șirului care reprezintă ID-ul de lansare a produsului solicitat într-un scenariu de instalare de către consumatorului (de exemplu, „O365ProPlusRetail”)
-
-- **ProductsToAdd -** șirul serializat care instruiește clientul C2R despre combinațiile de produse/culturi pe care ar trebui să le instaleze
 
 - **SharedComputerLicensing -** boolean care indică dacă un administrator IT a solicitat configurarea pentru a activa caracteristica „SharedComputerLicensing”
 
 - **ShouldActivate -** boolean care indică dacă un administrator IT a solicitat o încercare de activare automată a licențelor în configuration.xml
+
+- **ShouldUninstallCentennial -** semnalizare booleană care indică dacă produsele Office de la Magazin ar trebui dezinstalate
 
 - **VersionToInstall -** valoarea șirului din versiunea Office „16.0.xxxxx.yyyyy” care este instalată
 
@@ -2651,6 +2694,37 @@ Raportează acțiunile cu impact realizate de computer, așa cum sunt determinat
 - **VersionToInstall -** valoarea șirului din versiunea Office „16.0.xxxxx.yyyyy” care este instalată
 
 
+### <a name="officeserviceabilitymanagerinventoryaddonresults"></a>Office.ServiceabilityManager.InventoryAddon.Results
+
+Acest eveniment este înregistrat când apelul către webservice efectuat în cadrul programului de completare Clic și Pornire Serviceability Manager Inventory se termină, indiferent dacă reușește sau nu. Aceasta este, în esență, ultima operațiune din programul de completare care urmărește starea generală a operațiunii.
+
+Se colectează următoarele câmpuri:
+
+-  **WebCallSource** - o valoare de enumerare (specificată ca un număr întreg) care indică programul de completare Serviceability Manager care a fost sursa apelului:
+   - Inventar: 0
+   - Configurație inventar: 1
+   - Politică inventar: 2
+   - Stare rețea inventar: 3
+
+- **Result** - semnalizări numerice ale codurilor de eroare returnate de apelurile API ale Office webservice.
+
+### <a name="officeserviceabilitymanagerwebservicefailure"></a>Office.ServiceabilityManager.WebserviceFailure
+
+Acest eveniment este înregistrat atunci când un apel la un webservice efectuat într-un program de completare Clic și Pornire Serviceability Manager nu reușește.
+
+Se colectează următoarele câmpuri:
+
+- **Add-on** - programul de completare Clic și Pornire Serviceability Manager din care a fost efectuat apelul webservice. Acesta poate avea valori, cum ar fi inventar, gestionare etc. codificate ca valoare numerică.
+
+- **Correlation ID** - un GUID generat aleatoriu specific pentru instanța curentă, care este trimis la webservice pentru a corela apelurile între client și server.
+
+- **ErrorInfo** - informații numerice ale codurilor de eroare returnate de apelurile API ale Office webservice.
+
+- **Function** - funcția din cod de la care a avut loc apelul curent.
+
+- **Status** - codul de stare HTTP returnat de apelul către webservice, de exemplu, 404, 500 etc.
+
+
 ## <a name="enhanced-configuration-service-ecs-events"></a>Evenimente Serviciu de configurație avansată (ECS)
 
 ### <a name="officeexperimentationfeaturequerybatched"></a>Office.Experimentation.FeatureQueryBatched
@@ -2688,6 +2762,14 @@ Acest eveniment contribuie la analiza domeniului de aplicare al utilizării și 
 Se colectează următoarele câmpuri:
 
   - **FeatureGate -** identifică setul de caracteristici la care se aplică analiza trigger.
+
+### <a name="onenoteflightdefault"></a>OneNote.FlightDefault
+ 
+Acest eveniment este înregistrat când OneNote solicită serverului ECS valorile edițiilor flight.  Acest lucru este utilizat pentru a activa caracteristicile experimentale pentru utilizatorii care au optat pentru primirea edițiilor flight de acest tip.
+ 
+Se colectează următoarele câmpuri:
+ 
+- **ConfigParam** - configurarea pentru care este accesată valoarea
 
 ## <a name="licensing-events"></a>Evenimente de licențiere
 
@@ -2757,7 +2839,10 @@ Se colectează următoarele câmpuri:
 
 Colectăm acest lucru atunci când utilizatorul configurează un dispozitiv și apelăm serviciul nostru de licențiere pentru a detecta dacă utilizatorul autentificat are drepturi de Office sau nu. Acesta raportează rezultatul apelului respectiv. Este de importanță critică pentru a detecta dacă utilizatorul se află în stare bună și dacă îi lipsesc funcționalități, este utilizat pentru sănătatea sistemului și în scopuri de diagnosticare dacă un utilizator raportează o problemă cu computerul
 
-Acest eveniment nu colectează niciun câmp.
+Se colectează următoarele câmpuri:
+
+- **EntitlementCount** - numărul de drepturi pe care le are utilizatorul
+
 
 ### <a name="officelicensingheartbeat"></a>Office.Licensing.Heartbeat 
 
@@ -2766,6 +2851,26 @@ La fiecare sesiune verificăm dacă au trecut 72 de ore de la ultima reînnoire 
 Se colectează următoarele câmpuri:
 
   - **Mode** - o reprezentare cu enumerator a stivei de licențiere Office care este utilizată la acest computer
+
+### <a name="officelicensinginclientpinredemptioncallpinredemptionapi"></a>Office.Licensing.InClientPinRedemption.CallPinRedemptionAPI
+
+Această telemetrie urmărește rezultatele apelului de serviciu de valorificare a pinului Office.
+
+Se colectează următoarele câmpuri:
+
+- **ClientTransactionId** - Identificator unic pentru apelul de serviciu.
+
+- **ErrorCategory** - fiecare tip de eroare poate aparține unei categorii mai generale, cum ar fi „reîncercare”.
+
+- **ErrorType** - motivul erorii, cum ar fi „AlreadyRedeemedByOther”.
+
+- **InAFOFlow** - valoare booleană care indică dacă ne aflăm în fluxul de valorificare AFO.
+
+- **StatusCode** - rezultat de un cuvânt al apelului de serviciu, cum ar fi „Creat”.
+
+- **StatusMessage** - detalii despre codul de stare, cum ar fi „Aprovizionat cu succes”.
+
+- **UsingNulApi** - valoare booleană care indică dacă utilizăm noua stivă de licențiere.
 
 ### <a name="officelicensinginrfm"></a>Office.Licensing.InRFM 
 
@@ -2915,6 +3020,26 @@ Dacă dintr-un motiv sau altul nu putem activa un utilizator și trebuie să îi
 
 Acest eveniment nu colectează niciun câmp.
 
+### <a name="officelicensingoobetrybuychoice"></a>Office.Licensing.OOBE.TryBuyChoice
+
+Utilizatorilor cu Office preinstalat pe noile dispozitive care nu au drepturi Office li se afișează o casetă de dialog prin care pot să încerce, să cumpere sau să introducă o cheie de produs pentru a obține licența. Acest eveniment capturează acțiunea utilizatorului din caseta de dialog. Acest eveniment este utilizat pentru a urmări acțiunea utilizatorului întreprinsă în caseta de dialog afișată pentru utilizatorii fără drepturi Office, când Office a fost preinstalat pe computer și ajută să determinăm dacă utilizatorul este licențiat sau nelicențiat în mod implicit.
+
+Se colectează următoarele câmpuri:
+
+- **Buy** - spune dacă utilizatorul a făcut clic sau nu pe butonul cumpărați
+
+- **ForceAutoActivate** - spune dacă activarea în cadrul aplicației ar trebui să fie încercată sau nu
+
+- **GoBackToSignIn** - spune dacă utilizatorul a dorit să se conecteze din nou (eventual cu alt cont)
+
+- **IsPin** - spune dacă utilizatorul a introdus un cod PIN
+
+- **ProductKey** - spune dacă utilizatorul a încercat să introducă o cheie de produs
+
+- **Try** - spune dacă utilizatorul a făcut clic sau nu pe butonul încercați
+
+- **UserDismissed** - indică dacă utilizatorul a respins caseta de dialog și, prin urmare, este în perioada de grație sau în modul de funcționalitate redusă, deoarece nu a ales să cumpere Office sau să obțină o versiune de încercare
+
 ### <a name="officelicensingpurchase"></a>Office.Licensing.Purchase 
 
 Avem un experiment care oferă utilizatorului opțiunea de a încerca și a configura plata automată pentru Office direct din aplicație, fără să iasă din contextul aplicației. Acesta raportează succesul sau eșecul experimentului respectiv împreună cu codul de eroare Este de importanță critică pentru a detecta dacă utilizatorul se află în stare bună, fără să îi lipsească funcționalități, este utilizat pentru sănătatea sistemului și în scopuri de diagnosticare dacă un utilizator raportează o problemă cu computerul.
@@ -2957,6 +3082,149 @@ Se colectează următoarele câmpuri:
 
   - **UninstallProduct** - indică dacă produsul vechi va fi dezinstalat ca parte a conversiei
 
+### <a name="officelicensingtelemetryflowolsresults"></a>Office.Licensing.TelemetryFlow.OLSResults
+
+Atunci când un utilizatorul nu este licențiat, efectuăm mai multe apeluri de serviciu pentru a-l aduce pe utilizator în stare de licențiere și pentru a-și activa produsul Office.  Acest eveniment este declanșat la apelarea Serviciului de licențiere Office pentru a verifica dacă utilizatorul are drepturi.  Acest eveniment va fi utilizat pentru a urmări starea de licențiere a utilizatorului după apelarea Serviciului de licențiere Office și starea clientului Office după încercarea de activare a Office.
+
+Se colectează următoarele câmpuri:
+
+- **EntitlementPickerShown** - spune dacă utilizatorul a avut mai multe drepturi și dacă utilizatorul a trebuit să aleagă manual între acestea pentru a obține licența
+
+- **GetAuthResult** - comunică diverse situații în care poate fi clientul cum ar fi dacă au primit o cheie de produs necompletată de la Serviciul de licențiere Office sau dacă au aveau dreptul să primească alt produs, iar Office trebuie să fie schimbat cu un produs nou
+
+- **GetEntitlementsCount** - indică numărul de drepturi pe care le are utilizatorul
+
+- **GetEntitlementsSucceeded** - indică dacă apelul către un API pentru Serviciul de licențiere Office pentru a regăsi drepturile utilizatorului a reușit sau nu
+
+- **GetKeySucceeded** - indică dacă apelul către un API pentru Serviciul de licențiere Office pentru a regăsi o cheie a reușit
+
+- **GetNextUserLicenseResult** - spune dacă stiva de licențiere modernă a putut funcționa și dacă utilizatorul a fost licențiat sau nu
+
+- **InstallKeyResult** - indică diverse motive pentru care utilizatorul poate fi într-o stare nepotrivită, cum ar fi dacă activarea nu a reușit sau dacă instalarea cheii nu a reușit
+
+- **NotInitializedBeforeWhileAdding** - este doar informativ și indică dacă evenimentul a fost adăugat la o hartă a managerului de telemetrie fără să se înregistreze explicit pentru aceasta
+
+- **NotInitializedBeforeWhileSending** - este doar informativ și indică dacă s-a încercat trimiterea evenimentului fără să fie înregistrat dinainte în mod explicit în harta managerului de telemetrie
+
+- **SentOnDestruction** - este doar informativ și indică dacă evenimentul a fost adăugat la o hartă a managerului de telemetrie și nu a fost trimis în mod explicit
+
+- **Tag** - utilizat pentru a indica de unde din cod a fost trimis evenimentul
+
+- **VerifyEntitlementsResult** - indică diverse stări în care poate fi utilizatorul după validarea drepturilor regăsite la Serviciul de licențiere Office
+
+### <a name="officelicensingtelemetryflowsearchforbindingresult"></a>Office.Licensing.TelemetryFlow.SearchForBindingResult
+
+Computere OEM care sunt dotate cu Office (abonamente pe un an sau permanente).  Aceste produse Office sunt plătite când clientul își cumpără computerul. Computerele care sunt setate cu un anumit regkey (OOBEMode: OEMTA) pot avea o legătură Office asociată.  Atunci când încărcăm Office pe astfel de computere, efectuăm verificări de serviciu pentru a vedea dacă este găsită o legătură Office care corespunde calculatorului.
+
+Această activitate de telemetrie urmărește punctele de succes și eșec în căutarea unei legături, astfel încât să ne asigurăm că mașinile care au o legătură o pot prelua cu succes și că serviciile noastre sunt funcționale.  Această activitate nu urmărește calculatoarele care nu au legături asociate cu acestea după ce verificăm serviciile noastre.
+
+Se colectează următoarele câmpuri:
+
+- **GenuineTicketFailure** - ne indică HRESULT eșec atunci când se încearcă obținerea tichetului/cheii de produs (WPK) originale Windows a computerului.
+
+- **PinValidationFailure** - ne spune de ce procesul de validare a codului PIN nu a reușit. Erori posibile:
+    - GeoBlocked
+    - InvalidFormat
+    - InvalidPin
+    - InvalidState
+    - InvalidVersion
+    - Unknown
+    - Used
+
+- **PinValidationResult** - ne indică rezultatul validării codului PIN pentru un PIN pe care nu am reușit să-l descifrăm.
+
+- **Pkpn** - intervalul pkpn căruia îi aparține codul PIN.
+
+- **Success** - indică faptul că am preluat cu succes o legătură Office (PIN) validă pentru calculator.
+
+- **Tag** - ne spune la ce pas am oprit căutarea unei legături. Etichete posibile:
+  - 0x03113809  eroare lipsă conexiune la internet/serviciu în timpul validării codului PIN
+   - 0x0311380a eroare de validare a codului PIN, trimis cu câmpul PinValidationFailure
+  - 0x0310410f Succes, trimis cu câmpul Success
+  - 0x0311380d  erori de reîncercare (probleme de internet, erori necunoscute)
+  - 0x0311380e  erori care nu pot fi reîncercate (oferta de legătură a expirat)
+  - 0x0311380f  alte erori (nu se poate licenția)
+  - 0x03104111  nereușită la descifrarea codului PIN Office, trimis cu câmpul PinValidationResult
+
+- **WpkBindingFailure** - ne spune codul de eroare la legarea dintre codul PIN Office și WPK pentru computer.
+
+### <a name="officelicensingtelemetryflowshowafodialogs"></a>Office.Licensing.TelemetryFlow.ShowAFODialogs
+
+După obținerea cu succes a unui cod PIN Office valid legat la un calculator cu Office preinstalat, îi afișăm utilizatorului o casetă de dialog de conectare sau o casetă de dialog de valorificare.  După ce codul PIN a fost valorificat, afișăm caseta de dialog EULA.  Ca parte din caracteristica noastră AFO modernizată, am reîmprospătat cele două casete de dialog pentru a transmite mai multe informații despre produsul Office care este livrat cu calculatorul.  Această telemetrie este utilizată pentru a urmări dacă caracteristica noastră reduce cu succes dezacordurile cu utilizatorul la valorificarea produsului său, urmărind fluxul și punctele de ieșire ale procesului de valorificare (ce casetă de dialog a fost respinsă).
+
+Se colectează următoarele câmpuri:
+
+- **ActionCreateAccount** - utilizatorul a ales să creeze un cont.
+
+- **ActionSignIn** - utilizatorul a ales să se conecteze.
+
+- **DialogRedemption** - afișarea dialogului de valorificare AFO.
+
+- **DialogSignIn** - afișarea dialogului de conectare AFO.
+
+- **OExDetails** - detaliile erorii pe care o primim când dialogul de conectare pentru identitate a fost respins.
+
+- **OExType** - tipul erorii pe care o primim când dialogul de conectare pentru identitate a fost respins.
+
+- **Tag** - ne spune la ce pas părăsește utilizatorul procesul de valorificare AFO. Etichete posibile:
+    - 0x0311380b    utilizatorul a respins dialogul de conectare a identității din dialogul de valorificare
+    - 0x0311380c    nu a reușit să încarce automat un mesaj de conectare la identitatea utilizatorului din caseta de dialog de valorificare
+    - 0x03113810    nu a reușit să încarce informațiile demografice ale contului (cod de țară, limbă, monedă, oferta de încercare și preferințele de marketing)
+    - 0x03113805    utilizatorul a respins dialogul de conectare a identității din dialogul de conectare
+    - 0x03113806    nu a reușit să încarce automat un mesaj de conectare la identitatea utilizatorului din dialogul de conectare
+    - 0x03113807    nu a reușit să încarce automat o identitate
+    - 0x03113811    utilizatorul a închis dialogul de conectare/valorificare
+    - 0x03113812    utilizatorul a închis dialogul de acceptare EULA
+    - 0x03113808    utilizatorul a acceptat EULA
+
+- **UseInAppRedemption** - ne spune dacă menținem utilizatorii în aplicație pentru valorificare sau îi trimitem pe web pentru a-și valorifica pinul preluat (prepopulat).
+
+- **UseModernAFO** - ne spune dacă utilizăm noua sau vechea experiență AFO.
+
+### <a name="officelicensingtelemetryflowshowtrybuydialogforoobe"></a>Office.Licensing.TelemetryFlow.ShowTryBuyDialogForOOBE
+
+Atunci când calculatoarele noi au Office preinstalat și utilizatorul nu are drepturi, vom afișa un dialog care îi oferă utilizatorului opțiunea de a încerca, a cumpăra sau a introduce o cheie de produs, astfel încât utilizatorul să poată fi licențiat și acest eveniment urmărește dacă dialogul a fost afișat. Acest eveniment ne ajută să știm dacă dialogul i-a fost afișat utilizatorului pentru a încerca, a cumpăra sau a introduce cheia de produs și, prin urmare, ne va ajuta să aflăm dacă utilizatorul a avut oportunitatea de a obține licența.
+
+Se colectează următoarele câmpuri: 
+
+- **ActiveView** - indică ID-ul dialogului care i-a fost afișat utilizatorului
+
+- **CurrentOOBEMode** - indică modul de pre-instalare (modul OOBE, cum ar fi AFO, OEM etc.)
+
+- **NotInitializedBeforeWhileAdding** - este doar informativ și indică dacă evenimentul a fost adăugat la o hartă a managerului de telemetrie fără să se înregistreze explicit pentru aceasta
+
+- **SentOnDestruction** - este doar informativ și indică dacă evenimentul a fost adăugat la o hartă a managerului de telemetrie și nu a fost trimis în mod explicit
+
+- **ShowTryButton** - indică dacă butonul Try i-a fost afișat utilizatorului în dialog sau nu
+
+- **Tag** - utilizat pentru a indica de unde din cod a fost trimis evenimentul
+
+### <a name="officelicensingtelemetryflowtrialflow"></a>Office.Licensing.TelemetryFlow.TrialFlow
+
+Atunci când un utilizator nelicențiat de Office preinstalat pe un computer încearcă să obțină o versiune de încercare, se declanșează acest eveniment.  Este utilizat pentru a vedea ce cale va urma utilizatorul pentru a obține o versiune de încercare și dacă au existat erori în timpul obținerii versiunii de încercare prin achizițiile în cadrul aplicațiilor.  În funcție de acțiunea utilizatorului și de rezultatul achiziției în cadrul aplicației, utilizatorul poate deveni nelicențiat.
+
+Se colectează următoarele câmpuri:
+
+- **HasConnectivity** - indică dacă utilizatorul are conexiune la internet și, în caz că nu, utilizatorul ar putea să trebuiască să utilizeze o licență de grație de cinci zile sau ar putea fi în modul de funcționalitate redusă
+
+- **InAppTrialPurchase** - indică dacă ediția flight este activată pentru lansarea SDK de achiziție în Magazin pentru a captura PI și a achiziționa o versiune de încercare în cadrul aplicației
+
+- **IsRS1OrGreater** - indică dacă versiunea sistemului de operare este mai mare decât RS1 sau nu, deoarece SDK de achiziție în Magazin ar trebui să fie utilizat doar dacă versiunea sistemului de operare este mai mare decât RS1
+
+- **NotInitializedBeforeWhileAdding**: este doar informativ și indică dacă evenimentul a fost adăugat la o hartă a managerului de telemetrie fără să se înregistreze explicit pentru aceasta
+
+- **OEMSendToWebForTrial** - indică dacă ediția flight este activată pentru a trimite utilizatorii pe web pentru a valorifica o versiune de încercare
+
+- **StoreErrorConditions** - indică diversele condiții sub care poate să fi eșuat SDK de achiziție în Magazin.
+
+- **StoreErrorHResult** - indică codul de eroare returnat de SDK de achiziție în Magazin
+
+- **StorePurchaseStatusResult** - spune rezultatul apelării SDK de achiziție în Magazin și dacă utilizatorul a făcut sau nu o achiziție, ceea ce ne ajută să determinăm dacă utilizatorul trebuie să primească licență pentru a utiliza Office
+
+- **Tag** - utilizat pentru a indica de unde din cod a fost trimis evenimentul
+
+- **UserSignedInExplicitly** - spune dacă utilizatorul s-a conectat în mod explicit, iar în acest caz am redirecționa utilizatorii către web pentru versiunea de încercare
+
 ### <a name="officelicensingusegracekey"></a>Office.Licensing.UseGraceKey
 
 Dintr-un motiv sau altul, nu putem să licențiem utilizatorul; instalăm o cheie de grație și trimitem acest semnal cu semnificație. Este de importanță critică pentru a detecta dacă utilizatorul se află în stare bună și dacă îi lipsesc funcționalități, este utilizat pentru sănătatea sistemului și în scopuri de diagnosticare dacă un utilizator raportează o problemă cu computerul
@@ -2966,6 +3234,14 @@ Se colectează următoarele câmpuri:
   - **OpportunisticTokenRenewalAttempted** - indică dacă am încercat o reînnoire oportunistă pentru utilizator în modul de activare computer partajat
 
   - **ReArmResult** - indică rezultatul reactivării perioadei de probă a cheii instalate, ceea ce poate extinde valabilitatea licenței curente
+
+### <a name="onenoteenrollmentresult"></a>OneNote.EnrollmentResult
+ 
+Acest eveniment înregistrează starea la înscrierea în Intune.  Acest scenariu este specific conturilor activate pentru Intune.
+ 
+Se colectează următoarele câmpuri:
+ 
+- **EnrollmentResult** - rezultatul înscrierii în Intune
 
 ## <a name="microsoft-autoupdate-mau-events"></a>Evenimente Microsoft AutoUpdate (MAU)
 
@@ -10053,6 +10329,33 @@ Se colectează următoarele câmpuri
 
 - **Source** - o enumerare care indică ce eveniment a declanșat UI, adică, crearea unei noi imagini redx, o eroare de sincronizare în sincronizarea UI, afișarea unui dialog de eroare, etc.
 
+### <a name="onenoteappprovisioningmovelocalnotebooktoonlinenotebookfailed"></a>OneNote.App.Provisioning.MoveLocalNotebookToOnlineNotebookFailed
+ 
+Acest eveniment este înregistrat când nu reușește mutarea blocnotesului local pe drive.  Acest scenariu este specific pentru utilizatorii cu conectare întârziată Atunci când utilizatorul se conectează, blocnotesul său local este transferat în spațiul de stocare OneDrive. 
+ 
+Se colectează următoarele câmpuri:
+ 
+- **ErrorMsg** - mesajul de eroare corespunzător.
+
+### <a name="onenotesynccreatenotebookfailed"></a>OneNote.Sync.CreateNotebookFailed
+ 
+Acest eveniment este înregistrat când nu reușește crearea unui blocnotes.  
+ 
+Se colectează următoarele câmpuri:
+ 
+- **NetworkConnection** - înregistrează tipul de conexiune pe care îl are dispozitivul în prezent, de exemplu, Wi-Fi, offline, 3G 
+
+- **ServerType** - înregistrează tipul de server în care trebuia să fie creat blocnotesul.
+
+### <a name="onenotesyncfirstrunerror"></a>OneNote.Sync.FirstRunError
+ 
+Acest eveniment este înregistrat când sincronizarea Notelor rapide nu a reușit pentru un utilizator în timpul primei experiențe de rulare pe un dispozitiv.  Acest lucru este specific pentru scenariul de primă rulare.
+ 
+Se colectează următoarele câmpuri:
+ 
+- **NetworkConnection** - înregistrează tipul de conexiune pe care îl are dispozitivul în prezent, de exemplu, Wi-Fi, offline, 3G
+
+- **ServerType** - înregistrează tipul de server în care trebuia să fie creat blocnotesul Note rapide
 
 ## <a name="services-configuration-events"></a>Evenimente de configurare servicii
 
