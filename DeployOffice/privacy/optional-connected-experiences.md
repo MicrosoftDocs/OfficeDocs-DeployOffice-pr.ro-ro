@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate opționale, inclusiv condițiile de utilizare care se aplică.
 hideEdit: true
-ms.openlocfilehash: 7e9207148c9f294e9a1e41d353fa3cdd8878f88c
-ms.sourcegitcommit: 5be570c4403e82352142b3297507cf314815bdea
+ms.openlocfilehash: ab9404b93157875589f2625be51a9e30cc3d0795
+ms.sourcegitcommit: aaf8caeee3367ba6cf3c811d1ee3e43cfccc8b33
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "38276501"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "41024461"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Prezentare generală a experiențelor conectate opționale în Office
 
@@ -37,7 +37,15 @@ Este important să știți că aceste servicii cloud opționale nu sunt acoperit
 
 ## <a name="experiences-that-rely-on-bing"></a>Experiențe care se bazează pe Bing
 
-Unele servicii cloud sunt pe platformă Microsoft Bing. Microsoft Bing este o firmă separată de Office 365 ProPlus și este gestionată independent de Office 365 ProPlus de către Microsoft. Experiențele pe care le susține în aplicațiile Office 365 ProPlus sunt: [Hărți 3D](https://support.office.com/article/6b56a50d-3c3e-4a9e-a527-eea62a387030), [Diagrame hartă](https://support.office.com/article/f2cfed55-d622-42cd-8ec9-ec8a358b593b), [Inserare imagini online](https://support.office.com/article/3C51EDF4-22E1-460A-B372-9329A8724344), [Inserare modele 3D online](https://support.office.com/article/ec5feb79-b0af-47f6-a885-151fcc88ac0a), [Pornire rapidă PowerPoint](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224), [Cercetare (Researcher)](https://support.office.com/article/1728f286-8702-4d72-8169-ab7677ca0e1f) și [Căutare inteligentă](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044). Aceste experiențe vă sunt licențiate conform condițiilor din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și sunt acoperite de [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). Toate interogările de căutare pe care le furnizați organizației Office 365 ProPlus în timp ce utilizați aceste servicii sunt trimise către Microsoft Bing. Acestea nu sunt legate pentru dvs. de organizația Bing.
+Unele servicii cloud sunt pe platformă Microsoft Bing. Microsoft Bing este o firmă separată de Office 365 ProPlus și este gestionată independent de Office 365 ProPlus de către Microsoft. Experiențele pe care le susține în aplicațiile Office 365 ProPlus sunt: [Hărți 3D](https://support.office.com/article/6b56a50d-3c3e-4a9e-a527-eea62a387030), [Diagrame hartă](https://support.office.com/article/f2cfed55-d622-42cd-8ec9-ec8a358b593b), [Inserare imagini online](https://support.office.com/article/3C51EDF4-22E1-460A-B372-9329A8724344), [Inserare modele 3D online](https://support.office.com/article/ec5feb79-b0af-47f6-a885-151fcc88ac0a), [Pornire rapidă PowerPoint](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224), [Cercetare (Researcher)](https://support.office.com/article/1728f286-8702-4d72-8169-ab7677ca0e1f) și [Căutare inteligentă](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044). 
+
+Experiențele pe care Bing le pune la dispoziție în Outlook pentru iOS și Android sunt următoarele:
+
+- **Sugestii despre locație:**   Atunci când adăugați un loc public cu o adresă poștală la un element de calendar, adresa poștală completă este inclusă în câmpul Locație.
+- **Calendare interesante:**   Vă puteți [abona](https://www.osupportweb.com/a/outlook-mobile/?s=feature-walkthroughs&f=where-do-i-go-on-outlook-to-subscribe-to-an-interesting-calendar&p=all) la calendare cu echipele sportive sau emisiunile TV favorite.
+
+
+ Aceste experiențe bazate pe Bing vă sunt licențiate conform condițiilor din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și sunt acoperite de [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). Toate interogările de căutare pe care le furnizați organizației Office 365 ProPlus în timp ce utilizați aceste servicii sunt trimise către Microsoft Bing. Acestea nu sunt legate pentru dvs. de organizația Bing.
 
 ## <a name="experiences-that-rely-on-linkedin"></a>Experiențe care se bazează pe LinkedIn
 
@@ -47,9 +55,13 @@ Notă: Setarea de confidențialitate descrisă mai jos nu controlează experien�
 
 ## <a name="experiences-that-rely-on-other-microsoft-owned-online-services-andor-services-owned-by-third-parties"></a>Experiențe care se bazează pe alte servicii online deținute de Microsoft și/sau servicii deținute de terți
 
+### <a name="help--contact-support"></a>Ajutor > Contactați asistența
+
+În Outlook pentru iOS și Android, puteți să raportați probleme și să vă conectați cu echipa noastră de asistență prin **Setări** > **Ajutor și feedback** > **Contactați asistența**. Această experiență este susținută de un serviciu furnizat de HelpShift și se vor aplica [condițiile de utilizare a serviciului](https://www.helpshift.com/legal/terms/) și [politica de confidențialitate](https://www.helpshift.com/legal/privacy/) ale HelpShift.
+
 ### <a name="help--suggest-a-feature"></a>Ajutor > Sugerați o caracteristică
 
-Sugerați o caracteristică este o experiență care vă permite să remiteți idei cu privire la utilizarea Outlook. Sugestiile dvs. sunt furnizate direct într-un serviciu terț denumit UserVoice. Dacă trimiteți ideile utilizând Sugerați o caracteristică, se vor aplica [Condițiile de utilizare a serviciului și politica de confidențialitate ale UserVoice](https://outlook.uservoice.com/tos).
+Sugerați o caracteristică este o experiență care vă permite să remiteți idei cu privire la utilizarea Outlook. Sugestiile dvs. sunt furnizate direct într-un serviciu terț denumit UserVoice. Dacă trimiteți ideile utilizând Sugerați o caracteristică, se vor aplica [condițiile de utilizare a serviciului](https://outlook.uservoice.com/tos) și [politica de confidențialitate](https://outlook.uservoice.com/tos#privacy-policy) ale UserVoice.
 
 ### <a name="insert-online-video"></a>Inserarea unui fișier video online
 

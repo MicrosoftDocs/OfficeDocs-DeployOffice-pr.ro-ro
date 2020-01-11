@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate pentru Office, cum ar fi experiențele care analizează conținut sau experiențele care descarcă conținut online.
 hideEdit: true
-ms.openlocfilehash: 5bf39e1fbe7e56b77496cfc0756484a9a1c051a0
-ms.sourcegitcommit: acb22296532bbfdfcad4dc1e7162f812997fbdd1
+ms.openlocfilehash: a2f2a951db371336be1b425b0db45e5e72ea9d75
+ms.sourcegitcommit: aaf8caeee3367ba6cf3c811d1ee3e43cfccc8b33
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "38067556"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "41024371"
 ---
 # <a name="connected-experiences-in-office"></a>Experiențe conectate în Office
 
@@ -29,6 +29,8 @@ ms.locfileid: "38067556"
 > - Project și Visio care sunt oferite cu anumite planuri de abonament, cum ar fi planul Project Online Professional sau Visio Online Plan 2.
 >
 > Informațiile se aplică și la versiunea 16.28 sau la versiunile mai recente ale următoarelor aplicații Office pentru Mac: Excel, Outlook, OneNote, PowerPoint și Word.
+>
+> Aceste informații se vor aplica la o versiune de Outlook pentru iOS și Android, care va fi lansată la sfârșitul lunii ianuarie 2020.
 
 Office constă din aplicațiile software client și experiențe conectate proiectate pentru a vă permite să creați, să comunicați și să colaborați mai eficient. Lucrul cu alte persoane într-un document stocat pe OneDrive sau traducerea conținutului unui document Word într-o altă limbă sunt câteva exemple de experiențe conectate.
 
@@ -49,13 +51,16 @@ Următorul tabel furnizează o listă de experiențe conectate care vă analizea
 | Cerneală în text, Cerneală în formă, Cerneală în expresie matematică | [Modificați cerneală scrisă de mână în forme, în text sau în expresie matematică în PowerPoint pentru Office 365](https://support.office.com/article/0740dec3-6291-4c1f-8baa-011d18449919) |
 | Inserarea datelor din imagine| [Inserare date din imagine](https://support.office.com/article/3c1bb58d-2c59-4bc0-b04a-a671a6868fd7)|
 | Subtitrări în direct |  [Prezentați subtitrări în timp real, automate în PowerPoint](https://support.office.com/article/68d20e49-aec3-456a-939d-34a79e8ddd5f)   |
+| Sugestii despre locație | Atunci când adăugați un loc public cu o adresă poștală la un element de calendar, Outlook pentru iOS și Android va include și adresa poștală completă în câmpul Locație. |
 | Hărțile în Power View   | [Hărțile în Power View](https://support.office.com/article/8A9B2AF3-A055-4131-A327-85CC835271F7) |
 | Serviciu de prezentări Office   | [Difuzați prezentarea online PowerPoint unui public la distanță](https://support.office.com/article/25330108-518e-44be-a281-e3d85f784fee)    |
 | PowerPoint Designer   | [Creați aspecte de diapozitiv profesioniste cu PowerPoint Designer](https://support.office.com/article/53c77d7b-dc40-45c2-b684-81415eac0617)   |
 | Publicare în Power BI   | [Publicați în Power BI din Excel](https://docs.microsoft.com/power-bi/service-publish-from-excel) |
 | Publicare în Microsoft Stream    | [Transformați prezentarea într-un videoclip](https://support.office.com/article/c140551f-cb37-4818-b5d4-3e30815c3e83#bkmk_microsoftstream)  |
 | Cercetare   | [Adăugați sau modificați servicii de cercetare](https://support.office.com/article/b862efc5-9a7b-4f88-a23d-93712d6e4397)  |
+| Scanați o carte de vizită|  [Scanați sau atingeți pentru a adăuga persoane de contact în Outlook pentru Android](https://support.office.com/article/4818ef14-0fc8-4ec2-bb4d-440ea8cae17b)|
 | Căutare inteligentă   | [Obțineți detalii despre ceea ce lucrați cu Căutare inteligentă](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044) |
+| Răspunsuri sugerate | [Ce sunt răspunsurile sugerate?](https://www.osupportweb.com/a/outlook-mobile/?p=all&s=feature-walkthroughs&f=what-are-suggested-replies)|
 | Atingere pentru Word (Adăugare din fișiere)   | [Găsiți și utilizați conținutul de care aveți nevoie, atunci când aveți nevoie, fără a ieși din Word](https://support.office.com/article/860118fc-1f61-41f6-922f-40084a284658)   |
 | Transformare la pagina web   | [Transformați un document Word într-o pagină web Sway](https://support.office.com/article/65912b2d-8b81-41e1-ac52-c20a65ce8ecf) |
 | Translator   | [Traduceți text în altă limbă](https://support.office.com/article/287380e4-a56c-48a1-9977-f2dca89ce93f)  |
@@ -68,14 +73,19 @@ Următorul tabel furnizează o listă de experiențe conectate care descarcă co
 
 | **Nume**      | **Mai multe informații**  |
 | ------------- | ------------- |
+| Aplicațiile de calendar| [Ce sunt aplicațiile de calendar?](https://www.osupportweb.com/a/outlook-mobile/?p=android&s=getting-started-on-outlook&f=what-are-calendar-apps) |
 | Fonturi cloud                 | [Fonturi cloud în Office](https://support.office.com/article/f7b009fe-037f-45ed-a556-b5fe6ede6adb)  |
 | Tipuri de date                  | [Tipuri de date Excel: Cotații bursiere și geografie](https://support.office.com/article/61a33056-9935-484f-8ac8-f1a89e210877)   |
+| Întrebări frecvente |Atunci când alegeți **Setări** > **Ajutor și feedback** > **Întrebări frecvente** la Outlook pentru iOS și Android, vi se solicită să [https://www.osupportweb.com/a/outlook-mobile](https://www.osupportweb.com/a/outlook-mobile).|
 | Efecte de cerneală                 | [Desenați și scrieți cu cerneală în Office](https://support.office.com/article/6D76C674-7F4B-414D-B67F-B3FFEF6CCF53)  |
 | Inserarea pictogramelor                | [Inserați pictograme în Microsoft Office](https://support.office.com/article/e2459f17-3996-4795-996e-b9a13486fa79)   |
 | Inserarea Microsoft Forms      | [Inserați un formular sau un test în PowerPoint](https://support.office.com/article/1a316f81-9ea7-4bc2-bda0-024c0d780df1) |
 | Inserarea modelor 3D Online     | [Folosiți-vă creativitatea cu modelele 3D](https://support.office.com/article/ec5feb79-b0af-47f6-a885-151fcc88ac0a)   |
 | Inserarea imaginilor online      | [Inserați imagini](https://support.office.com/article/3c51edf4-22e1-460a-b372-9329a8724344)  |
 | Inserarea unui fișier video online     | [Inserați un videoclip de pe YouTube sau de pe alt site](https://support.office.com/article/8340ec69-4cee-4fe1-ab96-4849154bc6db) |
+| Calendare interesante| [Abonați-vă la un calendar](https://www.osupportweb.com/a/outlook-mobile/?s=feature-walkthroughs&f=where-do-i-go-on-outlook-to-subscribe-to-an-interesting-calendar&p=all) cu privire la echipele sportive sau emisiunile TV favorite în Outlook pentru iOS și Android. |
+| Sugestii despre locație | Atunci când adăugați un loc public cu o adresă poștală la un element de calendar, Outlook pentru iOS și Android va include și adresa poștală completă în câmpul Locație. |
+| Hărți în detaliile evenimentului | Știți unde trebuie să mergeți cu [hărți](https://www.osupportweb.com/a/outlook-mobile/?s=time-to-leave&f=how-can-i-choose-which-map-will-open-when-i-click-on-get-directions&p=all) în detaliile evenimentului în Outlook pentru iOS și Android. |
 | Ajutor Office                 | Atunci când alegeți **Ajutor** > **Ajutor** din panglică sau utilizați F1 într-o aplicație Office   |
 | Căutare formă online (Visio) | [Găsiți mai multe forme și tipare](https://support.office.com/article/0475ddea-2a0a-4dec-ab8c-7dda9e63bca9)  |
 | Pornire rapidă PowerPoint     | [Cercetați un subiect cu Pornire rapidă PowerPoint](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224) |
