@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre datele de diagnosticare obligatorii în Office și le furnizează o listă de evenimente și câmpuri de date.
 hideEdit: true
-ms.openlocfilehash: a6003b44bc31f8165e9e102104c4b25336efd4cc
-ms.sourcegitcommit: 17f7bf4bfa65042ad44dfff23489c6a538a004e8
+ms.openlocfilehash: 74f80a494eff6f82310a89cbcc52e10d0a324e15
+ms.sourcegitcommit: 752267dddf9c011bb91136f6223f641053450599
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "39906624"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "41109511"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Date de diagnosticare obligatorii pentru Office
 
@@ -2391,6 +2391,139 @@ Se colectează următoarele câmpuri:
 
 - **SolutionId** - ID-ul soluției
 
+#### <a name="officefeedeventsinitializing"></a>Office.Feed.Events.Initializing
+
+Acest eveniment este colectat când începe inițializarea fluxului. Acest eveniment este utilizat pentru a indica faptul că fluxul începe și pentru a diagnostica problemele de fiabilitate la lansarea fluxului.
+
+- **AppInfo.Language** - limba aplicației în format de etichetă de limbă IETF.
+
+- **AppInfo.Name** - numele componentei utilizate (Flux Office).
+
+- **AppInfo.Version** - versiunea aplicației.
+
+- **clientCorrelationId** - identificatorul unic global pentru sesiunea aplicației.
+
+- **clientType** - aplicația pe care rulează componenta.
+
+- **DeviceInfo.Make** - producătorul dispozitivului sau numele OEM al dispozitivului.
+
+- **DeviceInfo.NetworkProvider** - rețeaua sau operatorul mobil, cum ar fi „AT&T”.
+
+- **DeviceInfo.NetworkType** - tipul de conectivitate al rețelei dispozitivului utilizat, cum ar fi „Cu fir”, „Wifi” sau „WWAN” (date/celular).
+
+- **DeviceInfo.OsName** - numele dispozitivului OS.
+
+- **DeviceInfo.SDKUid** - identifică dispozitivul din perspectiva SDK a telemetriei.
+
+- **eventId** - identificator de nume al evenimentului. 
+
+- **EventInfo.SdkVersion** - versiunea SDK a telemetriei utilizate de client pentru a genera evenimentul.
+
+- **eventpriority** - valoare de enumerare pentru prioritatea de trimitere a evenimentului.
+
+- **feature** - utilizat pentru a grupa diverse evenimente cu aceeași caracteristică.
+
+- **hostAppRing** - populația utilizatorilor cărora le-a fost distribuită aplicația.
+
+- **properties** - conține proprietăți metadate suplimentare, colectate pentru fiecare eveniment.
+        
+    - **ClientTimeStamp** - marcă de timp privind momentul în care a fost înregistrat de când evenimentul a fost înregistrat de client.
+
+- **publicEventName** - nume eveniment orientat spre public.  
+
+- **region** - regiunea geografică a serviciului de flux la care este conectat utilizatorul. 
+
+- **tenantAadObjectId** - identificator unic global pentru entitatea găzduită a utilizatorului.
+
+- **type** - tipul evenimentului înregistrat, de exemplu, urmărire, eroare, eveniment, QoS.
+
+- **userAadObjectId** - identificatorul de utilizator unic global pentru un cont Microsoft Enterprise.
+
+- **UserInfo.Id** - identificatorul de utilizator unic global pentru un cont Microsoft Enterprise.
+
+- **UserInfo.IdType** - specifică tipul de ID utilizator. 
+
+- **UserInfo.Language** - limba utilizatorului în format de etichetă de limbă IETF.
+
+- **UserInfo.MsaId** - identificatorul de utilizator unic global pentru un cont Microsoft consumator.
+
+- **UserInfo.OMSTenantId** - entitatea găzduită la care este asociat abonamentul unui utilizator. Ne permite să clasificăm problemele și să identificăm dacă este o problemă pe scară largă sau una izolată la un set de utilizatori sau la o anumită entitate găzduită.
+
+- **UserInfo.TimeZone** - fusul orar al utilizatorului față de UTC.
+
+- **userPuid** - identificatorul de utilizator unic global pentru un cont Microsoft consumator.
+
+- **version** - versiunea clientului de flux.
+
+#### <a name="officefeedeventsofficefeeddidappear"></a>Office.Feed.Events.OfficeFeedDidAppear
+
+Evenimentul este colectat când fluxul este prezentat utilizatorului. Evenimentul este utilizat pentru a verifica dacă fluxul a finalizat etapa de inițializare și pentru a diagnostica problemele de fiabilitate la lansarea fluxului.
+
+- **AppInfo.Language** - limba aplicației în format de etichetă de limbă IETF.
+
+- **AppInfo.Name** - numele componentei utilizate (Flux Office).
+
+- **AppInfo.Version** - versiunea aplicației.
+
+- **clientCorrelationId** - identificatorul unic global pentru sesiunea aplicației.
+
+- **clientType** - aplicația pe care rulează componenta.
+
+- **DeviceInfo.Make** - producătorul dispozitivului sau numele OEM al dispozitivului.
+
+- **DeviceInfo.NetworkProvider** - rețeaua sau operatorul mobil, cum ar fi „AT&T”.
+
+- **DeviceInfo.NetworkType** - tipul de conectivitate al rețelei dispozitivului utilizat, cum ar fi „Cu fir”, „Wifi” sau „WWAN” (date/celular).
+
+- **DeviceInfo.OsName** - numele dispozitivului OS.
+
+- **DeviceInfo.SDKUid** - identifică dispozitivul din perspectiva SDK a telemetriei.
+
+- **eventId** - identificator de nume al evenimentului.
+
+- **EventInfo.SdkVersion** - versiunea SDK a telemetriei utilizate de client pentru a genera evenimentul.
+
+- **eventpriority** - valoare de enumerare pentru prioritatea de trimitere a evenimentului.
+
+- **feature** - utilizat pentru a grupa diverse evenimente cu aceeași caracteristică.
+
+- **hostAppRing** - populația utilizatorilor cărora le-a fost distribuită aplicația.
+
+- **properties** - conține proprietăți metadate suplimentare, colectate pentru fiecare eveniment.
+        
+  - **bridgeWaitingTime** - măsurătoare pentru diagnosticarea performanței în redarea fluxului.
+    
+  - **ClientTimeStamp** - marcă de timp privind momentul în care a fost înregistrat de când evenimentul a fost înregistrat de client.
+        
+  - **renderTime** - măsurătoare pentru diagnosticarea performanței în redarea fluxului.
+
+- **publicEventName** - nume eveniment orientat spre public.  
+
+- **region** - regiunea geografică a serviciului de flux la care este conectat utilizatorul. 
+
+- **tenantAadObjectId** - identificator unic global pentru entitatea găzduită a utilizatorului.
+
+- **type** - tipul evenimentului înregistrat, de exemplu, urmărire, eroare, eveniment, QoS.
+
+- **userAadObjectId** - identificatorul de utilizator unic global pentru un cont Microsoft Enterprise.
+
+- **UserInfo.Id** - identificatorul de utilizator unic global pentru un cont Microsoft Enterprise.
+
+- **UserInfo.IdType** - specifică tipul de ID utilizator. 
+
+- **UserInfo.Language** - limba utilizatorului în format de etichetă de limbă IETF.
+
+- **UserInfo.MsaId** - identificatorul de utilizator unic global pentru un cont Microsoft consumator.
+
+- **UserInfo.OMSTenantId** - entitatea găzduită la care este asociat abonamentul unui utilizator. Ne permite să clasificăm problemele și să identificăm dacă este o problemă pe scară largă sau una izolată la un set de utilizatori sau la o anumită entitate găzduită.
+
+- **UserInfo.TimeZone** - fusul orar al utilizatorului față de UTC.
+
+- **userPuid** - identificatorul de utilizator unic global pentru un cont Microsoft consumator.
+
+- **version** - versiunea clientului de flux.
+
+
 #### <a name="officefileiocsiccachedfilecsiloadfilebasic"></a>Office.FileIO.CSI.CCachedFileCsiLoadFileBasic
 
 Ne permite să știm dacă un fișier s-a deschis cu succes din nivelul FIO. Utilizat pentru starea și monitorizarea caracteristicilor.
@@ -3131,6 +3264,191 @@ Acest eveniment este colectat pentru aplicațiile Office care rulează pe platfo
 Se colectează următoarele câmpuri:
 
 - **Data_FirstRunPanelName** - numele panoului din care a început experiența
+
+#### <a name="officelivepersonacarduseractionsconfigurationsetaction"></a>Office.LivePersonaCard.UserActions.ConfigurationSetAction
+
+Ne conectăm când utilizatorul se află într-o aplicație care încarcă un card de persoană în anticiparea utilizatorului care deschide Cardul de persoană live.  Datele sunt utilizate pentru a determina dacă respectivul card este încărcat corect. 
+
+Se colectează următoarele câmpuri: 
+
+- **Data.appContextId** - ID generat aleatoriu utilizat pentru a identifica conturi diferite în aceeași aplicație
+
+- **Data.AppInfo.Name** - numele serviciului utilizat (fișă de profil)
+
+- **Data. AppInfo_Id** - numele aplicației gazdă
+
+- **Data.AppInfo_Version** - versiunea aplicației gazdă
+
+- **Data.cardCorrelationId** - identificatorul unic global pentru un card de persoană
+
+- **Data.cardPersonaCorrelationId** - identificatorul unic global pentru o anumită persoană afișată într-un card
+
+- **Data.clientCorrelationId** - identificatorul unic global pentru sesiunea aplicației
+
+- **Data.clientType** - tipul de dispozitiv pe care rulează aplicația
+
+- **Data.eventId** - identificator de nume al evenimentului, de exemplu, „LivePersonaCardRenderedAction”
+
+- **Data. eventpriority** - valoare de enumerare pentru prioritatea de trimitere a evenimentului.
+
+- **Data.feature** - utilizat pentru a grupa diverse evenimente cu aceeași caracteristică (fișă de profil)
+
+- **Data.OTelJS.Version** - versiune de OTel logger
+
+- **Data.properties** - metadate suplimentare colectate pentru fiecare eveniment, după cum urmează:
+
+  - **accountType** - dacă utilizatorul aparține unei organizații sau unui consumator
+
+  - **cardCorrelationId** - dublură a Data.appContextId de mai sus
+
+  - **cardPersonaCorrelationId** - dublură a Data.cardCorrelationId de mai sus
+
+  - **ClientTimeStamp** - ora în aplicație la care s-a înregistrat evenimentul
+
+  - **consumerCorrelationId** - dublură a Data.clientCorrelationId de mai sus
+
+  - **contextType** - din ce context (aplicație) a fost lansat cardul
+
+  - **ecsConfigIds** - identificatori de versiune pentru caracteristicile activate în card
+
+  - **ecsTagId** - ID etichetă pentru caracteristici
+
+  - **externalAppSessionCorrelationId** - un identificator unic global pentru aplicație, pentru a identifica toate cardurile de persoane deschise în aceeași sub-sesiune
+
+  - **flights** - caracteristicile activate în card
+
+  - **fromCache** - dacă datele au fost preluate din memorie
+
+  - **hasFinePointer** - dacă dispozitivul are indicator cu mouse
+
+  - **hasHoverEvents** - dacă dispozitivul are capacitate de trecere cu mouse-ul
+
+  - **immersiveProfileCorrelationId** - identificator unic global pentru sesiunea vizualizare profil extins
+
+  - **offlineResolved** - dacă s-au preluat date în timp ce erați offline
+
+  - **personaCorrelationId** - identificator unic global pentru persoane unice într-o sesiune
+
+- **Data.region** - regiunea geografică a serviciului de back-end a fișei de profil la care este conectat utilizatorul
+
+- **Data.tenantAadObjectId** - entitatea găzduită la care este legat abonamentul unui utilizator. Ne permite să clasificăm problemele și să identificăm dacă este o problemă pe scară largă sau una izolată la un set de utilizatori sau la o anumită entitate găzduită
+
+- **Data.type** - tipul evenimentului înregistrat, de exemplu, urmărire, eroare, eveniment
+
+- **Data.userAadObjectId** - identificatorul de utilizator unic global pentru un cont Microsoft Enterprise (dublură a Data.UserInfo.Id)
+
+- **Data.UserInfo.Id** - identificatorul de utilizator unic global pentru un cont Microsoft Enterprise
+
+- **Data.UserInfo.MsaId** - identificatorul de utilizator unic global pentru un cont Microsoft consumator
+
+- **Data.UserInfo.OMSTenantId** - entitatea găzduită la care este asociat abonamentul unui utilizator. Ne permite să clasificăm problemele și să identificăm dacă este o problemă pe scară largă sau una izolată la un set de utilizatori sau la o anumită entitate găzduită
+
+- **Data.userPuid** - identificatorul de utilizator unic global pentru un cont Microsoft consumator (duplicat pentru Data.UserInfo.MsaId) 
+
+- **Data.version** - versiunea serviciului (fișă de profil)
+
+- **Data. workloadCulture** - set de culturi din aplicația gazdă
+
+- **DeviceInfo_Id** - identificatorul de dispozitiv unic global pentru un dispozitiv
+
+- **DeviceInfo_Make** - marca sistemului de operare
+
+- **DeviceInfo_Model** - modelul dispozitivului
+
+- **DeviceInfo_OsName** - numele dispozitivului OS
+
+- **DeviceInfo_OsVersion** - versiunea sistemului de operare
+
+- **DeviceInfo_SDKUid** - identifică dispozitivul din perspectiva SDK a telemetriei
+
+#### <a name="officelivepersonacarduseractionsopenedexpandedpersonacard"></a>Office.LivePersonaCard.UserActions.OpenedExpandedPersonaCard
+
+Înregistrat atunci când utilizatorul deschide un Card de persoană extins. Se utilizează pentru a observa anomalii critice în ratele de eroare la lansarea Cardului de persoană live.
+
+Se colectează următoarele câmpuri:
+
+- **AppInfo_Id** - numele aplicației gazdă
+
+- **AppInfo_Version** - versiunea aplicației gazdă
+
+- **Data.appContextId** - un ID generat aleatoriu utilizat pentru a identifica conturi diferite în aceeași aplicație
+
+- **Data.AppInfo.Name** - numele serviciului utilizat (fișă de profil)
+
+- **Data.cardCorrelationId** - identificatorul unic global pentru un card de persoană
+
+- **Data.cardPersonaCorrelationId** - identificatorul unic global pentru o anumită persoană afișată într-un card
+
+- **Data.clientCorrelationId** - identificatorul unic global pentru sesiunea aplicației
+
+- **Data.clientType** - tipul de dispozitiv pe care rulează aplicația
+
+- **Data.eventId** - identificator de nume al evenimentului, de exemplu, „LivePersonaCardRenderedAction”
+
+- **Data.exportName** - nume ușor de citit pentru oameni al evenimentului acțiune a utilizatorului, de exemplu,„OpenedPersonaCard”
+
+- **Data.exportType** - categoria evenimentului pentru solicitarea de export GDPR
+
+- **Data.feature** - utilizat pentru a grupa diverse evenimente cu aceeași caracteristică (fișă de profil)
+
+- **Data.hostAppRing** - inelul prin care a fost distribuită aplicația
+
+- **Data.OTelJS.Version** - versiune de OTel logger
+
+- **Data.properties** - metadate suplimentare colectate pentru fiecare eveniment, după cum urmează:
+
+  - **cardCorrelationId** - dublură a Data.appContextId de mai sus 
+
+  - **cardPersonaCorrelationId** - dublură a Data.cardCorrelationId de mai sus
+
+  - **clientScenario** - pentru a observa caracteristica din aplicație de unde a fost deschis cardul de persoană
+
+  - **consumerCorrelationId** - dublură a Data.clientCorrelationId de mai sus 
+
+  - **externalAppSessionCorrelationId** - un identificator unic global pentru aplicație, pentru a identifica toate cardurile de persoane deschise în aceeași sub-sesiune
+
+  - **hasPersonalInsightRing** - detaliile de la Office sau LinkedIn ar putea fi disponibile pentru utiliyator
+
+  - **immersiveProfileCorrelationId** - identificator unic global pentru sesiunea vizualizare profil extins
+
+  - **personaCorrelationId** - identificator unic global pentru persoane unice într-o sesiune
+
+  - **section** - secțiunea activă a cardului extins
+
+- **Data.region** - regiunea geografică a serviciului de back-end a fișei de profil la care este conectat utilizatorul
+
+- **Data.tenantAadObjectId** - entitatea găzduită la care este legat abonamentul unui utilizator. Ne permite să clasificăm problemele și să identificăm dacă este o problemă pe scară largă sau una izolată la un set de utilizatori sau la o anumită entitate găzduită
+
+- **Data.type** - tipul evenimentului înregistrat, de exemplu, urmărire, eroare, eveniment
+
+- **Data.userAadObjectId** - identificatorul de utilizator unic global pentru un cont Microsoft Enterprise (dublură a Data.UserInfo.Id)
+
+- **Data.UserInfo.Id** - identificatorul de utilizator unic global pentru un cont Microsoft Enterprise 
+
+- **Data.UserInfo.MsaId** - identificatorul de utilizator unic global pentru un cont Microsoft consumator
+
+- **Data.UserInfo.OMSTenantId** - entitatea găzduită la care este asociat abonamentul unui utilizator. Ne permite să clasificăm problemele și să identificăm dacă este o problemă pe scară largă sau una izolată la un set de utilizatori sau la o anumită entitate găzduită
+
+- **Data.userPuid** - identificatorul de utilizator unic global pentru un cont Microsoft consumator (duplicat pentru Data.UserInfo.MsaId) 
+
+- **Data.version** - versiunea serviciului (fișă de profil)
+
+- **DeviceInfo_Id** - identificatorul de dispozitiv unic global pentru un dispozitiv
+
+- **DeviceInfo_Make** - marca sistemului de operare
+
+- **DeviceInfo_Model** - modelul dispozitivului
+
+- **DeviceInfo_OsName** - numele dispozitivului OS
+
+- **DeviceInfo_OsVersion** - versiunea sistemului de operare
+
+- **DeviceInfo_SDKUid** - identifică dispozitivul din perspectiva SDK a telemetriei
+
+- **NetworkCost** - indică costul/tipul rețelei (contorizată, contorizată peste limită etc.)
+
+- **NetworkCountry** - codul de țară al expeditorului, pe baza adresei IP necurățată a clientului
+
 
 #### <a name="officelivepersonacarduseractionsopenedpersonacard"></a>Office.LivePersonaCard.UserActions.OpenedPersonaCard
 
@@ -3910,7 +4228,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_Doc\_IdentityTelemetryId:string - **GUID unic al utilizatorului
 
-  - **Data\_Doc\_IdentityUniqueId:string -** identificator unic al identității folosite pentru acțiunea Documente partajate
+  - **Data\_Doc\_IdentityUniqueId:string –** identificator unic al identității folosite pentru acțiunea Documente partajate
 
   - **Data\_Doc\_IOFlags:long -** bitmask pentru diferite semnalizări legate de IO pentru un anumit document
 
@@ -4174,7 +4492,9 @@ Se colectează următoarele câmpuri:
 
 - **Data_SrcDoc_ServerType:long** - set predefinit de valori privind tipul serverului (SharePoint, DropBox, WOPI)
 
-- **Data_SrcDoc_ServerVersion:long** - verifică dacă serverul se bazează pe Office14, Office15 sau Office 16Data_SrcDoc_SessionId:long GUID generat care identifică instanța documentului din aceeași sesiune de proces
+- **Data_SrcDoc_ServerVersion:long** - verfică dacă serverul se bazează pe Office14, Office15 sau Office 16
+
+- **Data_SrcDoc_SessionId:long** - GUID generat ce identifică instanța documentului din aceeași sesiune de proces
 
 - **Data_SrcDoc_SharePointServiceContext:string** - un șir opac, de obicei GridManagerID.FarmID. Util pentru corelarea jurnalelor de la client și de pe server
 
@@ -7689,6 +8009,8 @@ Se colectează următoarele câmpuri:
 - **AssetId** - Asset ID-ul aplicației
 
 - **ErrorCode** - timp total
+
+- **IsAugmentationScenario** - indică dacă bucla de sincronizare este răspunzătoare de inițializarea comenzii Office Solutions Framework control
 
 - **IsDebug** - indică dacă sesiunea este o sesiune de depanare
 
