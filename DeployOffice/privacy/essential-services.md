@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre servicii esențiale în Office, cum ar fi Clic și Pornire și Licențiere, și asigură o listă de evenimente și câmpuri de date pentru aceste servicii esențiale.
 hideEdit: true
-ms.openlocfilehash: 4410d94ea0179200fce0cd4dd16aebd62a21a2f6
-ms.sourcegitcommit: 4ec332a6f7457f08aa17fdbb7ee7f308a449887f
+ms.openlocfilehash: d5c5fc824e380741287f0393cdae947d1aabda2d
+ms.sourcegitcommit: 6f5af9a707a833b84202040f998361383f488d23
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "39962857"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42225004"
 ---
 # <a name="essential-services-for-office"></a>Servicii esențiale pentru Office
 
@@ -56,7 +56,7 @@ Următorul tabel conține o listă a serviciilor esențiale pentru Office și o 
 | [Clic și Pornire](#click-to-run-events) | Clic și Pornire este tehnologia de instalare utilizată pentru a instala și a actualiza Office pe Windows. Aceasta caută noi versiuni de Office și, atunci când este disponibilă o nouă versiune, o descarcă și o instalează. Clic și Pornire va detecta dacă sunt necesare actualizări Office, inclusiv actualizări de securitate, le va descărca și le va instala.     |
 | [Serviciul de configurație avansată (ECS)](#enhanced-configuration-service-ecs-events) | ECS oferă Microsoft capacitatea de a reconfigura instalările Office fără a fi nevoie să implementați din nou Office. Este utilizat pentru a controla implementarea treptată de caracteristici sau actualizări, în timp ce impactul implementării este monitorizat pe baza datelor de diagnosticare colectate. Este utilizat, de asemenea, pentru a atenua problemele de securitate sau de performanță cu o caracteristică sau actualizare. În plus, ECS acceptă modificările de configurare legate de datele de diagnosticare pentru a vă ajuta să vă asigurați că evenimentele corespunzătoare sunt colectate. |
 | [Licențiere](#licensing-events)     | Licențiere este un serviciu bazat pe cloud care acceptă activarea Office pentru noile instalări și păstrează licența pe dispozitivele dvs. după ce Office a fost activat. Acesta înregistrează fiecare dintre dispozitivele dvs. și activează Office, verifică starea abonamentului Office și gestionează cheile de produs.    |
-|[Microsoft AutoUpdate (MAU)](#microsoft-autoupdate-mau-events)|Microsoft AutoUpdate (MAU) este tehnologia utilizată pentru actualizarea aplicațiilor Microsoft produse pentru MacOS, cum ar fi Office. MAU va detecta dacă sunt necesare actualizări ale aplicațiilor, inclusiv actualizări de securitate, le va descărca și le va instala.|
+|[Microsoft AutoUpdate (MAU)](#microsoft-autoupdate-mau-events)|Microsoft AutoUpdate (MAU) este tehnologia utilizată pentru actualizarea aplicațiilor Microsoft produse pentru macOS, cum ar fi Office. MAU va detecta dacă sunt necesare actualizări ale aplicațiilor, inclusiv actualizări de securitate, le va descărca și le va instala.|
 |[Sincronizare OneNote](#onenote-sync-events)|OneNote pentru Mac acceptă doar blocnotesurile stocate pe internet în OneDrive sau SharePoint Online. OneNote pentru Mac sincronizează continuu toate notele utilizatorului cu OneDrive sau SharePoint Online. Acest lucru le permite utilizatorilor să deschidă, să vizualizeze și să editeze blocnotesurile de pe toate dispozitivele, astfel încât blocnotesurile lor să fie întotdeauna actualizate.
  [Configurare servicii](#services-configuration-events)  | Configurare servicii oferă capacitatea de a efectua actualizări la setările de configurare Office pentru a activa sau a dezactiva caracteristici client. Este apelat de fiecare dată când pornește o aplicație Office și oferă detalii despre alte configurații și servicii Office. Configurare servicii controlează, de asemenea, ce servicii sunt desemnate ca servicii esențiale.  |
 | [Telemetrie ](#telemetry-events)  | Serviciul de telemetrie este utilizat pentru a colecta date de diagnosticare din aplicațiile Office. Acesta permite colectarea datelor de diagnosticare generate de Office, atât datele de diagnosticare obligatorii, cât și cele opționale. De asemenea, este responsabil pentru colectarea porțiunii de date de diagnosticare a serviciului din datele de serviciu necesare pentru Office.  |
@@ -78,6 +78,17 @@ Puteți vedea aceste evenimente utilizând Vizualizatorul de date de diagnostica
 
 Aceste evenimente cu date de diagnosticare sunt colectate atunci când Office încearcă să obțină un simbol de autentificare, fie în mod silențios, fie prin solicitare.
 
+### <a name="officeandroidmsaguesttoaad"></a>Office.Android.MSAGuestToAAD
+
+Acest eveniment vă ajută să înțelegeți câți utilizatori sunt notificați să furnizeze parolele conturilor personale când accesează resurse de lucru, atunci când contul personal poate fi un invitat valid al entității găzduite a contului de lucru.
+
+Aceste date ne ajută să înțelegem câți utilizatori trec prin dificultatea de a li se solicita în mod repetat conectarea pentru a prioritiza în liniște achiziția simbolului AAD pe baza unei aserțiuni SAML (Security Assertion Markup Language) a contului Microsoft.
+
+Se colectează următoarele câmpuri:
+
+- **Tag** - indică faptul că un utilizator a primit o solicitare de conectare pentru contul personal în timp ce accesa o resursă a contului de la locul de muncă.
+
+
 ### <a name="officeidentityfbapromptwin32"></a>Office.Identity.FbaPromptWin32
 
 Colectate atunci când Office prezintă utilizatorului o solicitare de conectare prin Autentificare bazată pe formulare.
@@ -86,7 +97,7 @@ Colectate atunci când Office prezintă utilizatorului o solicitare de conectare
 
 Solicitările de conectare Autentificare bazată pe formulare (FBA) sunt utilizate pentru unele scenarii de autentificare la nivel local și, de obicei, dorim să ne asigurăm că nu se întâmplă acest lucru, deoarece toată lumea ar trebui să utilizeze Autentificare modernă din cauza vulnerabilităților de securitate asociate cu FBA.
 
-**Se colectează următoarele câmpuri:**
+Se colectează următoarele câmpuri:
 
   - **AuthScheme** - schema de autentificare utilizată
 
@@ -706,7 +717,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_SusClientID -** identificator de actualizare Office computer 
 
-  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
+  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
 
   - **Data\_TotalClientCabSize -** dimensiunea fișierului cab al clientului nostru 
 
@@ -2433,7 +2444,7 @@ Raportează acțiunile de descărcare a fișierelor pentru a determina succesul 
 
 - **BytesFromLanPeers -** octeți de la colegi de Lan, doar pentru descărcări care utilizează Optimizarea livrărilor 
 
-- **CancelledJobs -** numărul solicitărilor anulate din sesiune
+- **canceledJobs -**     numărul solicitărilor anulate din sesiune
 
 - **Connected -** dacă este conectat la sursă
 
@@ -2693,6 +2704,11 @@ Raportează acțiunile cu impact realizate de computer, așa cum sunt determinat
 
 - **VersionToInstall -** valoarea șirului din versiunea Office „16.0.xxxxx.yyyyy” care este instalată
 
+### <a name="officeserviceabilitymanagerinventoryaddonheartbeat"></a>Office.ServiceabilityManager.InventoryAddon.Heartbeat
+
+Acest eveniment este utilizat pentru obținerea metadatelor standard la fiecare rulare a programului de completare Inventar, care este parte a Office Serviceability Manager și este utilizat pentru informații de inventar Office pe computerele pentru care a optat un administrator IT. Metadatele de interes specific aici sunt ID-ul sesiunii și sunt folosite pentru legarea cu alte date stocate într-un serviciu cloud pentru fiecare entitate găzduită.
+
+Acest eveniment nu conține câmpuri suplimentare fiindcă numai metadatele sunt relevante.
 
 ### <a name="officeserviceabilitymanagerinventoryaddonresults"></a>Office.ServiceabilityManager.InventoryAddon.Results
 
@@ -10864,7 +10880,7 @@ Se colectează următoarele câmpuri:
 
   - **OsBuildRevision** - revizuire compilare SO
 
-  - **OSEnvironment** -Windows, iOS, Mac, Android etc.
+  - **OSEnvironment** - Windows, iOS, Mac, Android etc.
 
   - **OsMajorVer** - versiunea majoră a sistemului de operare.
 
@@ -11472,7 +11488,7 @@ Validează faptul că consumatorii pot vizualiza datele pe măsură ce ies din c
 
 Se colectează următoarele câmpuri:
 
-  - **DialogCancelled** - a fost anulată caseta de dialog a Vizualizatorului datelor de diagnosticare
+  - **Dialogcanceled** - a fost anulată caseta de dialog a Vizualizatorului datelor de diagnosticare
 
   - **NewState** - noua stare a Vizualizatorului datelor de diagnosticare
 
