@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre datele de diagnosticare obligatorii în Office și le furnizează o listă de evenimente și câmpuri de date.
 hideEdit: true
-ms.openlocfilehash: 74f80a494eff6f82310a89cbcc52e10d0a324e15
-ms.sourcegitcommit: 752267dddf9c011bb91136f6223f641053450599
+ms.openlocfilehash: bd9a5754a8741ee3cc96bf843c59f8f509bc1738
+ms.sourcegitcommit: de34e0fff15c3bd099df452d8f4771398f9dfaf6
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "41109511"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "42265475"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Date de diagnosticare obligatorii pentru Office
 
@@ -1305,6 +1305,321 @@ Iată subtipurile de date din această categorie:
 
 Succesul funcționalității aplicației. Limitat la deschiderea și închiderea aplicației și a documentelor, editarea fișierelor și partajarea fișierelor (colaborare).
 
+#### <a name="account_action"></a>account_action
+
+Necesar pentru a garanta funcționarea cu succes a configurării contului și este utilizat pentru a monitoriza starea creării contului, capacitatea de a adăuga noi conturi de e-mail și de a monitoriza resetări soft de cont 
+
+Se colectează următoarele câmpuri: 
+
+- **account_calendar_count** - câte calendare are contul
+ 
+- **action** - tip de acțiune efectuată, de ex. create_account, delete_account.
+ 
+- **duration_seconds** - durata acțiunii
+ 
+- **entry_point** - punct de intrare al acțiunii, cum a început utilizatorul acțiunea
+ 
+- **has_hx** - dacă dispozitivul are un cont care utilizează noul nostru serviciu de sincronizare a corespondenței, nu neapărat contul în care s-a efectuat acțiunea
+ 
+- **is_hx** - este contul care utilizează noul nostru de sincronizare a corespondenței
+ 
+- **is_shared_mailbox** - dacă acțiunea se referă la o cutie poștală partajată
+ 
+- **number_of_accounts** - numărul total de conturi în care s-a efectuat acțiunea
+ 
+- **result** - rezultatul acțiunii, de ex. succes, eșec.
+   
+- **server_type** - tipul de server pentru cont, asemănător cu account_type
+ 
+- **shared_type** - tipul de cont partajat (în cazul în care contul este partajat)
+ 
+- **scope** - scopul acțiunii; pentru ștergerea contului, this_device sau all_devices
+ 
+- **total_calendar_accounts** - numărul de conturi de calendar din aplicație în momentul acțiunii
+ 
+- **total_email_accounts** - numărul de conturi de e-mail din aplicație în momentul acțiunii
+ 
+- **total_file_accounts** - numărul de conturi de fișier din aplicație în momentul acțiunii
+
+#### <a name="app_error"></a>app_error
+
+Urmărește erorile critice ale aplicației utilizate astfel încât să putem preveni problemele care ar putea duce la căderea aplicației sau care ar putea să vă împiedice să citiți e-mailurile.
+
+Se colectează următoarele câmpuri: 
+
+- **clientName** - numele clientului pentru fișierul din cloud în care s-a produs eroarea, dacă se aplică.
+
+- **cloudfile_error_type** - tipul de eroare care s-a produs pentru fișierul din cloud, dacă se aplică.
+
+- **cloudfile_response_name** - numele răspunsului pentru eroarea care s-a produs pentru fișierul din cloud, dacă se aplică.
+
+- **component_name** - numele componentei aplicației în care s-a produs eroarea, cum ar fi corespondența sau calendarul.
+
+- **debug_info** - informații despre eroarea care a apărut pentru fișierul din cloud pentru a putea să stabiliți motivul pentru care s-a produs eroarea.
+
+- **error_origin_identifier** - originea erorii care s-a produs în schița în care s-a produs eroarea, dacă se aplică.
+
+- **error_type** - tipul de eroare care s-a produs. Unele exemple includ salvarea schiței, trimiterea schiței și eroarea din fișierul din cloud.
+
+- **exrule** - valoarea regulii extinse (se aplică la erorile de recurență rezervare)
+
+- **exdate** - data regulii extinse (se aplică la erorile de recurență rezervare)
+
+- **has_attachments** - arată dacă schița în care s-a produs eroarea are atașări, dacă se aplică.
+
+- **is_IRM_protected** - arată dacă schița în care s-a produs eroarea este protejată de Information Rights Management, dacă se aplică.
+
+- **is_legitimate** - arată dacă eroarea provine dintr-o eroare de programare sau nu. Erorile de programare sunt considerate neligitime.
+
+- **is_local** - arată dacă schița în care s-a produs eroarea s-a sincronizat la server, dacă se aplică.
+
+- **is_recoverable** - arată dacă eroarea poate fi recuperată sau dacă este o eroare fatală.
+
+- **rdate** - data regulii de recurență (se aplică doar la erorile de recurență rezervare) 
+
+- **rrule** - regula de recurență în sine (se aplică doar la erorile de recurență rezervare) 
+
+- **rrule_error_message** - mesaj de eroare de analizare a regulii de recurență (se aplică numai la erorile de recurență rezervare)
+
+- **rrule_error_type** - tip de eroare de analizare a regulii de recurență (se aplică numai la erorile de recurență rezervare)
+
+- **status_code** - codul de stare al erorii care s-a produs. Aceasta ne ajută să înțelegem cauza erorii.
+
+Toate caracterele sunt posibile proprietăți. Aceasta ne ajută să înțelegem caracterele din corpul mesajului de schiță în care s-a produs eroarea. De exemplu, „a”, „b”, „c” sunt proprietăți posibile.
+
+#### <a name="app_launch_report"></a>app_launch_report
+
+Acest eveniment ne permite să detectăm și să remediem probleme în care Outlook pornește lent sau incomplet, îngreunând utilizarea aplicației de către utilizatori. Acesta include informații despre caracteristici specifice care au fost activate și despre durata de pornire al părților.
+
+Se colectează următoarele câmpuri: 
+
+- **is_agenda_widget_active** - ne spune dacă widgetul agendă este activ.
+
+- **is_alert_available** - ne spune dacă aplicația a fost configurată ca să permită alerte în notificări.
+
+- **is_background_refresh_available** - ne spune dacă aplicația a fost configurată ca să poată împrospăta fundalul.
+
+- **is_badge_available** - ne spune dacă aplicația a fost configurată ca să permită ecusoane în notificări.
+
+- **is_intune_managed** - ne spune dacă aplicația este gestionată de Intune.
+
+- **is_registered_for_remote_notifications** - ne spune dacă aplicația a fost înregistrată pentru notificări de la distanță.
+
+- **is_sound_available** - ne spune dacă aplicația a fost configurată ca să permită sunete în notificări.
+
+- **is_watch_app_installed** - ne spune dacă a fost instalată aplicația Outlook pentru telefon.
+
+- **is_watch_paired** - ne spune dacă aplicația Outlook pentru telefon este asociată cu aplicația Outlook principală.
+
+- **launch_to_db_ready_ms** - ne spune timpul petrecut de aplicația Outlook de la lansare la baza de date pentru a fi gata.
+
+- **num_calendar_accounts** - ne spune numărul de conturi de calendar din aplicație.
+
+- **num_cloud_file_accounts** - ne spune numărul de conturi de stocare din aplicație.
+
+- **num_hx_calendar_accounts** - ne spune numărul de conturi de calendar din aplicație care se conectează la noul nostru serviciu de sincronizare a corespondenței.
+
+- **num_hx_mail_accounts** - ne spune numărul de conturi de e-mail din aplicație care se conectează la noul nostru serviciu de sincronizare a corespondenței.
+
+- **num_mail_accounts** - ne spune numărul de conturi de e-mail din aplicație.
+
+#### <a name="calendar_action"></a>calendar_action
+
+Este utilizat cu scopul de a monitoriza orice impact posibil negativ asupra capacității dvs. de a efectua acțiuni de calendar de bază, cum ar fi crearea sau editarea evenimentelor.  Evenimentul ar putea include și o serie de nume de proprietate și dacă s-au modificat sau nu. De exemplu, „title_changed”, „online_meeting_changed” și „description_changed” sunt nume de proprietate incluse pentru a ne ajuta să înțelegem dacă există probleme la editarea anumitor proprietăți.
+
+Se colectează următoarele câmpuri: 
+
+- **account_sfb_enabled** - ne ajută să ne asigurăm că Skype for Business este configurat corect. 
+
+- **action** - tipul de acțiune efectuat în calendar. Aceasta include lucruri cum ar fi deschiderea, editarea, adăugarea comenzilor rapide, amânarea etc. Ne ajută să ne asigurăm că experiența noastră de calendar funcționează așa cum vă așteptați și că nu s-a întrerupt 
+
+- **action_result** - rezultatul acțiunii întreprinse în cazul componentelor de calendar. Aceasta poate include valori cum ar fi succes, eșec, necunoscut și timp de expirare. Utilizate pentru a urmări rata de succes a acțiunilor și a determina dacă există o problemă răspândită privind acțiunile din calendar. 
+
+- **attendee_busy_status** - starea liber/ocupat a participantului la care este corelată acțiunea. Această valoare poate fi Liber, Ocupat sau Încercare. Ne ajută să înțelegem dacă există o problemă în legătură cu acțiunile asociate unei anumite stări Ocupat. 
+
+- **availability** - valoarea de disponibilitate dacă valoarea liber/ocupat s-a modificat la întâlnire. Ne ajută să înțelegem dacă există probleme privind setarea unei anumite valori de disponibilitate. 
+
+- **calendar_onlinemeeting_default_provider** - conține furnizorul de întâlnire online implicit pentru utilizare cu crearea de întâlniri online acceptate de server. Printre acestea se numără tipurile de Skype, Skype for Business, Hangout și Teams for Business. Ne ajută să diagnosticăm probleme potențiale privind crearea de întâlniri online în cazul anumitor furnizori. 
+
+- **calendar_onlinemeeting_enabled** - adevărat în cazul în care calendarul acceptă crearea de întâlniri online acceptate de server pe baza unui furnizor de întâlnire online implicit. Ne ajută să înțelegem dacă există probleme privind calendarele de întâlnire activate online. 
+
+- **calendar_type** - tipul de calendar în care se află un eveniment după ce utilizatorul a editat întâlnirea. Între valorile posibile se numără principal, secundar, partajat și grup. Ne ajută să înțelegem dacă există probleme privind un anumit tip de calendar. 
+
+- **delete_action_origin** - originea acțiunii de ștergere efectuate. Aici sunt incluse valori, cum ar fi bara de navigare, bara de instrumente și bara de instrumente pentru capsule.  Ne ajută să înțelegem dacă există probleme privind ștergerea unei întâlniri dintr-o anumită locație. 
+
+- **distribution_list_count** - numărul de participanți care se află pe liste de distribuire. Ne ajută să urmărim dacă există probleme privind participanții de pe listele de distribuire. 
+
+- **guest_count** - numărul de persoane din întâlnire.  Ne ajută să ne asigurăm că invitații sunt adăugați corect. 
+
+- **is_all_day** - utilizat împreună cu „meeting_duration” pentru a specifica dacă aceasta este o întâlnire de o zi întreagă. Ne ajută să înțelegem dacă există probleme privind acțiunile efectuate pentru întâlnirile de o zi întreagă. 
+
+- **is_organizer** - ne ajută să înțelegem dacă întâlnirile pot fi editate și create corect de către organizator. 
+
+- **is_recurring** - ne ajută să înțelegem dacă există o problemă care influențează în mod specific întâlnirile recurente. 
+
+- **launch_point** - punctul de lansare a acțiunii. Pot fi valori cum ar fi antet widget, subsol widget, widget toată ziua și comandă rapidă pentru calendar. Ne ajută să înțelegem contextul de la care a început acțiunea. 
+
+- **location_count** - numărul de locații setate la crearea și editarea evenimentului. Ne ajută să înțelegem dacă există probleme privind crearea sau editarea evenimentelor cu un anumit număr de locații. 
+
+- **location_selection_source_type** - tipul sursei de selectare a locației. Acesta poate include valori cum ar fi sugestia de locație, particularizat și existent. Ne ajută să diagnosticăm toate problemele întâmpinate la selectarea unei locații de la o anumită sursă. 
+
+- **location_session_id** - ID-ul sesiunii de selectare a locației de întâlnire. Ne ajută să diagnosticăm toate problemele întâmpinate la alegerea unei locații de adăugat la întâlnire. 
+
+- **location_type** - tipul de locație selectat.  Conține tipuri cum ar fi locația particularizată, sală de conferințe și Bing. Ne ajută să înțelegem problemele privind adăugarea anumitor tipuri de locație la întâlnire. 
+
+- **meeting_duration** - durata întâlnirii.  Ne ajută să ne asigurăm că întâlnirile sunt configurate cu orele corecte. 
+
+- **meeting_insights_type** - tipul de detalii despre întâlnire în detaliile evenimentului.  Printre acestea se numără fișierul și mesajul. Ne ajută să înțelegem numărul de detalii de întâlnire care sunt afișate. 
+
+- **meeting_type** - tipul de întâlnire online asociată cu acțiunea.  Printre acestea se numără tipurile de Skype, Skype for Business, Hangout și Teams for Business. Ne ajută să înțelegem dacă întâlnirile online sunt configurate corect. 
+
+- **origin** - originea acțiunii din calendar. Printre acestea se numără tipuri cum ar fi agendă, calendar, agendă widget etc. Ne ajută să ne asigurăm că interacțiunea la nivelul componentelor de calendar funcționează corect 
+
+- **recurrence_scope** - tipul de recurență al întâlnirii, fie recurență, fie serie.  Ne ajută să înțelegem dacă există probleme privind editarea diferitelor tipuri de recurență a întâlnirii. 
+
+- **reminder_time** - ora pentru memento pentru întâlnire, dacă s-a modificat.  Se utilizează pentru a vă asigura că ora de memento pentru întâlnire este salvată corect. 
+
+- **reminders_count** - numărul de mementouri pentru eveniment dacă s-au modificat mementourile. Ne ajută să diagnosticăm toate problemele privind mai multe mementouri pentru un eveniment. 
+
+- **sensitivity** - sensibilitatea întâlnirii. Printre acestea se numără tipurile normal, personal, privat și confidențial. Ne ajută să înțelegem dacă sensibilitatea întâlnirii este configurată corect. 
+
+- **session_duration** - durata sesiunii a fost socotită în milisecunde. Ne ajută să înțelegem dacă există probleme care măresc perioada de timp necesară pentru a efectua acțiunea din calendar. 
+
+- **shared_calendar_result** - rezultatul unei acțiuni efectuate într-un calendar partajat. Între valorile posibile se numără Ok, Fără permisiune, Necunoscut, Proprietar local, iar proprietarul este Grup. Ne ajută să înțelegem fiabilitatea acțiunilor efectuate în calendarele partajate. 
+
+- **time_picker_origin** - originea selectorului de timp pentru o acțiune de salvare. Include valori, cum ar fi mai multe opțiuni și mai puține opțiuni. Ne ajută să înțelegem cum a navigat utilizatorul în flux pentru a salva întâlnirea și a vă asigura că funcționează corect 
+
+- **title** - titlul sugerat automat de valori definite de aplicație. Printre acestea se numără valori, cum ar fi „Apel”, „Prânz” și „Skype”. Ne ajută să înțelegem dacă sugestia automată pentru titlu este configurată corect. 
+
+- **txp** - tipul de rezervare sau de rezervare la eveniment, dacă există. Acest lucru include tipuri cum ar fi rezervarea evenimentului, rezervarea unui zbor, închirierea unei mașini etc. Ne ajută să înțelegem dacă fișele de rezervare funcționează corect. 
+
+- **upcoming_event_count** - numărul de evenimente viitoare afișate în vizualizarea Evenimente viitoare. Ne ajută să înțelegem dacă există probleme privind vizualizarea de evenimente viitoare. 
+
+- **upcoming_event_seconds_until_event** - numărul de secunde până la începerea următorului eveniment. Ne ajută să înțelegem evenimentele tipice, afișate în vizualizarea Evenimente viitoare. 
+
+- **value** - detaliu specific acțiunii, cum ar fi durata întârzierii alertei sau categoria repetare-până la. Ne ajută să înțelegem contextul în care a fost efectuată acțiunea. 
+
+#### <a name="combined_search_use"></a>combined_search_use
+
+Este utilizat pentru a monitoriza posibilul impact negativ asupra capacității dvs. de a efectua funcționalități de căutare-cheie, cum ar fi căutarea de e-mailuri, persoane de contact sau evenimente.
+
+Se colectează următoarele câmpuri:  
+
+- **account_switcher_action_type** - acest tip de acțiune urmărește dacă utilizatorul a utilizat comutatorul de cont în descoperire sau dacă s-a decis să comute între conturi
+
+- **action** - tipul de acțiune efectuat pentru căutare. Acest lucru identifică dacă o căutare a fost începută, este în curs sau s-a încheiat și ce acțiuni au fost întreprinse în timpul căutării, de exemplu, dacă a fost utilizat un microfon. Acest lucru este esențial pentru a asigura căutări precise și utile.
+
+- **action_type** - tipul de acțiune efectuat pentru căutare. Acest lucru identifică dacă o căutare a fost începută, este în curs sau s-a încheiat și ce acțiuni au fost întreprinse în timpul căutării, de exemplu, dacă a fost utilizat un microfon. Acest lucru este esențial pentru a asigura căutări precise și utile. 
+
+- **answer_result_selected_count** - urmărește de câte ori căutarea a fost „reușită”, de ex. A găsit utilizatorul persoana pe care o căuta? Ați compus un mesaj de e-mail? Ați marcat mesajul în document? 
+
+- **contact_result_in_full_list_selected_count** - urmărește de câte ori a selectat utilizatorul „Vedeți toate persoanele de contact” din lista completă în timpul sesiunii de căutare combinate
+
+- **contact_result_selected_count** - urmărește numărul de persoane de contact care au fost selectate în timpul sesiunii de căutare combinate
+
+- **conversation_result_selected_count** - urmărește numărul de conversații selectate în timpul sesiunii de căutare combinate
+
+- **entrance_type** - acesta determină modul în care utilizatorul a început interogarea de căutare, din fila Căutare, interogare zero, titlu de căutare sau rezultat de căutare. 
+
+- **has_contact_results** - simplu dacă sunt afișate sau nu rezultate de contact în interogarea de căutare
+
+- **include_deleted** - în cazul în care căutarea afișează opțiunile șterse în rezultatele căutării 
+
+- **re_enter_search_tab** - valoarea booleană pentru a indica dacă un utilizator a comutat între file înainte de a selecta un rezultat de căutare
+
+- **result_selected_type** - cu ce tip de date care au fost afișate interacționează utilizatorul de ex. vedeți toată persoanele de contact, conversațiile, evenimentul etc. 
+
+- **search_conversation_result_data** - conține date despre conversația selectată dintr-un rezultat de căutare, inclusiv tipul de cont (hx, ac etc.), dacă mesajul este deținut de un serviciu în cloud și dacă deplasarea paginii afișate este aceeași pagină cu primul mesaj. 
+
+- **search_origin** - de unde provine căutarea, de ex. asistentul vocal, Cortana, intrarea de la tastatură etc. 
+
+- **search_request_reason** - indică motivul pentru care a fost trimisă o solicitare de căutare din aplicație, indicând, de fapt, componenta sau acțiunea utilizatorului care a invocat o căutare.
+
+- **search_result_filter_type** - indică ce tip de filtru a fost aplicat pentru căutare, afișare totală sau doar atașări
+
+- **search_scope** - un șir care indică tipul de cont pe care îl căuta utilizatorul (de ex., Exchange, Gmail etc.) sau dacă a fost în Toate conturile. 
+
+- **search_session_ended_type** - indică unde s-a încheiat o căutare, deoarece interogarea a fost anulată sau actualizată
+
+- **search_suggestion_type** - indică ce se află în spatele sugestiei de căutare, de ex., este o corecție ortografică? Pe baza istoricului? Completare automată?
+
+- **see_all_contacts_selected_count** - urmărește de câte ori a fost selectat „Vedeți toate persoanele de contact” în timpul sesiunii de căutare combinate
+
+- **top_mail_result_selected_count** - urmărește de câte ori un utilizator selectează cele mai bune rezultate oferite. 
+
+#### <a name="compose_mail_accessory"></a>compose_mail_accessory
+
+Acest eveniment ne permite să detectăm și să remediem problemele privind acțiunile principale de compunere a e-mailului, pentru a vă împiedica să întâmpinați probleme la atașarea unui fișier, realizarea unei fotografie ca atașare sau trimiterea disponibilității.
+
+Se colectează următoarele câmpuri: 
+
+- **action** - ne comunică acțiunea încercată atunci când s-a înregistrat acțiunea. Printre exemple se numără atașarea unui fișier și prezentarea mai multor opțiuni.
+
+- **icon_name** - ne spune numele pictogramei afișate atunci când acțiunea este înregistrată.
+
+#### <a name="conversation_view_action"></a>conversation_view_action
+
+Este utilizat pentru a monitoriza posibilul impact negativ asupra capacității de a vizualiza și a răspunde la mesajele de e-mail
+
+Se colectează următoarele câmpuri:
+
+- **contains_mention** - ne spune dacă conversația a avut o @ menționare aplicată pentru a ne ajuta să detectăm probleme ce vizează mențiuni de e-mail
+
+- **conversation_type** - ne spune ce tip de vizualizare a mesajelor de e-mail a fost redată, cum ar fi o singură vizualizare de mesaj sau mai multe vizualizări de mesaje. Ne ajută să detectăm problemele legate de un anumit tip de mesaj din vizualizarea conversației prin e-mail.
+
+- **suggested_reply_char_count** - ne spune câte caractere au răspunsurile sugerate pe care le oferim (dacă sunt disponibile), pentru a ne ajuta la detectarea anomaliilor și a problemelor legate de sugestiile noastre
+
+- **suggested_reply_click_pos** - ne spune în ce poziție este redat răspunsul sugerat (dacă este disponibil), astfel încât să putem detecta problemele privind o anumită sugestie
+
+- **use_default_quick_reply_mode** - ne spune dacă s-a utilizat modul implicit de răspuns rapid pentru a ne ajuta să detectăm probleme legate de experiența de răspuns rapid pentru mesajele de e-mail
+
+#### <a name="draft_action"></a>draft_action
+
+Este utilizat pentru a monitoriza posibilul impact negativ asupra capacității de a crea și a salva schițe de e-mail
+
+Se colectează următoarele câmpuri: 
+
+- **action** - tip de acțiune, de ex., salvare, abandonare.
+ 
+- **draft_message_id** - ID-ul de mesaj al schiței
+
+- **is_groups** - dacă schița este trimisă într-un/dintr-un folder de grup
+ 
+- **origin** - unde a fost inițiată schița, de exemplu, detalii despre mesaj, compunere.
+ 
+- **thread_id** - ID-ul de fir al schiței de conversație este asociat cu
+
+#### <a name="drawer_event"></a>drawer_event
+
+Este utilizat pentru a monitoriza posibilul impact negativ asupra capacității de a accesa foldere în inbox
+
+Se colectează următoarele câmpuri:
+
+- **add_calendar_option** - indică tipul de calendar adăugat din sertar, de ex. calendar interesant, calendar de corespondență, calendar partajat, pentru a ne ajuta să detectăm probleme legate de anumite tipuri de calendare
+
+- **calendar_accounts_count** - indică numărul de conturi de calendar pentru a ne ajuta să detectăm problemele legate de numărul de conturi pe care le aveți
+
+- **calendar_apps_count** - indică numărul de aplicații de calendar prezente pe dispozitivul utilizatorului, pentru a ne ajuta să detectăm probleme legate de aplicațiile de calendar
+
+- **drawer_type** - indică tipul de sertar: interogare calendar, corespondență sau zero, pentru a ne ajuta să detectăm probleme legate de tipul de sertar
+
+- **from_favorites** - indică dacă acțiunea a fost luată din Preferințe pentru a ne ajuta să detectăm probleme legate de preferințe
+
+- **group_calendar_count** - indică numărul de calendare pentru cont, pentru a ne ajuta să detectăm probleme legate de calendare de grup
+
+- **inbox_unread_count** - indică numărul de mesaje necitite din Inbox, pentru a ne ajuta să detectăm probleme privind afișarea numerelor pentru mesaje necitite din Inbox.
+
+- **interesting_calendar_accounts_count** - indică numărul de conturi eligibile pentru calendare interesante de pe dispozitiv, pentru a ne ajuta să detectăm probleme legate de calendare interesante
+
+- **is_group_calendar** - indică dacă este un calendar de grup pentru a ne ajuta să detectăm probleme legate de calendare de grup
+
+- **mail_folder_type** - indică tipul de folder de corespondență, de ex., Inbox, schițe etc., pentru a ne ajuta să detectăm probleme legate de tipurile de foldere.
+
+- **mail_accounts_count** - indică numărul de conturi de e-mail pentru a ne ajuta să detectăm problemele legate de conturile de corespondență.
+
+- **selected_group_calendar_count** - indică numărul de calendare de grup care sunt selectate și active în interfața cu utilizatorul
+
+- **visibility_toggle** - indică dacă utilizatorul activează sau dezactivează un anumit calendar, pentru a ne ajuta să detectăm probleme privind afișarea sau ascunderea calendarelor
 
 #### <a name="ipccreaterepublishinglicense"></a>IpcCreateRepublishingLicense
 
@@ -1787,6 +2102,259 @@ Se colectează următoarele câmpuri:
 - **RMS.SDKVersion** - versiunea clientului pentru Serviciul de administrare a drepturilor
 
 - **RMS.StatusCode** - ID al scenariului definit de API
+
+
+#### <a name="mail_action"></a>mail_action
+
+Este utilizat pentru a monitoriza posibilul impact negativ asupra capacității dvs. de a efectua acțiuni critice de corespondență (cum ar fi rularea modului filetat de corespondență, asigurarea funcționării acțiunilor de triere a corespondenței) pentru a vă asigura că aplicația funcționează corect pentru e-mail.
+
+Se colectează următoarele câmpuri:
+
+- **account** - contul care a efectuat acțiunea
+
+- **action** - urmărește ce tip de acțiune a fost întreprins, de ex., arhivare, ștergere, marcare ca citit etc. 
+
+- **attachment_content_type** - tipul de conținut al atașării descărcate 
+
+- **attachment_content_type_with_count** - urmărește numărul de atașări din e-mail
+
+- **attachment_download_result** - rezultatul (de ex., succes/eșec) pentru o acțiune de descărcare a atașărilor
+
+- **attachment_download_time** - ora unei acțiuni de descărcare a atașărilor
+
+- **attachment_extn** - extensia fișierului din atașarea descărcată
+
+- **attachment_id** - identificatorul sistemului pentru atașarea descărcată 
+
+- **attachment_size** - dimensiunea atașării descărcate
+
+- **domain** - domeniul documentului deschis
+
+- **duration** - urmărește cât timp a durat acțiunea ca șir în limba engleză, ușor de citit de utilizatori (de exemplu, 1s, 4H)
+
+- **error** - mesaj de eroare asociat cu acțiunea 
+
+- **event_mode** - în ce tip de mod de eveniment a fost: grupuri sau altele. 
+
+- **Extension** - extensia de fișier a linkului sau atașării asociate cu această acțiune 
+
+- **internet_message_id** - ID-ul mesajului de urmărire
+
+- **is_group_escalation** - indică dacă mesajul în care fost întreprinsă acțiunea a fost trimis la cutia poștală a utilizatorului din cauza unei escaladări (abonat la grup)
+
+- **is_rule** - indică dacă acțiunea de corespondență efectuată resetează o clasificare prioritară/o altă clasificare
+
+- **is_threaded_mode** - indică dacă mesajul a fost în modul filetat sau nu, de ex. cum sunt grupate mesajele
+
+- **is_unread** - indică dacă mesajul este necitit că acțiunea a fost efectuată
+
+- **left_swipe_setting** - indică ce acțiune a fost setată pentru a fi glisarea din stânga
+
+- **message_id** - ID mesaj server direcționat spre acțiune sau listă separată prin virgulă dacă au fost în acțiune mai multe elemente.
+
+- **message_type** - indică tipul de mesaj tip de acțiune pentru care s-a efectuat acțiunea în** - grup sau altele
+
+- **origin** - sursă de acțiune, de ex., trageți cu degetul prin celule, interogare zero, link direct, vizualizare e-mail, listă de e-mail etc.
+
+- **reported_to_msft** - după ce trimiteți un e-mail la E-mailuri nedorite (spam) sau Coș de gunoi (phishing), se poate alege ca acțiunea să fie raportată către Microsoft.
+
+- **retry** - dacă acțiunea a fost reîncercată
+
+- **right_swipe_setting** - indică ce acțiune a fost setată pentru a fi glisarea din stânga 
+
+- **shortcut** - indică dacă s-a utilizat o comandă rapidă și ce comandă rapidă a fost utilizată pentru planificarea unui mesaj, de ex. mai târziu, mâine, alegeți ora etc.
+
+- **size** - extensia linkului sau a atașării asociate cu această acțiune
+
+- **source_folder** - urmărește tipul de folder sursă atunci când acțiunea indică trecerea de la un folder la altul, de exemplu, în Inbox, Coșul de gunoi etc. 
+
+- **source_inbox** - indică în ce inbox are loc acțiunea de corespondență (de ex. Mesaje prioritare, Alte mesaje etc.) - starea acțiunii, de exemplu, succesul sau punctul de eroare
+
+- **target_folder** - indică tipul de folder țintă atunci când mutați e-mailurile dintr-un folder în altul
+
+- **thread_id** - ID de fir al conversației direcționate spre acțiune sau al listei separate prin virgulă dacă au fost vizate mai multe elemente
+
+- **time_taken_to_fetch_access_token** - timp necesar pentru a prelua un simbol de acces la sistem pentru utilizare la deschiderea unui link
+
+- **time_taken_to_fetch_drive_item** - timp necesar pentru a prelua o resursă OneDrive când faceți clic
+
+- **time_taken_to_fetch_embed_viewer_resource** - timp necesar pentru a inițializa Vizualizatorul încorporat la deschiderea linkurilor
+
+- **time_taken_to_load_embed_viewer** - timp necesar pentru a inițializa Vizualizatorul încorporat la deschiderea linkurilor
+
+- **time_taken_to_load_link** - timp necesar pentru ca o acțiune de încărcare a linkului să se finalizeze
+
+- **time_taken_to_tap_attachment** - timpul dintre deschiderea mesajului și clicul pe atașare
+
+- **time_taken_to_tap_link** - timpul necesar utilizatorului între vizualizarea mesajului și clicul pe un link
+
+- **Txp** - indică dacă există un tip de element txp asociat cu e-mailul la care s-a efectuat acțiunea, de ex., rezervarea evenimentului, rezervarea zborului etc. 
+
+- **type** - tip de document deschis prin intermediul linkului
+
+#### <a name="mail_compose"></a>mail_compose
+
+Este utilizat pentru a monitoriza posibilul impact negativ asupra capacității de a compune și a răspunde la mesaje de e-mail, cum ar fi să întâmpinați probleme privind răspunsul, să vă formatați e-mailul sau să trimiteți mesaje de e-mail.
+
+Se colectează următoarele câmpuri: 
+
+- **draft_message_id** - ID-ul schiței conversației create ca schiță pentru a ne ajuta să detectăm probleme legate de e-mailuri schiță
+
+- **message_id** - ID-ul mesajului conversației la care s-a răspuns sau de la care s-a redirecționat pentru a ne ajuta să detectăm probleme legate de un anumit mesaj
+
+- **origin** - ne spune de unde provine compunerea, de ex., de la dintr-un răspuns tuturor, un nou răspuns compus sau răspuns rapid. Ne ajută să detectăm problemele asociate cu un tip de origine răspuns specific.
+
+- **is_group_escalation** - dacă mesajul este un mesaj de grup escaladat, pentru ca noi să putem detecta problemele de compunere legate de grupuri.
+
+- **is_link** - ne spune dacă schița nouă care a fost creată a fost efectuată de la un link. Ne ajută să detectăm problemele asociate cu schițele create din linkuri.
+
+- **is_force_touch** - ne spune dacă schița nouă care a fost creată a fost efectuată de la o acțiune de atingere forțată. Ne ajută să detectăm problemele asociate cu schițele create din această acțiune.
+
+- **is_group** - dacă evenimentul a început într-un spațiu al grupurilor pentru ca noi să putem detecta problemele de compunere legate de grupuri.
+
+- **source_inbox** - ne spune inboxul sursă, de exemplu, dacă au fost Mesajele prioritare sau Alte mesaje
+
+- **thread_id** - ID-ul firului conversației la care s-a răspuns sau de la care s-a redirecționat pentru a ne ajuta să detectăm probleme legate de un anumit mesaj
+
+#### <a name="meeting_call_to_action"></a>meeting_call_to_action
+
+Este utilizat cu scopul de a monitoriza posibilul impact negativ asupra capacității dvs. de a efectua acțiuni de întâlnire foarte importante, cum ar fi crearea și editarea evenimentelor, precum și oferirea de răspuns la ele.
+
+Se colectează următoarele câmpuri:
+
+- **event_mode** - indică dacă acest eveniment a fost de la un grup sau nu pentru a ne ajuta să detectăm probleme legate de evenimentele din grup
+
+- **meeting_id** - un ID de întâlnire care ne ajută să urmărim problemele de-a lungul vieții unei întâlniri, pentru a ne ajuta să detectăm probleme privind anumite întâlniri
+
+- **meeting_provider** - indică furnizorul pentru o întâlnire online, de exemplu, Teams, Skype for Business, pentru a ne ajuta să detectăm probleme privind anumiți furnizori de întâlnire online
+
+- **notify_type** - indică tipul de răspuns pentru alte tipuri de conturi, pentru a ne ajuta să detectăm probleme legate de tipuri de conturi diferite
+
+- **recurrence** - indică frecvența cu care se întâmplă această întâlnire, de exemplu, recurență sau serie, pentru a ne ajuta să detectăm probleme privind seria de întâlniri recurente
+
+- **response** - indică tipul de răspuns, cum ar fi acceptare sau refuz pentru anumite tipuri de conturi, pentru a ne ajuta să detectăm probleme privind răspunsul la evenimente
+
+- **response_message_length** - indică lungimea mesajului pentru a ne ajuta să detectăm probleme legate de răspunsurile la întâlnire
+
+- **review_time_proposal_action_type** - indică o nouă propunere de oră pentru răspunsul utilizatorului, pentru a ne ajuta să detectăm probleme legate de propunerea unei noi ore
+
+- **send_response** - indică dacă s-a trimis un răspuns pentru a ne ajuta să detectăm probleme la trimiterea răspunsurilor de invitație la întâlnire
+
+- **txp** - indică ce tip de întâlnire a fost generată din rezervări de zbor și livrări, pentru a ne ajuta să detectăm probleme legate de acest tip de întâlnire
+
+- **with_message_enabled** - indică dacă un utilizator poate răspunde cu un mesaj pentru a ne ajuta să detectăm probleme privind răspunsul la invitații la întâlnire
+
+#### <a name="office_android_docsui_fileoperations_opendocumentmeasurements"></a>Office_Android_DocsUI_FileOperations_OpenDocumentMeasurements
+
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforma Android și înregistrările atunci când are loc o operațiune de deschidere a fișierelor. Evenimentul vă ajută să păstrați operațiunea de deschidere a fișierelor în siguranță, actualizată și corect funcțională. Scopul colectării acestor date este de a îmbunătăți în permanență performanța de deschidere a fișierelor. 
+
+Se colectează următoarele câmpuri:
+
+- **Data_AppDocsOperationDuration** - durata petrecută în substrat în timpul unei operațiuni de deschidere a fișierelor.
+
+- **Data_AppDuration**- durata petrecută în procesarea aplicațiilor în timpul unei operațiuni de deschidere a fișierelor. 
+
+- **Data_BootDuration**- durata pornirii aplicației în procesul de deschidere a fișierului.
+
+- **Data_Doc_AccessMode**- o enumerare indicând modul de acces al fișierului, de exemplu, doar în citire, citiți scrierea.
+
+- **Data_Doc_AsyncOpenKind**- o enumerare indicând tipul de flux asincron utilizat pentru deschiderea fișierului.
+
+- **Data_Doc_ChunkingType**- o enumerare indicând tipul de algoritm de segmentare a unui fișier.
+
+- **Data_Doc_EdpState**- o enumerare indicând starea de protecție a datelor de întreprindere a unui fișier.
+
+- **Data_Doc_Ext** - extensia fișierului
+
+- **Data_Doc_Fqdn**- nume gazdă server al fișierului.
+
+- **Data_Doc_FqdnHash** - un identificator unic global (GUID) care identifică în mod unic un nume gazdă server.
+
+- **Data_Doc_IdentityTelemetryId**- un GUID care identifică în mod unic identitatea utilizată pentru a deschide un fișier. 
+
+- **Data_Doc_InitializationScenario**- o enumerare indicând tipul de scenariu detaliat al unei operațiuni deschise de fișier.
+
+- **Data_Doc_IOFlags**- o enumerare indicând semnalizările IO ale unei operațiuni deschise de fișier, de exemplu, dacă fișierul este în cache sau nu.
+
+- **Data_Doc_IsCloudCollabEnabled**- dacă colaborarea în cloud este activată sau nu pentru fișier.
+
+- **Data_Doc_IsIncrementalOpen**- dacă fișierul a fost sau nu deschis prin deschidere treptată.
+
+- **Data_Doc_IsOcsSupported**- dacă un fișier acceptă sau nu serviciul de colaborare Office.
+
+- **Data_Doc_IsOpeningOfflineCopy**- dacă se deschide sau nu un fișier dintr-o copie memorată în cache offline.
+
+- **Data_Doc_IsPrefetched**- dacă a fost sau nu preluat fișierul înainte de a se deschide operațiunea.
+
+- **Data_Doc_IsSyncBacked**- dacă un fișier în cloud există sau nu local și dacă este sincronizat cu serverul.
+
+- **Data_Doc_Location**- o enumerare indicând unde se află fișierul, de exemplu, local sau în cloud.
+
+- **Data_Doc_ReadOnlyReasons**- o enumerare indicând doar motivul de citire a unui fișier.
+
+- **Data_Doc_ResourceIdHash**- un GUID care identifică în mod unic ID-ul de resursă server al fișierului.
+
+- **Data_Doc_RtcType** - o enumerare indicând tipul de canal în timp real (RTC) utilizat de fișier.
+
+- **Data_Doc_ServerDocId**- un GUID care identifică în mod unic ID-ul documentului server.
+
+- **Data_Doc_ServerProtocol**- o enumerare indicând protocolul de server al unui fișier în cloud.
+
+- **Data_Doc_ServerType**- o enumerare indicând tipul de server al unui fișier în cloud.
+
+- **Data_Doc_ServerVersion**- o enumerare indicând versiunea serverului unui fișier în cloud.
+
+- **Data_Doc_SessionId**- un număr întreg, incrementat de 1 pentru fiecare operațiune de deschidere a fișierului într-o sesiune.
+
+- **Data_Doc_SharePointServiceContext** - un șir utilizat la corelarea jurnalelor din partea client și pe partea de server, de obicei, este un fel de ID.
+
+- **Data_Doc_SizeInBytes** - dimensiunea documentului în octeți
+
+- **Data_Doc_SpecialChars**- o enumerare indicând ce tip de caracter special are adresa URL a fișierului.
+
+- **Data_Doc_UrlHash**- un GUID care identifică în mod unic URL-ul fișierului.
+
+- **Data_Doc_UsedWrsDataOnOpen** - dacă fișierul a fost deschis incremental folosind datele WRS memorate pre-cache.
+
+- **Data_Doc_WopiServiceId** - un șir indicând ce serviciu este un fișier aplicație de interfață deschisă pentru aplicația web (WOPI).
+
+- **Data_ErrorId_Code** - un cod de eroare care indică o eroare în operațiunea de colectare a datelor
+
+- **Data_ErrorId_Tag** - o etichetă din cod pentru a vă ajuta să găsiți punctul de eroare
+
+- **Data_InclusiveMeasurements** - o valoare șir de logare durata de timp petrecută în anumite apeluri de funcție, într-un format cu eticheta funcției și durata, care include durata apelurilor subfuncții. 
+
+- **Data_InitializationReason**- o enumerare indicând modul în care se deschide fișierul, de ex. element UI sau declanșat de altă aplicație etc.
+
+- **Data_Measurements** - o valoare șir care conectează timpul petrecut în anumite apeluri de funcție într-un format cu eticheta funcției și durata care include durata apelurilor subfuncție.
+
+- **Data_OfficeMobileInitReason** - o enumerare care indică punctul de intrare al fișierului deschis. 
+
+- **Data_SilhouetteDuration**- durata de randare a fișierului deschis.
+
+- **Data_TimeSplitMeasurements**- o valoare șir de logare durata de timp petrecută în anumite apeluri de funcție, într-un format cu eticheta funcției și ora de început și durata. 
+
+#### <a name="office_android_intune_intunecompliancerequest"></a>Office_Android_Intune_IntuneComplianceRequest
+
+Acest eveniment este colectat pentru aplicații Office care rulează pe Android, inclusiv Office Mobile, Word, Excel, PowerPoint și OneNote. Evenimentul indică o încercare de conectare la un cont de organizație licențiat Intune, unde administratorul organizației a configurat politica pentru a impune accesul condiționat la aplicație. Acesta este utilizat pentru a înțelege numărul de utilizatori finali care încearcă să utilizeze aplicațiile sub această configurare a politicii și este combinat cu un alt eveniment, Office_Android_Intune_IntuneComplianceStatus pentru a garanta impunerea politicii configurate. 
+
+Nu se colectează câmpuri de date.
+
+#### <a name="office_android_intune_intunecompliancestatus"></a>Office_Android_Intune_IntuneComplianceStatus
+
+Acest eveniment este colectat pentru aplicații Office care rulează pe Android, inclusiv Office Mobile, Word, Excel, PowerPoint și OneNote. Evenimentul indică o încercare de conectare la un cont de organizație licențiat Intune, unde administratorul organizației a configurat politica pentru a impune accesul condiționat la aplicație. Acest eveniment indică starea de conformitate a aplicației la care utilizatorul s-a conectat și este utilizat pentru a investiga erorile. Acesta este combinat cu un alt eveniment, Office_Android_Intune_IntuneComplianceRequest, pentru a garanta impunerea politicii configurate.
+  
+Se colectează următoarele câmpuri:
+
+- **Data_ComplianceStatus** - indică starea de conformitate a aplicației în timpul conectării cu un cod de eroare succes sau eșec.
+  - -1 – Eroare necunoscută
+  - 0 – Aplicația respectă politicile organizației
+  - 1 – Aplicația nu respectă politicile organizației
+  - 2 – Erori legate de servicii
+  - 3 – Erori legate de rețea
+  - 4 – Aplicația nu a reușit să regăsească simbolul de autentificare 
+  - 5 – Răspunsul din partea serviciului nu a fost încă primit
+  - 6 – Aplicația portalul firmei trebuie să fie instalată
 
 #### <a name="officeandroidodwxpssotelemetry"></a>Office.Android.ODWXPSSO.Telemetry
 
@@ -3265,6 +3833,67 @@ Se colectează următoarele câmpuri:
 
 - **Data_FirstRunPanelName** - numele panoului din care a început experiența
 
+#### <a name="officelivepersonacarduseractionsclosedpersonacard"></a>Office.LivePersonaCard.UserActions.ClosedPersonaCard
+
+Ne înregistrăm atunci când utilizatorul închide un Card de persoană.  Datele sunt utilizate pentru a determina dacă respectivul card este încărcat corect. 
+
+Se colectează următoarele câmpuri: 
+
+- **BatchId** - identificator unic global, dacă s-a efectuat un set de solicitări
+
+- **Data.appContextId** - un ID generat aleatoriu utilizat pentru a identifica conturi diferite în aceeași aplicație
+
+- **Data.AppInfo.Name** - numele serviciului utilizat (fișă de profil)
+
+- **Data. AppInfo_Id** - numele aplicației gazdă
+
+- **Data.AppInfo_Version** - versiunea aplicației gazdă
+
+- **Data.cardCorrelationId** - identificatorul unic global pentru un card de persoană
+
+- **Data.cardPersonaCorrelationId** - identificatorul unic global pentru o anumită persoană afișată într-un card
+
+- **Data.clientCorrelationId** - identificatorul unic global pentru sesiunea aplicației
+
+- **Data.clientType** - tipul de dispozitiv pe care rulează aplicația
+
+- **Data.eventId** - identificator de nume al evenimentului, de exemplu, „LivePersonaCardRenderedAction”
+
+- **Data.feature** - utilizat pentru a grupa diverse evenimente cu aceeași caracteristică (fișă de profil)
+
+- **Data.OTelJS.Version** - versiune de OTel logger
+
+- **Data.properties** - metadate suplimentare colectate pentru fiecare eveniment, după cum urmează:
+  - **ClientTimeStamp** - ora în aplicație la care s-a înregistrat evenimentul
+  - **cardCorrelationId** - dublură a Data.appContextId de mai sus
+  - **cardPersonaCorrelationId** - dublură a Data.cardCorrelationId de mai sus
+  - **consumerCorrelationId** - dublură a Data.clientCorrelationId de mai sus
+  - **externalAppSessionCorrelationId** - un identificator unic global pentru aplicație, pentru a identifica toate cardurile de persoane deschise în aceeași sub-sesiune
+  - **immersiveProfileCorrelationId** - identificator unic global pentru sesiunea vizualizare profil extins
+  - **personaCorrelationId** - identificator unic global pentru persoane unice într-o sesiune
+
+- **Data.region** - regiunea geografică a serviciului de back-end a fișei de profil la care este conectat utilizatorul
+
+- **Data.tenantAadObjectId** - entitatea găzduită la care este legat abonamentul unui utilizator. Ne permite să clasificăm problemele și să identificăm dacă este o problemă pe scară largă sau una izolată la un set de utilizatori sau la o anumită entitate găzduită
+
+- **Data.type** - tipul evenimentului înregistrat, de exemplu, urmărire, eroare, eveniment
+
+- **Data.userAadObjectId** - identificatorul de utilizator unic global pentru un cont Microsoft Enterprise (dublură a Data.UserInfo.Id)
+
+- **Data.UserInfo.Id** - identificatorul de utilizator unic global pentru un cont Microsoft Enterprise
+
+- **Data.UserInfo.MsaId** - identificatorul de utilizator unic global pentru un cont Microsoft consumator
+
+- **Data.UserInfo.OMSTenantId** - entitatea găzduită la care este asociat abonamentul unui utilizator. Ne permite să clasificăm problemele și să identificăm dacă este o problemă pe scară largă sau una izolată la un set de utilizatori sau la o anumită entitate găzduită
+
+- **Data.userPuid** - identificatorul de utilizator unic global pentru un cont Microsoft consumator (duplicat pentru Data.UserInfo.MsaId) 
+
+- **Data.version** - versiunea serviciului (fișă de profil)
+
+- **Data_hostAppRing** - inelul de implementare pentru cardul de persoană
+
+- **Event_ReceivedTime** - ora la care s-a înregistrat evenimentul în serviciu
+
 #### <a name="officelivepersonacarduseractionsconfigurationsetaction"></a>Office.LivePersonaCard.UserActions.ConfigurationSetAction
 
 Ne conectăm când utilizatorul se află într-o aplicație care încarcă un card de persoană în anticiparea utilizatorului care deschide Cardul de persoană live.  Datele sunt utilizate pentru a determina dacă respectivul card este încărcat corect. 
@@ -4228,7 +4857,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_Doc\_IdentityTelemetryId:string - **GUID unic al utilizatorului
 
-  - **Data\_Doc\_IdentityUniqueId:string –** identificator unic al identității folosite pentru acțiunea Documente partajate
+  - **Data\_Doc\_IdentityUniqueId:string -** identificator unic al identității folosite pentru acțiunea Documente partajate
 
   - **Data\_Doc\_IOFlags:long -** bitmask pentru diferite semnalizări legate de IO pentru un anumit document
 
@@ -5861,6 +6490,12 @@ Se colectează următoarele câmpuri:
 
 - **TIME_TAKEN_IN_MS** - timp necesar pentru a deschide pagina
 
+#### <a name="onenotecapturenewnotenewnotetaken"></a>OneNote.Capture.NewNote.NewNoteTaken
+
+Acest semnal este utilizat pentru a garanta că, după ce un utilizator se conectează la o aplicație OneNote Android, se acordă în mod corespunzător acces la blocnotesuri, iar utilizatorul creează cu succes o notă nouă.  Aceasta se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor.
+
+Nu se colectează câmpuri suplimentare.
+
 #### <a name="onenotemessagebarmessagebarclicked"></a>OneNote.MessageBar.MessageBarClicked 
 
 Semnalul utilizat pentru a indica probleme întâlnite în timp ce utilizați bara de mesaje.  Telemetria este folosită pentru a monitoriza, a detecta și a rezolva problemele cauzate în interacțiunea cu bara de mesaje
@@ -5911,6 +6546,198 @@ Se colectează următoarele câmpuri:
 
 - **RMS.VerifySignatureDuration** - durată timp pentru a verifica semnătura
 
+#### <a name="read_conversation"></a>read_conversation
+
+Este utilizat pentru a monitoriza posibilul impact negativ asupra stării și performanței de redare a unui mesaj de e-mail
+
+Se colectează următoarele câmpuri: 
+
+- **above_40fps** - numărul de cadre redate peste 40fps
+ 
+- **above_50fps** - numărul de cadre redate peste 50fps
+ 
+- **above_55fps** - numărul de cadre redate peste 55fps
+
+- **adal_id** - ID-ul de autentificare Active Directory al contului, un identificator unic în sistemul de autentificare Microsoft 
+
+- **component_name** - numele componentei/vizualizării care este activă în timpul filtrării
+
+- **event_mode** - locul din aplicație în care utilizatorul a introdus o în conversație (grupuri sau altele)
+
+- **internet_message_id** - un ID de urmărire pentru mesajul cel mai recent din conversație
+      
+- **orientation** - orientarea ecranului la ora evenimentului (portret sau peisaj)
+
+- **recent_message_id** - ID-ul celui mai recent mesaj din conversație
+
+- **suggested_reply_state** - starea răspunsurilor sugerate pentru această conversație (indisponibil, disponibil, afișat, utilizat sau eliminat)
+  
+- **total_count** - numărul total de cadre total afișat de componentă
+ 
+- **view_duration** - cât timp a fost vizualizată componenta de către utilizator
+
+#### <a name="save_attempt"></a>save_attempt
+
+Ne permite să identificăm impactul problemelor cauzate de utilizatori în încercarea de a salva un fișier prin evaluarea numărului de sesiuni care sunt afectate și dacă există caracteristici comune ale sesiunilor respective.
+
+Se colectează următoarele câmpuri: 
+
+- **file_type** - tipul de fișier pe care utilizatorul a încercat să-l salveze (cum ar fi. doc)
+
+- **origin** - care este originea încercării de salvare a fișierului (de ex. de la un mesaj de e-mail), astfel încât să putem detecta problemele asociate cu salvarea unui fișier dintr-un anumit loc din aplicație
+
+- **token_type** - tipul de simbol utilizat pentru autentificarea contului pentru a salva fișierul, astfel încât să ne ajute să detectăm probleme de autentificare asociate cu salvarea unui fișier
+
+#### <a name="send_message"></a>send_message
+
+Este utilizat pentru a monitoriza posibilul impact negativ asupra performanței și stării trimiterii de mesaje de e-mail
+
+Se colectează următoarele câmpuri:
+  
+- **account** - urmărește contul care a efectuat acțiunea
+
+- **compose_duration** - urmărește timpul total necesar utilizatorului pentru a compune mesajul, inclusiv o sesiune cu mai multe schițe
+
+- **draft_message_id** - urmărește ID-ul mesajului compus pentru mesajul trimis
+
+- **event_mode** - urmărește modul de eveniment, dacă se aplică la mesaj, („grupuri” sau „altele”)
+
+- **has_attachment** - indică dacă mesajul are atașări
+
+- **has_mip_label** - indică dacă o etichetă MIP a fost atribuită sau nu mesajului
+
+- **is_group_escalation** - este acesta un mesaj escaladat în grup, „mesajul escaladat” este un mesaj care a fost trimis la cutia poștală a utilizatorului din cauza unei escaladări (abonat la grup)
+
+- **is_groups** - urmărește dacă mesajul trimis este un mesaj de grup sau nu
+
+- **key_stroke_count** - urmărește numărul apăsărilor de taste pentru mesajul trimis
+
+- **message_id** - urmărește ID-ul mesajului oferit ca răspuns/redirecționat
+
+- **origin** - indică unde a fost compus, de ex., nou, răspuns, sau răspuns rapid etc.
+
+- **send_draft_origin** - indică unde a fost inițiată trimiterea, de ex., compunere sau răspuns rapid
+
+- **source_inbox** - indică tipul de inbox sursă pentru mesajul de referință, 
+
+- **suggested_reply_state** - capturarea stării răspunsurilor sugerate, de ex. indisponibil, disponibil, afișat, utilizat sau eliminat, pentru acest e-mail trimis
+
+- **thread_id** - indică ID-ul firului de conversație răspuns/redirecționat
+
+#### <a name="session"></a>sesiune
+
+Ne permite să detectăm și să remediem situațiile în care utilizăm prea mult bateria dispozitivului și ne ajută să identificăm cauza.
+
+Se colectează următoarele câmpuri: 
+
+- **battery_level** - ne indică nivelul bateriei de pe dispozitiv pentru a ne ajuta să detectăm când aplicația noastră provoacă un impact negativ asupra nivelului bateriei dispozitivului dvs.
+
+- **has_hx** - ne spune că acest cont folosește noul nostru serviciu de sincronizare, pentru a ne ajuta să detectăm problemele provocate de serviciul nostru de sincronizare
+
+#### <a name="settings_action"></a>settings_action
+
+Ne permite să detectăm situațiile în care există un posibil impact negativ asupra capacității de a configura setările de aplicație, cum ar fi setările de notificare, contul de e-mail principal și configurarea semnăturii de corespondență.
+
+Se colectează următoarele câmpuri: 
+
+- **account_order_changed** - pentru a verifica dacă ați modificat ordinea conturilor și pentru a vă asigura că această configurație funcționează corect 
+
+- **action** - acțiunile posibile efectuate în Setări, cum ar fi ștergerea unui cont, pentru a ne ajuta să diagnosticăm probleme și să ne asigurăm că nu există un impact negativ
+
+- **auth_type** - tipul de autentificare utilizat de cont, astfel încât să putem înțelege ce strat de sincronizare back-end utilizăm pentru a ne ajuta să diagnosticăm probleme 
+
+- **auth_type** - indică tipul de autentificare back-end care ne permite să știm dacă există o problemă cu un anumit tip de cont
+
+- **badge_count_state** - indică tipul de contor de ecusoane solicitat de utilizator, de ex. Fără ecusoane, Doar pentru mesajele prioritare etc. 
+
+- **changed_folder** - se capturează dacă s-a modificat un folder pentru a ne ajuta să diagnosticăm probleme. 
+
+- **changed_folder** - determină dacă această acțiune a fost arhivată, planificată sau altă acțiune.
+
+- **delete_scope** - în timpul unei ștergeri de cont, indiferent dacă ați șters contul de pe acest dispozitiv sau de pe toate dispozitivele cu Outlook.  
+
+- **delete_scope** - urmărește dacă această acțiune are legătură cu ștergerea unei persoane doar pe acest dispozitiv sau pe toate dispozitivele, dacă este cazul. 
+
+- **enabled_state** - dacă răspunsul dvs. automat, salvarea persoanelor de contact și blocarea setărilor de imagini externe sunt configurate corect  
+
+- **enabled_state** - dacă starea asociată cu acțiunea este activată
+
+- **notification_state** - indică tipul de contor de ecusoane solicitat de utilizator, de ex. Fără ecusoane, Doar pentru mesajele prioritare etc.
+
+- **server_type** - asemănător cu auth_type, ne spune ce tip de cont aveți pentru a ne ajuta să diagnosticăm mai bine problemele. Exemple**- Office365, Gmail, Outlook
+
+- **server_type** - indică tipul de server back-end care ne permite să știm dacă există o problemă cu un anumit tip de server
+
+- **setting_properties** - urmărește relația proprietăților cu acțiunea de setare 
+
+- **signature_setting** - indică dacă setarea a fost aplicată pentru întregul cont sau pentru un cont individual
+
+- **source** - indică sursa notificărilor, dacă este cazul, din setări sau setarea nu deranjați 
+
+- **state_changed_to** - pentru a verifica dacă setarea pornit/oprit Mesaje prioritare este configurată corect 
+
+- **swipe_action** - pentru a verifica dacă ați configurat toate acțiunile de tragere cu degetul pentru sortarea mesajelor de e-mail, pentru a ne ajuta să ne asigurăm că această setare funcționează cu succes 
+
+- **swipe_action** - indică ce încerca utilizatorul să facă, de ex. să semnaleze, să șteargă, să arhiveze, ne permite să determinăm acțiunea dorită de utilizator și dacă acțiunea nu a reușit sau nu. 
+
+- **swipe_direction** - pentru a verifica dacă direcțiile de tragere (la stânga sau la dreapta) sunt configurate corect
+
+- **swipe_direction** - indică modul în care utilizatorul a configurat glisarea, de ex. de la stânga la dreapta sau de la dreapta la stânga. Acest lucru ne permite să determinăm dacă există o problemă cu o anumită direcție de tragere cu degetul.
+
+- **swipe_setting** - indică detalii despre, dacă este cazul, setările de tragere cu degetul asociate cu această acțiune
+
+- **ui_mode_setting** - modul selectat de UI (întunecat, luminos, setarea implicită a sistemului, baterie descărcată etc.)
+
+#### <a name="sidebar_action"></a>sidebar_action
+
+Ne permite să detectăm situațiile în care există un posibil impact negativ asupra capacității de a configura setările de aplicație, cum ar fi setările de notificare, contul de e-mail principal și configurarea semnăturii de corespondență.
+
+Câmpurile de date care sunt comune pentru Outlook Mobile pentru acest eveniment pe iOS și Android:
+
+- **Account** - urmărește contul și datele sale asociate evenimentului, valorile urmărite în aceste date se află în documentația de câmp comună om 
+
+- **action** - urmărește tipul de acțiune din bara laterală, de ex. butonul respins, Ajutor selectat, bara laterală corespondență etc., 
+
+- **from_favorites** - urmărește dacă acțiunea provine de la un element din Preferințe 
+
+- **mail_folder_type** - ce tip de folder a fost selectat în timpul acțiunii din bara laterală, dacă există.
+
+- **sidebar_type** - urmărește tipul de bară laterală asociat cu acest eveniment, de ex. corespondență sau calendar pentru a ne ajuta să garantăm că navigarea din setarea Preferințe funcționează corect
+
+Se colectează următoarele câmpuri: 
+
+- **account_type** - indică tipul de autentificare al contului, de exemplu, Gmail, Outlook etc. 
+
+- **account_has_groups**- ne ajută să ne asigurăm că în cont există grupuri, care sunt configurate corect
+
+- **calendar_accounts_count** - numărul de conturi de calendar pe care îl aveți pentru a ne ajuta să ne asigurăm că conturile dvs. de calendar sunt configurate corect 
+
+- **calendar_apps_count** - numărul de aplicații de calendar pe care îl aveți pentru a ne ajuta să ne asigurăm că aplicațiile dvs. de calendar interesant sunt configurate corect 
+
+- **calendar_type** - tipul de calendar pe care îl aveți (calendar principal, calendar de grup etc.) 
+
+- **cid_type** - indică ce tip de cont este, cum ar fi un cont comercial sau un cont Outlook.com.
+
+- **has_favorite_folders** - ne ajută să ne asigurăm că folderele preferate sunt configurate corect 
+
+- **has_favorite_people** - ne ajută să ne asigurăm că persoanele/persoanele de contact preferate sunt configurate corect 
+
+- **has_group_calendar** - ne ajută să ne asigurăm că aveți calendare de grup, că sunt configurate corect 
+
+- **has_group_calendar_account** - ne ajută să ne asigurăm că aveți calendare de grup, că sunt configurate corect 
+
+- **has_group_toggled** - ne ajută să ne asigurăm că ați comutat calendare de grup, această setare este configurată corect 
+
+- **interesting_calendars_accounts_count** - numărul de conturi de calendar interesant pe care îl aveți pentru a ne ajuta să ne asigurăm că conturile dvs. de calendar interesant sunt configurate corect 
+
+- **mail_accounts_count** - numărul total de conturi de e-mail din bara laterală, pentru a vă asigura că acest lucru este configurat corect 
+
+- **mail_folder_type** - tipul de folder pe care l-a atins utilizatorul pentru a vă asigura că este configurat corect. Poate include Folderul șters, Spam sau Folderul trimis. 
+
+- **mail_inbox_unread_count** - ne ajută să ne asigurăm că contorizarea necitită este afișată și configurată corect 
+
+- **mail_subfolder_depth** - ne ajută să ne asigurăm că vom putea afișa cu succes configurațiile de subfolder de corespondență ale unui utilizator
+
 #### <a name="storeop"></a>StoreOp
 
 Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM.  Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează operațiunea de stocare a licențelor pentru Serviciul de administrare a drepturilor. 
@@ -5953,10 +6780,72 @@ Se colectează următoarele câmpuri:
 
 - **RMS.Url** - URL-ul serverului pentru Serviciul de administrare a drepturilor
 
+#### <a name="watchappv2"></a>watchAppV2
+
+Acest eveniment ne permite să detectăm și să remediem eventualele probleme privind capacitățile de pe Apple Watch, cum ar fi primirea de notificări și răspunsul la mesajele de e-mail.
+
+Se colectează următoarele câmpuri: 
+
+- **app_action** - ne spune tipurile de acțiune pe care le-a întreprins utilizatorul privind Apple Watch, cum ar fi „archive_message”, pentru a ne ajuta să detectăm probleme legate de o acțiune specifică, cum ar fi imposibilitatea de a arhiva cu succes mesajele de pe Apple Watch
+
+- **is_watch_app_installed** - ne spune dacă utilizatorul a instalat aplicația Apple Watch pe dispozitivul său
+
+- **is_complication_enabled** - ne spune dacă utilizatorul a adăugat Outlook la ecranul Apple Watch, pentru a ne ajuta să detectăm probleme legate de ecrane Apple Watch
+
+- **watch_os** - ne spune versiunea de sistem de operare Apple Watch instalată pentru a ne ajuta să detectăm probleme legate de anumite versiuni de sistem de operare Apple Watch
+
 
 ### <a name="application-status-and-boot-subtype"></a>*Subtipul de inițializare și starea aplicației*
 
 Stabilește dacă au avut loc anumite evenimente de caracteristici, cum ar fi pornirea sau oprirea, și dacă respectiva caracteristică rulează.
+
+#### <a name="app_startup"></a>app_startup
+
+Acest eveniment ne permite să detectăm și să remediem probleme în care Outlook pornește lent sau incomplet, îngreunând utilizarea aplicației de către utilizatori.  Acesta include informații despre caracteristici specifice care au fost activate și despre durata de pornire al părților.
+
+Se colectează următoarele câmpuri: 
+
+- **attach_base_context_millis** - timp între începerea Contextului de bază și începerea onCreate()
+
+- **device_ram_in_mb** - RAM disponibil pe dispozitiv
+
+- **has_company_portal** - dacă este instalată aplicația portalul firmei
+
+- **hx_okhttp_mode** - dacă noua componentă a serviciului de sincronizare a corespondenței utilizează OKHttp pentru trimiterea și primirea de solicitări de rețea bazate pe HTTP
+
+- **initial_activity_name** - activitatea Android care a lansat aplicația
+
+- **manufacturer** - producătorul dispozitivului
+
+- **model** - modelul de dispozitiv
+
+- **on_create_millis** - timpul necesar în metoda onCreate()
+
+- **on_resume_millis** - timpul necesar în metoda onResume()
+
+- **time_until_attach** - timp între încărcarea clasei și începerea Contextului de bază
+
+- **total_millis** - timpul total de la începerea încărcării la finalizarea reluării Activității Android
+
+#### <a name="boot_time"></a>boot_time 
+
+Acest eveniment ne permite să detectăm când s-au produs erori critice ale aplicațiilor, care ar putea duce la căderea aplicației dvs. sau la probleme serioase, cum ar fi vizualizarea unor rânduri goale în inboxul dvs. Acest eveniment colectează informații care ne permit să clasificăm și să dispunem pe categorii problemele pentru a ne ajuta să stabilim priorități în ceea ce privește impactul problemelor asupra clienților.
+
+Se colectează următoarele câmpuri:
+
+- **black_list_reason** - ne spune dacă există un motiv pentru care ar trebui să ignorăm aceste date. Printre exemple se numără lansarea din cauza unei notificări la distanță și lansarea din cauza unei preluări de fundal.
+
+- **step0_main** - ne spune intervalul de timp necesar pentru ca Outlook să ajungă la pasul „principal”, care este un pas definit de Apple.
+
+- **step1_appWillFinishLaunching** - ne spune intervalul de timp necesar pentru ca Outlook să treacă de la pasul „principal” la pasul „appWillFinishLaunching”, care este un pas definit de Apple.
+
+- **step2_appDidFinishLaunching** - ne spune intervalul de timp necesar pentru ca Outlook să treacă de la pasul „appWillFinishLaunching” la pasul „appDidFinishLaunching”, care este un pas definit de Apple.
+
+- **step3_engineStarted** - ne spune intervalul de timp necesar pentru ca Outlook să treacă de la pasul „appDidFinishLaunching” la pornirea motorului aplicației, care gestionează stocarea și sincronizarea datelor.
+
+- **step4_runLoopFirstIdle** - ne spune intervalul de timp necesar pentru ca Outlook să treacă de la pasul „engineStarted” la cel de a nu mai avea lucru suplimentar de finalizat.
+
+- **total_time** - ne spune intervalul de timp necesar pentru ca Outlook să finalizeze procesul de pornire.
 
 #### <a name="dnslookupop"></a>DnsLookupOp
 
@@ -6087,6 +6976,14 @@ Se colectează următoarele câmpuri:
 - **RMS.Url** - URL-ul serverului pentru Serviciul de administrare a drepturilor
 
 - **RMS.WinhttpCallbackStatus** - starea rezultatului apelului invers winhttp
+
+#### <a name="initialized"></a>Inițializat
+
+Ne permite să analizăm starea de funcționare a interfeței, care le permite aplicațiilor mobile să preia setările de utilizator și confidențialitate din serviciile Office și să diagnosticheze conectivitatea și setările de confidențialitate ale serviciului.
+
+Se colectează următoarele câmpuri:
+
+- **roamingSettingType** - identifică locația din care încercăm să citim setările
 
 #### <a name="ipccreateoauth2token"></a>IpcCreateOauth2Token
 
@@ -7795,23 +8692,11 @@ Acest eveniment indică faptul că Office Word citește cu voce tare textul din 
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_CharacterCount –** numărul de caractere al documentului
-
-  - **Data\_CharactersWithSpaceCount –** numărul de caractere și spații al documentului
-
-  - **Data\_IsPageCountInProgress –** numărul de pagini în curs
-
-  - **Data\_LineCount –** numărul de linii al documentului
-
-  - **Data\_PageCount –** numărul de pagini al documentului
-
   - **Data\_ParagraphCount –** numărul de paragrafe al documentului
 
   - **Data\_Play –** este prima dată când Word citește cu voce tare
 
   - **Data\_ViewKind –** tipul de vizualizare al documentului
-
-  - **Data\_WordCount –** numărul de cuvinte al documentului
 
 #### <a name="officewordaccessibilitylearningtoolsreadaloudstopreadaloud"></a>Office.Word.Accessibility.LearningTools.ReadAloud.StopReadAloud
 
@@ -7875,6 +8760,109 @@ Iată subtipurile de date din această categorie:
 ### <a name="unexpected-application-exit-crash-subtype"></a>*Subtip de ieșire neașteptată a aplicației (cădere)*
 
 Ieșirile neașteptate ale aplicației și starea aplicației atunci când se întâmplă acest lucru.
+
+#### <a name="app_startup_reason"></a>app_startup_reason
+
+Acest eveniment ne permite să detectăm și să remediem problemele în care Outlook a înregistrat o cădere în timpul pornirii aplicației.  Acest eveniment include informații referitoare la motivul pentru care s-a produs căderea, pentru ca noi să putem să remediem problema rapid.
+
+Se colectează următoarele câmpuri: 
+
+- **app_background_time** - durata în care aplicația a fost în fundal cu ocazia ultimei sesiuni
+
+- **startup_reason_type** - indică motivul pentru care pornește aplicația, acest lucru va indica dacă a fost din cauza unei închideri forțate sau din alt motiv. 
+
+- **watch_status_info** - urmărește informațiile următoare, dacă este cazul. 
+
+  - **is_watch_app_installed** - determină dacă utilizatorul are aplicația Watch instalată
+
+  - **is_watch_paired** - determină dacă dispozitivul iOS este asociat cu un ceas
+
+  - **is_watch_supported_and_active** - indică dacă este acceptat un ceas și dacă este activ în timpul sesiunii
+
+Câmpurile următoare sunt colectate doar pentru Outlook Mobile pentru iOS:
+
+- **clean_exit_reason** - un șir de cuvinte care indică dacă a existat un motiv pentru oprirea aplicației
+
+- **is_agenda_user** - indică dacă utilizatorul a deschis agenda recent, ceea ce indică dacă scriem pe disc la pornire
+
+- **is_watch_supported_and_active** - indică dacă este acceptat un ceas și dacă este activ în timpul sesiunii
+
+
+#### <a name="application_crash"></a>application_crash
+
+Utilizat pentru monitorizarea căderilor critice ale aplicației și ne ajută să colectăm informații despre motivul pentru care s-a blocat aplicația și cum să o preveniți.
+
+Se colectează următoarele câmpuri: 
+
+- **android.hardware.** - (de ex., android.hardware.bluetooth) valori de configurație hardware oferite de platforma Android
+
+- **android.software.** - (de ex., android.software.device_admin) valori de configurație software oferite de platforma Android
+
+- **android_version** - nume versiune dispozitiv Android, așa cum este indicat de android.os.Build.VERSION#RELEASE
+
+- **application_package_name** - nume pachet de aplicații, așa cum se indică în android.content.Context#getPackageName()
+
+- **application_stack_trace** - trasarea stivei de cădere
+
+- **application_version_code** - cod de versiune a aplicației definit de aplicația Outlook
+
+- **application_version_name** - numele versiunii aplicației definit de aplicația Outlook 
+
+- **com.** (de ex., com.google.android.feature.FASTPASS_BUILD, com.amazon.feature.PRELOAD, com.samsung.android.bio.face) Anumite valori de configurare specifice pentru fabricant oferite de platforma Android
+
+- **device_brand** - marcă de dispozitiv (producătorul sau operatorul mobil), așa cum se indică în android.os.Build#BRAND
+
+- **device_ID** - ID-ul unic al dispozitivului (IMEI)
+
+- **device_manufacturer** - producătorul dispozitivului așa cum este indicat de android.os.Build#MANUFACTURER
+
+- **device_model** - modelul de dispozitiv așa cum este indicat de android.os.Build#MODEL
+
+- **device_model** - numele dispozitivului așa cum este indicat de android.os.Build#DEVICE
+
+- **device_total_memory** - estimarea dimensiunii totale a memoriei dispozitivului pe baza statisticii sistemului de fișiere.
+
+- **glEsVersion** - cheie de versiune de sisteme încorporate OpenGL
+
+
+#### <a name="crash_event"></a>crash_event
+
+Ne permite să detectăm și să remediem situațiile în care s-au produs căderi critice ale aplicației și ne ajută să colectăm informații despre motivul pentru care a căzut aplicația și cum să preveniți căderea.
+
+Se colectează următoarele câmpuri: 
+
+- **crashTime** - data și ora la care s-a produs căderea pentru a ajuta la investigare
+
+- **exceptionName** - numele excepției care a declanșat căderea pentru a ajuta la investigare
+
+- **hasHx** - ne spune că acest cont folosește noul nostru serviciu de sincronizare, pentru a ne ajuta să detectăm problemele provocate de serviciul nostru de sincronizare
+
+- **incidentIdentifier** - un ID unic pentru raportul de cădere, astfel încât să găsim problema corespunzătoare
+
+- **isAppKill** - ne ajută să înțelegem dacă aplicația respectivă a fost oprită sau închisă pe dispozitiv
+
+- **reportKey** - un ID unic pentru instalarea aplicației pe dispozitivul pentru investigarea problemei
+
+- **semnal** - un semnal care a cauzat căderea pentru a ne oferi mai multe detalii pentru a investiga acest accident
+
+
+#### <a name="error"></a>Eroare
+
+Ne permite să înțelegem problemele cu care se confruntă aplicațiile mobile atunci când încercați să preluați setările de confidențialitate de pe server.
+
+Se colectează următoarele câmpuri:
+
+- **correlationId** - un identificator unic pentru o conexiune de serviciu care a dus la o eroare, permițându-ne să diagnosticăm ce nu a funcționat bine
+
+- **errorCode** - identifică codul de eroare relevant primit de la serviciul care poate fi utilizat pentru diagnosticarea problemei
+
+- **exceptionType** - tipul de eroare pe care l-a întâmpinat biblioteca atunci când a preluat setarea
+
+- **message** - identifică mesajul de eroare primit de serviciu
+
+- **roamingSettingType** - identifică locația din care încercăm să citim setările
+
+- **settingId** - setarea încercată de preluare
 
 #### <a name="officeappdomainunhandledexceptionhandlerfailed"></a>Office.AppDomain.UnhandledExceptionHandlerFailed
 
@@ -8302,10 +9290,165 @@ Se colectează următoarele câmpuri:
 
 - **Event name** – categoria evenimentului și eticheta acestuia.
 
+#### <a name="telemetry_error"></a>telemetry_error
+
+Acest eveniment ne permite să diagnosticăm și să remediem problemele care împiedică generarea sau trimiterea datelor de diagnostic necesare. Aceste evenimente ne permit să înțelegem dacă lipsesc date critice necesare pentru a identifica probleme de securitate sau probleme majore referitoare la modul în care funcționează aplicația.
+
+Se colectează următoarele câmpuri: 
+
+- **timer_name** - ne spune unde se produce problema de telemetrie, de ex., în componenta cutie poștală sau în calendar. Acest lucru vă ajută să detectați și să rezolvați problemele de telemetrie care au loc dintr-o anumită parte a aplicației
+
+- **type** - ne spune tipul de eroare de temporizator pentru a ne ajuta să detectăm când întâmpină aplicația noastră probleme privind trimiterea de date de telemetrie de diagnosticare
+
+
+#### <a name="watchdog_anr"></a>watchdog_anr
+
+Este necesar pentru monitorizarea erorilor de performanță ale aplicațiilor pentru a împiedica cazurile în care aplicația nu mai răspunde, iar ecranul se blochează în aplicație (denumită ANR - aplicația nu răspunde).
+
+Se colectează următoarele câmpuri: 
+
+- **callstack** - stivă de apeluri pentru cod, în care s-a produs ANR
+ 
+- **caused_restart** - dacă aplicația a fost obligată să repornească din cauza ANR
+ 
+- **duration** - intervalul de timp în care dispozitivul a fost blocat
+ 
+- **id** - identificator unic pentru ANR
+ 
+- **interval** - pragul configurat pentru declanșarea ANR
+ 
+- **is_application_object_initialized** - dacă ANR s-a produs după ce aplicația a fost inițializată complet sau înainte
+ 
+- **last_known_is_in_foreground** - dacă aplicația a fost mai recent în prim plan sau în fundal
+
 
 ### <a name="application-feature-performance-subtype"></a>*Subtipul de performanță al caracteristicii aplicației*
 
 Timpii de răspuns slabi sau performanțele scăzute pentru scenarii precum pornirea aplicației sau deschiderea unui fișier.
+
+#### <a name="android_frame_metrics"></a>android_frame_metrics
+
+Ne permite să detectăm și să remediem situațiile în care componentele aplicațiilor noastre Android cauzează probleme de performanță, de exemplu, dacă inboxul dvs. defilează fără probleme.
+
+Se colectează următoarele câmpuri: 
+
+- **animation_duration** - durata redării animației în milisecunde
+
+- **command_issue_duration** - durata de emitere a comenzilor pe platformă în milisecunde 
+
+- **draw_duration** - durata de desenare a UI în milisecunde 
+
+- **input_handling_duration** - durata manipulării de intrare în milisecunde 
+
+- **layout_measure_duration** - durata măsurării aspectului în milisecunde
+
+- **origin** - componenta de aplicație măsurată, de exemplu, calendar sau e-mail
+
+- **sync_duration** - durată de sincronizare a cadrului în milisecunde
+
+- **swap_buffers_duration** - durata de comutare între tampoane în milisecunde
+
+- **total_duration** - durata totală de redare a cadrelor în milisecunde
+
+- **unknown_delay** - întârziere cauzată de surse necunoscute, altele decât duratele urmărite în mod explicit
+
+#### <a name="cal_component"></a>cal_component
+
+Acest eveniment ne permite să detectăm și să remediem problemele cu impact de performanță perceptibil asupra componentelor UI de calendar, care ar putea cauza probleme de defilare la nivelul calendarului.
+
+Se colectează următoarele câmpuri: 
+
+- **account_counter** - urmărește numărul de conturi asociate pentru fiecare tip de calendar, de ex. 2 pentru calendarul Gmail și dacă acel cont utilizează noul nostru serviciu de sincronizare
+
+- **component_name** - ne spune numele componentei de calendar, cum ar fi vizualizarea Agendă sau vizualizarea Zi, pentru a ne ajuta să detectăm probleme de performanță care au impact asupra unei anumite componente din calendar
+
+- **display_frame_data** - urmărește timpul petrecut cu afișarea a 60 de cadre, pentru a determina dacă există probleme de performanță. 
+
+- **orientation** - ne spune dacă dispozitivul a fost în modul portret sau peisaj, pentru a ne ajuta să detectăm probleme de performanță care au impact asupra unei anumite orientări a dispozitivelor
+
+- **view_duration** - ne spune cât timp a fost necesar pentru a reda diferitele componente de calendar UI pentru a ne ajuta să detectăm probleme de performanță care influențează experiența dvs. de calendar
+
+#### <a name="conversation_load_time"></a>conversation_load_time
+
+Acest eveniment ne permite să detectăm și să remediem problemele în care există un impact de performanță perceptibil asupra încărcării conversațiilor de e-mail pentru a vă asigura că e-mailurile se încarcă așa cum vă așteptați.
+
+Se colectează următoarele câmpuri: 
+
+- **cid_type** - arată cărui tip de cont îi aparține CID
+
+- **time** - ne spune intervalul de timp necesar pentru încărcarea conversației de e-mail.
+
+#### <a name="core_data_migration"></a>core_data_migration
+
+Ne permite să detectăm și să remediem situațiile în care s-a produs o eroare la actualizarea datelor de e-mail de pe dispozitivul dvs. la o versiune mai nouă.
+
+Se colectează următoarele câmpuri:
+
+- **db_size_megabytes** - urmărește dimensiunea bazei de date nucleu rotunjită la cei mai apropiați 25 de megaocteți și cu un număr maxim de MB de 500
+
+- **db_wal_size_megabytes** - urmărește dimensiunea bazei de date nucleu rotunjită la cel mai apropiat 1 megaoctet și cu un număr maxim de MB de 10
+
+- **free_space_megabytes** - urmărește spațiul liber disponibil în bucketuri 10, 100, 1000, 10.000, apoi 100.000. 
+
+- **migration_duration_seconds** - urmărește durata de migrare rotunjită la unul dintre aceste segmente de timp: 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180 (180 și după aceea ar trebui să fie doar 180)
+
+#### <a name="core_data_performance"></a>core_data_performance
+
+Ne permite să detectăm și să remediem situațiile în care datele de e-mail pe care le stocăm pe dispozitivul dvs. cauzează probleme de performanță.
+
+Se colectează următoarele câmpuri:
+
+- **Caller** - urmărește numele entității care apelează operațiunea salvare
+
+- **db_size_megabytes** - urmărește dimensiunea bazei de date nucleu rotunjită la cei mai apropiați 25 de megaocteți și cu un număr maxim de MB de 500
+
+- **duration** - urmărește intervalul de timp necesar pentru a finaliza operațiunea
+
+- **entity** - urmărește numele entității care a apelat operațiunea de preluare
+
+- **operation** - valoarea brută a operațiunii, indiferent că este vorba despre salvare, preluare sau „citire scriere coadă blocată”
+
+#### <a name="inbox_component"></a>inbox_component
+
+Acest eveniment ne permite să detectăm și să remediem problemele în care există un impact de performanță perceptibil asupra componentelor UI din Inbox, care ar putea face ca e-mailurile, avatarul, starea citit/necitit să nu se încarce sau să nu se afișeze corect.
+
+Se colectează următoarele câmpuri: 
+
+- **above_40fps** - numărul de cadre redate peste 40fps
+
+- **above_50fps** - numărul de cadre redate peste 50fps
+
+- **above_55fps** - numărul de cadre redate peste 55fps
+
+- **account_counter** - numărul corespunzător fiecărui tip de cont prezent pe dispozitiv, de exemplu, un cont Office 365 = 1 cont, un cont Outlook.com = 1 cont.
+
+- **ad_not_shown_reason** - motivul pentru care nu sunt afișate reclame
+
+- **ad_shown** - dacă a fost afișată o reclamă (dacă sunt activate reclamele)
+
+- **age** - vârsta persoanei (utilizată pentru a confirma conformitatea cu limitările de vârstă pentru reclame)
+
+- **component_name** - numele componentei/vizualizării care este activă în timpul filtrării
+
+- **has_hx** - dacă dispozitivul are cel puțin un cont Hx (noul nostru serviciu de sincronizare a e-mailului)
+
+- **has_subscription** - dacă dispozitivul are un abonament cu reclame
+
+- **is_all_accounts_inbox** - dacă inboxul curent este folderul „toate conturile”
+
+- **is_current_account** - dacă contul activ curent este cont cu reclame
+
+- **load_error_code** - cod de eroare atunci când încărcați reclame
+
+- **network_error_code** - cod de eroare de rețea atunci când solicitați reclame
+
+- **orientation** - orientarea ecranului la ora evenimentului (portret sau peisaj)
+
+- **sub_error_type** - tip de eroare detaliat
+
+- **total_count** - numărul total de cadre total afișat de componentă
+
+- **view_duration** - cât timp a fost vizualizată componenta de către utilizator
 
 #### <a name="initial_page_landing"></a>Initial_page_landing 
  
@@ -8398,6 +9541,50 @@ Acest eveniment indică faptul că a fost lansată o eroare de către parserul j
 Se colectează următoarele câmpuri: 
 
 - **Error** - acest lucru constă în mesajul de eroare pe care îl returnează obiectul de eroare.
+
+#### <a name="mail_filter_component"></a>mail_filter_component
+
+Acest eveniment ne permite să detectăm și să remediem problemele în care există un impact de performanță perceptibil asupra experienței de filtrare a e-mailului, care ar putea face ca filtrele dvs. să nu se încarce sau să nu se afișeze corect.
+
+Se colectează următoarele câmpuri: 
+
+- **above_40fps** - numărul de cadre redate peste 40fps
+ 
+- **above_50fps** - numărul de cadre redate peste 50fps
+ 
+- **above_55fps** - numărul de cadre redate peste 55fps
+ 
+- **account_counter** - numărul corespunzător fiecărui tip de cont prezent pe dispozitiv, de exemplu, un cont Office 365 = 1 cont, un cont Outlook.com = 1 cont.
+ 
+- **ad_not_shown_reason** - motivul pentru care nu sunt afișate reclame
+ 
+- **ad_shown** - dacă a fost afișată o reclamă (dacă sunt activate reclamele)
+ 
+- **age** - vârsta persoanei (utilizată pentru a confirma conformitatea cu limitările de vârstă pentru reclame)
+ 
+- **component_name** - numele componentei/vizualizării care este activă în timpul filtrării
+ 
+- **folder_type** - tipul de folder filtrat (e.g. Inbox, Coș de gunoi, Nonsistem)
+ 
+- **has_hx** - dacă dispozitivul are cel puțin un cont Hx (noul serviciu de sincronizare a corespondenței)
+ 
+- **has_subscription** - dacă dispozitivul are un abonament cu reclame
+ 
+- **is_all_accounts_inbox** - dacă inboxul curent este folderul „toate conturile”
+ 
+- **is_current_account** - dacă contul activ curent este cont cu reclame
+ 
+- **load_error_code** - cod de eroare atunci când încărcați reclame
+ 
+- **network_error_code** - cod de eroare de rețea atunci când solicitați reclame
+ 
+- **orientation** - orientarea ecranului la ora evenimentului (portret sau peisaj)
+ 
+- **sub_error_type** - tip de eroare detaliat
+ 
+- **total_count** - numărul total de cadre total afișat de componentă
+ 
+- **view_duration** - cât timp a fost vizualizată componenta de către utilizator
 
 #### <a name="officeandroidandroidofficelaunchtolandingpagelatency"></a>Office. Android. AndroidOfficeLaunchToLandingPageLatency
 
@@ -8905,9 +10092,127 @@ Se colectează următoarele câmpuri:
 
   - **Data\_WasSuccessful: bool –** true dacă deschiderea a reușit
 
+#### <a name="onenotesyncprovisioningcompleted"></a>OneNote.Sync.ProvisioningCompleted
+
+Semnalul critic este utilizat pentru a garanta că, după ce un utilizator se conectează la o aplicație OneNote Android, se acordă acces în mod corespunzător la blocnotesuri, astfel încât să fie accesate cu ușurință. Aceasta se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor
+
+Se colectează următoarele câmpuri: 
+
+- **AppSuspendedDuringEvent** - Returnează valoare booleană pentru a indica dacă aplicația a fost suspendată în timpul acordării accesului
+
+- **NetworkConnection** - tipul de conectivitate de rețea a dispozitivului utilizat
+
+- **NetworkDataExchange** - înregistrează numărul de octeți schimbați în timpul acordării accesului.
+
+- **ServerType** - returnează tipul de server care oferă serviciul
+
+- **TimeTakenInMilliSeconds** - returnează timpul necesar pentru a finaliza asigurarea accesului în milisecunde
+
+#### <a name="onenotesyncprovisioningstarted"></a>OneNote.Sync.ProvisioningStarted
+
+Semnalul critic este utilizat pentru a garanta că, după ce un utilizator se conectează la o aplicație OneNote Android, se acordă în mod corespunzător acces la blocnotesuri, astfel încât să fie accesate cu succes.  Aceasta se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor
+
+Se colectează următoarele câmpuri: 
+
+- **NetworkConnection** - tipul de conectivitate de rețea a dispozitivului utilizat
+
+- **ServerType** - returnează tipul de server care oferă serviciul
+
+#### <a name="perf_event"></a>perf_event
+
+Este utilizat pentru a monitoriza posibilul impact negativ asupra performanței de încărcare a diferitelor părți ale aplicației, de ex. pentru a vă asigura că, atunci când deschideți pentru prima dată aplicația, inboxul se încarcă rapid.
+
+Se colectează următoarele câmpuri: 
+
+- **app_start_show_message_list** - aceasta înseamnă că a fost o problemă de performanță la pornirea aplicației ceea ce face ca lista de mesaje din inbox să aibă nevoie de mai mult timp pentru a se încărca
+
+- **event_type** - ne spune tipul de eveniment de performanță care a cauzat o problemă de performanță, pentru a ne ajuta să detectăm probleme care au legătură cu un anumit tip.   
+
+- **extra_params** - un dezvoltator poate adăuga parametri suplimentari aici pentru a ne oferi mai multe detalii despre ceea ce ar putea cauza această problemă de performanță, de exemplu, atunci când această acțiune s-a produs și s-a încheiat etc. 
+
+- **total_time_elapsed** - ne spune cât timp a durat evenimentul de performanță pentru a ne ajuta să înțelegem gravitatea problemei de performanță
+
+#### <a name="performance_record"></a>performance_record
+
+Vă permite să detectați și să remediați situațiile în care utilizarea memoriei de aplicație și utilizarea CPU devin extrem de înalte, ceea ce ar putea determina încetinirea aparatului
+
+Se colectează următoarele câmpuri: 
+
+- **category** - ne spune dacă aplicația se află în prim plan sau în fundal în acel moment. Posibilele valori includ prim plan și fundal.
+
+- **cpu_usage** - ne spune cât CPU a fost utilizat de aplicație astfel încât să avem un termen de comparație, pentru a ne ajuta să înțelegem impactul de performanță negativ
+
+- **is_watch_app_installed** - ne spune dacă utilizatorul utilizează în prezent un Apple Watch și dacă este instalat, pentru a ne ajuta să înțelegem impactul negativ asupra performanței cauzat de Watch
+
+- **is_watch_paired** - ne spune dacă utilizatorul utilizează în prezent un Apple Watch și dacă este asociat cu dispozitivul pentru a ne ajuta să înțelegem impactul negativ asupra performanței cauzat de Watch
+
+- **is_watch_supported_and_active** - ne spune dacă utilizatorul utilizează în prezent un Apple Watch și dacă este activ pentru a ne ajuta să înțelegem impactul negativ asupra performanței cauzat de Watch
+
+- **memoAry_used_percentage** - ne spune ce procent din memorie a fost utilizat de aplicație, pentru a avea un termen de comparație și pentru a ne ajuta să înțelegem impactul negativ asupra performanței
+
+- **memory_used** - ne spune câtă memorie a fost utilizată de aplicație pentru a avea un termen de comparație și pentru a ne ajuta să înțelegem impactul de performanță negativ
+
+
 ### <a name="application-activity-error-subtype"></a>*Subtipul de eroare de activitate a aplicației*
 
 Erorile în funcționalitatea unei caracteristici sau a unei experiențe de utilizator.
+
+#### <a name="assertion"></a>assertion
+
+Acest eveniment ne permite să detectăm când s-au produs erori critice ale aplicațiilor, care ar putea duce la căderea aplicației dvs. sau la probleme serioase, cum ar fi vizualizarea unor rânduri goale în inboxul dvs.
+
+Se colectează următoarele câmpuri:
+
+- **count** - numărul total de elemente asociate erorii; de exemplu, numărul de calendare care au erori
+
+- **has_hx** - ne spune că acest cont folosește noul nostru serviciu de sincronizare, pentru a ne ajuta să detectăm problemele provocate de serviciul nostru de sincronizare
+
+- **host_name** - numele gazdei serviciului care a fost implicată în eroare, pentru a ne ajuta să detectăm probleme legate de o anumită gazdă
+
+- **host_type** - tipul de gazdă implicată în eroare, pentru a ne ajuta să detectăm probleme legate de un anumit tip de gazdă
+
+- **message** - mesaj particularizat pentru afirmația utilizată pentru diagnosticarea problemei 
+
+- **origin** - originea erorii din cod pentru a ne ajuta să detectăm probleme legate de o anumită parte a codului
+
+- **stacktrace** - trasarea stivei în care a apărut afirmația pentru a ne ajuta să detectăm probleme legate de o anumită parte a codului
+
+- **type** - tipul de eroare pentru afirmație care a apărut, de ex. null_folder_name, compose_selected_null_account, pentru a ne ajuta să detectăm probleme legate de o anumită parte a codului
+
+#### <a name="edit_contact_error"></a>edit_contact_error
+
+Ne permite să detectăm și să remediem situațiile în care s-au produs erori atunci când ați încercat să vizualizați sau să editați persoanele de contact prin intermediul aplicației.
+
+Se colectează următoarele câmpuri: 
+
+- **errorType** - tipul de eroare care a avut loc pentru a ne ajuta să diagnosticăm problema
+
+- **field** - câmpul de persoane de contact pe care utilizatorul a încercat să-l editeze pentru a ne ajuta să diagnosticăm problema
+
+- **version** - versiunea serviciului de cărți de vizită pe care îl utilizăm pentru a ne ajuta să diagnosticăm problema
+
+#### <a name="error_report"></a>error_report
+
+Acest eveniment ne permite să detectăm unde s-au produs erorile critice ale aplicației astfel încât să putem preveni problemele care ar putea determina căderea aplicației sau care ar putea să vă împiedice să citiți e-mailurile. 
+
+Se colectează următoarele câmpuri: 
+
+- **client-request-id** - identificator solicitare client pentru solicitarea care a cauzat eroarea
+ 
+- **date** - marca de dată a solicitării care a cauzat eroarea
+
+- **error** - tipul de eroare, de ex., get_mailbox_location_failed
+ 
+- **error_body** - corpul mesajului de eroare
+ 
+- **is_x_mailbox_anchor_set** - dacă s-a setat proprietatea X-AnchorMailbox la solicitare
+ 
+- **reason** - motivul erorii, de ex. un mesaj de eroare
+ 
+- **request-id** - identificator solicitare server pentru solicitarea care a determinat eroarea
+ 
+- **source** - sursa erorii din infrastructura OM, de obicei, una dintre „BE” sau „FE”
+
 
 #### <a name="officeairspacebackendwin32graphicsdriversofthang"></a>Office.AirSpace.Backend.Win32.GraphicsDriverSoftHang 
 
@@ -9906,6 +11211,20 @@ Se colectează următoarele câmpuri:
 
 - **RMS.SDKVersion** - versiunea clientului pentru Serviciul de administrare a drepturilor
 
+#### <a name="save_error"></a>save_error
+
+Ne permite să detectăm și să remediem situațiile în care s-a produs o eroare atunci când ați încercat să salvați un fișier.  Urmărește erorile cauzate de erori la salvarea unui fișier, inclusiv un mesaj de eroare descriptiv, pentru a ne ajuta să rezolvăm problema.
+
+Se colectează următoarele câmpuri: 
+
+- **error** - tipul de eroare care s-a produs pentru a ne ajuta să detectăm și să rezolvăm problemele legate de un anumit tip de eroare
+
+- **file_type** - tipul de fișier pe care utilizatorul a încercat să-l salveze (cum ar fi. doc)
+
+- **origin** - care este originea încercării de salvare a fișierului (de ex. de la un mesaj de e-mail), astfel încât să putem detecta problemele asociate cu salvarea unui fișier dintr-un anumit loc din aplicație
+
+- **token_type** - tipul de simbol utilizat pentru autentificarea contului pentru a salva fișierul, astfel încât să ne ajute să detectăm probleme de autentificare asociate cu salvarea unui fișier
+
 
 ## <a name="device-connectivity-and-configuration-data-events"></a>Evenimente privind conectivitatea și datele de configurare ale dispozitivelor
 
@@ -9917,6 +11236,124 @@ Iată subtipurile de date din această categorie:
 ### <a name="device-connectivity-and-configuration-subtype"></a>*Conectivitatea dispozitivelor și subtipul de configurare*
 
 Starea conexiunii la rețea și setările dispozitivelor, cum ar fi memoria.
+
+#### <a name="application_did_receive_memory_warning"></a>application_did_receive_memory_warning
+
+Acest eveniment este trimis atunci când Apple ne spune că aplicația nu mai are memorie suficientă. Aceasta ne spune că am introdus o problemă cu gestionarea memoriei pe dispozitivul dvs.
+
+Se colectează următoarele câmpuri: 
+
+- **current_memory_used** - ne spune cantitatea de memorie utilizată de aplicație în momentul în care aplicația nu mai are memorie suficientă.
+
+- **current_memory_used_percentage** - ne spune procentul de memorie utilizat de aplicație din memoria totală disponibilă în momentul în care aplicația nu mai avea memorie suficientă.
+
+- **currentVC** - ne spune vizualizarea afișată în prezent atunci când aplicația nu mai avea memorie suficientă.
+
+- **has_hx** - ne spune că acest cont folosește noul nostru serviciu de sincronizare, pentru a ne ajuta să detectăm problemele provocate de serviciul nostru de sincronizare
+
+- **is_watch_app_installed** - ne spune dacă utilizatorul utilizează în prezent un Apple Watch și dacă este instalat, pentru a ne ajuta să înțelegem impactul negativ asupra performanței cauzat de Watch
+
+- **is_watch_paired** - ne spune dacă utilizatorul utilizează în prezent un Apple Watch și dacă este asociat cu dispozitivul pentru a ne ajuta să înțelegem impactul negativ asupra performanței cauzat de Watch
+
+- **is_watch_supported_and_active** - ne spune dacă utilizatorul utilizează în prezent un Apple Watch și dacă este activ pentru a ne ajuta să înțelegem impactul negativ asupra performanței cauzat de Watch
+
+- **rn_initialized** - ne spune dacă React Native a fost inițializat în momentul în care aplicația nu mai avea memorie suficientă.
+
+- **running_time** - ne spune intervalul de timp petrecut de aplicație în momentul în care aplicația nu mai avea memorie suficientă.
+
+#### <a name="conversation_memory_leak"></a>conversation_memory_leak
+
+Ne permite să detectăm situațiile în care vizualizarea noastră de conversație prin e-mail ne determină să utilizăm mai mult spațiu de stocare pe dispozitivul dvs. decât era de așteptat.
+
+Se colectează următoarele câmpuri:
+
+- Nu s-au colectat câmpuri sau date suplimentare. Doar jurnalele sunt colectate dacă există o irosire de memorie corelată cu un fir de conversație.
+
+#### <a name="core_data_corruption"></a>core_data_corruption
+
+Ne permite să detectăm situațiile în care nu vă putem afișa e-mailul sau calendarul, deoarece locul în care stocăm e-mailul pe dispozitivul dvs. s-a deteriorat.
+
+Se colectează următoarele câmpuri:
+
+- **errorSource** - indică dacă provine de la o acțiune salvare sau creare
+
+- **sqlError** - cod de eroare numeric listat la https://www.sqlite.org/c3ref/c_abort.html
+
+#### <a name="core_data_corruption_user_reset"></a>core_data_corruption_user_reset
+
+Ne permite să detectăm situațiile în care v-ați șters sau resetat contul din aplicația noastră, situație cauzată de o corupere în datele de e-mail pe care le-am stocat pe dispozitivul dvs.
+
+Se colectează următoarele câmpuri:
+
+- **errorSource** - dictează unde s-a produs corupția, fie în timpul salvării, fie în timpul creării
+
+#### <a name="core_data_diagnostics"></a>core_data_diagnostics 
+
+Ne permite să detectăm și să remediem situațiile în care spațiul nostru de stocare e-mailul utilizează prea mult din spațiul de stocare al dispozitivelor dvs.
+
+Se colectează următoarele câmpuri:
+
+- **db_size_megabytes** - urmărește dimensiunea bazei de date nucleu rotunjită la cei mai apropiați 25 de megaocteți și cu un număr maxim de MB de 500
+
+#### <a name="general_properties_log"></a>general_properties_log
+
+Acest eveniment colectează informații care ne permit să clasificăm și să dispunem pe categorii problemele din aplicația Outlook care sunt asociate cu setările de accesibilitate și de dispozitive.  Această clasificare este necesară pentru a prioritiza impactul problemelor asupra clienților.
+
+Se colectează următoarele câmpuri pentru iOS:
+
+- **bold_text** - ne spune dacă dispozitivul are textul cu caractere aldine activat pentru a ne ajuta să detectăm probleme legate de textul cu caractere aldine
+
+- **closed_captioning** - ne spune dacă utilizatorul a activat subtitrarea complexă pe dispozitiv, pentru a ne ajuta să detectăm probleme legate de subtitrări
+
+- **darker_system_colors** - ne spune dacă utilizatorul a activat întunecarea culorilor de sistem pe dispozitiv, pentru a ne ajuta să detectăm probleme legate de această setare
+
+- **gray_scale** - ne spune dacă utilizatorul a activat tonuri de gri pe dispozitiv, pentru a ne ajuta să detectăm probleme legate de această setare
+
+- **guided_access** - ne spune dacă utilizatorul a activat acces ghidat pe dispozitivul său, pentru a ne ajuta să detectăm probleme legate de această setare
+
+- **invert_colors** - ne spune dacă utilizatorul a activat setarea pentru a inversa culorile pe dispozitiv, pentru a ne ajuta să detectăm probleme legate de această setare
+
+- **mono_audio** - ne spune dacă utilizatorul a activat setarea Audio mono pe dispozitiv, pentru a ne ajuta să detectăm probleme legate de această setare
+
+- **reduce_motion** - ne spune dacă utilizatorul a activat setarea de reducere a mișcării pe dispozitiv, pentru a ne ajuta să detectăm probleme legate de această setare
+
+- **reduce_transparency** - ne spune dacă utilizatorul a activat setarea pentru a reduce transparența pe dispozitiv, pentru a ne ajuta să detectăm probleme legate de această setare
+
+- **speak_screen** - ne spune dacă utilizatorul a activat setarea pentru Audio mono pe dispozitiv, pentru a ne ajuta să detectăm probleme legate de această setare
+
+- **speak_selection** - ne spune dacă utilizatorul a activat setarea pentru Speak Selection pe dispozitiv, pentru a ne ajuta să detectăm probleme legate de această setare
+
+- **switch_control** - ne spune dacă utilizatorul a activat setarea pentru Switch Control pe dispozitiv, pentru a ne ajuta să detectăm probleme legate de această setare
+
+- **voice_over** - ne spune dacă utilizatorul a activat setarea pentru VoiceOver pe dispozitiv, pentru a ne ajuta să detectăm probleme legate de această setare
+
+Se colectează următoarele câmpuri pentru Android:
+
+- **braille** - ne spune dacă utilizatorul a activat setarea pentru a inversa culorile pe dispozitiv, pentru a ne ajuta să detectăm probleme legate de această setare
+
+- **caption** - ne spune dacă utilizatorul a activat subtitrarea complexă pe dispozitiv, pentru a ne ajuta să detectăm probleme legate de subtitrări
+
+- **color_inversion** - ne spune dacă utilizatorul a activat setarea pentru a inversa culorile pe dispozitiv, pentru a ne ajuta să detectăm probleme legate de această setare
+
+- **high_contrast** - ne spune dacă utilizatorul a activat setarea pentru Contrast înalt pe dispozitiv, pentru a ne ajuta să detectăm probleme legate de această setare
+
+- **large_text** - ne spune dacă dispozitivul are setarea text mare activată pentru a ne ajuta să detectăm probleme legate de această setare
+
+- **oem_preinstall** - ne spune dacă aplicația noastră a fost preinstalată pe dispozitiv (aceasta se aplică numai la dispozitivele Samsung)
+
+- **supported_abis** - ne spune ce tipuri de interfață binare de aplicație (ABI) sunt acceptate de platforma de dispozitive pentru a ne ajuta să detectăm probleme legate de această setare
+
+- **switch_access** - ne spune dacă utilizatorul a activat setarea pentru Switch Access pe dispozitiv, pentru a ne ajuta să detectăm probleme legate de această setare
+
+- **talkback** - ne spune dacă utilizatorul a activat setarea pentru Talkback pe dispozitivul său, pentru a ne ajuta să detectăm probleme legate de această setare
+
+#### <a name="low_storage_warning"></a>low_storage_warning
+
+Acest lucru este necesar pentru a monitoriza dacă aplicația noastră ocupă brusc cea mai mare parte a spațiului de stocare al dispozitivului din cauza unei utilizări de memorie de înaltă calitate, indicând atunci când dispozitivul este redus la spațiu de stocare
+
+Se colectează următoarele câmpuri: 
+
+- **free_bytes** - volumul de spațiu de stocare gratuit disponibil pe dispozitiv
 
 #### <a name="officeairspaceairspacelocalblocklistdriverupdated"></a>Office.AirSpace.AirSpaceLocalBlocklistDriverUpdated
 
