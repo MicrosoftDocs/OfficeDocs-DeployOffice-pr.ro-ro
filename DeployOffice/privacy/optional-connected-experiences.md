@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate opționale, inclusiv condițiile de utilizare care se aplică.
 hideEdit: true
-ms.openlocfilehash: 3cba95a89c0a1f108485565101d10deea5a70a38
-ms.sourcegitcommit: 41232c8500173289b94a025044166f1d1e91e870
+ms.openlocfilehash: 0c48bd091998e12603e09fcc9b6ce42207e2d95b
+ms.sourcegitcommit: d07de5b2fc7ea02171b84ff34bf4db9686683ed5
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "41917712"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "42340924"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Prezentare generală a experiențelor conectate opționale în Office
 
@@ -59,7 +59,7 @@ Notă: Setarea de confidențialitate descrisă mai jos nu controlează experien�
 
 ### <a name="help--contact-support"></a>Ajutor > Contactați asistența
 
-În Outlook pentru iOS și Android, puteți să raportați probleme și să vă conectați cu echipa noastră de asistență prin **Setări** > **Ajutor și feedback** > **Contactați asistența**. Această experiență este susținută de un serviciu furnizat de HelpShift și se vor aplica [condițiile de utilizare a serviciului](https://www.helpshift.com/legal/terms/) și [politica de confidențialitate](https://www.helpshift.com/legal/privacy/) ale HelpShift.
+În Outlook pentru iOS și Android, puteți să raportați probleme și să vă conectați cu echipa noastră de asistență prin **Setări** > **Ajutor și feedback** > **Contactați asistența**. Această experiență necesită un serviciu PowerLift, obținut prin Microsoft, iar condițiile din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [Angajamentul de respectare a confidențialității](https://privacy.microsoft.com/) să fie aplicate.
 
 ### <a name="help--suggest-a-feature"></a>Ajutor > Sugerați o caracteristică
 
