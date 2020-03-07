@@ -16,11 +16,11 @@ ms.custom:
 description: Administratorii Office oferă informații despre gestionarea controalelor de confidențialitate în Office 365 ProPlus, utilizând setările de politică.
 hideEdit: true
 ms.openlocfilehash: ee02079595157af2fea8883069a640b90ff962d2
-ms.sourcegitcommit: ff396a54d8e36d71ebc4cade5014eb502952dc65
+ms.sourcegitcommit: bec0b4de9d1e5444a5418d2c9d1434ee5489199a
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "38639341"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "42556000"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus
 
