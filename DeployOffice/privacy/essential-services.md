@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre servicii esențiale în Office, cum ar fi Clic și Pornire și Licențiere, și asigură o listă de evenimente și câmpuri de date pentru aceste servicii esențiale.
 hideEdit: true
-ms.openlocfilehash: d5c5fc824e380741287f0393cdae947d1aabda2d
-ms.sourcegitcommit: 6f5af9a707a833b84202040f998361383f488d23
+ms.openlocfilehash: 2d285e2e0494b08e6d17a0a72bd8465e6c8edce7
+ms.sourcegitcommit: 2b494bb428a3a1b837376c0ab9ef9c2357e3165f
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "42225004"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "42939774"
 ---
 # <a name="essential-services-for-office"></a>Servicii esențiale pentru Office
 
@@ -490,7 +490,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_PrereqFailure\_Type** - eroarea de cerință preliminară pe care am întâmpinat-o, adică sistemul de operare nu este acceptat
 
-  - **Data\_ProductReleaseId** - produsul pe care îl instalăm, adică Office 365 ProPlus
+  - **Data\_ProductReleaseId-** Produsul pe care îl instalăm, adică Office 365 ProPlus
 
 ### <a name="officeclicktoruncorruptioncheck"></a>Office.ClickToRun.CorruptionCheck
 
@@ -628,7 +628,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_PrereqFailure\_Type-** eroarea de cerință preliminară pe care am întâmpinat-o
 
-  - **Data\_ProductReleaseId-** produsul pe care îl instalăm, adică Office 365 ProPlus
+  - **Data\_ProductReleaseId-** Produsul pe care îl instalăm, adică Office 365 ProPlus
 
 ### <a name="officeclicktorunrepomanlogger"></a>Office.ClickToRun.RepomanLogger
 
@@ -661,7 +661,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
+  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -669,13 +669,13 @@ Se colectează următoarele câmpuri:
 
   - **Data\_16\_UpdatesEnabled -** dacă sunt activate actualizările Office 16 
 
-  - **Data\_16\_UpdateVersion -** la ce versiune Office 16 actualizăm 
+  - **Data\_16\_UpdateVersion-** ce versiune de Office 16 actualizați la 
 
   - **Data\_16\_Version -** versiunea Office 16 
 
-  - **Data\_AddingFixedProducts -** produsele pe care le adăugăm 
+  - **Data\_AddingFixedProducts-** Produsele pe care le adăugăm 
 
-  - **Data\_AddingProducts -** ce produse vi s-a solicitat să adăugați 
+  - **Data\_AddingProducts -** Ce produse ni s-a solicitat să adăugăm 
 
   - **Data\_CompletionState -** dacă am finalizat activitatea
 
@@ -697,19 +697,19 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - **Data\_ProductsToRemove -** ce produse Office eliminăm 
+  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
-  - **Data\_RemovingFixedProducts -** produsele pe care le eliminăm 
+  - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
   - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
 
-  - **Data\_ScenarioSubType -** ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -737,7 +737,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
+  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -745,13 +745,13 @@ Se colectează următoarele câmpuri:
 
   - **Data\_16\_UpdatesEnabled-** dacă sunt activate actualizările Office 16 
 
-  - **Data\_16\_UpdateVersion -** la ce versiune Office 16 actualizăm 
+  - **Data\_16\_UpdateVersion-** ce versiune de Office 16 actualizați la 
 
   - **Data\_16\_Version -** versiunea Office 16 
 
-  - **Data\_AddingFixedProducts-** produsele pe care le adăugăm 
+  - **Data\_AddingFixedProducts-** Produsele pe care le adăugăm 
 
-  - **Data\_AddingProducts -** ce produse ni s-a solicitat să adăugăm 
+  - **Data\_AddingProducts -** Ce produse ni s-a solicitat să adăugăm 
 
   - **Data\_CompletionState -** dacă am finalizat activitatea
 
@@ -773,7 +773,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
@@ -785,7 +785,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
 
-  - **Data\_ScenarioSubType -** ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -813,7 +813,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion  -** la ce versiune Office 15 actualizăm
+  - **Data\_15\_UpdateVersion -** La ce versiune Office 15 actualizăm
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -821,13 +821,13 @@ Se colectează următoarele câmpuri:
 
   - **Data\_16\_UpdatesEnabled -** dacă sunt activate actualizările Office 16 
 
-  - **Data\_16\_UpdateVersion  -** la ce versiune Office 16 actualizăm 
+  - **Data\_16\_UpdateVersion  -** Ce versiune de Office 16 actualizăm 
 
   - **Data\_16\_Version -** versiunea Office 16 
 
-  - **Data\_AddingFixedProducts -** produsele pe care le adăugăm 
+  - **Data\_AddingFixedProducts-** Produsele pe care le adăugăm 
 
-  - **Data\_AddingProducts -** ce produse ni s-a solicitat să adăugăm 
+  - **Data\_AddingProducts -** Ce produse ni s-a solicitat să adăugăm 
 
   - **Data\_CompletionState -** dacă am finalizat activitatea
 
@@ -849,19 +849,19 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - **Data\_ProductsToRemove -** ce produse Office eliminăm 
+  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
-  - **Data\_RemovingFixedProducts -** produsele pe care le eliminăm 
+  - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
   - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. Adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
 
-  - **Data\_ScenarioSubType -** ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -897,13 +897,13 @@ Se colectează următoarele câmpuri:
 
   - **Data\_16\_UpdatesEnabled-** dacă sunt activate actualizările Office 16 
 
-  - **Data\_16\_UpdateVersion -** la ce versiune Office 16 actualizăm 
+  - **Data\_16\_UpdateVersion-** ce versiune de Office 16 actualizați la 
 
   - **Data\_16\_Version -** versiunea Office 16 
 
-  - **Data\_AddingFixedProducts-** produsele pe care le adăugăm 
+  - **Data\_AddingFixedProducts-** Produsele pe care le adăugăm 
 
-  - **Data\_AddingProducts -** ce produse ni s-a solicitat să adăugăm 
+  - **Data\_AddingProducts -** Ce produse ni s-a solicitat să adăugăm 
 
   - **Data\_CompletionState -** dacă am finalizat activitatea
 
@@ -925,7 +925,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
@@ -937,7 +937,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioName  -** ce scenariu rulează. adică, instalare
 
-  - **Data\_ScenarioSubType -** ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -973,13 +973,13 @@ Se colectează următoarele câmpuri:
 
   - **Data\_16\_UpdatesEnabled-** dacă sunt activate actualizările Office 16 
 
-  - **Data\_16\_UpdateVersion -** la ce versiune Office 16 actualizăm 
+  - **Data\_16\_UpdateVersion-** ce versiune de Office 16 actualizați la 
 
   - **Data\_16\_Version -** versiunea Office 16 
 
-  - **Data\_AddingFixedProducts-** produsele pe care le adăugăm 
+  - **Data\_AddingFixedProducts-** Produsele pe care le adăugăm 
 
-  - **Data\_AddingProducts -** ce produse ni s-a solicitat să adăugăm 
+  - **Data\_AddingProducts -** Ce produse ni s-a solicitat să adăugăm 
 
   - **Data\_CompletionState -** dacă am finalizat activitatea
 
@@ -1001,9 +1001,9 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
+  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>ProductsToRemove-<ept id="p1">**</ept><ph id="ph2"> </ph>what Office products we're removing 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
@@ -1011,9 +1011,9 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. Adică, instalare
+  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare
 
-  - **Data\_ScenarioSubType -** ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -1041,7 +1041,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion  -** la ce versiune Office 15 actualizăm
+  - **Data\_15\_UpdateVersion -** La ce versiune Office 15 actualizăm
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -1049,13 +1049,13 @@ Se colectează următoarele câmpuri:
 
   - **Data\_16\_UpdatesEnabled-** dacă sunt activate actualizările Office 16 
 
-  - **Data\_16\_UpdateVersion -** la ce versiune Office 16 actualizăm 
+  - **Data\_16\_UpdateVersion-** ce versiune de Office 16 actualizați la 
 
   - **Data\_16\_Version -** versiunea Office 16 
 
-  - **Data\_AddingFixedProducts-** produsele pe care le adăugăm 
+  - **Data\_AddingFixedProducts-** Produsele pe care le adăugăm 
 
-  - **Data\_AddingProducts -** ce produse ni s-a solicitat să adăugăm 
+  - **Data\_AddingProducts -** Ce produse ni s-a solicitat să adăugăm 
 
   - **Data\_CompletionState -** dacă am finalizat activitatea
 
@@ -1077,9 +1077,9 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
+  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>ProductsToRemove-<ept id="p1">**</ept><ph id="ph2"> </ph>what Office products we're removing 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
@@ -1089,7 +1089,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioName  -** ce scenariu rulează. adică, instalare 
 
-  - **Data\_ScenarioSubType -** ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -1117,7 +1117,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion  -** la ce versiune Office 15 actualizăm
+  - **Data\_15\_UpdateVersion -** La ce versiune Office 15 actualizăm
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -1125,13 +1125,13 @@ Se colectează următoarele câmpuri:
 
   - **Data\_16\_UpdatesEnabled-** dacă sunt activate actualizările Office 16 
 
-  - **Data\_16\_UpdateVersion -** la ce versiune Office 16 actualizăm 
+  - **Data\_16\_UpdateVersion-** ce versiune de Office 16 actualizați la 
 
   - **Data\_16\_Version -** versiunea Office 16 
 
-  - **Data\_AddingFixedProducts-** produsele pe care le adăugăm 
+  - **Data\_AddingFixedProducts-** Produsele pe care le adăugăm 
 
-  - **Data\_AddingProducts -** ce produse ni s-a solicitat să adăugăm 
+  - **Data\_AddingProducts -** Ce produse ni s-a solicitat să adăugăm 
 
   - **Data\_CompletionState -** dacă am finalizat activitatea
 
@@ -1153,9 +1153,9 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - **Data\_ProductsToRemove-**  ce produse Office eliminăm 
+  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
@@ -1165,7 +1165,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioName  -** ce scenariu rulează. adică, instalare
 
-  - **Data\_ScenarioSubType -** ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -1193,7 +1193,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion  -** la ce versiune Office 15 actualizăm
+  - **Data\_15\_UpdateVersion -** La ce versiune Office 15 actualizăm
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -1201,13 +1201,13 @@ Se colectează următoarele câmpuri:
 
   - **Data\_16\_UpdatesEnabled-** dacă sunt activate actualizările Office 16 
 
-  - **Data\_16\_UpdateVersion -** la ce versiune Office 16 actualizăm 
+  - **Data\_16\_UpdateVersion-** ce versiune de Office 16 actualizați la 
 
   - **Data\_16\_Version -** versiunea Office 16 
 
-  - **Data\_AddingFixedProducts -** produsele pe care le adăugăm 
+  - **Data\_AddingFixedProducts-** Produsele pe care le adăugăm 
 
-  - **Data\_AddingProducts -** ce produse ni s-a solicitat să adăugăm 
+  - **Data\_AddingProducts -** Ce produse ni s-a solicitat să adăugăm 
 
   - **Data\_CompletionState -** dacă am finalizat activitatea
 
@@ -1229,9 +1229,9 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
+  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>ProductsToRemove-<ept id="p1">**</ept><ph id="ph2"> </ph>what Office products we're removing 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
@@ -1241,7 +1241,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioName  -** ce scenariu rulează. adică, instalare
 
-  - **Data\_ScenarioSubType -** ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -1269,7 +1269,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion  -** la ce versiune Office 15 actualizăm
+  - **Data\_15\_UpdateVersion -** La ce versiune Office 15 actualizăm
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -1277,13 +1277,13 @@ Se colectează următoarele câmpuri:
 
   - **Data\_16\_UpdatesEnabled-** dacă sunt activate actualizările Office 16 
 
-  - **Data\_16\_UpdateVersion -** la ce versiune Office 16 actualizăm 
+  - **Data\_16\_UpdateVersion-** ce versiune de Office 16 actualizați la 
 
   - **Data\_16\_Version -** versiunea Office 16 
 
-  - **Data\_AddingFixedProducts-** produsele pe care le adăugăm 
+  - **Data\_AddingFixedProducts-** Produsele pe care le adăugăm 
 
-  - **Data\_AddingProducts -** ce produse ni s-a solicitat să adăugăm 
+  - **Data\_AddingProducts -** Ce produse ni s-a solicitat să adăugăm 
 
   - **Data\_CompletionState -** dacă am finalizat activitatea
 
@@ -1305,11 +1305,11 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
+  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>ProductsToRemove-<ept id="p1">**</ept><ph id="ph2"> </ph>what Office products we're removing 
 
-  - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
+  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingFixedProducts-<ept id="p1">**</ept> The products we're removing 
 
   - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
@@ -1317,7 +1317,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
-  - **Data\_ScenarioSubType -** ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -1345,7 +1345,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -**  la ce versiune Office 15 actualizăm 
+  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -1353,13 +1353,13 @@ Se colectează următoarele câmpuri:
 
   - **Data\_16\_UpdatesEnabled-** dacă sunt activate actualizările Office 16 
 
-  - **Data\_16\_UpdateVersion -** la ce versiune Office 16 actualizăm 
+  - **Data\_16\_UpdateVersion-** ce versiune de Office 16 actualizați la 
 
   - **Data\_16\_Version -** versiunea Office 16 
 
-  - **Data\_AddingFixedProducts-** produsele pe care le adăugăm 
+  - **Data\_AddingFixedProducts-** Produsele pe care le adăugăm 
 
-  - **Data\_AddingProducts -** ce produse ni s-a solicitat să adăugăm 
+  - **Data\_AddingProducts -** Ce produse ni s-a solicitat să adăugăm 
 
   - **Data\_CompletionState -** dacă am finalizat activitatea
 
@@ -1381,19 +1381,19 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
+  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>ProductsToRemove-<ept id="p1">**</ept><ph id="ph2"> </ph>what Office products we're removing 
 
-  - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
+  - **Data\_RemovingFixedProducts-** Produsele pe care le eliminăm 
 
   - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. Adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
 
-  - **Data\_ScenarioSubType -** ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -1421,7 +1421,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -**  la ce versiune Office 15 actualizăm 
+  - **Data\_15\_UpdateVersion -** La ce versiune Office 15 actualizăm 
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -1429,13 +1429,13 @@ Se colectează următoarele câmpuri:
 
   - **Data\_16\_UpdatesEnabled -** dacă sunt activate actualizările Office 16 
 
-  - **Data\_16\_UpdateVersion  -** la ce versiune Office 16 actualizăm 
+  - **Data\_16\_UpdateVersion  -** Ce versiune de Office 16 actualizăm 
 
   - **Data\_16\_Version  -** versiunea Office 16 
 
-  - **Data\_AddingFixedProducts -** produsele pe care le adăugăm 
+  - **Data\_AddingFixedProducts-** Produsele pe care le adăugăm 
 
-  - **Data\_AddingProducts  -** ce produse ni s-a solicitat să adăugăm 
+  - **Data\_AddingProducts -** Ce produse ni s-a solicitat să adăugăm 
 
   - **Data\_CompletionState -** dacă am finalizat activitatea
 
@@ -1457,19 +1457,19 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - **Data\_ProductsToRemove-**  ce produse Office eliminăm 
+  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
-  - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
+  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingFixedProducts-<ept id="p1">**</ept> The products we're removing 
 
   - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. Adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
 
-  - **Data\_ScenarioSubType -** ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -1505,13 +1505,13 @@ Se colectează următoarele câmpuri:
 
   - **Data\_16\_UpdatesEnabled-** dacă sunt activate actualizările Office 16 
 
-  - **Data\_16\_UpdateVersion -** la ce versiune Office 16 actualizăm 
+  - **Data\_16\_UpdateVersion-** ce versiune de Office 16 actualizați la 
 
   - **Data\_16\_Version -** versiunea Office 16 
 
-  - **Data\_AddingFixedProducts-** produsele pe care le adăugăm 
+  - **Data\_AddingFixedProducts-** Produsele pe care le adăugăm 
 
-  - **Data\_AddingProducts -** ce produse ni s-a solicitat să adăugăm 
+  - **Data\_AddingProducts -** Ce produse ni s-a solicitat să adăugăm 
 
   - **Data\_CompletionState -** dacă am finalizat activitatea
 
@@ -1533,19 +1533,19 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
+  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>ProductsToRemove-<ept id="p1">**</ept><ph id="ph2"> </ph>what Office products we're removing 
 
-  - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
+  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingFixedProducts-<ept id="p1">**</ept> The products we're removing 
 
   - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. Adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
 
-  - **Data\_ScenarioSubType -** ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -1573,7 +1573,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -**  la ce versiune Office 15 actualizăm 
+  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -1581,13 +1581,13 @@ Se colectează următoarele câmpuri:
 
   - **Data\_16\_UpdatesEnabled-** dacă sunt activate actualizările Office 16 
 
-  - **Data\_16\_UpdateVersion -** la ce versiune Office 16 actualizăm 
+  - **Data\_16\_UpdateVersion-** ce versiune de Office 16 actualizați la 
 
   - **Data\_16\_Version -** versiunea Office 16 
 
-  - **Data\_AddingFixedProducts-** produsele pe care le adăugăm 
+  - **Data\_AddingFixedProducts-** Produsele pe care le adăugăm 
 
-  - **Data\_AddingProducts -** ce produse ni s-a solicitat să adăugăm 
+  - **Data\_AddingProducts -** Ce produse ni s-a solicitat să adăugăm 
 
   - **Data\_CompletionState -** dacă am finalizat activitatea
 
@@ -1609,19 +1609,19 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
+  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>ProductsToRemove-<ept id="p1">**</ept><ph id="ph2"> </ph>what Office products we're removing 
 
-  - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
+  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingFixedProducts-<ept id="p1">**</ept> The products we're removing 
 
   - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. Adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
 
-  - **Data\_ScenarioSubType -** ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -1657,13 +1657,13 @@ Se colectează următoarele câmpuri:
 
   - **Data\_16\_UpdatesEnabled-** dacă sunt activate actualizările Office 16 
 
-  - **Data\_16\_UpdateVersion -** la ce versiune Office 16 actualizăm 
+  - **Data\_16\_UpdateVersion-** ce versiune de Office 16 actualizați la 
 
   - **Data\_16\_Version -** versiunea Office 16 
 
-  - **Data\_AddingFixedProducts-** produsele pe care le adăugăm 
+  - **Data\_AddingFixedProducts-** Produsele pe care le adăugăm 
 
-  - **Data\_AddingProducts -** ce produse ni s-a solicitat să adăugăm 
+  - **Data\_AddingProducts -** Ce produse ni s-a solicitat să adăugăm 
 
   - **Data\_CompletionState -** dacă am finalizat activitatea
 
@@ -1685,19 +1685,19 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
+  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>ProductsToRemove-<ept id="p1">**</ept><ph id="ph2"> </ph>what Office products we're removing 
 
-  - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
+  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingFixedProducts-<ept id="p1">**</ept> The products we're removing 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingProducts -<ept id="p1">**</ept> The products we're asked to remove 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. Adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
 
-  - **Data\_ScenarioSubType -** ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -1733,13 +1733,13 @@ Se colectează următoarele câmpuri:
 
   - **Data\_16\_UpdatesEnabled-** dacă sunt activate actualizările Office 16 
 
-  - **Data\_16\_UpdateVersion -** la ce versiune Office 16 actualizăm 
+  - **Data\_16\_UpdateVersion-** ce versiune de Office 16 actualizați la 
 
   - **Data\_16\_Version -** versiunea Office 16 
 
-  - **Data\_AddingFixedProducts-** produsele pe care le adăugăm 
+  - **Data\_AddingFixedProducts-** Produsele pe care le adăugăm 
 
-  - **Data\_AddingProducts -** ce produse ni s-a solicitat să adăugăm 
+  - **Data\_AddingProducts -** Ce produse ni s-a solicitat să adăugăm 
 
   - **Data\_CompletionState -** dacă am finalizat activitatea
 
@@ -1761,19 +1761,19 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
+  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>ProductsToRemove-<ept id="p1">**</ept><ph id="ph2"> </ph>what Office products we're removing 
 
-  - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
+  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingFixedProducts-<ept id="p1">**</ept> The products we're removing 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingProducts -<ept id="p1">**</ept> The products we're asked to remove 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. Adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
 
-  - **Data\_ScenarioSubType -** ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -1801,7 +1801,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
+  - **Data\_15\_UpdateVersion -** La ce versiune Office 15 actualizăm 
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -1809,13 +1809,13 @@ Se colectează următoarele câmpuri:
 
   - **Data\_16\_UpdatesEnabled-** dacă sunt activate actualizările Office 16 
 
-  - **Data\_16\_UpdateVersion -** la ce versiune Office 16 actualizăm 
+  - **Data\_16\_UpdateVersion-** ce versiune de Office 16 actualizați la 
 
   - **Data\_16\_Version -** versiunea Office 16 
 
-  - **Data\_AddingFixedProducts-** produsele pe care le adăugăm 
+  - **Data\_AddingFixedProducts-** Produsele pe care le adăugăm 
 
-  - **Data\_AddingProducts -** ce produse ni s-a solicitat să adăugăm 
+  - **Data\_AddingProducts -** Ce produse ni s-a solicitat să adăugăm 
 
   - **Data\_CompletionState -** dacă am finalizat activitatea
 
@@ -1837,19 +1837,19 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - **Data\_ProductsToRemove-**  ce produse Office eliminăm 
+  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
-  - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
+  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingFixedProducts-<ept id="p1">**</ept> The products we're removing 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingProducts -<ept id="p1">**</ept> The products we're asked to remove 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. Adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
 
-  - **Data\_ScenarioSubType -** ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -1885,13 +1885,13 @@ Se colectează următoarele câmpuri:
 
   - **Data\_16\_UpdatesEnabled-** dacă sunt activate actualizările Office 16 
 
-  - **Data\_16\_UpdateVersion -** la ce versiune Office 16 actualizăm 
+  - **Data\_16\_UpdateVersion-** ce versiune de Office 16 actualizați la 
 
   - **Data\_16\_Version -** versiunea Office 16 
 
-  - **Data\_AddingFixedProducts-** produsele pe care le adăugăm 
+  - **Data\_AddingFixedProducts-** Produsele pe care le adăugăm 
 
-  - **Data\_AddingProducts -** ce produse ni s-a solicitat să adăugăm 
+  - **Data\_AddingProducts -** Ce produse ni s-a solicitat să adăugăm 
 
   - **Data\_CompletionState -** dacă am finalizat activitatea
 
@@ -1913,19 +1913,19 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
+  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>ProductsToRemove-<ept id="p1">**</ept><ph id="ph2"> </ph>what Office products we're removing 
 
-  - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
+  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingFixedProducts-<ept id="p1">**</ept> The products we're removing 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingProducts -<ept id="p1">**</ept> The products we're asked to remove 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. Adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
 
-  - **Data\_ScenarioSubType -** ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -1961,13 +1961,13 @@ Se colectează următoarele câmpuri:
 
   - **Data\_16\_UpdatesEnabled-** dacă sunt activate actualizările Office 16 
 
-  - **Data\_16\_UpdateVersion -** la ce versiune Office 16 actualizăm 
+  - **Data\_16\_UpdateVersion-** ce versiune de Office 16 actualizați la 
 
   - **Data\_16\_Version -** versiunea Office 16 
 
-  - **Data\_AddingFixedProducts-** produsele pe care le adăugăm 
+  - **Data\_AddingFixedProducts-** Produsele pe care le adăugăm 
 
-  - **Data\_AddingProducts -** ce produse ni s-a solicitat să adăugăm 
+  - **Data\_AddingProducts -** Ce produse ni s-a solicitat să adăugăm 
 
   - **Data\_CompletionState -** dacă am finalizat activitatea
 
@@ -1989,19 +1989,19 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
+  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>ProductsToRemove-<ept id="p1">**</ept><ph id="ph2"> </ph>what Office products we're removing 
 
-  - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
+  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingFixedProducts-<ept id="p1">**</ept> The products we're removing 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingProducts -<ept id="p1">**</ept> The products we're asked to remove 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. Adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
 
-  - **Data\_ScenarioSubType -** ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -2037,21 +2037,21 @@ Se colectează următoarele câmpuri:
 
   - **Data\_16\_UpdatesEnabled-** dacă sunt activate actualizările Office 16 
 
-  - **Data\_16\_UpdateVersion -** la ce versiune Office 16 actualizăm 
+  - **Data\_16\_UpdateVersion-** ce versiune de Office 16 actualizați la 
 
   - **Data\_16\_Version -** versiunea Office 16 
 
-  - **Data\_AddingFixedProducts-** produsele pe care le adăugăm 
+  - **Data\_AddingFixedProducts-** Produsele pe care le adăugăm 
 
-  - **Data\_AddingProducts -** ce produse ni s-a solicitat să adăugăm 
+  - **Data\_AddingProducts -** Ce produse ni s-a solicitat să adăugăm 
 
   - **Data\_AvailableVersion to-** ce versiune de Office este disponibilă pentru actualizare
 
-  - **Data\_CompletedWithoutActionInfo -** de ce nu am finalizat scenariul, adică aplicațiile erau deschise 
+  - **Data\_CompletedWithoutActionInfo-** De ce nu am finalizat scenariul, adică aplicațiile erau deschise
 
   - **Data\_CompletionState -** dacă am finalizat activitatea
 
-  - **Data\_CorruptionChecksOnly - ** în cazul în care doar căutăm deteriorări și nu actualizăm
+  - **Data\_CorruptionChecksOnly -** În cazul în care doar căutăm deteriorări și nu actualizăm
 
   - **Data\_ErrorCode -** codul de eroare cu care am eșuat 
 
@@ -2075,7 +2075,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_PackageOperationSuccessful -** adevărat dacă am finalizat cu succes activitatea noastră în pachetul Office
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
@@ -2085,9 +2085,9 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. Adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
 
-  - **Data\_ScenarioSubType -** ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -2125,13 +2125,13 @@ Se colectează următoarele câmpuri:
 
   - **Data\_16\_UpdatesEnabled-** dacă sunt activate actualizările Office 16 
 
-  - **Data\_16\_UpdateVersion -** la ce versiune Office 16 actualizăm 
+  - **Data\_16\_UpdateVersion-** ce versiune de Office 16 actualizați la 
 
   - **Data\_16\_Version -** versiunea Office 16 
 
-  - **Data\_AddingFixedProducts-** produsele pe care le adăugăm 
+  - **Data\_AddingFixedProducts-** Produsele pe care le adăugăm 
 
-  - **Data\_AddingProducts -** ce produse ni s-a solicitat să adăugăm 
+  - **Data\_AddingProducts -** Ce produse ni s-a solicitat să adăugăm 
 
   - **Data\_CompletionState -** dacă am finalizat activitatea
 
@@ -2153,7 +2153,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
@@ -2165,7 +2165,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioName-** ce scenariu rulează. adică, instalare 
 
-  - **Data\_ScenarioSubType -** ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -2201,19 +2201,19 @@ Se colectează următoarele câmpuri:
 
   - **Data\_16\_UpdatesEnabled-** dacă sunt activate actualizările Office 16 
 
-  - **Data\_16\_UpdateVersion -** la ce versiune Office 16 actualizăm 
+  - **Data\_16\_UpdateVersion-** ce versiune de Office 16 actualizați la 
 
   - **Data\_16\_Version -** versiunea Office 16 
 
-  - **Data\_AddingFixedProducts-** produsele pe care le adăugăm 
+  - **Data\_AddingFixedProducts-** Produsele pe care le adăugăm 
 
-  - **Data\_AddingProducts -** ce produse ni s-a solicitat să adăugăm 
+  - **Data\_AddingProducts -** Ce produse ni s-a solicitat să adăugăm 
 
   - **Data\_AvailableVersion -** ce versiune de Office este disponibilă pentru actualizare
 
   - **Data\_ComAction -** O int care reprezintă o acțiune com pe care o efectuăm
 
-  - **Data\_CompletedWithoutActionInfo -** de ce nu am finalizat scenariul, adică aplicațiile erau deschise 
+  - **Data\_CompletedWithoutActionInfo-** De ce nu am finalizat scenariul, adică aplicațiile erau deschise
 
   - **Data\_CompletionState -** dacă am finalizat activitatea
 
@@ -2237,9 +2237,9 @@ Se colectează următoarele câmpuri:
 
   - **Data\_PackageUpdateAvailable -** adevărat dacă avem o nouă versiune de Office disponibilă
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - **Data\_ProductsToRemove-**  ce produse Office eliminăm 
+  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
@@ -2247,9 +2247,9 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. Adică, instalare
+  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare
 
-  - **Data\_ScenarioSubType -** ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -2277,7 +2277,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -**  la ce versiune Office 15 actualizăm 
+  - **Data\_15\_UpdateVersion -** La ce versiune Office 15 actualizăm 
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -2285,21 +2285,21 @@ Se colectează următoarele câmpuri:
 
   - **Data\_16\_UpdatesEnabled-** dacă sunt activate actualizările Office 16 
 
-  - **Data\_16\_UpdateVersion -** la ce versiune Office 16 actualizăm 
+  - **Data\_16\_UpdateVersion-** ce versiune de Office 16 actualizați la 
 
   - **Data\_16\_Version -** versiunea Office 16 
 
-  - **Data\_AddingFixedProducts-** produsele pe care le adăugăm 
+  - **Data\_AddingFixedProducts-** Produsele pe care le adăugăm 
 
-  - **Data\_AddingProducts -** ce produse ni s-a solicitat să adăugăm 
+  - **Data\_AddingProducts -** Ce produse ni s-a solicitat să adăugăm 
 
   - **Data\_AvailableVersion -** ce versiune de Office este disponibilă pentru actualizare
 
-  - **Data\_CompletedWithoutActionInfo-** de ce nu am finalizat scenariul, adică aplicațiile erau deschise
+  - **Data\_CompletedWithoutActionInfo-** De ce nu am finalizat scenariul, adică aplicațiile erau deschise
 
   - **Data\_CompletionState -** dacă am finalizat activitatea
 
-  - **Data\_CorruptionChecksOnly -** în cazul în care doar căutăm deteriorări și nu actualizăm
+  - **Data\_CorruptionChecksOnly -** În cazul în care doar căutăm deteriorări și nu actualizăm
 
   - **Data\_ErrorCode -** codul de eroare cu care am eșuat 
 
@@ -2325,7 +2325,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_PipelineExitCode -** codul de ieșire returnat de canalul de fișier 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
@@ -2335,9 +2335,9 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. Adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
 
-  - **Data\_ScenarioSubType -** ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -2365,7 +2365,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -**  la ce versiune Office 15 actualizăm 
+  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -2373,13 +2373,13 @@ Se colectează următoarele câmpuri:
 
   - **Data\_16\_UpdatesEnabled-** dacă sunt activate actualizările Office 16 
 
-  - **Data\_16\_UpdateVersion -** la ce versiune Office 16 actualizăm 
+  - **Data\_16\_UpdateVersion-** ce versiune de Office 16 actualizați la 
 
   - **Data\_16\_Version -** versiunea Office 16 
 
-  - **Data\_AddingFixedProducts-** produsele pe care le adăugăm 
+  - **Data\_AddingFixedProducts-** Produsele pe care le adăugăm 
 
-  - **Data\_AddingProducts -** ce produse ni s-a solicitat să adăugăm 
+  - **Data\_AddingProducts -** Ce produse ni s-a solicitat să adăugăm 
 
   - **Data\_CompletionState -** dacă am finalizat activitatea
 
@@ -2401,7 +2401,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
@@ -2411,9 +2411,9 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. Adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
 
-  - **Data\_ScenarioSubType -** ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -2438,23 +2438,23 @@ Raportează acțiunile de descărcare a fișierelor pentru a determina succesul 
 
 - **BytesFromGroupPeers -** octeți de la colegi de grup, doar pentru descărcări care utilizează Optimizarea livrărilor
 
-- **BytesFromHttp -** octeți de la http, doar pentru descărcări care utilizează Optimizarea livrărilor
+- **BytesFromHttp -** Octeți de la http, doar pentru descărcări care utilizează Optimizarea livrărilor
 
-- **BytesFromInternetPeers -** octeți de la colegi de internet, doar pentru descărcări care utilizează Optimizarea livrărilor 
+- **BytesFromInternetPeers -** Octeți de la colegi de internet, doar pentru descărcări care utilizează Optimizarea livrărilor 
 
 - **BytesFromLanPeers -** octeți de la colegi de Lan, doar pentru descărcări care utilizează Optimizarea livrărilor 
 
 - **canceledJobs -**     numărul solicitărilor anulate din sesiune
 
-- **Connected -** dacă este conectat la sursă
+- **Conectat-** Indiferent dacă este conectat la sursă
 
-- **ErrorCode -** codul ultimei erori
+- **ErrorCode -** Codul ultimei erori
 
 - **ErrorDetails -**     detaliile ultimei erori
 
 - **ErrorMessage -**    mesajul ultimei erori 
 
-- **ErrorSource-** sursa ultimei erori, de exemplu, Connection, LoadFile sau LoadRange
+- **ErrorSource-** Sursa ultimei erori, de exemplu, Connection, LoadFile sau LoadRange
 
 - **FailedJob-** numărul de solicitări nereușite din sesiune
 
@@ -2462,17 +2462,17 @@ Raportează acțiunile de descărcare a fișierelor pentru a determina succesul 
 
 - **SourcePathNoFilePath-** calea sursă a resursei. Doar sursa http este raportată, calea fișierului local sau calea UNC sunt filtrate
 
-- **CancelledJobs -** numărul solicitărilor reușite din sesiune
+- **SucceededJobs -** Numărul solicitărilor reușite din sesiune
 
-- **TotalJobs -**    numărul total de solicitări din sesiune
+- **TotalJobs -**    Numărul total de solicitări din sesiune
 
-- **TotalRequestedBytes-** numărul total de octeți din sesiune
+- **TotalRequestedBytes-** Numărul total de octeți din sesiune
 
-- **TotalTransferTime -**   timpul total de transfer din sesiune
+- **TotalTransferTime -**   Timpul total de transfer din sesiune
 
-- **TransferredBytes -** număr total de octeți transferați în sesiune
+- **TransferredBytes -** Număr total de octeți transferați în sesiune
 
-- **TransportType -** tip de transport, de exemplu (în optimizarea livrării memoriei, HTTP, serviciu de transfer inteligent de fundal)
+- **TransportType -** Tip de transport, de exemplu (în optimizarea livrării memoriei, HTTP, serviciu de transfer inteligent de fundal)
 
 
 
@@ -2484,9 +2484,9 @@ Se colectează următoarele câmpuri:
 
   - **Data\_IsForeGroundStreaming** – Dacă redăm în flux în prim plan sau în fundal
 
-  - **Data\_IsInstallMode** - 1 dacă instalăm și descărcăm fișiere, 0 în caz contrar
+  - **Data\_IsInstallMode**-1 dacă instalăm și descărcăm fișiere, 0 dacă nu
 
-  - **Data\_SourceProtocol-** dacă descărcăm dintr-o rețea de date de conținut, CDN, computerul pe care instalăm, local sau de la o resursă de pe rețeaua locală,
+  - **Data\_SourceProtocol-** Dacă descărcăm dintr-o rețea de date de conținut, CDN, computerul pe care instalăm, local sau de la o resursă de pe rețeaua locală,
 
   - **Data\_Status** - succes sau eșec 
 
@@ -2513,15 +2513,15 @@ Se colectează următoarele câmpuri:
 
 Raportează rezultatul încercării de instalare completă
 
- - **ErrorCode -** valoarea întreagă asociată cu o excepție netratată
+ - **ErrorCode -** Valoarea întreagă asociată cu o excepție netratată
 
  - **ErrorDetails -** șir care descrie locația locului în care s-a produs o excepție netratată (funcție, fișier, număr linie, parametri suplimentari setați de lansator)
 
  - **ErrorMessage -** șir definit în punctul în care a fost lansată o excepție netratată, descriind natura erorii
 
- - **ErrorType -** șir care descrie categoria unei excepții netratate
+ - **ErrorType-** Șir care descrie categoria unei excepții netratate
 
- - **ExitCode -** valoarea întreagă asociată cu rezultatul rulării aplicației de pregătire, indicând succesul comparativ cu anumite tipuri de erori
+ - **ExitCode -** Valoarea întreagă asociată cu rezultatul rulării aplicației de pregătire, indicând succesul comparativ cu anumite tipuri de erori
 
 ### <a name="officeclicktorununiversalbootstrappercalculateparameters"></a>Office.ClickToRun.UniversalBootstrapper.CalculateParameters
 
@@ -2529,61 +2529,61 @@ Raportează acțiunea care stabilește intrarea colectată utilizând CollectPar
 
 - **BitField -** valoarea întreagă a argumentului BitField, care ne spune dacă s-a solicitat un canal de instalare/actualizare explicit (lunar, utilizatori Insider lent, utilizatori Insider rapid, semi-anual, vizat semi-anual)
 
-- **ChannelID -** număr întreg reprezentând valoarea de enumerare a canalului de actualizare/instalare selectat (lunar, utilizatori Insider lent, utilizatori Insider rapid, semi-anual, țintă semi-anual, nevalid)
+- **ChannelID -** Număr întreg reprezentând valoarea de enumerare a canalului de actualizare/instalare selectat (lunar, utilizatori Insider lent, utilizatori Insider rapid, semi-anual, țintă semi-anual, nevalid)
 
-- **CMDMode -** șirul prietenos care corespunde comutatorului de mod general care a fost detectat în argumentele cmd transmise către exe.
+- **CMDMode -** Șirul prietenos care corespunde comutatorului de mod general care a fost detectat în argumentele cmd transmise către exe.
 
-- **C2RClientUICulture -** cultura clientului C2R pentru instalare
+- **C2RClientUICulture -** Cultura clientului C2R pentru instalare
 
-- **ErrorCode -** valoarea întreagă asociată cu o excepție netratată
+- **ErrorCode -** Valoarea întreagă asociată cu o excepție netratată
 
 - **ErrorDetails -** șir care descrie locația locului în care s-a produs o excepție netratată (funcție, fișier, număr linie, parametri suplimentari setați de lansator)
 
 - **ErrorMessage -** șir definit în punctul în care a fost lansată o excepție netratată, descriind natura erorii
 
-- **ErrorType -** șir care descrie categoria unei excepții netratate
+- **ErrorType-** Șir care descrie categoria unei excepții netratate
 
 - **ExcludedApps -** șir care listează numele aplicațiilor Office individuale solicitate pentru a fi excluse din suitele Office instalate
 
-- **InstalledCabVersion -** versiunea „16.0.xxxxx.yyyyy” a unui client Office C2R deja instalat
+- **InstalledCabVersion -** Versiunea „16.0.xxxxx.yyyyy” a unui client Office C2R deja instalat
 
-- **InstalledProductVersion -** versiunea „16.0.xxxxx.yyyyy” a unui produs Office C2R deja instalat
+- **InstalledProductVersion -** Versiunea „16.0.xxxxx.yyyyy” a unui produs Office C2R deja instalat
 
-- **IsC2RServiceRunning -** semnalizarea booleană care indică dacă serviciul unui computer local al unui client C2R modern funcționează pe dispozitiv
+- **IsC2RServiceRunning -** Semnalizarea booleană care indică dacă serviciul unui computer local al unui client C2R modern funcționează pe dispozitiv
 
 - **IsElevatedFlagSet -** semnalizarea booleană care indică dacă aplicația de pregătire a încercat deja să obțină elevarea de administrare
 
-- **IsFireFlyInstalled -** semnalizarea booleană care indică dacă clientul Office 2013 RTM C2R este instalat în prezent
+- **IsFireFlyInstalled -** Semnalizarea booleană care indică dacă clientul Office 2013 RTM C2R este instalat în prezent
 
-- **IsFireflyServiceRunning -** semnalizarea booleană care indică dacă serviciul unui computer local al unui client 2013 RTM C2R funcționează pe dispozitiv
+- **IsFireflyServiceRunning -** Semnalizarea booleană care indică dacă serviciul unui computer local al unui client 2013 RTM C2R funcționează pe dispozitiv
 
-- **IsOfficeInstalled -** semnalizarea booleană care indică dacă un client Office modern este deja instalat
+- **IsOfficeInstalled -** Semnalizarea booleană care indică dacă un client Office modern este deja instalat
 
-- **OfficeCultures -** lista serializată a culturilor Office de instalat
+- **OfficeCultures -** Lista serializată a culturilor Office de instalat
 
 - **OfficeSourceType-** șir prietenos asociat cu valoarea de enumerare a sursei de instalare (CDN, HTTP, UNC, CMBITS, DVD, LOCAL)
 
-- **Origin -** valoarea șirului care ne informează care dintre originile suportate (Puerto Rico [PR], Singapore [SG], Dublin [DB]) trebuie utilizate pentru fluxul de instalare inițial
+- **Origin -** Valoarea șirului care ne informează care dintre originile suportate (Puerto Rico [PR], Singapore [SG], Dublin [DB]) trebuie utilizate pentru fluxul de instalare inițial
 
 - **PlatformFromLink -** șir care indică numărul implicit de biți x86|x64| Office solicitat prin serviciul de configurare C2R
 
-- **PlatformOfExistingInstallation -** șir care indică dacă Office x86 sau x64 a fost deja instalat pe dispozitiv
+- **PlatformOfExistingInstallation -** Șir care indică dacă Office x86 sau x64 a fost deja instalat pe dispozitiv
 
-- **PlatformToInstall -** șir care indică decizia finală privind instalarea Office x86 sau x64. Posibilitățile sunt: autorun, configurare, consumator, descărcare, ajutor, arhivator
+- **PlatformToInstall -** Șir care indică decizia finală privind instalarea Office x86 sau x64. Posibilitățile sunt: autorun, configurare, consumator, descărcare, ajutor, arhivator
 
-- **PRID -** valoarea șirului care reprezintă ID-ul de lansare a produsului solicitat într-un scenariu de instalare de către consumatorului (de exemplu, „O365ProPlusRetail”)
+- **PRID –**    valoarea șirului care reprezintă ID-ul de lansare a produsului solicitat într-un scenariu de instalare de către consumator (de exemplu, „O365ProPlusRetail”)
 
 - **PridsToMigrateFromCentennial-** șir de produse Office pentru migrare de la instalări Magazin la Clic și Pornire
 
-- **ProductsToAdd –**   șirul serializat care instruiește clientul C2R despre combinațiile de produse/culturi pe care ar trebui să le instaleze
+- **ProductsToAdd –**   Șirul serializat care instruiește clientul C2R despre combinațiile de produse/culturi pe care ar trebui să le instaleze
 
 - **ProductsToMigrateFromO15C2R -**  șir de produse și culturi Office pentru migrare de la o instalare Office 2013 Clic și Pornire
 
 - **ProductsToRemove -** șirul serializat care instruiește clientul C2R despre combinațiile de produse/culturi pe care ar trebui să le dezinstaleze
 
-- **SharedComputerLicensing -** boolean care indică dacă un administrator IT a solicitat configurarea pentru a activa caracteristica „SharedComputerLicensing”
+- **SharedComputerLicensing -** Boolean care indică dacă un administrator IT a solicitat configurarea pentru a activa caracteristica „SharedComputerLicensing”
 
-- **ShouldActivate -** boolean care indică dacă un administrator IT a solicitat o încercare de activare automată a licențelor în configuration.xml
+- **ShouldActivate -** Boolean care indică dacă un administrator IT a solicitat o încercare de activare automată a licențelor în configuration.xml
 
 - **ShouldUninstallCentennial -** semnalizare booleană care indică dacă produsele Office de la Magazin ar trebui dezinstalate
 
@@ -2594,13 +2594,13 @@ Raportează acțiunea care stabilește intrarea colectată utilizând CollectPar
 
 Raportează acțiunea care citește intrarea etichetată din semnătura încorporată exe.  Acesta este un concept nedovedit pentru faptul că iterația anterioară a programului setup.exe nu a fost implementată și este lucrul pe care ne bazăm pentru a transmite opțiunile de produs/limbă/număr de biți ale utilizatorului de la pagina web la procesarea din setup.exe.
  
-- **ErrorCode -** numărul întreg asociat cu o excepție netratată
+- **ErrorCode -** Numărul întreg asociat cu o excepție netratată
 
 - **ErrorDetails -** șir care descrie locația locului în care s-a produs o excepție netratată (funcție, fișier, număr linie, parametri suplimentari setați de lansator)
 
 - **ErrorMessage -** șir definit în punctul în care a fost lansată o excepție netratată, descriind natura erorii
 
-- **ErrorType -** șir care descrie categoria unei excepții netratate
+- **ErrorType-** Șir care descrie categoria unei excepții netratate
 
 ### <a name="officeclicktorununiversalbootstrappercollectparameters"></a>Office.ClickToRun.UniversalBootstrapper.CollectParameters
 
@@ -2608,89 +2608,89 @@ Raportează parametrii utilizați pentru instalarea Office
 
 - **BitField -** valoarea întreagă a argumentului BitField, care ne spune dacă s-a solicitat un canal de instalare/actualizare explicit (lunar, utilizatori Insider lent, utilizatori Insider rapid, semi-anual, vizat semi-anual)
 
-- **ChannelID -** număr întreg reprezentând valoarea de enumerare a canalului de actualizare/instalare selectat (lunar, utilizatori Insider lent, utilizatori Insider rapid, semi-anual, țintă semi-anual, nevalid)
+- **ChannelID -** Număr întreg reprezentând valoarea de enumerare a canalului de actualizare/instalare selectat (lunar, utilizatori Insider lent, utilizatori Insider rapid, semi-anual, țintă semi-anual, nevalid)
 
-- **CMDMode -** șirul prietenos care corespunde comutatorului de mod general care a fost detectat în argumentele cmd transmise către exe. Posibilitățile sunt: autorun, configurare, consumator, descărcare, ajutor, arhivator
+- **CMDMode -** Șirul prietenos care corespunde comutatorului de mod general care a fost detectat în argumentele cmd transmise către exe. Posibilitățile sunt: autorun, configurare, consumator, descărcare, ajutor, arhivator
 
-- **C2RClientUICulture -** cultura clientului C2R pentru instalare
+- **C2RClientUICulture -** Cultura clientului C2R pentru instalare
 
-- **ErrorCode -** valoarea întreagă asociată cu o excepție netratată
+- **ErrorCode -** Valoarea întreagă asociată cu o excepție netratată
 
 - **ErrorDetails -** șir care descrie locația locului în care s-a produs o excepție netratată (funcție, fișier, număr linie, parametri suplimentari setați de lansator)
 
 - **ErrorMessage -** șir definit în punctul în care a fost lansată o excepție netratată, descriind natura erorii
 
-- **ErrorType -** șir care descrie categoria unei excepții netratate
+- **ErrorType-** Șir care descrie categoria unei excepții netratate
 
 - **ExcludedApps -** șir care listează numele aplicațiilor Office individuale solicitate pentru a fi excluse din suitele Office instalate
 
-- **InstalledCabVersion -** versiunea „16.0.xxxxx.yyyyy” a unui client Office C2R deja instalat
+- **InstalledCabVersion -** Versiunea „16.0.xxxxx.yyyyy” a unui client Office C2R deja instalat
 
-- **InstalledProductVersion -** versiunea „16.0.xxxxx.yyyyy” a unui produs Office C2R deja instalat
+- **InstalledProductVersion -** Versiunea „16.0.xxxxx.yyyyy” a unui produs Office C2R deja instalat
 
-- **IsC2RServiceRunning -** semnalizarea booleană care indică dacă serviciul unui computer local al unui client C2R modern funcționează pe dispozitiv
+- **IsC2RServiceRunning -** Semnalizarea booleană care indică dacă serviciul unui computer local al unui client C2R modern funcționează pe dispozitiv
 
 - **IsElevatedFlagSet -** semnalizarea booleană care indică dacă aplicația de pregătire a încercat deja să obțină elevarea de administrare
 
-- **IsFireFlyInstalled -** semnalizarea booleană care indică dacă clientul Office 2013 RTM C2R este instalat în prezent
+- **IsFireFlyInstalled -** Semnalizarea booleană care indică dacă clientul Office 2013 RTM C2R este instalat în prezent
 
-- **IsFireflyServiceRunning -** semnalizarea booleană care indică dacă serviciul unui computer local al unui client 2013 RTM C2R funcționează pe dispozitiv
+- **IsFireflyServiceRunning -** Semnalizarea booleană care indică dacă serviciul unui computer local al unui client 2013 RTM C2R funcționează pe dispozitiv
 
-- **IsOfficeInstalled -** semnalizarea booleană care indică dacă un client Office modern este deja instalat
+- **IsOfficeInstalled -** Semnalizarea booleană care indică dacă un client Office modern este deja instalat
 
-- **OfficeCultures -** lista serializată a culturilor Office de instalat
+- **OfficeCultures -** Lista serializată a culturilor Office de instalat
 
 - **OfficeSourceType-** șir prietenos asociat cu valoarea de enumerare a sursei de instalare (CDN, HTTP, UNC, CMBITS, DVD, LOCAL)
 
-- **Origin -** valoarea șirului care ne informează care dintre originile suportate (Puerto Rico [PR], Singapore [SG], Dublin [DB]) trebuie utilizate pentru fluxul de instalare inițial
+- **Origin -** Valoarea șirului care ne informează care dintre originile suportate (Puerto Rico [PR], Singapore [SG], Dublin [DB]) trebuie utilizate pentru fluxul de instalare inițial
 
 - **PlatformFromLink -** șir care indică numărul implicit de biți x86|x64| Office solicitat prin serviciul de configurare C2R
 
-- **PlatformOfExistingInstallation -** șir care indică dacă Office x86 sau x64 a fost deja instalat pe dispozitiv
+- **PlatformOfExistingInstallation -** Șir care indică dacă Office x86 sau x64 a fost deja instalat pe dispozitiv
 
-- **PlatformToInstall -** șir care indică decizia finală privind instalarea Office x86 sau x64
+- **PlatformToInstall -** Șir care indică decizia finală privind instalarea Office x86 sau x64.
 
 - **PRID –**    valoarea șirului care reprezintă ID-ul de lansare a produsului solicitat într-un scenariu de instalare de către consumator (de exemplu, „O365ProPlusRetail”)
 
 - **PridsToMigrateFromCentennial-** șir de produse Office pentru migrare de la instalări Magazin la Clic și Pornire
 
-- **ProductsToAdd –**   șirul serializat care instruiește clientul C2R despre combinațiile de produse/culturi pe care ar trebui să le instaleze
+- **ProductsToAdd –**   Șirul serializat care instruiește clientul C2R despre combinațiile de produse/culturi pe care ar trebui să le instaleze
 
 - **ProductsToMigrateFromO15C2R -** șir de produse și culturi Office pentru migrare de la o instalare Office 2013 Clic și Pornire
 
 - **ProductsToRemove -** șirul serializat care instruiește clientul C2R despre combinațiile de produse/culturi pe care ar trebui să le dezinstaleze
 
-- **SharedComputerLicensing -** boolean care indică dacă un administrator IT a solicitat configurarea pentru a activa caracteristica „SharedComputerLicensing”
+- **SharedComputerLicensing -** Boolean care indică dacă un administrator IT a solicitat configurarea pentru a activa caracteristica „SharedComputerLicensing”
 
-- **ShouldActivate -** boolean care indică dacă un administrator IT a solicitat o încercare de activare automată a licențelor în configuration.xml
+- **ShouldActivate -** Boolean care indică dacă un administrator IT a solicitat o încercare de activare automată a licențelor în configuration.xml
 
 - **ShouldUninstallCentennial -** semnalizare booleană care indică dacă produsele Office de la Magazin ar trebui dezinstalate
 
-- **VersionToInstall -** valoarea șirului din versiunea Office „16.0.xxxxx.yyyyy” care este instalată
+- **VersionToInstall -** Valoarea șirului din versiunea Office „16.0.xxxxx.yyyyy” care este instalată
 
 ### <a name="officeclicktorununiversalbootstrapperexecute"></a>Office.ClickToRun.UniversalBootstrapper.Execute
 
 Raportează acțiunile cu impact realizate de computer, așa cum sunt determinate de datele argumentate din „CalculateParameters”
 
-- **AvailableClientVersionText -** valoarea șirului din versiunea client C2R „16.0.xxxxx.yyyyy” găsită în Descriptorul de versiuni XML, care este utilizată pentru a determina dacă un client C2R instalat în prezent ar trebui să fie actualizat
+- **AvailableClientVersionText -** Valoarea șirului din versiunea client C2R „16.0.xxxxx.yyyyy” găsită în Descriptorul de versiuni XML, care este utilizată pentru a determina dacă un client C2R instalat în prezent ar trebui să fie actualizat
 
 - **CleanFireflyAction -** „adevărat” dacă activitatea CleanFireflyAction este programată să ruleze în timpul acestei instalări
 
 - **CleanO15Action -**  „adevărat” dacă activitatea CleanO15Action este programată să ruleze în timpul acestei instalări
 
-- **CMDMode -** șirul prietenos care corespunde comutatorului de mod general care a fost detectat în argumentele cmd transmise către exe. Posibilitățile sunt: autorun, configurare, consumator, descărcare, ajutor, arhivator
+- **CMDMode -** Șirul prietenos care corespunde comutatorului de mod general care a fost detectat în argumentele cmd transmise către exe. Posibilitățile sunt: autorun, configurare, consumator, descărcare, ajutor, arhivator
 
-- **DeliveryMechanism -** Guid-ul „FFNRoot” extras din Descriptorul de versiune XML (ștampilat de RDX), care ne informează de la ce audiență/canal a venit sursa de compilare
+- **DeliveryMechanism -** Ghid-ul „FFNRoot” extras din Descriptorul de versiune XML (ștampilat de RDX), care ne informează de la ce audiență/canal a venit sursa de compilare
 
 - **DownloadC2RClientAction -** „adevărat” dacă activitatea DownloadC2RClientAction este programată să ruleze în timpul acestei instalări
 
-- **ErrorCode -** valoarea întreagă asociată cu o excepție netratată
+- **ErrorCode -** Valoarea întreagă asociată cu o excepție netratată
 
 - **ErrorDetails -** șir care descrie locația locului în care s-a produs o excepție netratată (funcție, fișier, număr linie, parametri suplimentari setați de lansator)
 
 - **ErrorMessage -** șir definit în punctul în care a fost lansată o excepție netratată, descriind natura erorii
 
-- **ErrorType -** șir care descrie categoria unei excepții netratate
+- **ErrorType-** Șir care descrie categoria unei excepții netratate
 
 - **ExitCode -** valoarea întreagă asociată cu rezultatul rulării fazei de executare a aplicației de pregătire, indicând succesul comparativ cu anumite tipuri de erori
 
@@ -2705,6 +2705,8 @@ Raportează acțiunile cu impact realizate de computer, așa cum sunt determinat
 - **VersionToInstall -** valoarea șirului din versiunea Office „16.0.xxxxx.yyyyy” care este instalată
 
 ### <a name="officeserviceabilitymanagerinventoryaddonheartbeat"></a>Office.ServiceabilityManager.InventoryAddon.Heartbeat
+
+*[Acest eveniment a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
 Acest eveniment este utilizat pentru obținerea metadatelor standard la fiecare rulare a programului de completare Inventar, care este parte a Office Serviceability Manager și este utilizat pentru informații de inventar Office pe computerele pentru care a optat un administrator IT. Metadatele de interes specific aici sunt ID-ul sesiunii și sunt folosite pentru legarea cu alte date stocate într-un serviciu cloud pentru fiecare entitate găzduită.
 
@@ -2726,7 +2728,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officeserviceabilitymanagerwebservicefailure"></a>Office.ServiceabilityManager.WebserviceFailure
 
-Acest eveniment este înregistrat atunci când un apel la un webservice efectuat într-un program de completare Clic și Pornire Serviceability Manager nu reușește.
+De fiecare dată când un apel la un WebService dintr-un program de completare Office Service Manager nu reușește, se înregistrează această instrucțiune. Erorile pot fi cauzate de erori interne sau de incapacitatea de a vă conecta la WebService.
 
 Se colectează următoarele câmpuri:
 
@@ -2735,6 +2737,8 @@ Se colectează următoarele câmpuri:
 - **Correlation ID** - un GUID generat aleatoriu specific pentru instanța curentă, care este trimis la webservice pentru a corela apelurile între client și server.
 
 - **ErrorInfo** - informații numerice ale codurilor de eroare returnate de apelurile API ale Office webservice.
+
+- **ErrorMessage**- Un mesaj care furnizează detalii suplimentare despre eșec. Fiecare tip de eroare are Hărți la un șir de hardcoded, cu unele tipuri de erori de cartografiere la mai multe șiruri, în funcție de natura specifică a erorii.
 
 - **Function** - funcția din cod de la care a avut loc apelul curent.
 
@@ -2876,15 +2880,15 @@ Se colectează următoarele câmpuri:
 
 - **ClientTransactionId** - Identificator unic pentru apelul de serviciu.
 
-- **ErrorCategory** - fiecare tip de eroare poate aparține unei categorii mai generale, cum ar fi „reîncercare”.
+- **ErrorCategory** - Fiecare tip de eroare poate aparține unei categorii mai generale, cum ar fi „reîncercare”.
 
-- **ErrorType** - motivul erorii, cum ar fi „AlreadyRedeemedByOther”.
+- **ErrorType** - Motivul erorii, cum ar fi "AlreadyRedeemedByOther".
 
-- **InAFOFlow** - valoare booleană care indică dacă ne aflăm în fluxul de valorificare AFO.
+- **InAFOFlow** - Valoare booleană care indică dacă ne aflăm în fluxul de valorificare AFO.
 
-- **StatusCode** - rezultat de un cuvânt al apelului de serviciu, cum ar fi „Creat”.
+- **StatusCode** - Rezultat de un cuvânt al apelului de serviciu, cum ar fi „Creat”.
 
-- **StatusMessage** - detalii despre codul de stare, cum ar fi „Aprovizionat cu succes”.
+- **StatusMessage** - Detalii despre codul de stare, cum ar fi „Aprovizionat cu succes”.
 
 - **UsingNulApi** - valoare booleană care indică dacă utilizăm noua stivă de licențiere.
 
@@ -3026,7 +3030,7 @@ Se colectează următoarele câmpuri:
 
   - **OlsLicenseId** - identificator alfanumeric al licenței care a fost emise pentru utilizator 
 
-  - **SkuIdIsNull** – indică dacă am întâmpinat o eroare și nu cunoaștem produsul pe care rulează utilizatorul 
+  - **SkuIdIsNull** – Indică dacă am întâmpinat o eroare și nu cunoaștem produsul pe care rulează utilizatorul 
 
   - **SlapiIsNull** – indică dacă am întâmpinat o problemă la popularea unuia dintre obiectele de licențiere 
 
@@ -3054,7 +3058,7 @@ Se colectează următoarele câmpuri:
 
 - **Try** - spune dacă utilizatorul a făcut clic sau nu pe butonul încercați
 
-- **UserDismissed** - indică dacă utilizatorul a respins caseta de dialog și, prin urmare, este în perioada de grație sau în modul de funcționalitate redusă, deoarece nu a ales să cumpere Office sau să obțină o versiune de încercare
+- **UserDismissed** - Indică dacă utilizatorul a respins caseta de dialog și, prin urmare, este în perioada de grație sau în modul de funcționalitate redusă, deoarece nu a ales să cumpere Office sau să obțină o versiune de încercare
 
 ### <a name="officelicensingpurchase"></a>Office.Licensing.Purchase 
 
@@ -3072,7 +3076,7 @@ Se colectează următoarele câmpuri:
 
   - **LoadLicenseResult** - reprezintă codul de eroare/codul de succes al operației noastre de încărcare a licențelor pentru utilizatorul curent
 
-  - **OpportunisticTokenRenewalAttempted** - indică dacă am încercat să reînnoim simbolul de sesiune al utilizatorului în mod oportunist
+  - **OpportunisticTokenRenewalAttempted** - Indică dacă am încercat să reînnoim simbolul de sesiune al utilizatorului în mod oportunist
 
   - **SetAcidResult** - reprezintă codul de eroare/codul de succes al operației noastre de setare a indicatorului acid la valoarea prevăzută
 
@@ -3122,7 +3126,7 @@ Se colectează următoarele câmpuri:
 
 - **NotInitializedBeforeWhileSending** - este doar informativ și indică dacă s-a încercat trimiterea evenimentului fără să fie înregistrat dinainte în mod explicit în harta managerului de telemetrie
 
-- **SentOnDestruction** - este doar informativ și indică dacă evenimentul a fost adăugat la o hartă a managerului de telemetrie și nu a fost trimis în mod explicit
+- **SentOnDestruction** - Este doar informativ și indică dacă evenimentul a fost adăugat la o hartă a managerului de telemetrie și nu a fost trimis în mod explicit
 
 - **Tag** - utilizat pentru a indica de unde din cod a fost trimis evenimentul
 
@@ -3136,7 +3140,7 @@ Această activitate de telemetrie urmărește punctele de succes și eșec în c
 
 Se colectează următoarele câmpuri:
 
-- **GenuineTicketFailure** - ne indică HRESULT eșec atunci când se încearcă obținerea tichetului/cheii de produs (WPK) originale Windows a computerului.
+- **GenuineTicketFailure** - Ne indică HRESULT eșec atunci când se încearcă obținerea tichetului/cheii de produs (WPK) originale Windows a computerului.
 
 - **PinValidationFailure** - ne spune de ce procesul de validare a codului PIN nu a reușit. Erori posibile:
     - GeoBlocked
@@ -3154,15 +3158,15 @@ Se colectează următoarele câmpuri:
 - **Success** - indică faptul că am preluat cu succes o legătură Office (PIN) validă pentru calculator.
 
 - **Tag** - ne spune la ce pas am oprit căutarea unei legături. Etichete posibile:
-  - 0x03113809  eroare lipsă conexiune la internet/serviciu în timpul validării codului PIN
-   - 0x0311380a eroare de validare a codului PIN, trimis cu câmpul PinValidationFailure
+  - 0x03113809  Eroare lipsă conexiune la internet/serviciu în timpul validării codului PIN
+   - 0x0311380a Eroare de validare a codului PIN, trimis cu câmpul PinValidationFailure
   - 0x0310410f Succes, trimis cu câmpul Success
-  - 0x0311380d  erori de reîncercare (probleme de internet, erori necunoscute)
-  - 0x0311380e  erori care nu pot fi reîncercate (oferta de legătură a expirat)
-  - 0x0311380f  alte erori (nu se poate licenția)
-  - 0x03104111  nereușită la descifrarea codului PIN Office, trimis cu câmpul PinValidationResult
+  - 0x0311380d  Erori de reîncercare (probleme de internet, erori necunoscute)
+  - 0x0311380e  Erori care nu pot fi reîncercate (oferta de legătură a expirat)
+  - 0x0311380f  Alte erori (nu se poate licenția)
+  - 0x03104111  Nereușită la descifrarea codului PIN Office, trimis cu câmpul PinValidationResult
 
-- **WpkBindingFailure** - ne spune codul de eroare la legarea dintre codul PIN Office și WPK pentru computer.
+- **WpkBindingFailure** - Ne spune codul de eroare la legarea dintre codul PIN Office și WPK pentru computer.
 
 ### <a name="officelicensingtelemetryflowshowafodialogs"></a>Office.Licensing.TelemetryFlow.ShowAFODialogs
 
@@ -3178,24 +3182,24 @@ Se colectează următoarele câmpuri:
 
 - **DialogSignIn** - afișarea dialogului de conectare AFO.
 
-- **OExDetails** - detaliile erorii pe care o primim când dialogul de conectare pentru identitate a fost respins.
+- **OExDetails** - Detaliile erorii pe care o primim când dialogul de conectare pentru identitate a fost respins.
 
 - **OExType** - tipul erorii pe care o primim când dialogul de conectare pentru identitate a fost respins.
 
 - **Tag** - ne spune la ce pas părăsește utilizatorul procesul de valorificare AFO. Etichete posibile:
-    - 0x0311380b    utilizatorul a respins dialogul de conectare a identității din dialogul de valorificare
-    - 0x0311380c    nu a reușit să încarce automat un mesaj de conectare la identitatea utilizatorului din caseta de dialog de valorificare
-    - 0x03113810    nu a reușit să încarce informațiile demografice ale contului (cod de țară, limbă, monedă, oferta de încercare și preferințele de marketing)
-    - 0x03113805    utilizatorul a respins dialogul de conectare a identității din dialogul de conectare
+    - 0x0311380b    Utilizatorul a respins dialogul de conectare a identității din dialogul de valorificare
+    - 0x0311380c    Nu a reușit să încarce automat un mesaj de conectare la identitatea utilizatorului din caseta de dialog de valorificare
+    - 0x03113810    Nu a reușit să încarce informațiile demografice ale contului (cod de țară, limbă, monedă, oferta de încercare și preferințele de marketing)
+    - 0x03113805    Utilizatorul a respins dialogul de conectare a identității din dialogul de conectare
     - 0x03113806    nu a reușit să încarce automat un mesaj de conectare la identitatea utilizatorului din dialogul de conectare
     - 0x03113807    nu a reușit să încarce automat o identitate
     - 0x03113811    utilizatorul a închis dialogul de conectare/valorificare
     - 0x03113812    utilizatorul a închis dialogul de acceptare EULA
     - 0x03113808    utilizatorul a acceptat EULA
 
-- **UseInAppRedemption** - ne spune dacă menținem utilizatorii în aplicație pentru valorificare sau îi trimitem pe web pentru a-și valorifica pinul preluat (prepopulat).
+- **UseInAppRedemption** - Ne spune dacă menținem utilizatorii în aplicație pentru valorificare sau îi trimitem pe web pentru a-și valorifica pinul preluat (pre populat).
 
-- **UseModernAFO** - ne spune dacă utilizăm noua sau vechea experiență AFO.
+- **UseModernAFO** - Ne spune dacă utilizăm noua sau vechea experiență AFO.
 
 ### <a name="officelicensingtelemetryflowshowtrybuydialogforoobe"></a>Office.Licensing.TelemetryFlow.ShowTryBuyDialogForOOBE
 
@@ -3209,7 +3213,7 @@ Se colectează următoarele câmpuri:
 
 - **NotInitializedBeforeWhileAdding** - este doar informativ și indică dacă evenimentul a fost adăugat la o hartă a managerului de telemetrie fără să se înregistreze explicit pentru aceasta
 
-- **SentOnDestruction** - este doar informativ și indică dacă evenimentul a fost adăugat la o hartă a managerului de telemetrie și nu a fost trimis în mod explicit
+- **SentOnDestruction** - Este doar informativ și indică dacă evenimentul a fost adăugat la o hartă a managerului de telemetrie și nu a fost trimis în mod explicit
 
 - **ShowTryButton** - indică dacă butonul Try i-a fost afișat utilizatorului în dialog sau nu
 
@@ -3221,7 +3225,7 @@ Atunci când un utilizator nelicențiat de Office preinstalat pe un computer în
 
 Se colectează următoarele câmpuri:
 
-- **HasConnectivity** - indică dacă utilizatorul are conexiune la internet și, în caz că nu, utilizatorul ar putea să trebuiască să utilizeze o licență de grație de cinci zile sau ar putea fi în modul de funcționalitate redusă
+- **HasConnectivity** - Indică dacă utilizatorul are conexiune la internet și, în caz că nu, utilizatorul ar putea să trebuiască să utilizeze o licență de grație de cinci zile sau ar putea fi în modul de funcționalitate redusă
 
 - **InAppTrialPurchase** - indică dacă ediția flight este activată pentru lansarea SDK de achiziție în Magazin pentru a captura PI și a achiziționa o versiune de încercare în cadrul aplicației
 
@@ -3347,7 +3351,7 @@ Se colectează următoarele câmpuri:
 
 Acest eveniment indică faptul că s-au produs erori la conectarea la MAU Helper (o componentă care efectuează instalarea aplicației).  Acest eveniment indică o potențială corupție a aplicației MAU. Dispozitivul nu va putea instala actualizări.
 
-Se colectează următoarele câmpuri: 
+Se colectează următoarele câmpuri:    
 
 - **App** - procesul aplicației care trimite evenimentul
 
@@ -10460,7 +10464,7 @@ Se colectează următoarele câmpuri:
 
   - **OsVersionUpdate -** revizuire compilare SO
 
-  - **ProcessFileName -** numele de executabil al aplicației care rulează
+  - **ProcessFileName -** Numele de executabil al aplicației care rulează
 
   - **ProcessorArchitecture -** pe ce arhitectură de procesor rulează Office.
 
@@ -10650,7 +10654,7 @@ Se colectează următoarele câmpuri:
 
   - **PowerPlatformRole -** Identificator rol computer preferat OEM al dispozitivului pe care rulează Office.
 
-  - **ProcessFileName -** numele de executabil al aplicației care rulează
+  - **ProcessFileName -** Numele de executabil al aplicației care rulează
 
   - **ProcessorCount -** numărul de procesoare de la dispozitivul pe care rulează Office.
 
@@ -10728,7 +10732,7 @@ Se colectează următoarele câmpuri:
 
   - **OfficeUiLangTag -** limba interfeței cu utilizatorul pentru aplicația Office.
 
-  - **ProcessFileName -** numele de executabil al aplicației care rulează
+  - **ProcessFileName -** Numele de executabil al aplicației care rulează
 
   - **SqmAppId -** identificator pentru aplicația de Office la care se referă aceste date.
 
@@ -11282,6 +11286,8 @@ Evenimentul este declanșat de o întrerupere anormală a aplicației (de exempl
 
 Se colectează următoarele câmpuri:
 
+  - **BootCompleted-** A fost boot Office finalizată la momentul căderii.
+
   - **CrashedAppBuild -** identificator versiune compilată pentru procesul afectat.
 
   - **CrashedAppMajor -** identificator versiune majoră pentru procesul afectat.
@@ -11298,6 +11304,8 @@ Se colectează următoarele câmpuri:
 
   - **CrashedSessionInitTime -** ora la care a început procesul afectat.
 
+  - **CrashTime –** Momentelor în care se menționează că clientul s-a terminat negrațios.
+
   - **CrashType -** identificator de bucket pentru tipul de cădere.
 
   - **DetectionTime -** ora la care s-a detectat ieșirea neprevăzută.
@@ -11305,6 +11313,12 @@ Se colectează următoarele câmpuri:
   - **ExceptionAddress -** adresa din programul unde a apărut eroarea.
 
   - **ExceptionCode -** identificator de bucket pentru excepție.
+
+  - **Refacerea –** A creat utilizatorul și a înmânat procesul Office într-o nouă sesiune.
+
+  - **HasEdit-** A fost utilizatorul care a editat un document în clientul prăbușit.
+
+  - **HasOpen-** A fost un document deschis în clientul prăbușit.
 
   - **HexCrashTag -**  identificatorul unic pentru codul căderii.
 
@@ -11330,13 +11344,17 @@ Se colectează următoarele câmpuri:
 
   - **ModuleSize -** dimensiunea modulului cu erori în octeți.
 
-  - **PreviousBuild -** versiune compilată instalată anterior
+  - **OpenUILang -** Limba interfeței cu utilizatorul pentru aplicația Office.
+
+  - **PreviousBuild -** Versiune compilată instalată anterior
+
+  - **SafeMode-** A fost sesiunea pornită în modul de siguranță.
 
   - **UAEOSEnvironment -** identificator de mediu pentru sistemul de operare.
 
   - **UninitLibletId –** identificatorul unic pentru componenta cu erori a căderii.
 
-  - **VerifyElseCrashTag -** identificator unic al locului unde a căzut aplicația.
+  - **VerifyElseCrashTag -** identificator unic al locului unde a căzut aplicația. *[Acest eveniment a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
 ### <a name="officesystemungracefulapplicationexitdesktopappexit"></a>Office.System.UngracefulApplicationExit.DesktopAppExit
 
