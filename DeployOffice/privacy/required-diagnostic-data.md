@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre datele de diagnosticare obligatorii în Office și le furnizează o listă de evenimente și câmpuri de date.
 hideEdit: true
-ms.openlocfilehash: bd9a5754a8741ee3cc96bf843c59f8f509bc1738
-ms.sourcegitcommit: de34e0fff15c3bd099df452d8f4771398f9dfaf6
+ms.openlocfilehash: 065fb887fe0af4bb68576310c3ceb4842b163bf1
+ms.sourcegitcommit: 95aa5a2587e7333dfbb2ab0d4d898789645a4275
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "42265475"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "42946196"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Date de diagnosticare obligatorii pentru Office
 
@@ -55,7 +55,7 @@ Dacă sunteți administratorul organizației dvs., ați putea fi interesat și d
 
 Datele de diagnosticare obligatorii sunt organizate în categorii și subtipuri de date. În fiecare subtip de date există evenimente care conțin câmpuri de date specifice respectivului eveniment.
 
-Următorul tabel furnizează o listă de categorii pentru datele de diagnosticare obligatorii. Subtipurile de date din fiecare categorie sunt enumerate împreună cu o descriere a focalizării pentru acel subtip de date. Există linkuri la fiecare secțiune de subtip de date unde veți găsi informațiile următoare:
+Următorul tabel furnizează o listă de categorii pentru datele de diagnosticare obligatorii. Subtipurile de date din fiecare categorie sunt enumerate împreună cu o descriere a focalizării pentru acel subtip de date. Există linkuri la fiecare secțiune de subtip de date, unde veți găsi informațiile următoare:
 
 - O listă de evenimente din acel subtip de date
 - O descriere a fiecărui eveniment
@@ -136,13 +136,13 @@ Această categorie conține următoarele câmpuri:
 
   - **ControllerConnectedServicesState** - indică dacă utilizatorul are acces la experiențele de mod conectat opționale
 
-  - **ControllerConnectedServicesStateSourceLocation**- indică modul în care a fost efectuată opțiunea utilizatorului pentru experiențe de mod conectat opționale
+  - **ControllerConnectedServicesStateSourceLocation** - indică modul în care a fost efectuată opțiunea utilizatorului pentru experiențe de mod conectat opționale
 
   - **ControllerConnectedServicesStateConsentTime** - indică momentul în care utilizatorul a ales starea experiențelor de mod conectat opționale. Data va apărea ca o dată ușor de citit de către oameni sau ca dată codificată de calculator sub forma unui număr mare.
 
   - **UserContentDependentState** - indică dacă utilizatorul a ales să activeze sau să dezactiveze experiențe de mod conectat care analizează conținut
 
-  - **UserContentDependentStateSourceLocation** - indică modul în care a fost efectuată opțiunea utilizatorului de a activa sau de a dezactiva experiențe de mod conectat care analizează conținut
+  - **UserContentDependentStateSourceLocation** - indică modul în care a fost efectuată opțiunea utilizatorului de a activa sau de a dezactiva experiențele de mod conectat care analizează conținut
 
   - **UserContentDependentStateConsentTime** - indică momentul în care utilizatorul a optat să activeze sau să dezactiveze experiențe de mod conectat care analizează conținut. Data va apărea ca o dată ușor de citit de către oameni sau ca dată codificată de calculator sub forma unui număr mare.
 
@@ -218,7 +218,7 @@ Această categorie conține următoarele câmpuri:
 
   - **TenantGroup** - tipul de entitate găzduită de care aparține abonamentul. Ne permite să clasificăm problemele și să identificăm dacă este o problemă pe scară largă sau una izolată la un set de utilizatori.
 
-  - **TenantId** - entitatea găzduită la care este asociat abonamentul utilizatorului. Ne permite să clasificăm problemele și să identificăm dacă este o problemă pe scară largă sau una izolată la un set de utilizatori sau la o anumită entitate găzduită.
+  - **TenantId** - entitatea găzduită la care este asociat abonamentul unui utilizator. Ne permite să clasificăm problemele și să identificăm dacă este o problemă pe scară largă sau una izolată la un set de utilizatori sau la o anumită entitate găzduită.
 
 ### <a name="information-that-specifically-supports-diagnostic-data-collection"></a>*Informațiile care acceptă în mod specific colectarea datelor de diagnosticare*
 
@@ -230,7 +230,7 @@ Informații pentru a înțelege succesul evenimentului de colectare în sine.
 
 Această categorie conține următoarele câmpuri:
 
-  - **AggMode** - comunică sistemului cum să realizeze agregarea rezultatelor activității. Ne permite să reducem volumul de informații încărcate de pe computerul unui utilizator, prin agregarea rezultatelor activității într-un singur eveniment care sunt trimise periodic.
+  - **AggMode** - comunică sistemului cum să realizeze agregarea rezultatelor activității. Ne permite să reducem volumul de informații încărcate de pe computerul unui utilizator, prin agregarea rezultatelor activității într-un singur eveniment, care se trimite periodic.
 
   - **Count** - de câte ori s-a produs activitatea dacă numărul este de la un eveniment agregat. Ne permite să stabilim cât de des o activitate a reușit sau a eșuat pe baza modului de agregare a activității.
 
@@ -264,9 +264,9 @@ Această categorie conține următoarele câmpuri:
 
   - **IsDebug** - semnalizare indicând dacă compilarea de Office este una de depanare. Ne permite să identificăm dacă problemele provin de la compilări de depanare care se pot comporta diferit.
 
-  - **IsInstalledOnExternalStorage** - semnalizare care indică dacă Office a fost instalat pe un dispozitiv de stocare extern. Să stabilim dacă problemele pot fi urmărite până într-o locație de stocare externă.
+  - **IsInstalledOnExternalStorage** - semnalizare care indică dacă Office a fost instalat pe un dispozitiv de stocare extern. Ne permite să stabilim dacă problemele pot fi urmărite până într-o locație de stocare externă.
 
-  - **IsOEMInstalled** - semnalizare care indică dacă Office a fost instalat de un producător original al echipamentului (OEM). Să stabilim dacă aplicația a fost instalată de un OEM care ne poate ajuta să clasificăm și să identificăm problemele.
+  - **IsOEMInstalled** - semnalizare care indică dacă Office a fost instalat de un producător original al echipamentului (OEM). Ne permite să stabilim dacă aplicația a fost instalată de un OEM care ne poate ajuta să clasificăm și să identificăm problemele.
 
   - **PreviousVersion** - versiunea de Office care a fost instalată anterior pe computer. Ne permite să revenim la o versiune anterioară, dacă cea curentă are o problemă.
 
@@ -441,7 +441,7 @@ Următoarele câmpuri de date sunt comune pentru toate evenimentele OneNote pe M
 
 - **Activity_ActivityType** - indică tipul acestui eveniment. O activitate poate fi activitate normală sau activitate cu valoare mare.
 
-- **Activity_AggMode** - comunică sistemului cum să realizeze agregarea rezultatelor activității. Ne permite să reducem volumul de informații încărcate de pe computerul unui utilizator, prin agregarea rezultatelor activității într-un singur eveniment care sunt trimise periodic.
+- **Activity_AggMode** - comunică sistemului cum să realizeze agregarea rezultatelor activității. Ne permite să reducem volumul de informații încărcate de pe computerul unui utilizator, prin agregarea rezultatelor activității într-un singur eveniment, care se trimite periodic.
 
 - **Activity_Count** - de câte ori s-a produs activitatea dacă numărul este de la un eveniment agregat. Ne permite să stabilim cât de des a reușit sau a eșuat o activitate pe baza modului de agregare a activității.
 
@@ -623,7 +623,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeonenotefirstrunfirstrun"></a>Office.OneNote.FirstRun.FirstRun
 
-Semnal critic utilizat pentru a ne asigura că utilizatorii noi pot lansa și rula pentru prima dată cu succes OneNote.  Telemetria se colectează pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot lansa aplicația pentru prima dată, acest lucru va declanșa un incident de mare severitate.
+Semnal critic utilizat pentru a ne asigura că utilizatorii noi pot lansa și rula pentru prima dată cu succes OneNote.  Telemetria se colectează pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot lansa aplicația pentru prima dată, acest lucru va declanșa un incident de severitate înaltă.
 
 - **AfterOneDriveFrozenAccountError** - indică o eroare din OneDrive atunci când un cont este blocat.
 
@@ -638,7 +638,7 @@ Semnal critic utilizat pentru a ne asigura că utilizatorii noi pot lansa și ru
 #### <a name="officeonenotefirstrunfirstrunformsa"></a>Office.OneNote.FirstRun.FirstRunForMSA
 
 Semnal critic utilizat pentru a ne asigura că utilizatorii consumatori noi (cont Microsoft) pot lansa și utiliza pentru prima dată cu succes OneNote.
-Cum se folosea Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot lansa aplicația pentru prima dată, acest lucru va declanșa un incident de mare severitate.
+Cum se folosea Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot lansa aplicația pentru prima dată, acest lucru va declanșa un incident de severitate înaltă.
 
 Se colectează următoarele câmpuri:
 
@@ -664,7 +664,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeonenotefirstrunfirstrunfororgid"></a>Office.OneNote.FirstRun.FirstRunForOrgId
 
-Semnal critic utilizat pentru a ne asigura că utilizatorii noi de tip întreprindere (AAD/OrgID) pot lansa și rula pentru prima dată cu succes OneNote.  Cum se folosea Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot lansa aplicația pentru prima dată, acest lucru va declanșa un incident de mare severitate.
+Semnal critic utilizat pentru a ne asigura că utilizatorii noi de tip întreprindere (AAD/OrgID) pot lansa și rula pentru prima dată cu succes OneNote.  Cum se folosea Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot lansa aplicația pentru prima dată, acest lucru va declanșa un incident de severitate înaltă.
 
 - **Attempt** - de câte ori este necesar să încercați din nou prima experiență de rulare.
 
@@ -714,7 +714,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_GetFileStreamSuccess -** nici probleme legate de disc, nici probleme legate de configurație care să nu permită ca fluxul de fișier să fie citit
 
-  - **Data\_GetRelativePathsFailed -** calea corespunzătoare nu indică spre locația accesibilă
+  - **Data\_GetRelativePathsFailed -** calea relativă nu indică spre locația accesibilă
 
   - **Data\_HashActualValue -** valoarea hash extrasă din numele de fișier atunci când a fost utilizat pachetul
 
@@ -748,7 +748,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_VisioSKU**:**integer** - 0 pentru SKU Standard și 1 pentru SKU Profesional
 
-#### <a name="onenoteapponenotelaunchednonactivated"></a>OneNote.App.OneNoteLaunchedNonActivated
+#### <a name="onenoteapponenotelaunchednonactivated-previous-name-officeonenoteandroidapponenotelaunchednonactivated"></a>OneNote.App.OneNoteLaunchedNonActivated *(nume anterior)*, Office.OneNote.Android.App.OneNoteLaunchedNonActivated
 
 Informații înregistrate despre starea de activare a aplicației.  Datele sunt monitorizate pentru a ne asigura că identificăm spini în problemele de activare. De asemenea analizăm datele pentru a găsi zone care necesită îmbunătățiri.
 
@@ -756,7 +756,7 @@ Se colectează următoarele câmpuri:
 
 - **INSTALL_LOCATION** - Indică dacă aplicația este preinstalată sau este descărcată din Store
 
-#### <a name="onenoteresetstatus"></a>OneNote.ResetStatus 
+#### <a name="onenoteresetstatus-previous-name-officeonenoteandroidresetstatus"></a>OneNote.ResetStatus *(nume anterior)*, Office.OneNote.Android.ResetStatus
 
 Semnalul folosit pentru a înregistra problemele întâlnite când un utilizator încearcă să reseteze aplicația.  Telemetria este folosită pentru a monitoriza, a detecta și a rezolva problemele cauzate în timpul resetării. 
 
@@ -770,7 +770,7 @@ Se colectează următoarele câmpuri:
 
 - **Pass** - Indică dacă s-a resetat cu succes
 
-#### <a name="onenotesigninsignincompleted"></a>OneNote.SignIn.SignInCompleted 
+#### <a name="onenotesigninsignincompleted-previous-name-officeonenoteandroidsigninsignincompleted"></a>OneNote.SignIn.SignInCompleted *(nume anterior)*, Office.OneNote.Android.SignIn.SignInCompleted
 
 Semnalul critic folosit pentru a se asigura logarea cu succes sau nu. Telemetria este colectată pentru a se asigura detectarea regresia critică pentru aplicația OneNote și buna funcționare a serviciului
 
@@ -790,7 +790,7 @@ Se colectează următoarele câmpuri:
 
 - **SignInMode** - Conectare sau înregistrare sau conectare automată sau înregistrare accelerată
 
-#### <a name="onenotesigninsigninstarted"></a>OneNote.SignIn.SignInStarted 
+#### <a name="onenotesigninsigninstarted-previous-name-officeonenoteandroidsigninsigninstarted"></a>OneNote.SignIn.SignInStarted *(nume anterior)*, Office.OneNote.Android.SignIn.SignInStarted
 
 Semnalul utilizat pentru a indica probleme întâlnite în timp ce utilizați bara de mesaje.  Telemetria este folosită pentru a monitoriza, a detecta și a rezolva problemele cauzate în interacțiunea cu bara de mesaje
 
@@ -880,7 +880,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeextensibilitycatalogexchangegetlastupdate"></a>Office.Extensibility.Catalog.ExchangeGetLastUpdate
 
-Date privind succesul sau nereușita în ceea ce privește regăsirea necesității unor date actualizate privind programele de completare atribuite de administratorul de entitate găzduită Office 365. Utilizat pentru măsurători ale stării, diagrame și analiza problemelor clientului. ExchangeGetLastUpdate va rula întotdeauna la inițializare ca parte a codului gazdă și va determina dacă atribuirile de program de completare s-au modificat pentru un utilizator.  Dacă da, atunci osf.DLL va fi încărcat, astfel încât să putem apela ExchangeGetEntitlements pentru a obține anumite atribuiri (și ExchangeGetManifests va fi apelat pentru a regăsi orice manifest nou care este necesar).  ExchangeGetEntitlements (și ExchangeGetManifests) pot fi apelate și la cerere după ce aplicația-gazdă a rulat.  Ideea este de a nu încărca DLL mare în cazul în care nu este necesar.  Fără acest eveniment în Obligatoriu, nu am putea să spunem dacă utilizatorii nu reușesc să obțină programe de completare atribuite lor dacă primul apel de serviciu nu reușește.  Este, de asemenea, semnalul principal în orice problemă de autentificare cu care ne confruntăm când comunicăm cu serviciul nostru.
+Date privind succesul sau nereușita în ceea ce privește regăsirea necesității unor date actualizate privind programele de completare atribuite de administratorul de entitate găzduită Office 365. Utilizat pentru măsurători ale stării, diagrame și analiza problemelor clientului. ExchangeGetLastUpdate va rula întotdeauna la inițializare ca parte a codului gazdă și va determina dacă atribuirile de program de completare s-au modificat pentru un utilizator.  Dacă da, atunci osf.DLL va fi încărcat, astfel încât să putem apela ExchangeGetEntitlements pentru a obține anumite atribuiri (și ExchangeGetManifests va fi apelat pentru a regăsi orice manifest nou care este necesar).  ExchangeGetEntitlements (și ExchangeGetManifests) pot fi apelate și la cerere după ce aplicația-gazdă a rulat.  Ideea este de a nu încărca DLL-ul mare în cazul în care nu este necesar.  Fără acest eveniment în Obligatoriu, nu am putea să spunem dacă utilizatorii nu reușesc să obțină programe de completare atribuite lor dacă primul apel de serviciu nu reușește.  Este, de asemenea, semnalul principal în orice problemă de autentificare cu care ne confruntăm când comunicăm cu serviciul nostru.
 
 Se colectează următoarele câmpuri:
 
@@ -1341,6 +1341,22 @@ Se colectează următoarele câmpuri:
  
 - **total_file_accounts** - numărul de conturi de fișier din aplicație în momentul acțiunii
 
+#### <a name="account_lifecycle"></a>account_lifecycle
+
+Acest eveniment este colectat pentru a garanta funcționarea cu succes a configurării contului și este utilizat pentru a monitoriza starea creării contului, capacitatea de a adăuga noi conturi de e-mail și de a monitoriza resetări soft de cont
+
+Se colectează următoarele câmpuri: 
+
+- **action** - Tipul de acțiune efectuată asupra contului, cum ar fi adăugare, eliminare sau resetare
+
+#### <a name="add_new_account_step"></a>add_new_account_step
+
+Acest eveniment ne permite să detectăm cât de departe a ajuns utilizatorul în formularul de creare a unui nou cont.  Indică când utilizatorul s-a mutat în alt pas sau dacă s-a retras.  Avem nevoie de aceste informații pentru a detecta dacă orice pași eșuează și pentru a vă asigura că crearea conturilor de utilizator a reușit. 
+
+Următorul câmp este colectat: 
+
+- **OTAddAccountCurrentStep** - care poate avea următoarele valori: profile_form, redirect_mobile_check, mobile_check_success
+
 #### <a name="app_error"></a>app_error
 
 Urmărește erorile critice ale aplicației utilizate astfel încât să putem preveni problemele care ar putea duce la căderea aplicației sau care ar putea să vă împiedice să citiți e-mailurile.
@@ -1385,7 +1401,7 @@ Se colectează următoarele câmpuri:
 
 - **status_code** - codul de stare al erorii care s-a produs. Aceasta ne ajută să înțelegem cauza erorii.
 
-Toate caracterele sunt posibile proprietăți. Aceasta ne ajută să înțelegem caracterele din corpul mesajului de schiță în care s-a produs eroarea. De exemplu, „a”, „b”, „c” sunt proprietăți posibile.
+Toate caracterele sunt posibile proprietăți. Aceasta ne ajută să înțelegem caracterele din corpul mesajului de schiță în care s-a produs eroarea. De exemplu, „a”, „b”, „c” sunt posibile proprietăți.
 
 #### <a name="app_launch_report"></a>app_launch_report
 
@@ -1425,7 +1441,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="calendar_action"></a>calendar_action
 
-Este utilizat cu scopul de a monitoriza orice impact posibil negativ asupra capacității dvs. de a efectua acțiuni de calendar de bază, cum ar fi crearea sau editarea evenimentelor.  Evenimentul ar putea include și o serie de nume de proprietate și dacă s-au modificat sau nu. De exemplu, „title_changed”, „online_meeting_changed” și „description_changed” sunt nume de proprietate incluse pentru a ne ajuta să înțelegem dacă există probleme la editarea anumitor proprietăți.
+Este utilizat cu scopul de a monitoriza orice impact posibil negativ asupra capacității dvs. de a efectua acțiuni de calendar de bază, cum ar fi crearea sau editarea evenimentelor.  Evenimentul ar putea include și o serie de nume de proprietate și dacă s-au modificat sau nu. De exemplu, „title_changed”, „online_meeting_changed” și „description_changed” sunt nume de proprietăți incluse pentru a ne ajuta să înțelegem dacă există probleme la editarea anumitor proprietăți.
 
 Se colectează următoarele câmpuri: 
 
@@ -1511,9 +1527,9 @@ Se colectează următoarele câmpuri:
 
 - **action_type** - tipul de acțiune efectuat pentru căutare. Acest lucru identifică dacă o căutare a fost începută, este în curs sau s-a încheiat și ce acțiuni au fost întreprinse în timpul căutării, de exemplu, dacă a fost utilizat un microfon. Acest lucru este esențial pentru a asigura căutări precise și utile. 
 
-- **answer_result_selected_count** - urmărește de câte ori căutarea a fost „reușită”, de ex. A găsit utilizatorul persoana pe care o căuta? Ați compus un mesaj de e-mail? Ați marcat mesajul în document? 
+- **answer_result_selected_count** - urmărește de câte ori căutarea a fost „reușită”, de exemplu dacă utilizatorul a găsit persoana pe care o căuta? Ați compus un mesaj de e-mail? Ați marcat mesajul în document? 
 
-- **contact_result_in_full_list_selected_count** - urmărește de câte ori a selectat utilizatorul „Vedeți toate persoanele de contact” din lista completă în timpul sesiunii de căutare combinate
+- **contact_result_in_full_list_selected_count** - urmărește de câte ori a cerut utilizatorul „Vedeți toate persoanele de contact” din lista completă în timpul sesiunii de căutare combinate
 
 - **contact_result_selected_count** - urmărește numărul de persoane de contact care au fost selectate în timpul sesiunii de căutare combinate
 
@@ -1544,6 +1560,8 @@ Se colectează următoarele câmpuri:
 - **search_suggestion_type** - indică ce se află în spatele sugestiei de căutare, de ex., este o corecție ortografică? Pe baza istoricului? Completare automată?
 
 - **see_all_contacts_selected_count** - urmărește de câte ori a fost selectat „Vedeți toate persoanele de contact” în timpul sesiunii de căutare combinate
+
+- **subtab_type** - urmărește unde a selectat utilizatorul rezultatul, din ce filă de rezultate
 
 - **top_mail_result_selected_count** - urmărește de câte ori un utilizator selectează cele mai bune rezultate oferite. 
 
@@ -1589,6 +1607,16 @@ Se colectează următoarele câmpuri:
  
 - **thread_id** - ID-ul de fir al schiței de conversație este asociat cu
 
+#### <a name="drag_and_drop"></a>drag_and_drop
+
+Acest eveniment ne permite să detectăm dacă acțiunea de glisare și fixare a reușit sau nu.  Se utilizează pentru a vă asigura că experiențele de glisare și fixare funcționează corect între aplicații, atât ca eveniment de fixare în Outlook, cât și ca eveniment de glisare care iese din Outlook.  Cu aceste date, avem capacitatea de a ne asigura că întreaga experiență cu alte aplicații funcționează așa cum este de așteptat.
+
+Se colectează următoarele câmpuri: 
+
+- **action** - Acțiunea va fi glisare sau fixare
+
+- **location** - în cazul unei acțiuni de glisare, acest lucru ne va spune din ce locație a început utilizatorul glisarea.  În cazul unei acțiuni de fixare, acest lucru ne va spune unde anume a fixat utilizatorul fișierul care a fost glisat. 
+
 #### <a name="drawer_event"></a>drawer_event
 
 Este utilizat pentru a monitoriza posibilul impact negativ asupra capacității de a accesa foldere în inbox
@@ -1599,7 +1627,7 @@ Se colectează următoarele câmpuri:
 
 - **calendar_accounts_count** - indică numărul de conturi de calendar pentru a ne ajuta să detectăm problemele legate de numărul de conturi pe care le aveți
 
-- **calendar_apps_count** - indică numărul de aplicații de calendar prezente pe dispozitivul utilizatorului, pentru a ne ajuta să detectăm probleme legate de aplicațiile de calendar
+- **calendar_apps_count** - indică numărul de aplicații de calendar prezente pe dispozitivul utilizatorului, pentru a ne ajuta să detectăm problemele legate de aplicațiile de calendar
 
 - **drawer_type** - indică tipul de sertar: interogare calendar, corespondență sau zero, pentru a ne ajuta să detectăm probleme legate de tipul de sertar
 
@@ -2053,6 +2081,8 @@ Se colectează următoarele câmpuri:
 
 - **RMS.LicenseFormat** - formatul licenței: Xrml sau Json
 
+- **RMS.PL.KeyType** – valori „Single” sau „Double”. Indică dacă PL a fost protejat cu protecție cu o singură cheie sau cu protecție cu cheie dublă.
+
 - **RMS.RACType** - tipul Certificatului de cont de drepturi
 
 - **RMS.Result** - succes sau eșec al apelului API
@@ -2102,7 +2132,6 @@ Se colectează următoarele câmpuri:
 - **RMS.SDKVersion** - versiunea clientului pentru Serviciul de administrare a drepturilor
 
 - **RMS.StatusCode** - ID al scenariului definit de API
-
 
 #### <a name="mail_action"></a>mail_action
 
@@ -2254,6 +2283,8 @@ Se colectează următoarele câmpuri:
 
 - **Data_AppDuration**- durata petrecută în procesarea aplicațiilor în timpul unei operațiuni de deschidere a fișierelor. 
 
+- **Data_AppWarmUpGain** - câștigul în durata de încărcare a aplicației pe care-l obținem prin preîncărcarea în prealabil a unei părți a aplicației.
+
 - **Data_BootDuration**- durata pornirii aplicației în procesul de deschidere a fișierului.
 
 - **Data_Doc_AccessMode**- o enumerare indicând modul de acces al fișierului, de exemplu, doar în citire, citiți scrierea.
@@ -2332,7 +2363,24 @@ Se colectează următoarele câmpuri:
 
 - **Data_SilhouetteDuration**- durata de randare a fișierului deschis.
 
-- **Data_TimeSplitMeasurements**- o valoare șir de logare durata de timp petrecută în anumite apeluri de funcție, într-un format cu eticheta funcției și ora de început și durata. 
+- **Data_TimeSplitMeasurements**- o valoare șir care înregistrează în jurnal durata de timp petrecută în anumite apeluri de funcție, într-un format cu eticheta funcției și ora de început și durata. 
+
+#### <a name="office_android_earlytelemetry_expansionfilesavailability"></a>Office_Android_EarlyTelemetry_ExpansionFilesAvailability
+
+Activăm fișierele de extindere Pachet kit Android (APK) pentru aplicația Office pentru dispozitive mobile. Fișierele de extindere APK sunt fișiere de resurse suplimentare pe care dezvoltatorii de aplicații Android le pot publica împreună cu aplicația. Pentru a înțelege fiabilitatea fișierelor de extindere, vom înregistra în jurnal o semnalizare care indică dacă fișierele de extindere sunt disponibile sau nu, la fiecare boot.
+
+Se colectează următoarele câmpuri:
+
+- **Data_ExpansionFilesAvailable** - un semnalizator boolean care indică dacă fișierele de extindere APK sunt disponibile pe dispozitiv la momentul bootării aplicației.
+
+#### <a name="office_android_earlytelemetry_expansionfilesdownloader"></a>Office_Android_EarlyTelemetry_ExpansionFilesDownloader
+
+Activăm fișierele de extindere Pachet kit Android (APK) pentru aplicația Office pentru dispozitive mobile. Fișierele de extindere APK sunt fișiere de resurse suplimentare, pe care dezvoltatorii de aplicații Android le pot publica împreună cu aplicația lor.  Pentru a înțelege fiabilitatea mecanismului de descărcare a fișierului nostru de extindere, înregistrăm o semnalizare care indică dacă reușim să descărcăm cu succes fișiere de extindere.
+
+Se colectează următoarele câmpuri: 
+
+- **Data_DownloadSuccess** - Un semnalizator Boolean care indică dacă descărcarea fișierelor de extindere APK este reușită, de fiecare dată când încercăm o descărcare în timpul bootării aplicației.
+
 
 #### <a name="office_android_intune_intunecompliancerequest"></a>Office_Android_Intune_IntuneComplianceRequest
 
@@ -2348,7 +2396,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_ComplianceStatus** - indică starea de conformitate a aplicației în timpul conectării cu un cod de eroare succes sau eșec.
   - -1 – Eroare necunoscută
-  - 0 – Aplicația respectă politicile organizației
+  -    0 – Aplicația respectă politicile organizației
   - 1 – Aplicația nu respectă politicile organizației
   - 2 – Erori legate de servicii
   - 3 – Erori legate de rețea
@@ -2569,7 +2617,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="office_docs_apple_docsuxiossaveasthroughfilemenu"></a>Office_Docs_Apple_DocsUXiOSSaveAsThroughFileMenu 
 
-Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează atunci când are loc o operațiune „Salvare ca“ și este utilizată pentru a înțelege și a acorda prioritate experienței utilizatorului, pe baza informațiilor de operațiune de fișier, cum ar fi categoriile de locație.  O operațiune „Salvare ca“ apare de fiecare dată când un utilizator creează un fișier nou și îl salvează pentru prima dată sau salvează o copie a unui fișier existent într-o locație nouă.
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează atunci când are loc o operațiune „Salvare ca“ și este utilizată pentru a înțelege și a acorda prioritate experienței utilizatorului, pe baza informațiilor de operațiune de fișier, cum ar fi categoriile de locație.  O operațiune „salvare ca“ are loc de fiecare dată când un utilizator creează un fișier nou și îl salvează pentru prima dată sau salvează o copie a unui fișier existent într-o locație nouă.
 
 Se colectează următoarele câmpuri:
 
@@ -2579,11 +2627,11 @@ Se colectează următoarele câmpuri:
 
 #### <a name="office_docs_apple_docsuxmacatmentioninsertedatmention"></a>Office_Docs_Apple_DocsUXMacAtMentionInsertedAtMention 
 
-Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează atunci când un utilizator „@“ menționează un alt utilizator și este utilizat pentru a înțelege și a acorda prioritate experienței utilizatorilor, în funcție de modul în care utilizatorii colaborează cu alți utilizatori.
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează atunci când un utilizator menționează cu „@“ un alt utilizator și este utilizat pentru a înțelege și a acorda prioritate experienței utilizatorilor, în funcție de modul în care utilizatorii colaborează cu alți utilizatori.
 
 Se colectează următoarele câmpuri:
 
-- **Data_CharactersTyped** - o valoare numerică care indică numărul total de caractere tastate în textul „@“ menționat.
+- **Data_CharactersTyped** - o valoare numerică care indică numărul total de caractere tastate în textul de menționare cu „@“.
 
 #### <a name="office_docs_apple_docsuxmacodspsharingwebviewsharingcompleted"></a>Office_Docs_Apple_DocsUXMacODSPSharingWebViewSharingCompleted 
 
@@ -2593,7 +2641,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_ShareType** - un șir specificat în cod care indică tipul de operațiune de partajare care a fost finalizată, inclusiv, dar fără a se limita la „Copiere link“, „mai multe aplicații“, „Teams“.
 
-- **Data_ShareWebViewMode**-un șir specificat în cod care indică ce tip de mod de partajare a fost activ atunci când s-a finalizat partajarea, inclusiv, dar fără a se limita la „ManageAccess“, „AtMentions“, „partajare“.
+- **Data_ShareWebViewMode** - un șir specificat în cod care indică ce tip de mod de partajare era activ când s-a finalizat partajarea, inclusiv, dar fără a se limita la „ManageAccess“, „AtMentions“, „Partajare“.
 
 #### <a name="office_docsui_collaboration_coauthorgalleryrowtapped"></a>Office_DocsUI_Collaboration_CoauthorGalleryRowTapped 
 
@@ -2617,7 +2665,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_OldCoauthorCount** - numărul anterior de co-autori activi înaintea actualizării.
 
-- **Data_ServiceType** - clasificarea abstractă a locației unui fișier, cum ar fi „SharePoint“, „OneDrive“, „locală“, „WOPI“ etc. și în mod explicit nu este locația reală a fișierului.
+- **Data_ServiceType** - o clasificare abstractă a locației unui fișier, cum ar fi „SharePoint“, „OneDrive“, „locală“, „WOPI“ etc. și în mod explicit nu este locația reală a fișierului.
 
 #### <a name="office_docsui_docstage_docstagecreatenewfromtemplate"></a>Office_DocsUI_DocStage_DocStageCreateNewFromTemplate 
 
@@ -2635,7 +2683,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_TemplateIndex** - indexul numeric al fișierului șablon, așa cum este afișat vizual utilizatorului.
 
-- **Data_TemplateType** - o clasificare ajutătoare pentru a distinge tipul de șablon, cum ar fi, dar fără a se limita la, șabloane „online“, șabloane „căutare online“, șabloane „locale“.
+- **Data_TemplateType** - o clasificare ajutătoare pentru a distinge tipul de șablon, cum ar fi, dar fără limitare, șabloane „online“, șabloane „căutare online“, șabloane „locale“.
 
 #### <a name="office_docsui_docstage_recommendedopen"></a>Office_DocsUI_DocStage_RecommendedOpen
 
@@ -2668,6 +2716,8 @@ Se colectează următoarele câmpuri:
 - **Data_ClickOrigin**- un șir care indică partea din care a fost linkul atunci când utilizatorul a făcut clic pe un link în iOS Outlook pentru a deschide un fișier în aplicația Office.
 
 - **Data_ClickTime**- vremea epocii Unix când utilizatorul a făcut clic pe un link în iOS Outlook pentru a deschide fișierul în aplicația Office.
+
+- **Data_ClosePreviouslyOpenedMarkers** - o valoare șir de caractere ce înregistrează în jurnal durata de timp între unele apeluri de funcții, într-un format cu ID de funcție și durată.
 
 - **Data_DetachedDuration**- durata procesului de detașare a unui eveniment. 
 
@@ -2739,7 +2789,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_Measurements**- o valoare șir de logare durata de timp petrecută în anumite apeluri de funcție, într-un format cu eticheta funcției și durata care include durata apelurilor sub-funcții.
 
-- **Data_OpenInPlace**- dacă un fișier trebuie sau nu să fie copiat în containerul în memoria de testare din Office înainte de a-l putea deschide.
+- **Data_OpenInPlace** - dacă un fișier trebuie sau nu să fie copiat în containerul sandbox din Office înainte ca utilizatorul să-l poată deschide.
 
 - **Data_OpenStartTime**- vremea epocii Unix când s-a deschis fișierul.
 
@@ -2767,11 +2817,11 @@ Se colectează următoarele câmpuri:
 
 #### <a name="office_docsui_fileoperations_savetourl"></a>Office_DocsUI_FileOperations_SaveToURL
 
-Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul înregistrează atunci când apare o operațiune de „salvare ca“ și este utilizată pentru a înțelege și a acorda prioritate experienței utilizatorului, pe baza informațiilor operațiunii de deschidere de fișier, cum ar fi categoriile de locație și primele patru caractere ale extensiei.  O operațiune „salvare ca“ apare de fiecare dată când un utilizator creează un fișier nou și îl salvează pentru prima dată sau salvează o copie a unui fișier existent într-o locație nouă.
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul înregistrează atunci când apare o operațiune de „salvare ca“ și este utilizată pentru a înțelege și a acorda prioritate experienței utilizatorului, pe baza informațiilor operațiunii de deschidere de fișier, cum ar fi categoriile de locație și primele patru caractere ale extensiei.  O operațiune „salvare ca“ are loc de fiecare dată când un utilizator creează un fișier nou și îl salvează pentru prima dată sau salvează o copie a unui fișier existent într-o locație nouă.
 
 Se colectează următoarele câmpuri:
 
-- **Data_FileExtension** - primele patru caractere din extensia unui fișier nou.
+- **Data_FileExtension** - primele patru caractere din extensia fișierului nou.
 
 - **Data_IsNewFileCreation** - indică dacă operațiunea de salvare este pentru un fișier nou sau o copie a unui fișier existent.
 
@@ -2793,9 +2843,9 @@ Se colectează următoarele câmpuri:
 
 - **Data_FileStyle** - o valoare numerică care indică din ce scenariu a fost afișată experiența din vânzări, cum ar fi de la un comutator salvare automată sau un buton partajare.
 
-- **Data_FileType** - primele patru caractere din extensia unui fișier actual.
+- **Data_FileType** - primele patru caractere din extensia fișierului actual.
 
-- **Data_InDocStage** - un Boolean care indică dacă experiența din vânzări este afișată din galeria de documente sau dintr-o fereastră de document.
+- **Data_InDocStage** - o valoare Booleană care indică dacă experiența de upsell este afișată din galeria de documente sau dintr-o fereastră de document.
 
 - **Data_IsDocumentOpened** - un Boolean care indică dacă documentul curent pentru care se afișează experiența din vânzări este, de asemenea, deschis.
 
@@ -2811,7 +2861,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_FileStyle** - o valoare numerică care indică din ce scenariu a fost afișată experiența din vânzări, cum ar fi de la un comutator salvare automată sau un buton partajare.
 
-- **Data_FileType** - primele patru caractere din extensia unui fișier actual.
+- **Data_FileType** - primele patru caractere din extensia fișierului actual.
 
 - **Data_InDocStage** - un Boolean care indică dacă experiența din vânzări este afișată din galeria de documente sau dintr-o fereastră de document.
 
@@ -2837,7 +2887,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_ServiceType** - o clasificare abstractă a locației unui fișier, cum ar fi „SharePoint“, „OneDrive“, „locală“, „WOPI“ etc. și în mod explicit nu este locația reală a fișierului.
 
-- **Data_LinkType**-un șir specificat în cod care descrie tipul de operațiune de invitație efectuată, cum ar fi „ViewOnly“ și „ViewAndEdit“.
+- **Data_LinkType** - un șir specificat în cod care descrie tipul de operațiune de invitație efectuată, cum ar fi „ViewOnly“ și „ViewAndEdit“.
 
 - **Data_ShareScenario** - o descriere de șir specificat în cod în care, în interfața de utilizator a aplicației fișierul este partajat din, inclusiv, dar fără a se limita la, „FileMenu“, „OpenTabShareActionMenu“, „RecentTabShareActionMenu“.
 
@@ -2885,7 +2935,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_OperationType** - o valoare numerică pentru a indica ce tip de operațiune de trimitere a unei copii are loc, cum ar fi trimiterea unei copii într-un mesaj de e-mail sau trimiterea unei copii prin controlul partajare Apple.
 
-- **Data_ServiceType** - clasificarea abstractă a locației unui fișier, cum ar fi „SharePoint“, „OneDrive“, „locală“, „WOPI“ etc. și în mod explicit nu este locația reală a fișierului.
+- **Data_ServiceType** - o clasificare abstractă a locației unui fișier, cum ar fi „SharePoint“, „OneDrive“, „locală“, „WOPI“ etc. și în mod explicit nu este locația reală a fișierului.
 
 - **Data_ShareFileType** - o descriere de șir specificată în cod pentru ce tip de obiect este partajat, inclusiv, dar fără a se limita la, „document“, „PDF“, „imagine“.
 
@@ -2981,7 +3031,7 @@ Acest eveniment este colectat când începe inițializarea fluxului. Acest eveni
 
 - **DeviceInfo.OsName** - numele dispozitivului OS.
 
-- **DeviceInfo.SDKUid** - identifică dispozitivul din perspectiva SDK a telemetriei.
+- **DeviceInfo_SDKUid** - identifică în mod unic dispozitivul din perspectiva SDK-ului de telemetrie
 
 - **eventId** - identificator de nume al evenimentului. 
 
@@ -3033,7 +3083,11 @@ Evenimentul este colectat când fluxul este prezentat utilizatorului. Evenimentu
 
 - **AppInfo.Version** - versiunea aplicației.
 
+- **bridgeWaitingTime** - măsurătoare pentru diagnosticarea performanței în redarea fluxului.
+
 - **clientCorrelationId** - identificatorul unic global pentru sesiunea aplicației.
+
+- **ClientTimeStamp** - marca de timp a momentului în care evenimentul a fost înregistrat în jurnal de către client.
 
 - **clientType** - aplicația pe care rulează componenta.
 
@@ -3045,7 +3099,7 @@ Evenimentul este colectat când fluxul este prezentat utilizatorului. Evenimentu
 
 - **DeviceInfo.OsName** - numele dispozitivului OS.
 
-- **DeviceInfo.SDKUid** - identifică dispozitivul din perspectiva SDK a telemetriei.
+- **DeviceInfo_SDKUid** - identifică în mod unic dispozitivul din perspectiva SDK-ului de telemetrie
 
 - **eventId** - identificator de nume al evenimentului.
 
@@ -3057,17 +3111,14 @@ Evenimentul este colectat când fluxul este prezentat utilizatorului. Evenimentu
 
 - **hostAppRing** - populația utilizatorilor cărora le-a fost distribuită aplicația.
 
-- **properties** - conține proprietăți metadate suplimentare, colectate pentru fiecare eveniment.
-        
-  - **bridgeWaitingTime** - măsurătoare pentru diagnosticarea performanței în redarea fluxului.
-    
-  - **ClientTimeStamp** - marcă de timp privind momentul în care a fost înregistrat de când evenimentul a fost înregistrat de client.
-        
-  - **renderTime** - măsurătoare pentru diagnosticarea performanței în redarea fluxului.
+- **properties** - conține proprietăți metadate suplimentare, colectate pentru fiecare eveniment. *[Acest eveniment a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+  - **ClientTimeStamp** - marca de timp a momentului în care evenimentul a fost înregistrat în jurnal de către client.
 
 - **publicEventName** - nume eveniment orientat spre public.  
 
 - **region** - regiunea geografică a serviciului de flux la care este conectat utilizatorul. 
+
+- **renderTime** - măsurătoare pentru diagnosticarea performanței în redarea fluxului.
 
 - **tenantAadObjectId** - identificator unic global pentru entitatea găzduită a utilizatorului.
 
@@ -3262,7 +3313,7 @@ Se colectează următoarele câmpuri:
 
   - **Data.IsStubFile -** documentul nu a fost salvat încă în serviciul în cloud
 
-  - **Data.IsSyncBackedStateDifferentThanOnLastOpen -** starea documentului s-a modificat, este posibil ca modificările să se fi produs în timp ce documentul era deschis
+  - **Data.IsSyncBackedStateDifferentThanOnLastOpen -** starea documentului s-a modificat, este posibil ca modificările să se fi produs în timp ce documentul nu era deschis
 
   - **Data.isTaskCanceledAfterOpenComplete -** depășit
 
@@ -3492,7 +3543,7 @@ Se colectează următoarele câmpuri:
 
   - **Data.DstDoc.IdentityUniqueId -** depășit
 
-  - **Data.DstDoc.IOFlags -** semnalizări opțiuni memorate în cache ale documentului nou la deschidere
+  - **Data.DstDoc.IOFlags -** semnalizările de opțiuni memorate în cache ale documentului nou utilizate la deschidere
 
   - **Data.DstDoc.IsOpeningOfflineCopy -** semnalizare care arată că s-a deschis o copie offline a unui document nou
 
@@ -3564,7 +3615,7 @@ Se colectează următoarele câmpuri:
 
   - **Data.IsSyncBackedFile -** documentul este într-un folder care este actualizat prin sincronizare automată
 
-  - **Data.IsSyncBackedStateDifferentThanOnLastOpen -** starea documentului s-a modificat, este posibil ca modificările să se fi produs în timp ce documentul era deschis
+  - **Data.IsSyncBackedStateDifferentThanOnLastOpen -** starea documentului s-a modificat, este posibil ca modificările să se fi produs în timp ce documentul nu era deschis
 
   - **Data.IsWorkingBranchAvailableOnOpen -** modificați diagnosticarea de urmărire asigurându-vă că avem cea mai recentă versiune a unui fișier partajat
 
@@ -3988,7 +4039,7 @@ Se colectează următoarele câmpuri:
 
 - **DeviceInfo_OsVersion** - versiunea sistemului de operare
 
-- **DeviceInfo_SDKUid** - identifică dispozitivul din perspectiva SDK a telemetriei
+- **DeviceInfo_SDKUid** - identifică în mod unic dispozitivul din perspectiva SDK-ului de telemetrie
 
 #### <a name="officelivepersonacarduseractionsopenedexpandedpersonacard"></a>Office.LivePersonaCard.UserActions.OpenedExpandedPersonaCard
 
@@ -4072,7 +4123,7 @@ Se colectează următoarele câmpuri:
 
 - **DeviceInfo_OsVersion** - versiunea sistemului de operare
 
-- **DeviceInfo_SDKUid** - identifică dispozitivul din perspectiva SDK a telemetriei
+- **DeviceInfo_SDKUid** – identifică în mod unic dispozitivul din perspectiva SDK-ului de telemetrie
 
 - **NetworkCost** - indică costul/tipul rețelei (contorizată, contorizată peste limită etc.)
 
@@ -4147,7 +4198,7 @@ Se colectează următoarele câmpuri:
 
     - **immersiveProfileCorrelationId** - un identificator unic global pentru sesiunea vizualizare profil extins
 
-    - **networkEffectiveType** - tipul efectiv de conexiune de rețea, de exemplu, "slow-2g Online" pentru a identifica dacă utilizatorul este conectat la internet în timpul afișării cardului de persoană
+    - **networkEffectiveType** - tipul efectiv de conexiune de rețea, de exemplu, „slow-2g Online” pentru a identifica dacă utilizatorul este conectat la internet în timpul afișării cardului de persoană
 
     - **networkType** - tipul de conectivitate de rețea a dispozitivului utilizat
 
@@ -4178,6 +4229,67 @@ Se colectează următoarele câmpuri:
 
   - **Data.Log** - mesaj de jurnal particularizat care indică succesul sau eșecul pre-verificării
 
+#### <a name="office_officemobile_pdfviewer_pdffileoperations"></a>Office_OfficeMobile_PdfViewer_PdfFileOperations
+
+Evenimentul este colectat pentru aplicația Office pentru Android. Acesta înregistrează când are loc o operațiune de deschidere, închidere sau salvare PDF și este utilizată pentru a înțelege și a acorda prioritate experienței de utilizator bazată pe informațiile despre operațiunea cu fișierul PDF. Evenimentul ne permite să menținem operațiunile de deschidere, închidere și salvare a fișierului PDF funcționale așa cum este de așteptat și să îmbunătățim performanța operațiunilor cu fișiere PDF.
+
+Se colectează următoarele câmpuri:
+
+- **Data_Doc_FileOpSessionID** - ID unic pentru o sesiune de document
+
+- **Data_Doc_URLHash** - un GUID pentru adresa URL a fișierului
+
+- **Data_ErrorCode** - eroare în caz de erori de deschidere a fișierelor/erori de descărcare/descărcare anulată
+
+- **Data_ErrorMessage** - cod relevant message-to-error
+
+- **Data_FailureReason** - în cazul unei erori de deschidere, aceste enumerări definesc motivul erorii.
+
+- **Data_FileLocation** - locația în care se află fișierul, de exemplu: local, ODSP, iCloud etc.
+
+- **Data_FileOpenEntryPoint** - punct de intrare pentru deschiderea fișierului
+
+- **Data_FileSize** - dimensiunea fișierului pe care are loc operațiunea
+
+- **Data_OpenMode** - modul în care a fost deschis fișierul PDF, de exemplu: 0: modul de vizualizare, 2: modul de semnare
+
+- **Data_PageCount** - numărul de pagini din fișierul PDF.
+
+- **Data_PasswordProtected** - marcaj care spune dacă fișierul este protejat prin parolă sau nu.
+
+- **Data_ProviderApp** - deocamdată precizează aplicația furnizor, în cazul activării fișierului 
+
+- **Data_ReadOnly** - marcaj care spune dacă fișierul este doar în citire sau nu.
+
+- **Data_Result** - starea operațiunii efectuate, de exemplu: true: succes, false: eșec
+
+- **Data_Type** - tipul de operațiune de fișier (deschidere, închidere sau salvare) 
+
+#### <a name="officeonenoteandroidappnavigationnavigationuistatechanged-onenoteappnavigationnavigationuistatechanged-previous-name"></a>Office.OneNote.Android.App.Navigation.NavigationUIStateChanged, OneNote.App.Navigation.NavigationUIStateChanged *(nume anterior)*
+
+Acest eveniment colectează semnalul critic utilizat pentru a asigura că utilizatorii OneNote pot naviga cu succes prin aplicație.  Telemetria se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. 
+
+Se colectează următoarele câmpuri: 
+
+- **IS_SPANNED** - indică dacă aplicația este într-un mod extins. Acest lucru este înregistrat în jurnal specific pentru dispozitive pliabile.
+
+- **NEW_STATE** - indică starea aplicațiilor imediat după navigare
+
+- **OLD_STATE** - indică starea aplicațiilor imediat înainte de navigare
+
+#### <a name="officeonenoteandroidlenssdkofficelenslaunched-onenotelenssdkofficelenslaunched-previous-name"></a>Office.OneNote.Android.LensSDK.OfficeLensLaunched, OneNote.LensSDK.OfficeLensLaunched *(nume anterior)*
+
+Acest eveniment colectează semnalul critic utilizat pentru a vă asigura că OfficeLens este lansat corect.  Telemetria se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. 
+
+Se colectează următoarele câmpuri: 
+
+- **CAPTURE_MODE** - indică modul în care a fost lansat OfficeLens.  Poate fi implicit, editare, Inserare rapidă sau import video.
+
+- **ERROR_CODE** - indică codul de eroare de lansare în cazul în care a avut loc o eroare în timpul lansării.
+
+- **IMAGE_COUNT** - indică numărul de imagini efectuate
+
+- **LAUNCH_REASON** - indică fluxul în care a fost lansat OfficeLens. Poate fi peste ecranul de blocare sau prin intermediul opțiunilor Cameră sau Galerie din Note adezive sau prin OneNote Canvas etc.
 
 #### <a name="officeonenotecanvasinkinkstrokelogger"></a>Office.OneNote.Canvas.Ink.InkStrokeLogger 
 
@@ -4207,7 +4319,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeonenotenavigationcreatepage"></a>Office.OneNote.Navigation.CreatePage
 
-Semnal critic utilizat pentru a monitoriza capacitatea utilizatorilor OneNote de a crea pagini în OneNote.  Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot crea o pagină, acest lucru va declanșa un incident de mare severitate.
+Semnal critic utilizat pentru a monitoriza capacitatea utilizatorilor OneNote de a crea pagini în OneNote.  Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot crea o pagină, acest lucru va declanșa un incident de severitate înaltă.
 
 Se colectează următoarele câmpuri:
 
@@ -4232,7 +4344,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeonenotenavigationcreatesection"></a>Office.OneNote.Navigation.CreateSection
 
-Semnal critic utilizat pentru a monitoriza capacitatea utilizatorilor OneNote de a crea secțiuni în OneNote.  Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot crea o pagină, acest lucru va declanșa un incident de mare severitate.
+Semnal critic utilizat pentru a monitoriza capacitatea utilizatorilor OneNote de a crea secțiuni în OneNote.  Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot crea o pagină, acest lucru va declanșa un incident de severitate înaltă.
 
 Se colectează următoarele câmpuri
 
@@ -4247,7 +4359,7 @@ Se colectează următoarele câmpuri
 
 #### <a name="officeonenotenavigationnavigate"></a>Office.OneNote.Navigation.Navigate
 
-Semnal critic utilizat pentru a monitoriza capacitatea utilizatorilor OneNote de a naviga prin pagini în OneNote.  Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot naviga, acest lucru va declanșa un incident de mare severitate.
+Semnal critic utilizat pentru a monitoriza capacitatea utilizatorilor OneNote de a naviga prin pagini în OneNote.  Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot naviga, acest lucru va declanșa un incident de severitate înaltă.
 
 Se colectează următoarele câmpuri:
 
@@ -4276,7 +4388,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeonenotenotebookmanagementcreatenotebook"></a>Office.OneNote.NotebookManagement.CreateNotebook
 
-Semnal critic utilizat pentru a monitoriza capacitatea utilizatorilor OneNote de a crea blocnotesuri în OneNote.  Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot crea blocnotesuri, acest lucru va declanșa un incident de mare severitate.
+Semnal critic utilizat pentru a monitoriza capacitatea utilizatorilor OneNote de a crea blocnotesuri în OneNote.  Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot crea blocnotesuri, acest lucru va declanșa un incident de severitate înaltă.
 
 Se colectează următoarele câmpuri:
     
@@ -4285,7 +4397,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeonenotenotebookmanagementopennotebook"></a>Office.OneNote.NotebookManagement.OpenNotebook
 
-Semnal critic utilizat pentru a monitoriza capacitatea utilizatorilor OneNote de a deschide blocnotesuri în OneNote.  Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot deschide blocnotesuri, acest lucru va declanșa un incident de mare severitate.
+Semnal critic utilizat pentru a monitoriza capacitatea utilizatorilor OneNote de a deschide blocnotesuri în OneNote.  Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot deschide blocnotesuri, acest lucru va declanșa un incident de severitate înaltă.
 
 Se colectează următoarele câmpuri:
 
@@ -4294,7 +4406,7 @@ Se colectează următoarele câmpuri:
     
 #### <a name="officeonenotesearchsearch"></a>Office.OneNote.Search.Search
 
-ID al semnalului critic utilizat pentru a monitoriza capacitatea utilizatorilor OneNote de a găsi informații în mii de pagini și blocnotesuri.   Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot afla informații în blocnotesuri, acest lucru va declanșa un incident de mare severitate.
+ID al semnalului critic utilizat pentru a monitoriza capacitatea utilizatorilor OneNote de a găsi informații în mii de pagini și blocnotesuri.   Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot găsi informații în blocnotesuri, acest lucru va declanșa un incident de severitate înaltă.
 
 Se colectează următoarele câmpuri:
 
@@ -4325,7 +4437,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeonenotestickynotesnotecreated-on-ios-onenotestickynotesnotecreated-on-android"></a>Office.OneNote.StickyNotes.NoteCreated (pe iOS), OneNote.StickyNotes.NoteCreated (pe Android)
 
-Acesta este un semnal critic utilizat pentru a monitoriza capacitatea utilizatorilor de Note adezive de a crea note în aplicație.  Telemetria se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot crea o notă, acest lucru va declanșa un incident de mare severitate.
+Acesta este un semnal critic utilizat pentru a monitoriza capacitatea utilizatorilor de Note adezive de a crea note în aplicație.  Telemetria se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot crea o notă, acest lucru va declanșa un incident de severitate înaltă.
 
 Se colectează următoarele câmpuri:
 
@@ -4338,7 +4450,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeonenotestickynotesnoteviewed-on-ios-onenotestickynotesnoteviewed-on-android"></a>Office.OneNote.StickyNotes.NoteViewed (pe iOS), OneNote.StickyNotes.NoteViewed (pe Android)
 
-Acesta este un semnal critic utilizat pentru a monitoriza capacitatea utilizatorilor de Note adezive de a crea note în aplicație.  Telemetria se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot crea o notă, acest lucru va declanșa un incident de mare severitate.
+Acesta este un semnal critic utilizat pentru a monitoriza capacitatea utilizatorilor de Note adezive de a crea note în aplicație.  Telemetria se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot crea o notă, acest lucru va declanșa un incident de severitate înaltă.
 
 Se colectează următoarele câmpuri:
 
@@ -4434,7 +4546,7 @@ Se colectează următoarele câmpuri
 
 #### <a name="officeonenotesystemapplifecycleapplaunch"></a>Office.OneNote.System.AppLifeCycle.AppLaunch
 
-Semnal critic utilizat pentru a ne asigura că utilizatorii OneNote pot lansa cu succes aplicația. Telemetria se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot lansa aplicația în fereastra noastră de performanță, acest lucru va declanșa un incident de mare severitate.
+Semnal critic utilizat pentru a ne asigura că utilizatorii OneNote pot lansa cu succes aplicația. Telemetria se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot lansa aplicația în fereastra noastră de performanță, acest lucru va declanșa un incident de severitate înaltă.
 
 Se colectează următoarele câmpuri: Niciunul
 
@@ -4487,7 +4599,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeoutlookdesktopstorescreatenewstore"></a>Office.Outlook.Desktop.Stores.CreateNewStore
 
-Colectează rezultatul de creare a unui magazin nou (cu tip și versiune), precum și codul rezultat. Monitorizăm în mod activ acest eveniment pentru a urmări starea capacității unui utilizator de a sincroniza și stoca e-mailuri local, de a arhiva e-mailuri (într-un fișier PST) sau a utiliza Grupuri.
+Colectează rezultatul de creare a unui magazin nou (cu tip și versiune), precum și codul rezultat. Monitorizăm în mod activ acest eveniment pentru a urmări capacitatea în bună stare a unui utilizator de a sincroniza și stoca e-mailuri local, de a arhiva e-mailuri (într-un fișier PST) sau a utiliza Grupuri.
 
 Se colectează următoarele câmpuri:
 
@@ -4499,7 +4611,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeoutlookmacaccountaddworkflow"></a>Office.Outlook.Mac.AccountAddWorkflow
 
-Rezultatul adăugării unui cont în Outlook. Datele sunt monitorizate pentru a garanta că nu vedem valori maxime în erori. De asemenea, vom analiza datele pentru a găsi zone care necesită îmbunătățiri. Dorim să îmbunătățim această rata de succes cu ocazia fiecărei versiuni. 
+Rezultatul adăugării unui cont în Outlook. Datele sunt monitorizate pentru a garanta că nu vedem valori maxime în erori. De asemenea analizăm datele pentru a găsi zone care necesită îmbunătățiri. Dorim să îmbunătățim această rata de succes cu ocazia fiecărei versiuni. 
 
 Se colectează următoarele câmpuri:
 
@@ -4516,7 +4628,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeoutlookmacaccountonboardingflow"></a>Office.Outlook.Mac.AccountOnboardingFlow
 
-Rezultatul adăugării unui cont în Outlook utilizând noua experiență de configurare a conturilor. Datele sunt monitorizate pentru a garanta că nu vedem valori maxime în erori. De asemenea, vom analiza datele pentru a găsi zone care necesită îmbunătățiri. Dorim să îmbunătățim această rata de succes cu ocazia fiecărei versiuni. 
+Rezultatul adăugării unui cont în Outlook utilizând noua experiență de configurare a conturilor. Datele sunt monitorizate pentru a garanta că nu vedem valori maxime în erori. De asemenea analizăm datele pentru a găsi zone care necesită îmbunătățiri. Dorim să îmbunătățim această rata de succes cu ocazia fiecărei versiuni. 
 
 Se colectează următoarele câmpuri:
 
@@ -4547,7 +4659,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeoutlookmacdeleteaccountusage"></a>Office.Outlook.Mac.DeleteAccountUsage
 
-Rezultatul ștergerii unui cont în Outlook. Datele sunt monitorizate pentru a garanta că nu vedem valori maxime în erori. De asemenea, vom analiza datele pentru a găsi zone care necesită îmbunătățiri. Dorim să îmbunătățim această rata de succes cu ocazia fiecărei versiuni. 
+Rezultatul ștergerii unui cont în Outlook. Datele sunt monitorizate pentru a garanta că nu vedem valori maxime în erori. De asemenea analizăm datele pentru a găsi zone care necesită îmbunătățiri. Dorim să îmbunătățim această rata de succes cu ocazia fiecărei versiuni. 
 
 Se colectează următoarele câmpuri:
 
@@ -4679,7 +4791,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ServerDocId:string -** GUID pentru a identifica în mod unic un document
 
-  - **Data\_StopwatchDuration:long -** timpul total al activității
+  - **Data\_StopwatchDuration:long –** timpul total al activității
 
   - **Data\_UserContinuedZRTClose:bool -** după afișarea casetei de dialog la închidere, a selectat utilizatorul „Continuare” pentru a închide?
 
@@ -4793,7 +4905,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_FailureComponent:long -** set predefinit de valori privind componenta care a cauzat nereușita protocolului (Conflict, CSI, Internă etc.)
 
-  - **Data\_FailureReason:long -** set predefinit de valori privind motivul nereușitei (FileIsCorrupt, BlockedByAntivirus etc.)
+  - **Data\_FailureReason:long –** set predefinit de valori privind motivul nereușitei (FileIsCorrupt, BlockedByAntivirus etc.)
 
   - **Data_FullDownloadRoundTripCount:long -** numărul de trasee dus-întors la server care au fost necesare pentru a descărca întregul document.
   
@@ -4919,9 +5031,9 @@ Se colectează următoarele câmpuri:
 
   - **Data\_FailureComponent:long-** set predefinit de valori privind componenta care a cauzat nereușita protocolului (Conflict, CSI, Internă etc.)
 
-  - **Data\_FailureReason:long -** set predefinit de valori privind motivul nereușitei (FileIsCorrupt, BlockedByAntivirus etc.)
+  - **Data\_FailureReason:long –** set predefinit de valori privind motivul nereușitei (FileIsCorrupt, BlockedByAntivirus etc.)
 
-  - **Data\_fLifeguarded:bool -** a fost documentul vreodată protejat (caracteristică pentru a remedia erorile din documente, fără a-i adresa solicitări utilizatorului)?
+  - **Data\_fLifeguarded:bool –** documentul a fost vreodată protejat (caracteristică pentru a remedia automat erorile din documente, fără intervenția utilizatorului)?
 
   - **Data\_HandleEnsureContentType:long -** timpul necesar pentru a garanta că toate tipurile de conținut sunt corecte
 
@@ -5892,7 +6004,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_BytesSynchronous** - numărul de byți (comprimat) de care avem nevoie înainte să putem deschide fișierul 
 
-- **Data_BytesUnknown** - numărul de byți din componentele de documente pe care nu ne așteptăm să le găsim. 
+- **Data_BytesUnknown** - numărul de byți din părțile de documente pe care nu ne așteptăm să le găsim 
 
 - **Data_Doc_AccessMode** - documentul este numai în citire/editabil 
 
@@ -5984,7 +6096,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_OpenInitiateKind** - tipul scenariului în care utilizatorii au pornit operațiunea de deschidere a fișierului. 
 
-- **Data_PartsUnknown** - numărul de componente ale documentului pentru care nu am putut obține date 
+- **Data_PartsUnknown** - numărul de părți ale documentului pentru care nu am putut obține date 
 
 - **Data_RecoverableFailureInitiationLocationTag** - etichetă unică pentru site-ul de apelare a codului folosit pentru a identifica locul din cod în care încercăm să remediem fișierul înainte de a-l deschide 
 
@@ -6480,7 +6592,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ViewKind –** tipul de vizualizare Word
 
-#### <a name="onenotecanvaspageopened"></a>OneNote.Canvas.PageOpened 
+#### <a name="onenotecanvaspageopened-previous-name-officeonenoteandroidcanvaspageopened"></a>OneNote.Canvas.PageOpened *(nume anterior)*, Office.OneNote.Android.Canvas.PageOpened
 
 Semnalul utilizată pentru a înregistra când este deschisă pagina.  Telemetria este folosită pentru a monitoriza, a detecta și a rezolva problemele cauzate când pagina este deschisă în OneNote.
 
@@ -6490,13 +6602,13 @@ Se colectează următoarele câmpuri:
 
 - **TIME_TAKEN_IN_MS** - timp necesar pentru a deschide pagina
 
-#### <a name="onenotecapturenewnotenewnotetaken"></a>OneNote.Capture.NewNote.NewNoteTaken
+#### <a name="onenotecapturenewnotenewnotetaken-previous-name-officeonenoteandroidcapturenewnotenewnotetaken"></a>OneNote.Capture.NewNote.NewNoteTaken *(nume anterior)*, Office.OneNote.Android.Capture.NewNote.NewNoteTaken
 
 Acest semnal este utilizat pentru a garanta că, după ce un utilizator se conectează la o aplicație OneNote Android, se acordă în mod corespunzător acces la blocnotesuri, iar utilizatorul creează cu succes o notă nouă.  Aceasta se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor.
 
 Nu se colectează câmpuri suplimentare.
 
-#### <a name="onenotemessagebarmessagebarclicked"></a>OneNote.MessageBar.MessageBarClicked 
+#### <a name="onenotemessagebarmessagebarclicked-previous-name-officeonenoteandroidmessagebarmessagebarclicked"></a>OneNote.MessageBar.MessageBarClicked *(nume anterior)*, Office.OneNote.Android.MessageBar.MessageBarClicked
 
 Semnalul utilizat pentru a indica probleme întâlnite în timp ce utilizați bara de mesaje.  Telemetria este folosită pentru a monitoriza, a detecta și a rezolva problemele cauzate în interacțiunea cu bara de mesaje
 
@@ -6588,6 +6700,18 @@ Se colectează următoarele câmpuri:
 
 - **token_type** - tipul de simbol utilizat pentru autentificarea contului pentru a salva fișierul, astfel încât să ne ajute să detectăm probleme de autentificare asociate cu salvarea unui fișier
 
+#### <a name="search_subtab_selected"></a>search_subtab_selected
+
+Acest eveniment ne permite să urmărim elementele fragment de tip (toate, corespondență, contacte și calendar) pe care le folosesc utilizatorii atunci când își realizează căutările, astfel încât să ne asigurăm că mecanismele de filtrare de căutare funcționează corect.
+
+Se colectează următoarele câmpuri:
+
+- **properties_general** - proprietățile generale pe care le colectează întregul eveniment Aria
+
+- **selected_reason** - cauza pentru care este selectat un fragment de tip, care ar putea fi una dintre aceste trei valori: tap_on_header, tap_on_see_all, enter_search_mode
+
+- **subtab_type** - fragmentul de tip care a fost selectat, care ar putea fi una dintre aceste patru valori: all, mail, contact, event.
+
 #### <a name="send_message"></a>send_message
 
 Este utilizat pentru a monitoriza posibilul impact negativ asupra performanței și stării trimiterii de mesaje de e-mail
@@ -6630,7 +6754,7 @@ Ne permite să detectăm și să remediem situațiile în care utilizăm prea mu
 
 Se colectează următoarele câmpuri: 
 
-- **battery_level** - ne indică nivelul bateriei de pe dispozitiv pentru a ne ajuta să detectăm când aplicația noastră provoacă un impact negativ asupra nivelului bateriei dispozitivului dvs.
+- **battery_level** - ne indică nivelul bateriei de pe dispozitiv pentru a ne ajuta să detectăm când aplicația noastră provoacă un impact negativ asupra nivelului bateriei dispozitivului.
 
 - **has_hx** - ne spune că acest cont folosește noul nostru serviciu de sincronizare, pentru a ne ajuta să detectăm problemele provocate de serviciul nostru de sincronizare
 
@@ -6732,7 +6856,7 @@ Se colectează următoarele câmpuri:
 
 - **mail_accounts_count** - numărul total de conturi de e-mail din bara laterală, pentru a vă asigura că acest lucru este configurat corect 
 
-- **mail_folder_type** - tipul de folder pe care l-a atins utilizatorul pentru a vă asigura că este configurat corect. Poate include Folderul șters, Spam sau Folderul trimis. 
+- **mail_folder_type** - tipul de folder pe care l-a accesat utilizatorul pentru a vă asigura că este configurat corect. Poate include Folderul șters, Spam sau Folderul trimis. 
 
 - **mail_inbox_unread_count** - ne ajută să ne asigurăm că contorizarea necitită este afișată și configurată corect 
 
@@ -6873,7 +6997,7 @@ Se colectează următoarele câmpuri:
 
 - **RMS.LicenseFormat** - formatul licenței: Xrml sau Json
 
-- **RMS.NoOfDomainsSearched** - numărul de domenii căutate  
+- **RMS.NoOfDomainsSearched** - numărul de domenii căutate    
 
 - **RMS.NoOfDomainsSkipped** - numărul de domenii ignorate 
 
@@ -6886,6 +7010,22 @@ Se colectează următoarele câmpuri:
 - **RMS.ServerType** - tipul de server al Serviciului de administrare a drepturilor 
 
 - **RMS.StatusCode** - cod de stare al rezultatului operațiunii
+
+#### <a name="first_visible"></a>first_visible
+
+Acest eveniment ne permite să detectăm prima dată când aplicația este lansată în mod intenționat de către utilizator. Acest eveniment este necesar pentru a vă asigura că aplicația funcționează cu succes în compilările OEM (producător de echipamente originale).
+
+Se colectează următoarele câmpuri:
+
+- **is_oem** - un câmp de urmărire care indică dacă aplicația rulează pe o variantă OEM
+
+- **is_system_install** - un câmp care urmărește prezența unui fișier proprietar preinstalat, care ar trebui să indice că această instalare este OEM 
+
+- **manufacturer** - producătorul dispozitivului
+
+- **model** - modelul dispozitivului
+
+- **systemFlagSet** - valoarea semnalului de sistem Android (ApplicationInfo. FLAG_SYSTEM) care indică dacă aplicația a fost instalată ca parte a imaginii de sistem a dispozitivului
 
 #### <a name="getuserop"></a>GetUserOp
 
@@ -7047,9 +7187,9 @@ Se colectează următoarele câmpuri:
 
   - **Data\_APIInitTime:integer –** timpul necesar pentru a inițializa modulul Visio API
 
-  - **Data\_AppSizeHeight –** Adăugați**-** la înălțimea ferestrei
+  - **Data\_AppSizeHeight –** Adaugă**-** la înălțimea ferestrei
 
-  - **Data\_AppSizeWidth –** Adăugați**-** la lățimea ferestrei
+  - **Data\_AppSizeWidth –** Adaugă**-** la lățimea ferestrei
 
   - **Data\_AppURL –** URL-ul programului de completare; înregistrează adresa URL completă pentru programele de completare din magazin și domeniul adresei URL pentru cele din afara magazinului
 
@@ -7345,9 +7485,9 @@ Se colectează următoarele câmpuri:
 
 - **TotalTime** - timp total
 
-#### <a name="onenoteappappbootcomplete"></a>OneNote.App.AppBootComplete 
+#### <a name="onenoteappappbootcomplete-previous-name-officeonenoteandroidappappbootcomplete"></a>OneNote.App.AppBootComplete *(nume anterior)*, Office.OneNote.Android.App.AppBootComplete 
 
-Semnal critic utilizat pentru a ne asigura că utilizatorii consumatori noi (cont Microsoft) pot lansa și utiliza pentru prima dată cu succes OneNote.  Aceasta se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor.  Dacă utilizatorii nu pot lansa aplicația pentru prima dată, acest lucru va declanșa un incident de mare severitate.
+Semnal critic utilizat pentru a ne asigura că utilizatorii consumatori noi (cont Microsoft) pot lansa și utiliza pentru prima dată cu succes OneNote.  Aceasta se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor.  Dacă utilizatorii nu pot lansa aplicația pentru prima dată, acest lucru va declanșa un incident de severitate înaltă.
 
 Se colectează următoarele câmpuri: 
 
@@ -7385,7 +7525,9 @@ Se colectează următoarele câmpuri:
 
 - **IS_COLD_BOOT**- indică dacă lansați aplicația când aceasta nu rulează în fundal
 
-- **IS_FIRST_LAUNCH**- indică dacă aceasta este prima dată când aplicația a fost lansată pe dispozitiv 
+- **IS_FIRST_LAUNCH**- indică dacă aceasta este prima dată când aplicația a fost lansată pe dispozitiv
+
+- **IS_FOLDABLE_TYPE** - indică dacă dispozitivul este un dispozitiv pliabil
 
 - **IS_PHONE**- indică dacă dispozitivul este un telefon sau o tabletă
 
@@ -7445,23 +7587,27 @@ Se colectează următoarele câmpuri:
  
 - **USER_INTERACTED_DURING_EVENT**- indică dacă utilizatorul a interacționat în timpul încărcării
 
-#### <a name="onenoteapponenoteappforeground"></a>OneNote. app. OneNoteAppForeground 
+#### <a name="onenoteapponenoteappforeground-previous-name-officeonenoteandroidapponenoteappforeground"></a>OneNote.App.OneNoteAppForeground *(nume anterior)*, Office.OneNote.Android.App.OneNoteAppForeground
 
 Semnalul folosit pentru a indica aplicația OneNote este în prim plan.  Telemetria se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. 
 
 Următoarele câmpuri sunt colectate: Niciunul
 
-#### <a name="onenoteapplaunch"></a>OneNote. AppLaunch
+#### <a name="onenoteapplaunch-previous-name-officeandroidearlytelemetryapplaunch"></a>OneNote.AppLaunch *(nume anterior)*, Office.Android.EarlyTelemetry.AppLaunch
 
 Semnal critic utilizat pentru a ne asigura că utilizatorii OneNote pot lansa cu succes aplicația.  Telemetria se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. 
 
 Se colectează următoarele câmpuri: 
+
+- **ANDROID_SDK_VERSION** - captează versiunea SDK Android
 
 - **FirstLaunchTime**- timpul înregistrărilor când a fost lansată prima dată aplicația
 
 - **InstallLocation** - indică dacă aplicația este preinstalată sau este descărcată din Store
 
 - **is_boot_completed_ever**- indică dacă aplicația a fost lansată cu succes înainte pe dispozitiv
+
+- **IS_DARK_MODE_ENABLED** - o valoare Booleană care indică dacă aplicația este în modul întunecat sau nu
 
 - **NewOneNoteUser**- identificați dacă utilizatorul este nou
 
@@ -7532,7 +7678,7 @@ Se colectează următoarele câmpuri:
 
   - **Data_CorrelationId -** un GUID a trecut la PowerPoint prin ProtocolHandler pentru corelarea telemetriei. ProtocolHandler este un proces separat care gestionează linkurile Office pentru sistemul de operare.
 
-  - **Data\_CppUncaughtExceptionCount:long –** excepții native neprinse în timp ce rula activitatea
+  - **Data\_CppUncaughtExceptionCount:long -** excepții native necaptate în timp ce rula activitatea
 
   - **Data\_CreateDocumentTimeMS –** durata executării metodei CreateDocumentTimeMS în milisecunde
 
@@ -7548,21 +7694,21 @@ Se colectează următoarele câmpuri:
 
   - **Data\_DetermineFileType –** durata executării metodei DetermineFileType în milisecunde
 
-  - **Data\_Doc\_AccessMode:long –** cum a fost deschis acest document (doar în citire / citire-scriere)
+  - **Data\_Doc\_AccessMode:long –** cum a fost deschis acest document (doar în citire/citire-scriere)
 
-  - **Data\_Doc\_AssistedReadingReasons:long –** set predefinit de valori pentru care documentul a fost deschis în modul de citire asistată
+  - **Data\_Doc\_AssistedReadingReasons:long -** set predefinit de valori pentru care documentul a fost deschis în modul de citire asistată
 
   - **Data_Doc_AsyncOpenKind:long –** indică dacă s-a deschis o versiune memorată în cache a documentului cloud și ce logică de reîmprospătare asincronă s-a folosit.
 
-  - **Data\_Doc\_ChunkingType:long –** cum este stocat documentul în SharePoint
+  - **Data\_Doc\_ChunkingType:long -** cum este stocat documentul în SharePoint
 
-  - **Data\_Doc\_EdpState:long –** starea Enterprise Data Protection a documentului
+  - **Data\_Doc\_EdpState:long -** starea Enterprise Data Protection a documentului
 
-  - **Data\_Doc\_Ext:string –** extensia documentului
+  - **Data\_Doc\_Ext:string -** extensia documentului
 
-  - **Data\_Doc\_Extension:string –** extensia documentului
+  - **Data\_Doc\_Extension:string -** extensia documentului
 
-  - **Data\_Doc\_FileFormat:long –** set predefinit de valori pentru formatul fișierului (mai granular decât extensia)
+  - **Data\_Doc\_FileFormat:long -** set predefinit de valori pentru formatul fișierului (mai granular decât extensia)
 
   - **Data\_Doc\_Fqdn:string –** unde este stocat documentul (SharePoint.com, live.net), disponibil numai pentru domeniile Office 365
 
@@ -7580,43 +7726,43 @@ Se colectează următoarele câmpuri:
 
   - **Data\_Doc\_IsIncrementalOpen:bool –** documentul a fost deschis incremental (caracteristică nouă care deschide documentul fără să-l descarce în totalitate)
 
-  - **Data\_Doc\_IsOcsSupported:bool –** dacă documentul acceptă elaborarea în comun folosind noul serviciu OCS
+  - **Data\_Doc\_IsOcsSupported:bool -** dacă documentul acceptă elaborarea în comun folosind noul serviciu OCS
 
-  - **Data\_Doc\_IsOpeningOfflineCopy:bool –** dacă documentul este deschis din memoria cache locală?
+  - **Data\_Doc\_IsOpeningOfflineCopy:bool -** documentul este deschis din memoria cache locală?
 
-  - **Data\_Doc\_IsSyncBacked:bool –** dacă documentul este deschis din folderul care folosește aplicația de sincronizare OneDrive
+  - **Data\_Doc\_IsSyncBacked:bool -** dacă documentul este deschis din folderul care folosește aplicația de sincronizare inversă OneDrive
 
-  - **Data\_Doc\_Location:long –** set predefinit de valori privind locul de stocare a documentului (Local, SharePoint, WOPI, Rețea etc.)
+  - **Data\_Doc\_Location:long -** set predefinit de valori privind locul de stocare a documentului (Local, SharePoint, WOPI, Rețea etc.)
 
   - **Data\_Doc\_LocationDetails:long –** set predefinit de valori privind locația mai detaliată (folderul Temp, folderul de descărcări, Documente OneDrive, Imagini OneDrive etc.)
 
-  - **Data\_Doc\_NumberCoAuthors:long –** numărul de coautori la momentul deschiderii unui document
+  - **Data\_Doc\_NumberCoAuthors:long -** numărul de coautori la momentul deschiderii unui document
 
-  - **Data\_Doc\_PasswordFlags:long –** set predefinit de valori privind modul în care documentul este criptat cu o parolă (Niciunul, parolă pentru citire, parolă pentru editare)
+  - **Data\_Doc\_PasswordFlags:long -** set predefinit de valori privind modul în care documentul este criptat cu o parolă (Fără, parolă pentru citire, parolă pentru editare)
 
   - **Data\_Doc\_ReadOnlyReasons:long –** set predefinit de valori privind motivul pentru care acest document a fost marcat doar în citire (blocat pe server, document final, protejat prin parolă pentru editare etc.)
 
-  - **Data\_Doc\_ResourceIdHash:string –** codul hash al identificatorului de resurse pentru documentele stocate în cloud
+  - **Data\_Doc\_ResourceIdHash:string -** codul hash al identificatorului de resurse pentru documentele stocate în cloud
 
   - **Data_Doc_RtcType -**  indică modul în care a fost configurat canalul în timp real (RTC) pentru fișierul curent (dezactivat, neacceptat, la cerere, activat permanent etc.).
 
-  - **Data\_Doc\_ServerDocId:string –** identificator imutabil pentru documentele stocate în cloud
+  - **Data\_Doc\_ServerDocId:string –** identificatorul imutabil pentru documentele stocate în cloud
 
-  - **Data\_Doc\_ServerProtocol:long –** set predefinit de valori privind protocolul folosit în comunicarea cu serverul (Http, Cobalt, WOPI etc.)
-
+  - **Data\_Doc\_ServerProtocol:long -** set predefinit de valori privind protocolul folosit în comunicarea cu serverul (Http, Cobalt, WOPI etc.)
+ 
   - **Data\_Doc\_ServerType:long –** set predefinit de valori privind tipul serverului (SharePoint, DropBox, WOPI)
 
   - **Data\_Doc\_ServerVersion:long –** dacă serverul se bazează pe Office14, Office15, Office 16
 
   - **Data\_Doc\_SessionId:long –** GUID generat care identifică instanța documentului din aceeași sesiune de proces
 
-  - **Data\_Doc\_SharePointServiceContext:string –** un șir opac, de obicei GridManagerID.FarmID. Util pentru corelarea jurnalelor de la client și de pe server
+  - **Data\_Doc\_SharePointServiceContext:string -** un șir opac, de obicei GridManagerID.FarmID. Util pentru corelarea jurnalelor de la client și de pe server
 
-  - **Data\_Doc\_SizeInBytes:long –** dimensiunea documentului în byți
+  - **Data\_Doc\_SizeInBytes:long -** dimensiunea documentului în octeți
 
-  - **Data\_Doc\_SpecialChars:long –** Bitmask ce arată caracterele speciale din adresa URL sau calea documentului
+  - **Data\_Doc\_SpecialChars:long -** Bitmask ce arată caracterele speciale din adresa URL sau calea documentului
 
-  - **Data\_Doc\_StorageProviderId:string –** șir care identifică furnizorul de stocare al documentului, precum „DropBox”
+  - **Data\_Doc\_StorageProviderId:string -** șir care identifică furnizorul de stocare al documentului, precum „DropBox”
 
   - **Data\_Doc\_StreamAvailability:long –** set predefinit de valori privind starea șirului de document (disponibil, dezactivat definitiv, indisponibil)
 
@@ -7644,7 +7790,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ExecutionCount –** numărul de executări ale protocolului IncOpen
 
-  - **Data\_FailureComponent:long –** set predefinit de valori privind componenta care a cauzat nereușita protocolului (Conflict, CSI, Internă etc.)
+  - **Data\_FailureComponent:long -** set predefinit de valori privind componenta care a cauzat nereușita protocolului (Conflict, CSI, Internă etc.)
 
   - **Data\_FailureReason:long –** set predefinit de valori privind motivul nereușitei (FileIsCorrupt, BlockedByAntivirus etc.)
 
@@ -7731,6 +7877,10 @@ Se colectează următoarele câmpuri:
   - **Data\_NotRequiredExcludedParts –** numărul total de părți zip care nu sunt necesare pentru prima redare și excluse
 
   - **Data\_NotRequiredExcludedPartsSize –** numărul total de părți zip care nu sunt necesare pentru prima redare și excluse
+
+  - **Data_OngoingBlockingOpenCount –** este numărul de protocoale deschise blocante deschise care rulează în prezent.
+  
+  - **Data_OngoingOpenCount –** este numărul de protocoale deschise care rulează în prezent.
 
   - **Data\_OpenCompleteFailureHR –** rezultatul motivului pentru care nu a funcționat protocolul OpenComplete
 
@@ -7963,11 +8113,11 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officesystemsessionhandoff"></a>Office.System.SessionHandoff
 
-Indică faptul că sesiunea Office curentă este o sesiune de predare. Acest lucru înseamnă că manipularea unei solicitări de utilizator pentru a deschide un document este transmisă unei instanțe care rulează deja cu aceeași aplicație.
+Indică faptul că sesiunea Office curentă este o sesiune de predare. Acest lucru înseamnă că tratarea unei solicitări de la utilizator pentru a deschide un document este transmisă unei instanțe care rulează deja din aceeași aplicație.
 
 Se colectează următoarele câmpuri.
 
-- **ParentSessionId** - ID-ul sesiunii care va prelua manipularea cererii utilizatorilor.
+- **ParentSessionId** - ID-ul sesiunii care va prelua procesarea cererii utilizatorilor.
 
 #### <a name="officetelemetryengineisprelaunch"></a>Office.TelemetryEngine.IsPreLaunch
 
@@ -8033,7 +8183,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_BytesSynchronous** - numărul de byți (comprimat) de care avem nevoie înainte să putem deschide fișierul
 
-- **Data_BytesUnknown** - numărul de byți din componentele de documente pe care nu ne așteptăm să le găsim 
+- **Data_BytesUnknown** - numărul de byți din părțile de documente pe care nu ne așteptăm să le găsim 
 
 - **Data_DetachedDuration** - cât timp a fost activitatea detașată de fir
 
@@ -8127,7 +8277,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_MoveFlightEnabled** - dacă ediția flight este activată pentru caracteristica de mutare
 
-- **Data_PartsUnknown** - numărul de componente ale documentului pentru care nu am putut obține date
+- **Data_PartsUnknown** - numărul de părți ale documentului pentru care nu am putut obține date
 
 - **Data_RecoverableFailureInitiationLocationTag** - etichetă unică pentru site-ul de apelare a codului folosit pentru a identifica locul din cod în care încercăm să remediem fișierul înainte de a-l deschide
 
@@ -8158,7 +8308,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_BytesSynchronous** - numărul de byți (comprimat) de care avem nevoie înainte să putem deschide fișierul
     
-- **Data_BytesUnknown** - numărul de byți din componentele de documente pe care nu ne așteptăm să le găsim
+- **Data_BytesUnknown** - numărul de byți din părțile de documente pe care nu ne așteptăm să le găsim
 
 - **Data_DetachedDuration** - cât timp a fost activitatea detașată de fir
 
@@ -8254,7 +8404,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_MoveFlightEnabled** - dacă ediția flight este activată pentru caracteristica de mutare
 
-- **Data_PartsUnknown** - numărul de componente ale documentului pentru care nu am putut obține date
+- **Data_PartsUnknown** - numărul de părți ale documentului pentru care nu am putut obține date
 
 - **Data_RecoverableFailureInitiationLocationTag** - etichetă unică pentru site-ul de apelare a codului folosit pentru a identifica locul din cod în care încercăm să remediem fișierul înainte de a-l deschide.
 
@@ -8283,7 +8433,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_BytesSynchronous –** numărul de byți (comprimat) de care avem nevoie înainte să putem deschide fișierul
 
-  - **Data\_BytesUnknown –** numărul de byți din componentele de documente pe care nu ne așteptăm să le găsim.
+  - **Data\_BytesUnknown –** numărul de byți din părțile de documente pe care nu ne așteptăm să le găsim.
 
   - **Data\_Doc\_AccessMode –** documentul este doar în citire/editabil
 
@@ -8377,7 +8527,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_MoveFlightEnabled –** dacă ediția flight este activată pentru caracteristica de mutare
 
-  - **Data\_PartsUnknown –** numărul de componente ale documentului pentru care nu am putut obține date
+  - **Data\_PartsUnknown –** numărul de părți ale documentului pentru care nu am putut obține date
 
   - **Data\_RecoverableFailureInitiationLocationTag –** etichetă unică pentru site-ul de apelare a codului folosit pentru a identifica locul din cod în care încercăm să remediem fișierul înainte de a-l deschide
 
@@ -8406,7 +8556,7 @@ Se colectează următoarele câmpuri:
     
 - **Data_BytesSynchronous** - numărul de byți (comprimat) de care avem nevoie înainte să putem deschide fișierul
 
-- **Data_BytesUnknown** - numărul de byți din componentele de documente pe care nu ne așteptăm să le găsim
+- **Data_BytesUnknown** - numărul de byți din părțile de documente pe care nu ne așteptăm să le găsim
 
 - **Data_DetachedDuration** - cât timp a fost activitatea detașată de fir
 
@@ -8500,7 +8650,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_MoveFlightEnabled** - dacă ediția flight este activată pentru caracteristica de mutare
 
-- **Data_PartsUnknown** - numărul de componente ale documentului pentru care nu am putut obține date
+- **Data_PartsUnknown** - numărul de părți ale documentului pentru care nu am putut obține date
 
 - **Data_RecoverableFailureInitiationLocationTag** - etichetă unică pentru site-ul de apelare a codului folosit pentru a identifica locul din cod în care încercăm să remediem fișierul înainte de a-l deschide
 
@@ -9272,11 +9422,11 @@ Se colectează următoarele câmpuri:
 
 - **ReportingOSVerStr** - versiunea sistemului de operare
 
-- **SessionBuildNumber** - versiunea aplicației căzute
+- **SessionBuildNumber** - versiunea aplicației care a suferit căderea
 
-- **SessionIDSMatch** - Boolean pentru a verifica dacă ID-ul sesiunii de raportare este la fel ca cel preluat de Merp
+- **SessionIDSMatch** - valoare Booleană utilizată pentru a verifica dacă ID-ul sesiunii de raportare este la fel ca cel preluat de Merp
 
-- **SessionVersion** - versiunea aplicației căzute - **Stackhash** - codul hash pentru trasarea stivei aplicației căzute
+- **SessionVersion** - versiunea aplicației care a suferit căderea - **Stackhash** - codul hash pentru trasarea stivei aplicației care a suferit căderea
 
 - **UAEType** - enum care oferă informații despre ce tip de cădere a fost
 
@@ -9406,7 +9556,7 @@ Se colectează următoarele câmpuri:
 
 - **entity** - urmărește numele entității care a apelat operațiunea de preluare
 
-- **operation** - valoarea brută a operațiunii, indiferent că este vorba despre salvare, preluare sau „citire scriere coadă blocată”
+- **operation** - valoarea brută a operațiunii, indiferent că este vorba despre salvare, preluare sau „coadă citire scriere blocată”
 
 #### <a name="inbox_component"></a>inbox_component
 
@@ -9460,9 +9610,9 @@ Se colectează următoarele câmpuri:
 
 - **storeExperience** - acest lucru este utilizat pentru a determina dacă utilizatorul a fost eligibil pentru a vedea experiența din magazinul SDK.
 
-- **stringVariant** - acest lucru este utilizat pentru a determina tipul de șiruri pe care le vede utilizatorul atunci când aterizează pe pagina noastră. Rețineți că, pentru orice pagină, cum ar fi „Versiune de încercare“, utilizatorul poate fi eligibil pentru a vedea șiruri diferite, în funcție de faptul dacă au instalat Office Legacy sau dacă au activat anterior Office. Eventualele enumerări ale acestei proprietăți sunt „LegacyUpsell“, „OfficeOpened“, „implicit“, „YesIntent“, „NoIntent“ etc.
+- **stringVariant** - acest lucru este utilizat pentru a determina tipul de șiruri pe care le vede utilizatorul atunci când aterizează pe pagina noastră. Rețineți că, pentru orice pagină, cum ar fi „Versiune de încercare“, utilizatorul poate fi eligibil pentru a vedea șiruri diferite, în funcție de faptul dacă a instalat Office Legacy sau dacă a activat anterior Office. Eventualele enumerări ale acestei proprietăți sunt „LegacyUpsell“, „OfficeOpened“, „implicit“, „YesIntent“, „NoIntent“ etc.
 
-- **windowsBuildType** - acest lucru este utilizat pentru a urmări tipul de WindowsBuildType pe care este utilizatorul. i.e. „RS4“, „RS5“, „RS19H1“, „Vibranium“ etc. Pe măsură ce experiențele noastre sunt, de obicei, direcționate către diferite WindowsBuildTypes, această proprietate este esențială pentru diferențierea între lansări. 
+- **windowsBuildType** - acesta este utilizat pentru a urmări tipul de WindowsBuildType pe care este utilizatorul. i.e. „RS4“, „RS5“, „RS19H1“, „Vibranium“ etc. Pe măsură ce experiențele noastre sunt, de obicei, direcționate către diferite WindowsBuildTypes, această proprietate este esențială pentru diferențierea între lansări. 
 
 #### <a name="ipcpbootstrapuser"></a>IpcpBootstrapUser
 
@@ -9533,6 +9683,86 @@ Se colectează următoarele câmpuri:
 - **RMS.UserProvided** - indică dacă se furnizează consumatorul ca intrare pentru apelul API sau nu 
 
 - **UserInfo.UserObjectId** - ID al obiectului utilizator
+
+#### <a name="ipcpgetkey"></a>IpcpGetKey
+
+Se colectează atunci când un utilizator încearcă să deschidă un document protejat cu IRM (Information Rights Management) sau să aplice protecții IRM. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează apelul API IpcpGetKey. 
+
+Se colectează următoarele câmpuri:
+
+- **AppInfo.ClientHierarchy** - ierarhie client care indică faptul că aplicația rulează în mediul de producție sau în mediul de dezvoltator
+
+- **AppInfo.Name** - nume aplicație.
+
+- **AppInfo.Version** - versiunea aplicației
+
+- **iKey** - ID al serverului pentru servicii de înregistrare
+
+- **RMS.ApplicationScenarioId** - ID-ul scenariului furnizat de aplicație
+
+- **RMS.AuthCallbackProvided** - indică dacă se furnizează callback pentru autentificare ca intrare pentru apelul API sau nu
+
+- **RMS.ConnectionMode** - modul de conexiune între clientul Serviciu de administrare a drepturilor și server: online sau offline
+
+- **RMS.ContentId** - ID-ul de conținut al documentului
+
+- **RMS.Duration** - timp total pentru finalizarea apelului API
+
+- **RMS.DurationWithoutExternalOps** - timp total minus operațiuni externe consumate, cum ar fi latența de rețea.
+
+- **RMS.ErrorCode** - codul de eroare returnat de apelul API, dacă există.
+
+- **RMS. EulId** - ID-ul licenței pentru utilizatorul final
+
+- **RMS. EulProvided** - indică dacă furnizează licența de utilizator final ca intrare a apelului API sau nu
+
+- **RMS.GuestTenant** - ID-ul entității găzduite invitat pentru utilizator 
+
+- **RMS.HomeTenant** - ID-ul entității găzduite de domiciliu pentru utilizator
+
+- **RMS.HttpCall** - indică dacă există operațiune http
+
+- **RMS.Identity.ExtranetUrl** - URL-ul de extranet pentru serverul Serviciului de administrare a drepturilor pentru utilizator, colectat în timpul obținerii unui nou Certificat de cont de drepturi de la server
+
+- **RMS.Identity.IntranetUrl** - URL-ul de intranet pentru serverul Serviciului de administrare a drepturilor pentru utilizator, colectat în timpul obținerii unui nou Certificat de cont de drepturi de la server
+
+- **RMS.Identity.Status** - prima dată când se obține Certificatul de cont de drepturi de la server sau când se reînnoiește Certificatul de cont de drepturi 
+
+- **RMS.Identity.Type** - tipul de cont de utilizator, cum ar fi cont Windows sau cont live
+
+- **RMS.Identity.UserProvided** - indică dacă adresa de e-mail a utilizatorului a fost furnizată sau nu în timpul obținerii unui nou Certificat de cont de drepturi de la server
+
+- **RMS.IssuerId** - ID-ul serverului RMS (Rights Management Service) care emite Certificatul de cont de drepturi 
+
+- **RMS.KeyHandle** - adresa de memorie pentru handle-ul de cheie
+
+- **RMS.LicenseFormat** - formatul licenței: Xrml sau Json
+
+- **RMS.PL. ExtranetUrl** - URL-ul extranet din licența de publicare
+
+- **RMS.PL. IntranetUrl** - URL-ul intranet din licența de publicare
+
+- **RMS.PL. KeyType** - valorile „single” sau „double” indică dacă PL a fost protejat cu o singură cheie de protecție sau cu o cheie de protecție dublă
+
+- **RMS.RACType** - tipul Certificatului de cont de drepturi
+
+- **RMS.Result** - succes sau eșec al apelului API
+
+- **RMS.ScenarioId** - ID-ul scenariului definit de API
+
+- **RMS.SDKVersion** - versiunea clientului pentru Serviciul de administrare a drepturilor
+
+- **RMS.ServerType** - tipul de server al Serviciului de administrare a drepturilor
+
+- **RMS.StatusCode** - cod de stare al rezultatului returnat
+
+- **RMS.TemplatesCount** - numărul de șabloane
+
+- **RMS.TokenProvided** - indică dacă se furnizează tokenul ca intrare pentru apelul API sau nu 
+
+- **RMS.UserProvided** - indică dacă se furnizează consumatorul ca intrare pentru apelul API sau nu 
+
+- **UserInfo.UserObjectId** - ID-ul obiectului utilizator
 
 #### <a name="json_parse_error"></a>json_parse_error 
  
@@ -9987,9 +10217,9 @@ Se colectează următoarele câmpuri:
 
 - **Data_AcceptedContactMeNew** - indică dacă un utilizator a acceptat să fie contactat de către Microsoft pentru aderarea la programul Office Insider
 
-- **Data_InsiderLevel** - nivelul Insider la deschiderea casetei de dialog „Asociați-vă la Office Insider”
+- **Data_InsiderLevel** - nivelul Insider la deschiderea casetei de dialog „Alăturați-vă programului Office Insider”
 
-- **Data_InsiderLevelNew** - nivelul Insider la închiderea casetei de dialog "Asociați-vă la Office Insider"
+- **Data_InsiderLevelNew** - nivelul Insider la închiderea casetei de dialog „Alăturați-vă programului Office Insider”
 
 - **Data_IsInternalUser** - indică dacă aplicația se execută sub acreditările unui cont Microsoft corporativ.
 
@@ -10092,7 +10322,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_WasSuccessful: bool –** true dacă deschiderea a reușit
 
-#### <a name="onenotesyncprovisioningcompleted"></a>OneNote.Sync.ProvisioningCompleted
+#### <a name="onenotesyncprovisioningcompleted-previous-name-officeonenoteandroidsyncprovisioningcompleted"></a>OneNote.Sync.ProvisioningCompleted *(nume anterior)*, Office.OneNote.Android.Sync.ProvisioningCompleted
 
 Semnalul critic este utilizat pentru a garanta că, după ce un utilizator se conectează la o aplicație OneNote Android, se acordă acces în mod corespunzător la blocnotesuri, astfel încât să fie accesate cu ușurință. Aceasta se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor
 
@@ -10108,7 +10338,7 @@ Se colectează următoarele câmpuri:
 
 - **TimeTakenInMilliSeconds** - returnează timpul necesar pentru a finaliza asigurarea accesului în milisecunde
 
-#### <a name="onenotesyncprovisioningstarted"></a>OneNote.Sync.ProvisioningStarted
+#### <a name="onenotesyncprovisioningstarted-previous-name-officeonenoteandroidsyncprovisioningstarted"></a>OneNote.Sync.ProvisioningStarted *(nume anterior)*, Office.OneNote.Android.Sync.ProvisioningStarted
 
 Semnalul critic este utilizat pentru a garanta că, după ce un utilizator se conectează la o aplicație OneNote Android, se acordă în mod corespunzător acces la blocnotesuri, astfel încât să fie accesate cu succes.  Aceasta se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor
 
@@ -10664,6 +10894,22 @@ Se colectează următoarele câmpuri:
 
 - **ExceptionErrorMessage**- mesaj de eroare detaliat
 
+#### <a name="office_android_earlytelemetry_expansionfileserrors"></a>Office_Android_EarlyTelemetry_ExpansionFilesErrors
+
+Setul de extensii APK pentru aplicația mobilă Office sunt fișierele suplimentare de resurse pe care dezvoltatorii de aplicații Android le pot publica împreună cu aplicația lor. Pentru ca fișierele noastre de extindere să fie mai fiabile, înregistrăm în jurnal cauza erorilor care au loc în descărcarea fișierelor de extindere sau în timp ce se citesc fișierele de extindere descărcate.
+
+Se colectează următoarele câmpuri:
+
+- **Data_ClassName** - text ce reprezintă numele fișierului de cod sursă, în care există o eroare.
+
+- **Data_ErrorMessage** - text ce reprezintă operațiunea care nu a reușit.
+
+- **Data_ExceptionMessage** - un câmp text opțional care reprezintă cauza excepției.
+
+- **Data_ExceptionType** - un câmp text opțional care reprezintă numele excepției lansat din codul sursă.
+
+- **Data_MethodName** - text reprezentând numele metodei din codul sursă unde există o eroare.
+
 #### <a name="officeandroidearlytelemetrysharedlibraryloadersearchandloadlibraryerror"></a>Office. Android.EarlyTelemetry. SharedLibraryLoadersearchAndloadLibraryError 
 
 Vom înregistra acest eveniment în cazul în care există erori în timpul încărcării bibliotecilor partajate. Pot exista erori de încărcare pentru biblioteci din două motive 1) APK instalat este incompatibil cu dispozitivul. 2) Biblioteca pe care încercăm să o încărcăm poate fi deteriorată, din cauza erorilor din extragerea ei din cauza spațiului de disc redus sau a memoriei insuficiente.
@@ -10674,7 +10920,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_FreeSpaceInMB** - spațiu disponibil pe dispozitiv 
 
-- **Data_nickName**- numele bibliotecii care nu poate fi încărcată.
+- **Data_nickName** - numele bibliotecii care nu poate fi încărcată.
 
 #### <a name="officeandroidintuneintunejavacopyfailedattempts"></a>Office.Android.Intune.IntuneJavaCopyFailedAttempts
 
