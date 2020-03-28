@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre datele de diagnosticare obligatorii în Office și le furnizează o listă de evenimente și câmpuri de date.
 hideEdit: true
-ms.openlocfilehash: 065fb887fe0af4bb68576310c3ceb4842b163bf1
-ms.sourcegitcommit: 95aa5a2587e7333dfbb2ab0d4d898789645a4275
+ms.openlocfilehash: fbb0e7b095becb664ff05fef67cd47f3360130b2
+ms.sourcegitcommit: 269825241b1fa1831655ff599c97d5afa85b3895
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "42946196"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "42983746"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Date de diagnosticare obligatorii pentru Office
 
@@ -525,6 +525,122 @@ Următoarele câmpuri de date sunt comune pentru toate evenimentele OneNote pe M
 
 - **UserInfo_OtherIdType** - o listă de tipuri de conturi non-primare.
 
+## <a name="data-fields-that-are-common-for-outlook-mobile-events"></a>Câmpuri de date care sunt uzuale pentru evenimentele mobile Outlook
+
+Outlook Mobile colectează câmpuri comune pentru fiecare dintre evenimentele noastre, pentru a ne asigura că aplicația este actualizată, securizată și funcțională, conform așteptărilor. 
+
+Următoarele câmpuri de date sunt comune pentru toate evenimentele Outlook pentru iOS și Android.
+
+- **aad_tenant_id** - ID-ul entității găzduite a clientului, dacă este disponibil
+
+- **account_cid** - un identificator sub pseudonim care reprezintă utilizatorul curent.
+
+- **account_domain** - numele de domeniu al contului
+
+- **userPuid** - identificatorul de utilizator unic global pentru un cont Microsoft pentru consumatori.
+
+- **account_type** - urmărește tipul de cont, cum ar fi Office 365, memoria cache din Google Cloud, Outlook.com etc.
+
+- **action** - numele evenimentului acțiune (cum ar fi arhivare, ștergere etc.), astfel încât să putem detecta probleme cu anumite acțiuni întreprinse
+
+- **ad_id**- identificatorul unic de publicitate
+
+- **app_version** - versiunea curentă a aplicației instalată pentru a ne ajuta să detectăm problemele care afectează anumite versiuni de aplicație 
+
+- **AppInfo.ETag** - un identificator unic pentru gestionarea lansării caracteristicilor noastre, pentru a ne ajuta să detectăm problemele care afectează anumite caracteristici în curs de lansare
+
+- **AppInfo.Language** - setarea curentă a limbii dispozitivului pentru a ne ajuta să detectăm problemele care afectează anumite limbi
+
+- **AppInfo.Version** - versiunea curentă a aplicației instalate pentru a ne ajuta să detectăm problemele care afectează anumite versiuni de aplicație
+
+- **customer_type** - indică tipul de client (consumator, comercial, terț etc.), pentru a ne ajuta să detectăm problemele care afectează anumite tipuri de clienți
+
+- **device_category** - indică ce tip de dispozitiv este (telefon, tabletă etc.), pentru a ne ajuta să detectăm problemele specifice categoriei de dispozitive
+
+- **DeviceInfo.Id** - un identificator unic al dispozitivelor, pentru a ne ajuta să detectăm probleme specifice 
+
+- **DeviceInfo.Make** - marca dispozitivului (de exemplu, Apple, Samsung etc.) pentru a ne ajuta să detectăm probleme specifice de marcă ale dispozitivului
+
+- **DeviceInfo.Model** - modelul dispozitivului (de exemplu, iPhone 6s), pentru a ne ajuta să detectăm probleme specifice de model ale dispozitivului
+
+- **DeviceInfo.NetworkType** - rețeaua utilizată pe dispozitivul curent (WiFi, date celulare etc.) pentru a ne ajuta să detectăm probleme specifice de rețea ale dispozitivului
+
+- **DeviceInfo.OsBuild** - compilarea SO actuală a dispozitivului pentru a ne ajuta să detectăm problemele care afectează anumite compilări OS
+
+- **DeviceInfo.OsName** - numele sistemului de operare (de exemplu, iOS), pentru a ne ajuta să detectăm problemele care afectează anumite platforme
+
+- **DeviceInfo.OsVersion** - versiunea SO actuală a dispozitivului pentru a ne ajuta să detectăm problemele care afectează anumite versiuni OS
+
+- **DeviceInfo.SDKUid** - identificatorul unic al dispozitivului (similar cu DeviceInfo.Id)
+
+- **EventInfo. InitId** - ID utilizat ca parte a succedării pentru a comanda evenimentul prin intermediul conductei de telemetrie, pentru a ne ajuta să detectăm cauza principală a unei probleme de conducte
+
+- **EventInfo.SdkVersion** - versiunea de SDK pe care o utilizăm pentru a trimite telemetria noastră, pentru a ne ajuta să detectăm cauza principală a unei probleme de conducte
+
+- **EventInfo.Sequence** - secvența este pentru a comanda evenimentul prin intermediul conductei de telemetrie, pentru a ne ajuta să detectăm cauza principală a unei probleme de conducte
+
+- **EventInfo.Source** - ne indică ce parte din cod a trimis evenimentul pentru a ne ajuta să detectăm cauza principală a unei probleme
+
+- **EventInfo.Time** - data și ora la care a fost emis evenimentul de pe dispozitiv, astfel încât sistemele noastre să poată gestiona cu succes evenimentele care sosesc
+
+- **eventpriority** - prioritatea relativă a evenimentului telemetrie față de alte evenimente, astfel încât sistemele noastre să poată gestiona cu succes evenimentele care sosesc
+
+- **first_launch_date** - prima dată când a fost lansată aplicația pentru a ne ajuta să înțelegem când a început prima problemă
+
+- **hashed_email** - identificator sub pseudonim care reprezintă email-ul utilizatorului curent
+
+- **is_first_session**- piste dacă aceasta este prima sesiune a aplicației pentru depanare
+
+- **origin** - originea unei acțiuni. De exemplu, marcarea unui mesaj citit poate să provină din lista de mesaje sau o notificare de corespondență nouă, acest lucru ne ajută să detectăm probleme cauzate de originii acțiunii
+
+- **PipelineInfo.AccountId** - un identificator sub pseudonim care reprezintă utilizatorul curent
+
+- **PipelineInfo.ClientCountry** - țara curentă a dispozitivului pentru a detecta probleme specifice țării sau regiunii și întreruperi 
+
+- **PipelineInfo.ClientIp** - adresa IP la care este conectat dispozitivul pentru a depana probleme de conexiune
+
+- **PipelineInfo.IngestionTime** - Marcă de timp de când se întâmplă ingestia telemetrie pentru acest eveniment
+
+- **Session.Id**-un Identificator unic pentru sesiunea de aplicații, pentru a vă ajuta să identificați problemele legate de sesiune
+
+- **Session.ImpressionId** - un identificator unic pentru gestionarea lansării caracteristicilor noastre, pentru a asigura că caracteristicile sunt lansate cu succes pentru toți utilizatorii și dispozitive
+
+- **ui_mode** - este utilizatorul în modul Light sau Dark, ne ajută să triem erorile UX cu modul întunecat
+
+- **UserInfo.Language** - fusul orar al utilizatorului pentru a ajuta la depanarea problemelor cu textului tradus
+
+- **UserInfo.Language** - fusul orar al utilizatorului pentru a ajuta la depanarea problemelor de calendar
+
+
+În plus, următoarele câmpuri sunt comune pentru toate evenimentele pentru Outlook pentru iOS.
+
+- **cloud** - unde se află cutia poștală pentru contul de pe acest dispozitiv, pentru a ajuta la detectarea problemelor specifice pentru o anumită cutie poștală în cloud, cum ar fi Office 365 sau GCC.
+
+- **DeviceInfo.NetworkProvider** - furnizorul de rețea al dispozitivului (de exemplu, Verizon)
+
+- **gcc_restrictions_enabled** - ne indică dacă s-au aplicat restricții GCC la aplicație, astfel încât să ne asigurăm că clienții noștri GCC utilizează aplicația în siguranță
+
+- **office_session_id** - un ID unic care urmărește sesiunea pentru serviciile Office conectate, pentru a ajuta la detectarea problemelor specifice unui serviciu Office integrat în Outlook, cum ar fi Word
+
+- **state** - dacă aplicația a fost activă atunci când a fost trimis acest eveniment pentru a ajuta la detectarea problemelor specifice pentru stările de aplicații active sau inactive
+
+
+În plus, următoarele câmpuri sunt comune pentru toate evenimentele pentru Outlook pentru Android.
+
+- **DeviceInfo. NetworkCost** - indicarea de dispozitive costul de rețea curent, care reflectă starea de WiFi/date celulare/roaming pentru a ajuta la detectarea problemelor specifice rețelei de dispozitive
+
+- **is_app_in_duo_split_view_mode** - acest lucru ne va spune că aplicația a fost în modul ecran scindat Duo.  Această proprietate este setată doar pentru dispozitivele Duo (doar pentru Android).
+
+- **is_dex_mode_enabled** - dacă este activat modul Samsung DeX, pentru a ajuta la detectarea problemelor specifice modulului DeX cu dispozitive Samsung
+
+- **is_sliding_drawer_enabled** - dacă este activată interfața glisantă pentru sertare, pentru a ajuta la detectarea problemelor provocate de interfața noastră glisantă pentru sertare
+
+- **orientarea** - orientarea fizică a ecranului (portret/vedere), pentru a ajuta la detectarea problemelor specifice orientărilor dispozitivelor
+
+- **os_arch** - arhitectura sistemului de operare pentru dispozitiv, pentru a ajuta la detectarea problemelor specifice sistemelor de operare ale dispozitivelor
+
+- **process_bitness** - numărul de biți al procesului aplicației (32 sau 64 bit) pentru a va ajuta la detectarea problemelor specifice numărului de biți al dispozitivelor
+
 ## <a name="software-setup-and-inventory-data-events"></a>Evenimente despre instalare de software și date de inventar
 
 Iată subtipurile de date din această categorie:
@@ -613,7 +729,7 @@ Se colectează următoarele câmpuri:
 
 - **osArchitecture** - arhitectură a sistemului de operare
 
-- **osEnvironment** - un întreg care indică spre sistemul de operare (Windows, Android, iOS, Mac etc).
+- **osEnvironment** - un întreg care indică sistemul de operare (Windows, Android, iOS, Mac etc).
 
 - **osVersionString** - identificator al sistemului de operare
 
@@ -1533,7 +1649,7 @@ Se colectează următoarele câmpuri:
 
 - **contact_result_selected_count** - urmărește numărul de persoane de contact care au fost selectate în timpul sesiunii de căutare combinate
 
-- **conversation_result_selected_count** - urmărește numărul de conversații selectate în timpul sesiunii de căutare combinate
+- **conversation_result_selected_count** - urmărește câte conversații au fost selectate în timpul sesiunilor de căutare combinate
 
 - **entrance_type** - acesta determină modul în care utilizatorul a început interogarea de căutare, din fila Căutare, interogare zero, titlu de căutare sau rezultat de căutare. 
 
@@ -2355,7 +2471,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_InclusiveMeasurements** - o valoare șir de logare durata de timp petrecută în anumite apeluri de funcție, într-un format cu eticheta funcției și durata, care include durata apelurilor subfuncții. 
 
-- **Data_InitializationReason**- o enumerare indicând modul în care se deschide fișierul, de ex. element UI sau declanșat de altă aplicație etc.
+- **Data_InitializationReason** - o enumerare indicând modul în care se deschide fișierul, de ex. element UI, declanșat de altă aplicație etc.
 
 - **Data_Measurements** - o valoare șir care conectează timpul petrecut în anumite apeluri de funcție într-un format cu eticheta funcției și durata care include durata apelurilor subfuncție.
 
@@ -2456,7 +2572,7 @@ Se colectează următoarele câmpuri:
 
 - **HRDAutoAcceleratedSignUpAttemptCount**- indică numărul de înscrieri accelerate încercate.
 
-- **HRDAutoAcceleratedSignUpQuitCount**- indică numărul de înscrieri accelerate anulate.
+- **HRDAutoAcceleratedSignUpQuitCount** - indică numărul de înscrieri accelerate care au fost anulate.
 
 - **HResult**- indică codul de stare al rezultatului operațiunii de conectare.
 
@@ -2519,7 +2635,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_ActivatingPrimaryIdentity**-o valoare adevărat/fals care denotă dacă a fost utilizată identitatea primară. 
 
-- **Data_NULSubscriptionLicensed**-o valoare adevărat/fals specifică starea abonamentului
+- **Data_NULSubscriptionLicensed** - o valoare adevărat/fals care denotă starea abonamentului
 
 #### <a name="office_apple_cisauthticketwithidentity"></a>Office_Apple_CISAuthTicketWithIdentity
 
@@ -2785,7 +2901,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_InclusiveMeasurements**- o valoare șir de logare durata de timp petrecută în anumite apeluri de funcție, într-un format cu eticheta funcției și durata, care include durata apelurilor sub-funcții.
 
-- **Data_InitializationReason**- o enumerare indicând modul în care se deschide fișierul, de exemplu, de la ce element UI sau declanșat de altă aplicație.
+- **Data_InitializationReason** - o enumerare indicând modul în care se deschide fișierul, de exemplu, de la ce element UI sau declanșat de altă aplicație.
 
 - **Data_Measurements**- o valoare șir de logare durata de timp petrecută în anumite apeluri de funcție, într-un format cu eticheta funcției și durata care include durata apelurilor sub-funcții.
 
@@ -2981,7 +3097,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeextensibilitycatalogexchangeprocessmanifest"></a>Office.Extensibility.Catalog.ExchangeProcessManifest
 
-Date privind procesarea unui manifest individual pentru un program de completare atribuit unui administrator de entitate găzduită O365. Utilizate la analiza problemelor clienților și la diagramele cu succesele clienților.
+Date privind procesarea unui manifest individual pentru un program de completare atribuit unui administrator de entități găzduite Office 365. Utilizate la analiza problemelor clienților și la diagramele cu succesele clienților.
  
 Se colectează următoarele câmpuri:
 
@@ -3694,7 +3810,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="office_firstrun_apple_activationresult"></a>Office_FirstRun_Apple_ActivationResult
 
-Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a monitoriza starea fluxului nostru de activare a aplicațiilor. Colectăm date pentru a afla rezultatul activității de activare a abonamentului O365, împreună cu fluxul utilizat pentru activare (prima experiență de rulare, achiziționarea în aplicația Flow etc.).
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a monitoriza starea fluxului nostru de activare a aplicațiilor. Colectăm date pentru a afla rezultatul activității de activare a abonamentului Office 365, împreună cu fluxul utilizat pentru activare (prima experiență de rulare, fluxul în aplicație, achiziționare etc.).
 
 Se colectează următoarele câmpuri:
 
@@ -3706,7 +3822,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="office_firstrun_apple_activationstatus"></a>Office_FirstRun_Apple_ActivationStatus
 
-Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment este utilizat pentru a afla rezultatul activității de activare a abonamentului O365, împreună cu fluxul utilizat pentru activare (FRE, în aplicație, achiziționare etc.). Colectăm date care conțin tipul de activare, tipul de flux (FRE/DocStage/Purchase) și ID-ul serviciului de licențiere Office.
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Apple. Acest eveniment este utilizat pentru a afla rezultatul activității de activare a abonamentului Office 365, împreună cu fluxul utilizat pentru activare (FRE, în aplicație, achiziționare etc.). Colectăm date care conțin tipul de activare, tipul de flux (FRE/DocStage/Purchase) și ID-ul serviciului de licențiere Office.
 
 Se colectează următoarele câmpuri:
 
@@ -4239,7 +4355,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_Doc_URLHash** - un GUID pentru adresa URL a fișierului
 
-- **Data_ErrorCode** - eroare în caz de erori de deschidere a fișierelor/erori de descărcare/descărcare anulată
+- **Data_ErrorCode** - eroare în caz de erori de deschidere a fișierelor/descărcare nereușită/descărcare anulată
 
 - **Data_ErrorMessage** - cod relevant message-to-error
 
@@ -4913,7 +5029,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_MethodId:long -** în plan intern, ce linie de cod a fost executată ultima
 
-  - **Data\_StopwatchDuration:long -** timpul total al activității
+  - **Data\_StopwatchDuration:long –** timpul total al activității
 
   - **Data\_TimeToEdit:long -** timpul necesar pentru ca documentul să devină editabil
 
@@ -7157,7 +7273,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidandroidoffice16bootlatency"></a>Office.Android.AndroidOffice16BootLatency
 
-Critic pentru capturarea pentru performanța metrică a aplicațiilor în ceea ce privește timpul de răspuns al aplicației din boot.  Microsoft folosește acesta pentru a colecta timpul necesar pentru ca aplicația să fie receptivă și să detecteze scenarii care pot influența timpul de pornire în aplicațiile WXP.
+Critic pentru capturarea pentru performanța metrică a aplicațiilor în ceea ce privește timpul de răspuns al aplicației din boot.  Microsoft folosește acesta pentru a colecta timpul necesar pentru ca aplicația să fie receptivă și totodată, să detecteze scenarii care pot influența timpul de încărcare în Word, Excel sau PowerPoint.
 
 Se colectează următoarele câmpuri:
 
@@ -7191,7 +7307,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_AppSizeWidth –** Adaugă**-** la lățimea ferestrei
 
-  - **Data\_AppURL –** URL-ul programului de completare; înregistrează adresa URL completă pentru programele de completare din magazin și domeniul adresei URL pentru cele din afara magazinului
+  - **Data\_AppURL –** URL-ul programului de completare; jurnalele adreselor URL complete pentru programele de completare din magazin și domeniul adreselor URL pentru cele din afara magazinului
 
   - **Data_Doc_AsyncOpenKind:long –** indică dacă s-a deschis o versiune memorată în cache a documentului cloud și ce logică de reîmprospătare asincronă s-a folosit.
 
@@ -7403,7 +7519,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_SchemeMgrStartupTime:integer –** timpul necesar pentru a inițializa managerul de scheme
 
-  - **Data\_SDX\_AssetId –** există DOAR pentru programele de completare din magazin. OMEX oferă un AssetId programului de completare când ajunge în magazin
+  - **Data\_SDX\_AssetId –** există DOAR pentru programele de completare din magazin. OMEX oferă programului de completare un IDActiv când intră în magazin
 
   - **Data\_SDX\_BrowserToken –** identificatorul din memoria cache a browserului
 
@@ -9818,7 +9934,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidandroidofficelaunchtolandingpagelatency"></a>Office. Android. AndroidOfficeLaunchToLandingPageLatency
 
-Critic pentru capturarea pentru performanța metrică a aplicațiilor în ceea ce privește timpul de răspuns al aplicației din boot.  Microsoft folosește acesta pentru a colecta timpul necesar pentru ca aplicația să fie receptivă și să detecteze scenarii care pot influența timpul de pornire în aplicațiile WXP.
+Critic pentru capturarea pentru performanța metrică a aplicațiilor în ceea ce privește timpul de răspuns al aplicației din boot.  Microsoft folosește acesta pentru a colecta timpul necesar pentru ca aplicația să fie receptivă și totodată, să detecteze scenarii care pot influența timpul de încărcare în Word, Excel sau PowerPoint.
 
 Se colectează următoarele câmpuri:
  
@@ -10225,7 +10341,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_IsInternalUserInit** - indică dacă codul ar putea determina dacă aplicația se execută sub acreditările unui cont Microsoft corporativ.
 
-- **Data_OpenNewsletterWebpage** - indică dacă link-ul de abonare la newsletter-ul Office Insider a fost declanșat sub condiția ca utilizatorul să se fi alăturat programului Office Insider, caracteristica de abonare la newsletter este activată, iar utilizatorul nu a anulat deschiderea site-ului web Abonare newsletter Office Insider.
+- **Data_OpenNewsletterWebpage** - indică dacă link-ul de abonare la buletinul informativ Office Insider a fost declanșat cu condiția ca utilizatorul să se fi alăturat programului Office Insider, caracteristica de abonare la buletinul informativ este activată, iar utilizatorul nu a anulat deschiderea paginii web de abonare la buletinul informativ Office Insider.
     
 - **Data_RegisterInsider** - starea înregistrării Office Insider
 
@@ -10474,7 +10590,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidandroidappdocsfileoperationends"></a>Office.Android.AndroidAppDocsFileOperationEnds
 
-Documente critice doar pentru Android (AppDocs) date de telemetrie pentru fișiere Nou/Deschide/Salvare ca. Acesta captează codurile de eroare pentru erorile din aceste AppDocsOperations.  Microsoft îl utilizează pentru a identifica erorile din diverse operațiuni de fișiere și stratul exact la care s-a produs eroarea în aplicațiile WXP.
+Documente critice doar pentru Android (AppDocs) date de telemetrie pentru fișiere Nou/Deschide/Salvare ca. Acesta captează codurile de eroare pentru erorile din aceste AppDocsOperations.  Microsoft îl utilizează pentru a identifica erorile din diverse operațiuni cu fișiere și stratul exact la care s-a produs eroarea în Word, Excel sau PowerPoint.
 
 Se colectează următoarele câmpuri:
 
@@ -10566,7 +10682,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidandroidfileasyncsavestatus"></a>Office.Android.AndroidFileAsyncSaveStatus
 
-Capturi de salvare a datelor de stare din fișierul asincron și diverse coduri de eroare din componente diferite.  Microsoft utilizează aceste date pentru a analiza dacă există orice pierderi de date de utilizator în aplicație în timpul salvării fișierelor din aplicațiile WXP.
+Capturi de salvare a datelor de stare din fișierul asincron și diverse coduri de eroare din componente diferite.  Microsoft utilizează aceste date pentru a analiza dacă există vreo pierdere de date de utilizator în aplicație în timpul salvării fișierelor din Word, Excel sau PowerPoint.
 
 Se colectează următoarele câmpuri:
 
@@ -10582,7 +10698,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidandroidfileopenreliability"></a>Office.Android.AndroidFileOpenReliability
 
-Acesta captează date de stare deschise pentru fișiere și diverse coduri de eroare pentru a identifica ce erori de deschidere a fișierului sunt așteptate comparativ cu cele neașteptate și care parte din cod le raportează.  Microsoft utilizează aceste date pentru a analiza motivele pentru erori de deschidere a fișierelor și pentru a calcula o rată critică de succes de deschidere a fișierului în aplicațiile WXP.
+Acesta captează date de stare deschise pentru fișiere și diverse coduri de eroare pentru a identifica ce erori de deschidere a fișierului sunt așteptate comparativ cu cele neașteptate și care parte din cod le raportează.  Microsoft utilizează aceste date pentru a analiza motivele pentru erori de deschidere a fișierelor și pentru a calcula o rată critică de succes de deschidere a fișierului în Word, Excel sau PowerPoint.
 
 Se colectează următoarele câmpuri:
 
@@ -10606,7 +10722,7 @@ Se colectează următoarele câmpuri:
 
 - **FirstBCSClientError_Info**- ultima eroare a clientului BCS (serviciul de conversie binară)
 
-- **IfWordFileOpenCancelled**- dacă deschiderea fișierului a fost anulată de utilizator în Word
+- **IfWordFileOpenCancelled**- dacă fișierul deschis a fost anulat de utilizator în Word
 
 - **InitializationReason**- enumerare pentru punctul de intrare pentru fișierul deschis
 
@@ -10630,7 +10746,7 @@ Se colectează următoarele câmpuri:
 
 - **ProviderFileSize**- mărime fișier capturată în timp ce deschideți fișierul prin activarea fișierelor
 
-- **Stae**- enumerare de stare a deschiderii fișierului
+- **State**- enumerare de stare deschidere fișier
 
 - **UriScheme**- schema URL-ului
 
@@ -10646,7 +10762,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidandroidfilesavestatus"></a>Office.Android.AndroidFileSaveStatus
 
-Critic pentru capturarea salvării fișierului cu datele de stare și diverse coduri de eroare din componente diferite.  Microsoft utilizează aceste date pentru a analiza dacă există orice pierderi de date de utilizator în aplicație în timpul salvării fișierelor din aplicațiile WXP.
+Critic pentru capturarea salvării fișierului cu datele de stare și diverse coduri de eroare din componente diferite.  Microsoft utilizează aceste date pentru a analiza dacă există vreo pierdere de date de utilizator în aplicație în timpul salvării fișierelor din Word, Excel sau PowerPoint.
 
 Se colectează următoarele câmpuri:
 
@@ -10692,7 +10808,7 @@ Se colectează următoarele câmpuri:
 
 - **WordFileSaveErrorTrackbackTag**- eticheta urmărire pentru salvarea erorilor
 
-- **WordFileSaveOpResult**- enumerare pentru starea rezultatelor 0 dacă s-a reușit, 1 dacă nu a reușit, 2 dacă este anulat
+- **WordFileSaveOpResult**- enumerare pentru starea rezultatelor 0 dacă s-a reușit, 1 dacă nu a reușit, 2 dacă a fost anulat
 
 - **WordFileSaveSuccess**- enumerare pentru detalii specifice Word pentru succesul operațiunii salvare fișier.
 
@@ -10750,7 +10866,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidappdocsfileoperationends"></a>Office. Android. AppDocsFileOperationEnds
 
-Documente critice doar pentru Android (AppDocs) date de telemetrie pentru fișiere Nou/Deschide/Salvare ca. Acesta captează codurile de eroare pentru erorile din aceste AppDocsOperations.  Microsoft îl utilizează pentru a identifica erorile din diverse operațiuni de fișiere și stratul exact la care s-a produs eroarea în aplicațiile WXP.
+Documente critice doar pentru Android (AppDocs) date de telemetrie pentru fișiere Nou/Deschide/Salvare ca. Acesta captează codurile de eroare pentru erorile din aceste AppDocsOperations.  Microsoft îl utilizează pentru a identifica erorile din diverse operațiuni cu fișiere și stratul exact la care s-a produs eroarea în Word, Excel sau PowerPoint.
 
 Se colectează următoarele câmpuri:
 
@@ -10820,7 +10936,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidbcserrors"></a>Erori Office. Android. BCS.
 
-Telemetrie erori de conversie binare pentru imprimare și partajare ca PDF.  Microsoft îl utilizează pentru a identifica punctele de eroare în timpul conversiilor BCS din aplicațiile WXP.
+Telemetrie erori de conversie binare pentru imprimare și partajare ca PDF.  Microsoft îl utilizează pentru a identifica punctele de eroare în timpul conversiilor BCS în Word, Excel sau PowerPoint.
 
 Se colectează următoarele câmpuri:
 
@@ -10844,7 +10960,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidclientsideiap"></a>Office.Android.ClientSideIAP
 
-Telemetrie pentru erori critice pentru erori de bază de date în timp ce răsfoiți fișiere și adaugați locuri.  Microsoft îl utilizează pentru a identifica problemele de corupție DB din aplicațiile care pot împiedica utilizatorul să adauge locuri sau să le răsfoiți din aplicația din aplicațiile WXP.
+Telemetrie cu erori critice pentru erori de bază de date în timp ce răsfoiți fișiere și adaugați locuri.  Microsoft îl utilizează pentru a identifica problemele de corupție DB din aplicațiile care pot împiedica utilizatorul să adauge locuri sau să le răsfoiți din aplicație în Word, Excel sau PowerPoint.
 
 Se colectează următoarele câmpuri:
 
@@ -10886,7 +11002,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroiddbfailurecause"></a>Office.Android.DBFailureCause
 
-Telemetrie pentru erori critice pentru erori de bază de date în timp ce răsfoiți fișiere și adaugați locuri.  Microsoft îl utilizează pentru a identifica problemele de corupție DB din aplicațiile care pot împiedica utilizatorul să adauge locuri sau să le răsfoiți din aplicația din aplicațiile WXP.
+Telemetrie pentru erori critice pentru erori de bază de date în timp ce răsfoiți fișiere și adaugați locuri.  Microsoft îl utilizează pentru a identifica problemele de corupție DB din aplicațiile care pot împiedica utilizatorul să adauge locuri sau să le răsfoiți din aplicație în Word, Excel sau PowerPoint.
 
 Se colectează următoarele câmpuri:
 
@@ -10924,7 +11040,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidintuneintunejavacopyfailedattempts"></a>Office.Android.Intune.IntuneJavaCopyFailedAttempts
 
-Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru salvarea copiei locale a documentelor în cloud protejate cu Intune.  Microsoft utilizează aceste date pentru a identifica erorile de înscriere în timpul și după Intune din cadrul aplicației, postarea conectării la aplicație cu un cont de la locul de muncă
+Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru salvarea copiei locale a documentelor în cloud protejate cu Intune.  Microsoft utilizează aceste date pentru a identifica erorile din timpul și de după înscrierea în Intune din cadrul aplicației, conectarea publică la aplicație cu un cont de la locul de muncă
 
 Se colectează următoarele câmpuri:
 
@@ -10932,7 +11048,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidintuneintunejavaexceptionadaltokenformam"></a>Office.Android.Intune.IntuneJavaExceptionADALTokenForMAM
 
-Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru a obține eticheta ADAL pentru resursele Intune.  Microsoft utilizează aceste date pentru a identifica erorile din timpul și de după Intune din cadrul aplicației, postarea conectării la aplicație cu un cont de la locul de muncă
+Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru a obține eticheta ADAL pentru resursele Intune.  Microsoft utilizează aceste date pentru a identifica erorile în timpul înscrierii la Intune din cadrul aplicației și conectarea imediată la aplicație cu un cont de la locul de muncă
 
 Se colectează următoarele câmpuri:
 
@@ -10940,7 +11056,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidintuneintunejavaexceptionapppolicy"></a>Office.Android.Intune.IntuneJavaExceptionAppPolicy
 
-Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru a contacta API-urile din Intune legat de politicile obținute pentru o identitate pentru procesul actual.  Microsoft utilizează aceste date pentru a identifica erorile de înscriere în timpul și după Intune din cadrul aplicației, postarea conectării la aplicație cu un cont de la locul de muncă
+Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru a contacta API-urile din Intune legat de politicile obținute pentru o identitate pentru procesul actual.  Microsoft utilizează aceste date pentru a identifica erorile din timpul și de după înscrierea în Intune din cadrul aplicației, conectarea publică la aplicație cu un cont de la locul de muncă
 
 Se colectează următoarele câmpuri:
  
@@ -10948,7 +11064,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidintuneintunejavaexceptionapppolicyforcontext"></a>Office.Android.Intune.IntuneJavaExceptionAppPolicyForContext
 
-Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru a contacta API-urile din Intune legat de politicile obținute pentru o identitate în procesul actual.  Microsoft utilizează aceste date pentru a identifica erorile de înscriere în timpul și după Intune din cadrul aplicației, postarea conectării la aplicație cu un cont de la locul de muncă
+Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru a contacta API-urile din Intune legat de politicile obținute pentru o identitate în procesul actual.  Microsoft utilizează aceste date pentru a identifica erorile din timpul și de după înscrierea în Intune din cadrul aplicației, conectarea publică la aplicație cu un cont de la locul de muncă
 
 Se colectează următoarele câmpuri:
  
@@ -10956,7 +11072,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidintuneintunejavaexceptionauthenticationcallback"></a>Office. Android.Intune.IntuneJavaExceptionAuthenticationCallback
 
-Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru a contacta API-urile din Intune legat de înregistrarea pentru apeluri de autentificare pentru conturile gestionate.  Microsoft utilizează aceste date pentru a identifica erorile de înscriere în timpul și după Intune din cadrul aplicației, postarea conectării la aplicație cu un cont de la locul de muncă
+Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru a contacta API-urile din Intune legat de înregistrarea pentru apeluri de autentificare pentru conturile gestionate.  Microsoft utilizează aceste date pentru a identifica erorile din timpul și de după înscrierea în Intune din cadrul aplicației, conectarea publică la aplicație cu un cont de la locul de muncă
 
 Se colectează următoarele câmpuri:
 
@@ -10972,7 +11088,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidintuneintunejavaexceptiongetissavetolocationallowed"></a>Office.Android.Intune.IntuneJavaExceptionGetIsSaveToLocationAllowed
 
-Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru preluarea politicii legate de salvare în local.   Microsoft utilizează aceste date pentru a identifica erorile de înscriere în timpul și după Intune din cadrul aplicației, postarea conectării la aplicație cu un cont de la locul de muncă
+Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru preluarea politicii legate de salvare în local.   Microsoft utilizează aceste date pentru a identifica erorile din timpul și de după înscrierea în Intune din cadrul aplicației, conectarea publică la aplicație cu un cont de la locul de muncă
 
 Se colectează următoarele câmpuri:
 
@@ -10980,7 +11096,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidintuneintunejavaexceptiongetpolicyforidentity"></a>Office.Android.Intune.IntuneJavaExceptionGetPolicyForIdentity
 
-Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru a conecta API-urile din Intune legat de politicile obținute pentru o identitate.  Microsoft utilizează aceste date pentru a identifica erorile de înscriere în timpul și după Intune din cadrul aplicației, postarea conectării la aplicație cu un cont de la locul de muncă
+Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru a conecta API-urile din Intune legat de politicile obținute pentru o identitate.  Microsoft utilizează aceste date pentru a identifica erorile din timpul și de după înscrierea în Intune din cadrul aplicației, conectarea publică la aplicație cu un cont de la locul de muncă
 
 Se colectează următoarele câmpuri:
 
@@ -10988,7 +11104,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidintuneintunejavaexceptiongetprotectioninfofromdescriptor"></a>Office.Android.Intune.IntuneJavaExceptionGetProtectionInfoFromDescriptor
 
-Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru conectarea API-urilor Intune legate de informații de protecție.  Microsoft utilizează aceste date pentru a identifica erorile de înscriere în timpul și după Intune din cadrul aplicației, postarea conectării la aplicație cu un cont de la locul de muncă
+Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru conectarea API-urilor Intune legate de informații de protecție.  Microsoft utilizează aceste date pentru a identifica erorile din timpul și de după înscrierea în Intune din cadrul aplicației, conectarea publică la aplicație cu un cont de la locul de muncă
 
 Se colectează următoarele câmpuri:
   
@@ -10996,7 +11112,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidintuneintunejavaexceptiongetprotectioninfofrompath"></a>Office.Android.Intune.IntuneJavaExceptionGetProtectionInfoFromPath
 
-Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru conectarea API-urilor Intune legate de informații de protecție.  Microsoft utilizează aceste date pentru a identifica erorile de înscriere în timpul și după Intune din cadrul aplicației, postarea conectării la aplicație cu un cont de la locul de muncă
+Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru conectarea API-urilor Intune legate de informații de protecție.  Microsoft utilizează aceste date pentru a identifica erorile din timpul și de după înscrierea în Intune din cadrul aplicației, conectarea publică la aplicație cu un cont de la locul de muncă
 
 Se colectează următoarele câmpuri:
 
@@ -11004,7 +11120,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidintuneintunejavaexceptiongetuipolicyidentity"></a>Office. Android. Intune. IntuneJavaExceptionGetUIPolicyIdentity
 
-Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru a conecta API-urile din Intune legat de politicile obținute pentru interfața utilizator pentru un cont gestionat.  Microsoft utilizează aceste date pentru a identifica erorile de înscriere în timpul și după Intune din cadrul aplicației, postarea conectării la aplicație cu un cont de la locul de muncă
+Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru a conecta API-urile din Intune legat de politicile obținute pentru interfața utilizator pentru un cont gestionat.  Microsoft utilizează aceste date pentru a identifica erorile din timpul și de după înscrierea în Intune din cadrul aplicației, conectarea publică la aplicație cu un cont de la locul de muncă
 
 Se colectează următoarele câmpuri:
 
@@ -11012,7 +11128,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidintuneintunejavaexceptionisidentitymanaged"></a>Office. Android.Intune.IntuneJavaExceptionIsIdentityManaged
 
-Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru conectarea API-urilor Intune legate de identificarea contului gestionat.  Microsoft utilizează aceste date pentru a identifica erorile din timpul și după înscrierea în Intune din cadrul aplicației, conectarea publică la aplicație cu un cont de la locul de muncă
+Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru conectarea API-urilor Intune legate de identificarea contului gestionat.  Microsoft utilizează aceste date pentru a identifica erorile din timpul și de după înscrierea la Intune din cadrul aplicației, conectarea imediată la aplicație cu un cont de la locul de muncă
 
 Se colectează următoarele câmpuri:
 
@@ -11020,7 +11136,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidintuneintunejavaexceptionnullenrollmentmanager"></a>Office.Android.Intune.IntuneJavaExceptionNullEnrollmentManager
 
-Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru a conecta API-urile din Intune legat de înregistrarea componentelor pentru apeluri.  Microsoft utilizează aceste date pentru a identifica erorile de înscriere în timpul și după Intune din cadrul aplicației, postarea conectării la aplicație cu un cont de la locul de muncă
+Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru a conecta API-urile din Intune legat de înregistrarea componentelor pentru apeluri.  Microsoft utilizează aceste date pentru a identifica erorile din timpul și de după înscrierea în Intune din cadrul aplicației, conectarea publică la aplicație cu un cont de la locul de muncă
 
 Se colectează următoarele câmpuri:
 
@@ -11028,7 +11144,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidintuneintunejavaexceptionprotect"></a>Office.Android.Intune.IntuneJavaExceptionProtect
 
-Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru conectarea API-urilor Intune legate de protecția documentului gestionat.  Microsoft utilizează aceste date pentru a identifica erorile din timpul și după înscrierea în Intune din cadrul aplicației, conectarea publică la aplicație cu un cont de la locul de muncă
+Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru conectarea API-urilor Intune legate de protecția documentului gestionat.  Microsoft utilizează aceste date pentru a identifica erorile din timpul și de după înscrierea la Intune din cadrul aplicației, conectarea imediată la aplicație cu un cont de la locul de muncă
 
 Se colectează următoarele câmpuri:
 
@@ -11036,7 +11152,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidintuneintunejavaexceptionprotectfromdescriptorifrequired"></a>Office. Android.Intune.UntuneJavaExceptionProtectFromDescriptorIfRequired
 
-Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru conectarea API-urilor Intune legate de protecția documentului gestionat.  Microsoft utilizează aceste date pentru a identifica erorile de înscriere în timpul și după Intune din cadrul aplicației, postarea conectării la aplicație cu un cont de la locul de muncă
+Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru conectarea API-urilor Intune legate de protecția documentului gestionat.  Microsoft utilizează aceste date pentru a identifica erorile din timpul și de după înscrierea în Intune din cadrul aplicației, conectarea publică la aplicație cu un cont de la locul de muncă
 
 Se colectează următoarele câmpuri:
 
@@ -11044,7 +11160,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidintuneintunejavaexceptionregisteraccountsync"></a>Office.Android.Intune.IntuneJavaExceptionRegisterAccountSync
 
-Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru conectarea API-urilor Intune legate de contului în Management Intune.  Microsoft utilizează aceste date pentru a identifica erorile de înscriere în timpul și după Intune din cadrul aplicației, postarea conectării la aplicație cu un cont de la locul de muncă
+Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru conectarea API-urilor Intune legate de contului în Management Intune.  Microsoft utilizează aceste date pentru a identifica erorile din timpul și de după înscrierea în Intune din cadrul aplicației, conectarea publică la aplicație cu un cont de la locul de muncă
 
 Se colectează următoarele câmpuri:
 
@@ -11052,7 +11168,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidintuneintunejavaexceptionsetuipolicyidentitysync"></a>Office. Android.Intune.IntuneJavaExceptionSetUIPolicyIdentitySync
 
-Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru a conecta API-urile din Intune legat de setarea politicilor pentru un cont gestionat.  Microsoft utilizează aceste date pentru a identifica erorile de înscriere în timpul și după Intune din cadrul aplicației, postarea conectării la aplicație cu un cont de la locul de muncă
+Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru a conecta API-urile din Intune legat de setarea politicilor pentru un cont gestionat.  Microsoft utilizează aceste date pentru a identifica erorile din timpul și de după înscrierea în Intune din cadrul aplicației, conectarea publică la aplicație cu un cont de la locul de muncă
 
 Se colectează următoarele câmpuri:
 
@@ -11060,7 +11176,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidintuneintunejavaexceptionunregisteraccountsync"></a>Office.Android.Intune.IntuneJavaExceptionUnregisterAccountSync
 
-Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru conectarea API-urilor Intune legat de golirea scenariilor la distanță în Management Intune.  Microsoft utilizează aceste date pentru a identifica erorile de înscriere în timpul și după Intune din cadrul aplicației, postarea conectării la aplicație cu un cont de la locul de muncă
+Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru conectarea API-urilor Intune legat de golirea scenariilor la distanță în Management Intune.  Microsoft utilizează aceste date pentru a identifica erorile din timpul și de după înscrierea în Intune din cadrul aplicației, conectarea publică la aplicație cu un cont de la locul de muncă
 
 Se colectează următoarele câmpuri:
 
@@ -11068,7 +11184,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidintuneintunejavaexceptionupdatetoken"></a>Office.Android.Intune.IntuneJavaExceptionUpdateToken
 
-Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru a conecta API-urile din Intune legat de actualizarea etichetei de autorizare pentru un cont gestionat.  Microsoft utilizează aceste date pentru a identifica erorile de înscriere în timpul și după Intune din cadrul aplicației, postarea conectării la aplicație cu un cont de la locul de muncă
+Telemetrie de eroare critică pentru a urmări erorile API-urilor Intune individuale; Această telemetrie este înregistrată în cazul erorilor pentru a conecta API-urile din Intune legat de actualizarea etichetei de autorizare pentru un cont gestionat.  Microsoft utilizează aceste date pentru a identifica erorile din timpul și de după înscrierea în Intune din cadrul aplicației, conectarea publică la aplicație cu un cont de la locul de muncă
 
 Se colectează următoarele câmpuri:
 
@@ -11076,7 +11192,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidlicenseactivationfailure"></a>Office.Android.LicenseActivationFailure
 
-Telemetrie de eroare critică pentru a urmări erorile de activare a licențelor pentru conturile O365 în aplicațiile W/X/P.  Microsoft îl utilizează pentru a analiza erorile pentru a activa o licență O365 achiziționată.
+Telemetrie de eroare critică pentru a urmări erorile de activare a licențelor pentru conturile Office 365 în Word, Excel sau PowerPoint.  Microsoft îl utilizează pentru a analiza erorile pentru activarea unei licență Office 365 achiziționată.
 
 Se colectează următoarele câmpuri:
 
