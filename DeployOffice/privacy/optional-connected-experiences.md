@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate opționale, inclusiv condițiile de utilizare care se aplică.
 hideEdit: true
-ms.openlocfilehash: 0c48bd091998e12603e09fcc9b6ce42207e2d95b
-ms.sourcegitcommit: d07de5b2fc7ea02171b84ff34bf4db9686683ed5
+ms.openlocfilehash: 9cfbae596b686e2be484756b848514d4c36108df
+ms.sourcegitcommit: 2475f3c2a61baf298a52c0bcdb0e7c9b9c0407ac
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/29/2020
-ms.locfileid: "42340924"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "43166292"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Prezentare generală a experiențelor conectate opționale în Office
 
@@ -63,7 +63,7 @@ Notă: Setarea de confidențialitate descrisă mai jos nu controlează experien�
 
 ### <a name="help--suggest-a-feature"></a>Ajutor > Sugerați o caracteristică
 
-Sugerați o caracteristică este o experiență care vă permite să remiteți idei cu privire la utilizarea Outlook. Sugestiile dvs. sunt furnizate direct într-un serviciu terț denumit UserVoice. Dacă trimiteți ideile utilizând Sugerați o caracteristică, se vor aplica [condițiile de utilizare a serviciului](https://outlook.uservoice.com/tos) și [politica de confidențialitate](https://outlook.uservoice.com/tos#privacy-policy) ale UserVoice.
+Sugerați o caracteristică este o experiență care vă permite să remiteți idei cu privire la utilizarea Outlook sau Excel. Sugestiile dvs. sunt furnizate direct într-un serviciu terț denumit UserVoice. Dacă trimiteți ideile utilizând Sugerați o caracteristică, se vor aplica [condițiile de utilizare a serviciului](https://outlook.uservoice.com/tos) și [politica de confidențialitate](https://outlook.uservoice.com/tos#privacy-policy) ale UserVoice.
 
 ### <a name="insert-online-video"></a>Inserarea unui fișier video online
 
@@ -91,7 +91,7 @@ Atunci când utilizați Magazinul Office, utilizarea site-ului magazinului propr
 
 ## <a name="how-to-determine-if-your-admin-has-given-you-the-ability-to-use-optional-connected-experiences"></a>Cum stabiliți dacă administratorul dvs. v-a oferit capacitatea de a utiliza experiențe conectate opționale
 
-Pentru a determina dacă administratorul v-a oferit capacitatea de a utiliza experiențe conectate opționale în aplicația dvs. Office 365 ProPlus pe un dispozitiv Windows, accesați **Fișier** > **Cont** > **Confidențialitate cont** și selectați **Gestionare setări**. Dacă administratorul nu v-a oferit control, se va afișa mesajul: „Administratorul organizației dvs. vă gestionează setările de confidențialitate și a decis să dezactiveze experiențele conectate opționale”.
+Pentru a determina dacă administratorul v-a oferit capacitatea de a utiliza experiențe conectate opționale în aplicația dvs. Office 365 ProPlus pe un dispozitiv Windows, accesați **Fișier** > **Cont** > **Confidențialitate cont** și selectați **Gestionare setări**. Dacă administratorul nu v-a oferit control, se va afișa mesajul: „Administratorul organizației este cel care vă gestionează setările de confidențialitate, iar el a decis să dezactiveze experiențele conectate opționale.”
 
 Dacă utilizați Office pentru Mac, deschideți orice aplicație Office și selectați meniul de aplicații (cum ar fi Word sau Excel) > **Preferințe** > **Confidențialitate**. Aceasta va deschide caseta de dialog Setări de confidențialitate ale contului, unde puteți să vizualizați opțiunile de confidențialitate.
 

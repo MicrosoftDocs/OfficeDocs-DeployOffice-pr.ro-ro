@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate pentru Office, cum ar fi experiențele care analizează conținut sau experiențele care descarcă conținut online.
 hideEdit: true
-ms.openlocfilehash: 6dc32a1456402624ab28e0acbe9c3ef85b6add9d
-ms.sourcegitcommit: 41232c8500173289b94a025044166f1d1e91e870
+ms.openlocfilehash: 8939bb1f3a3be8cf256f3bd6912abc95c8b09d2a
+ms.sourcegitcommit: 2475f3c2a61baf298a52c0bcdb0e7c9b9c0407ac
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "41917622"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "43166382"
 ---
 # <a name="connected-experiences-in-office"></a>Experiențe conectate în Office
 
@@ -44,6 +44,7 @@ Următorul tabel furnizează o listă de experiențe conectate care vă analizea
 | ----------- | ------------------ |
 | Hărți 3D\*    | [Introducere în Hărți 3D](https://support.office.com/article/6b56a50d-3c3e-4a9e-a527-eea62a387030)   |
 | Txt alternativ automat   | [Tot ce trebuie să știți pentru a scrie eficient text alternativ](https://support.office.com/article/df98f884-ca3d-456c-807b-1a1fa82f5dc2) |
+| Tipuri de date                  | [Tipuri de date Excel: Cotații bursiere și geografie](https://support.office.com/article/61a33056-9935-484f-8ac8-f1a89e210877)   |
 | Dictare  | [Dictați cu vocea în Office](https://support.office.com/article/d4fd296e-8f15-4168-afec-1f95b13a6408) |
 | Editor    | [Editorul este asistentul dvs. de scriere](https://support.office.com/article/91ecbe1b-d021-4e9e-a82e-abc4cd7163d7)  |
 | Idei     | [Idei în Excel](https://support.office.com/article/3223aab8-f543-4fda-85ed-76bb0295ffc4) |
@@ -77,7 +78,6 @@ Următorul tabel furnizează o listă de experiențe conectate care descarcă co
 | ------------- | ------------- |
 | Aplicațiile de calendar| [Ce sunt aplicațiile de calendar?](https://www.osupportweb.com/a/outlook-mobile/?p=android&s=getting-started-on-outlook&f=what-are-calendar-apps) |
 | Fonturi cloud                 | [Fonturi cloud în Office](https://support.office.com/article/f7b009fe-037f-45ed-a556-b5fe6ede6adb)  |
-| Tipuri de date                  | [Tipuri de date Excel: Cotații bursiere și geografie](https://support.office.com/article/61a33056-9935-484f-8ac8-f1a89e210877)   |
 | Întrebări frecvente |Atunci când alegeți **Setări** > **Ajutor și feedback** > **Întrebări frecvente** la Outlook pentru iOS și Android, vi se solicită să [https://www.osupportweb.com/a/outlook-mobile](https://www.osupportweb.com/a/outlook-mobile).|
 | Efecte de cerneală                 | [Desenați și scrieți cu cerneală în Office](https://support.office.com/article/6D76C674-7F4B-414D-B67F-B3FFEF6CCF53)  |
 | Inserarea pictogramelor                | [Inserați pictograme în Microsoft Office](https://support.office.com/article/e2459f17-3996-4795-996e-b9a13486fa79)   |
@@ -109,7 +109,6 @@ Următorul tabel furnizează o listă a acelor experiențe conectate și furnize
 | ------------- | ------------- |
 | @menționare | [Utilizați @menționare în comentarii pentru a eticheta o persoană pentru feedback](https://support.office.com/article/644bf689-31a0-4977-a4fb-afe01820c1fd) |
 |Diagramă de brainstorming (Visio)|[Creați o diagramă de brainstorming](https://support.office.com/article/642706c0-7e63-463b-8aa8-a9aa67367989)|
-| Chat | [Îmbunătățiți colaborarea cu Chat în Microsoft Office](https://support.office.com/article/1ecc6c7f-0b02-4baa-b9d9-c9d67023bedd)  |
 | În curând (Outlook)  |[În curând](https://support.office.com/article/d4b7db49-b4e0-4f98-a0dc-156952e551e2)  |
 | Contactați asistența (Outlook) | Atunci când alegeți **Ajutor** > **Contactați asistența** în panglică|
 | Import particularizat (Visio)  | [Importați date la forme din desen](https://support.office.com/article/d174b3fd-3079-42fd-81e8-2dbf8d38bb03) |
@@ -147,7 +146,7 @@ Puteți alege dacă anumite tipuri de experiențe conectate, cum ar fi experien�
 
 Dacă sunteți conectat cu un cont Microsoft, deschideți o aplicație Office, cum ar fi Word și accesați **Fișier** > **Cont** > **Confidențialitate cont** > **Gestionare setări**. În secțiunea **Experiențe conectate**, puteți alege dacă anumite tipuri de experiențe conectate, cum ar fi experiențele care vă analizează conținutul, sunt disponibile pentru utilizare. Dacă nu accesați **Gestionare setări**, toate experiențele conectate vor fi disponibile pentru dvs.
 
-Dacă sunteți conectat cu un cont de la locul de muncă sau de la școală, administratorul din organizația dvs. va decide dacă aceste experiențe conectate sunt disponibile pentru dvs. Nu veți vedea toate opțiunile pentru aceste experiențe conectate dacă accesați **Fișier** > **Cont** > **Confidențialitate cont** > **Gestionare setări**.
+Dacă sunteți conectat cu un cont de la locul de muncă sau de la școală, administratorul din organizația dvs. va decide dacă aceste experiențe conectate sunt disponibile pentru dvs. Nu veți vedea opțiunile pentru aceste experiențe conectate dacă accesați **Fișier** > **Cont** > **Confidențialitate cont** > **Gestionare setări**.
 
 > [!NOTE]
 > Dacă utilizați Office pentru Mac, deschideți orice aplicație Office și selectați meniul de aplicații (cum ar fi Word sau Excel) > **Preferințe** > **Confidențialitate**. Aceasta va deschide caseta de dialog Setări de confidențialitate ale contului unde puteți să vizualizați opțiunile de confidențialitate.
@@ -161,7 +160,7 @@ Dacă sunteți administrator pentru organizația dvs., puteți utiliza setările
 
 Dacă alegeți să dezactivați unele tipuri de experiențe conectate, fie panglica sau comanda meniului pentru acele experiențe conectate se va estompa, fie veți primi un mesaj de eroare atunci când încercați să utilizați aceste experiențe conectate.
 
-Chiar dacă vă hotărâți să dezactivați aceste experiențe conectate, anumite funcționalități Office vor rămâne disponibile, cum ar fi sincronizarea unei cutii poștale în Outlook, Teams și Skype for Business vor continua să funcționeze. De asemenea, există un set de servicii esențiale pentru modul în care funcționează Office care nu pot fi dezactivate, cum ar fi licențierea serviciului care confirmă că aveți licență corectă pentru a utiliza Office.
+Chiar dacă vă hotărâți să dezactivați aceste experiențe conectate, anumite funcționalități Office vor rămâne disponibile, cum ar fi sincronizarea unei cutii poștale în Outlook, Teams și Skype for Business vor continua să funcționeze. De asemenea, există un set de servicii esențiale pentru modul în care funcționează Office care nu pot fi dezactivate, cum ar fi serviciul de licențiere care confirmă că aveți licență corectă pentru a utiliza Office.
 
 ## <a name="related-topics"></a>Subiecte asociate
 
