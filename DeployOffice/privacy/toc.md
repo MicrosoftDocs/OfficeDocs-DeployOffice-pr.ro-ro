@@ -1,4 +1,4 @@
-# Confidențialitate pentru Office 365 ProPlus
+# Confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere
 
 ## [Prezentare generală a controalelor de confidențialitate](overview-privacy-controls.md)
 
