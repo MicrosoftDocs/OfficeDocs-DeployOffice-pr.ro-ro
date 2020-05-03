@@ -13,20 +13,21 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre servicii esențiale în Office, cum ar fi Clic și Pornire și Licențiere, și asigură o listă de evenimente și câmpuri de date pentru aceste servicii esențiale.
 hideEdit: true
-ms.openlocfilehash: 2d285e2e0494b08e6d17a0a72bd8465e6c8edce7
-ms.sourcegitcommit: 2b494bb428a3a1b837376c0ab9ef9c2357e3165f
+ms.openlocfilehash: 33f4c32c64713e63c02db95b93fc0295e2decb62
+ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "42939774"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "43992849"
 ---
 # <a name="essential-services-for-office"></a>Servicii esențiale pentru Office
 
 > [!IMPORTANT]
-> Informațiile din acest articol se aplică la versiunea 1904 sau o versiune mai recentă a următorului software client Office instalat pe un computer care rulează Windows:
-> - Office 365 ProPlus și Office 365 Business
-> - Office 365 Personal, Office 365 pentru acasă sau alte versiuni de Office, care fac parte dintr-un abonament Office 365.
-> - Project și Visio care sunt oferite cu anumite planuri de abonament, cum ar fi planul Project Online Professional sau Visio Online Plan 2.
+> Informațiile din acest articol se aplică la versiunea 1904 sau la o versiune mai recentă a următorului software client Office instalat pe un computer care rulează Windows:
+> - Aplicații Microsoft 365 pentru întreprindere (numite anterior Office 365 ProPlus)
+> - Aplicații Microsoft 365 pentru afaceri (numite anterior Office 365 Business)
+> - Microsoft 365 Personal, Microsoft 365 Family sau alte versiuni de Office care fac parte dintr-un abonament Microsoft 365.
+> - Aplicațiile desktop Project și Visio care sunt însoțite de anumite planuri de abonament, cum ar fi Project Plan 5 sau Visio Plan 2.
 >
 > Informațiile se aplică și la versiunea 16.28 sau la versiunile mai recente ale următoarelor aplicații Office pentru Mac: Excel, Outlook, OneNote, PowerPoint și Word.
 
@@ -40,8 +41,8 @@ Pentru mai multe informații, consultați următoarele:
 
 Dacă sunteți administratorul organizației dvs., ați putea fi interesat și de următoarele:
 
-- [Prezentare generală a controalelor de confidențialitate pentru Office 365 ProPlus](overview-privacy-controls.md)
-- [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md)
+- [Prezentare generală a controalelor de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere](overview-privacy-controls.md)
+- [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere](manage-privacy-controls.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pe dispozitivele iOS.](ios-privacy-preferences.md)
 - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office pe dispozitivele Android](android-privacy-controls.md)
@@ -490,7 +491,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_PrereqFailure\_Type** - eroarea de cerință preliminară pe care am întâmpinat-o, adică sistemul de operare nu este acceptat
 
-  - **Data\_ProductReleaseId-** Produsul pe care îl instalăm, adică Office 365 ProPlus
+  - **Data\_ProductReleaseId** - produsul pe care îl instalăm, adică Aplicații Microsoft 365 pentru întreprindere
 
 ### <a name="officeclicktoruncorruptioncheck"></a>Office.ClickToRun.CorruptionCheck
 
@@ -588,7 +589,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OfficeVersion** - versiunea în care este instalat Office
 
-  - **Data\_Sku** - SKU-ul instalat, adică Office 365 ProPlus.ro-ro
+  - **Data\_Sku** - SKU-ul instalat, adică Aplicații Microsoft 365 pentru întreprindere
 
   - **Data\_SqmMachineID** - ID unic de computer utilizat de Date SQM Windows\_SusClientID- identificator actualizare Office computer
 
@@ -628,7 +629,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_PrereqFailure\_Type-** eroarea de cerință preliminară pe care am întâmpinat-o
 
-  - **Data\_ProductReleaseId-** Produsul pe care îl instalăm, adică Office 365 ProPlus
+  - **Data\_ProductReleaseId** - produsul pe care îl instalăm, adică Aplicații Microsoft 365 pentru întreprindere
 
 ### <a name="officeclicktorunrepomanlogger"></a>Office.ClickToRun.RepomanLogger
 
@@ -1003,7 +1004,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>ProductsToRemove-<ept id="p1">**</ept><ph id="ph2"> </ph>what Office products we're removing 
+  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
@@ -1079,7 +1080,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>ProductsToRemove-<ept id="p1">**</ept><ph id="ph2"> </ph>what Office products we're removing 
+  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
@@ -1231,7 +1232,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>ProductsToRemove-<ept id="p1">**</ept><ph id="ph2"> </ph>what Office products we're removing 
+  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
@@ -1307,9 +1308,9 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>ProductsToRemove-<ept id="p1">**</ept><ph id="ph2"> </ph>what Office products we're removing 
+  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
-  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingFixedProducts-<ept id="p1">**</ept> The products we're removing 
+  - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
   - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
@@ -1383,7 +1384,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>ProductsToRemove-<ept id="p1">**</ept><ph id="ph2"> </ph>what Office products we're removing 
+  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** Produsele pe care le eliminăm 
 
@@ -1461,7 +1462,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
-  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingFixedProducts-<ept id="p1">**</ept> The products we're removing 
+  - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
   - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
@@ -1535,9 +1536,9 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>ProductsToRemove-<ept id="p1">**</ept><ph id="ph2"> </ph>what Office products we're removing 
+  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
-  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingFixedProducts-<ept id="p1">**</ept> The products we're removing 
+  - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
   - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
@@ -1611,9 +1612,9 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>ProductsToRemove-<ept id="p1">**</ept><ph id="ph2"> </ph>what Office products we're removing 
+  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
-  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingFixedProducts-<ept id="p1">**</ept> The products we're removing 
+  - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
   - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
@@ -1687,11 +1688,11 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>ProductsToRemove-<ept id="p1">**</ept><ph id="ph2"> </ph>what Office products we're removing 
+  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
-  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingFixedProducts-<ept id="p1">**</ept> The products we're removing 
+  - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingProducts -<ept id="p1">**</ept> The products we're asked to remove 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
@@ -1763,11 +1764,11 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>ProductsToRemove-<ept id="p1">**</ept><ph id="ph2"> </ph>what Office products we're removing 
+  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
-  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingFixedProducts-<ept id="p1">**</ept> The products we're removing 
+  - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingProducts -<ept id="p1">**</ept> The products we're asked to remove 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
@@ -1841,9 +1842,9 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
-  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingFixedProducts-<ept id="p1">**</ept> The products we're removing 
+  - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingProducts -<ept id="p1">**</ept> The products we're asked to remove 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
@@ -1915,11 +1916,11 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>ProductsToRemove-<ept id="p1">**</ept><ph id="ph2"> </ph>what Office products we're removing 
+  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
-  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingFixedProducts-<ept id="p1">**</ept> The products we're removing 
+  - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingProducts -<ept id="p1">**</ept> The products we're asked to remove 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
@@ -1991,11 +1992,11 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ProductsToAdd -** Ce produse Office adăugăm 
 
-  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>ProductsToRemove-<ept id="p1">**</ept><ph id="ph2"> </ph>what Office products we're removing 
+  - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
-  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingFixedProducts-<ept id="p1">**</ept> The products we're removing 
+  - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - <bpt id="p1">**</bpt>Data<ph id="ph1">\_</ph>RemovingProducts -<ept id="p1">**</ept> The products we're asked to remove 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
@@ -3061,6 +3062,8 @@ Se colectează următoarele câmpuri:
 - **UserDismissed** - Indică dacă utilizatorul a respins caseta de dialog și, prin urmare, este în perioada de grație sau în modul de funcționalitate redusă, deoarece nu a ales să cumpere Office sau să obțină o versiune de încercare
 
 ### <a name="officelicensingpurchase"></a>Office.Licensing.Purchase 
+
+*[Acest eveniment a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
 Avem un experiment care oferă utilizatorului opțiunea de a încerca și a configura plata automată pentru Office direct din aplicație, fără să iasă din contextul aplicației. Acesta raportează succesul sau eșecul experimentului respectiv împreună cu codul de eroare Este de importanță critică pentru a detecta dacă utilizatorul se află în stare bună, fără să îi lipsească funcționalități, este utilizat pentru sănătatea sistemului și în scopuri de diagnosticare dacă un utilizator raportează o problemă cu computerul.
 
@@ -6144,6 +6147,8 @@ Se colectează următoarele câmpuri:
 
 - **App** - procesul aplicației care trimite evenimentul
 
+- **AppID** - identificatorul aplicației care are eroarea de descărcare.
+
 - **AppInfo_Language** - limba în care rulează aplicația
 
 - **AppVersionLong** - versiunea aplicației
@@ -6160,6 +6165,8 @@ Se colectează următoarele câmpuri:
 
 - **DeviceInfo_OsBuild** - versiunea sistemului de operare
 
+- **Error** - eroarea observată în timpul descărcării.
+
 - **Event_ReceivedTime** - ora la care s-a primit telemetria
 
 - **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
@@ -6168,13 +6175,15 @@ Se colectează următoarele câmpuri:
 
 - **HowTocheck** - preferința pentru verificarea actualizărilor
 
-- **Payload** - conține numele actualizării care este descărcată și eroarea observată.
+- **Payload** - conține numele actualizării care este descărcată și eroarea observată. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
 - **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
 
 - **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
 
 - **SessionId** - identificatorul pentru sesiune
+
+- **UpdateID** - identificatorul actualizării care se descarcă.
 
 
 ### <a name="downloadtask_downloadsuccess"></a>downloadtask_downloadsuccess
@@ -6184,6 +6193,8 @@ Descărcarea cu succes a unui fișier pachet. Înregistrăm calea actualizării 
 Se colectează următoarele câmpuri:
 
 - **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul aplicației.
 
 - **AppInfo_Language** - limba în care rulează aplicația
 
@@ -6216,6 +6227,8 @@ Se colectează următoarele câmpuri:
 - **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
 
 - **SessionId** - identificatorul pentru sesiune
+
+- **UpdateID** - identificatorul actualizării descărcate.
 
 
 ### <a name="fba_checkforupdate"></a>fba_checkforupdate
@@ -6324,6 +6337,8 @@ Se colectează următoarele câmpuri:
 
 - **DeviceInfo_OsBuild** - versiunea sistemului de operare
 
+- **Error** - conține OSStatus (codul de stare Apple) care reflectă starea lansării.
+
 - **Event_ReceivedTime** - ora la care s-a primit telemetria
 
 - **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
@@ -6332,7 +6347,7 @@ Se colectează următoarele câmpuri:
 
 - **HowTocheck** - preferința pentru verificarea actualizărilor
 
-- **Payload** - conține OSStatus (codul de stare Apple) care reflectă starea lansării.
+- **Payload** - conține OSStatus (codul de stare Apple) care reflectă starea lansării. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
 - **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
 
@@ -6340,6 +6355,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
+- **Success** - șirul de caractere boolean care indică dacă s-a lansat cu succes sau nu procesul daemon MAU.
 
 ### <a name="fba_silentupdateoptin"></a>fba_silentupdateoptin
 
@@ -6636,6 +6652,8 @@ Se colectează următoarele câmpuri:
 
 - **App** - procesul aplicației care trimite evenimentul
 
+- **AppID** - identificatorul aplicației.
+
 - **AppInfo_Language** - limba în care rulează aplicația
 
 - **AppVersionLong** - versiunea aplicației
@@ -6652,6 +6670,8 @@ Se colectează următoarele câmpuri:
 
 - **DeviceInfo_OsBuild** - versiunea sistemului de operare
 
+- **Error** - detaliul erorii survenite în timpul lansării aplicației după actualizare.
+
 - **Event_ReceivedTime** - ora la care s-a primit telemetria
 
 - **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
@@ -6660,7 +6680,7 @@ Se colectează următoarele câmpuri:
 
 - **HowTocheck** - preferința pentru verificarea actualizărilor
 
-- **Payload** - conține un identificator utilizat pentru urmărirea unei activități de actualizare și numele aplicației care urmează să fie lansată.
+- **Payload** - conține un identificator utilizat pentru urmărirea unei activități de actualizare și numele aplicației care urmează să fie lansată. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
     
 - **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
     
@@ -6759,6 +6779,8 @@ Se colectează următoarele câmpuri:
 
 - **App** - procesul aplicației care trimite evenimentul
 
+- **AppID** - identificatorul aplicației.
+
 - **AppInfo_Language** - limba în care rulează aplicația
 
 - **AppVersionLong** - versiunea aplicației
@@ -6775,6 +6797,8 @@ Se colectează următoarele câmpuri:
 
 - **DeviceInfo_OsBuild** - versiunea sistemului de operare
 
+- **Error** - detaliul despre eroarea survenită în timpul terminării aplicației.
+
 - **Event_ReceivedTime** - ora la care s-a primit telemetria
 
 - **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
@@ -6783,13 +6807,15 @@ Se colectează următoarele câmpuri:
 
 - **HowTocheck** - preferința pentru verificarea actualizărilor
 
-- **Payload** - conține un identificator utilizat pentru urmărirea unei activități de actualizare și ID-ul pachetului aplicației. Acesta poate conține și un șir de erori dacă Microsoft Autoupdate determină că aplicația încă rulează, chiar dacă a fost primit un eveniment de oprire.
+- **Payload** - conține un identificator utilizat pentru urmărirea unei activități de actualizare și ID-ul pachetului aplicației. Acesta poate conține și un șir de erori dacă Microsoft Autoupdate determină că aplicația încă rulează, chiar dacă a fost primit un eveniment de oprire. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
 - **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
 
 - **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
 
 - **SessionId** - identificatorul pentru sesiune
+
+- **UpdateID** - identificatorul actualizării aplicației.
 
 
 ### <a name="fbasilentupdate_codesignfailure"></a>fbasilentupdate_codesignfailure
@@ -6882,6 +6908,8 @@ Se colectează următoarele câmpuri:
 
 - **App** - procesul aplicației care trimite evenimentul
 
+- **AppID** - identificatorul aplicației.
+
 - **AppInfo_Language** - limba în care rulează aplicația
 
 - **AppVersionLong** - versiunea aplicației
@@ -6898,6 +6926,8 @@ Se colectează următoarele câmpuri:
 
 - **DeviceInfo_OsBuild** - versiunea sistemului de operare
 
+- **Error** - detaliul erorii survenite în timpul descărcării actualizării aplicației.
+
 - **Event_ReceivedTime** - ora la care s-a primit telemetria
 
 - **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
@@ -6906,13 +6936,17 @@ Se colectează următoarele câmpuri:
 
 - **HowTocheck** - preferința pentru verificarea actualizărilor
 
-- **Payload** - conține un identificator utilizat pentru urmărirea unei activități de actualizare și numele unei actualizări.
+- **Payload** - conține un identificator utilizat pentru urmărirea unei activități de actualizare și numele unei actualizări. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
 - **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
 
 - **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
 
 - **SessionId** - identificatorul pentru sesiune
+
+- **UpdateID** - identificatorul actualizării aplicației.
+
+- **UpdateName** - numele actualizării aplicației.
 
 
 ### <a name="fbasilentupdate_downloadinbackground"></a>fbasilentupdate_downloadinbackground
@@ -10550,6 +10584,8 @@ Se colectează următoarele câmpuri:
 
   - **InstallMethod** - dacă pentru versiunea de compilare curentă a Office s-a efectuat upgrade, dacă s-a revenit la ea sau dacă este o instalare nouă.
 
+  - **OfficeArchitectureText** - arhitectura de produs Office ca șir (de exemplu, x86, arm).
+
   - **PreviousBuild** - versiunea de Office la care s-a efectuat upgrade pentru această compilare sau de la care s-a revenit.
 
   - **State** - starea la care s-a modificat sesiunea.
@@ -11286,6 +11322,8 @@ Evenimentul este declanșat de o întrerupere anormală a aplicației (de exempl
 
 Se colectează următoarele câmpuri:
 
+  - **AddinExecution -** semnalizare care informează dacă un program de completare a fost executat și nu s-a terminat în timpul unei ieșiri abrupte din aplicație.
+
   - **BootCompleted-** A fost boot Office finalizată la momentul căderii.
 
   - **CrashedAppBuild -** identificator versiune compilată pentru procesul afectat.
@@ -11343,6 +11381,8 @@ Se colectează următoarele câmpuri:
   - **ModuleOffset -** deplasare în octeți de la adresa de bază unde a apărut eroarea.
 
   - **ModuleSize -** dimensiunea modulului cu erori în octeți.
+
+  - **OfficeArchitectureText** - arhitectura de produs Office ca șir (de exemplu, x86, arm).
 
   - **OpenUILang -** Limba interfeței cu utilizatorul pentru aplicația Office.
 

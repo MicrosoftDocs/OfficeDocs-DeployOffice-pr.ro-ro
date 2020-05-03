@@ -14,12 +14,12 @@ ms.custom:
 - Ent_Office_Mac
 description: Furnizează administratorilor Office informații despre cum să gestioneze setările de confidențialitate pe dispozitive iOS.
 hideEdit: true
-ms.openlocfilehash: d1a14d2e1bfe45710255467fcbce9ac4af2c9cb7
-ms.sourcegitcommit: 903d6bac7d8b7d8003863ac778c0b5bbdfa7a62a
+ms.openlocfilehash: 40fc1ec1f5b2abc587e1b5224dc7fe0a5a656f33
+ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "37604295"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "43992118"
 ---
 # <a name="use-preferences-to-manage-privacy-controls-for-office-on-ios-devices"></a>Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pe dispozitivele iOS
 
@@ -54,9 +54,18 @@ Dicționarul este reprezentat ca un set de perechi de chei/valori în format XML
 
 Odată trimis către dispozitiv, dicționarul de configurare se va afla sub cheia `com.apple.managed.configuration`, de unde va fi citit atunci când se lansează aplicația Office.
 
+> [!NOTE]
+> De asemenea, puteți utiliza serviciul de politici cloud pentru Office și aceste patru setări de politică:
+> - Configurați nivelul datelor de diagnosticare pentru software-ul client trimise de Office la Microsoft
+> - Permiteți utilizarea de experiențe conectate în Office care analizează conținut
+> - Permiteți utilizarea de experiențe conectate în Office care descarcă conținut online
+> - Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office
+>
+> Pentru mai multe informații despre utilizarea serviciului de politici cloud pentru Office, consultați [Prezentarea generală a serviciului de politici cloud pentru Office](../overview-office-cloud-policy-service.md).
+
 ## <a name="preference-setting-for-diagnostic-data"></a>Setarea de preferințe pentru datele de diagnosticare 
 
-Datele de diagnosticare sunt utilizate pentru a menține Office securizat și actualizat, pentru a detecta, a diagnostica și a remedia problemele și, de asemenea, pentru a face îmbunătățiri ale produselor. Pentru mai multe informații, consultați [Datele de diagnosticare trimise din Office 365 ProPlus către Microsoft](overview-privacy-controls.md#diagnostic-data-sent-from-office-365-proplus-to-microsoft).
+Datele de diagnosticare sunt utilizate pentru a menține Office securizat și actualizat, pentru a detecta, a diagnostica și a remedia problemele și, de asemenea, pentru a face îmbunătățiri de produs. Pentru mai multe informații, consultați [Datele de diagnosticare trimise din Aplicații Microsoft 365 pentru întreprindere la Microsoft](overview-privacy-controls.md#diagnostic-data-sent-from-microsoft-365-apps-for-enterprise-to-microsoft).
 
 |||
 |:-----|:-----|
@@ -64,9 +73,9 @@ Datele de diagnosticare sunt utilizate pentru a menține Office securizat și ac
 |**Tip de date**  | Șir |
 |**Valori posibile**  | `BasicDiagnosticData` *(setează nivelul la Necesare)* <br/> `FullDiagnosticData` *(setează nivelul la Opționale)* <br/> `ZeroDiagnosticData` *(setează nivelul la Niciuna)* |
 
-Dacă nu setați această preferință, se trimit doar datele necesare către Microsoft, dacă utilizatorii cu un abonament Office 365 sunt conectați cu un cont de la locul de muncă sau de la școală. De asemenea, acești utilizatori nu pot modifica nivelul de date de diagnostic, indiferent de modul în care setați această preferință.
+Dacă nu setați această preferință, sunt trimise doar datele de diagnosticare necesare către Microsoft, dacă utilizatorii cu abonament Office 365 (sau Microsoft 365) sunt conectați cu un cont de la locul de muncă sau de la școală. De asemenea, acești utilizatori nu pot modifica nivelul de date de diagnosticare, indiferent de modul în care setați această preferință.
 
-Pentru alți utilizatori, cum ar fi utilizatorii la domiciliu cu abonament Office 365, sunt trimise doar date de diagnosticare necesare, cu excepția cazului în care utilizatorul alege să trimită și date de diagnosticare opționale, accesând **Setări** > **Setări de Confidențialitate**.
+Pentru alți utilizatori, cum ar fi utilizatorii la domiciliu cu abonament Office 365 (sau Microsoft 365), sunt trimise doar date de diagnosticare necesare, cu excepția cazului în care utilizatorul alege să trimită și date de diagnosticare opționale, accesând **Setări** > **Setări de confidențialitate**.
 
 
 ## <a name="preference-setting-for-connected-experiences-that-analyze-your-content"></a>Setarea de preferințe pentru experiențe conectate care analizează conținutul
@@ -82,9 +91,9 @@ Experiențele conectate care vă analizează conținutul sunt experiențe care u
 
 Dacă nu setați această preferință, experiențele conectate care analizează conținut sunt disponibile utilizatorilor.
 
-Dacă utilizatorul are un abonament Office 365 și este conectat cu un cont de la locul de muncă sau de la școală atunci utilizatorul nu poate dezactiva experiențele conectate care analizează conținutul.
+Dacă utilizatorul are un abonament Office 365 (sau Microsoft 365) și este conectat cu un cont de la locul de muncă, atunci utilizatorul nu poate dezactiva experiențele conectate care analizează conținutul.
 
-Pentru alți utilizatori, cum ar fi utilizatori la domiciliu cu un abonament Office 365, utilizatorul poate alege să dezactiveze experiențe conectate care analizează conținutul accesând **Setări** > **Setări de Confidențialitate**.
+Pentru alți utilizatori, cum ar fi utilizatori la domiciliu cu un abonament Office 365 (sau Microsoft 365), utilizatorul poate alege să dezactiveze experiențele conectate care analizează conținutul accesând **Setări** > **Setări de confidențialitate**.
 
 ## <a name="preference-setting-for-connected-experiences-that-download-online-content"></a>Setarea de preferințe pentru experiențe conectate care descarcă conținut online
 
@@ -99,9 +108,9 @@ Experiențele conectate care descarcă conținut online sunt experiențe care v�
 
 Dacă nu setați această preferință, experiențele conectate care descarcă conținut online sunt disponibile utilizatorilor.
 
-Dacă utilizatorul are un abonament Office 365 și este conectat cu un cont de la locul de muncă sau de la școală, atunci utilizatorul nu poate dezactiva experiențele conectate care descarcă conținut online.
+Dacă utilizatorul are un abonament Office 365 (sau Microsoft 365) și este conectat cu un cont de la locul de muncă, atunci utilizatorul nu poate dezactiva experiențele conectate pentru descărcarea conținutului online.
 
-Pentru alți utilizatori, cum ar fi utilizatorii la domiciliu cu un abonament Office 365, utilizatorul poate alege să dezactiveze experiențele conectate care descarcă conținut online accesând **Setări** > **Setări de confidențialitate**.
+Pentru alți utilizatori, cum ar fi utilizatori la domiciliu cu un abonament Office 365 (sau Microsoft 365), utilizatorul poate alege să dezactiveze experiențele conectate pentru descărcarea conținutului online accesând **Setări** > **Setări de confidențialitate**.
 
 ## <a name="preference-setting-for-optional-connected-experiences"></a>Setarea preferințelor pentru experiențe conectate opționale
 
@@ -114,6 +123,6 @@ Pentru alți utilizatori, cum ar fi utilizatorii la domiciliu cu un abonament Of
 |**Valori posibile**  | `TRUE` *(activat)* <br/> `FALSE` *(dezactivat)*|
 
 
-Dacă nu setați această preferință, datele de diagnostic opționale sunt disponibile utilizatorilor cu un abonament Office 365 care sunt conectați cu un cont de la locul de muncă sau de la școală. Cu excepția cazului în care ați setat această preferință la FALS, acești utilizatori pot alege să dezactiveze experiențele conectate opționale accesând **Setări** > **Setări de confidențialitate**.
+Dacă nu setați această preferință, date de diagnosticare opționale și necesare sunt disponibile utilizatorilor cu un abonament Office 365 (sau Microsoft 365) care sunt conectați cu un cont de la locul de muncă sau de la școală. Cu excepția cazului în care ați setat această preferință la FALS, acești utilizatori pot alege să dezactiveze experiențele conectate opționale accesând **Setări** > **Setări de confidențialitate**.
 
-Pentru alți utilizatori, cum ar fi utilizatori casnici cu un abonament Office 365, nu există o opțiune de a dezactiva experiențele conectate opționale.
+Pentru alți utilizatori, cum ar fi utilizatori casnici cu un abonament Office 365 (sau Microsoft 365), nu există o opțiune de a dezactiva experiențele conectate opționale.

@@ -13,20 +13,21 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferiți administratorilor Office o prezentare generală a datelor de serviciu obligatorii care sunt colectate despre experiențele de mod conectat din Office.
 hideEdit: true
-ms.openlocfilehash: b4cc25ae1c2a34082bff623ad630db664050effb
-ms.sourcegitcommit: acb22296532bbfdfcad4dc1e7162f812997fbdd1
+ms.openlocfilehash: 4b5008d1750de655601dafaa381502e708f9f9d6
+ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "38067218"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "43992764"
 ---
 # <a name="required-service-data-for-office"></a>Date de serviciu obligatorii pentru Office 
 
 > [!IMPORTANT]
-> Informațiile din acest articol se aplică la versiunea 1904 sau o versiune mai recentă a următorului software client Office instalat pe un computer care rulează Windows:
-> - Office 365 ProPlus și Office 365 Business
-> - Office 365 Personal, Office 365 pentru acasă sau alte versiuni de Office, care fac parte dintr-un abonament Office 365.
-> - Project și Visio care sunt oferite cu anumite planuri de abonament, cum ar fi planul Project Online Professional sau Visio Online Plan 2.
+> Informațiile din acest articol se aplică la versiunea 1904 sau la o versiune mai recentă a următorului software client Office instalat pe un computer care rulează Windows:
+> - Aplicații Microsoft 365 pentru întreprindere (numite anterior Office 365 ProPlus)
+> - Aplicații Microsoft 365 pentru afaceri (numite anterior Office 365 Business)
+> - Microsoft 365 Personal, Microsoft 365 Family sau alte versiuni de Office care fac parte dintr-un abonament Microsoft 365.
+> - Aplicațiile desktop Project și Visio care sunt însoțite de anumite planuri de abonament, cum ar fi Project Plan 5 sau Visio Plan 2.
 >
 > Informațiile se aplică și la versiunea 16.28 sau la versiunile mai recente ale următoarelor aplicații Office pentru Mac: Excel, Outlook, OneNote, PowerPoint și Word.
 
@@ -64,8 +65,8 @@ Pentru mai multe informații, consultați următoarele:
 
 Dacă sunteți administratorul organizației dvs., ați putea fi interesat și de următoarele:
 
-- [Prezentare generală a controalelor de confidențialitate pentru Office 365 ProPlus](overview-privacy-controls.md)
-- [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md)
+- [Prezentare generală a controalelor de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere](overview-privacy-controls.md)
+- [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere](manage-privacy-controls.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pe dispozitivele iOS.](ios-privacy-preferences.md)
 - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office pe dispozitivele Android](android-privacy-controls.md)

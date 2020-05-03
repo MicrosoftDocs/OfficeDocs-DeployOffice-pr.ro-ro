@@ -1,5 +1,5 @@
 ---
-title: Prezentare generală a controalelor de confidențialitate pentru Office 365 ProPlus
+title: Prezentare generală a controalelor de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere
 ms.author: danbrown
 author: DHB-MSFT
 manager: laurawi
@@ -13,20 +13,20 @@ ms.collection:
 ms.custom:
 - Ent_Office_ProPlus
 - Ent_Office_Privacy
-description: Administratorii Office au parte de o prezentare generală a controalelor de confidențialitate pentru Office 365 ProPlus, inclusiv pentru date de diagnosticare și experiențe conectate.
+description: Administratorii Office primesc o prezentare generală a controalelor de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere (numite anterior Office 365 ProPlus), inclusiv pentru date de diagnosticare și experiențe conectate.
 hideEdit: true
-ms.openlocfilehash: 784bbf08626e6dc8571c416a74511c9f5feeceec
-ms.sourcegitcommit: acb22296532bbfdfcad4dc1e7162f812997fbdd1
+ms.openlocfilehash: e22388cb73a539e13f67163bf0b0e949b10be349
+ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "38067376"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "43993113"
 ---
-# <a name="overview-of-privacy-controls-for-office-365-proplus"></a>Prezentare generală a controalelor de confidențialitate pentru Office 365 ProPlus
+# <a name="overview-of-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Prezentare generală a controalelor de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere
 
-Microsoft se angajează să vă furnizeze informațiile și controalele de care aveți nevoie pentru a face alegeri privind modul de colectare și de utilizare a datelor dvs. atunci când utilizați Office 365 ProPlus.
+Microsoft se angajează să vă furnizeze informațiile și controalele de care aveți nevoie pentru a face alegeri privind modul de colectare și de utilizare a datelor dvs. atunci când utilizați Aplicații Microsoft 365 pentru întreprindere (numite anterior Office 365 ProPlus).
 
-Începând cu versiunea 1904 a Office 365 ProPlus (care a fost lansată în canalul lunar la 29 aprilie 2019), vă furnizăm controale de confidențialitate noi, actualizate și îmbunătățite pentru următoarele domenii:
+Începând cu versiunea 1904 a Aplicațiilor Microsoft 365 pentru întreprindere, vă furnizăm controale de confidențialitate noi, actualizate și îmbunătățite pentru următoarele domenii:
 - ***Date de diagnosticare*** care sunt colectate și trimise la Microsoft privind software-ul client Office utilizat pe computerele care rulează Windows în organizația dvs.
 - ***Experiențe conectate*** care utilizează funcționalitatea în cloud pentru a vă furniza caracteristici îmbunătățite de Office dvs. și utilizatorilor dvs.
 
@@ -36,20 +36,20 @@ Ca parte a acestor modificări, există elemente de interfață de utilizator (U
 > - Aceste modificări se aplică la Access, Excel, OneNote, Outlook, PowerPoint, Publisher și Word.
 > - Aceste modificări se aplică și pentru următoarele:
 >   - Versiunea 16.28 sau la versiunile mai recente ale următoarelor aplicații Office pentru Mac: Excel, Outlook, OneNote, PowerPoint și Word.
->   - Versiunea 1904 sau versiunile mai recente ale versiunilor desktop de Project și Visio care sunt oferite cu anumite planuri de abonament, cum ar fi planul Project Online Professional sau Visio Online Plan 2.
-> - Aceste controale de confidențialitate sunt incluse în Versiunea 1908 a Canalului semianual (audiență specifică), care a fost lansată pe 10 septembrie 2019. Acestea vor fi disponibile în Canalul semianual în ianuarie 2020.
+>   - Versiunea 1904 sau versiunile mai recente ale versiunilor desktop de Project și Visio care sunt oferite cu anumite planuri de abonament, cum ar fi Project Plan 5 sau Visio Plan 2.
+> - Aceste controale de confidențialitate sunt incluse în versiunea 1908 sau în versiunile mai recente ale Canalului semianual (audiență specifică) și ale Canalului semianual.
 > - Aceste controale de confidențialitate sunt disponibile pentru versiunea 2.30 și versiunile mai recente ale versiunilor iOS de Excel, OneNote, PowerPoint și Word, precum și pentru versiunea 1.17 și versiuni mai recente de Visio Viewer pentru iOS.
 > - Aceste controale de confidențialitate sunt disponibile pentru versiunea 16.0.12226.10000 și versiunile mai recente ale versiunilor Android de Excel, PowerPoint și Word, precum și pentru versiunea 16.0.12228.20004 și versiunile mai recente de OneNote pentru Android.
 > - Majoritatea aplicațiilor Office pentru web utilizează noul control de confidențialitate pentru [experiențe conectate opționale](optional-connected-experiences.md). Aceste aplicații sunt următoarele: Excel pentru web, OneNote pentru web, PowerPoint pentru web, Visio pentru web și Word pentru web. Puteți utiliza [Serviciul de politică pentru cloud Office](../overview-office-cloud-policy-service.md) pentru a configura [setarea de politică](manage-privacy-controls.md#policy-setting-for-optional-connected-experiences) corespunzătoare.
-> - Vom extinde aceste controale de confidențialitate noi și îmbunătățite la clienți Office suplimentari, inclusiv pentru Teams și aplicațiile noastre mobile. Vom oferi mai multe informații despre aceste modificări în lunile următoare. Vom continua să ascultăm cu atenție feedbackul dvs. și să facem îmbunătățiri pentru toți clienții Office 365 și toate serviciile.
+> - Vom extinde aceste controale de confidențialitate noi și îmbunătățite la clienți Office suplimentari, inclusiv pentru Teams și aplicațiile noastre mobile. Vom oferi mai multe informații despre aceste modificări în lunile următoare. Vom continua să ascultăm cu atenție feedbackul dvs. și să facem îmbunătățiri pentru toți clienții și toate serviciile Office 365 (și Microsoft 365).
 
-## <a name="diagnostic-data-sent-from-office-365-proplus-to-microsoft"></a>Datele de diagnosticare trimise din Office 365 ProPlus la Microsoft
+## <a name="diagnostic-data-sent-from-microsoft-365-apps-for-enterprise-to-microsoft"></a>Datele de diagnosticare trimise din Aplicații Microsoft 365 pentru întreprindere la Microsoft
 
 Datele de diagnosticare sunt utilizate pentru a menține Office securizat și actualizat, pentru a detecta, a diagnostica și a remedia problemele și, de asemenea, pentru a face îmbunătățiri de produs. Aceste date nu includ numele sau adresa de e-mail a unui utilizator, nici conținutul fișierelor acestuia sau informații despre aplicații care nu au legătură cu Office.
 
 Datele de diagnosticare sunt colectate și trimise la Microsoft privind software-ul client Office utilizat pe computerele care rulează Windows în organizația dvs.
 
-Există trei niveluri de date de diagnosticare pentru clientul software Office 365 ProPlus dintre care puteți să alegeți:
+Există trei niveluri de date de diagnosticare pentru software-ul client Aplicații Microsoft 365 pentru întreprindere dintre care puteți să alegeți:
 
 - **Obligatoriu** Datele minime necesare pentru a păstra Office securizat, actualizat și într-o stare de funcționare conform așteptărilor pe dispozitivul pe care este instalat.
 
@@ -73,15 +73,15 @@ Pentru mai multe informații, consultați următoarele:
 
 - [Date de diagnosticare obligatorii pentru Office](required-diagnostic-data.md)
 - [Date de diagnosticare opționale pentru Office](optional-diagnostic-data.md)
-- [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md)
+- [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere](manage-privacy-controls.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pe dispozitivele iOS.](ios-privacy-preferences.md)
 - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office pe dispozitivele Android](android-privacy-controls.md)
 - [Utilizarea Vizualizatorului de date de diagnosticare cu Office](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
 
-## <a name="connected-experiences-for-office-365-proplus"></a>Experiențe conectate pentru Office 365 ProPlus
+## <a name="connected-experiences-for-microsoft-365-apps-for-enterprise"></a>Experiențe conectate pentru Aplicații Microsoft 365 pentru întreprindere
 
-Office 365 ProPlus constă din aplicații software client și experiențe conectate proiectate pentru a vă permite să creați, să comunicați și să colaborați mai eficient. Lucrul cu alte persoane într-un document stocat pe OneDrive pentru business sau traducerea conținutului unui document Word într-o altă limbă sunt exemple de experiențe conectate.
+Aplicații Microsoft 365 pentru întreprindere constă din aplicațiile software client și experiențe conectate proiectate pentru a vă permite să creați, să comunicați și să colaborați mai eficient. Lucrul cu alte persoane într-un document stocat pe OneDrive pentru business sau traducerea conținutului unui document Word într-o altă limbă sunt exemple de experiențe conectate.
 
 Înțelegem că ați dori să alegeți tipurile de experiențe conectate disponibile utilizatorilor dvs. atunci când lucrează în aplicațiile Office. Ca administrator pentru organizația dvs., veți avea setări de politică care vă permit să alegeți dacă să le furnizați sau nu următoarele tipuri de experiențe conectate utilizatorilor dvs.:
 
@@ -100,14 +100,14 @@ Utilizatorii dvs. nu vor putea să aleagă dacă să activeze aceste experiențe
 Pentru mai multe informații, consultați următoarele:
 
 - [Experiențe conectate în Office](connected-experiences.md)
-- [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md)
+- [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere](manage-privacy-controls.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pe dispozitivele iOS.](ios-privacy-preferences.md)
 - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office pe dispozitivele Android](android-privacy-controls.md)
 
-## <a name="optional-connected-experiences-for-office-365-proplus"></a>Experiențe conectate opționale pentru Office 365 ProPlus
+## <a name="optional-connected-experiences-for-microsoft-365-apps-for-enterprise"></a>Experiențe conectate opționale pentru Aplicații Microsoft 365 pentru întreprindere
 
-În plus față de experiențele conectate menționate mai sus, care sunt incluse în Office 365 ProPlus, există experiențe conectate opționale pe care le puteți alege pentru a le permite utilizatorilor să le acceseze cu contul organizației lor. De exemplu, caracteristicile LinkedIn ale Asistentului pentru CV în Word sau caracteristica Hărți 3D în Excel, care utilizează Bing.
+În plus față de experiențele conectate menționate mai sus, care sunt incluse în Aplicații Microsoft 365 pentru întreprindere, există experiențe conectate opționale pe care le puteți alege pentru a le permite utilizatorilor să le acceseze cu contul organizației lor. De exemplu, caracteristicile LinkedIn ale Asistentului pentru CV în Word sau caracteristica Hărți 3D în Excel, care utilizează Bing.
 
 Acestea sunt experiențe conectate opționale, care nu sunt acoperite de acordul comercial al organizației cu Microsoft, ci sunt guvernate de termeni și condiții separate. Experiențele conectate opționale oferite de Microsoft direct utilizatorilor dvs. sunt guvernate de [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) în loc de [Condițiile de utilizare a serviciilor online](https://www.microsoft.com/licensing/product-licensing/products).
 
@@ -118,7 +118,7 @@ Chiar dacă alegeți să puneți aceste experiențe conectate opționale la disp
 Pentru mai multe informații, consultați următoarele:
 
 - [Prezentare generală a experiențelor conectate opționale în Office](optional-connected-experiences.md)
-- [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md)
+- [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere](manage-privacy-controls.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pe dispozitivele iOS.](ios-privacy-preferences.md)
 - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office pe dispozitivele Android](android-privacy-controls.md)
@@ -143,9 +143,9 @@ Dacă alegeți să nu le oferiți utilizatorilor categoria de experiențe în mo
 
 Pentru mai multe informații, consultați [Date de serviciu obligatorii pentru Office](required-service-data.md).
 
-## <a name="essential-services-for-office-365-proplus"></a>Servicii esențiale pentru Office 365 ProPlus
+## <a name="essential-services-for-microsoft-365-apps-for-enterprise"></a>Servicii esențiale pentru Aplicații Microsoft 365 pentru întreprindere
 
-Există, de asemenea, un set de servicii esențiale pentru modul în care funcționează Office 365 ProPlus și care nu pot fi dezactivate. De exemplu, serviciul de licențiere care confirmă că aveți licența corectă pentru a utiliza Office 365 ProPlus. Datele de serviciu obligatorii cu privire la aceste servicii sunt colectate și trimise la Microsoft, indiferent ce alte setări de politică ați configurat.
+Există, de asemenea, un set de servicii esențiale pentru modul în care funcționează Aplicații Microsoft 365 pentru întreprindere și care nu pot fi dezactivate. De exemplu, serviciul de licențiere care confirmă că aveți licența corectă pentru a utiliza Aplicații Microsoft 365 pentru întreprindere. Datele de serviciu obligatorii cu privire la aceste servicii sunt colectate și trimise la Microsoft, indiferent ce alte setări de politică ați configurat.
 
 Pentru mai multe informații, consultați [Servicii esențiale pentru Office](essential-services.md).
 

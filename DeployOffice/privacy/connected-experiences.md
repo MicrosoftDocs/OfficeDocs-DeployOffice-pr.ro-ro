@@ -13,20 +13,21 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate pentru Office, cum ar fi experiențele care analizează conținut sau experiențele care descarcă conținut online.
 hideEdit: true
-ms.openlocfilehash: 8939bb1f3a3be8cf256f3bd6912abc95c8b09d2a
-ms.sourcegitcommit: 2475f3c2a61baf298a52c0bcdb0e7c9b9c0407ac
+ms.openlocfilehash: bcf28caae666900deacbd0effe83a2fae383c41d
+ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "43166382"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "43993018"
 ---
 # <a name="connected-experiences-in-office"></a>Experiențe conectate în Office
 
 > [!IMPORTANT]
 > Informațiile din acest articol se aplică la versiunea 1904 sau la o versiune mai recentă a următorului software client Office instalat pe un computer care rulează Windows:
-> - Office 365 ProPlus și Office 365 Business
-> - Office 365 Personal, Office 365 pentru acasă sau alte versiuni de Office, care fac parte dintr-un abonament Office 365.
-> - Project și Visio care sunt oferite cu anumite planuri de abonament, cum ar fi planul Project Online Professional sau Visio Online Plan 2.
+> - Aplicații Microsoft 365 pentru întreprindere (numite anterior Office 365 ProPlus)
+> - Aplicații Microsoft 365 pentru afaceri (numite anterior Office 365 Business)
+> - Microsoft 365 Personal, Microsoft 365 Family sau alte versiuni de Office care fac parte dintr-un abonament Microsoft 365.
+> - Aplicațiile desktop Project și Visio care sunt însoțite de anumite planuri de abonament, cum ar fi Project Plan 5 sau Visio Plan 2.
 >
 > Informațiile se aplică și la versiunea 16.28 sau la versiunile mai recente ale următoarelor aplicații Office pentru Mac: Excel, Outlook, OneNote, PowerPoint și Word.
 >
@@ -48,7 +49,7 @@ Următorul tabel furnizează o listă de experiențe conectate care vă analizea
 | Dictare  | [Dictați cu vocea în Office](https://support.office.com/article/d4fd296e-8f15-4168-afec-1f95b13a6408) |
 | Editor    | [Editorul este asistentul dvs. de scriere](https://support.office.com/article/91ecbe1b-d021-4e9e-a82e-abc4cd7163d7)  |
 | Idei     | [Idei în Excel](https://support.office.com/article/3223aab8-f543-4fda-85ed-76bb0295ffc4) |
-| Cerneală în text, Cerneală în formă, Cerneală în expresie matematică | [Modificați cerneală scrisă de mână în forme, în text sau în expresie matematică în PowerPoint pentru Office 365](https://support.office.com/article/0740dec3-6291-4c1f-8baa-011d18449919) |
+| Cerneală în text, Cerneală în formă, Cerneală în expresie matematică | [Modificați cerneală scrisă de mână în forme, în text sau în expresie matematică în PowerPoint pentru Microsoft 365](https://support.office.com/article/0740dec3-6291-4c1f-8baa-011d18449919) |
 | Inserarea datelor din imagine| [Inserare date din imagine](https://support.office.com/article/3c1bb58d-2c59-4bc0-b04a-a671a6868fd7)|
 | Subtitrări în direct |  [Prezentați subtitrări în timp real, automate în PowerPoint](https://support.office.com/article/68d20e49-aec3-456a-939d-34a79e8ddd5f)   |
 | Diagramă hartă\*    | [Crearea unei diagrame hartă](https://support.office.com/article/f2cfed55-d622-42cd-8ec9-ec8a358b593b)  |
@@ -119,16 +120,16 @@ Următorul tabel furnizează o listă a acelor experiențe conectate și furnize
 | Mesaje prioritare (Outlook) |[Mesaje prioritare pentru Outlook](https://support.office.com/article/f445ad7f-02f4-4294-a82e-71d8964e3978)  |
 | Information Rights Management |[Information Rights Management în Office](https://support.office.com/Article/c7a70797-6b1e-493f-acf7-92a39b85e30c)  |
 | Carte de vizită LinkedIn |[Conectați-vă la conturile LinkedIn și Microsoft](https://support.office.com/article/dc81cc70-4d64-4755-9f1c-b9536e34d381)  |
+| Programe de completare Office\* | [Gestionați implementarea programelor de completare în centrul de administrare Microsoft 365](https://docs.microsoft.com/office365/admin/manage/manage-deployment-of-add-ins) |
 | Feedback Office |[Cum pot trimite feedback pentru Microsoft Office?](https://support.office.com/article/2b102d44-b43f-4dd2-9ff4-23cf144cfb11)  |
 | Asistența Office (contactați-ne) |Atunci când alegeți **Ajutor** > **Contactați asistența** în panglică |
-| Programele de completare Office 365\* | [Gestionați implementarea programelor de completare Office 365 în centrul de administrare Microsoft 365](https://docs.microsoft.com/office365/admin/manage/manage-deployment-of-add-ins) |
 | Organigramă (Visio) |[Creați o organigramă Visio](https://support.office.com/article/abb3dd17-2692-439f-9945-3a015767d96a)  |
 | Outlook Social Connector | [Activați Outlook Social Connector](https://support.office.com/article/255447E8-82CD-48E7-9B79-1DD8721A2907) |
 | Outlook UserVoice\* | [Cum pot trimite feedback pentru Microsoft Office?](https://support.office.com/article/2b102d44-b43f-4dd2-9ff4-23cf144cfb11) |
 | Documente recente |[Deschideți fișierele din meniul Fișier](https://support.office.com/article/97f087d8-3136-4485-8e86-c5b12a8c4176)  |
 | Asistent pentru CV\* |[Scrieți cel mai bun CV cu ajutorul de la LinkedIn și cu Asistentul pentru CV](https://support.office.com/article/444ff6f0-ef74-4a9c-9091-ffd7a9d1917a")  |
 | Instrument de găsire sală (Outlook)|[Cum să controlați Instrumentul de găsire sală în Outlook](https://support.microsoft.com/help/2673231/how-to-control-the-room-finder-in-outlook)  |
-| Linkuri sigure |[Linkuri sigure ATP Office 365](https://docs.microsoft.com/office365/securitycompliance/atp-safe-links)  |
+| Linkuri sigure |[Linkuri sigure ATP](https://docs.microsoft.com/office365/securitycompliance/atp-safe-links)  |
 | Etichete de confidențialitate  |[Aplicați etichete de confidențialitate documentelor și e-mailurilor în Office](https://support.office.com/article/2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9)  |
 | Partajare  |[Partajați un document (Excel)](https://support.office.com//article/8D8A52BB-03C3-4933-AB6C-330AABF1E589) <br/>[Partajați un document (PowerPoint)](https://support.office.com//article/fdcad9ad-4f13-4f5b-9910-12b4108a4c86) <br/>[Partajați un document (Word)](https://support.office.com//article/d39f3cd8-0aa0-412f-9a35-1abba926d354) |
 | Partajate cu mine |[Vedeți fișierele pe care alte persoane le-au partajat cu dvs.](https://support.office.com/article/e0476dc7-bf2f-4203-b9ad-c809578b03e7)  |
@@ -153,7 +154,7 @@ Dacă sunteți conectat cu un cont de la locul de muncă sau de la școală, adm
 
 Dacă sunteți administrator pentru organizația dvs., puteți utiliza setările de politică pentru a determina dacă aceste experiențe conectate sunt disponibile pentru utilizatorii dvs. Dacă nu utilizați aceste setări de politică, toate experiențele conectate vor fi disponibile pentru utilizatorii dvs. Pentru informații suplimentare despre utilizarea acestor setări de politică, consultați articolele următoare: 
 
-- [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus](manage-privacy-controls.md)
+- [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere](manage-privacy-controls.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md).
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pe dispozitivele iOS.](ios-privacy-preferences.md)
 - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office pe dispozitivele Android](android-privacy-controls.md)
@@ -164,7 +165,7 @@ Chiar dacă vă hotărâți să dezactivați aceste experiențe conectate, anumi
 
 ## <a name="related-topics"></a>Subiecte asociate
 
-- [Prezentare generală a controalelor de confidențialitate pentru Office 365 ProPlus](overview-privacy-controls.md)
+- [Prezentare generală a controalelor de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere](overview-privacy-controls.md)
 - [Prezentare generală a experiențelor conectate opționale în Office](optional-connected-experiences.md)
 - [Date de serviciu obligatorii pentru Office](required-service-data.md)
 - [Servicii esențiale pentru Office](essential-services.md)
