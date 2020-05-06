@@ -1,5 +1,5 @@
 ---
-title: Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus
+title: Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere
 ms.author: danbrown
 author: DHB-MSFT
 manager: laurawi
@@ -13,20 +13,20 @@ ms.collection:
 ms.custom:
 - Ent_Office_ProPlus
 - Ent_Office_Privacy
-description: Administratorii Office oferă informații despre gestionarea controalelor de confidențialitate în Office 365 ProPlus, utilizând setările de politică.
+description: Le oferă administratorilor Office informații despre gestionarea controalelor de confidențialitate în Aplicații Microsoft 365 pentru întreprindere (numite anterior Office 365 ProPlus), utilizând setările de politică.
 hideEdit: true
-ms.openlocfilehash: ee02079595157af2fea8883069a640b90ff962d2
-ms.sourcegitcommit: 6a091ca7e72cd7ce97793ebd0fdcfa2a6fa1a098
+ms.openlocfilehash: 284b9b8a2b0231f5079e34ec2b09e35dfd0d07ca
+ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "42687240"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "43992979"
 ---
-# <a name="use-policy-settings-to-manage-privacy-controls-for-office-365-proplus"></a>Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office 365 ProPlus
+# <a name="use-policy-settings-to-manage-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere
 
-Microsoft se angajează să vă furnizeze informațiile și controalele de care aveți nevoie pentru a face alegeri privind modul de colectare și de utilizare a datelor dvs. atunci când utilizați Office 365 ProPlus.
+Microsoft se angajează să vă furnizeze informațiile și controalele de care aveți nevoie pentru a face alegeri privind modul de colectare și de utilizare a datelor dvs. atunci când utilizați Aplicații Microsoft 365 pentru întreprindere (numite anterior Office 365 ProPlus).
 
-Începând cu versiunea 1904 pentru Office 365 ProPlus, există noi setări de politică care vă permit să controlați setările asociate cu:
+Începând cu versiunea 1904 pentru Aplicații Microsoft 365 pentru întreprindere, există noi setări de politică care vă permit să controlați setările asociate cu:
 
 - ***Date de diagnosticare*** care sunt colectate și trimise la Microsoft despre software-ul client Office utilizat
 
@@ -50,9 +50,9 @@ Aceste setări de politică pot fi implementate utilizând fie Politica de grup,
 
 Dacă utilizați instrumentul de Gestionare a politicilor de grup, toate aceste setări de politică se află în Configurație utilizator\\Politici\\Șabloane administrative\\Microsoft Office 2016\\Confidențialitate\\Centrul de autorizare.
 
-Aceste noi setări de politică se aplică și la versiunile desktop de Project și Visio care sunt oferite cu anumite planuri de abonament, cum ar fi planul Project Online Professional sau Visio Online Plan 2. Se aplică și la Office 365 Business.
+Aceste noi setări de politică li se aplică și versiunilor desktop de Project și Visio care sunt oferite cu anumite planuri de abonament, cum ar fi Project Plan 5 sau Visio Plan 2. Acestea se aplică și la Aplicații Microsoft 365 pentru afaceri (numite anterior Office 365 Business).
 
-În plus, există unele setări de politică care nu se vor mai aplica la Office 365 ProPlus și există unele modificări la nivelul interfeței utilizator (UI) privind setările de confidențialitate de care trebuie să țineți cont întrucât utilizatorii dvs. ar putea să observe respectivele modificări și să pună întrebări în legătură cu ele.
+În plus, există unele setări de politică care nu se vor mai aplica la Aplicații Microsoft 365 pentru întreprindere și există unele modificări la nivelul interfeței utilizator (UI) privind setările de confidențialitate de care trebuie să țineți cont întrucât utilizatorii dvs. ar putea să observe respectivele modificări și să pună întrebări în legătură cu ele.
 
 Cât despre noile setări de politică, trebuie să le testați cu atenție le într-un mediu limitat, controlat pentru a vă asigura că setările pe care le configurați au efectul dorit înainte să implementați setările de politică pe scară largă în organizația dvs.
 
@@ -74,14 +74,14 @@ Dacă dezactivați sau nu configurați această setare de politică, atât datel
 
 Pentru mai multe informații despre datele de diagnosticare, consultați linkul următor:
 
-- [Prezentare generală a controalelor de confidențialitate pentru Office 365 ProPlus](overview-privacy-controls.md)
+- [Prezentare generală a controalelor de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere](overview-privacy-controls.md)
 - [Date de diagnosticare obligatorii pentru Office](required-diagnostic-data.md)
 - [Date de diagnosticare opționale pentru Office](optional-diagnostic-data.md)
 - [Utilizarea Vizualizatorului de date de diagnosticare cu Office](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
 
 ## <a name="policy-settings-for-connected-experiences"></a>Setările de politică pentru experiențe conectate
 
-Office 365 ProPlus constă din aplicații software client și experiențe conectate proiectate pentru a vă permite să creați, să comunicați și să colaborați mai eficient. Lucrul cu alte persoane într-un document stocat pe OneDrive pentru business sau traducerea conținutului unui document Word într-o altă limbă sunt exemple de experiențe conectate.
+Aplicații Microsoft 365 pentru întreprindere constă din aplicațiile software client și experiențe conectate proiectate pentru a vă permite să creați, să comunicați și să colaborați mai eficient. Lucrul cu alte persoane într-un document stocat pe OneDrive pentru business sau traducerea conținutului unui document Word într-o altă limbă sunt exemple de experiențe conectate.
 
 Înțelegem că ați dori să alegeți tipurile de experiențe conectate disponibile utilizatorilor dvs. atunci când aceștia lucrează în aplicațiile Office. Prin urmare, vă prezentăm patru noi setări de politică:
 
@@ -90,11 +90,11 @@ Office 365 ProPlus constă din aplicații software client și experiențe conect
 - Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office
 - Permiteți utilizarea de experiențe conectate în Office
 
-Dacă nu utilizați aceste setări de politică, toate experiențele conectate vor fi disponibile. Acest lucru le oferă utilizatorilor dvs. toate caracteristicile și funcționalitățile accesibile prin Office 365 ProPlus. Dar înțelegem că va trebui, probabil, să dezactivați unele experiențe conectate sau chiar pe toate pentru a satisface anumite cerințe ale organizației dvs.
+Dacă nu utilizați aceste setări de politică, toate experiențele conectate vor fi disponibile. Acest lucru le oferă utilizatorilor dvs. toate caracteristicile și funcționalitățile accesibile prin Aplicații Microsoft 365 pentru întreprindere. Dar înțelegem că va trebui, probabil, să dezactivați unele experiențe conectate sau chiar pe toate pentru a satisface anumite cerințe ale organizației dvs.
 
 Dacă alegeți să nu le oferiți utilizatorilor dvs. unele tipuri de experiențe conectate, panglica sau comanda meniului pentru acele experiențe conectate se va estompa sau utilizatorii vor primi un mesaj de eroare atunci când încearcă să utilizeze aceste experiențe conectate. În acest caz, la Microsoft nu vor fi trimise [datele de serviciu obligatorii](required-service-data.md) pentru acele experiențe conectate.
 
-Utilizatorii dvs. nu vor putea să aleagă dacă să activeze sau să dezactiveze aceste experiențe conectate incluse în Office 365 ProPlus dacă sunt conectați la Office cu acreditările organizației, la care se face uneori referire ca la contul de la locul de muncă sau de la școală.
+Utilizatorii dvs. nu vor putea să aleagă dacă să activeze sau să dezactiveze aceste experiențe conectate incluse în Aplicații Microsoft 365 pentru întreprindere dacă sunt conectați la Office cu acreditările organizației, la care se face uneori referire ca la contul de la locul de muncă sau de la școală.
 
 ### <a name="policy-setting-for-connected-experiences-that-analyze-your-content"></a>Setarea de politică pentru experiențe conectate care analizează conținut
 
@@ -114,7 +114,7 @@ Rețineți că dacă dezactivați setarea de politică *Permiteți utilizarea de
 
 ### <a name="policy-setting-for-optional-connected-experiences"></a>Setarea de politică pentru experiențe conectate opționale
 
-În plus față de experiențele conectate menționate mai sus, care sunt incluse în Office 365 ProPlus, există câteva experiențe conectate opționale pe care le puteți alege pentru a le permite utilizatorilor să le acceseze cu contul organizației lor. De exemplu, caracteristicile LinkedIn ale Asistentului pentru CV în Word sau caracteristica Hărți 3D în Excel, care utilizează Bing. Pentru mai multe exemple, consultați [Prezentare generală a experiențelor conectate opționale în Office](optional-connected-experiences.md).
+În plus față de experiențele conectate menționate mai sus, care sunt incluse în Aplicații Microsoft 365 pentru întreprindere, există unele experiențe conectate opționale pe care le puteți alege pentru a le permite utilizatorilor să le acceseze cu contul lor de organizație. De exemplu, caracteristicile LinkedIn ale Asistentului pentru CV în Word sau caracteristica Hărți 3D în Excel, care utilizează Bing. Pentru mai multe exemple, consultați [Prezentare generală a experiențelor conectate opționale în Office](optional-connected-experiences.md).
 
 Aceste experiențe conectate sunt diferite, deoarece nu sunt acoperite de acordul comercial al organizației cu Microsoft. Experiențele conectate opționale sunt oferite de Microsoft direct utilizatorilor dvs. și sunt guvernate de [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement), nu de [Condițiile de utilizare a serviciilor online](https://www.microsoft.com/licensing/product-licensing/products). În unele cazuri, conținutul sau funcționalitățile de la terți sunt furnizate prin aceste experiențe conectate opționale și se pot aplica și alte condiții. Pentru mai multe informații, consultați [Prezentare generală a experiențelor conectate opționale în Office](optional-connected-experiences.md).
 
@@ -138,7 +138,7 @@ Există o excepție de care trebuie să ținem cont. Setarea de politică *Permi
 
 ### <a name="policy-setting-for-most-connected-experiences"></a>Setarea de politică pentru cele mai conectate experiențe
 
-Puteți utiliza setarea de politică *Permiteți utilizarea de experiențe conectate în Office* pentru a controla dacă cele mai conectate experiențe accesibile prin Office 365 ProPlus sunt disponibile pentru utilizatorii dvs. Dacă dezactivați setarea de politică, următoarele tipuri de experiențe conectate nu vor fi disponibile pentru utilizatorii dvs.:
+Puteți utiliza setarea de politică *Permiteți utilizarea de experiențe conectate în Office* pentru a controla dacă cele mai conectate experiențe accesibile prin Aplicații Microsoft 365 pentru întreprindere sunt disponibile pentru utilizatorii dvs. Dacă dezactivați setarea de politică, următoarele tipuri de experiențe conectate nu vor fi disponibile pentru utilizatorii dvs.:
 
 - Experiențe care analizează conținut
 - Experiențe care descarcă conținut online
@@ -150,13 +150,13 @@ Chiar dacă dezactivați această setare de politică, funcționalitatea Office 
 
 ## <a name="existing-policy-settings-that-are-replaced-by-new-policy-settings"></a>Setările de politică existente care sunt înlocuite de noile setări de politică
 
-Există două setări de politică care nu se mai aplică la Office 365 ProPlus, începând cu versiunea 1904. Iată acele setări de politică:
+Există două setări de politică care nu se mai aplică la Aplicații Microsoft 365 pentru întreprindere, începând cu versiunea 1904. Iată acele setări de politică:
 
 - **Trimiteți informații personale**, care pot fi găsite în Configurația de utilizator\\Politici\\Șabloane administrative\\Microsoft Office 2016\\Confidențialitate\\Centrul de autorizare.
 
 - **Opțiuni conținut online**, care pot fi găsite în Configurația de utilizator\\Politici\\Șabloane administrative\\Microsoft Office 2016\\Instrumente | Opțiuni | Generale | Opțiuni de servicii... \\Conținut online.
 
-Începând cu versiunea 1904, configurarea acestor două setări de politică existente nu vor avea niciun efect asupra Office 365 ProPlus. Ele nu se mai aplică deoarece funcționalitatea lor este înlocuită de aceste noi setări de politică:
+Începând cu versiunea 1904, configurarea acestor două setări de politică existente nu va avea niciun efect asupra Aplicații Microsoft 365 pentru întreprindere. Ele nu se mai aplică deoarece funcționalitatea lor este înlocuită de aceste noi setări de politică:
 
 - Permiteți utilizarea de experiențe conectate în Office care analizează conținut
 - Permiteți utilizarea de experiențe conectate în Office care descarcă conținut online
@@ -183,7 +183,7 @@ După cum probabil știți deja, există unele setări de politică care vă per
 
 ## <a name="privacy-related-changes-to-the-office-ui"></a>Modificări legate de confidențialitate la interfața de utilizator Office
 
-Există unele modificări la interfața de utilizator (UI) a Office 365 ProPlus care au legătură cu confidențialitatea, pe care utilizatorii le pot observa și în privința cărora pot pune întrebări. Aceste modificări sunt un rezultat direct al noilor controale de confidențialitate și setări de politică, disponibile începând cu versiunea 1904.
+Există unele modificări la interfața utilizator (UI) din Aplicații Microsoft 365 pentru întreprindere care au legătură cu confidențialitatea, pe care utilizatorii le pot observa și în privința cărora pot pune întrebări. Aceste modificări sunt un rezultat direct al noilor controale de confidențialitate și setări de politică, disponibile începând cu versiunea 1904.
 
 ### <a name="dialog-about-optional-connected-experiences"></a>Dialog despre experiențe conectate opționale
 
