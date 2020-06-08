@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre gestionarea controalelor de confidențialitate în Aplicații Microsoft 365 pentru întreprindere (numite anterior Office 365 ProPlus), utilizând setările de politică.
 hideEdit: true
-ms.openlocfilehash: 284b9b8a2b0231f5079e34ec2b09e35dfd0d07ca
-ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
+ms.openlocfilehash: ca076099be15a5a4cd19ac7c99660bfe26de8eed
+ms.sourcegitcommit: edd1190877db7996206147ad1d691fd8e84f23b1
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "43992979"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "44589039"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere
 
@@ -225,7 +225,7 @@ Unii administratori preferă să modifice setările direct în registry, de exem
 
 Pentru a crea un fișier .reg pentru setările de confidențialitate, deschideți Notepad și copiați în următoarele linii. Ajustați valorile în funcție de necesitățile dvs., apoi salvați fișierul. Asigurați-vă că numele de fișier are o extensie .reg
 
-```
+```console
 Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\Software\Policies\Microsoft\office\16.0\common\privacy]
