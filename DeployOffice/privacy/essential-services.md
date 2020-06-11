@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre servicii esențiale în Office, cum ar fi Clic și Pornire și Licențiere, și asigură o listă de evenimente și câmpuri de date pentru aceste servicii esențiale.
 hideEdit: true
-ms.openlocfilehash: 33f4c32c64713e63c02db95b93fc0295e2decb62
-ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
+ms.openlocfilehash: 74d827255ddbedb42cbe242229140d2c8eafea66
+ms.sourcegitcommit: f8201a088d2b160b6fcec2342e11be0e9ba3d189
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "43992849"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "44663185"
 ---
 # <a name="essential-services-for-office"></a>Servicii esențiale pentru Office
 
@@ -2528,9 +2528,9 @@ Raportează rezultatul încercării de instalare completă
 
 Raportează acțiunea care stabilește intrarea colectată utilizând CollectParameters
 
-- **BitField -** valoarea întreagă a argumentului BitField, care ne spune dacă s-a solicitat un canal de instalare/actualizare explicit (lunar, utilizatori Insider lent, utilizatori Insider rapid, semi-anual, vizat semi-anual)
+- **BitField -** valoarea întreagă a argumentului BitField, care ne spune dacă s-a solicitat un canal de instalare/actualizare explicit. De exemplu, Canal Beta, Canal curent (previzualizare), Canal curent, Canal Enterprise lunar, Canal Enterprise semestrial (previzualizare) sau Canal Enterprise semestrial.
 
-- **ChannelID -** Număr întreg reprezentând valoarea de enumerare a canalului de actualizare/instalare selectat (lunar, utilizatori Insider lent, utilizatori Insider rapid, semi-anual, țintă semi-anual, nevalid)
+- **ChannelID -** întreg reprezentând valoarea de enumerare a canalului de actualizare/instalare selectat. De exemplu, Canal Beta, Canal curent (previzualizare), Canal curent, Canal Enterprise lunar, Canal Enterprise semestrial (previzualizare), Canal Enterprise semestrial sau nevalid.
 
 - **CMDMode -** Șirul prietenos care corespunde comutatorului de mod general care a fost detectat în argumentele cmd transmise către exe.
 
@@ -2607,9 +2607,9 @@ Raportează acțiunea care citește intrarea etichetată din semnătura încorpo
 
 Raportează parametrii utilizați pentru instalarea Office
 
-- **BitField -** valoarea întreagă a argumentului BitField, care ne spune dacă s-a solicitat un canal de instalare/actualizare explicit (lunar, utilizatori Insider lent, utilizatori Insider rapid, semi-anual, vizat semi-anual)
+- **BitField -** valoarea întreagă a argumentului BitField, care ne spune dacă s-a solicitat un canal de instalare/actualizare explicit. De exemplu, Canal Beta, Canal curent (previzualizare), Canal curent, Canal Enterprise lunar, Canal Enterprise semestrial (previzualizare) sau Canal Enterprise semestrial.
 
-- **ChannelID -** Număr întreg reprezentând valoarea de enumerare a canalului de actualizare/instalare selectat (lunar, utilizatori Insider lent, utilizatori Insider rapid, semi-anual, țintă semi-anual, nevalid)
+- **ChannelID -** întreg reprezentând valoarea de enumerare a canalului de actualizare/instalare selectat. De exemplu, Canal Beta, Canal curent (previzualizare), Canal curent, Canal Enterprise lunar, Canal Enterprise semestrial (previzualizare), Canal Enterprise semestrial sau nevalid.
 
 - **CMDMode -** Șirul prietenos care corespunde comutatorului de mod general care a fost detectat în argumentele cmd transmise către exe. Posibilitățile sunt: autorun, configurare, consumator, descărcare, ajutor, arhivator
 

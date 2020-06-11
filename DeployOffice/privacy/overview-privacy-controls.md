@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorii Office primesc o prezentare generală a controalelor de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere (numite anterior Office 365 ProPlus), inclusiv pentru date de diagnosticare și experiențe conectate.
 hideEdit: true
-ms.openlocfilehash: e22388cb73a539e13f67163bf0b0e949b10be349
-ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
+ms.openlocfilehash: 134f7470354796679c9a8c69fac8dd2559302b72
+ms.sourcegitcommit: f8201a088d2b160b6fcec2342e11be0e9ba3d189
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "43993113"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "44663560"
 ---
 # <a name="overview-of-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Prezentare generală a controalelor de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere
 
@@ -37,7 +37,7 @@ Ca parte a acestor modificări, există elemente de interfață de utilizator (U
 > - Aceste modificări se aplică și pentru următoarele:
 >   - Versiunea 16.28 sau la versiunile mai recente ale următoarelor aplicații Office pentru Mac: Excel, Outlook, OneNote, PowerPoint și Word.
 >   - Versiunea 1904 sau versiunile mai recente ale versiunilor desktop de Project și Visio care sunt oferite cu anumite planuri de abonament, cum ar fi Project Plan 5 sau Visio Plan 2.
-> - Aceste controale de confidențialitate sunt incluse în versiunea 1908 sau în versiunile mai recente ale Canalului semianual (audiență specifică) și ale Canalului semianual.
+> - Aceste controale de confidențialitate sunt incluse în versiunea 1908 sau în versiunile mai recente ale Canalului Enterprise semestrial (previzualizare) și ale Canalului Enterprise semestrial.
 > - Aceste controale de confidențialitate sunt disponibile pentru versiunea 2.30 și versiunile mai recente ale versiunilor iOS de Excel, OneNote, PowerPoint și Word, precum și pentru versiunea 1.17 și versiuni mai recente de Visio Viewer pentru iOS.
 > - Aceste controale de confidențialitate sunt disponibile pentru versiunea 16.0.12226.10000 și versiunile mai recente ale versiunilor Android de Excel, PowerPoint și Word, precum și pentru versiunea 16.0.12228.20004 și versiunile mai recente de OneNote pentru Android.
 > - Majoritatea aplicațiilor Office pentru web utilizează noul control de confidențialitate pentru [experiențe conectate opționale](optional-connected-experiences.md). Aceste aplicații sunt următoarele: Excel pentru web, OneNote pentru web, PowerPoint pentru web, Visio pentru web și Word pentru web. Puteți utiliza [Serviciul de politică pentru cloud Office](../overview-office-cloud-policy-service.md) pentru a configura [setarea de politică](manage-privacy-controls.md#policy-setting-for-optional-connected-experiences) corespunzătoare.
