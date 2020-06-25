@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre datele de diagnosticare obligatorii în Office și le furnizează o listă de evenimente și câmpuri de date.
 hideEdit: true
-ms.openlocfilehash: f08061e77e5757d61108e2eb4539986b90902bef
-ms.sourcegitcommit: 06da4eff4b399367017fc68fadb13df29e577e64
+ms.openlocfilehash: d3acec4d3e2b1758ca991dd9bec0a551e9ebfab7
+ms.sourcegitcommit: 5c82507780e8f46c01c951135419546b7b9dad52
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "43998838"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "44811482"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Date de diagnosticare obligatorii pentru Office
 
@@ -624,6 +624,8 @@ Următoarele câmpuri de date sunt comune pentru toate evenimentele Outlook pent
 - **DeviceInfo.NetworkProvider** - furnizorul de rețea al dispozitivului (de exemplu, Verizon)
 
 - **gcc_restrictions_enabled** - ne indică dacă s-au aplicat restricții GCC la aplicație, astfel încât să ne asigurăm că clienții noștri GCC utilizează aplicația în siguranță
+ 
+- **multi_window_mode** – ne indică dacă utilizatorul pe iPad folosește mai multe ferestre pentru a ne ajuta să detectăm probleme legate de utilizarea ferestrelor multiple.
 
 - **office_session_id** - un ID unic care urmărește sesiunea pentru serviciile Office conectate, pentru a ajuta la detectarea problemelor specifice unui serviciu Office integrat în Outlook, cum ar fi Word
 
@@ -659,6 +661,20 @@ Iată subtipurile de date din această categorie:
 
 Produsul instalat, versiunea și starea de instalare.
 
+#### <a name="add_sso_account"></a>add_sso_account
+
+Acest lucru va alerta Microsoft pentru succesul sau eșecul unui utilizator la adăugarea unui cont prin sign-on unic (SSO).
+
+Se colectează următoarele câmpuri: 
+
+- **account_type** – tipul de cont adăugat utilizând SSO.
+
+- **action_origin** – de unde a fost generat acest eveniment. (de exemplu, valori: sso_drawer, sso_add_account, sso_add_account_prompt, sso_settings, sso_oobe).
+
+- **furnizor** – identificatorul pachetului de software al furnizorului pentru SSO.
+
+- **stare** – starea curentă a contului, (exemplu de valoare: EȘUAT, ÎN AȘTEPTARE, ADĂUGAT etc.)
+ 
 #### <a name="officeclicktorunupdatestatus"></a>Office.ClickToRun.UpdateStatus
 
 Se aplică la toate aplicațiile win32. Ne ajută să înțelegem starea procesului de actualizare a suitei Office (succes sau eroare cu detalii despre eroare)
@@ -1249,6 +1265,34 @@ Se colectează următoarele câmpuri:
 
 Condițiile de eroare ale documentelor, caracteristicilor și programelor de completare care pot compromite securitatea, inclusiv pregătirea pentru actualizarea produselor.
 
+#### <a name="office_appguard_createcontainer"></a>Office_AppGuard_CreateContainer
+
+Colectăm coduri de eroare și dacă containerul exista deja sau nu. De asemenea, colectăm coduri de eroare pentru un eveniment de resetare, în caz că nu reușim să creăm containerul la prima încercare. Datele vor fi utilizate pentru a identifica procentul de sesiuni prin care am creat cu succes containerul pentru lansarea aplicațiilor Protecție aplicații Office. De asemenea, datele vor permite ca Microsoft să identifice și să abordeze codurile de eroare din crearea containerului.
+
+Se colectează următoarele câmpuri:
+
+- **ErrorCode1** - Tipul codului de eroare din configurarea containerului.  
+
+- **ErrorCode2** - Codul de eroare din executarea creării. 
+
+- **ErrorCode3** - Codul de eroare suplimentar. 
+
+- **ID** - Un identificator unic (GUID) pentru crearea containerului.
+
+- **ResetError** - Codul de eroare de la încercarea de a reseta containerul după o încercare nereușită.
+
+- **ResetErrorCode1** - Tipul codului de eroare din configurarea containerului după comanda de resetare. 
+
+- **ResetErrorCode2** - Codul de eroare din executarea creării după comanda de resetare.
+
+- **ResetErrorCode3** - Codul de eroare suplimentar după comanda de resetare.
+
+- **ResetErrorType** - Tipul de eroare în timpul resetării: Creare, Pregătire fișier sau Lansare.
+
+- **WarmBoot** - Identifică dacă containerul a fost creat deja sau nu.
+
+
+
 #### <a name="officesecurityactivationfilterclsidactivated"></a>Office.Security.ActivationFilter.CLSIDActivated
 
 Urmărește momentul în care un identificator de clasă specific (Flash, Silverlight etc.) este activat în Office. Utilizat pentru a urmări impactul blocării controalelor Flash, Silverlight și Shockwave asupra utilizatorilor finali.
@@ -1684,7 +1728,15 @@ Se colectează următoarele câmpuri:
 
 - **subtab_type** - urmărește unde a selectat utilizatorul rezultatul, din ce filă de rezultate
 
-- **top_mail_result_selected_count** - urmărește de câte ori un utilizator selectează cele mai bune rezultate oferite. 
+- **top_mail_result_selected_count** - urmărește de câte ori un utilizator selectează cele mai bune rezultate oferite.
+
+- **ui_reload_result_count** - înregistrează perioadele de reîncărcare UI din cauza actualizării setului de rezultate (în timpul interogării corespunzătoare)
+
+- **ui_reload_result_time** - înregistrează timpul total consumat pentru reîncărcarea interfeței utilizatorului din cauza actualizării setului de rezultate (în timpul interogării corespunzătoare)
+
+- **ui_reload_status_count** - înregistrează perioadele de reîncărcare UI din cauza actualizării de stare (în timpul interogării corespunzătoare)
+
+- **ui_reload_status_time** - înregistrează timpul total petrecut pentru reîncărcarea UI din cauza actualizării de stare (în timpul interogării corespunzătoare)
 
 #### <a name="compose_mail_accessory"></a>compose_mail_accessory
 
@@ -3320,6 +3372,118 @@ Evenimentul este colectat când fluxul este prezentat utilizatorului. Evenimentu
 - **version** - versiunea clientului de flux.
 
 
+#### <a name="officefeedbacksurveyfloodgateclientsurveytracked"></a>Office.Feedback.Survey.FloodgateClient.SurveyTracked
+
+Monitorizează atunci când un dispozitiv eligibil pentru o anchetă pornește o aplicație. Se utilizează pentru a evalua experiența sondajului, precum și pentru a vă asigura de funcționarea corectă a semnalului utilizat pentru a analiza problemele și stările clienților.
+
+Se colectează următoarele câmpuri:
+
+- **ExpirationTimeUTC** – data/ora la care ancheta va expira
+
+- **SurveyName** – numele anchetei afișate
+
+- **SurveyId** – instanța unică a unei campanii
+
+- **UniqueId** – ID pentru a identifica fragmentul individual de telemetrie
+
+#### <a name="officefeedbacksurveyfloodgateclienttriggermet"></a>Office.Feedback.Survey.FloodgateClient.TriggerMet
+
+Monitorizează atunci când un dispozitiv a îndeplinit criteriile pentru a afișa o anchetă. Se utilizează pentru a evalua procesul de declanșare a sondajului, precum și pentru a vă asigura de funcționarea corectă a semnalului utilizat pentru a analiza problemele și stările clienților
+
+Se colectează următoarele câmpuri:
+
+- **ExpirationTimeUTC** – data/ora la care ancheta va expira
+
+- **SurveyName** – numele anchetei afișate
+
+- **SurveyId** – instanța unică a unei campanii
+
+- **UniqueId** – ID pentru a identifica fragmentul individual de telemetrie
+
+#### <a name="officefeedbacksurveyfloodgateclientuserselected"></a>Office.Feedback.Survey.FloodgateClient.UserSelected
+
+Monitorizează atunci când un dispozitiv a fost selectat pentru o anchetă. Se utilizează pentru a evalua experiența sondajului, precum și pentru a vă asigura de funcționarea corectă a semnalului utilizat pentru a analiza problemele și stările clienților.
+
+Se colectează următoarele câmpuri:
+
+- **ExpirationTimeUTC** – data/ora la care ancheta va expira
+
+- **SurveyName** – numele anchetei afișate
+
+- **SurveyId** – instanța unică a unei campanii
+
+- **UniqueId** – ID pentru a identifica fragmentul individual de telemetrie
+
+#### <a name="officefeedbacksurveyuiandroid"></a>Office.Feedback.Survey.UI.Android
+
+Pe un dispozitiv Android, monitorizează atunci când un utilizator pe un dispozitiv interacționează cu promptul și interfața de utilizator a anchetei. Se utilizează pentru a evalua experiența integrală a sondajului, precum și pentru a vă asigura de funcționarea corectă a semnalului utilizat pentru a analiza problemele și stările clienților.
+
+Se colectează următoarele câmpuri:
+
+- **ExpirationTimeUTC** – data/ora la care ancheta va expira
+
+- **SurveyName** – numele anchetei afișate
+
+- **SurveyId** – instanța unică a unei campanii
+
+- **UniqueId** – ID pentru a identifica fragmentul individual de telemetrie
+
+#### <a name="officefeedbacksurveyuiios"></a>Office.Feedback.Survey.UI.IOS
+
+Pe un dispozitiv iOS, monitorizează atunci când un utilizator pe un dispozitiv interacționează cu promptul și interfața de utilizator a anchetei. Se utilizează pentru a evalua experiența integrală a sondajului, precum și pentru a vă asigura de funcționarea corectă a semnalului utilizat pentru a analiza problemele și stările clienților.
+
+Se colectează următoarele câmpuri:
+
+- **ExpirationTimeUTC** – data/ora la care ancheta va expira
+
+- **SurveyName** – numele anchetei afișate
+
+- **SurveyId** – instanța unică a unei campanii
+
+- **UniqueId** – ID pentru a identifica fragmentul individual de telemetrie
+
+#### <a name="officefeedbacksurveyuimac"></a>Office.Feedback.Survey.UI.Mac
+
+Pe un dispozitiv Mac, monitorizează atunci când un utilizator pe un dispozitiv interacționează cu promptul și interfața de utilizator a anchetei. Se utilizează pentru a evalua experiența integrală a sondajului, precum și pentru a vă asigura de funcționarea corectă a semnalului utilizat pentru a analiza problemele și stările clienților.
+
+Se colectează următoarele câmpuri:
+
+- **ExpirationTimeUTC** – data/ora la care ancheta va expira
+
+- **SurveyName** – numele anchetei afișate
+
+- **SurveyId** – instanța unică a unei campanii
+
+- **UniqueId** – ID pentru a identifica fragmentul individual de telemetrie
+
+#### <a name="officefeedbacksurveyuiwin32"></a>Office.Feedback.Survey.UI.Win32
+
+Pe un dispozitiv Win32, monitorizează interacțiunea utilizatorului pe un dispozitiv cu mesajul transmis de către sistemul de operare al sondajului si interfața cu utilizatorul a sondajului. Se utilizează pentru a evalua experiența integrală a sondajului, precum și pentru a vă asigura de funcționarea corectă a semnalului utilizat pentru a analiza problemele și stările clienților.
+
+Se colectează următoarele câmpuri:
+
+- **ExpirationTimeUTC** – data/ora la care ancheta va expira
+
+- **SurveyName** – numele anchetei afișate
+
+- **SurveyId** – instanța unică a unei campanii
+
+- **UniqueId** – ID pentru a identifica fragmentul individual de telemetrie
+
+#### <a name="officefeedbacksurveyuiwin32toast"></a>Office.Feedback.Survey.UI.Win32.Toast
+
+Monitorizează când se afișează solicitarea pentru prompt de anchetă. Se utilizează pentru a evalua starea procesului de solicitare a anchetei, precum și pentru a vă asigura funcționarea corectă a semnalului utilizat pentru a analiza problemele și stările clienților.
+
+Se colectează următoarele câmpuri:
+
+- **ExpirationTimeUTC** – data/ora la care ancheta va expira
+
+- **SurveyName** – numele anchetei afișate
+
+- **SurveyId** – instanța unică a unei campanii
+
+- **UniqueId** – ID pentru a identifica fragmentul individual de telemetrie
+
 #### <a name="officefileiocsiccachedfilecsiloadfilebasic"></a>Office.FileIO.CSI.CCachedFileCsiLoadFileBasic
 
 Ne permite să știm dacă un fișier s-a deschis cu succes din nivelul FIO. Utilizat pentru starea și monitorizarea caracteristicilor.
@@ -4060,6 +4224,81 @@ Acest eveniment este colectat pentru aplicațiile Office care rulează pe platfo
 Se colectează următoarele câmpuri:
 
 - **Data_FirstRunPanelName** - numele panoului din care a început experiența
+
+#### <a name="officelivepersonacarduseractionsclosedexpandedpersonacard"></a>Office.LivePersonaCard.UserActions.ClosedExpandedPersonaCard
+
+Conectat atunci când utilizatorul închide un Card de persoană extins. Se utilizează pentru a observa anomalii critice în ratele de eroare la închiderea Cardului de persoană live.
+
+Se colectează următoarele câmpuri:
+
+- **AppInfo_Id** - numele aplicației gazdă
+
+- **AppInfo_Version** - versiunea aplicației gazdă
+
+- **Data.appContextId** - un ID generat aleatoriu utilizat pentru a identifica conturi diferite în aceeași aplicație
+
+- **Data.AppInfo.Name** - numele serviciului utilizat (fișă de profil)
+
+- **Data.cardCorrelationId** - identificatorul unic global pentru un card de persoană
+
+- **Data.cardPersonaCorrelationId** - identificatorul unic global pentru o anumită persoană afișată într-un card
+
+- **Data.clientCorrelationId** - identificatorul unic global pentru sesiunea aplicației
+
+- **Data.clientType** - tipul de dispozitiv pe care rulează aplicația, de exemplu, „Outlook_Win32”
+
+- **Data.eventId** - identificator de nume al evenimentului, de exemplu, „LivePersonaCardRenderedAction”
+
+- **Data.exportName** - nume uman lizibil al evenimentului de acțiune pentru utilizatori, de exemplu, „ClosedExpandedPersonaCard”
+
+- **Data.exportType** - categoria evenimentului pentru solicitarea de export GDPR
+
+- **Data.feature** - utilizat pentru a grupa diverse evenimente cu aceeași caracteristică (fișă de profil)
+
+- **Data.OTelJS.Version** - versiune de OTel logger
+
+- **Data.properties** - metadate suplimentare colectate pentru fiecare eveniment, după cum urmează:
+
+   - **cardCorrelationId** - dublură a Data.appContextId de mai sus 
+   - **cardPersonaCorrelationId** - dublură a Data.cardCorrelationId de mai sus
+   - **ClientTimeStamp** - ora la care a avut loc evenimentul în timpul epocii Unix
+   - **consumerCorrelationId** - dublură a Data.clientCorrelationId de mai sus 
+   - **externalAppSessionCorrelationId** - un identificator unic global pentru aplicație, pentru a identifica toate cardurile de persoane deschise în aceeași sub-sesiune
+   - **immersiveProfileCorrelationId** - identificator unic global pentru sesiunea vizualizare profil extins
+   - **personaCorrelationId** - identificator unic global pentru persoane unice într-o sesiune
+
+- **Data.region** - regiunea geografică a serviciului de back-end a fișei de profil la care este conectat utilizatorul
+
+- **Data.tenantAadObjectId** - entitatea găzduită la care este legat abonamentul unui utilizator. Ne permite să clasificăm problemele și să identificăm dacă este o problemă pe scară largă sau una izolată la un set de utilizatori sau la o anumită entitate găzduită
+
+- **Data.type** - tipul evenimentului înregistrat, de exemplu, urmărire, eroare, eveniment
+
+- **Data.userAadObjectId** - identificatorul de utilizator unic global pentru un cont Microsoft Enterprise (dublură a Data.UserInfo.Id)
+
+- **Data.UserInfo.Id** - identificatorul de utilizator unic global pentru un cont Microsoft Enterprise 
+
+- **Data.UserInfo.MsaId** - identificatorul de utilizator unic global pentru un cont Microsoft consumator
+
+- **Data.UserInfo.OMSTenantId** - entitatea găzduită la care este asociat abonamentul unui utilizator. Ne permite să clasificăm problemele și să identificăm dacă este o problemă pe scară largă sau una izolată la un set de utilizatori sau la o anumită entitate găzduită.
+
+- **Data.userPuid** - identificatorul de utilizator unic global pentru un cont Microsoft consumator (duplicat pentru Data.UserInfo.MsaId) 
+
+- **Data.version** - versiunea serviciului (fișă de profil)
+
+- **DeviceInfo_Id** - identificatorul de dispozitiv unic global pentru un dispozitiv
+
+- **DeviceInfo_Make** - marca sistemului de operare
+
+- **DeviceInfo_Model** - modelul dispozitivului
+
+- **Data.Input.NetworkCost** - indică costul/tipul de rețea (contorizată, contorizată peste limită etc.)
+
+- **DeviceInfo_OsName** - numele dispozitivului OS
+
+- **DeviceInfo_OsVersion** - versiunea sistemului de operare
+
+- **PipelineInfo.ClientCountry** - Codul de țară a expeditorului, bazat pe adresa IP a clientului neanulată
+
 
 #### <a name="officelivepersonacarduseractionsclosedpersonacard"></a>Office.LivePersonaCard.UserActions.ClosedPersonaCard
 
@@ -6796,6 +7035,14 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ViewKind –** tipul de vizualizare Word
 
+#### <a name="onenoteappnavigationratingreminderdialogshown"></a>OneNote.App.Navigation.RatingReminderDialogShown
+
+Semnalul critic utilizată pentru măsurarea eficacității logicii de declanșare pentru memento de evaluare. Această casetă de dialog este afișată atunci când utilizatorul a îndeplinit toate condițiile pentru a vedea memento de evaluare (nr. de zile active, a evaluat anterior sau nu, etc.). Acest lucru este utilizat pentru a vă asigura că logica de interfață de declanșare pentru memento de evaluare. Dacă utilizatorii văd această casetă de dialog, ne va oferi moduri de a primi feedback de la clienți la momentul potrivit și de a îmbunătăți starea aplicațiilor.
+
+Se colectează următoarele câmpuri:
+
+- Fără
+
 #### <a name="onenotecanvaspageopened-previous-name-officeonenoteandroidcanvaspageopened"></a>OneNote.Canvas.PageOpened *(nume anterior)*, Office.OneNote.Android.Canvas.PageOpened
 
 Semnalul utilizată pentru a înregistra când este deschisă pagina.  Telemetria este folosită pentru a monitoriza, a detecta și a rezolva problemele cauzate când pagina este deschisă în OneNote.
@@ -6999,6 +7246,8 @@ Se colectează următoarele câmpuri:
 - **enabled_state** - dacă răspunsul dvs. automat, salvarea persoanelor de contact și blocarea setărilor de imagini externe sunt configurate corect  
 
 - **enabled_state** - dacă starea asociată cu acțiunea este activată
+
+- **in_app_language** - limba selectată din aplicație, tipul de șir (implicit, en-US, fa, ru etc.)  
 
 - **notification_state** - indică tipul de contor de ecusoane solicitat de utilizator, de ex. Fără ecusoane, Doar pentru mesajele prioritare etc.
 
@@ -7717,7 +7966,7 @@ Se colectează următoarele câmpuri:
 
 - **UsesSharedRuntime** - arată dacă aplicația utilizează sau nu sharedRuntime.
 
-#### <a name="onenoteappappbootcomplete-previous-name-officeonenoteandroidappappbootcomplete"></a>OneNote.App.AppBootComplete *(nume anterior)*, Office.OneNote.Android.App.AppBootComplete 
+#### <a name="onenoteappappbootcomplete-previous-name-officeonenoteandroidappappbootcomplete-officeandroidearlytelemetryappbootcomplete"></a>OneNote.App.AppBootComplete *(nume anterior)*, Office.OneNote.Android.App.AppBootComplete, Office.Android.EarlyTelemetry.AppBootComplete
 
 Semnal critic utilizat pentru a ne asigura că utilizatorii consumatori noi (cont Microsoft) pot lansa și utiliza pentru prima dată cu succes OneNote.  Aceasta se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor.  Dacă utilizatorii nu pot lansa aplicația pentru prima dată, acest lucru va declanșa un incident de severitate înaltă.
 
