@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre servicii esențiale în Office, cum ar fi Clic și Pornire și Licențiere, și asigură o listă de evenimente și câmpuri de date pentru aceste servicii esențiale.
 hideEdit: true
-ms.openlocfilehash: 74d827255ddbedb42cbe242229140d2c8eafea66
-ms.sourcegitcommit: f8201a088d2b160b6fcec2342e11be0e9ba3d189
+ms.openlocfilehash: a73cfa56d6da769e1ced46e58054e55419bb36e8
+ms.sourcegitcommit: fc906d2163687242e98fd1719055038758068424
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "44663185"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "44800400"
 ---
 # <a name="essential-services-for-office"></a>Servicii esențiale pentru Office
 
@@ -2719,13 +2719,22 @@ Acest eveniment este înregistrat când apelul către webservice efectuat în ca
 
 Se colectează următoarele câmpuri:
 
+- **ActionDetail** - detalii suplimentare pentru atunci când apare o eroare.
+   - Dacă solicitarea HTTP reușește, ActionDetail va fi 0.
+   - În cazul în care câmpul Rezultat nu este OK (adică, nu este 0), ceea ce înseamnă că solicitarea nu este trimisă, acest câmp va înregistra codul de eroare internă, care este același ca și câmpul Rezultat.
+   - În cazul în care câmpul este OK (adică, este 0), ceea ce înseamnă că codul de răspuns HTTP >=300, se va înregistra codul de răspuns HTTP (de exemplu, 404).
+
+- **Result** - semnalizări numerice ale codurilor de eroare returnate de apelurile API ale serviciului web Office. – de exemplu, 3 înseamnă că a existat o problemă cu inițializarea anteturilor HTTP.
+
+- **Type** - informații suplimentare despre tip. În cazul Inventarului, aceste informații specifică tipul de sarcină trimisă, de exemplu, completă sau doar o deltă de modificări. 
+
 -  **WebCallSource** - o valoare de enumerare (specificată ca un număr întreg) care indică programul de completare Serviceability Manager care a fost sursa apelului:
    - Inventar: 0
    - Configurație inventar: 1
    - Politică inventar: 2
    - Stare rețea inventar: 3
-
-- **Result** - semnalizări numerice ale codurilor de eroare returnate de apelurile API ale Office webservice.
+   - Manager de întreținere: 4
+   - Posibilitate de gestionare: 5
 
 ### <a name="officeserviceabilitymanagerwebservicefailure"></a>Office.ServiceabilityManager.WebserviceFailure
 
@@ -3143,6 +3152,8 @@ Această activitate de telemetrie urmărește punctele de succes și eșec în c
 
 Se colectează următoarele câmpuri:
 
+- **DexShouldRetry**- semnal că am întâmpinat o problemă recuperabilă (Internetul sau serverele sunt funcționale)
+
 - **GenuineTicketFailure** - Ne indică HRESULT eșec atunci când se încearcă obținerea tichetului/cheii de produs (WPK) originale Windows a computerului.
 
 - **PinValidationFailure** - ne spune de ce procesul de validare a codului PIN nu a reușit. Erori posibile:
@@ -3177,13 +3188,27 @@ După obținerea cu succes a unui cod PIN Office valid legat la un calculator cu
 
 Se colectează următoarele câmpuri:
 
-- **ActionCreateAccount** - utilizatorul a ales să creeze un cont.
+- **ActionActivate** - semnal că utilizatorul a făcut clic pe butonul „Activare”.
 
-- **ActionSignIn** - utilizatorul a ales să se conecteze.
+- **ActionChangeAccount** - semnal că utilizatorul a făcut clic pe hyperlinkul „Utilizare alt cont”.
 
-- **DialogRedemption** - afișarea dialogului de valorificare AFO.
+- **ActionCreateAccount** - semnal că utilizatorul a făcut clic pe butonul „Creare cont”.
 
-- **DialogSignIn** - afișarea dialogului de conectare AFO.
+- **ActionSignIn** - semnal că utilizatorul a făcut clic pe butonul „Conectare”.
+
+- **CurrentView** - tip de dialog închis de utilizator.
+
+- **DialogEULA** - semnal că am arătat caseta de dialog „Acceptare EULA”. 
+
+- **DialogRedemption** - semnal că am arătat caseta de dialog de verificare AFO.
+
+- **DialogSignIn** - semnal că am arătat caseta de dialog de conectare AFO.
+
+- **EmptyRedemptionDefaults** - semnal că nu s-a reușit preluarea informațiilor de valorificare implicite.
+ 
+- **GetRedemptionInfo** - semnal că vom prelua informațiile demografice pentru valorificare pin.
+
+- **MalformedCountryCode** - semnalul că codul de țară necesar pentru valorificare pin este incorect.
 
 - **OExDetails** - Detaliile erorii pe care o primim când dialogul de conectare pentru identitate a fost respins.
 
@@ -3199,6 +3224,14 @@ Se colectează următoarele câmpuri:
     - 0x03113811    utilizatorul a închis dialogul de conectare/valorificare
     - 0x03113812    utilizatorul a închis dialogul de acceptare EULA
     - 0x03113808    utilizatorul a acceptat EULA
+    - 0x03113811      utilizatorul a închis un dialog
+    - 0x2370e3a0      utilizatorul a închis un dialog    
+    - 0x2370e3c1      mergeți la web pentru valorificare pin 
+    - 0x2370e3a1      mergeți la web pentru valorificare pin
+    - 0x2370e3c0      secvență de dialog în buclă, cauzată de utilizatorul care merge înainte și înapoi în fluxul de dialog
+    - 0x2370e3a3      utilizatorul a făcut clic pe hyperlinkul „Nu acum“, care omite oferta AFO pentru acea sesiune
+    - 0x2370e3a2      utilizatorul a făcut clic pe hyperlinkul „Nu îmi arătați niciodată aceasta“, care dezactivează oferta AFO
+
 
 - **UseInAppRedemption** - Ne spune dacă menținem utilizatorii în aplicație pentru valorificare sau îi trimitem pe web pentru a-și valorifica pinul preluat (pre populat).
 
@@ -3230,7 +3263,7 @@ Se colectează următoarele câmpuri:
 
 - **HasConnectivity** - Indică dacă utilizatorul are conexiune la internet și, în caz că nu, utilizatorul ar putea să trebuiască să utilizeze o licență de grație de cinci zile sau ar putea fi în modul de funcționalitate redusă
 
-- **InAppTrialPurchase** - indică dacă ediția flight este activată pentru lansarea SDK de achiziție în Magazin pentru a captura PI și a achiziționa o versiune de încercare în cadrul aplicației
+- **InAppTrialPurchase** - indică dacă lansarea este activată pentru lansarea de achiziție din Magazin SDK pentru a captura PI și a achiziționa o versiune de încercare în cadrul aplicației *[Acest câmp a fost șters din compilările curente Office, dar s-ar putea să apară încă în vechile compilări.]*
 
 - **IsRS1OrGreater** - indică dacă versiunea sistemului de operare este mai mare decât RS1 sau nu, deoarece SDK de achiziție în Magazin ar trebui să fie utilizat doar dacă versiunea sistemului de operare este mai mare decât RS1
 
@@ -3238,15 +3271,15 @@ Se colectează următoarele câmpuri:
 
 - **OEMSendToWebForTrial** - indică dacă ediția flight este activată pentru a trimite utilizatorii pe web pentru a valorifica o versiune de încercare
 
-- **StoreErrorConditions** - indică diversele condiții sub care poate să fi eșuat SDK de achiziție în Magazin.
+- **StoreErrorConditions** - indică condițiile diverse sub care achiziția din magazin SDK putea să eșueze *[Acest câmp a fost eliminat din compilările curente Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
-- **StoreErrorHResult** - indică codul de eroare returnat de SDK de achiziție în Magazin
+- **StoreErrorHResult** - indică codul de eroare returnat din achiziția din magazin SDK *[Acest câmp a fost eliminat din compilările curente Office, dar poate apărea în continuare în compilări mai vechi.]*
 
-- **StorePurchaseStatusResult** - spune rezultatul apelării SDK de achiziție în Magazin și dacă utilizatorul a făcut sau nu o achiziție, ceea ce ne ajută să determinăm dacă utilizatorul trebuie să primească licență pentru a utiliza Office
+- **StorePurchaseStatusResult** - indică rezultatul apelării achiziției  din magazin SDK, iar dacă utilizatorul a achiziționat sau nu, va ajuta să se determine dacă utilizatorul trebuie să primească licență pentru a utiliza Office *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în compilări mai vechi.]*
 
 - **Tag** - utilizat pentru a indica de unde din cod a fost trimis evenimentul
 
-- **UserSignedInExplicitly** - spune dacă utilizatorul s-a conectat în mod explicit, iar în acest caz am redirecționa utilizatorii către web pentru versiunea de încercare
+- **UserSignedInExplicitly** - indică dacă utilizatorul s-a conectat în mod explicit, în acest caz, am redirecționa utilizatorii către web pentru versiunea de încercare *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
 ### <a name="officelicensingusegracekey"></a>Office.Licensing.UseGraceKey
 
