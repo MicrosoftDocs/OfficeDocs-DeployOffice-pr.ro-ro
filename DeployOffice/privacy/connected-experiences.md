@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate pentru Office, cum ar fi experiențele care analizează conținut sau experiențele care descarcă conținut online.
 hideEdit: true
-ms.openlocfilehash: bcf28caae666900deacbd0effe83a2fae383c41d
-ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
+ms.openlocfilehash: 4ec1ffef4b8bc0e82a7a1ce96061a9c715636bea
+ms.sourcegitcommit: 7adeab733277e6ed3eafddcc1d4df20e2743a752
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "43993018"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "44930422"
 ---
 # <a name="connected-experiences-in-office"></a>Experiențe conectate în Office
 
@@ -43,7 +43,7 @@ Următorul tabel furnizează o listă de experiențe conectate care vă analizea
 
 | **Nume**   | **Mai multe informații**   |
 | ----------- | ------------------ |
-| Hărți 3D\*    | [Introducere în Hărți 3D](https://support.office.com/article/6b56a50d-3c3e-4a9e-a527-eea62a387030)   |
+| *Hărți 3D*\*    | [Introducere în Hărți 3D](https://support.office.com/article/6b56a50d-3c3e-4a9e-a527-eea62a387030)   |
 | Txt alternativ automat   | [Tot ce trebuie să știți pentru a scrie eficient text alternativ](https://support.office.com/article/df98f884-ca3d-456c-807b-1a1fa82f5dc2) |
 | Tipuri de date                  | [Tipuri de date Excel: Cotații bursiere și geografie](https://support.office.com/article/61a33056-9935-484f-8ac8-f1a89e210877)   |
 | Dictare  | [Dictați cu vocea în Office](https://support.office.com/article/d4fd296e-8f15-4168-afec-1f95b13a6408) |
@@ -52,22 +52,22 @@ Următorul tabel furnizează o listă de experiențe conectate care vă analizea
 | Cerneală în text, Cerneală în formă, Cerneală în expresie matematică | [Modificați cerneală scrisă de mână în forme, în text sau în expresie matematică în PowerPoint pentru Microsoft 365](https://support.office.com/article/0740dec3-6291-4c1f-8baa-011d18449919) |
 | Inserarea datelor din imagine| [Inserare date din imagine](https://support.office.com/article/3c1bb58d-2c59-4bc0-b04a-a671a6868fd7)|
 | Subtitrări în direct |  [Prezentați subtitrări în timp real, automate în PowerPoint](https://support.office.com/article/68d20e49-aec3-456a-939d-34a79e8ddd5f)   |
-| Diagramă hartă\*    | [Crearea unei diagrame hartă](https://support.office.com/article/f2cfed55-d622-42cd-8ec9-ec8a358b593b)  |
+| *Diagramă hartă*\*    | [Crearea unei diagrame hartă](https://support.office.com/article/f2cfed55-d622-42cd-8ec9-ec8a358b593b)  |
 | Hărțile în Power View   | [Hărțile în Power View](https://support.office.com/article/8A9B2AF3-A055-4131-A327-85CC835271F7) |
 | Serviciu de prezentări Office   | [Difuzați prezentarea online PowerPoint unui public la distanță](https://support.office.com/article/25330108-518e-44be-a281-e3d85f784fee)    |
 | PowerPoint Designer   | [Creați aspecte de diapozitiv profesioniste cu PowerPoint Designer](https://support.office.com/article/53c77d7b-dc40-45c2-b684-81415eac0617)   |
 | Publicare în Power BI   | [Publicați în Power BI din Excel](https://docs.microsoft.com/power-bi/service-publish-from-excel) |
 | Publicare în Microsoft Stream    | [Transformați prezentarea într-un videoclip](https://support.office.com/article/c140551f-cb37-4818-b5d4-3e30815c3e83#bkmk_microsoftstream)  |
-| Cercetare\*   | [Adăugați sau modificați servicii de cercetare](https://support.office.com/article/b862efc5-9a7b-4f88-a23d-93712d6e4397)  |
+| *Cercetare*\*   | [Adăugați sau modificați servicii de cercetare](https://support.office.com/article/b862efc5-9a7b-4f88-a23d-93712d6e4397)  |
 | Scanați o carte de vizită|  [Scanați sau atingeți pentru a adăuga persoane de contact în Outlook pentru Android](https://support.office.com/article/4818ef14-0fc8-4ec2-bb4d-440ea8cae17b)|
-| Căutare inteligentă\*   | [Obțineți detalii despre ceea ce lucrați cu Căutare inteligentă](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044) |
+| *Căutare inteligentă*\*   | [Obțineți detalii despre ceea ce lucrați cu Căutare inteligentă](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044) |
 | Răspunsuri sugerate | [Ce sunt răspunsurile sugerate?](https://www.osupportweb.com/a/outlook-mobile/?p=all&s=feature-walkthroughs&f=what-are-suggested-replies)|
 | Atingere pentru Word (Adăugare din fișiere)   | [Găsiți și utilizați conținutul de care aveți nevoie, atunci când aveți nevoie, fără a ieși din Word](https://support.office.com/article/860118fc-1f61-41f6-922f-40084a284658)   |
 | Transformare la pagina web   | [Transformați un document Word într-o pagină web Sway](https://support.office.com/article/65912b2d-8b81-41e1-ac52-c20a65ce8ecf) |
 | Translator   | [Traduceți text în altă limbă](https://support.office.com/article/287380e4-a56c-48a1-9977-f2dca89ce93f)  |
 
 > [!NOTE]
-> \*Când utilizatorii sunt conectați cu un cont de la locul de muncă sau de la școală, această experienți conectată este opțională și este furnizată în condițiile [Contractului de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentului de respectare a confidențialității](https://privacy.microsoft.com/) și, potențial, a altor termeni. Pentru mai multe informații, consultați [Prezentare generală a experiențelor conectate opționale în Office](optional-connected-experiences.md). Dacă sunteți administrator, această experiență conectată poate fi gestionată prin controale de confidențialitate pentru experiențele conectate sau setarea de politică *Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office*.
+> \*Când utilizatorii sunt conectați cu un cont de la locul de muncă sau de la școală, experiențele conectate, listate mai sus în italice, sunt opționale și sunt furnizate în termenii[Contractului de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [a angajamentului de respectare a confidențialității](https://privacy.microsoft.com/) și, potențial, a altor termeni. Pentru mai multe informații, consultați [Prezentare generală a experiențelor conectate opționale în Office](optional-connected-experiences.md). Dacă sunteți administrator, această experiență conectată poate fi gestionată prin controale de confidențialitate pentru experiențele conectate sau setarea de politică *Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office*.
 
 ## <a name="connected-experiences-that-download-online-content"></a>Experiențe conectate care descarcă conținut online
 
@@ -83,22 +83,22 @@ Următorul tabel furnizează o listă de experiențe conectate care descarcă co
 | Efecte de cerneală                 | [Desenați și scrieți cu cerneală în Office](https://support.office.com/article/6D76C674-7F4B-414D-B67F-B3FFEF6CCF53)  |
 | Inserarea pictogramelor                | [Inserați pictograme în Microsoft Office](https://support.office.com/article/e2459f17-3996-4795-996e-b9a13486fa79)   |
 | Inserarea Microsoft Forms      | [Inserați un formular sau un test în PowerPoint](https://support.office.com/article/1a316f81-9ea7-4bc2-bda0-024c0d780df1) |
-| Inserarea modelor 3D online\*     | [Folosiți-vă creativitatea cu modelele 3D](https://support.office.com/article/ec5feb79-b0af-47f6-a885-151fcc88ac0a)   |
-| Inserarea imaginilor online\*      | [Inserați imagini](https://support.office.com/article/3c51edf4-22e1-460a-b372-9329a8724344)  |
-| Inserarea unui fișier video online\*     | [Inserați un videoclip de pe YouTube sau de pe alt site](https://support.office.com/article/8340ec69-4cee-4fe1-ab96-4849154bc6db) |
-| Calendare interesante\*| [Abonați-vă la un calendar](https://www.osupportweb.com/a/outlook-mobile/?s=feature-walkthroughs&f=where-do-i-go-on-outlook-to-subscribe-to-an-interesting-calendar&p=all) referitor la echipele sportive sau emisiunile TV preferate în Outlook pentru iOS și Android. |
-| Sugestii de locație\* | Atunci când adăugați un loc public cu o adresă poștală la un element de calendar, Outlook pentru iOS și Android va include și adresa poștală completă în câmpul Locație. |
+| *Inserarea modelor 3D online*\*     | [Folosiți-vă creativitatea cu modelele 3D](https://support.office.com/article/ec5feb79-b0af-47f6-a885-151fcc88ac0a)   |
+| *Inserați imagini online*\*      | [Inserați imagini](https://support.office.com/article/3c51edf4-22e1-460a-b372-9329a8724344)  |
+| *Inserați video online*\*     | [Inserați un videoclip de pe YouTube sau de pe alt site](https://support.office.com/article/8340ec69-4cee-4fe1-ab96-4849154bc6db) |
+| *Calendare interesante*\*| [Abonați-vă la un calendar](https://www.osupportweb.com/a/outlook-mobile/?s=feature-walkthroughs&f=where-do-i-go-on-outlook-to-subscribe-to-an-interesting-calendar&p=all) referitor la echipele sportive sau emisiunile TV preferate în Outlook pentru iOS și Android. |
+| *Sugestii de locație*\* | Atunci când adăugați un loc public cu o adresă poștală la un element de calendar, Outlook pentru iOS și Android va include și adresa poștală completă în câmpul Locație. |
 | Hărți în detaliile evenimentului | Știți unde trebuie să mergeți cu [hărți](https://www.osupportweb.com/a/outlook-mobile/?s=time-to-leave&f=how-can-i-choose-which-map-will-open-when-i-click-on-get-directions&p=all) în detaliile evenimentului în Outlook pentru iOS și Android. |
 | Ajutor Office                 | Atunci când alegeți **Ajutor** > **Ajutor** din panglică sau utilizați F1 într-o aplicație Office   |
 | Căutare formă online (Visio) | [Găsiți mai multe forme și tipare](https://support.office.com/article/0475ddea-2a0a-4dec-ab8c-7dda9e63bca9)  |
-| Pornire rapidă PowerPoint\*     | [Cercetați un subiect cu Pornire rapidă PowerPoint](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224) |
-| Cercetare\*    | [Faceți cu ușurință cercetare pentru o lucrare în Word](https://support.office.com/article/1728f286-8702-4d72-8169-ab7677ca0e1f) |
+| *Pornire rapidă PowerPoint*\*     | [Cercetați un subiect cu Pornire rapidă PowerPoint](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224) |
+| *Cercetare*\*    | [Faceți cu ușurință cercetare pentru o lucrare în Word](https://support.office.com/article/1728f286-8702-4d72-8169-ab7677ca0e1f) |
 | Spune-mi    | [Rezolvați treburile rapid cu funcția „Spune-mi”](https://support.office.com/article/f20d2198-17b8-4b09-a3e5-007a337f1e4e)  |
 | Șabloane  | [Descărcați șabloane gratuite, predefinite](https://support.office.com/article/29f2a18d-29a6-4a07-998b-cfe5ff7ffbbb)  |
-| Bara meteo\* (Outlook)| [Modificați localitatea pentru prognoza Barei meteo din calendar](https://support.office.com/article/D11B7532-7C58-489E-8103-5CC5D727B06B) |
+| *Bara meteo*\* (Outlook)| [Modificați localitatea pentru prognoza Barei meteo din calendar](https://support.office.com/article/D11B7532-7C58-489E-8103-5CC5D727B06B) |
 
 > [!NOTE]
->\*Când utilizatorii sunt conectați cu un cont de la locul de muncă sau de la școală, această experienți conectată este opțională și este furnizată în condițiile [Contractului de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentului de respectare a confidențialității](https://privacy.microsoft.com/) și, potențial, a altor termeni. Pentru mai multe informații, consultați [Prezentare generală a experiențelor conectate opționale în Office](optional-connected-experiences.md). Dacă sunteți administrator, această experiență conectată poate fi gestionată prin controale de confidențialitate pentru experiențele conectate sau setarea de politică *Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office*.
+>\*Când utilizatorii sunt conectați cu un cont de la locul de muncă sau de la școală, experiențele conectate, listate mai sus în italice, sunt opționale și sunt furnizate în termenii[Contractului de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [a angajamentului de respectare a confidențialității](https://privacy.microsoft.com/) și, potențial, a altor termeni. Pentru mai multe informații, consultați [Prezentare generală a experiențelor conectate opționale în Office](optional-connected-experiences.md). Dacă sunteți administrator, această experiență conectată poate fi gestionată prin controale de confidențialitate pentru experiențele conectate sau setarea de politică *Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office*.
 
 ## <a name="other-connected-experiences"></a>Alte experiențe conectate
 
@@ -120,14 +120,14 @@ Următorul tabel furnizează o listă a acelor experiențe conectate și furnize
 | Mesaje prioritare (Outlook) |[Mesaje prioritare pentru Outlook](https://support.office.com/article/f445ad7f-02f4-4294-a82e-71d8964e3978)  |
 | Information Rights Management |[Information Rights Management în Office](https://support.office.com/Article/c7a70797-6b1e-493f-acf7-92a39b85e30c)  |
 | Carte de vizită LinkedIn |[Conectați-vă la conturile LinkedIn și Microsoft](https://support.office.com/article/dc81cc70-4d64-4755-9f1c-b9536e34d381)  |
-| Programe de completare Office\* | [Gestionați implementarea programelor de completare în centrul de administrare Microsoft 365](https://docs.microsoft.com/office365/admin/manage/manage-deployment-of-add-ins) |
+| *Programe de completare Office*\* | [Gestionați implementarea programelor de completare în centrul de administrare Microsoft 365](https://docs.microsoft.com/office365/admin/manage/manage-deployment-of-add-ins) |
 | Feedback Office |[Cum pot trimite feedback pentru Microsoft Office?](https://support.office.com/article/2b102d44-b43f-4dd2-9ff4-23cf144cfb11)  |
 | Asistența Office (contactați-ne) |Atunci când alegeți **Ajutor** > **Contactați asistența** în panglică |
 | Organigramă (Visio) |[Creați o organigramă Visio](https://support.office.com/article/abb3dd17-2692-439f-9945-3a015767d96a)  |
 | Outlook Social Connector | [Activați Outlook Social Connector](https://support.office.com/article/255447E8-82CD-48E7-9B79-1DD8721A2907) |
-| Outlook UserVoice\* | [Cum pot trimite feedback pentru Microsoft Office?](https://support.office.com/article/2b102d44-b43f-4dd2-9ff4-23cf144cfb11) |
+| *Outlook UserVoice*\* | [Cum pot trimite feedback pentru Microsoft Office?](https://support.office.com/article/2b102d44-b43f-4dd2-9ff4-23cf144cfb11) |
 | Documente recente |[Deschideți fișierele din meniul Fișier](https://support.office.com/article/97f087d8-3136-4485-8e86-c5b12a8c4176)  |
-| Asistent pentru CV\* |[Scrieți cel mai bun CV cu ajutorul de la LinkedIn și cu Asistentul pentru CV](https://support.office.com/article/444ff6f0-ef74-4a9c-9091-ffd7a9d1917a")  |
+| *Asistent pentru CV*\* |[Scrieți cel mai bun CV cu ajutorul de la LinkedIn și cu Asistentul pentru CV](https://support.office.com/article/444ff6f0-ef74-4a9c-9091-ffd7a9d1917a")  |
 | Instrument de găsire sală (Outlook)|[Cum să controlați Instrumentul de găsire sală în Outlook](https://support.microsoft.com/help/2673231/how-to-control-the-room-finder-in-outlook)  |
 | Linkuri sigure |[Linkuri sigure ATP](https://docs.microsoft.com/office365/securitycompliance/atp-safe-links)  |
 | Etichete de confidențialitate  |[Aplicați etichete de confidențialitate documentelor și e-mailurilor în Office](https://support.office.com/article/2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9)  |
@@ -139,7 +139,7 @@ Următorul tabel furnizează o listă a acelor experiențe conectate și furnize
 | În timp ce erați plecat |[Primiți notificări atunci când membrii echipei dvs. actualizează fișierul partajat](https://support.office.com/article/9cc94893-02d5-4d96-9b3f-8b9414d5047a)  |
 
 > [!NOTE]
->\*Când utilizatorii sunt conectați cu un cont de la locul de muncă sau de la școală, această experienți conectată este opțională și este furnizată în condițiile [Contractului de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentului de respectare a confidențialității](https://privacy.microsoft.com/) și, potențial, a altor termeni. Pentru mai multe informații, consultați [Prezentare generală a experiențelor conectate opționale în Office](optional-connected-experiences.md). Dacă sunteți administrator, această experiență conectată poate fi gestionată prin controale de confidențialitate pentru experiențele conectate sau setarea de politică *Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office*.
+>\*Când utilizatorii sunt conectați cu un cont de la locul de muncă sau de la școală, experiențele conectate, listate mai sus în italice, sunt opționale și sunt furnizate în termenii[Contractului de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [a angajamentului de respectare a confidențialității](https://privacy.microsoft.com/) și, potențial, a altor termeni. Pentru mai multe informații, consultați [Prezentare generală a experiențelor conectate opționale în Office](optional-connected-experiences.md). Dacă sunteți administrator, această experiență conectată poate fi gestionată prin controale de confidențialitate pentru experiențele conectate sau setarea de politică *Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office*.
 
 ## <a name="choose-whether-these-connected-experiences-are-available-to-use"></a>Alegeți dacă aceste experiențe conectate sunt disponibile pentru utilizare
 
