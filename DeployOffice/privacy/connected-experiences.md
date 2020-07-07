@@ -13,12 +13,11 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate pentru Office, cum ar fi experiențele care analizează conținut sau experiențele care descarcă conținut online.
 hideEdit: true
-ms.openlocfilehash: 4ec1ffef4b8bc0e82a7a1ce96061a9c715636bea
-ms.sourcegitcommit: 7adeab733277e6ed3eafddcc1d4df20e2743a752
-ms.translationtype: HT
+ms.openlocfilehash: ed42864d90c0ec8f50e28248720ffc8c2f569713
+ms.sourcegitcommit: 85c6ac9351a9305b774fb2a63cb895f952b433d6
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "44930422"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "45048560"
 ---
 # <a name="connected-experiences-in-office"></a>Experiențe conectate în Office
 
@@ -37,7 +36,7 @@ Office constă din aplicațiile software client și experiențe conectate proiec
 
 ## <a name="connected-experiences-that-analyze-your-content"></a>Experiențe conectate care analizează conținut
 
-Experiențele conectate care vă analizează conținutul sunt experiențe care utilizează conținutul Office pentru vă oferi recomandări de proiectare, sugestii de editare, detalii privind datele și alte caracteristici similare. De exemplu, PowerPoint Designer sau Editor în Word.
+Experiențele conectate care vă analizează conținutul sunt experiențe care utilizează conținutul Office pentru vă oferi recomandări de proiectare, sugestii de editare, detalii privind datele și alte caracteristici similare. De exemplu, PowerPoint Designer sau Translator.
 
 Următorul tabel furnizează o listă de experiențe conectate care vă analizează conținutul și, de asemenea, furnizează linkuri către mai multe informații despre acestea.
 
@@ -47,7 +46,7 @@ Următorul tabel furnizează o listă de experiențe conectate care vă analizea
 | Txt alternativ automat   | [Tot ce trebuie să știți pentru a scrie eficient text alternativ](https://support.office.com/article/df98f884-ca3d-456c-807b-1a1fa82f5dc2) |
 | Tipuri de date                  | [Tipuri de date Excel: Cotații bursiere și geografie](https://support.office.com/article/61a33056-9935-484f-8ac8-f1a89e210877)   |
 | Dictare  | [Dictați cu vocea în Office](https://support.office.com/article/d4fd296e-8f15-4168-afec-1f95b13a6408) |
-| Editor    | [Editorul este asistentul dvs. de scriere](https://support.office.com/article/91ecbe1b-d021-4e9e-a82e-abc4cd7163d7)  |
+|Editor|[Editorul este asistentul dvs. de scriere](https://support.office.com/article/91ecbe1b-d021-4e9e-a82e-abc4cd7163d7)|
 | Idei     | [Idei în Excel](https://support.office.com/article/3223aab8-f543-4fda-85ed-76bb0295ffc4) |
 | Cerneală în text, Cerneală în formă, Cerneală în expresie matematică | [Modificați cerneală scrisă de mână în forme, în text sau în expresie matematică în PowerPoint pentru Microsoft 365](https://support.office.com/article/0740dec3-6291-4c1f-8baa-011d18449919) |
 | Inserarea datelor din imagine| [Inserare date din imagine](https://support.office.com/article/3c1bb58d-2c59-4bc0-b04a-a671a6868fd7)|
@@ -60,6 +59,7 @@ Următorul tabel furnizează o listă de experiențe conectate care vă analizea
 | Publicare în Microsoft Stream    | [Transformați prezentarea într-un videoclip](https://support.office.com/article/c140551f-cb37-4818-b5d4-3e30815c3e83#bkmk_microsoftstream)  |
 | *Cercetare*\*   | [Adăugați sau modificați servicii de cercetare](https://support.office.com/article/b862efc5-9a7b-4f88-a23d-93712d6e4397)  |
 | Scanați o carte de vizită|  [Scanați sau atingeți pentru a adăuga persoane de contact în Outlook pentru Android](https://support.office.com/article/4818ef14-0fc8-4ec2-bb4d-440ea8cae17b)|
+|*Verificator de similaritate*\* (o caracteristică a Editorului)|[Verificați-vă documentul de similarități cu sursele online](https://support.microsoft.com/office/6d942360-b5ca-445f-a84d-6e8c66fc40d2) |
 | *Căutare inteligentă*\*   | [Obțineți detalii despre ceea ce lucrați cu Căutare inteligentă](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044) |
 | Răspunsuri sugerate | [Ce sunt răspunsurile sugerate?](https://www.osupportweb.com/a/outlook-mobile/?p=all&s=feature-walkthroughs&f=what-are-suggested-replies)|
 | Atingere pentru Word (Adăugare din fișiere)   | [Găsiți și utilizați conținutul de care aveți nevoie, atunci când aveți nevoie, fără a ieși din Word](https://support.office.com/article/860118fc-1f61-41f6-922f-40084a284658)   |
