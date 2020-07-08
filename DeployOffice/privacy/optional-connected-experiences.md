@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate opționale, inclusiv condițiile de utilizare care se aplică.
 hideEdit: true
-ms.openlocfilehash: ecfe38bc6dbedd57ff1eb2ab4851c8e4dddab730
-ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
+ms.openlocfilehash: d5de9a7a1eb2f2a825feb28798e8f0d195476696
+ms.sourcegitcommit: 9e44d65a5d59339df7d6a2f1116462c0fb774f83
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "43993243"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "45068722"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Prezentare generală a experiențelor conectate opționale în Office
 
@@ -39,7 +39,7 @@ Este important să știți că aceste servicii cloud opționale nu sunt acoperit
 
 ## <a name="experiences-that-rely-on-bing"></a>Experiențe care se bazează pe Bing
 
-Unele servicii cloud sunt pe platformă Microsoft Bing. Microsoft Bing este o afacere separată de Aplicațiile Microsoft 365 pentru întreprindere și este gestionat independent de Aplicațiile Microsoft 365 pentru întreprindere de către Microsoft. Experiențele pe care le susține în aplicațiile Office incluse în Aplicațiile Microsoft 365 pentru întreprindere sunt: [Hărți 3D](https://support.office.com/article/6b56a50d-3c3e-4a9e-a527-eea62a387030), [Diagrame hartă](https://support.office.com/article/f2cfed55-d622-42cd-8ec9-ec8a358b593b), [Inserare imagini online](https://support.office.com/article/3C51EDF4-22E1-460A-B372-9329A8724344), [Inserare modele 3D online](https://support.office.com/article/ec5feb79-b0af-47f6-a885-151fcc88ac0a), [Pornire rapidă PowerPoint](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224), [Cercetare](https://support.office.com/article/1728f286-8702-4d72-8169-ab7677ca0e1f) și [Căutare inteligentă](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044). 
+Unele servicii cloud sunt pe platformă Microsoft Bing. Microsoft Bing este o afacere separată de Aplicațiile Microsoft 365 pentru întreprindere și este gestionat independent de Aplicațiile Microsoft 365 pentru întreprindere de către Microsoft. Experiențele pe care le susține în aplicațiile Office incluse în Aplicațiile Microsoft 365 pentru firme sunt: [Hărți 3D](https://support.office.com/article/6b56a50d-3c3e-4a9e-a527-eea62a387030), [Diagrame hartă](https://support.office.com/article/f2cfed55-d622-42cd-8ec9-ec8a358b593b), [Inserare imagini online](https://support.office.com/article/3C51EDF4-22E1-460A-B372-9329A8724344), [Inserare modele 3D online](https://support.office.com/article/ec5feb79-b0af-47f6-a885-151fcc88ac0a), [Pornire rapidă PowerPoint](https://support.office.com/article/4784f273-0b2c-456c-9c89-24e5b977c224), [Cercetare](https://support.office.com/article/1728f286-8702-4d72-8169-ab7677ca0e1f), [Căutare inteligentă](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044) și [verificator de similitudini](https://support.microsoft.com/office/6d942360-b5ca-445f-a84d-6e8c66fc40d2) (o caracteristică a Editorului).
 
 Experiențele pe care Bing le pune la dispoziție în Outlook pentru iOS și Android sunt următoarele:
 
