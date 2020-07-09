@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre gestionarea controalelor de confidențialitate în Aplicații Microsoft 365 pentru întreprindere (numite anterior Office 365 ProPlus), utilizând setările de politică.
 hideEdit: true
-ms.openlocfilehash: ca076099be15a5a4cd19ac7c99660bfe26de8eed
-ms.sourcegitcommit: edd1190877db7996206147ad1d691fd8e84f23b1
+ms.openlocfilehash: 5f9cafff0f7baf12ed8f0f57d7561bc356fbb98b
+ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "44589039"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45087220"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere
 
@@ -40,7 +40,7 @@ Iată cele cinci noi setări de politică:
 - Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office
 - Permiteți utilizarea de experiențe conectate în Office
 
-Aceste setări de politică pot fi implementate utilizând fie Politica de grup, fie [Serviciul de politică pentru cloud Office](https://docs.microsoft.com/DeployOffice/overview-office-client-policy-service). Dacă utilizați Politica de grup, trebuie să descărcați cea mai recentă versiune a fișierelor Șablon administrativ (ADMX/ADML) de la [Centrul de descărcare Microsoft](https://www.microsoft.com/download/details.aspx?id=49030).
+Aceste setări de politică pot fi implementate utilizând fie Politica de grup, fie [Serviciul de politică pentru cloud Office](../overview-office-client-policy-service.md). Dacă utilizați Politica de grup, trebuie să descărcați cea mai recentă versiune a fișierelor Șablon administrativ (ADMX/ADML) de la [Centrul de descărcare Microsoft](https://www.microsoft.com/download/details.aspx?id=49030).
 
 > [!NOTE]
 > - Pentru informații despre cum să gestionați controalele de confidențialitate pentru Office pentru Mac, consultați [Utilizarea preferințelor pentru a gestiona controalele de confidențialitate pentru Office pentru Mac](mac-privacy-preferences.md).
@@ -98,7 +98,7 @@ Utilizatorii dvs. nu vor putea să aleagă dacă să activeze sau să dezactivez
 
 ### <a name="policy-setting-for-connected-experiences-that-analyze-your-content"></a>Setarea de politică pentru experiențe conectate care analizează conținut
 
-Acestea sunt experiențe care utilizează conținutul dvs. Office pentru a vă oferi recomandări de proiectare, sugestii de editare, detalii privind datele și caracteristici similare. De exemplu, PowerPoint Designer sau Editor în Word. Pentru o listă a acestor experiențe conectate, consultați [Experiențe conectate în Office](connected-experiences.md)
+Acestea sunt experiențe care utilizează conținutul dvs. Office pentru a vă oferi recomandări de proiectare, sugestii de editare, detalii privind datele și caracteristici similare. De exemplu, PowerPoint Designer sau Translator. Pentru o listă a acestor experiențe conectate, consultați [Experiențe conectate în Office](connected-experiences.md)
 
 Puteți utiliza setarea de politică *Permiteți utilizarea de experiențe conectate în Office care analizează conținut* pentru a controla dacă aceste tipuri de experiențe conectate sunt disponibile pentru utilizatorii dvs. Dacă nu configurați această setare de politică, aceste experiențe conectate vor fi disponibile pentru utilizatorii dvs.
 

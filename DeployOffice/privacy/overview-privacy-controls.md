@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorii Office primesc o prezentare generală a controalelor de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere (numite anterior Office 365 ProPlus), inclusiv pentru date de diagnosticare și experiențe conectate.
 hideEdit: true
-ms.openlocfilehash: 134f7470354796679c9a8c69fac8dd2559302b72
-ms.sourcegitcommit: f8201a088d2b160b6fcec2342e11be0e9ba3d189
+ms.openlocfilehash: f5a957d57a7c8f95503091f456aef5a9c1e0fca7
+ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "44663560"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45087708"
 ---
 # <a name="overview-of-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Prezentare generală a controalelor de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere
 
@@ -85,7 +85,7 @@ Aplicații Microsoft 365 pentru întreprindere constă din aplicațiile software
 
 Înțelegem că ați dori să alegeți tipurile de experiențe conectate disponibile utilizatorilor dvs. atunci când lucrează în aplicațiile Office. Ca administrator pentru organizația dvs., veți avea setări de politică care vă permit să alegeți dacă să le furnizați sau nu următoarele tipuri de experiențe conectate utilizatorilor dvs.:
 
-- **Experiențe care vă analizează conținutul** Experiențele care utilizează conținut Office pentru vă oferi recomandări de proiectare, sugestii de editare, detalii privind datele și caracteristici similare. De exemplu, PowerPoint Designer sau Editor în Word.
+- **Experiențe care vă analizează conținutul** Experiențele care utilizează conținut Office pentru vă oferi recomandări de proiectare, sugestii de editare, detalii privind datele și caracteristici similare. De exemplu, PowerPoint Designer sau Translator.
 
 - **Experiențele care descarcă conținut online** Experiențele care vă permit să căutați și să descărcați conținut online, inclusiv șabloane, imagini, modele 3D, videoclipuri și materiale de referință pentru a vă îmbunătăți documentele. De exemplu, șabloanele Office sau Pornirea rapidă PowerPoint.
 
