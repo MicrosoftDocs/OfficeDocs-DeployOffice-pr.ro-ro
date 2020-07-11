@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Furnizează administratorilor Office informații despre cum să gestioneze setările de confidențialitate pentru Office pe dispozitive Android.
 hideEdit: true
-ms.openlocfilehash: 69a8880b03e63be391731f9882bcee17a81a51ab
-ms.sourcegitcommit: e542473cc4fe07a98874c275846f6982a6863e35
+ms.openlocfilehash: 38d68df0d3a12e6858568906a60973bad9d76709
+ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "39837726"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45087895"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-on-android-devices"></a>Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office pe dispozitivele Android
 
@@ -32,7 +32,9 @@ Pentru mai multe informații despre datele de diagnosticare și experiențele co
 
 Aceste setări de politică se aplică la următoarele aplicații:
 - Versiunea 16.0.12228.20260 și versiunile ulterioare de Word pentru Android, Excel pentru Android și PowerPoint pentru Android.
+- Versiunea 4.1.71 și versiunile ulterioare de Outlook pentru Android.
 - Versiunea 16.0.12228.20004 și versiunile ulterioare de OneNote pentru Android.
+- Versiunea 5.47 și versiunile ulterioare de OneDrive pentru Android.
 
 > [!NOTE]
 >- Aceste setări de politică se aplică și versiunii 16.0.12130.20272 și versiunilor ulterioare ale previzualizării publice a [aplicației Office Mobile](https://techcommunity.microsoft.com/t5/Office-Apps-Blog/Introducing-Office-Your-new-go-to-mobile-app-for-getting-work/ba-p/977172) pentru Android.

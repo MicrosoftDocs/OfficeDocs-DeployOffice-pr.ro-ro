@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate opționale, inclusiv condițiile de utilizare care se aplică.
 hideEdit: true
-ms.openlocfilehash: d5de9a7a1eb2f2a825feb28798e8f0d195476696
-ms.sourcegitcommit: 9e44d65a5d59339df7d6a2f1116462c0fb774f83
+ms.openlocfilehash: 729329eeaa301cbb7bda61c0ec8d08ec9124729f
+ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "45068722"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45087808"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Prezentare generală a experiențelor conectate opționale în Office
 
@@ -45,7 +45,7 @@ Experiențele pe care Bing le pune la dispoziție în Outlook pentru iOS și And
 
 - **Sugestii despre locație:**   Atunci când adăugați un loc public cu o adresă poștală la un element de calendar, adresa poștală completă este inclusă în câmpul Locație.
 - **Calendare interesante:**   Vă puteți [abona](https://www.osupportweb.com/a/outlook-mobile/?s=feature-walkthroughs&f=where-do-i-go-on-outlook-to-subscribe-to-an-interesting-calendar&p=all) la calendare cu echipele sportive sau emisiunile TV favorite.
-
+- **Timp de călătorie în Urmează:** Următorul eveniment va fi rezumat în partea de sus a inboxului de e-mail într-o fișă denumită [Urmează](https://www.osupportweb.com/a/outlook-mobile/?s=up-next&f=how-does-up-next-work). În Outlook pentru Android, această experiență necesită Hărți Bing ca să furnizeze timpul de călătorie estimat.
 
  Aceste experiențe bazate pe Bing vă sunt licențiate conform condițiilor din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și sunt acoperite de [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). Toate interogările de căutare pe care le furnizați organizației Aplicații Microsoft 365 pentru întreprindere în timp ce utilizați aceste servicii sunt trimise către Microsoft Bing. Acestea nu sunt legate pentru dvs. de organizația Bing.
 
@@ -83,6 +83,10 @@ Atunci când utilizați Magazinul Office, utilizarea site-ului magazinului propr
 
 > [!NOTE]
 > Opțiunea Cercetare (Research) din fila Revizuire nu este totuna cu Cercetare (Researcher) din fila Referințe. În versiunile mai noi de Office, pe lângă opțiunea Cercetare (Research) este disponibilă și o experiență denumită Cercetare (Researcher). Cercetare (Researcher) este un serviciu mai nou, pe platformă Bing, iar informații despre acest instrument sunt prezentate mai sus, în [Experiențe care se bazează pe Bing](#experiences-that-rely-on-bing).
+
+### <a name="travel-time-in-up-next-in-outlook-for-ios"></a>Timp de călătorie în Urmează în Outlook pentru iOS
+
+În Outlook pentru iOS, următorul eveniment va fi rezumat în partea de sus a inboxului de e-mail într-o fișă denumită [Urmează](https://www.osupportweb.com/a/outlook-mobile/?s=up-next&f=how-does-up-next-work). Această experiență necesită un serviciu deținut de Apple, denumit Hărți Apple, pentru a oferi timpul de călătorie estimat. Se aplică [termenii de utilizare](https://www.apple.com/legal/internet-services/maps/) Apple Maps și [politica de confidențialitate](https://www.apple.com/legal/privacy) Apple.
 
 ### <a name="weather-bar-in-outlook"></a>Bara meteo în Outlook
 

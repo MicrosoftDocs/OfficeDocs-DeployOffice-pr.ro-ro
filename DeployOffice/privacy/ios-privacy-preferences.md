@@ -14,12 +14,12 @@ ms.custom:
 - Ent_Office_Mac
 description: Furnizează administratorilor Office informații despre cum să gestioneze setările de confidențialitate pe dispozitive iOS.
 hideEdit: true
-ms.openlocfilehash: 40fc1ec1f5b2abc587e1b5224dc7fe0a5a656f33
-ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
+ms.openlocfilehash: 6465a5b5e2103070170bdec8cd64b8bc044d46a3
+ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "43992118"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45087859"
 ---
 # <a name="use-preferences-to-manage-privacy-controls-for-office-on-ios-devices"></a>Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pe dispozitivele iOS
 
@@ -33,7 +33,9 @@ Pentru mai multe informații despre datele de diagnosticare și experiențele co
 
 Aceste setări de preferințe se aplică la următoarele aplicații:
 - Versiunea 2.30 și versiunile ulterioare de Word pentru iOS, Excel pentru iOS și PowerPoint pentru iOS.
+- Versiunea 4.30.0 și versiunile ulterioare de Outlook pentru iOS.
 - Versiunea 16.30 și versiunile ulterioare de OneNote pentru iOS.
+- Versiunea 11.19.11 și versiunile ulterioare de OneDrive pentru iOS.
 - Versiunea 1.17 și versiunile ulterioare de Visio Viewer pentru iOS.
 
 > [!NOTE]
@@ -60,6 +62,8 @@ Odată trimis către dispozitiv, dicționarul de configurare se va afla sub chei
 > - Permiteți utilizarea de experiențe conectate în Office care analizează conținut
 > - Permiteți utilizarea de experiențe conectate în Office care descarcă conținut online
 > - Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office
+>
+> Setările de confidențialitate pentru Outlook pentru iOS și OneDrive pentru iOS pot fi configurate doar utilizând serviciul de politici cloud pentru Office.
 >
 > Pentru mai multe informații despre utilizarea serviciului de politici cloud pentru Office, consultați [Prezentarea generală a serviciului de politici cloud pentru Office](../overview-office-cloud-policy-service.md).
 

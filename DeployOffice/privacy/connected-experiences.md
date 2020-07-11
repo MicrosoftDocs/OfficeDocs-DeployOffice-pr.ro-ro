@@ -13,11 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate pentru Office, cum ar fi experiențele care analizează conținut sau experiențele care descarcă conținut online.
 hideEdit: true
-ms.openlocfilehash: ed42864d90c0ec8f50e28248720ffc8c2f569713
-ms.sourcegitcommit: 85c6ac9351a9305b774fb2a63cb895f952b433d6
+ms.openlocfilehash: 8910b00d5201e70131eb1eb0e696d9ce048eabad
+ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "45048560"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45087148"
 ---
 # <a name="connected-experiences-in-office"></a>Experiențe conectate în Office
 
@@ -46,7 +47,7 @@ Următorul tabel furnizează o listă de experiențe conectate care vă analizea
 | Txt alternativ automat   | [Tot ce trebuie să știți pentru a scrie eficient text alternativ](https://support.office.com/article/df98f884-ca3d-456c-807b-1a1fa82f5dc2) |
 | Tipuri de date                  | [Tipuri de date Excel: Cotații bursiere și geografie](https://support.office.com/article/61a33056-9935-484f-8ac8-f1a89e210877)   |
 | Dictare  | [Dictați cu vocea în Office](https://support.office.com/article/d4fd296e-8f15-4168-afec-1f95b13a6408) |
-|Editor|[Editorul este asistentul dvs. de scriere](https://support.office.com/article/91ecbe1b-d021-4e9e-a82e-abc4cd7163d7)|
+|Editor<sup>1</sup> |[Editorul este asistentul dvs. de scriere](https://support.office.com/article/91ecbe1b-d021-4e9e-a82e-abc4cd7163d7)|
 | Idei     | [Idei în Excel](https://support.office.com/article/3223aab8-f543-4fda-85ed-76bb0295ffc4) |
 | Cerneală în text, Cerneală în formă, Cerneală în expresie matematică | [Modificați cerneală scrisă de mână în forme, în text sau în expresie matematică în PowerPoint pentru Microsoft 365](https://support.office.com/article/0740dec3-6291-4c1f-8baa-011d18449919) |
 | Inserarea datelor din imagine| [Inserare date din imagine](https://support.office.com/article/3c1bb58d-2c59-4bc0-b04a-a671a6868fd7)|
@@ -65,6 +66,8 @@ Următorul tabel furnizează o listă de experiențe conectate care vă analizea
 | Atingere pentru Word (Adăugare din fișiere)   | [Găsiți și utilizați conținutul de care aveți nevoie, atunci când aveți nevoie, fără a ieși din Word](https://support.office.com/article/860118fc-1f61-41f6-922f-40084a284658)   |
 | Transformare la pagina web   | [Transformați un document Word într-o pagină web Sway](https://support.office.com/article/65912b2d-8b81-41e1-ac52-c20a65ce8ecf) |
 | Translator   | [Traduceți text în altă limbă](https://support.office.com/article/287380e4-a56c-48a1-9977-f2dca89ce93f)  |
+
+<sup>1</sup> Funcționalitatea de bază a Editorului rămâne disponibilă chiar dacă nu sunteți conectat la internet. Aceeași funcționalitate de bază rămâne, de asemenea, disponibilă dacă vă hotărâți să dezactivați utilizarea experiențelor conectate care vă analizează conținutul. În niciunul dintre cazuri nu sunt trimise date despre utilizarea Editorului către Microsoft.
 
 > [!NOTE]
 > \*Când utilizatorii sunt conectați cu un cont de la locul de muncă sau de la școală, experiențele conectate, listate mai sus în italice, sunt opționale și sunt furnizate în termenii[Contractului de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [a angajamentului de respectare a confidențialității](https://privacy.microsoft.com/) și, potențial, a altor termeni. Pentru mai multe informații, consultați [Prezentare generală a experiențelor conectate opționale în Office](optional-connected-experiences.md). Dacă sunteți administrator, această experiență conectată poate fi gestionată prin controale de confidențialitate pentru experiențele conectate sau setarea de politică *Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office*.
@@ -95,6 +98,7 @@ Următorul tabel furnizează o listă de experiențe conectate care descarcă co
 | *Cercetare*\*    | [Faceți cu ușurință cercetare pentru o lucrare în Word](https://support.office.com/article/1728f286-8702-4d72-8169-ab7677ca0e1f) |
 | Spune-mi    | [Rezolvați treburile rapid cu funcția „Spune-mi”](https://support.office.com/article/f20d2198-17b8-4b09-a3e5-007a337f1e4e)  |
 | Șabloane  | [Descărcați șabloane gratuite, predefinite](https://support.office.com/article/29f2a18d-29a6-4a07-998b-cfe5ff7ffbbb)  |
+|*Timp de călătorie estimat în Urmează*\*|Atunci când alegeți să permiteți ca Outlook pentru iOS și Android să vă acceseze locația, o estimare a timpului de deplasare către următorul eveniment va fi inclusă în fișa [Urmează](https://www.osupportweb.com/a/outlook-mobile/?s=up-next&f=how-does-up-next-work) din partea de sus a inboxului.|
 | *Bara meteo*\* (Outlook)| [Modificați localitatea pentru prognoza Barei meteo din calendar](https://support.office.com/article/D11B7532-7C58-489E-8103-5CC5D727B06B) |
 
 > [!NOTE]
