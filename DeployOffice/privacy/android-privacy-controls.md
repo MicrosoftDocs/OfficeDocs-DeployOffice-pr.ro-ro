@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Furnizează administratorilor Office informații despre cum să gestioneze setările de confidențialitate pentru Office pe dispozitive Android.
 hideEdit: true
-ms.openlocfilehash: 38d68df0d3a12e6858568906a60973bad9d76709
-ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
+ms.openlocfilehash: 6086ecd1b2cd55bbf6cb4577879714f1d20a2f93
+ms.sourcegitcommit: 81295dff0f2fa474f0db39fd40560e3a23fff32a
 ms.translationtype: HT
 ms.contentlocale: ro-RO
 ms.lasthandoff: 07/09/2020
-ms.locfileid: "45087895"
+ms.locfileid: "45092130"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-on-android-devices"></a>Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office pe dispozitivele Android
 
@@ -35,11 +35,7 @@ Aceste setări de politică se aplică la următoarele aplicații:
 - Versiunea 4.1.71 și versiunile ulterioare de Outlook pentru Android.
 - Versiunea 16.0.12228.20004 și versiunile ulterioare de OneNote pentru Android.
 - Versiunea 5.47 și versiunile ulterioare de OneDrive pentru Android.
-
-> [!NOTE]
->- Aceste setări de politică se aplică și versiunii 16.0.12130.20272 și versiunilor ulterioare ale previzualizării publice a [aplicației Office Mobile](https://techcommunity.microsoft.com/t5/Office-Apps-Blog/Introducing-Office-Your-new-go-to-mobile-app-for-getting-work/ba-p/977172) pentru Android.
->- Prin utilizarea previzualizării publice a aplicației Office Mobile pentru Android se vor colecta jurnale de eroare care pot cuprinde conținut în unele circumstanțe.
->- Dacă vă îngrijorează colectarea de date din previzualizarea publică a aplicației Office Mobile pentru Android, trebuie să-i informați pe utilizatori să nu se conecteze la aplicație cu conturile de la locul de muncă sau de la școală.
+- Versiunea 16.0.12430.20254 și versiunile ulterioare ale aplicației Office pentru Android.
 
 ## <a name="policy-settings-available-for-office-on-android-devices"></a>Setări de politică disponibile pentru Office pe dispozitive Android
 

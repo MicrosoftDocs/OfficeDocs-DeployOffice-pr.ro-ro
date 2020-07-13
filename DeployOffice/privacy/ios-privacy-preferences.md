@@ -14,12 +14,12 @@ ms.custom:
 - Ent_Office_Mac
 description: Furnizează administratorilor Office informații despre cum să gestioneze setările de confidențialitate pe dispozitive iOS.
 hideEdit: true
-ms.openlocfilehash: 6465a5b5e2103070170bdec8cd64b8bc044d46a3
-ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
+ms.openlocfilehash: ac8b3428734649981f20a82be2f0793c857e09ee
+ms.sourcegitcommit: 81295dff0f2fa474f0db39fd40560e3a23fff32a
 ms.translationtype: HT
 ms.contentlocale: ro-RO
 ms.lasthandoff: 07/09/2020
-ms.locfileid: "45087859"
+ms.locfileid: "45092166"
 ---
 # <a name="use-preferences-to-manage-privacy-controls-for-office-on-ios-devices"></a>Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pe dispozitivele iOS
 
@@ -37,6 +37,7 @@ Aceste setări de preferințe se aplică la următoarele aplicații:
 - Versiunea 16.30 și versiunile ulterioare de OneNote pentru iOS.
 - Versiunea 11.19.11 și versiunile ulterioare de OneDrive pentru iOS.
 - Versiunea 1.17 și versiunile ulterioare de Visio Viewer pentru iOS.
+- Versiunea 2.34 și versiunile ulterioare ale aplicației Office pentru iOS.
 
 > [!NOTE]
 > Pentru mai multe informații despre setări similare pentru Office pe calculatoare care rulează macOS, consultați [Utilizați preferințele pentru a gestiona controalele de confidențialitate pentru Office pentru Mac](mac-privacy-preferences.md).
