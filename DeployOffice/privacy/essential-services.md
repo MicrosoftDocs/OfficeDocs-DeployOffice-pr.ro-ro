@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre servicii esențiale în Office, cum ar fi Clic și Pornire și Licențiere, și asigură o listă de evenimente și câmpuri de date pentru aceste servicii esențiale.
 hideEdit: true
-ms.openlocfilehash: a73cfa56d6da769e1ced46e58054e55419bb36e8
-ms.sourcegitcommit: fc906d2163687242e98fd1719055038758068424
+ms.openlocfilehash: f9010fcc04540073dde219dc765e1811aa8a42e5
+ms.sourcegitcommit: 7b24028ab20d4f43dbca85cea2617398b36a3180
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "44800400"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "45117212"
 ---
 # <a name="essential-services-for-office"></a>Servicii esențiale pentru Office
 
@@ -2851,11 +2851,13 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officelicensingfullvalidation"></a>Office.Licensing.FullValidation 
 
-Se colectează la fiecare sesiune care raportează starea de licențiere a computerului și erorile vizualizate de utilizator din cauza cărora nu poate să utilizeze aplicația. Acest eveniment indică dacă computerul utilizatorului este în bună stare de funcționare sau nu. Avem configurată o detectare a anomaliilor pentru acest eveniment pentru a indica dacă o regresie provoacă un comportament inadecvat al utilizatorului. Și acesta este de importanță critică la diagnosticarea problemelor utilizatorului și pentru monitorizarea sănătății sistemului
+Se colectează la fiecare sesiune care raportează starea de licențiere a computerului și erorile vizualizate de utilizator din cauza cărora nu poate să utilizeze aplicația. Acest eveniment indică dacă computerul utilizatorului este în bună stare de funcționare sau nu. Avem configurată o detectare a anomaliilor pentru acest eveniment pentru a indica dacă o regresie sau un mecanism de activare provoacă un comportament inadecvat al utilizatorului. Și acesta este de importanță critică la diagnosticarea problemelor utilizatorului și pentru monitorizarea sănătății sistemului.
 
 Se colectează următoarele câmpuri:
 
   - **Acid** - identificator GUID care reprezintă produsul Office pentru care are licență utilizatorul 
+  
+  - **ActivationAttributes** - tipul de mecanism de activare folosit de utilizator.
 
   - **IsSessionLicensing** - indiferent dacă momentan rulează sau nu în modul de activare computer partajat 
 
@@ -10458,6 +10460,27 @@ Se colectează următoarele câmpuri:
 
  - **Data_EventId** - un cod care indică preferința de colectare a datelor de diagnostic selectată de utilizator.
 
+### <a name="officesystemgracefulexitgracefulappexitdesktop"></a>Office.System.GracefulExit.GracefulAppExitDesktop
+
+Evenimentul este declanșat de o întrerupere elegantă a aplicației pentru aplicațiile client Office, cum ar fi, dar fără a se limita la, Word, Excel, PowerPoint și Outlook. Utilizăm Ieșirea elegantă pentru a măsura starea de funcționare a produselor client Office. Acesta se dorește a fi un semnal esențial pentru activitate utilizat de către inginerii Office pentru a deduce stabilitatea produselor.
+
+Se colectează următoarele câmpuri:
+
+- **AppBuild** - identificator versiune compilată pentru procesul afectat.
+- **AppMajor** - identificator versiune majoră pentru procesul afectat.
+- **AppMinor** - identificator versiune minoră pentru procesul afectat.
+- **AppRevision** - identificator versiune compilată pentru procesul afectat.
+- **BootCompleted** - dacă procesul Office a finalizat inițializarea.
+- **DetectionTime** - ora la care s-a detectat ieșirea neprevăzută.
+- **EcsETag** - identificator de experiment pentru proces.
+- **HasEdit** - editarea documentelor a survenit în timpul procesului Office.
+- **HasOpen** - documentul a fost deschis în timpul procesului Office.
+- **InstallMethod** - dacă pentru versiunea de compilare curentă a Office s-a efectuat upgrade, dacă s-a revenit la ea sau dacă este o instalare nouă.
+- **OfficeUILang** - limba procesului Office.
+- **PreviousBuild** - versiune compilată instalată anterior.
+- **SafeMode** - a fost procesul Office în modul de siguranță.
+- **SessionId** - identificator unic al procesului.
+- **SessionInitTime** - ora la care a început procesul afectat.
 
 ### <a name="officesystemidentitychanged"></a>Office.System.IdentityChanged
 
