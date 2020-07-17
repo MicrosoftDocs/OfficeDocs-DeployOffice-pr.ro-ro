@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre datele de diagnosticare obligatorii în Office și le furnizează o listă de evenimente și câmpuri de date.
 hideEdit: true
-ms.openlocfilehash: d3acec4d3e2b1758ca991dd9bec0a551e9ebfab7
-ms.sourcegitcommit: 5c82507780e8f46c01c951135419546b7b9dad52
+ms.openlocfilehash: 6e5ea5a865acb893c92af12e68e7815fcf2fee65
+ms.sourcegitcommit: 5a4d3419d5ff4c8008ad3cf894a8f03ec170504b
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "44811482"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "45128578"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Date de diagnosticare obligatorii pentru Office
 
@@ -1291,6 +1291,36 @@ Se colectează următoarele câmpuri:
 
 - **WarmBoot** - Identifică dacă containerul a fost creat deja sau nu.
 
+#### <a name="office_appguard_launchfile"></a>Office_AppGuard_LaunchFile
+
+Acest eveniment indică rezultatul unei executări de lansare a fișierului din Protecție aplicații. Vom putea defini procentul de sesiuni în care am lansat un fișier Word, Excel sau PowerPoint și codurile de eroare pentru încercările eșuate.
+
+Se colectează următoarele câmpuri:
+
+- **AppId** - Identifică ce aplicație este lansată.
+
+- **DetachedDuration** - Identifică timpul total în care a fost efectuată activitatea îmbinată. 
+
+- **ErrorCode1** - Tipul codului de eroare din configurarea containerului.  
+
+- **ErrorCode2** - Codul de eroare din executarea creării. 
+
+- **ErrorCode3** - Codul de eroare suplimentar. 
+
+- **FileId** - Un Identificator unic (GUID) a fost returnat din Windows API după lansarea unui fișier.
+
+- **ID** - Un Identificator unic (GUID) pentru lansarea și crearea unui fișier. Acest ID este utilizat pentru a corela evenimente din Office și Windows.
+
+- **ResetError** - Codul de eroare de la încercarea de a reseta containerul după o încercare nereușită.
+
+- **ResetErrorCode1** - Tipul codului de eroare din configurarea containerului după comanda de resetare. 
+
+- **ResetErrorCode2** - Codul de eroare din executarea comenzii de creare după resetare.
+
+- **ResetErrorCode3** - Codul de eroare suplimentar după comanda de resetare.  
+
+- **ResetErrorType** - Tipul de eroare: Creare, PrepFile sau Lansare.
+
 
 
 #### <a name="officesecurityactivationfilterclsidactivated"></a>Office.Security.ActivationFilter.CLSIDActivated
@@ -1747,6 +1777,11 @@ Se colectează următoarele câmpuri:
 - **action** - ne comunică acțiunea încercată atunci când s-a înregistrat acțiunea. Printre exemple se numără atașarea unui fișier și prezentarea mai multor opțiuni.
 
 - **icon_name** - ne spune numele pictogramei afișate atunci când acțiunea este înregistrată.
+ 
+- **origin** – Spuneți-ne sursa acțiunii. Valorile posibile sunt quick_reply și full_screen.
+
+- **toolbar_type**– Spuneți-ne tipul de bară de instrumente care se prezintă pe pagina de alcătuire. Valorile posibile sunt compose_actions și formatare.
+
 
 #### <a name="conversation_view_action"></a>conversation_view_action
 
@@ -1761,6 +1796,8 @@ Se colectează următoarele câmpuri:
 - **suggested_reply_char_count** - ne spune câte caractere au răspunsurile sugerate pe care le oferim (dacă sunt disponibile), pentru a ne ajuta la detectarea anomaliilor și a problemelor legate de sugestiile noastre
 
 - **suggested_reply_click_pos** - ne spune în ce poziție este redat răspunsul sugerat (dacă este disponibil), astfel încât să putem detecta problemele privind o anumită sugestie
+
+- **suggested_reply_type** - indică tipul de răspuns sugerat pentru această acțiune. Valorile posibile sunt text, send_avail și create_meeting.
 
 - **use_default_quick_reply_mode** - ne spune dacă s-a utilizat modul implicit de răspuns rapid pentru a ne ajuta să detectăm probleme legate de experiența de răspuns rapid pentru mesajele de e-mail
 
@@ -2508,6 +2545,8 @@ Se colectează următoarele câmpuri:
 
 - **Data_BootDuration**- durata pornirii aplicației în procesul de deschidere a fișierului.
 
+- **Data_ClosePreviouslyOpenedMarkers** - în unele scenarii de deschidere a fișierelor, închiderea unui document deschis anterior are loc înainte de deschiderea documentului curent. Această durată dintre unele operațiuni care au loc în acest caz este capturată într-o valoare șir care are formatul \<functionId>\<functionValue>\<functionId>\<functionValue>...
+
 - **Data_Doc_AccessMode**- o enumerare indicând modul de acces al fișierului, de exemplu, doar în citire, citiți scrierea.
 
 - **Data_Doc_AsyncOpenKind**- o enumerare indicând tipul de flux asincron utilizat pentru deschiderea fișierului.
@@ -2574,6 +2613,8 @@ Se colectează următoarele câmpuri:
 
 - **Data_ErrorId_Tag** - o etichetă din cod pentru a vă ajuta să găsiți punctul de eroare
 
+- **Data_FileOpenFlowMarkers** - înainte de a începe procesul de deschidere a fișierului, există unele preprocesări implicate. Acest timp necesar pentru preprocesare este capturată într-o valoare șir care are formatul \<functionId>\<functionValue>\<functionId>\<functionValue>...
+
 - **Data_InclusiveMeasurements** - o valoare șir de logare durata de timp petrecută în anumite apeluri de funcție, într-un format cu eticheta funcției și durata, care include durata apelurilor subfuncții. 
 
 - **Data_InitializationReason** - o enumerare indicând modul în care se deschide fișierul, de ex. element UI, declanșat de altă aplicație etc.
@@ -2581,6 +2622,8 @@ Se colectează următoarele câmpuri:
 - **Data_Measurements** - o valoare șir care conectează timpul petrecut în anumite apeluri de funcție într-un format cu eticheta funcției și durata care include durata apelurilor subfuncție.
 
 - **Data_OfficeMobileInitReason** - o enumerare care indică punctul de intrare al fișierului deschis. 
+
+- **Data_RenderToInSpaceDuration** - durata dintre sfârșitul de randare și animația conturului/pânzei.
 
 - **Data_SilhouetteDuration**- durata de randare a fișierului deschis.
 
@@ -2723,6 +2766,681 @@ Colectat doar atunci când Tabloul de bord de telemetrie Office a fost activat d
 Se colectează următoarele câmpuri:
 
   - **Data.CollectionTime** - marcă de timp privind momentul în care a fost înregistrat în jurnal un eveniment de cădere
+
+#### <a name="office_appdocs_appdocs_operationopenfrommrubypath"></a>Office_AppDocs_AppDocs_OperationOpenFromMruByPath
+
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Android, iOS, Universal și Windows. Acest eveniment înregistrează atunci când are loc o operațiune de deschidere a fișierelor din calea furnizată de lista utilizată cel mai recent și este folosit pentru a înțelege și pentru a acorda prioritate experienței utilizatorului pe baza informațiilor operațiunii de deschidere a fișierelor.
+
+Se colectează următoarele câmpuri:
+
+- **Data_AppIdForReportEndBeforeAppKnown** - ID-ul de aplicație, atunci când nu este cunoscut înainte de a fi solicitat sfârșitul raportului în operațiune.
+
+- **Data_CanContinueFromOnBeforeOperationBegins** - starea CanContinue, înainte de a invoca inițierea rutinei de tratare.
+
+- **Data_DetachedDuration** – durata procesului de detașare a unui eveniment. 
+
+- **Data_Doc_AccessMode** – o enumerare care indică modul de acces al fișierului, de exemplu, doar în citire, citire-scriere.
+
+- **Data_Doc_AsyncOpenKind** – o enumerare care indică tipul de flux asincron utilizat pentru deschiderea fișierului.
+
+- **Data_Doc_ChunkingType** – o enumerare care indică tipul de algoritm de segmentare al unui fișier.
+
+- **Data_Doc_EdpState** – o enumerare care indică starea de protecție datelor la nivel de întreprindere ale unui fișier.
+
+- **Data_Doc_Ext** – primele patru caractere din extensia fișierului.
+
+- **Data_Doc_Fqdn** – nume gazdă server al fișierului.
+
+- **Data_Doc_FqdnHash** – un GUID care identifică în mod unic numele de gazdă server.
+
+- **Data_Doc_IdentityTelemetryId** – codul hash unidirecțional al identității de utilizator folosit pentru a efectua deschiderea.
+
+- **Data_Doc_InitializationScenario** – o enumerare care indică tipul de scenariu detaliat al unei operațiuni de deschidere a fișierelor.
+
+- **Data_Doc_IOFlags** – o enumerare care indică semnalizările IO ale unei operațiuni de deschidere a fișierelor, de exemplu, dacă fișierul este în cache sau nu.
+
+- **Data_Doc_IsCloudCollabEnabled** – dacă colaborarea în cloud este activată sau nu pentru fișier.
+
+- **Data_Doc_IsIncrementalOpen** – dacă fișierul a fost sau nu deschis prin deschidere treptată.
+
+- **Data_Doc_IsOcsSupported** – dacă un fișier acceptă sau nu serviciul de colaborare Office.
+
+- **Data_Doc_IsOpeningOfflineCopy** – dacă un fișier dintr-o copie memorată în cache offline se deschide sau nu.
+
+- **Data_Doc_IsPrefetched** – dacă fișierul înainte de operațiunea de deschidere a fost sau nu preluat.
+
+- **Data_Doc_IsSyncBacked** – dacă un fișier în cloud există sau nu local și dacă este sincronizat cu serverul.
+
+- **Data_Doc_Location** – o enumerare care indică unde se află fișierul, de exemplu, local sau în cloud.
+
+- **Data_Doc_ReadOnlyReasons** – o enumerare care indică motivul doar în citire al unui fișier.
+
+- **Data_Doc_ResourceIdHash** – un GUID care identifică în mod unic ID-ul de resursă server al fișierului.
+
+- **Data_Doc_RtcType** – o enumerare care indică tipul de canal în timp real (RTC) utilizat de fișier.
+
+- **Data_Doc_ServerDocId** – un GUID care identifică în mod unic ID-ul de document server.
+
+- **Data_Doc_ServerProtocol** – o enumerare care indică protocolul de server al unui fișier în cloud.
+
+- **Data_Doc_ServerType** – o enumerare care indică tipul de server al unui fișier în cloud.
+
+- **Data_Doc_ServerVersion** – o enumerare care indică versiunea de server al unui fișier în cloud.
+
+- **Data_Doc_SessionId** – un număr întreg, crescut cu 1 pentru fiecare operațiune de deschidere a fișierului într-o sesiune.
+
+- **Data_Doc_SharePointServiceContext** – un șir utilizat pentru corelarea jurnalelor din partea client și de partea server, de obicei, este un fel de ID.
+
+- **Data_Doc_SizeInBytes** – dimensiunea documentului în octeți.
+
+- **Data_Doc_SpecialChars** – o enumerare indicând ce tip de caracter special are adresa URL a fișierului.
+
+- **Data_Doc_UrlHash** – un GUID care identifică în mod unic URL-ul fișierului.
+
+- **Data_Doc_UsedWrsDataOnOpen** – dacă fișierul a fost sau nu deschis incremental folosind datele WRS memorate pre-cache.
+
+- **Data_Doc_WopiServiceId**– un șir care indică de la ce serviciu provine un fișier WOPI (aplicație de interfață deschisă pentru aplicația web).
+
+- **Data_DocumentInputCurrency** – tipul de intrare a documentului utilizat de operațiune.
+
+- **Data_DocumentOperation_AppId** – valoarea de enumerare reprezentând ID-ul unei aplicații.
+
+- **Data_DocumentOperation_EndEventId** – eticheta care reprezintă locul în care operațiunea s-a încheiat.
+
+- **Data_DocumentOperation_EndReason** – valoarea de enumerare reprezentând motivul final.
+
+- **Data_DocumentOperation_IsReinitialized** – reinițializează un document deja deschis.
+
+- **Data_DocumentOperation_ParamsFlags** – semnalizările de enumerare utilizate pentru a porni operațiunea.
+
+- **Data_DocumentOperation_TelemetryReason** – reprezentarea de enumerare a punctului de intrare pentru evenimentul deschis. De exemplu, deschideți din MRU sau navigați, activare fișier etc.
+
+- **Data_DocumentOperation_isTargetECBeginEC** – dacă contextul de execuție a țintei este același ca și contextul din care a fost deschis.
+
+- **Data_FileOInclusiveMeasurements** – o valoare șir care înregistrează durata de timp petrecută în anumite apeluri de funcții, într-un format cu eticheta funcției și durata care include durata apelurilor de sub-funcții.
+
+- **Data_FileOMeasurements** – o valoare șir care înregistrează timpul petrecut în anumite apeluri de funcții, într-un format cu eticheta funcției și durata care exclude durata apelurilor de sub-funcții.
+
+- **Data_IsNameMissingInUrl** – indică dacă numele nu a fost analizat din URL.
+
+- **Data_IsPathMissingForLocalFile** – indică dacă acesta este un fișier local fără cale.
+
+- **Data_IsUnpackedLinkSupportedForOpen** – indică dacă linkurile neambalate sunt acceptate pentru deschidere.
+
+- **Data_LinksOpenRightScenario** – valoare de enumerare pentru linkurile din scenariul de deschidere din dreapta.
+
+- **Data_OpEndEventId** - eticheta care reprezintă locul în care operațiunea s-a încheiat.
+
+- **Data_RelatedPrevOpTelemetryReason** – este operațiunea corelată cu operațiunea anterioară.
+
+- **Data_StopwatchDuration** – timpul total pentru eveniment.
+
+- **Data_UnpackLinkHint** – enumerarea reprezentând acțiunea potențială a utilizatorului, pe baza unui link de dezarhivare.
+
+- **Data_UnpackLinkPromptResult** – enumerarea reprezentând răspunsul solicitării de dezarhivare a linkului.
+
+#### <a name="office_appdocs_appdocs_operationopenfrommrubyurl"></a>Office_AppDocs_AppDocs_OperationOpenFromMruByUrl
+
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Android, iOS, Universal și Windows. Evenimentul înregistrează atunci când are loc o operațiune de deschidere a fișierelor din URL-ul furnizat în lista utilizată cel mai recent și este folosit pentru a înțelege și pentru a acorda prioritare experienței utilizatorului, pe baza informațiilor despre operațiune de deschidere a fișierului. 
+
+Se colectează următoarele câmpuri:
+
+- **Data_AppIdForReportEndBeforeAppKnown** - ID-ul de aplicație, atunci când nu este cunoscut înainte de a fi solicitat sfârșitul raportului în operațiune.
+
+- **Data_CanContinueFromOnBeforeOperationBegins** - starea CanContinue, înainte de a invoca inițierea rutinei de tratare.
+
+- **Data_DetachedDuration** – durata procesului de detașare a unui eveniment. 
+
+- **Data_Doc_AccessMode** – o enumerare care indică modul de acces al fișierului, de exemplu, doar în citire, citire-scriere.
+
+- **Data_Doc_AsyncOpenKind** – o enumerare care indică tipul de flux asincron utilizat pentru deschiderea fișierului.
+
+- **Data_Doc_ChunkingType** – o enumerare care indică tipul de algoritm de segmentare al unui fișier.
+
+- **Data_Doc_EdpState** – o enumerare care indică starea de protecție datelor la nivel de întreprindere ale unui fișier.
+
+- **Data_Doc_Ext** – primele patru caractere din extensia fișierului.
+
+- **Data_Doc_Fqdn** – nume gazdă server al fișierului.
+
+- **Data_Doc_FqdnHash** – un GUID care identifică în mod unic numele de gazdă server.
+
+- **Data_Doc_IdentityTelemetryId** – codul hash unidirecțional al identității de utilizator folosit pentru a efectua deschiderea.
+
+- **Data_Doc_InitializationScenario** – o enumerare care indică tipul de scenariu detaliat al unei operațiuni de deschidere a fișierelor.
+
+- **Data_Doc_IOFlags** – o enumerare care indică semnalizările IO ale unei operațiuni de deschidere a fișierelor, de exemplu, dacă fișierul este în cache sau nu.
+
+- **Data_Doc_IsCloudCollabEnabled** – dacă colaborarea în cloud este activată sau nu pentru fișier.
+
+- **Data_Doc_IsIncrementalOpen** – dacă fișierul a fost sau nu deschis prin deschidere treptată.
+
+- **Data_Doc_IsOcsSupported** – dacă un fișier acceptă sau nu serviciul de colaborare Office.
+
+- **Data_Doc_IsOpeningOfflineCopy** – dacă un fișier dintr-o copie memorată în cache offline se deschide sau nu.
+
+- **Data_Doc_IsPrefetched** – dacă fișierul înainte de operațiunea de deschidere a fost sau nu preluat.
+
+- **Data_Doc_IsSyncBacked** – dacă un fișier în cloud există sau nu local și dacă este sincronizat cu serverul.
+
+- **Data_Doc_Location** – o enumerare care indică unde se află fișierul, de exemplu, local sau în cloud.
+
+- **Data_Doc_ReadOnlyReasons** – o enumerare care indică motivul doar în citire al unui fișier.
+
+- **Data_Doc_ResourceIdHash** – un GUID care identifică în mod unic ID-ul de resursă server al fișierului.
+
+- **Data_Doc_RtcType** – o enumerare care indică tipul de canal în timp real (RTC) utilizat de fișier.
+
+- **Data_Doc_ServerDocId** – un GUID care identifică în mod unic ID-ul de document server.
+
+- **Data_Doc_ServerProtocol** – o enumerare care indică protocolul de server al unui fișier în cloud.
+
+- **Data_Doc_ServerType** – o enumerare care indică tipul de server al unui fișier în cloud.
+
+- **Data_Doc_ServerVersion** – o enumerare care indică versiunea de server al unui fișier în cloud.
+
+- **Data_Doc_SessionId** – un număr întreg, crescut cu 1 pentru fiecare operațiune de deschidere a fișierului într-o sesiune.
+
+- **Data_Doc_SharePointServiceContext** – un șir utilizat pentru corelarea jurnalelor din partea client și de partea server, de obicei, este un fel de ID.
+
+- **Data_Doc_SizeInBytes** – dimensiunea documentului în octeți.
+
+- **Data_Doc_SpecialChars** – o enumerare indicând ce tip de caracter special are adresa URL a fișierului.
+
+- **Data_Doc_UrlHash** – un GUID care identifică în mod unic URL-ul fișierului.
+
+- **Data_Doc_UsedWrsDataOnOpen** – dacă fișierul a fost sau nu deschis incremental folosind datele WRS memorate pre-cache.
+
+- **Data_Doc_WopiServiceId**– un șir care indică de la ce serviciu provine un fișier WOPI (aplicație de interfață deschisă pentru aplicația web).
+
+- **Data_DocumentInputCurrency** – tipul de intrare a documentului utilizat de operațiune.
+
+- **Data_DocumentOperation_AppId** – valoarea de enumerare reprezentând ID-ul unei aplicații.
+
+- **Data_DocumentOperation_EndEventId** – eticheta care reprezintă locul în care operațiunea s-a încheiat.
+
+- **Data_DocumentOperation_EndReason** – valoarea de enumerare reprezentând motivul final.
+
+- **Data_DocumentOperation_IsReinitialized** – reinițializează un document deja deschis.
+
+- **Data_DocumentOperation_ParamsFlags** – semnalizările de enumerare utilizate pentru a porni operațiunea.
+
+- **Data_DocumentOperation_TelemetryReason** – reprezentarea de enumerare a punctului de intrare pentru evenimentul deschis. De exemplu, deschideți din MRU sau navigați, activare fișier etc.
+
+- **Data_DocumentOperation_isTargetECBeginEC** – dacă contextul de execuție a țintei este același ca și contextul din care a fost deschis.
+
+- **Data_FileOInclusiveMeasurements** – o valoare șir care înregistrează durata de timp petrecută în anumite apeluri de funcții, într-un format cu eticheta funcției și durata care include durata apelurilor de sub-funcții.
+
+- **Data_FileOMeasurements** – o valoare șir care înregistrează timpul petrecut în anumite apeluri de funcții, într-un format cu eticheta funcției și durata care exclude durata apelurilor de sub-funcții.
+
+- **Data_IsNameMissingInUrl** – indică dacă numele nu a fost analizat din URL.
+
+- **Data_IsPathMissingForLocalFile** – indică dacă acesta este un fișier local fără cale.
+
+- **Data_IsUnpackedLinkSupportedForOpen** – indică dacă linkurile neambalate sunt acceptate pentru deschidere.
+
+- **Data_LinksOpenRightScenario** – valoare de enumerare pentru linkurile din scenariul de deschidere din dreapta.
+
+- **Data_OpEndEventId** - eticheta care reprezintă locul în care operațiunea s-a încheiat.
+
+- **Data_RelatedPrevOpTelemetryReason** – este operațiunea corelată cu operațiunea anterioară.
+
+- **Data_StopwatchDuration** – timpul total pentru eveniment.
+
+- **Data_UnpackLinkHint** – enumerarea reprezentând acțiunea potențială a utilizatorului, pe baza unui link de dezarhivare.
+
+- **Data_UnpackLinkPromptResult** – enumerarea reprezentând răspunsul solicitării de dezarhivare a linkului.
+
+
+#### <a name="office_appdocs_appdocs_operationopenfrompath"></a>Office_AppDocs_AppDocs_OperationOpenFromPath
+
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Android, iOS, Universal și Windows. Evenimentul înregistrează atunci când are loc o operațiune de deschidere a fișierului de pe o cale și este folosit pentru a înțelege și pentru a acorda prioritare experiențelor utilizatorului, pe baza informațiilor despre operațiunea de deschidere a fișierelor.
+
+Se colectează următoarele câmpuri:
+
+- **Data_AppIdForReportEndBeforeAppKnown** - ID-ul de aplicație, atunci când nu este cunoscut înainte de a fi solicitat sfârșitul raportului în operațiune.
+
+- **Data_CanContinueFromOnBeforeOperationBegins** - starea CanContinue, înainte de a invoca inițierea rutinei de tratare.
+
+- **Data_DetachedDuration** – durata procesului de detașare a unui eveniment. 
+
+- **Data_Doc_AccessMode** – o enumerare care indică modul de acces al fișierului, de exemplu, doar în citire, citire-scriere.
+
+- **Data_Doc_AsyncOpenKind** – o enumerare care indică tipul de flux asincron utilizat pentru deschiderea fișierului.
+
+- **Data_Doc_ChunkingType** – o enumerare care indică tipul de algoritm de segmentare al unui fișier.
+
+- **Data_Doc_EdpState** – o enumerare care indică starea de protecție datelor la nivel de întreprindere ale unui fișier.
+
+- **Data_Doc_Ext** – primele patru caractere din extensia fișierului.
+
+- **Data_Doc_Fqdn** – nume gazdă server al fișierului.
+
+- **Data_Doc_FqdnHash** – un GUID care identifică în mod unic numele de gazdă server.
+
+- **Data_Doc_IdentityTelemetryId** – codul hash unidirecțional al identității de utilizator folosit pentru a efectua deschiderea.
+
+- **Data_Doc_InitializationScenario** – o enumerare care indică tipul de scenariu detaliat al unei operațiuni de deschidere a fișierelor.
+
+- **Data_Doc_IOFlags** – o enumerare care indică semnalizările IO ale unei operațiuni de deschidere a fișierelor, de exemplu, dacă fișierul este în cache sau nu.
+
+- **Data_Doc_IsCloudCollabEnabled** – dacă colaborarea în cloud este activată sau nu pentru fișier.
+
+- **Data_Doc_IsIncrementalOpen** – dacă fișierul a fost sau nu deschis prin deschidere treptată.
+
+- **Data_Doc_IsOcsSupported** – dacă un fișier acceptă sau nu serviciul de colaborare Office.
+
+- **Data_Doc_IsOpeningOfflineCopy** – dacă un fișier dintr-o copie memorată în cache offline se deschide sau nu.
+
+- **Data_Doc_IsPrefetched** – dacă fișierul înainte de operațiunea de deschidere a fost sau nu preluat.
+
+- **Data_Doc_IsSyncBacked** – dacă un fișier în cloud există sau nu local și dacă este sincronizat cu serverul.
+
+- **Data_Doc_Location** – o enumerare care indică unde se află fișierul, de exemplu, local sau în cloud.
+
+- **Data_Doc_ReadOnlyReasons** – o enumerare care indică motivul doar în citire al unui fișier.
+
+- **Data_Doc_ResourceIdHash** – un GUID care identifică în mod unic ID-ul de resursă server al fișierului.
+
+- **Data_Doc_RtcType** – o enumerare care indică tipul de canal în timp real (RTC) utilizat de fișier.
+
+- **Data_Doc_ServerDocId** – un GUID care identifică în mod unic ID-ul de document server.
+
+- **Data_Doc_ServerProtocol** – o enumerare care indică protocolul de server al unui fișier în cloud.
+
+- **Data_Doc_ServerType** – o enumerare care indică tipul de server al unui fișier în cloud.
+
+- **Data_Doc_ServerVersion** – o enumerare care indică versiunea de server al unui fișier în cloud.
+
+- **Data_Doc_SessionId** – un număr întreg, crescut cu 1 pentru fiecare operațiune de deschidere a fișierului într-o sesiune.
+
+- **Data_Doc_SharePointServiceContext** – un șir utilizat pentru corelarea jurnalelor din partea client și de partea server, de obicei, este un fel de ID.
+
+- **Data_Doc_SizeInBytes** – dimensiunea documentului în octeți.
+
+- **Data_Doc_SpecialChars** – o enumerare indicând ce tip de caracter special are adresa URL a fișierului.
+
+- **Data_Doc_UrlHash** – un GUID care identifică în mod unic URL-ul fișierului.
+
+- **Data_Doc_UsedWrsDataOnOpen** – dacă fișierul a fost sau nu deschis incremental folosind datele WRS memorate pre-cache.
+
+- **Data_Doc_WopiServiceId**– un șir care indică de la ce serviciu provine un fișier WOPI (aplicație de interfață deschisă pentru aplicația web).
+
+- **Data_DocumentInputCurrency** – tipul de intrare a documentului utilizat de operațiune.
+
+- **Data_DocumentOperation_AppId** – valoarea de enumerare reprezentând ID-ul unei aplicații.
+
+- **Data_DocumentOperation_EndEventId** – eticheta care reprezintă locul în care operațiunea s-a încheiat.
+
+- **Data_DocumentOperation_EndReason** – valoarea de enumerare reprezentând motivul final.
+
+- **Data_DocumentOperation_IsReinitialized** – reinițializează un document deja deschis.
+
+- **Data_DocumentOperation_ParamsFlags** – semnalizările de enumerare utilizate pentru a porni operațiunea.
+
+- **Data_DocumentOperation_TelemetryReason** – reprezentarea de enumerare a punctului de intrare pentru evenimentul deschis. De exemplu, deschideți din MRU sau navigați, activare fișier etc.
+
+- **Data_DocumentOperation_isTargetECBeginEC** – dacă contextul de execuție a țintei este același ca și contextul din care a fost deschis.
+
+- **Data_FileOInclusiveMeasurements** – o valoare șir care înregistrează durata de timp petrecută în anumite apeluri de funcții, într-un format cu eticheta funcției și durata care include durata apelurilor de sub-funcții.
+
+- **Data_FileOMeasurements** – o valoare șir care înregistrează timpul petrecut în anumite apeluri de funcții, într-un format cu eticheta funcției și durata care exclude durata apelurilor de sub-funcții.
+
+- **Data_IsNameMissingInUrl** – indică dacă numele nu a fost analizat din URL.
+
+- **Data_IsPathMissingForLocalFile** – indică dacă acesta este un fișier local fără cale.
+
+- **Data_IsUnpackedLinkSupportedForOpen** – indică dacă linkurile neambalate sunt acceptate pentru deschidere.
+
+- **Data_LinksOpenRightScenario** – valoare de enumerare pentru linkurile din scenariul de deschidere din dreapta.
+
+- **Data_OpEndEventId** - eticheta care reprezintă locul în care operațiunea s-a încheiat.
+
+- **Data_RelatedPrevOpTelemetryReason** – este operațiunea corelată cu operațiunea anterioară.
+
+- **Data_StopwatchDuration** – timpul total pentru eveniment.
+
+- **Data_UnpackLinkHint** – enumerarea reprezentând acțiunea potențială a utilizatorului, pe baza unui link de dezarhivare.
+
+- **Data_UnpackLinkPromptResult** – enumerarea reprezentând răspunsul solicitării de dezarhivare a linkului.
+
+#### <a name="office_appdocs_appdocs_operationopenfromprotocolhandler"></a>Office_AppDocs_AppDocs_OperationOpenFromProtocolHandler
+
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Android, iOS, Universal și Windows. Evenimentul înregistrează atunci când are loc o operațiune de deschidere a fișierului dintr-o altă aplicație folosind interfața rutinei de tratare al protocolului și este folosit pentru a înțelege și pentru a acorda prioritare experiențelor utilizatorului, pe baza informațiilor despre operațiune de deschidere a fișierelor.
+
+Se colectează următoarele câmpuri:
+
+- **Data_AppIdForReportEndBeforeAppKnown** - ID-ul de aplicație, atunci când nu este cunoscut înainte de a fi solicitat sfârșitul raportului în operațiune.
+
+- **Data_CanContinueFromOnBeforeOperationBegins** - starea CanContinue, înainte de a invoca inițierea rutinei de tratare.
+
+- **Data_DetachedDuration** – durata procesului de detașare a unui eveniment. 
+
+- **Data_Doc_AccessMode** – o enumerare care indică modul de acces al fișierului, de exemplu, doar în citire, citire-scriere.
+
+- **Data_Doc_AsyncOpenKind** – o enumerare care indică tipul de flux asincron utilizat pentru deschiderea fișierului.
+
+- **Data_Doc_ChunkingType** – o enumerare care indică tipul de algoritm de segmentare al unui fișier.
+
+- **Data_Doc_EdpState** – o enumerare care indică starea de protecție datelor la nivel de întreprindere ale unui fișier.
+
+- **Data_Doc_Ext** – primele patru caractere din extensia fișierului.
+
+- **Data_Doc_Fqdn** – nume gazdă server al fișierului.
+
+- **Data_Doc_FqdnHash** – un GUID care identifică în mod unic numele de gazdă server.
+
+- **Data_Doc_IdentityTelemetryId** – codul hash unidirecțional al identității de utilizator folosit pentru a efectua deschiderea.
+
+- **Data_Doc_InitializationScenario** – o enumerare care indică tipul de scenariu detaliat al unei operațiuni de deschidere a fișierelor.
+
+- **Data_Doc_IOFlags** – o enumerare care indică semnalizările IO ale unei operațiuni de deschidere a fișierelor, de exemplu, dacă fișierul este în cache sau nu.
+
+- **Data_Doc_IsCloudCollabEnabled** – dacă colaborarea în cloud este activată sau nu pentru fișier.
+
+- **Data_Doc_IsIncrementalOpen** – dacă fișierul a fost sau nu deschis prin deschidere treptată.
+
+- **Data_Doc_IsOcsSupported** – dacă un fișier acceptă sau nu serviciul de colaborare Office.
+
+- **Data_Doc_IsOpeningOfflineCopy** – dacă un fișier dintr-o copie memorată în cache offline se deschide sau nu.
+
+- **Data_Doc_IsPrefetched** – dacă fișierul înainte de operațiunea de deschidere a fost sau nu preluat.
+
+- **Data_Doc_IsSyncBacked** – dacă un fișier în cloud există sau nu local și dacă este sincronizat cu serverul.
+
+- **Data_Doc_Location** – o enumerare care indică unde se află fișierul, de exemplu, local sau în cloud.
+
+- **Data_Doc_ReadOnlyReasons** – o enumerare care indică motivul doar în citire al unui fișier.
+
+- **Data_Doc_ResourceIdHash** – un GUID care identifică în mod unic ID-ul de resursă server al fișierului.
+
+- **Data_Doc_RtcType** – o enumerare care indică tipul de canal în timp real (RTC) utilizat de fișier.
+
+- **Data_Doc_ServerDocId** – un GUID care identifică în mod unic ID-ul de document server.
+
+- **Data_Doc_ServerProtocol** – o enumerare care indică protocolul de server al unui fișier în cloud.
+
+- **Data_Doc_ServerType** – o enumerare care indică tipul de server al unui fișier în cloud.
+
+- **Data_Doc_ServerVersion** – o enumerare care indică versiunea de server al unui fișier în cloud.
+
+- **Data_Doc_SessionId** – un număr întreg, crescut cu 1 pentru fiecare operațiune de deschidere a fișierului într-o sesiune.
+
+- **Data_Doc_SharePointServiceContext** – un șir utilizat pentru corelarea jurnalelor din partea client și de partea server, de obicei, este un fel de ID.
+
+- **Data_Doc_SizeInBytes** – dimensiunea documentului în octeți.
+
+- **Data_Doc_SpecialChars** – o enumerare indicând ce tip de caracter special are adresa URL a fișierului.
+
+- **Data_Doc_UrlHash** – un GUID care identifică în mod unic URL-ul fișierului.
+
+- **Data_Doc_UsedWrsDataOnOpen** – dacă fișierul a fost sau nu deschis incremental folosind datele WRS memorate pre-cache.
+
+- **Data_Doc_WopiServiceId**– un șir care indică de la ce serviciu provine un fișier WOPI (aplicație de interfață deschisă pentru aplicația web).
+
+- **Data_DocumentInputCurrency** – tipul de intrare a documentului utilizat de operațiune.
+
+- **Data_DocumentOperation_AppId** – valoarea de enumerare reprezentând ID-ul unei aplicații.
+
+- **Data_DocumentOperation_EndEventId** – eticheta care reprezintă locul în care operațiunea s-a încheiat.
+
+- **Data_DocumentOperation_EndReason** – valoarea de enumerare reprezentând motivul final.
+
+- **Data_DocumentOperation_IsReinitialized** – reinițializează un document deja deschis.
+
+- **Data_DocumentOperation_ParamsFlags** – semnalizările de enumerare utilizate pentru a porni operațiunea.
+
+- **Data_DocumentOperation_TelemetryReason** – reprezentarea de enumerare a punctului de intrare pentru evenimentul deschis. De exemplu, deschideți din MRU sau navigați, activare fișier etc.
+
+- **Data_DocumentOperation_isTargetECBeginEC** – dacă contextul de execuție a țintei este același ca și contextul din care a fost deschis.
+
+- **Data_FileOInclusiveMeasurements** – o valoare șir care înregistrează durata de timp petrecută în anumite apeluri de funcții, într-un format cu eticheta funcției și durata care include durata apelurilor de sub-funcții.
+
+- **Data_FileOMeasurements** – o valoare șir care înregistrează timpul petrecut în anumite apeluri de funcții, într-un format cu eticheta funcției și durata care exclude durata apelurilor de sub-funcții.
+
+- **Data_IsNameMissingInUrl** – indică dacă numele nu a fost analizat din URL.
+
+- **Data_IsPathMissingForLocalFile** – indică dacă acesta este un fișier local fără cale.
+
+- **Data_IsUnpackedLinkSupportedForOpen** – indică dacă linkurile neambalate sunt acceptate pentru deschidere.
+
+- **Data_LinksOpenRightScenario** – valoare de enumerare pentru linkurile din scenariul de deschidere din dreapta.
+
+- **Data_OpEndEventId** - eticheta care reprezintă locul în care operațiunea s-a încheiat.
+
+- **Data_RelatedPrevOpTelemetryReason** – este operațiunea corelată cu operațiunea anterioară.
+
+- **Data_StopwatchDuration** – timpul total pentru eveniment.
+
+- **Data_UnpackLinkHint** – enumerarea reprezentând acțiunea potențială a utilizatorului, pe baza unui link de dezarhivare.
+
+- **Data_UnpackLinkPromptResult** – enumerarea reprezentând răspunsul solicitării de dezarhivare a linkului.
+
+#### <a name="office_appdocs_appdocs_operationopenfromshell"></a>Office_AppDocs_AppDocs_OperationOpenFromShell
+
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Android, iOS, Universal și Windows. Evenimentul înregistrează atunci când are loc o operațiune de deschidere a fișierelor din adresa URL furnizat în lista utilizată cel mai recent și este folosit pentru a înțelege și pentru a acorda prioritare experiențelor de utilizator, pe baza informațiilor despre operațiune de deschidere a fișierelor.
+
+Se colectează următoarele câmpuri:
+
+- **Data_AppIdForReportEndBeforeAppKnown** - ID-ul de aplicație, atunci când nu este cunoscut înainte de a fi solicitat sfârșitul raportului în operațiune.
+
+- **Data_CanContinueFromOnBeforeOperationBegins** - starea CanContinue, înainte de a invoca inițierea rutinei de tratare.
+
+- **Data_DetachedDuration** – durata procesului de detașare a unui eveniment. 
+
+- **Data_Doc_AccessMode** – o enumerare care indică modul de acces al fișierului, de exemplu, doar în citire, citire-scriere.
+
+- **Data_Doc_AsyncOpenKind** – o enumerare care indică tipul de flux asincron utilizat pentru deschiderea fișierului.
+
+- **Data_Doc_ChunkingType** – o enumerare care indică tipul de algoritm de segmentare al unui fișier.
+
+- **Data_Doc_EdpState** – o enumerare care indică starea de protecție datelor la nivel de întreprindere ale unui fișier.
+
+- **Data_Doc_Ext** – primele patru caractere din extensia fișierului.
+
+- **Data_Doc_Fqdn** – nume gazdă server al fișierului.
+
+- **Data_Doc_FqdnHash** – un GUID care identifică în mod unic numele de gazdă server.
+
+- **Data_Doc_IdentityTelemetryId** – codul hash unidirecțional al identității de utilizator folosit pentru a efectua deschiderea.
+
+- **Data_Doc_InitializationScenario** – o enumerare care indică tipul de scenariu detaliat al unei operațiuni de deschidere a fișierelor.
+
+- **Data_Doc_IOFlags** – o enumerare care indică semnalizările IO ale unei operațiuni de deschidere a fișierelor, de exemplu, dacă fișierul este în cache sau nu.
+
+- **Data_Doc_IsCloudCollabEnabled** – dacă colaborarea în cloud este activată sau nu pentru fișier.
+
+- **Data_Doc_IsIncrementalOpen** – dacă fișierul a fost sau nu deschis prin deschidere treptată.
+
+- **Data_Doc_IsOcsSupported** – dacă un fișier acceptă sau nu serviciul de colaborare Office.
+
+- **Data_Doc_IsOpeningOfflineCopy** – dacă un fișier dintr-o copie memorată în cache offline se deschide sau nu.
+
+- **Data_Doc_IsPrefetched** – dacă fișierul înainte de operațiunea de deschidere a fost sau nu preluat.
+
+- **Data_Doc_IsSyncBacked** – dacă un fișier în cloud există sau nu local și dacă este sincronizat cu serverul.
+
+- **Data_Doc_Location** – o enumerare care indică unde se află fișierul, de exemplu, local sau în cloud.
+
+- **Data_Doc_ReadOnlyReasons** – o enumerare care indică motivul doar în citire al unui fișier.
+
+- **Data_Doc_ResourceIdHash** – un GUID care identifică în mod unic ID-ul de resursă server al fișierului.
+
+- **Data_Doc_RtcType** – o enumerare care indică tipul de canal în timp real (RTC) utilizat de fișier.
+
+- **Data_Doc_ServerDocId** – un GUID care identifică în mod unic ID-ul de document server.
+
+- **Data_Doc_ServerProtocol** – o enumerare care indică protocolul de server al unui fișier în cloud.
+
+- **Data_Doc_ServerType** – o enumerare care indică tipul de server al unui fișier în cloud.
+
+- **Data_Doc_ServerVersion** – o enumerare care indică versiunea de server al unui fișier în cloud.
+
+- **Data_Doc_SessionId** – un număr întreg, crescut cu 1 pentru fiecare operațiune de deschidere a fișierului într-o sesiune.
+
+- **Data_Doc_SharePointServiceContext** – un șir utilizat pentru corelarea jurnalelor din partea client și de partea server, de obicei, este un fel de ID.
+
+- **Data_Doc_SizeInBytes** – dimensiunea documentului în octeți.
+
+- **Data_Doc_SpecialChars** – o enumerare indicând ce tip de caracter special are adresa URL a fișierului.
+
+- **Data_Doc_UrlHash** – un GUID care identifică în mod unic URL-ul fișierului.
+
+- **Data_Doc_UsedWrsDataOnOpen** – dacă fișierul a fost sau nu deschis incremental folosind datele WRS memorate pre-cache.
+
+- **Data_Doc_WopiServiceId**– un șir care indică de la ce serviciu provine un fișier WOPI (aplicație de interfață deschisă pentru aplicația web).
+
+- **Data_DocumentInputCurrency** – tipul de intrare a documentului utilizat de operațiune.
+
+- **Data_DocumentOperation_AppId** – valoarea de enumerare reprezentând ID-ul unei aplicații.
+
+- **Data_DocumentOperation_EndEventId** – eticheta care reprezintă locul în care operațiunea s-a încheiat.
+
+- **Data_DocumentOperation_EndReason** – valoarea de enumerare reprezentând motivul final.
+
+- **Data_DocumentOperation_IsReinitialized** – reinițializează un document deja deschis.
+
+- **Data_DocumentOperation_ParamsFlags** – semnalizările de enumerare utilizate pentru a porni operațiunea.
+
+- **Data_DocumentOperation_TelemetryReason** – reprezentarea de enumerare a punctului de intrare pentru evenimentul deschis. De exemplu, deschideți din MRU sau navigați, activare fișier etc.
+
+- **Data_DocumentOperation_isTargetECBeginEC** – dacă contextul de execuție a țintei este același ca și contextul din care a fost deschis.
+
+- **Data_FileOInclusiveMeasurements** – o valoare șir care înregistrează durata de timp petrecută în anumite apeluri de funcții, într-un format cu eticheta funcției și durata care include durata apelurilor de sub-funcții.
+
+- **Data_FileOMeasurements** – o valoare șir care înregistrează timpul petrecut în anumite apeluri de funcții, într-un format cu eticheta funcției și durata care exclude durata apelurilor de sub-funcții.
+
+- **Data_IsNameMissingInUrl** – indică dacă numele nu a fost analizat din URL.
+
+- **Data_IsPathMissingForLocalFile** – indică dacă acesta este un fișier local fără cale.
+
+- **Data_IsUnpackedLinkSupportedForOpen** – indică dacă linkurile neambalate sunt acceptate pentru deschidere.
+
+- **Data_LinksOpenRightScenario** – valoare de enumerare pentru linkurile din scenariul de deschidere din dreapta.
+
+- **Data_OpEndEventId** - eticheta care reprezintă locul în care operațiunea s-a încheiat.
+
+- **Data_RelatedPrevOpTelemetryReason**  – este operațiunea corelată cu operațiunea anterioară.
+
+- **Data_StopwatchDuration** – timpul total pentru eveniment.
+
+- **Data_UnpackLinkHint** – enumerarea reprezentând acțiunea potențială a utilizatorului, pe baza unui link de dezarhivare.
+
+- **Data_UnpackLinkPromptResult** – enumerarea reprezentând răspunsul solicitării de dezarhivare a linkului.
+
+
+#### <a name="office_appdocs_appdocs_operationopenfromurl"></a>Office_AppDocs_AppDocs_OperationOpenFromUrl
+
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Android, iOS, Universal și Windows. Evenimentul înregistrează atunci când are loc o operațiune de deschidere a fișierelor din URL-ul și pentru a acorda prioritare experiențelor de utilizator, pe baza informațiilor despre operațiune de deschidere a fișierelor.
+
+Se colectează următoarele câmpuri:
+
+- **Data_AppIdForReportEndBeforeAppKnown** - ID-ul de aplicație, atunci când nu este cunoscut înainte de a fi solicitat sfârșitul raportului în operațiune.
+
+- **Data_CanContinueFromOnBeforeOperationBegins** - starea CanContinue, înainte de a invoca inițierea rutinei de tratare.
+
+- **Data_DetachedDuration** – durata procesului de detașare a unui eveniment. 
+
+- **Data_Doc_AccessMode** – o enumerare care indică modul de acces al fișierului, de exemplu, doar în citire, citire-scriere.
+
+- **Data_Doc_AsyncOpenKind** – o enumerare care indică tipul de flux asincron utilizat pentru deschiderea fișierului.
+
+- **Data_Doc_ChunkingType** – o enumerare care indică tipul de algoritm de segmentare al unui fișier.
+
+- **Data_Doc_EdpState** – o enumerare care indică starea de protecție datelor la nivel de întreprindere ale unui fișier.
+
+- **Data_Doc_Ext** – primele patru caractere din extensia fișierului.
+
+- **Data_Doc_Fqdn** – nume gazdă server al fișierului.
+
+- **Data_Doc_FqdnHash** – un GUID care identifică în mod unic numele de gazdă server.
+
+- **Data_Doc_IdentityTelemetryId** – codul hash unidirecțional al identității de utilizator folosit pentru a efectua deschiderea.
+
+- **Data_Doc_InitializationScenario** – o enumerare care indică tipul de scenariu detaliat al unei operațiuni de deschidere a fișierelor.
+
+- **Data_Doc_IOFlags** – o enumerare care indică semnalizările IO ale unei operațiuni de deschidere a fișierelor, de exemplu, dacă fișierul este în cache sau nu.
+
+- **Data_Doc_IsCloudCollabEnabled** – dacă colaborarea în cloud este activată sau nu pentru fișier.
+
+- **Data_Doc_IsIncrementalOpen** – dacă fișierul a fost sau nu deschis prin deschidere treptată.
+
+- **Data_Doc_IsOcsSupported** – dacă un fișier acceptă sau nu serviciul de colaborare Office.
+
+- **Data_Doc_IsOpeningOfflineCopy** – dacă un fișier dintr-o copie memorată în cache offline se deschide sau nu.
+
+- **Data_Doc_IsPrefetched** – dacă fișierul înainte de operațiunea de deschidere a fost sau nu preluat.
+
+- **Data_Doc_IsSyncBacked** – dacă un fișier în cloud există sau nu local și dacă este sincronizat cu serverul.
+
+- **Data_Doc_Location** – o enumerare care indică unde se află fișierul, de exemplu, local sau în cloud.
+
+- **Data_Doc_ReadOnlyReasons** – o enumerare care indică motivul doar în citire al unui fișier.
+
+- **Data_Doc_ResourceIdHash** – un GUID care identifică în mod unic ID-ul de resursă server al fișierului.
+
+- **Data_Doc_RtcType** – o enumerare care indică tipul de canal în timp real (RTC) utilizat de fișier.
+
+- **Data_Doc_ServerDocId** – un GUID care identifică în mod unic ID-ul de document server.
+
+- **Data_Doc_ServerProtocol** – o enumerare care indică protocolul de server al unui fișier în cloud.
+
+- **Data_Doc_ServerType** – o enumerare care indică tipul de server al unui fișier în cloud.
+
+- **Data_Doc_ServerVersion** – o enumerare care indică versiunea de server al unui fișier în cloud.
+
+- **Data_Doc_SessionId** – un număr întreg, crescut cu 1 pentru fiecare operațiune de deschidere a fișierului într-o sesiune.
+
+- **Data_Doc_SharePointServiceContext** – un șir utilizat pentru corelarea jurnalelor din partea client și de partea server, de obicei, este un fel de ID.
+
+- **Data_Doc_SizeInBytes** – dimensiunea documentului în octeți.
+
+- **Data_Doc_SpecialChars** – o enumerare indicând ce tip de caracter special are adresa URL a fișierului.
+
+- **Data_Doc_UrlHash** – un GUID care identifică în mod unic URL-ul fișierului.
+
+- **Data_Doc_UsedWrsDataOnOpen** – dacă fișierul a fost sau nu deschis incremental folosind datele WRS memorate pre-cache.
+
+- **Data_Doc_WopiServiceId**– un șir care indică de la ce serviciu provine un fișier WOPI (aplicație de interfață deschisă pentru aplicația web).
+
+- **Data_DocumentInputCurrency** – tipul de intrare a documentului utilizat de operațiune.
+
+- **Data_DocumentOperation_AppId** – valoarea de enumerare reprezentând ID-ul unei aplicații.
+
+- **Data_DocumentOperation_EndEventId** – eticheta care reprezintă locul în care operațiunea s-a încheiat.
+
+- **Data_DocumentOperation_EndReason** – valoarea de enumerare reprezentând motivul final.
+
+- **Data_DocumentOperation_IsReinitialized** – reinițializează un document deja deschis.
+
+- **Data_DocumentOperation_ParamsFlags** – semnalizările de enumerare utilizate pentru a porni operațiunea.
+
+- **Data_DocumentOperation_TelemetryReason** – reprezentarea de enumerare a punctului de intrare pentru evenimentul deschis. De exemplu, deschideți din MRU sau navigați, activare fișier etc.
+
+- **Data_DocumentOperation_isTargetECBeginEC** – dacă contextul de execuție a țintei este același ca și contextul din care a fost deschis.
+
+- **Data_FileOInclusiveMeasurements** – o valoare șir care înregistrează durata de timp petrecută în anumite apeluri de funcții, într-un format cu eticheta funcției și durata care include durata apelurilor de sub-funcții.
+
+- **Data_FileOMeasurements** – o valoare șir care înregistrează timpul petrecut în anumite apeluri de funcții, într-un format cu eticheta funcției și durata care exclude durata apelurilor de sub-funcții.
+
+- **Data_IsNameMissingInUrl** – indică dacă numele nu a fost analizat din URL.
+
+- **Data_IsPathMissingForLocalFile** – indică dacă acesta este un fișier local fără cale.
+
+- **Data_IsUnpackedLinkSupportedForOpen** – indică dacă linkurile neambalate sunt acceptate pentru deschidere.
+
+- **Data_LinksOpenRightScenario** – valoare de enumerare pentru linkurile din scenariul de deschidere din dreapta.
+
+- **Data_OpEndEventId** - eticheta care reprezintă locul în care operațiunea s-a încheiat.
+
+- **Data_RelatedPrevOpTelemetryReason**  – este operațiunea corelată cu operațiunea anterioară.
+
+- **Data_StopwatchDuration** – timpul total pentru eveniment.
+
+- **Data_UnpackLinkHint** – enumerarea reprezentând acțiunea potențială a utilizatorului, pe baza unui link de dezarhivare.
+
+- **Data_UnpackLinkPromptResult** – enumerarea reprezentând răspunsul solicitării de dezarhivare a linkului.
+
 
 #### <a name="office_apple_activateperpetual"></a>Office_Apple_ActivatePerpetual
 
@@ -4225,6 +4943,99 @@ Se colectează următoarele câmpuri:
 
 - **Data_FirstRunPanelName** - numele panoului din care a început experiența
 
+#### <a name="officelivepersonacardconfigurationsetaction"></a>Office.LivePersonaCard.ConfigurationSetAction
+
+Ne conectăm când utilizatorul se află într-o aplicație care încarcă un card de persoană în anticiparea utilizatorului care deschide Cardul de persoană live.  Datele sunt utilizate pentru a determina dacă respectivul card este încărcat corect. 
+
+Se colectează următoarele câmpuri: 
+
+- **Data.accountType** - dacă utilizatorul aparține unei organizații sau unui consumator
+
+- **Data.appContextId** - ID generat aleatoriu utilizat pentru a identifica conturi diferite în aceeași aplicație
+
+- **Data.AppInfo.Name** - numele serviciului utilizat (fișă de profil)
+
+- **Data. AppInfo_Id** - numele aplicației gazdă
+
+- **Data.AppInfo_Version** - versiunea aplicației gazdă
+
+- **Data.cardCorrelationId** - identificatorul unic global pentru un card de persoană
+
+- **Data.cardPersonaCorrelationId** - identificatorul unic global pentru o anumită persoană afișată într-un card
+
+- **Data.clientCorrelationId** - identificatorul unic global pentru sesiunea aplicației
+
+- **Data.clientType** - tipul de dispozitiv pe care rulează aplicația
+
+- **Data.contextType** - din ce context (aplicație) a fost lansată fișa
+
+- **Data.ecsConfigIds** - identificatori de versiune pentru caracteristicile activate în fișă
+
+- **Data.ecsTagId** - ID etichetă pentru caracteristici
+
+- **Data.eventId** - identificator de nume al evenimentului, de exemplu, „LivePersonaCardRenderedAction”
+
+- **Data. eventpriority** - valoare de enumerare pentru prioritatea de trimitere a evenimentului.
+
+- **Data.feature** - utilizat pentru a grupa diverse evenimente cu aceeași caracteristică (fișă de profil)
+
+- **Data.flights** - caracteristici activate în fișă
+
+- **Data.fromCache** - dacă datele au fost preluate din memorie
+
+- **Data.hasFinePointer** - dacă dispozitivul are capacitatea indicatorului mouse-ului
+
+- **hasHoverEvents** - dacă dispozitivul are capacitate de trecere cu mouse-ul
+
+- **Data.immersiveProfileCorrelationId** - un identificator unic global pentru sesiunea de vizualizare profil extinsă
+
+- **Data.offlineResolved** - dacă s-au preluat date în timp ce erați offline
+
+- **Data.OTelJS.Version** - versiune de OTel logger
+
+- **Data.personaCorrelationId** - un Identificator unic global pentru personaje unice într-o sesiune
+
+- **Date.propreties** - metadate suplimentare colectate pentru fiecare eveniment, după cum urmează: *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+
+  - **cardCorrelationId** - dublură a Data.appContextId de mai sus
+  - **cardPersonaCorrelationId** - dublură a Data.cardCorrelationId de mai sus
+  - **ClientTimeStamp** - ora în aplicație la care s-a înregistrat evenimentul
+  - **consumerCorrelationId** - dublură a Data.clientCorrelationId de mai sus
+
+  - **externalAppSessionCorrelationId** - un identificator unic global pentru aplicație, pentru a identifica toate cardurile de persoane deschise în aceeași sub-sesiune
+
+- **Data.region** - regiunea geografică a serviciului de back-end a fișei de profil la care este conectat utilizatorul
+
+- **Data.tenantAadObjectId** - entitatea găzduită la care este legat abonamentul unui utilizator. Ne permite să clasificăm problemele și să identificăm dacă este o problemă pe scară largă sau una izolată la un set de utilizatori sau la o anumită entitate găzduită
+
+- **Data.type** - tipul evenimentului înregistrat, de exemplu, urmărire, eroare, eveniment
+
+- **Data.userAadObjectId** - identificatorul de utilizator unic global pentru un cont Microsoft Enterprise (dublură a Data.UserInfo.Id)
+
+- **Data.UserInfo.Id** - identificatorul de utilizator unic global pentru un cont Microsoft Enterprise
+
+- **Data.UserInfo.MsaId** - identificatorul de utilizator unic global pentru un cont Microsoft consumator
+
+- **Data.UserInfo.OMSTenantId** - entitatea găzduită la care este asociat abonamentul unui utilizator. Ne permite să clasificăm problemele și să identificăm dacă este o problemă pe scară largă sau una izolată la un set de utilizatori sau la o anumită entitate găzduită
+
+- **Data.userPuid** - identificatorul de utilizator unic global pentru un cont Microsoft consumator (duplicat pentru Data.UserInfo.MsaId) 
+
+- **Data.version** - versiunea serviciului (fișă de profil)
+
+- **Data. workloadCulture** - set de culturi din aplicația gazdă
+
+- **DeviceInfo_Id** - identificatorul de dispozitiv unic global pentru un dispozitiv
+
+- **DeviceInfo_Make** - marca sistemului de operare
+
+- **DeviceInfo_Model** - modelul dispozitivului
+
+- **DeviceInfo_OsName** - numele dispozitivului OS
+
+- **DeviceInfo_OsVersion** - versiunea sistemului de operare
+
+- **DeviceInfo_SDKUid** - identifică în mod unic dispozitivul din perspectiva SDK-ului de telemetrie
+
 #### <a name="officelivepersonacarduseractionsclosedexpandedpersonacard"></a>Office.LivePersonaCard.UserActions.ClosedExpandedPersonaCard
 
 Conectat atunci când utilizatorul închide un Card de persoană extins. Se utilizează pentru a observa anomalii critice în ratele de eroare la închiderea Cardului de persoană live.
@@ -4253,19 +5064,22 @@ Se colectează următoarele câmpuri:
 
 - **Data.exportType** - categoria evenimentului pentru solicitarea de export GDPR
 
+- **Data.externalAppSessionCorrelationId** - un Identificator unic global pentru ca aplicația să identifice toate fișele personale deschise în aceeași sub-sesiune
+
 - **Data.feature** - utilizat pentru a grupa diverse evenimente cu aceeași caracteristică (fișă de profil)
+
+- **Data.immersiveProfileCorrelationId** - un identificator unic global pentru sesiunea de vizualizare profil extinsă
 
 - **Data.OTelJS.Version** - versiune de OTel logger
 
-- **Data.properties** - metadate suplimentare colectate pentru fiecare eveniment, după cum urmează:
+- **Data.personaCorrelationId** - un Identificator unic global pentru personaje unice într-o sesiune
+
+- **Date.propreties** - metadate suplimentare colectate pentru fiecare eveniment, după cum urmează: *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
    - **cardCorrelationId** - dublură a Data.appContextId de mai sus 
    - **cardPersonaCorrelationId** - dublură a Data.cardCorrelationId de mai sus
    - **ClientTimeStamp** - ora la care a avut loc evenimentul în timpul epocii Unix
    - **consumerCorrelationId** - dublură a Data.clientCorrelationId de mai sus 
-   - **externalAppSessionCorrelationId** - un identificator unic global pentru aplicație, pentru a identifica toate cardurile de persoane deschise în aceeași sub-sesiune
-   - **immersiveProfileCorrelationId** - identificator unic global pentru sesiunea vizualizare profil extins
-   - **personaCorrelationId** - identificator unic global pentru persoane unice într-o sesiune
 
 - **Data.region** - regiunea geografică a serviciului de back-end a fișei de profil la care este conectat utilizatorul
 
@@ -4326,18 +5140,22 @@ Se colectează următoarele câmpuri:
 
 - **Data.eventId** - identificator de nume al evenimentului, de exemplu, „LivePersonaCardRenderedAction”
 
+- **Data.externalAppSessionCorrelationId** - un identificator unic global pentru ca aplicația să identifice toate fișele personale deschise în aceeași sub-sesiune.
+
 - **Data.feature** - utilizat pentru a grupa diverse evenimente cu aceeași caracteristică (fișă de profil)
+
+- **Data.immersiveProfileCorrelationId** - un identificator unic global pentru sesiunea de vizualizare profil extinsă
 
 - **Data.OTelJS.Version** - versiune de OTel logger
 
-- **Data.properties** - metadate suplimentare colectate pentru fiecare eveniment, după cum urmează:
+- **Data.personaCorrelationId** - un Identificator unic global pentru personaje unice într-o sesiune
+
+- **Date.propreties** - metadate suplimentare colectate pentru fiecare eveniment, după cum urmează: *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+
   - **ClientTimeStamp** - ora în aplicație la care s-a înregistrat evenimentul
   - **cardCorrelationId** - dublură a Data.appContextId de mai sus
   - **cardPersonaCorrelationId** - dublură a Data.cardCorrelationId de mai sus
   - **consumerCorrelationId** - dublură a Data.clientCorrelationId de mai sus
-  - **externalAppSessionCorrelationId** - un identificator unic global pentru aplicație, pentru a identifica toate cardurile de persoane deschise în aceeași sub-sesiune
-  - **immersiveProfileCorrelationId** - identificator unic global pentru sesiunea vizualizare profil extins
-  - **personaCorrelationId** - identificator unic global pentru persoane unice într-o sesiune
 
 - **Data.region** - regiunea geografică a serviciului de back-end a fișei de profil la care este conectat utilizatorul
 
@@ -4361,102 +5179,6 @@ Se colectează următoarele câmpuri:
 
 - **Event_ReceivedTime** - ora la care s-a înregistrat evenimentul în serviciu
 
-#### <a name="officelivepersonacarduseractionsconfigurationsetaction"></a>Office.LivePersonaCard.UserActions.ConfigurationSetAction
-
-Ne conectăm când utilizatorul se află într-o aplicație care încarcă un card de persoană în anticiparea utilizatorului care deschide Cardul de persoană live.  Datele sunt utilizate pentru a determina dacă respectivul card este încărcat corect. 
-
-Se colectează următoarele câmpuri: 
-
-- **Data.appContextId** - ID generat aleatoriu utilizat pentru a identifica conturi diferite în aceeași aplicație
-
-- **Data.AppInfo.Name** - numele serviciului utilizat (fișă de profil)
-
-- **Data. AppInfo_Id** - numele aplicației gazdă
-
-- **Data.AppInfo_Version** - versiunea aplicației gazdă
-
-- **Data.cardCorrelationId** - identificatorul unic global pentru un card de persoană
-
-- **Data.cardPersonaCorrelationId** - identificatorul unic global pentru o anumită persoană afișată într-un card
-
-- **Data.clientCorrelationId** - identificatorul unic global pentru sesiunea aplicației
-
-- **Data.clientType** - tipul de dispozitiv pe care rulează aplicația
-
-- **Data.eventId** - identificator de nume al evenimentului, de exemplu, „LivePersonaCardRenderedAction”
-
-- **Data. eventpriority** - valoare de enumerare pentru prioritatea de trimitere a evenimentului.
-
-- **Data.feature** - utilizat pentru a grupa diverse evenimente cu aceeași caracteristică (fișă de profil)
-
-- **Data.OTelJS.Version** - versiune de OTel logger
-
-- **Data.properties** - metadate suplimentare colectate pentru fiecare eveniment, după cum urmează:
-
-  - **accountType** - dacă utilizatorul aparține unei organizații sau unui consumator
-
-  - **cardCorrelationId** - dublură a Data.appContextId de mai sus
-
-  - **cardPersonaCorrelationId** - dublură a Data.cardCorrelationId de mai sus
-
-  - **ClientTimeStamp** - ora în aplicație la care s-a înregistrat evenimentul
-
-  - **consumerCorrelationId** - dublură a Data.clientCorrelationId de mai sus
-
-  - **contextType** - din ce context (aplicație) a fost lansat cardul
-
-  - **ecsConfigIds** - identificatori de versiune pentru caracteristicile activate în card
-
-  - **ecsTagId** - ID etichetă pentru caracteristici
-
-  - **externalAppSessionCorrelationId** - un identificator unic global pentru aplicație, pentru a identifica toate cardurile de persoane deschise în aceeași sub-sesiune
-
-  - **flights** - caracteristicile activate în card
-
-  - **fromCache** - dacă datele au fost preluate din memorie
-
-  - **hasFinePointer** - dacă dispozitivul are indicator cu mouse
-
-  - **hasHoverEvents** - dacă dispozitivul are capacitate de trecere cu mouse-ul
-
-  - **immersiveProfileCorrelationId** - identificator unic global pentru sesiunea vizualizare profil extins
-
-  - **offlineResolved** - dacă s-au preluat date în timp ce erați offline
-
-  - **personaCorrelationId** - identificator unic global pentru persoane unice într-o sesiune
-
-- **Data.region** - regiunea geografică a serviciului de back-end a fișei de profil la care este conectat utilizatorul
-
-- **Data.tenantAadObjectId** - entitatea găzduită la care este legat abonamentul unui utilizator. Ne permite să clasificăm problemele și să identificăm dacă este o problemă pe scară largă sau una izolată la un set de utilizatori sau la o anumită entitate găzduită
-
-- **Data.type** - tipul evenimentului înregistrat, de exemplu, urmărire, eroare, eveniment
-
-- **Data.userAadObjectId** - identificatorul de utilizator unic global pentru un cont Microsoft Enterprise (dublură a Data.UserInfo.Id)
-
-- **Data.UserInfo.Id** - identificatorul de utilizator unic global pentru un cont Microsoft Enterprise
-
-- **Data.UserInfo.MsaId** - identificatorul de utilizator unic global pentru un cont Microsoft consumator
-
-- **Data.UserInfo.OMSTenantId** - entitatea găzduită la care este asociat abonamentul unui utilizator. Ne permite să clasificăm problemele și să identificăm dacă este o problemă pe scară largă sau una izolată la un set de utilizatori sau la o anumită entitate găzduită
-
-- **Data.userPuid** - identificatorul de utilizator unic global pentru un cont Microsoft consumator (duplicat pentru Data.UserInfo.MsaId) 
-
-- **Data.version** - versiunea serviciului (fișă de profil)
-
-- **Data. workloadCulture** - set de culturi din aplicația gazdă
-
-- **DeviceInfo_Id** - identificatorul de dispozitiv unic global pentru un dispozitiv
-
-- **DeviceInfo_Make** - marca sistemului de operare
-
-- **DeviceInfo_Model** - modelul dispozitivului
-
-- **DeviceInfo_OsName** - numele dispozitivului OS
-
-- **DeviceInfo_OsVersion** - versiunea sistemului de operare
-
-- **DeviceInfo_SDKUid** - identifică în mod unic dispozitivul din perspectiva SDK-ului de telemetrie
-
 #### <a name="officelivepersonacarduseractionsopenedexpandedpersonacard"></a>Office.LivePersonaCard.UserActions.OpenedExpandedPersonaCard
 
 Înregistrat atunci când utilizatorul deschide un Card de persoană extins. Se utilizează pentru a observa anomalii critice în ratele de eroare la lansarea Cardului de persoană live.
@@ -4477,9 +5199,13 @@ Se colectează următoarele câmpuri:
 
 - **Data.clientCorrelationId** - identificatorul unic global pentru sesiunea aplicației
 
+- **Data.clientScenario** - pentru a identifica caracteristica din aplicație de unde a fost deschisă fișa de personaj
+
 - **Data.clientType** - tipul de dispozitiv pe care rulează aplicația
 
 - **Data.eventId** - identificator de nume al evenimentului, de exemplu, „LivePersonaCardRenderedAction”
+
+- **Data.externalAppSessionCorrelationId** - un identificator unic global pentru ca aplicația să identifice toate fișele personale deschise în aceeași sub-sesiune.
 
 - **Data.exportName** - nume ușor de citit pentru oameni al evenimentului acțiune a utilizatorului, de exemplu,„OpenedPersonaCard”
 
@@ -4487,31 +5213,25 @@ Se colectează următoarele câmpuri:
 
 - **Data.feature** - utilizat pentru a grupa diverse evenimente cu aceeași caracteristică (fișă de profil)
 
+- **Data.hasPersonalInsightRing** - detalii de la Office sau LinkedIn pot fi disponibile pentru utilizator
+
 - **Data.hostAppRing** - inelul prin care a fost distribuită aplicația
+
+- **Data.immersiveProfileCorrelationId** - un identificator unic global pentru sesiunea de vizualizare profil extinsă
 
 - **Data.OTelJS.Version** - versiune de OTel logger
 
-- **Data.properties** - metadate suplimentare colectate pentru fiecare eveniment, după cum urmează:
+- **Data.personaCorrelationId** - un Identificator unic global pentru personaje unice într-o sesiune
+
+- **Date.propreties** - metadate suplimentare colectate pentru fiecare eveniment, după cum urmează: *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
   - **cardCorrelationId** - dublură a Data.appContextId de mai sus 
-
   - **cardPersonaCorrelationId** - dublură a Data.cardCorrelationId de mai sus
-
-  - **clientScenario** - pentru a observa caracteristica din aplicație de unde a fost deschis cardul de persoană
-
   - **consumerCorrelationId** - dublură a Data.clientCorrelationId de mai sus 
 
-  - **externalAppSessionCorrelationId** - un identificator unic global pentru aplicație, pentru a identifica toate cardurile de persoane deschise în aceeași sub-sesiune
-
-  - **hasPersonalInsightRing** - detaliile de la Office sau LinkedIn ar putea fi disponibile pentru utiliyator
-
-  - **immersiveProfileCorrelationId** - identificator unic global pentru sesiunea vizualizare profil extins
-
-  - **personaCorrelationId** - identificator unic global pentru persoane unice într-o sesiune
-
-  - **section** - secțiunea activă a cardului extins
-
 - **Data.region** - regiunea geografică a serviciului de back-end a fișei de profil la care este conectat utilizatorul
+
+- **Data.section** – secțiunea activă din fișa extinsă
 
 - **Data.tenantAadObjectId** - entitatea găzduită la care este legat abonamentul unui utilizator. Ne permite să clasificăm problemele și să identificăm dacă este o problemă pe scară largă sau una izolată la un set de utilizatori sau la o anumită entitate găzduită
 
@@ -4556,6 +5276,8 @@ Se colectează următoarele câmpuri:
 
 - **Data.AppInfo.Name** - numele serviciului utilizat (fișă de profil)
 
+- **Data.bandwidthEstimateMbps** - estimarea efectivă a lățimii de bandă în Mbps
+
 - **Data.cardCorrelationId** - identificatorul unic global pentru un card de persoană
 
 - **Data.cardPersonaCorrelationId** - identificatorul unic global pentru o anumită persoană afișată într-un card
@@ -4570,11 +5292,26 @@ Se colectează următoarele câmpuri:
 
 - **Data.exportType** - categoria evenimentului pentru solicitarea de export GDPR
 
+- **Data.externalAppSessionCorrelationId** - un Identificator unic global pentru ca aplicația să identifice toate fișele personale deschise în aceeași sub-sesiune
+
 - **Data.feature** - utilizat pentru a grupa diverse evenimente cu aceeași caracteristică (fișă de profil)
 
 - **Data.hostAppRing** - inelul prin care a fost distribuită aplicația
 
+- **Data.immersiveProfileCorrelationId** - un identificator unic global pentru sesiunea de vizualizare profil extinsă
+
 - **Data.OTelJS.Version** - versiune de OTel logger
+
+- **Data.personaCorrelationId** - un Identificator unic global pentru personaje unice într-o sesiune
+
+- **Data.properties** - metadate suplimentare colectate pentru fiecare eveniment, după cum urmează. *[Acest eveniment a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+
+    - **cardCorrelationId** - dublură a Data.appContextId de mai sus 
+    - **cardPersonaCorrelationId** - dublură a Data.cardCorrelationId de mai sus
+    - **consumerCorrelationId** - dublură a Data.clientCorrelationId de mai sus 
+    - **networkEffectiveType** - tipul efectiv de conexiune de rețea, de exemplu, „slow-2g Online” pentru a identifica dacă utilizatorul este conectat la internet în timpul afișării cardului de persoană
+    - **networkType** - tipul de conectivitate de rețea a dispozitivului utilizat
+    - **roundTripEstimateMs** - timp de revenire efectiv estimat al conexiunii curente în milisecunde
 
 - **Data.region** - regiunea geografică a serviciului de back-end a fișei de profil la care este conectat utilizatorul
 
@@ -4596,34 +5333,11 @@ Se colectează următoarele câmpuri:
 
 - **Data.viewType** - definește tipul de fișă de profil afișată
 
+- **Data.wasOpenedAsCompactCard** - utilizat pentru a identifica dacă fișa a fost deschisă ca vizualizare compactă inițial
+
 - **NetworkCost** - indică costul/tipul rețelei (contorizată, contorizată peste limită etc.)
 
 - **NetworkCountry** - codul de țară al expeditorului, pe baza adresei IP necurățată a clientului.
-
-- **Data.properties** - metadate suplimentare colectate pentru fiecare eveniment, după cum urmează.
-
-    - **bandwidthEstimateMbps** - estimare a lățimii de bandă efective în Mbps
-
-    - **cardCorrelationId** - dublură a Data.appContextId de mai sus 
-
-    - **cardPersonaCorrelationId** - dublură a Data.cardCorrelationId de mai sus
-
-    - **consumerCorrelationId** - dublură a Data.clientCorrelationId de mai sus 
-
-    - **externalAppSessionCorrelationId** - un identificator unic global pentru aplicație, pentru a identifica toate cardurile de persoane deschise în aceeași sub-sesiune
-
-    - **immersiveProfileCorrelationId** - un identificator unic global pentru sesiunea vizualizare profil extins
-
-    - **networkEffectiveType** - tipul efectiv de conexiune de rețea, de exemplu, „slow-2g Online” pentru a identifica dacă utilizatorul este conectat la internet în timpul afișării cardului de persoană
-
-    - **networkType** - tipul de conectivitate de rețea a dispozitivului utilizat
-
-    - **personaCorrelationId** - un identificator unic global pentru persoane unice într-o sesiune
-
-    - **roundTripEstimateMs** - timp de revenire efectiv estimat al conexiunii curente în milisecunde
-
-    - **wasOpenedAsCompactCard** - utilizat pentru a identifica dacă cardul a fost deschis inițial ca vizualizare compactă
-
 
 #### <a name="officemanageabilityclient-fetchpolicyprechecks"></a>Office.Manageability.Client Fetch.PolicyPreChecks
 
@@ -5699,6 +6413,10 @@ Se colectează următoarele câmpuri:
 - **Data_StopwatchDuration:long** - timpul total al activității
 
 - **Data_TypeOfSaveDialog:long** - set predefinit de valori de dialog (RUN_SAVEAS_DLG,RUN_SAVEMEDIA_DLG, RUN_SAVEAS_VIDEO_DLG etc.)
+
+- **Data_WaitForSaveOrMergeSuccess:bool** - SaveAs a reușit să aștepte salvarea sau îmbinarea fundalului.
+ 
+- **Data_WaitForSaveOrMergeTimeout:long** - SaveAs a expirat la așteptarea salvării sau a îmbinării fundalului.
 
 - **DstDoc** - noua locație a documentului 
 
@@ -7057,7 +7775,9 @@ Se colectează următoarele câmpuri:
 
 Acest semnal este utilizat pentru a garanta că, după ce un utilizator se conectează la o aplicație OneNote Android, se acordă în mod corespunzător acces la blocnotesuri, iar utilizatorul creează cu succes o notă nouă.  Aceasta se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor.
 
-Nu se colectează câmpuri suplimentare.
+Se colectează următoarele câmpuri:
+
+- Fără
 
 #### <a name="onenotemessagebarmessagebarclicked-previous-name-officeonenoteandroidmessagebarmessagebarclicked"></a>OneNote.MessageBar.MessageBarClicked *(nume anterior)*, Office.OneNote.Android.MessageBar.MessageBarClicked
 
@@ -7134,6 +7854,8 @@ Se colectează următoarele câmpuri:
 - **recent_message_id** - ID-ul celui mai recent mesaj din conversație
 
 - **suggested_reply_state** - starea răspunsurilor sugerate pentru această conversație (indisponibil, disponibil, afișat, utilizat sau eliminat)
+
+- **suggested_reply_types** - indică tipul și numărul de răspunsuri sugerate afișate/utilizate pentru această conversație. Este un dicționar. De exemplu, {text: 2, send_avail: 1}.
   
 - **total_count** - numărul total de cadre total afișat de componentă
  
@@ -7198,6 +7920,8 @@ Se colectează următoarele câmpuri:
 - **source_inbox** - indică tipul de inbox sursă pentru mesajul de referință, 
 
 - **suggested_reply_state** - capturarea stării răspunsurilor sugerate, de ex. indisponibil, disponibil, afișat, utilizat sau eliminat, pentru acest e-mail trimis
+
+- **suggested_reply_types** - indică tipul și numărul de răspunsuri sugerate afișate/utilizate pentru acest mesaj de e-mail trimis. Este un dicționar. De exemplu, {text: 2, send_avail: 1}.
 
 - **suggestions_requested** - indică câte sugestii de compunere inteligentă au fost solicitate
 
@@ -7419,6 +8143,8 @@ Acest eveniment ne permite să detectăm când s-au produs erori critice ale apl
 Se colectează următoarele câmpuri:
 
 - **black_list_reason** - ne spune dacă există un motiv pentru care ar trebui să ignorăm aceste date. Printre exemple se numără lansarea din cauza unei notificări la distanță și lansarea din cauza unei preluări de fundal.
+
+- **step_premain** - ne spune intervalul de timp necesar pentru ca Outlook să treacă de la atingerea pictogramei de către utilizator la pasul „principal” step0_main definit în acest document.
 
 - **step0_main** - ne spune intervalul de timp necesar pentru ca Outlook să ajungă la pasul „principal”, care este un pas definit de Apple.
 
@@ -7965,6 +8691,16 @@ Se colectează următoarele câmpuri:
 - **TotalTime** - timp total
 
 - **UsesSharedRuntime** - arată dacă aplicația utilizează sau nu sharedRuntime.
+
+#### <a name="officeofficemobilefirstrunsetup"></a>Office.OfficeMobile.FirstRunSetup
+
+Prima rulare a aplicației după instalare va declanșa acest eveniment repetat. Acesta va ajuta la identificarea instalărilor și actualizărilor automate din versiuni mai vechi ale aplicației și ne va permite să identificăm erorile actualizărilor automate, inclusiv cele de descărcare a încărcărilor de bibliotecă și a pachetelor de extindere/lingvistice.
+
+Se colectează următoarele câmpuri:
+
+- **IsFlightAssigned**- valoare booleană pentru a determina dacă utilizatorul a făcut parte dintr-un grup de pasageri preatribuiți care poate declanșa expunerea la anumite experiențe.
+
+- **IsFRELoadSuccessful** - număr întreg menționând starea rezultatelor
 
 #### <a name="onenoteappappbootcomplete-previous-name-officeonenoteandroidappappbootcomplete-officeandroidearlytelemetryappbootcomplete"></a>OneNote.App.AppBootComplete *(nume anterior)*, Office.OneNote.Android.App.AppBootComplete, Office.Android.EarlyTelemetry.AppBootComplete
 
@@ -9484,6 +10220,8 @@ Se colectează următoarele câmpuri:
 
 - **isAppKill** - ne ajută să înțelegem dacă aplicația respectivă a fost oprită sau închisă pe dispozitiv
 
+- **is_crashloop** - ne ajută să înțelegem dacă această cădere poate fi o cădere cu buclă.
+
 - **reportKey** - un ID unic pentru instalarea aplicației pe dispozitivul pentru investigarea problemei
 
 - **semnal** - un semnal care a cauzat căderea pentru a ne oferi mai multe detalii pentru a investiga acest accident
@@ -9646,6 +10384,8 @@ Se colectează următoarele câmpuri:
 - **IsDebug** - indică dacă sesiunea este o sesiune de depanare
 
 - **IsPreload** - indică dacă programul de completare este în curs de încărcare în fundal pentru îmbunătățirea performanței de activare.
+
+- **IsWdagContainer** - indică dacă activarea programului de completare este efectuată într-un container de Protecție aplicații Windows Defender.
 
 - **NumberOfAddinsActivated** - contor de programe de completare activate
 
@@ -9934,6 +10674,15 @@ Se colectează următoarele câmpuri:
 - **Exception** – stiva de apeluri pentru excepție
 
 - **Event name** – categoria evenimentului și eticheta acestuia.
+
+#### <a name="onenotesafebootresetcrashcounteronappsuspend-officeonenoteandroidsafebootresetcrashcounteronappsuspend-officeandroidearlytelemetry-safebootresetcrashcounteronappsuspend"></a>OneNote.SafeBootResetCrashCounterOnAppSuspend, Office.OneNote.Android.SafeBootResetCrashCounterOnAppSuspend, Office.Android.EarlyTelemetry. SafeBootResetCrashCounterOnAppSuspend
+
+Semnalizarea critică este trimisă atunci când resetăm contorul de avarie din suspendarea aplicațiilor înainte de a se afișa caseta de dialog boot în condiții de siguranță. Acest marcator este necesar pentru a urmări și a diagnostica starea aplicației. Se afișează o casetă de dialog de încărcare sigură atunci când aplicația se defectează de mai multe ori în mod continuu. Oferă utilizatorului opțiunea de a reseta aplicația. Acest marcator vă va ajuta să vă dați seama dacă nu s-a afișat caseta de dialog boot în condiții de siguranță pentru un utilizator, în ciuda atingerii criteriilor de declanșare. 
+
+Se colectează următoarele câmpuri:
+
+- Fără
+
 
 #### <a name="telemetry_error"></a>telemetry_error
 
@@ -10724,9 +11473,17 @@ Acest eveniment este declanșat la Stop în sesiunea de repetiții. În combina�
 
 Se colectează următoarele câmpuri:
 
-- **ResumeRehearsingCount** - numărul de clicuri ale unui utilizator pe reluarea repetițiilor
+- **CritiqueSummary** - rezumat a ceea ce au văzut toate criticile cu numărul de utilizatori.
 
-- **PauseRehearsingCount** - numărul de clicuri ale unui utilizator pe punerea în pauză a repetițiilor
+- **PauseRehearsingCount** - numărul de clicuri ale unui utilizator pe pauză de repetiție.
+
+- **RehearsalInitTime** - timp necesar pentru ca repetiția să se inițializeze.
+
+- **ResumeRehearsingCount** - numărul de clicuri ale unui utilizator pe reluarea repetiției.
+
+- **Sessionid** - acesta este ID-ul sesiunii de discurs oficial. Îl putem utiliza pentru a depana jurnalele de servicii.
+
+- **SlideshowViewLoadTime** - timpul necesar pentru încărcarea diapozitivelor.
 
 
 #### <a name="officepowerpointpptandroidrehearseviewerrors"></a>Office.PowerPoint.PPT.Android.RehearseView.Errors
@@ -10746,6 +11503,10 @@ Eveniment declanșat când se încarcă pagina rezumativă. Acest eveniment ne a
 
 Se colectează următoarele câmpuri:
 
+- **PageURL:String** - Aceasta este adresa URL a paginii pe care o putem utiliza pentru a identifica dacă sesiunea a reușit sau dacă s-a produs o eroare.
+
+- **IDSesiune:String** - Acesta este ID-ul de sesiune a discursului oficial. Îl putem utiliza pentru a depana jurnalele de servicii.
+
 - **SummaryPageLoadTime:int** - timpul (în ms) luat pentru a încărca pagina rezumativă. Printre acestea se numără timpul de creare a sarcinilor 
 
 
@@ -10756,6 +11517,44 @@ Eveniment declanșat atunci când utilizatorul face clic pe pornirea sesiunii. A
 Se colectează următoarele câmpuri:
 
  - Fără
+
+#### <a name="officepowerpointrehearsalsessionmetrics"></a>Office.PowerPoint.Rehearsal.SessionMetrics 
+
+Eveniment declanșat atunci când sesiunea de vorbire este oprită pentru Îndrumătorul pentru prezentări. Acest eveniment ne ajută să capturăm măsurători pentru o sesiune de repetiție în Îndrumătorul pentru prezentări. Acesta va ajuta să păstrați o calitate de serviciu înaltă pentru această caracteristică.
+
+Se colectează următoarele câmpuri:
+
+- **AuthDurationInMs** - acesta este timpul necesar pentru autentificare în milisecunde (reîmprospătați simbolul de autentificare).
+
+- **AuthError** - acesta descrie eroarea de autentificare care a avut loc (dacă există).
+
+- **AvgFragmentLatencyInMs** - acesta este timpul mediu de revenire al mesajelor de vorbire în rețea.
+
+- **ConnectDurationInMs** - acesta este timpul necesar în milisecunde pentru sesiunea de completare a conexiunii. 
+
+- **FirstAudioDelayInMs** - acesta este timpul necesar în milisecunde pentru primirea primelor date audio.
+
+- **InitMediaCaptureLayerDurationInMs** - acesta este timpul necesar în milisecunde pentru a inițializa stratul de captură media/audio.
+
+- **LocallyDroppedMessageCount** - acesta este numărul total de mesaje abandonate local.
+
+- **OpenFrontDoorConnectionDurationInMs** - acesta este timpul necesar în milisecunde pentru a deschide conexiunea la serviciul FrontDoor.
+
+- **SendAdaptationTextDurationInMs** - acesta este timpul necesar în milisecunde pentru a trimite textul de adaptare la serviciu.
+
+- **ServiceDroppedMessageCount** - acesta este numărul total de mesaje abandonate de serviciu.
+
+- **SessionId** - acesta este ID-ul de sesiune de discurs oficial. Îl putem utiliza pentru a depana jurnalele de servicii.
+
+- **SpeechClientResultEventsWithTimestamps** - acesta este un șir de coduri de eroare primite împreună cu mărci de timp, care vă pot ajuta să depanați.
+
+- **SpeechHResultsWithTimestamps** - acesta este un șir de coduri de eroare primite împreună cu mărci de timp, care vă pot ajuta să depanați.
+
+- **StartSpeechCaptureDurationInMs** - acesta este timpul necesar în milisecunde pentru a începe capturarea vorbirii.
+
+- **TotalMessageCount** - acesta este numărul total de mesaje audio trimise la serviciu.
+
+- **WebSocketConnectDurationInMs** - acesta este timpul necesar în milisecunde pentru a finaliza conexiunea de soclu web.
 
 
 #### <a name="officeuxofficeinsidercanshowofficeinsiderslab"></a>Office.UX.OfficeInsider.CanShowOfficeInsiderSlab
@@ -11499,6 +12298,18 @@ Se colectează următoarele câmpuri:
 - **Data_ExceptionType** - un câmp text opțional care reprezintă numele excepției lansat din codul sursă.
 
 - **Data_MethodName** - text reprezentând numele metodei din codul sursă unde există o eroare.
+
+#### <a name="office_android_earlytelemetry_registryerrors"></a>Office_Android_EarlyTelemetry_RegistryErrors
+
+Acest eveniment capturează toate erorile cu care se confruntă în timpul accesului la registry Android. Aceste date ale evenimentului ne ajută să înțelegem erorile de utilizator și cum să realizăm o caracteristică de registry mai robustă.
+
+Se colectează următoarele câmpuri:
+
+- **App** – procesul aplicației care trimite evenimentul.
+
+- **AppVersionLong** – versiunea aplicației.
+
+- **Data_StackTrace** – urmărirea stivei erorii.
 
 #### <a name="officeandroidearlytelemetrysharedlibraryloadersearchandloadlibraryerror"></a>Office. Android.EarlyTelemetry. SharedLibraryLoadersearchAndloadLibraryError 
 
