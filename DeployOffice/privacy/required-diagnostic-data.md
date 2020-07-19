@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre datele de diagnosticare obligatorii în Office și le furnizează o listă de evenimente și câmpuri de date.
 hideEdit: true
-ms.openlocfilehash: 6e5ea5a865acb893c92af12e68e7815fcf2fee65
-ms.sourcegitcommit: 5a4d3419d5ff4c8008ad3cf894a8f03ec170504b
+ms.openlocfilehash: 6638ac773e4b39f17648161421548f445d2194e7
+ms.sourcegitcommit: 0654f421d001168605f936dc54c9ee0a26fca844
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "45128578"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45156053"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Date de diagnosticare obligatorii pentru Office
 
@@ -2767,7 +2767,7 @@ Se colectează următoarele câmpuri:
 
   - **Data.CollectionTime** - marcă de timp privind momentul în care a fost înregistrat în jurnal un eveniment de cădere
 
-#### <a name="office_appdocs_appdocs_operationopenfrommrubypath"></a>Office_AppDocs_AppDocs_OperationOpenFromMruByPath
+#### <a name="office_docs_appdocs_operationopenfrommrubypath"></a>Office_Docs_AppDocs_OperationOpenFromMruByPath
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Android, iOS, Universal și Windows. Acest eveniment înregistrează atunci când are loc o operațiune de deschidere a fișierelor din calea furnizată de lista utilizată cel mai recent și este folosit pentru a înțelege și pentru a acorda prioritate experienței utilizatorului pe baza informațiilor operațiunii de deschidere a fișierelor.
 
@@ -2879,7 +2879,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_UnpackLinkPromptResult** – enumerarea reprezentând răspunsul solicitării de dezarhivare a linkului.
 
-#### <a name="office_appdocs_appdocs_operationopenfrommrubyurl"></a>Office_AppDocs_AppDocs_OperationOpenFromMruByUrl
+#### <a name="office_docs_appdocs_operationopenfrommrubyurl"></a>Office_Docs_AppDocs_OperationOpenFromMruByUrl
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Android, iOS, Universal și Windows. Evenimentul înregistrează atunci când are loc o operațiune de deschidere a fișierelor din URL-ul furnizat în lista utilizată cel mai recent și este folosit pentru a înțelege și pentru a acorda prioritare experienței utilizatorului, pe baza informațiilor despre operațiune de deschidere a fișierului. 
 
@@ -2992,7 +2992,7 @@ Se colectează următoarele câmpuri:
 - **Data_UnpackLinkPromptResult** – enumerarea reprezentând răspunsul solicitării de dezarhivare a linkului.
 
 
-#### <a name="office_appdocs_appdocs_operationopenfrompath"></a>Office_AppDocs_AppDocs_OperationOpenFromPath
+#### <a name="office_docs_appdocs_operationopenfrompath"></a>Office_Docs_AppDocs_OperationOpenFromPath
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Android, iOS, Universal și Windows. Evenimentul înregistrează atunci când are loc o operațiune de deschidere a fișierului de pe o cale și este folosit pentru a înțelege și pentru a acorda prioritare experiențelor utilizatorului, pe baza informațiilor despre operațiunea de deschidere a fișierelor.
 
@@ -3104,7 +3104,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_UnpackLinkPromptResult** – enumerarea reprezentând răspunsul solicitării de dezarhivare a linkului.
 
-#### <a name="office_appdocs_appdocs_operationopenfromprotocolhandler"></a>Office_AppDocs_AppDocs_OperationOpenFromProtocolHandler
+#### <a name="office_docs_appdocs_operationopenfromprotocolhandler"></a>Office_Docs_AppDocs_OperationOpenFromProtocolHandler
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Android, iOS, Universal și Windows. Evenimentul înregistrează atunci când are loc o operațiune de deschidere a fișierului dintr-o altă aplicație folosind interfața rutinei de tratare al protocolului și este folosit pentru a înțelege și pentru a acorda prioritare experiențelor utilizatorului, pe baza informațiilor despre operațiune de deschidere a fișierelor.
 
@@ -3216,7 +3216,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_UnpackLinkPromptResult** – enumerarea reprezentând răspunsul solicitării de dezarhivare a linkului.
 
-#### <a name="office_appdocs_appdocs_operationopenfromshell"></a>Office_AppDocs_AppDocs_OperationOpenFromShell
+#### <a name="office_docs_appdocs_operationopenfromshell"></a>Office_Docs_AppDocs_OperationOpenFromShell
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Android, iOS, Universal și Windows. Evenimentul înregistrează atunci când are loc o operațiune de deschidere a fișierelor din adresa URL furnizat în lista utilizată cel mai recent și este folosit pentru a înțelege și pentru a acorda prioritare experiențelor de utilizator, pe baza informațiilor despre operațiune de deschidere a fișierelor.
 
@@ -3320,7 +3320,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_OpEndEventId** - eticheta care reprezintă locul în care operațiunea s-a încheiat.
 
-- **Data_RelatedPrevOpTelemetryReason**  – este operațiunea corelată cu operațiunea anterioară.
+- **Data_RelatedPrevOpTelemetryReason** – este operațiunea corelată cu operațiunea anterioară.
 
 - **Data_StopwatchDuration** – timpul total pentru eveniment.
 
@@ -3329,7 +3329,7 @@ Se colectează următoarele câmpuri:
 - **Data_UnpackLinkPromptResult** – enumerarea reprezentând răspunsul solicitării de dezarhivare a linkului.
 
 
-#### <a name="office_appdocs_appdocs_operationopenfromurl"></a>Office_AppDocs_AppDocs_OperationOpenFromUrl
+#### <a name="office_docs_appdocs_operationopenfromurl"></a>Office_Docs_AppDocs_OperationOpenFromUrl
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Android, iOS, Universal și Windows. Evenimentul înregistrează atunci când are loc o operațiune de deschidere a fișierelor din URL-ul și pentru a acorda prioritare experiențelor de utilizator, pe baza informațiilor despre operațiune de deschidere a fișierelor.
 
@@ -3433,7 +3433,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_OpEndEventId** - eticheta care reprezintă locul în care operațiunea s-a încheiat.
 
-- **Data_RelatedPrevOpTelemetryReason**  – este operațiunea corelată cu operațiunea anterioară.
+- **Data_RelatedPrevOpTelemetryReason** – este operațiunea corelată cu operațiunea anterioară.
 
 - **Data_StopwatchDuration** – timpul total pentru eveniment.
 
