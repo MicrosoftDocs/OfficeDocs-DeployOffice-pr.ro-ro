@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate pentru Office, cum ar fi experiențele care analizează conținut sau experiențele care descarcă conținut online.
 hideEdit: true
-ms.openlocfilehash: 8910b00d5201e70131eb1eb0e696d9ce048eabad
-ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
+ms.openlocfilehash: dec86a00fb6037976f29668534d59b4f99fb9093
+ms.sourcegitcommit: 721c6d39465a5b0ab8e32b876c2e74bb5aaf4b81
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "45087148"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "46682939"
 ---
 # <a name="connected-experiences-in-office"></a>Experiențe conectate în Office
 
@@ -64,6 +64,7 @@ Următorul tabel furnizează o listă de experiențe conectate care vă analizea
 | *Căutare inteligentă*\*   | [Obțineți detalii despre ceea ce lucrați cu Căutare inteligentă](https://support.office.com/article/debf2083-5ac0-4739-8667-ae2467bec044) |
 | Răspunsuri sugerate | [Ce sunt răspunsurile sugerate?](https://www.osupportweb.com/a/outlook-mobile/?p=all&s=feature-walkthroughs&f=what-are-suggested-replies)|
 | Atingere pentru Word (Adăugare din fișiere)   | [Găsiți și utilizați conținutul de care aveți nevoie, atunci când aveți nevoie, fără a ieși din Word](https://support.office.com/article/860118fc-1f61-41f6-922f-40084a284658)   |
+|Transcriere |[Transcrierea înregistrărilor](https://support.microsoft.com/office/7fc2efec-245e-45f0-b053-2a97531ecf57)|
 | Transformare la pagina web   | [Transformați un document Word într-o pagină web Sway](https://support.office.com/article/65912b2d-8b81-41e1-ac52-c20a65ce8ecf) |
 | Translator   | [Traduceți text în altă limbă](https://support.office.com/article/287380e4-a56c-48a1-9977-f2dca89ce93f)  |
 

@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre datele de diagnosticare opționale din Office, inclusiv exemple de evenimente.
 hideEdit: true
-ms.openlocfilehash: 0190c29a017b35d945e6a1d540e1560dfab47a4c
-ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
+ms.openlocfilehash: 6769c7a0bf254b5a33f92c5410ec517b7d568d8e
+ms.sourcegitcommit: 721c6d39465a5b0ab8e32b876c2e74bb5aaf4b81
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "43993153"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "46683191"
 ---
 # <a name="optional-diagnostic-data-for-office"></a>Date de diagnosticare opționale pentru Office
 
@@ -37,7 +37,7 @@ Datele de diagnosticare sunt colectate și trimise la Microsoft despre software-
 
 ***Datele de diagnosticare opționale*** sunt date suplimentare care ne ajută să îmbunătățim produsele și furnizează mai multe informații care ne permit să detectăm, să diagnosticăm și să remediem problemele.
 
-Dacă alegeți să ne trimiteți date de diagnosticare opționale, sunt incluse și datele de diagnosticare obligatorii.
+Dacă alegeți să ne trimiteți date de diagnosticare opționale, sunt incluse și datele de diagnosticare obligatorii. De asemenea, pot fi trimise fișiere jurnal de diagnostic pentru Office, care conțin informații foarte asemănătoare cu datele de diagnostic opționale. Pentru mai multe informații despre acele fișiere jurnal, consultați [Prezentare generală a fișierelor jurnal de diagnosticare pentru Office](https://support.microsoft.com/office/fba86aac-70dc-4858-ae1f-ec2034346cdf).
 
 Exemplele de date de diagnosticare opționale includ datele pe care le colectăm despre formele inserate de utilizatori în documente Word, astfel încât să oferim opțiuni mai bune, și datele pe care le colectăm despre timpul necesar ca un diapozitiv PowerPoint să apară pe ecran; astfel, putem îmbunătăți experiența dacă ea este lentă.
 

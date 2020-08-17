@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre servicii esențiale în Office, cum ar fi Clic și Pornire și Licențiere, și asigură o listă de evenimente și câmpuri de date pentru aceste servicii esențiale.
 hideEdit: true
-ms.openlocfilehash: f9010fcc04540073dde219dc765e1811aa8a42e5
-ms.sourcegitcommit: 7b24028ab20d4f43dbca85cea2617398b36a3180
+ms.openlocfilehash: 1485ef7bdcfdf945ba2c9dd0e751cbe6b84dde5c
+ms.sourcegitcommit: 721c6d39465a5b0ab8e32b876c2e74bb5aaf4b81
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "45117212"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "46683242"
 ---
 # <a name="essential-services-for-office"></a>Servicii esențiale pentru Office
 
@@ -10425,6 +10425,140 @@ Acest eveniment este înregistrat când nu reușește mutarea blocnotesului loca
 Se colectează următoarele câmpuri:
  
 - **ErrorMsg** - mesajul de eroare corespunzător.
+
+### <a name="onenotestorageconnectivitychanged"></a>OneNote.Storage.ConnectivityChanged
+
+Evenimentul înregistrează dacă un utilizator are conectivitate la internet sau nu. Acestea sunt utilizate pentru a corela celelalte măsurători de performanță pentru starea de bună funcționare, permițându-ne să ignorăm evenimentele care au loc în timp ce un utilizator nu are conectivitate la internet, deoarece nu ne așteptăm ca latența noastră de serviciu să fie acceptabilă dacă nu există conectivitate la internet. Aceasta ne permite să calculăm numărul exact al sesiunilor pentru măsurătorile noastre ale sectoarelor clienților (per entitate găzduită, per sector). Se utilizează de asemenea pentru a filtra rapoartele de erori, deoarece există numeroase erori de sincronizare care pot apărea fără conectivitate de rețea, dar care ar justifica o anchetă în caz contrar.
+
+Dacă nu primim aceste date, nu vom putea monitoriza cu exactitate performanța produselor noastre sau nu vom determina dacă erorile experimentate de un utilizator sunt previzibile sau vor fi necesare investigații suplimentare.
+
+Următoarele câmpuri sunt colectate:
+
+- **InternetConnectivityNowAvailable** - dacă starea de conectivitate s-a modificat, fiind acum internet
+
+### <a name="onenotestoragelegacyinboundlatency"></a>OneNote. Storage.LegacyInboundLatency
+
+Semnalul critic utilizat pentru a urmări performanța operațiunilor de sincronizare de intrare care comunică direct cu SharePoint, inclusiv corelarea informațiilor, permițându-ne să monitorizăm și să investigăm performanța încărcării datelor în serviciul nostru. Acest semnal este colectat doar pentru cea mai slabă performanță de descărcare din ultimele 300 de secunde (numărul de secunde este configurabil de Microsoft, în funcție de performanța și condițiile serviciilor).
+
+Acest lucru este utilizat pentru a asigura starea de bună funcționare a serviciilor, permițându-ne să vedem ce entități găzduite întâmpină intrări de date inacceptabil de lent în serviciul nostru, informații despre datele pe care le încarcă atunci când au întâmpinat o intrare lentă și cât de răspândită este problema de latență. Este utilizat de asemenea pentru a raporta starea serviciilor și performanța clienților noștri, pentru a măsura tendințele în timp și a avertiza problemele în mod automat în scopul diminuării efortului tehnic. Dacă nu avem aceste date, ne vom putea garanta performanța adecvată de descărcare atunci când un utilizator sincronizează modificările din SharePoint pe computer.
+
+Următoarele câmpuri sunt colectate: 
+
+- **IsEducationNotebook** - o valoare logică care precizează dacă blocnotesul este de tip școlar
+
+- **NotebookId** - ID-ul blocnotesului de care aparține încărcarea
+
+- **TimeToConfirmSyncedWithServerInMs** - durata în milisecunde care a trecut pentru a efectua încărcarea
+
+### <a name="onenotestoragelegacyoutboundlatency"></a>OneNote.Storage.LegacyOutboundLatency
+
+Semnalul critic utilizat pentru a urmări performanța operațiunilor de sincronizare de ieșire care comunică direct cu SharePoint, inclusiv corelarea informațiilor, permițându-ne să monitorizăm și să investigăm performanța încărcării datelor în serviciul nostru. Acest semnal este colectat doar pentru cea mai slabă performanță de descărcare din ultimele 300 de secunde (numărul de secunde este configurabil de Microsoft, în funcție de performanța și condițiile serviciilor).
+
+Acest lucru este utilizat pentru a asigura starea de bună funcționare a serviciilor, permițându-ne să vedem ce entități găzduite întâmpină ieșiri de date inacceptabil de lente în serviciul nostru, informații despre datele pe care le încarcă atunci când au întâmpinat o ieșire lentă și cât de răspândită este problema de latență. Este utilizat de asemenea pentru a raporta starea serviciilor și performanța clienților noștri, pentru a măsura tendințele în timp și a avertiza problemele în mod automat în scopul diminuării efortului tehnic. Dacă nu avem aceste date, ne vom putea garanta performanța adecvată de descărcare atunci când utilizatorii sincronizează modificările din SharePoint. 
+
+Următoarele câmpuri sunt colectate: 
+
+- **IsEducationNotebook** - o valoare logică care precizează dacă blocnotesul este de tip școlar
+
+- **NotebookId** - ID-ul blocnotesului de care aparține încărcarea
+
+- **TimeToConfirmSyncedWithServerInMs** - durata în milisecunde care a trecut pentru a efectua încărcarea
+
+### <a name="onenotestoragerealtimefiledataobjectdownload"></a>OneNote.Storage.RealTime.FileDataObjectDownload 
+
+Semnalul critic utilizat pentru urmărirea performanței atunci când un utilizator intră într-un obiect de date de fișier (de exemplu un fișier sau o imagine încorporată), care este descărcat direct din serviciul nostru și nu ca parte a unei operațiuni de sincronizare de pe o pagină, secțiune sau blocnotes. Acest semnal este colectat doar pentru cea mai slabă performanță de descărcare din ultimele 300 de secunde (numărul de secunde este configurabil de Microsoft, în funcție de performanța și condițiile serviciilor).
+
+Acest lucru este utilizat pentru a asigura starea de bună funcționare a serviciilor, permițându-ne să vedem ce entități găzduite întâmpină descărcări inacceptabil din lente în serviciul nostru, cât de răspândită este problema de latență și pentru a raporta comportamentul nostru în timp, permițându-ne să măsurăm tendințele performanței serviciului. Dacă vedem o latență inacceptabilă pentru un obiect fișier, vom utiliza de asemenea aceste date pentru a le corela cu alte semnale din partea clientului și serviciului referitoare la obiect, pentru îmbunătățirea procesului nostru de descărcare. De asemenea, am divizat datele în funcție de extensia obiectului fișier descărcat, deoarece avem așteptări diferite în funcție de eventualitatea ca fișierul să fie prezentat inline pe pânza noastră (de exemplu o imagine) sau să fie un fișier non-inline (cum ar fi un document text). Dacă nu primim aceste date nu vom avea posibilitatea să monitorizăm performanța acestor descărcări
+
+Următoarele câmpuri sunt colectate: 
+
+- **FileSizeInBytes** - dimensiunea în byți a fișierului descărcat 
+
+- **IsImage** - o valoare logică ce determină în curs de descărcare are o extensie care se potrivește cu o listă predefinită de formate comune de imagine (.bmp, .emf, .gif, .jpe, .jpeg, .jpg, .png) pe care o afișăm inline pe pânză
+
+- **TimeToDownload** - durata de timp care a trecut pentru a descărca cu succes obiectul FDO din stocarea noastră blob pe dispozitiv 
+
+### <a name="onenotestoragerealtimewebsocketdownload"></a>OneNote.Storage.RealTime.WebSocketDownload
+
+Semnalul critic utilizat pentru a urmări performanța operațiunilor de sincronizare de intrare, inclusiv corelarea informațiilor, permițându-ne să monitorizăm și să investigăm performanța descărcării datelor din serviciul nostru (onenote.com). Acest semnal este colectat doar pentru cea mai slabă performanță de descărcare din ultimele 300 de secunde (numărul de secunde este configurabil de Microsoft, în funcție de performanța și condițiile serviciilor).
+
+Acest lucru este utilizat pentru a asigura starea de bună funcționare a serviciilor, permițându-ne să vedem ce entități găzduite întâmpină intrări de date inacceptabil de lente din serviciul nostru, informații despre datele pe care le descărcau atunci când au întâmpinat o intrare lentă și cât de răspândită este problema de latență. Este utilizat de asemenea pentru a raporta starea serviciilor și performanța clienților noștri, pentru a măsura tendințele în timp și a avertiza problemele în mod automat în scopul diminuării efortului tehnic. 
+
+Dacă vedem o latență inacceptabilă pentru o secțiune sau un blocnotes, vom utiliza de asemenea aceste date pentru a le corela cu alte semnale din partea clientului și serviciului referitoare la același document pentru a identifica regresia performanței clienților, permițându-ne să furnizăm un serviciu mai performant.
+
+Dacă nu primim aceste date, nu vom putea monitoriza performanța acestui aspect al serviciului nostru sau impactul modificărilor secundare pe server ce le-am putea găsi necesare datorită utilizării sau a altor factori.
+
+Următoarele câmpuri sunt colectate:
+
+- **DeviceSessionId** - ID-ul sesiunii de dispozitiv
+
+- **IsEducationNotebook** - o valoare logică care precizează dacă blocnotesul este de tip școlar
+
+- **IsHierarchyResource** - o valoare logică care precizează dacă resursa este o resursă de ierarhie
+
+- **NotebookId** - ID-ul blocnotesului de care aparține încărcarea
+
+- **ResourceId** - ID-ul resursei pe care o încărcăm
+
+- **SectionId** - ID-ul secțiunii de care aparține încărcarea
+
+- **ServerSessionId** - ID-ul sesiunii de server de care aparține încărcarea
+
+- **TimeToConfirmSyncedWithServerInMs** - durata în milisecunde între un utilizator navigând la o pagină și stiva de replicare confirmând că acea pagină este sincronizată cu serverul.
+
+- **TimeToFirstUpdateInMs** - durata în milisecunde între motorul de sincronizare care începe replicarea intrării unei pagini și acea operațiune de replicare care ajunge la sincronizarea cu starea serverului.
+
+### <a name="onenotestoragerealtimewebsocketupload"></a>OneNote.Storage.RealTime.WebSocketUpload
+
+Semnalul critic utilizat pentru a urmări performanța operațiunilor de sincronizare de ieșire, inclusiv corelarea informațiilor, permițându-ne să monitorizăm și să investigăm performanța încărcării datelor la serviciul nostru (onenote.com)
+
+Acest lucru este utilizat pentru a asigura starea de bună funcționare a serviciilor, permițându-ne să vedem ce entități găzduite întâmpină ieșiri de date inacceptabil de lente în serviciul nostru, informații despre datele pe care le încarcă atunci când au întâmpinat o ieșire lentă și cât de răspândită este problema de latență. Este utilizat de asemenea pentru a raporta starea serviciilor și performanța clienților noștri, pentru a măsura tendințele în timp și a avertiza problemele în mod automat în scopul diminuării efortului tehnic. Vom utiliza de asemenea aceste date pentru a urmări impactul și eficiența îmbunătățirilor pe care le facem clienților și serviciilor noastre. 
+
+Dacă vedem o latență inacceptabilă pentru o secțiune sau un blocnotes, vom utiliza de asemenea aceste date pentru a le corela cu alte semnale din partea clientului și serviciului referitoare la același document pentru a identifica regresia performanței, permițându-ne să furnizăm o experiență mai performantă.
+
+Dacă nu primim aceste date, nu vom putea monitoriza performanța acestui aspect al serviciului nostru sau impactul modificărilor secundare pe server ce le-am putea găsi necesare datorită utilizării sau a altor factori.
+
+Următoarele câmpuri sunt colectate: 
+
+- **DeviceSessionId** - ID-ul sesiunii de dispozitiv
+
+- **IsEducationNotebook** - o valoare logică care precizează dacă blocnotesul este de tip școlar
+
+- **IsHierarchyResource** - o valoare logică care precizează dacă resursa este o resursă de ierarhie
+
+- **IsWorstTime** - o valoare logică indicând dacă timpul este un eveniment de încărcare obișnuit sau cel mai slab timp pe care l-am văzut la acest client în ultimele 300 de secunde (numărul de secunde este configurabil de Microsoft în funcție de performanța și starea serviciilor).
+
+- **NotebookId** - ID-ul blocnotesului de care aparține încărcarea
+
+- **RecommendedPutIntervalInMs** - ora la care serviciul a comunicat către client intervalul de plasare recomandat
+
+- **ResourceId** - ID-ul resursei pe care o încărcăm
+
+- **SectionId** - ID-ul secțiunii de care aparține încărcarea
+
+- **SenderRequestId** - ID-ul expeditorului care face încărcare
+
+- **ServerSessionId** - ID-ul sesiunii de server de care aparține încărcarea
+
+- **UploadNonSuspendedTimeInMs** - durata în milisecunde care a trecut pentru a efectua încărcarea excluzând timpul în când a fost suspendată aplicația
+
+- **UploadTimeInMs** - durata în milisecunde care a trecut pentru a efectua încărcarea
+
+- **WaitTimeInMs** - timpul în milisecunde între solicitarea încărcării și pornirea încărcării
+
+- **WebUrl** - WebUrl-ul încărcării (conectat ca PiiWz)
+
+### <a name="onenotestoragesynchealth"></a>OneNote.Storage.SyncHealth
+
+Semnalul critic utilizat pentru a urmări erorile și excepțiile care au avut loc în stiva de sincronizare din clientul OneNote, permițându-ne să monitorizăm și să atenuăm aceste condiții neașteptate.
+
+Acest lucru este utilizat pentru a asigura starea de bună funcționare a serviciilor, permițându-ne să vedem aproape în timp real rapoartele de erori de la clienți, ceea ce ne face să răspundem la problemele de sincronizare pe măsură ce apar. Este utilizat de asemenea pentru a identifica cât de răspândită și cât de severă este o problemă prin corelarea etichetei de erori cu codul client pentru a identifica sursa eșecului. De asemenea, realizăm agregarea acestor date pentru a obține informații despre performanța noastră în timp și despre impactul și eficiența îmbunătățirilor pe care le facem pentru clienții și serviciile noastre. Dacă nu avem aceste date, nu vom putea răspunde proactiv condițiilor de eroare din serviciul nostru de sincronizare fără escaladarea clienților.
+
+Următoarele câmpuri sunt colectate: 
+
+- **Service** - serviciul de sincronizare utilizat de client atunci când s-a produs eroarea (sincronizare moștenită sau modernă)
+
+- **Tag** - eticheta (o valoare de identificare) reprezentând eroarea pe care a întâmpinat-o clientul în timpul operațiunii de sincronizare
 
 ### <a name="onenotesynccreatenotebookfailed"></a>OneNote.Sync.CreateNotebookFailed
  
