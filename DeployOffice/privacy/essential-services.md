@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre servicii esențiale în Office, cum ar fi Clic și Pornire și Licențiere, și asigură o listă de evenimente și câmpuri de date pentru aceste servicii esențiale.
 hideEdit: true
-ms.openlocfilehash: 1485ef7bdcfdf945ba2c9dd0e751cbe6b84dde5c
-ms.sourcegitcommit: 721c6d39465a5b0ab8e32b876c2e74bb5aaf4b81
+ms.openlocfilehash: 81694daded27994d5026d923acd36302a79acc9f
+ms.sourcegitcommit: 5fc8194df704f79d340d9e8872a03ab2b0ebc62b
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "46683242"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "46815333"
 ---
 # <a name="essential-services-for-office"></a>Servicii esențiale pentru Office
 
@@ -3303,6 +3303,44 @@ Se colectează următoarele câmpuri:
 
 ## <a name="microsoft-autoupdate-mau-events"></a>Evenimente Microsoft AutoUpdate (MAU)
 
+### <a name="additionalappinfo_invalidpreference"></a>additionalappinfo_invalidpreference
+
+Aceste rapoarte de evenimente despre preferința nevalidă sunt setate pentru a afișa mai multe informații cu privire la sfârșitul serviciului pentru un produs. Vom utiliza aceste informații pentru a recomanda clienților să își seteze corect preferințele pentru a vedea informații suplimentare.
+ 
+Se colectează următoarele câmpuri:
+
+- **App** – procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** – versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **Reason** - detalii despre intrarea nevalidă din preferințe
+
+- **SessionId** - identificatorul pentru sesiune
+
 ### <a name="appdelegate_launch"></a>appdelegate_launch
 
 Acest eveniment indică faptul că s-a produs o încercare de lansare a aplicației. Vom înregistra rezultatul (eșecul sau succesul). Vom utiliza acest eveniment pentru a identifica cazurile în care MAU nu reușește să fie lansat
@@ -3327,7 +3365,7 @@ Se colectează următoarele câmpuri:
 
 - **DeviceInfo_OsBuild** - versiunea sistemului de operare
 
- - **Event_ReceivedTime** - ora la care s-a primit telemetria
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
 
 - **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
 
@@ -3425,6 +3463,85 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
+### <a name="appinstall_logscanned"></a>appinstall_logscanned
+
+Acest eveniment este utilizat pentru a determina dacă s-a procesat cu succes fișierul jurnal. Vom utiliza acest eveniment pentru a detecta și a rezolva problemele apărute în timpul instalării aplicațiilor. 
+ 
+Se colectează următoarele câmpuri:
+
+- **App** – procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** – versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowTocheck** - preferința pentru verificarea actualizărilor
+
+- **Payload** - rapoarte privind erorile găsite în timpul instalării și/sau scanării stării de finalizare a aplicației 
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="appregistry_config"></a>appregistry_config
+
+Acest eveniment raportează despre orice erori întâlnite în timpul încărcării informațiilor din registry aplicație. Utilizăm acest raport pentru a consilia administratorii IT în formatul corect de configurare a înregistrărilor de aplicații client.
+ 
+Se colectează următoarele câmpuri:
+
+- **App** – procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** – versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowTocheck** - preferința pentru verificarea actualizărilor
+
+- **Payload** -conține informații despre natura erorii întâlnite cu înregistrarea aplicațiilor.
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
 
 ### <a name="appregistry_info"></a>appregistry_info
 
@@ -3548,6 +3665,48 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
+### <a name="cloningtask_begin"></a>cloningtask_begin
+
+Acest eveniment indică începutul activității de clonare anterior actualizării aplicațiilor. Vom utiliza acest eveniment împreună cu evenimentul cloningtask_status pentru a determina volumul de erori de clonare, pentru a determina dacă caracteristica de clonare ar trebui să fie limitată pe diferite canale de audiență.
+ 
+Se colectează următoarele câmpuri:
+
+- **App** – procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul aplicației.
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** – versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowTocheck** - preferința pentru verificarea actualizărilor
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **UpdateID** - identificatorul pentru actualizare.
+
 
 ### <a name="cloningtask_helpertoolconnection"></a>cloningtask_helpertoolconnection
 
@@ -3588,6 +3747,92 @@ Se colectează următoarele câmpuri:
 - **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
 
 - **SessionId** - identificatorul pentru sesiune
+
+### <a name="cloningtask_status"></a>cloningtask_status
+
+Acest eveniment indică starea procesului de clonare pentru ca aplicația să fie actualizată. Vom utiliza acest eveniment pentru a determina rata de succes, precum și tipurile de erori întâlnite care duce la nereușită. Acest eveniment este utilizat pentru a determina dacă caracteristica de clonare ar trebui să fie limitată în funcție de diferite canale de public.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul aplicației.
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Error** - șirul conține informații despre eroare, dacă s-a produs o eroare în timpul activității de clonare.
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowTocheck** - preferința pentru verificarea actualizărilor
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **Success** - reprezentarea șirului unei variabile Boolean.
+
+- **UpdateID** - identificatorul pentru actualizare.
+
+### <a name="cloningtask_status_finish"></a>cloningtask_status_finish
+
+Acest eveniment raportează despre finalizarea activității de „clonare“. Acest eveniment face parte din raportul pâlniei de actualizare și îl utilizăm pentru a determina starea de funcționare a actualizărilor aplicației.
+ 
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul aplicației
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **UpdateID** - identificatorul actualizării.
 
 
 ### <a name="configuration_channel"></a>configuration_channel
@@ -3671,6 +3916,45 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune.
 
+### <a name="configuration_systemversion"></a>configuration_systemVersion
+
+Acest eveniment indică faptul că o încercare de a recupera versiunea de sistem a eșuat. De asemenea, conține informații despre informațiile colectate din sistem de Microsoft AutoUpdate (MAU). Utilizăm acest eveniment pentru a determina dacă MAU ar trebui să răspundă pentru erori. Rețineți că versiunea de sistem este utilizată pentru a determina dacă o actualizare poate să fie aplicată la dispozitivul clientului.
+ 
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowTocheck** - preferința pentru verificarea actualizărilor
+
+- **Payload** - conține informații despre eroarea întâlnită în timpul recuperării șirului versiunii de sistem macOS.
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
 
 ### <a name="controller_alertmanager_reinstallresponse"></a>controller_alertmanager_reinstallresponse
 
@@ -5600,6 +5884,45 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
+### <a name="downloadmanifest_configuration"></a>downloadmanifest_configuration
+
+Acest eveniment raportează o eroare cu configurația Microsoft AutoUpdate (MAU); fie cu configurarea Server particularizat din preferințe sau cu definițiile de punct final din Asistentul de actualizare din componentele MAU instalate. Folosim acest eveniment pentru a consilia administratorii IT în vederea setării corecte a punctelor finale din serverul manifest.
+ 
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **Payload** - indică dacă eroarea se află în configurarea serverelor particularizate sau în componentele instalate MAU
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+
 ### <a name="downloadmanifest_downloadcatalogfail"></a>downloadmanifest_downloadcatalogfail
 
 Acest eveniment indică faptul că a avut loc o eroare de descărcare. Fișierul care nu s-a descărcat este înregistrat. Dorim să știm care sunt fișierele colaterale și pachetele preluate. O eroare de descărcare a unui manifest poate indica o eroare de generare colaterală a compilării, o eroare de configurare CDN, o eroare de configurare a clientului, o eroare de rețea. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
@@ -6173,6 +6496,54 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
+### <a name="downloadtask_downloadbegin"></a>downloadtask_downloadbegin
+
+Acest eveniment indică începutul activității de descărcare pentru o actualizare de aplicație. Acesta face parte din pâlnia de actualizare și îl utilizăm pentru a determina starea de funcționare a actualizărilor de aplicații.
+ 
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul pentru aplicația actualizată
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **BundleVersion** - versiunea aplicației actualizată
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **PreviousUpdateID** - identificatorul pentru o actualizare de aplicație
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **UpdateID** - identificatorul pentru o actualizare de aplicație
+
+- **UpdatePkg** - numele pachetului de actualizare aplicată
+
+- **UpdateVersion** - versiunea aplicației după actualizare
+
 
 ### <a name="downloadtask_downloadfailure"></a>downloadtask_downloadfailure
 
@@ -6265,6 +6636,130 @@ Se colectează următoarele câmpuri:
 
 - **UpdateID** - identificatorul actualizării descărcate.
 
+### <a name="downloadtask_updatertypeerror"></a>downloadtask_updatertypeerror
+
+Acest eveniment raportează o eroare de tip actualizator în fișierul manifest descărcat. Folosim acest eveniment pentru a notifica proprietarul fișierului manifest, astfel încât eroarea să poată fi remediată.
+ 
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul pentru aplicația actualizată
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **UpdateID** - identificatorul pentru o actualizare de aplicație
+
+- **UpdaterType** - tipul de actualizator specificat în fișierul manifest descărcat
+
+- **UpdateURL** - URL-ul pachetului de actualizare care trebuie aplicat
+
+### <a name="downloadtask_urlerror"></a>downloadtask_urlerror
+
+Acest eveniment raportează o eroare din URL-ul specificat în fișierul manifest descărcat. Folosim acest eveniment pentru a notifica proprietarul fișierului manifest, astfel încât eroarea să poată fi remediată.
+ 
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **Error** - indică tipul erorii întâlnite
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **UpdateID** - identificatorul pentru o actualizare de aplicație
+
+- **UpdateURL** - URL-ul pachetului de actualizare care trebuie aplicat
+
+### <a name="fba_changelastupdate"></a>fba_changelastupdate
+
+Acest eveniment raportează atunci când Microsoft Auto Update (MAU) a căutat actualizări. Folosim acest eveniment pentru depanare atunci când nu se oferă o actualizare unui anumit dispozitiv pentru o perioadă prelungită de timp.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **Payload** - conține Data Ora când MUA a căutat actualizări
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
 
 ### <a name="fba_checkforupdate"></a>fba_checkforupdate
 
@@ -6348,6 +6843,325 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
+### <a name="fba_forceinstallmsgsent"></a>fba_forceinstallmsgsent
+
+Acest eveniment indică faptul că a fost inițiată o actualizare forțată din interfața utilizator. Acest eveniment face parte din pâlnie și este folosit pentru a determina buna funcționare a caracteristicii de actualizare forțată.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **Payload** - text static
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="fba_forceupdatecheck"></a>fba_forceupdatecheck
+
+Acest eveniment indică faptul că verificarea actualizării este forțată. Folosim acest eveniment pentru a determina volumul de verificări forțate ale actualizărilor care au loc în afara ciclului normal de verificare a actualizărilor.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - text static
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="fba_guiappopen"></a>fba_guiappopen
+
+Acest eveniment indică faptul că interfața de utilizator este lansată în modul de Verificare automată, având o aplicație cu actualizare aplicabilă deschisă acum. Acest eveniment este folosit pentru a determina volumul de lansări de interfață cu utilizatorul din modul de Verificare automată pentru dezvoltarea caracteristicilor viitoare.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - text static
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="fba_installpending"></a>fba_installpending
+
+Acest eveniment indică faptul că Microsoft Auto Update (MAU) a trimis o notificare cu privire la actualizările în așteptare. Acest eveniment este folosit pentru a determina volumul de actualizări care sunt inițiate din notificările de utilizator și sunt utilizate pentru a îmbunătăți experiența utilizatorilor prin minimizarea întreruperilor pentru utilizator în versiunile ulterioare.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - text static
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="fba_launch"></a>fba_launch
+
+Acest eveniment indică începutul Asistentului de actualizare Microsoft cu privire la metoda de lansare. Acest eveniment este utilizat pentru a determina dacă Asistentul pentru actualizare Microsoft este lansat într-un context incorect.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - text static
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="fba_launchbyagent"></a>fba_launchbyagent
+
+Acest eveniment indică faptul că Asistentul pentru actualizare Microsoft a fost lansat prin intermediul Agentului de lansare. Acest eveniment este utilizat pentru a determina volumul Asistentului de actualizare Microsoft lansat din interfața de utilizator pentru dezvoltare viitoare.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - text static
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="fba_launchfromprotocol"></a>fba_launchfromprotocol
+
+Acest eveniment indică faptul că Asistentul de actualizare Microsoft a fost lansat prin intermediul protocolului de URL. Acest eveniment este utilizat pentru a determina volumul Asistentului de actualizare Microsoft lansat prin URL pentru dezvoltare viitoare.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - conține informații despre schema URL și gazdă URL
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="fba_launchgui"></a>fba_launchgui
+
+Acest eveniment indică faptul că Asistentul de actualizare Microsoft încearcă să lanseze Interfața grafică cu utilizatorul (GUI). Acest eveniment este folosit pentru a determina volumul de lansări UI inițiate din Asistentul de actualizare Microsoft, pentru a ajuta cu dezvoltarea viitoare, inclusiv cu minimizarea întreruperii utilizatorului din cauza lansării frecvente de UI.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - text static
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+
 ### <a name="fba_launchstatus"></a>fba_launchstatus
 
 Acest eveniment înregistrează erorile Daemon ale MAU în timpul încercării de lansare. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
@@ -6392,6 +7206,250 @@ Se colectează următoarele câmpuri:
 
 - **Success** - șirul de caractere boolean care indică dacă s-a lansat cu succes sau nu procesul daemon MAU.
 
+
+### <a name="fba_mausilentupdate"></a>fba_mausilentupdate
+
+Acest eveniment indică faptul că Asistentul de actualizare Microsoft inițiază actualizări silențioase. Acest eveniment este utilizat pentru a determina volumul de actualizări aplicate fără intervenția utilizatorului, pentru a contribui la îmbunătățirea experienței de utilizator.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+ 
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - text static
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="fba_moreinfofromappnotification"></a>fba_moreinfofromappnotification
+
+Acest eveniment raportează despre informațiile pe care le distribuie o aplicație înregistrată prin intermediul Microsoft auto update (MAU). De exemplu, mesajele de la sfârșitul serviciului sunt transmise prin notificarea MAU. Folosim acest eveniment pentru a determina volumul de dispozitive care afișează această notificare specială, pentru a determina reușita diseminării informațiilor.
+
+Se colectează următoarele câmpuri:
+
+- **AdditionalInfoID** - identifică în mod unic „Mai multe informații” fiind transmise prin MAU.
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **NotificationEvent** - textul static care indică tipul de notificare în curs de aplicare.
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="fba_multipledaemon"></a>fba_multipledaemon
+
+Acest eveniment indică faptul că a fost detectată o altă instanță a asistentului de actualizare Microsoft, iar instanța curentă va fi încheiată. Vom folosi acest eveniment pentru a determina volumul de dispozitive care încearcă să ruleze mai multe instanțe ale asistentului de actualizare și să proiecteze o soluție, dacă este necesar.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - text static
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="fba_nofifyappclosed"></a>fba_nofifyappclosed
+
+Acest eveniment indică faptul că asistentul de actualizare Microsoft trimite o notificare pentru actualizări în așteptare, deoarece nu există nicio aplicație înregistrată deschisă, iar actualizările pot continua fără a întrerupe utilizatorul. Folosim acest eveniment pentru a determina volumul de actualizări care se pot aplica, dar aveți nevoie de acțiunea utilizatorului pentru a face acest lucru. Acest eveniment este folosit pentru a contribui la îmbunătățirea experienței de utilizator.
+
+Se colectează următoarele câmpuri: 
+    
+- **App** - procesul aplicației care trimite evenimentul
+    
+- **AppInfo_Language** - limba în care rulează aplicația
+    
+- **AppVersionLong** - versiunea aplicației
+    
+- **Channel** - preferința pentru public
+    
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+    
+- **DeviceID** - identificatorul dispozitivului
+    
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+    
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+    
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+    
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+    
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+    
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+    
+- **HowToCheck** - cum se verifică setările
+    
+- **Payload** - text static
+    
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+    
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+    
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="fba_nofifyappopen"></a>fba_nofifyappopen
+
+Acest eveniment indică faptul că asistentul de actualizare Microsoft trimite o notificare pentru actualizări în așteptare, deoarece există aplicații înregistrate deschise, iar pentru a continua actualizările trebuie închise aplicațiile.  Folosim acest eveniment pentru a determina volumul de actualizări care necesită intervenția utilizatorului.  Acest eveniment este folosit pentru a contribui la îmbunătățirea experienței de utilizator.
+
+Se colectează următoarele câmpuri:  
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+    
+- **AppVersionLong** - versiunea aplicației
+    
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - text static
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="fba_settimerfail"></a>fba_settimerfail  
+
+Acest eveniment indică faptul că o încercare de a configura cronometrul pentru a declanșa o actualizare viitoare a eșuat. Acest eveniment este esențial și îl folosim pentru a determina volumul de erori pentru a crea soluții temporare, dacă este necesar.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - conține informațiile despre ora ultimei actualizări și utilizarea calendarului
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+
 ### <a name="fba_silentupdateoptin"></a>fba_silentupdateoptin
 
 Acest eveniment indică faptul că utilizatorul optează pentru actualizările silențioase. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
@@ -6431,7 +7489,6 @@ Se colectează următoarele câmpuri:
 - **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
 
 - **SessionId** - identificatorul pentru sesiune
-
 
 ### <a name="fba_skipforcedupdate"></a>fba_skipforcedupdate
 
@@ -6853,6 +7910,47 @@ Se colectează următoarele câmpuri:
 - **UpdateID** - identificatorul actualizării aplicației.
 
 
+### <a name="fbasilentupdate_clientsession"></a>FBASilentUpdate_ClientSession
+
+Acest eveniment este folosit pentru a calcula indicatorul de stare de funcționare a actualizării esențiale calculate pentru Microsoft AutoUpdate (MAU). Acest eveniment ne permite să indicăm ce sesiune de actualizare (descărcare sau instalare) gestionează backend-ul în acest moment.
+ 
+Se colectează următoarele câmpuri:
+
+- **App** – procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** – versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowTocheck** - preferința pentru verificarea actualizărilor
+
+- **Payload** - indică ce sesiune de actualizare (descărcare sau instalare) gestionează backend-ul în acest moment.
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+
 ### <a name="fbasilentupdate_codesignfailure"></a>fbasilentupdate_codesignfailure
 
 Acest eveniment înregistrează rezultatul verificării semnăturii codului după aplicarea unei actualizări. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
@@ -7270,6 +8368,101 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
+### <a name="fbasilentupdate_installstatus"></a>fbasilentupdate_installstatus
+
+Acest eveniment raportează despre starea activității de actualizare a aplicației. Acest eveniment face parte din pâlnia de actualizare a aplicației și o utilizăm pentru a monitoriza starea de funcționare a actualizărilor aplicației.
+
+Se colectează următoarele câmpuri: 
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul pentru aplicația actualizată
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - conține informații referitoare la afișarea vizualizării statusului
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **Success** - indică dacă actualizarea aplicației a fost reușită
+
+- **UpdateID** - identificatorul pentru o actualizare de aplicație
+
+- **UpdateName** - numele actualizării așa cum apare în fișierul manifest descărcat
+
+- **UpdatePkg** - numele pachetului de actualizare aplicată
+
+### <a name="fbasilentupdate_notificationerror"></a>fbasilentupdate_notificationerror
+
+Acest eveniment raportează despre o eroare întâlnită în timpul încercării de a trimite notificarea utilizatorului. Acest eveniment va fi folosit pentru a depana cauza erorii și a efectua acțiuni de revizuire.
+
+Se colectează următoarele câmpuri:  
+
+- **App** - procesul aplicației care trimite evenimentul
+ 
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **ErrType** - indică tipul erorii întâlnite
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Message** - conținutul notificării
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **Title** - titlul notificării
+
+- **Type** - tipul notificării
 
 ### <a name="fbasilentupdate_notificationremoved"></a>fbasilentupdate_notificationremoved
 
@@ -7393,6 +8586,45 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
+### <a name="fbasilentupdate_timerforapptermination"></a>FBASilentUpdate_TimerForAppTermination
+
+Acest eveniment este folosit pentru a calcula indicatorul de stare de funcționare a actualizării esențiale calculate pentru Microsoft AutoUpdate (MAU). Acest eveniment ne permite să monitorizăm evenimentul de încetare a utilizării aplicației deschise și durata stării de deschidere.
+ 
+Se colectează următoarele câmpuri:
+
+- **App** – procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** – versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowTocheck** - preferința pentru verificarea actualizărilor
+
+- **Payload** – indică dacă un cronometru a fost setat pentru o aplicație deschisă atunci când a fost declanșată instalarea actualizării. 
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
 
 ### <a name="fbasilentupdate_updateavailablenotification"></a>fbasilentupdate_updateavailablenotification
 
@@ -7557,6 +8789,691 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
+### <a name="gui_dashboardview_appisopendialog_display"></a>gui_dashboardview_appisopendialog_display 
+
+Acest eveniment indică faptul că interfața de utilizator a afișat o casetă de dialog pentru a închide o aplicație deschisă în vederea continuării cu actualizarea aplicației. Acest eveniment este utilizat pentru a determina volumul de actualizări întârziate cu scopul de a oferi îmbunătățiri viitoare pentru a minimiza întreruperea utilizatorului.
+
+Se colectează următoarele câmpuri: 
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul pentru aplicația actualizată
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **UpdateID** - identificatorul pentru o actualizare de aplicație
+
+- **UpdateName** - numele actualizării așa cum apare în fișierul manifest descărcat
+
+### <a name="gui_dashboardview_appisopendialogbutton_clicked"></a>gui_dashboardview_appisopendialogbutton_clicked
+
+Acest eveniment indică dacă s-a ignorat actualizarea aplicației sau se mai încearcă o dată după ce se afișează o casetă de dialog deschisă pentru aplicație. Acest eveniment este utilizat pentru a determina volumul de actualizări ignorate și utilizate pentru îmbunătățiri viitoare cu scopul de a minimiza întreruperea utilizatorului.
+
+Se colectează următoarele câmpuri:   
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul pentru aplicația actualizată
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **ButtonType** - Ignorați sau retrageți
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului 
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **UpdateID** - identificatorul pentru o actualizare de aplicație
+
+- **UpdateName** - numele actualizării așa cum apare în fișierul manifest descărcat
+
+### <a name="gui_dashboardview_updateinprogressdialog_display"></a>gui_dashboardview_updateinprogressdialog_display
+
+Acest eveniment înregistrează dacă o casetă de dialog a fost afișată pentru utilizatori indicând dacă actualizarea mai este în curs.
+ 
+Se colectează următoarele câmpuri:
+
+- **App** – procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** – versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowTocheck** - preferința pentru verificarea actualizărilor
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="gui_dashboardview_updatemodebutton_clicked"></a>gui_dashboardview_updatemodebutton_clicked
+
+Acest eveniment indică modul de actualizare schimbat din controlul interfeței de utilizator. Acest eveniment este folosit pentru a determina volumul de dispozitive care se deplasează de la un mod la altul și este utilizat pentru a determina de ce clienții se îndepărtează de actualizările automate. 
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+ 
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - menționați dacă descărcarea automată este dezactivată
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="gui_feedbackwindow_buttonclicked"></a>gui_feedbackwindow_buttonclicked
+
+Acest eveniment raportează dacă feedbackul este trimis sau anulat înainte de trimitere. Acest eveniment este utilizat pentru a determina volumul de feedback trimis într-o anumită versiune de lansare. Acest lucru vă ajută să izolați mai devreme eventuale probleme.
+
+Se colectează următoarele câmpuri: 
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **ButtonType** - menționați dacă feedbackul este trimis sau anulat
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+ 
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="gui_preferenceview_consentsheet_display"></a>gui_preferenceview_consentsheet_display
+
+Acest eveniment indică faptul că o foaie de consimțământ este afișată, dacă este disponibilă. Acest eveniment este folosit pentru a determina volumul de dispozitive înscrise recent în canalul public aplicabil (Insider rapid/Insider lent). De asemenea, folosim acest eveniment pentru a ne asigura că afișarea casetei de dialog de consimțământ funcționează pentru a afișa condițiile de utilizare.
+ 
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **ChannelName** - canal pentru care se afișează caseta de dialog de consimțământ
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="gui_preferenceview_consentsheet_licenseerror"></a>gui_preferenceview_consentsheet_licenseerror
+
+Acest eveniment raportează despre eroarea întâlnită în timpul încercării de afișare a casetei de dialog de consimțământ. Acest eveniment este esențial și este folosit pentru a corecta orice problemă cauzată de o modificare a produsului, dacă este cazul.
+
+Se colectează următoarele câmpuri: 
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **ErrorCode** - cod de eroare întâlnit
+
+- **ErrorDomain** - domeniu de eroare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="gui_preferenceview_switchchannel"></a>gui_preferenceview_switchchannel
+
+Acest eveniment raportează despre tranziția dintre canalele selectate de utilizator. Acest eveniment este folosit pentru a determina de ce clienții renunță la canalele Insider.  
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **PickedFrom** - Canal vechi
+
+- **PickedTo** - Canal nou
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="gui_updatemanager_applaunchduringupdate"></a>gui_updatemanager_applaunchduringupdate
+
+Acest eveniment raportează că a fost lansată o aplicație în timpul actualizării, iar Microsoft AutoUpdate finalizează aplicația lansată. Rețineți că lansarea unei aplicații în timp ce este actualizată poate avea drept consecință deteriorarea aplicațiilor. Vom utiliza acest eveniment pentru a ne asigura că procesul de actualizare nu este afectat de aplicația lansată înainte să fie gata de utilizare.
+ 
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul aplicației care a fost lansat în timpul actualizărilor.
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowTocheck** - preferința pentru verificarea actualizărilor
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **Success** - Valoarea Boolean a șirului care indică dacă aplicația a fost finalizată cu succes.
+
+- **UpdateID** - identificatorul actualizării aplicației.
+
+### <a name="gui_updatemanager_downloadupdateforapp"></a>gui_updatemanager_downloadupdateforapp
+
+Acest eveniment raportează despre starea finalizării descărcării pentru o actualizare. Folosim acest eveniment pentru a asigura starea de funcționare a procesului de actualizare și punctul de eroare de urmărire/adresă.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul aplicației.
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowTocheck** - preferința pentru verificarea actualizărilor
+
+- **IsRepair** - Șirul Boolean indică dacă actualizarea specială este o descărcare de reparare.
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **isRepair** - precizează dacă descărcarea a fost pentru o descărcare de reparare pentru o actualizare eșuată anterior.
+
+- **UpdateID** - identificatorul actualizării.
+
+- **UpdateName** - numele actualizării.
+
+
+### <a name="gui_updatemanager_error"></a>gui_updatemanager_error
+
+Acest eveniment raportează din nou orice eroare întâlnită în timpul actualizărilor de aplicație. Acest lucru poate indica o eroare în secvența de execuție Microsoft AutoUpdate (MAU).  Folosim acest raport cu scopul de a aplica actualizări la MAU pentru a răspunde pentru scenarii de erori comune.
+
+Se colectează următoarele câmpuri:
+
+- **App** – procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** – versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowTocheck** - preferința pentru verificarea actualizărilor
+
+- **Payload** - conține informații despre eroarea întâmpinată în timpul actualizării aplicației.
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **Success** - Valoarea Boolean a șirului care indică dacă aplicația a fost finalizată cu succes.
+
+### <a name="gui_updatemanager_installcleanupforapp"></a>gui_updatemanager_installcleanupforapp
+
+Acest eveniment indică faptul că fișierele temporare create în timpul instalării aplicației s-au curățat cu succes. Acesta face parte din pâlnia de actualizare utilizată pentru a determina starea de funcționare a actualizării aplicației.
+ 
+Se colectează următoarele câmpuri:
+
+- **App** – procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul aplicației.
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppState** – numărul întreg indică starea de aplicare după tentativa de actualizare.
+
+- **AppVersionLong** – versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowTocheck** - preferința pentru verificarea actualizărilor
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **UpdateID** – identificatorul actualizării.
+
+
+### <a name="gui_updatemanager_installsuccessforapp"></a>gui_updatemanager_installsuccessforapp
+
+Acest eveniment indică actualizarea cu succes a aplicației. Acest eveniment face parte din pâlnia de actualizare pe care o utilizăm pentru a determina starea de funcționare a actualizării.
+ 
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul aplicației.
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowTocheck** - preferința pentru verificarea actualizărilor
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **Success** - șirul Boolean indică dacă s-au instalat cu succes actualizări.
+
+- **UpdateID** - identificatorul actualizării.
+
+### <a name="gui_updatemanager_installupdateforapp"></a>gui_updatemanager_installupdateforapp
+
+Acest eveniment indică începutul procesului de instalare curent pentru o actualizare de aplicație. Acest eveniment face parte din pâlnia de actualizare a aplicației pe care o utilizăm pentru a determina starea de funcționare a actualizării.
+ 
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul aplicației.
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowTocheck** - preferința pentru verificarea actualizărilor
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **UpdateID** - identificatorul actualizării.
+
+### <a name="gui_updatemanager_queueinstallforapp"></a>gui_updatemanager_queueinstallforapp
+
+Acest eveniment indică începutul procesului de instalare curent pentru o actualizare de aplicație. Acest eveniment face parte din pâlnia de actualizare a aplicației pe care o utilizăm pentru a determina starea de funcționare a actualizării.
+ 
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul aplicației.
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowTocheck** - preferința pentru verificarea actualizărilor
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **UpdateID** - identificatorul actualizării.
+
+### <a name="gui_updatemanager_relaunchapp"></a>gui_updatemanager_relaunchapp
+
+Acest eveniment înregistrează dacă s-au relansat cu succes aplicațiile după actualizări.
+ 
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul aplicației.
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowTocheck** - preferința pentru verificarea actualizărilor
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **Success** - Valoarea Boolean a șirului care indică dacă aplicația a fost finalizată cu succes.
+
+- **UpdateID** - identificatorul actualizării.
+
+- **UpdateName** - numele actualizării.
 
 ### <a name="installdata_checkrunning"></a>installdata_checkrunning
 
@@ -7802,6 +9719,57 @@ Se colectează următoarele câmpuri:
 - **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
 
 - **SessionId** - identificatorul pentru sesiune
+
+
+### <a name="installedapp_sendcoreappleevent"></a>installedapp_sendcoreappleevent
+
+Acest eveniment indică faptul că Microsoft AutoUpdate (MAU) trimite un eveniment Apple unei aplicații înregistrate pentru a rezilia aplicația pentru a continua cu actualizarea de aplicație în așteptare. Acest eveniment este utilizat în prezent pentru a contribui la dezvoltarea viitoarelor îmbunătățiri, pentru a minimiza întreruperea utilizatorului în timpul actualizărilor aplicației. 
+
+Se colectează următoarele câmpuri:
+
+- **Acknowledged** - indică dacă aplicația vizată a recunoscut primirea evenimentului
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul pentru aplicația actualizată
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppleEventClass** -indică tipul de eveniment trimis/recunoscut
+
+- **AppleEventID** - identificator unic pentru evenimentul trimis/recunoscut
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - conține număru de înregistrări
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **Success** - indică dacă aplicația vizată a raportat reușita operațiunii
 
     
 ### <a name="installstatus_codesign"></a>installstatus_codesign
@@ -8502,6 +10470,104 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
+### <a name="installupdatestask_updatestatus"></a>installupdatestask_updatestatus
+
+Acest eveniment raportează despre starea activității de instalare. Acesta face parte dintr-o pâlnie actualizată și este utilizată pentru a determina starea de funcționare a actualizărilor aplicației.
+
+Se colectează următoarele câmpuri: 
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul pentru aplicația actualizată
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Error** - indică orice erori întâmpinate în timpul procesului de actualizare, dacă este completată
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **IOC** - indică dacă s-a utilizat caracteristica instalare la clonare
+
+- **Payload** - text static, pentru a indica începutul procesului de instalare, dacă există
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **Success** -  indică dacă procesul de instalare s-a finalizat cu succes
+
+- **UpdateID** - identificatorul pentru o actualizare de aplicație
+
+- **UpdateName** - numele actualizării așa cum apare în fișierul manifest descărcat
+
+- **UpdatePkg** - numele pachetului de actualizare aplicată
+
+
+### <a name="msupdate_cli_eventhandler"></a>msupdate_cli_eventhandler
+
+Acest eveniment este folosit pentru a calcula utilizarea diferitelor tipuri de interfețe cu linie de comandă API din Microsoft AutoUpdate (MAU).
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul aplicației care trimite interfața cu linie de comandă API către MAU.
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **EventType** - tipul de eveniment trimis de aplicație către interfața liniei de comandă MAU.
+
+- **HowTocheck** - preferința pentru verificarea actualizărilor
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+
 ### <a name="msupdate_cli_eventhandler_applyupdates_appids"></a>msupdate_cli_eventhandler_applyupdates_appids
 
 Acest eveniment indică faptul că a fost emisă o comandă CLI (interfață client-linie) pentru aplicarea unei actualizări. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
@@ -8830,6 +10896,609 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
+### <a name="sauforcedupdate_autodismiss"></a>sauforcedupdate_autodismiss
+
+Acest eveniment indică faptul că se respinge caseta de dialog de actualizare forțată afișată din cauza inactivității utilizatorului. Acest eveniment este utilizat pentru a determina volumul de actualizări forțate care continuă fără ca utilizatorii să furnizeze o intrare la notificarea afișată. Acest eveniment este folosit pentru a îmbunătăți interfața de utilizator cu scopul de a minimiza întreruperea.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+  
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - text static
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="sauforcedupdate_close"></a>sauforcedupdate_close
+
+Acest eveniment indică faptul că utilizatorul a ales să închidă caseta de dialog a actualizării forțate. Acest eveniment este utilizat pentru a determina volumul de actualizări forțate amânat de acțiunea utilizatorului. Acest eveniment este folosit pentru a îmbunătăți interfața de utilizator cu scopul de a minimiza întreruperea. 
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - text static
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="sauforcedupdate_completeautodismiss"></a>sauforcedupdate_completeautodismiss
+
+Acest eveniment indică faptul că se respinge caseta de dialog a actualizării forțate afișate din caracteristica termen limită din cauza inactivității utilizatorului. Acest eveniment este utilizat pentru a determina volumul de actualizări forțate care continuă fără ca utilizatorii să furnizeze o intrare la notificarea afișată. Acest eveniment este folosit pentru a îmbunătăți interfața de utilizator cu scopul de a minimiza întreruperea în ceea ce privește caracteristica termen limită.
+
+Se colectează următoarele câmpuri: 
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - text static
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="sauforcedupdate_completeclose"></a>sauforcedupdate_completeclose
+
+Acest eveniment indică finalizarea cu succes a unei actualizări forțate. Acest eveniment este folosit pentru a determina starea de funcționare a caracterisiticii de actualizate forțată. 
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - text static
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="sauforcedupdate_display"></a>sauforcedupdate_display
+
+Acest eveniment indică faptul că o casetă de dialog cu actualizare forțată s-a finalizat cu succes.  Acest eveniment face parte din pâlnia actualizării forțate și este folosit pentru a determina starea de funcționare a caracteristicii de actualizare forțată.
+
+Se colectează următoarele câmpuri: 
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - text static
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="sauforcedupdate_displayfinalhour"></a>sauforcedupdate_displayfinalhour
+
+Acest eveniment indică faptul că o casetă de dialog cu actualizare forțată de ultima oră a fost afișată. Acest eveniment face parte din pâlnie de actualizare forțată și este folosit pentru a determina starea de funcționare a caracteristicii de actualizare forțată.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - text static
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="sauforcedupdate_done"></a>sauforcedupdate_done
+
+Acest eveniment indică faptul că o actualizare forțată s-a finalizat cu succes. Acest eveniment face parte din pâlnie de actualizare forțată și este folosit pentru a determina starea de funcționare a caracteristicii de actualizare forțată. 
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - text static
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="sauforcedupdate_enabled"></a>sauforcedupdate_enabled
+
+Acest eveniment este declanșat atunci când Microsoft AutoUpdate (MAU) determină ca actualizarea forțată să fie aplicabilă.  Acest eveniment este folosit pentru a determina starea caracterisiticii de actualizate forțată. 
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Enabled** - indică dacă este activată actualizarea forțat
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **InvalidUpdates** - contor de actualizări forțate setat cu versiuni de actualizare nevalide
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="sauforcedupdate_forcedupdatedismiss"></a>sauforcedupdate_forcedupdatedismiss
+
+Acest eveniment indică faptul că se respinge caseta de dialog referitoare la ultima oră de actualizare forțată afișat din cauza inactivității utilizatorului. Acest eveniment este utilizat pentru a determina volumul de actualizări forțate care continuă fără ca utilizatorii să furnizeze o intrare la notificarea afișată. Acest eveniment este folosit pentru a îmbunătăți interfața de utilizator cu scopul de a minimiza întreruperea. 
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - text static
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="sauforcedupdate_forcequitandupdatenow"></a>sauforcedupdate_forcequitandupdatenow
+
+Acest eveniment indică începutul actualizării forțate inițiate de utilizator. Acest eveniment face parte din pâlnie și este folosit pentru a determina starea de funcționare a caracteristicii de actualizare forțată. 
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - text static
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune 
+
+### <a name="sauforcedupdate_forceterminate"></a>sauforcedupdate_forceterminate
+
+Acest eveniment indică începutul actualizării forțate, cu aplicația finalizată forțat.  Acest eveniment face parte din pâlnie și este folosit pentru a determina starea de funcționare a caracteristicii de actualizare forțată.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - conține numărul de aplicații de finalizat
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="sauforcedupdate_quitandupdatenow"></a>sauforcedupdate_quitandupdatenow
+
+Acest eveniment indică faptul că utilizatorul a ales să închidă aplicația și să aplice actualizarea. Acest eveniment face parte din pâlnie și este folosit pentru a determina starea de funcționare a caracteristicii de actualizare forțată. 
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - text static
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="sauforcedupdate_snooze"></a>sauforcedupdate_snooze
+
+Acest eveniment indică faptul că utilizatorul a ales să amâne actualizarea forțată. Acest eveniment face parte din pâlnie și este folosit pentru a determina starea de funcționare a caracteristicii de actualizare forțată. 
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - text static
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="sauforcedupdate_terminate"></a>sauforcedupdate_terminate
+
+Acest eveniment indică începutul actualizării forțate, cu aplicația finalizată. Acest eveniment face parte din pâlnie și este folosit pentru a determina starea de funcționare a caracteristicii de actualizare forțată.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - conține numărul de aplicații de finalizat
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="sauforcedupdate_updatenow"></a>sauforcedupdate_updatenow
+
+Acest eveniment indică faptul că utilizatorul a ales să actualizeze aplicația acum.  Acest eveniment face parte din pâlnie și este folosit pentru a determina starea de funcționare a caracteristicii de actualizare forțată.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - text static
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+
 ### <a name="sauupdateinfoprovider"></a>sauupdateinfoprovider
 
 Acest eveniment înregistrează fiecare moment în care o cheie de manifest lipsește dintr-un fișier colateral. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
@@ -8863,6 +11532,789 @@ Se colectează următoarele câmpuri:
 - **HowTocheck** - preferința pentru verificarea actualizărilor
 
 - **Payload** - conține șirul utilizat pentru căutarea locației sau dimensiunii actualizării.
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+
+### <a name="update_applaunchdetected"></a>update_applaunchdetected
+
+Acest eveniment indică faptul că a fost lansată o aplicație atunci când era în desfășurare o actualizare. Acest eveniment este folosit pentru a determina volumul de aplicații lansate în timpul actualizării și este utilizat pentru îmbunătățirea experienței de utilizator în versiunile viitoare.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul pentru aplicația actualizată
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **Success** - indică dacă aplicația lansată s-a terminat cu succes
+
+- **UpdateID** - identificatorul pentru o actualizare de aplicație
+
+### <a name="update_appterminationreceived"></a>update_appterminationreceived
+
+Acest eveniment indică faptul că o aplicație cu actualizare blocată s-a finalizat și dacă Microsoft AutoUpdate (MAU) poate continua actualizarea. Acesta face parte dintr-o pâlnie și este utilizată pentru a determina starea de funcționare a actualizărilor aplicației.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul pentru aplicația actualizată
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Error** - indică dacă există și alte instanțe de aplicație care rulează în continuare, împiedicând MAU să continue
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - text static pentru a indica ca MAU să continue actualizarea
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **UpdateID** - identificatorul pentru o actualizare de aplicație
+
+### <a name="update_blockedappclosed"></a>update_blockedappclosed
+
+Acest eveniment indică faptul că Microsoft AutoUpdate (MAU) a detectat că o aplicație cu actualizare blocată s-a închis și poate continua actualizarea. Acest eveniment face parte din pâlnie și este utilizat pentru a determina starea de funcționare a actualizărilor aplicației. 
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul pentru aplicația actualizată
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria.
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare.
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat. 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - text static
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **UpdateID** - identificatorul pentru o actualizare de aplicație
+
+### <a name="update_blockedinstallskip"></a>update_blockedinstallskip
+
+Acest eveniment înregistrează o eroare găsită atunci când se încearcă omiterea unei actualizări de aplicație. Acest eveniment este esențial și este utilizat pentru a investiga erorile raportate.  
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul pentru aplicația actualizată
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - conține informații despre eroarea întâmpinată
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="update_clientsession"></a>update_clientsession
+
+Acest eveniment este raportat atunci când se modifică starea dispozitivului de client, determinând asistentul de actualizare Microsoft să întrerupă sau să reia procesul de actualizare. Acest eveniment face parte din pâlnie și este utilizat pentru a determina starea de funcționare a actualizărilor aplicației. 
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - indică dacă Microsoft AutoUpdate (MAU) se reia sau se întrerupe
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="update_download_begin"></a>update_download_begin 
+
+Acest eveniment indică începutul procesului de actualizare a aplicației. Acesta face parte dintr-o pâlnie actualizată și este utilizată pentru a determina starea de funcționare a actualizărilor aplicației. 
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul pentru aplicația actualizată
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **IsRepair** - indică dacă actualizarea este pentru a repara actualizarea eșuată
+
+- **Payload** - indică dacă s-a încercat anterior o descărcare
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **UpdateName** - numele actualizării așa cum apare în fișierul manifest descărcat
+
+### <a name="update_download_finish"></a>update_download_finish
+
+Acest eveniment indică finalizarea fazei de descărcare pentru actualizarea aplicației. Acesta face parte dintr-o pâlnie actualizată și este utilizată pentru a determina starea de funcționare a actualizărilor aplicației.  
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul pentru aplicația actualizată
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **IsRepair** - indică dacă actualizarea este pentru a repara actualizarea eșuată
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **UpdateID** - identificatorul pentru o actualizare de aplicație
+
+- **UpdateName** - numele actualizării așa cum apare în fișierul manifest descărcat
+
+### <a name="update_downloadresume"></a>update_downloadresume
+
+Acest eveniment raportează că s-a produs o eroare în timpul ce se încerca reluarea activității de descărcare întreruptă. Acest eveniment este esențial și este utilizat pentru a investiga erorile raportate. 
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul pentru aplicația actualizată
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Error** - indică tipul erorii întâlnite
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **UpdateID** - identificatorul pentru o actualizare de aplicație
+
+### <a name="update_error"></a>update_error
+
+Acest eveniment raportează că s-a produs o eroare în timpul ce se încerca actualizarea aplicației înregistrate.  Acest eveniment este esențial și este utilizat pentru a investiga erorile raportate. 
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Error** - conține informații despre tipul de eroare întâmpinată
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - conține informații despre tipul de eroare întâmpinată
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="update_installcleanupforapp"></a>update_installcleanupforapp
+
+Acest eveniment indică faptul că instalarea actualizărilor s-a finalizat și Microsoft AutoUpdate (MAU) este în curs de curățare.  Acesta face parte din pâlnia de actualizare și îl utilizăm pentru a determina starea de funcționare a actualizărilor de aplicații.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul pentru aplicația actualizată
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppState** - starea aplicației înregistrate. Poate indica eroarea, reparare în așteptare etc.
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **UpdateID** - identificatorul pentru o actualizare de aplicație
+
+### <a name="update_installupdateforapp"></a>update_installupdateforapp
+
+Acest eveniment este folosit pentru a raporta despre începutul procesului de instalare a actualizării aplicațiilor. Acesta face parte din pâlnia de actualizare și îl utilizăm pentru a determina starea de funcționare a actualizărilor de aplicații. 
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul pentru aplicația actualizată
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Error** - Erori găsite, dacă există
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **UpdateID** - identificatorul pentru o actualizare de aplicație
+
+- **UpdateName** - numele actualizării așa cum apare în fișierul manifest descărcat
+
+### <a name="update_installupdateforapp_success"></a>update_installupdateforapp_success
+
+Acest eveniment raportează despre starea activității de instalare. Acesta face parte din pâlnia de actualizare și îl utilizăm pentru a determina starea de funcționare a actualizărilor de aplicații. 
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul pentru aplicația actualizată
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - indică dacă vizualizarea statusului a fost afișată în timpul procesului de instalare
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **Success** - indicarea reușitei returnată de la instalarea activității
+
+- **UpdateID** - identificatorul pentru o actualizare de aplicație
+
+### <a name="update_installvariance"></a>Update_InstallVariance
+
+Acest eveniment este folosit pentru a calcula indicatorul stării de funcționare a actualizării esențiale pentru MAU. Acest eveniment ne permite să determinăm indicatorii succesului caracteristicii de instalare prioritare și să verificăm integritatea caracteristicii.
+ 
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowTocheck** - preferința pentru verificarea actualizărilor
+
+- **Payload** - conține lista de ID-uri de aplicație și prioritatea lor corespunzătoare de instalare reprezentată în numere.
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="update_multipleappupdates"></a>update_multipleappupdates 
+
+Acest eveniment indică faptul că mai multe actualizări ale aplicației sunt în curs de desfășurare în fundal. Acesta face parte din pâlnia de actualizare și îl utilizăm pentru a determina starea de funcționare a actualizărilor de aplicații.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului 
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - conține informații despre numărul de aplicații actualizate
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="update_previousidnil"></a>update_previousidnil
+
+Acest eveniment indică faptul că s-a descărcat un pachet de actualizare a reparațiilor, dar nu există nicio informație de descărcare anterioară. Acest eveniment este esențial și este utilizat pentru a investiga erorile raportate. 
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul pentru aplicația actualizată
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Error** - indică tipul erorii întâlnite
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="update_queueinstallforapp"></a>update_queueinstallforapp 
+
+Acest eveniment indică faptul că un pachet de actualizare descărcat a fost plasat într-o coadă pentru instalare.  Acesta face parte din pâlnia de actualizare și îl utilizăm pentru a determina starea de funcționare a actualizărilor de aplicații.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul pentru aplicația actualizată
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - text static, pentru a indica faptul că aplicația trebuie să se închidă, dacă există
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **UpdateID** - identificatorul pentru o actualizare de aplicație
+
+- **UpdateName** - numele actualizării așa cum apare în fișierul manifest descărcat
+
+### <a name="update_relaunchafterupdate"></a>update_relaunchafterupdate 
+
+Acest eveniment indică faptul că actualizarea aplicației s-a finalizat și este relansată. Acesta face parte din pâlnia de actualizare și îl utilizăm pentru a determina starea de funcționare a actualizărilor de aplicații. 
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul pentru aplicația actualizată
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Error** - conține informații despre orice erori întâlnite în timp ce încercați să relansați aplicația
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **UpdateID** - identificatorul pentru o actualizare de aplicație
+
+### <a name="update_timerforapptermination"></a>update_timerforapptermination 
+
+Acest eveniment indică începutul/sfârșitul cronometrării pentru verificarea aplicației de stare. Acest eveniment vine la pachet și este utilizat pentru a determina dacă toate obiectele de cronometrare sunt eliminate atunci când actualizarea aplicației progresează.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - indică dacă cronometru a fost adăugat sau șters
 
 - **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
 
@@ -8952,6 +12404,45 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
+### <a name="updatecore_runnstaskcommand"></a>updatecore_runnstaskcommand
+
+Acest eveniment raportează despre o eroare în timpul încercării de a lansa o activitate. Acest eveniment este esențial și este utilizat pentru a investiga erorile raportate.  
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - conține calea către comanda executată
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
 
 ### <a name="updatecore_server_connectionfail"></a>updatecore_server_connectionfail
 
@@ -8993,6 +12484,45 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
+### <a name="updatecore_server_nullurl"></a>updatecore_server_nullurl
+
+Acest eveniment raportează o eroare care indică faptul că nu s-a putut ajunge la un anumit server. Acest eveniment este utilizat pentru a determina rată de eșec a actualizării cauzată de problema rețelei. 
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - text static
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
 
 ### <a name="updatefilterhelper_cannotretrievebuilddate"></a>updatefilterhelper_cannotretrievebuilddate
 
@@ -9034,6 +12564,86 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
+
+### <a name="updatefilterhelper_invalidappid"></a>updatefilterhelper_invalidappid
+
+Acest eveniment raportează o eroare care indică faptul că nu s-au găsit fișiere manifest care se potrivesc cu ID-ul de aplicație preluat de la răspunsul web. Acest eveniment este utilizat pentru a investiga erorile raportate.
+
+Se colectează următoarele câmpuri: 
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - conține ID-ul aplicației în răspunsul web
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="updatefilterhelper_invalidappidfromwebservices"></a>updatefilterhelper_invalidappidfromwebservices
+
+Acest eveniment raportează o eroare care indică faptul că ID-ul de aplicație preluat de la răspunsul web nu este în format așteptat. Acest eveniment este utilizat pentru a investiga erorile raportate.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - text static
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
 
 ### <a name="updatefilterhelper_invalidresponsefromupdatefiltering"></a>updatefilterhelper_invalidresponsefromupdatefiltering
 
@@ -9158,6 +12768,49 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
+### <a name="updatefinder_check_error"></a>updatefinder_check_error
+
+Acest eveniment raportează o eroare care s-a produs în timpul verificării actualizărilor. Acest eveniment este esențial și este utilizat pentru a investiga erorile raportate. 
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Code** - Codul de eroare 
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Domain** - domeniu de eroare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+ 
 ### <a name="updatefinder_check_start"></a>updatefinder_check_start
 
 Acest eveniment înregistrează fiecare moment în care inițiem o operațiune de verificare a actualizărilor. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
@@ -9363,6 +13016,48 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
+### <a name="updatefinder_offerupdates_invalidappid"></a>updatefinder_offerupdates_invalidappid
+
+Acest eveniment raportează o eroare în timp ce se încearcă să se evalueze dacă se aplică o actualizare. Acest eveniment este esențial și este utilizat pentru a investiga erorile raportate.  
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **CatalogID** - identificator pentru catalogul accesat
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **IsNullID** - indică dacă ID-ul este nul
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
 ### <a name="updatefinder_offerupdates_minoscheckfail"></a>updatefinder_offerupdates_minoscheckfail
 
 Înregistrăm fiecare moment în care am blocat o actualizare din cauză că aceasta nu a îndeplinit cerințele sistemului de operare. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
@@ -9403,6 +13098,47 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
+### <a name="updatefinder_offerupdates_missingtrigger"></a>updatefinder_offerupdates_missingtrigger
+
+Acest eveniment raportează o eroare în timp ce se încearcă să se evalueze declanșatoarele din manifestul de actualizare a aplicației descărcate. Acesta este esențial și este utilizat pentru a investiga erorile raportate.  
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **TriggerKey** - cheia declanșatoare găsită în manifest
+
+- **Triggers** - dicționarul declanșatoarelor găsit în manifest
 
 ### <a name="updatefinder_offerupdates_nullbundleforappid"></a>updatefinder_offerupdates_nullbundleforappid
 
@@ -9525,6 +13261,88 @@ Se colectează următoarele câmpuri:
 - **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
 
 - **SessionId** - identificatorul pentru sesiune
+
+### <a name="updatefinder_suite_invalidsuiteversion"></a>updatefinder_suite_invalidsuiteversion
+
+Acest eveniment raportează o eroare a versiunii suitei în timp ce se încearcă să se evalueze dacă se aplică o actualizare. Acest eveniment este esențial și este utilizat pentru a investiga erorile raportate.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **Suite** - numele suitei avută în vedere
+
+### <a name="updatefinder_suite_keyvaluemissing"></a>updatefinder_suite_keyvaluemissing
+
+Acest eveniment raportează o eroare în timpul încercării de a adăuga o aplicație la Suite. Acest eveniment este esențial și este utilizat pentru a investiga erorile raportate.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul pentru aplicația actualizată
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune 
+
+- **Suite** - numele aplicației suitei va fi adăugată
 
     
 ### <a name="updatefinder_suite_missingcollateral"></a>updatefinder_suite_missingcollateral
@@ -9895,7 +13713,96 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-    
+### <a name="updatestatus_codesign"></a>UpdateStatus_Codesign
+
+Acest eveniment raportează starea din verificarea proiectării în comun a asistentului de actualizare Microsoft care rulează după instalarea actualizărilor aplicației de client. Vom utiliza acest eveniment pentru a ne asigura că furnizăm pachetele valide și vom actualiza aplicația instalată la cea mai recentă versiune.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul pentru aplicația actualizată
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Error** - orice eroare observată în timpul procesului de verificare a proiectării în comun
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowTocheck** - preferința pentru verificarea actualizărilor
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **Success** - indică dacă verificarea proiectării în comun a fost realizată cu succes
+
+- **UpdateID** - identifică în mod unic actualizarea aplicată 
+
+- **UpdateName** - numele actualizării așa cum este descris în manifestul actualizat
+
+- **UpdatePkg** - numele pachetului de actualizare aplicat
+
+### <a name="urlutilities_getmauinfo"></a>urlutilities_getmauinfo
+
+Acest eveniment raportează că s-a produs o eroare atunci când se accesează pachetul de aplicații Microsoft AutoUpdate (MAU). Acest eveniment este esențial și este utilizat pentru a investiga erorile raportate.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - conține informații despre eroarea întâmpinată
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+   
 ### <a name="webservices_checkforsilentupdates"></a>webservices_checkforsilentupdates
 
 Acest eveniment indică faptul că au fost găsiți candidați pentru actualizarea silențioasă. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
@@ -10141,7 +14048,45 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
+### <a name="webservices_updatefiltering"></a>webservices_updatefiltering
 
+Acest eveniment indică filtrarea efectuată în lista de actualizări aplicabile prin intermediul serviciilor web. Vom folosit acest eveniment pentru a ne asigura că blocurile de aplicație funcționează corect dacă trebuie să blocăm o actualizare.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - conține informații despre numărul de actualizări blocate prin servicii web
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
 
 ### <a name="webservices_webcontent"></a>webservices_webcontent
 
@@ -10176,6 +14121,46 @@ Se colectează următoarele câmpuri:
 - **HowTocheck** - preferința pentru verificarea actualizărilor
 
 - **Payload** - conține ID-ul apelantului la serviciul web
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+### <a name="webservices_whatsnew"></a>webservices_whatsnew
+
+Acest eveniment este declanșat atunci când Microsoft AutoUpdate (MAU) interoghează servicii web pe caracteristica „Noutăți” pentru aplicațiile înregistrate. Acest eveniment este utilizat pentru a determina starea caracteristicii „Noutăți”. 
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - conține informații despre numărul de aplicații cu noutăți
 
 - **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
 
@@ -10544,7 +14529,7 @@ Următoarele câmpuri sunt colectate:
 
 - **UploadTimeInMs** - durata în milisecunde care a trecut pentru a efectua încărcarea
 
-- **WaitTimeInMs** - timpul în milisecunde între solicitarea încărcării și pornirea încărcării
+- **WaitTimeInMs** - timpul în milisecunde între solicitarea încărcării și pornirea acesteia
 
 - **WebUrl** - WebUrl-ul încărcării (conectat ca PiiWz)
 
