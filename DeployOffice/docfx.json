@@ -23,7 +23,8 @@
           "**/*.png",
           "**/*.jpg",
           "**/*.gif",
-          "**/*.svg"
+          "**/*.svg",
+          "**/*.pdf"
         ],
         "exclude": [
           "**/obj/**",
@@ -37,12 +38,16 @@
     "globalMetadata": {
       "breadcrumb_path": "/deployoffice/breadcrumb/toc.json",
       "extendBreadcrumb": "true",
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
       "bilingual_type": "hover over",
-      "searchScope": ["Deploy Office"],
+      "searchScope": [
+	  "Deploy Office"
+	  ],
       "feedback_system": "None",
       "hide_comments": true,
       "feedback_github_repo": "MicrosoftDocs/OfficeDocs-DeployOffice",
-      "feedback_product_url": "https://ODInsiders.uservoice.com" 
+      "feedback_product_url": "https://ODInsiders.uservoice.com",
+      "titleSuffix": "Deploy Office"
     },
     "fileMetadata": {},
     "template": [],
