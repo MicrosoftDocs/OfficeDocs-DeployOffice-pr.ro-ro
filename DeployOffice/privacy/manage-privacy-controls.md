@@ -15,14 +15,17 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre gestionarea controalelor de confidențialitate în Aplicații Microsoft 365 pentru întreprindere (numite anterior Office 365 ProPlus), utilizând setările de politică.
 hideEdit: true
-ms.openlocfilehash: 5f9cafff0f7baf12ed8f0f57d7561bc356fbb98b
-ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
+ms.openlocfilehash: f02714428dd580d79a3fc8f160b00d6df95c4237
+ms.sourcegitcommit: 73158b40bdc2d83bdadedeafe0fd152b449d2a44
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "45087220"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47440249"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere
+
+> [!NOTE]
+> Pentru o listă de produse Office care sunt reglementate de aceste informații despre confidențialitate, consultați [Controale de confidențialitate disponibile pentru produsele Office](products-versions-privacy-controls.md).
 
 Microsoft se angajează să vă furnizeze informațiile și controalele de care aveți nevoie pentru a face alegeri privind modul de colectare și de utilizare a datelor dvs. atunci când utilizați Aplicații Microsoft 365 pentru întreprindere (numite anterior Office 365 ProPlus).
 
@@ -46,6 +49,7 @@ Aceste setări de politică pot fi implementate utilizând fie Politica de grup,
 > - Pentru informații despre cum să gestionați controalele de confidențialitate pentru Office pentru Mac, consultați [Utilizarea preferințelor pentru a gestiona controalele de confidențialitate pentru Office pentru Mac](mac-privacy-preferences.md).
 > - Pentru mai multe informații despre setări similare pentru Office pe dispozitive iOS, consultați [Utilizați preferințele pentru a gestiona controalele de confidențialitate pentru Office pe dispozitivele iOS](ios-privacy-preferences.md).
 > - Pentru mai multe informații despre setări similare pentru Office pe dispozitivele Android, consultați [Utilizați setările de politică pentru a gestiona controalele de confidențialitate pentru Office pe dispozitivele Android](android-privacy-controls.md).
+> - Pentru informații despre controalele de confidențialitate pentru Office pentru aplicațiile web, consultați [Utilizați setările de politică pentru a gestiona controalele de confidențialitate pentru Office pentru aplicațiile web](office-web-privacy-controls.md).
 
 
 Dacă utilizați instrumentul de Gestionare a politicilor de grup, toate aceste setări de politică se află în Configurație utilizator\\Politici\\Șabloane administrative\\Microsoft Office 2016\\Confidențialitate\\Centrul de autorizare.
@@ -77,7 +81,7 @@ Pentru mai multe informații despre datele de diagnosticare, consultați linkul 
 - [Prezentare generală a controalelor de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere](overview-privacy-controls.md)
 - [Date de diagnosticare obligatorii pentru Office](required-diagnostic-data.md)
 - [Date de diagnosticare opționale pentru Office](optional-diagnostic-data.md)
-- [Utilizarea Vizualizatorului de date de diagnosticare cu Office](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
+- [Utilizarea Vizualizatorului de date de diagnosticare cu Office](https://support.microsoft.com/office/cf761ce9-d805-4c60-a339-4e07f3182855)
 
 ## <a name="policy-settings-for-connected-experiences"></a>Setările de politică pentru experiențe conectate
 
@@ -120,21 +124,11 @@ Aceste experiențe conectate sunt diferite, deoarece nu sunt acoperite de acordu
 
 Puteți utiliza setarea de politică *Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office* pentru a controla dacă aceste tipuri de experiențe conectate sunt disponibile pentru utilizatorii dvs. Dacă nu configurați această setare de politică, aceste experiențe conectate opționale vor fi disponibile pentru utilizatorii dvs.
 
-> [!NOTE]
-> Setarea politicii *Permiteți utilizarea de experiențe conectate opționale suplimentare în Office* poate fi, de asemenea, configurată să fie aplicată la următoarele aplicații Office pentru web:
-> - Excel pentru web
-> - OneNote pentru web
-> - PowerPoint pentru web
-> - Visio pentru web
-> - Word pentru web
->
-> Pentru a configura această setare de politică pentru aceste aplicații Office pentru web trebuie să utilizați [ Serviciul de politică pentru cloud Office](../overview-office-cloud-policy-service.md).
-
-Chiar dacă alegeți să puneți aceste experiențe conectate opționale la dispoziția utilizatorilor dvs., utilizatorii dvs. vor avea opțiunea de a le dezactiva ca grup, accesând [caseta de dialog pentru setările de confidențialitate](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Utilizatorii dvs. vor avea această opțiune doar dacă sunt conectați la Office cu acreditările organizației lor (la care se face uneori referire ca la contul de la locul de muncă sau de la școală), însă nu și dacă sunt conectați cu o adresă de e-mail personală.
+Chiar dacă alegeți să puneți aceste experiențe conectate opționale la dispoziția utilizatorilor dvs., utilizatorii dvs. vor avea opțiunea de a le dezactiva ca grup, accesând [caseta de dialog pentru setările de confidențialitate](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Utilizatorii dvs. vor avea această opțiune doar dacă sunt conectați la Office cu acreditările organizației lor (la care se face uneori referire ca la contul de la locul de muncă sau de la școală), însă nu și dacă sunt conectați cu o adresă de e-mail personală.
 
 De asemenea, unele dintre aceste experiențe conectate opționale sunt considerate și experiențe conectate care analizează conținut sau care descarcă conținut online. De exemplu, Inserare imagini online este o experiență conectată opțională, pe platformă Microsoft Bing, dar este considerată și o experiență conectată care descarcă conținut online. Așadar, dacă dezactivați setarea de politică *Permiteți utilizarea de experiențe conectate în Office care descarcă conținut online*, Inserare imagini online nu va fi disponibilă pentru utilizatorii dvs. Aceasta nu va fi disponibilă, chiar dacă ați activat setarea de politică *Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office*. Pentru mai multe informații despre care experiențe conectate analizează conținut sau descarcă conținut online, consultați [Experiențe conectate în Office](connected-experiences.md).
 
-Există o excepție de care trebuie să ținem cont. Setarea de politică *Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office* nu controlează experiențe care vă solicită să conectați contul LinkedIn la contul Microsoft de la locul de muncă sau de la școală. Pentru a controla aceste tipuri de experiențe, cum ar fi informațiile LinkedIn dintr-o [fișă de profil](https://support.office.com/article/365-e80f931f-5fc4-4a59-ba6e-c1e35a85b501) în Outlook, consultați [Conectați-vă la conturile LinkedIn și Microsoft](https://support.office.com/article/dc81cc70-4d64-4755-9f1c-b9536e34d381) și [Acord pentru conexiunile contului LinkedIn pentru o organizație Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/linkedin-integration).
+Există o excepție de care trebuie să ținem cont. Setarea de politică *Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office* nu controlează experiențe care vă solicită să conectați contul LinkedIn la contul Microsoft de la locul de muncă sau de la școală. Pentru a controla aceste tipuri de experiențe, cum ar fi informațiile LinkedIn de pe [ o fișă de profil](https://support.microsoft.com/office/365-e80f931f-5fc4-4a59-ba6e-c1e35a85b501) în Outlook, consultați [LinkedIn din aplicațiile și serviciile Microsoft](https://support.microsoft.com/office/dc81cc70-4d64-4755-9f1c-b9536e34d381) și [integrarea conexiunilor din contul LinkedIn în Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/linkedin-integration).
 
 ### <a name="policy-setting-for-most-connected-experiences"></a>Setarea de politică pentru cele mai conectate experiențe
 
@@ -181,7 +175,7 @@ După cum probabil știți deja, există unele setări de politică care vă per
 
 În general, dacă o setare de politică este configurată pentru a activa o anumită experiență conectată în timp ce o altă setare de politică este configurată simultan pentru a dezactiva acel tip de experiență conectată, atunci acea experiență conectată este dezactivată pentru utilizatorii dvs.
 
-## <a name="privacy-related-changes-to-the-office-ui"></a>Modificări legate de confidențialitate la interfața de utilizator Office
+## <a name="privacy-related-changes-to-the-office-ui"></a>Modificări legate de confidențialitate la interfața utilizator Office
 
 Există unele modificări la interfața utilizator (UI) din Aplicații Microsoft 365 pentru întreprindere care au legătură cu confidențialitatea, pe care utilizatorii le pot observa și în privința cărora pot pune întrebări. Aceste modificări sunt un rezultat direct al noilor controale de confidențialitate și setări de politică, disponibile începând cu versiunea 1904.
 
@@ -207,7 +201,7 @@ Iată câteva elemente noi care au fost adăugate la interfața de utilizator Of
 
 - La **Fișier** > **Cont**, utilizatorii vor vedea o opțiune nouă pentru **Confidențialitate cont** > **Gestionare setări**. La **Gestionare setări** utilizatorii pot dezactiva experiențe conectate opționale, dacă le-ați pus la dispoziție opțiunea respectivă.
 
-- La **Fișier** > **Opțiuni** > **Centru de autorizare** > **Setări centru de autorizare...** > **Opțiuni de confidențialitate,** există o opțiune pentru a permite utilizarea [Vizualizatorului de date de diagnosticare](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855) pe dispozitiv.
+- La **Fișier** > **Opțiuni** > **Centru de autorizare** > **Setări centru de autorizare...** > **Opțiuni de confidențialitate,** există o opțiune pentru a permite utilizarea [Vizualizatorului de date de diagnosticare](https://support.microsoft.com/office/cf761ce9-d805-4c60-a339-4e07f3182855) pe dispozitiv.
 
  
 ## <a name="control-privacy-settings-by-editing-the-registry"></a>Controlați setările de confidențialitate prin editarea registry
