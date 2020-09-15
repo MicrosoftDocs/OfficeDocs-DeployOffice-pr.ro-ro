@@ -13,76 +13,66 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferiți administratorilor Office o prezentare generală a datelor de serviciu obligatorii care sunt colectate despre experiențele de mod conectat din Office.
 hideEdit: true
-ms.openlocfilehash: 4b5008d1750de655601dafaa381502e708f9f9d6
-ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
+ms.openlocfilehash: faa3507708b4768ee3b2b0f51257273c31ad2de7
+ms.sourcegitcommit: 73158b40bdc2d83bdadedeafe0fd152b449d2a44
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "43992764"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47440198"
 ---
-# <a name="required-service-data-for-office"></a>Date de serviciu obligatorii pentru Office 
+# <a name="required-service-data-for-office"></a>Date de serviciu obligatorii pentru Office
 
-> [!IMPORTANT]
-> Informațiile din acest articol se aplică la versiunea 1904 sau la o versiune mai recentă a următorului software client Office instalat pe un computer care rulează Windows:
-> - Aplicații Microsoft 365 pentru întreprindere (numite anterior Office 365 ProPlus)
-> - Aplicații Microsoft 365 pentru afaceri (numite anterior Office 365 Business)
-> - Microsoft 365 Personal, Microsoft 365 Family sau alte versiuni de Office care fac parte dintr-un abonament Microsoft 365.
-> - Aplicațiile desktop Project și Visio care sunt însoțite de anumite planuri de abonament, cum ar fi Project Plan 5 sau Visio Plan 2.
->
-> Informațiile se aplică și la versiunea 16.28 sau la versiunile mai recente ale următoarelor aplicații Office pentru Mac: Excel, Outlook, OneNote, PowerPoint și Word.
+> [!NOTE]
+> Pentru o listă de produse Office care sunt reglementate de aceste informații despre confidențialitate, consultați [Controale de confidențialitate disponibile pentru produsele Office](products-versions-privacy-controls.md).
 
-Office constă din aplicațiile software client și experiențe conectate proiectate pentru a vă permite să creați, să comunicați și să colaborați mai eficient. Lucrul cu alte persoane într-un document stocat pe OneDrive pentru business sau traducerea conținutului unui document Word într-o altă limbă sunt exemple de experiențe de mod conectat.
+Office constă din aplicațiile software client și [experiențe conectate](connected-experiences.md) proiectate pentru a vă permite să creați, să comunicați și să colaborați mai eficient. Lucrul cu alte persoane într-un document stocat pe OneDrive pentru business sau traducerea conținutului unui document Word într-o altă limbă sunt exemple de experiențe de mod conectat.
 
-Datele de serviciu obligatorii sunt esențiale, deoarece ne permit să furnizăm aceste experiențe de mod conectat în cloud, precum și să contribuim la securizarea lor și la funcționarea lor așa cum așteaptă clienții noștri. Datele de serviciu obligatorii sunt alcătuite din trei tipuri de informații.
+Pe măsură ce utilizați o experiență conectată, datele se trimit și se procesează de către Microsoft pentru a vă oferi acea experiență conectată. Aceste date sunt cruciale, deoarece aceste informații ne permit să furnizăm aceste experiențe conectate bazate pe cloud. Vom face referire la aceste date ca date de serviciu necesare.
 
-- **Conținutul creat de utilizator**, care este conținutul pe care l-ați creat utilizând Office, cum ar fi textul introdus într-un document Word și este utilizat împreună cu experiența în mod conectat.
-- **Datele funcționale**, care includ informațiile necesare ca o experiență în mod conectat să efectueze activități, cum ar fi informațiile de configurație despre aplicație.
-- **Datele de diagnosticare serviciu**, care includ datele necesare pentru a menține serviciul securizat, actualizat și într-o stare de funcționare conform așteptărilor. Întrucât aceste date sunt strâns legate de experiența în mod conectat, ele sunt separate de nivelurile de date de diagnosticare obligatorii sau opționale.
+Datele de serviciu necesare pot include informații legate de funcționarea experienței conectate necesare pentru a menține serviciile subiacente sigure, actualizate și efectuarea așa cum vă așteptați. Dacă alegeți să utilizați o experiență conectată care analizează conținutul, de exemplu, Traducere în Word, textul pe care l-ați tastat și selectat pentru a-l traduce în document este, de asemenea, trimis și procesat pentru a vă oferi experiența conectată. Datele necesare serviciului pot include, de asemenea, informații necesare pentru o experiență conectată pentru a-și efectua activitatea, cum ar fi informații de configurare despre aplicația Office.
 
 ## <a name="example-of-required-service-data-for-a-connected-experience"></a>Exemple de date de serviciu obligatorii pentru experiențe în mod conectat
 
-Pentru a vă ajuta să înțelegeți datele de serviciu obligatorii, vom prezenta în continuare un exemplu ce utilizează PowerPoint Designer, care este o experiență de mod conectat pe care o puteți utiliza atunci când creați diapozitive pentru o prezentare. PowerPoint Designer vă ajută să vă îmbunătățiți diapozitivele generând automat idei de proiectare din care puteți alege. În timp ce plasați conținutul într-un diapozitiv, Designer operează în fundal, pentru a corela conținutul respectiv cu aspecte proiectate profesionist.
+Să utilizăm PowerPoint Designer drept alt exemplu pentru a afișa tipul de date de serviciu necesare trimise de o experiență conectată la Microsoft. PowerPoint Designer vă ajută să vă îmbunătățiți diapozitivele generând automat idei de proiectare din care puteți alege. În timp ce plasați conținutul într-un diapozitiv, Designer operează în fundal, pentru a corela conținutul respectiv cu aspecte proiectate profesionist.
 
-Datele de serviciu obligatorii care sunt trimise la Microsoft pentru a activa această experiență de mod conectat pentru dvs. ar putea include următoarele:
+Datele de serviciu necesare trimise de PowerPoint Designer către Microsoft pot include următoarele informații:
+- Textul sau imaginile pe care le-ați adăugat la diapozitivul dvs.
+- Diapozitivul la care lucrați și aspectul diapozitivului.
+- Dacă ideea de proiectare a fost aplicată corect la diapozitivul dvs.
+- Dacă interacțiunea dintre PowerPoint și serviciul Designer s-a efectuat așa cum vă așteptați.
 
-- *Conținut creat de utilizator*, cum ar fi text sau imagini pe care le-ați adăugat la diapozitiv.
-- *Date funcționale*, cum ar fi diapozitivul la care lucrați și aspectul său.
-- *Date de diagnosticare serviciu*, cum ar fi evenimentele care ne spun dacă ideea de proiectare a fost aplicată corect la diapozitiv și dacă apelurile de serviciu au fost efectuate corect.
+Aceste date de serviciu necesare vă ajută să vă asigurați că PowerPoint Designer rulează așa cum vă așteptați.
 
-## <a name="view-and-manage-required-service-data"></a>Vizualizarea și gestionarea datelor de serviciu obligatorii
+## <a name="manage-required-service-data"></a>Gestionarea datelor de serviciu obligatorii
 
-Puteți vedea datele de diagnosticare a serviciului utilizând Vizualizatorul de date de diagnosticare. Pentru mai multe informații, consultați [Exemple de evenimente pentru datele de diagnosticare serviciu](#examples-of-events-for-service-diagnostic-data).
+Vă oferim posibilitatea de a alege tipurile de experiențe conectate pe care doriți să le utilizați în Office, care determină apoi ce date de serviciu necesare sunt trimise către Microsoft. Dictarea în Word, de exemplu, este una dintre mai multe experiențe conectate care vă analizează conținutul. Dacă alegeți să dezactivați experiențe conectate care analizează conținutul, nu sunt trimise date de serviciu necesare pentru Dictare în Word, deoarece Dictarea în Word nu va fi disponibilă pentru utilizare. Pentru mai multe informații, consultați [Alegeți dacă aceste experiențe conectate sunt disponibile pentru a utiliza](connected-experiences.md#choose-whether-these-connected-experiences-are-available-to-use).
 
-Vă oferim capacitatea de a alege tipurile de experiențe de mod conectat pe care doriți să le utilizați în Office, care determină apoi ce date de serviciu obligatorii sunt trimise către noi. PowerPoint Designer, de exemplu, este una dintre cele câteva experiențe de mod conectat care analizează conținutul. Dacă alegeți să dezactivați experiența de mod conectat care analizează conținutul, nu se trimit către noi date de serviciu obligatorii despre PowerPoint Designer, deoarece PowerPoint Designer nu va fi disponibil pentru utilizare.
+Datele de serviciu necesare sunt separate de [date de diagnostic](overview-privacy-controls.md#diagnostic-data-sent-from-microsoft-365-apps-for-enterprise-to-microsoft) necesare sau facultative, care se referă la informații despre utilizarea software-ului Office care rulează pe dispozitivul dvs. Prin urmare, setările de confidențialitate pe care le-ați ales pentru date de diagnostic obligatorii sau opționale nu afectează dacă sunt trimise date de serviciu necesare către Microsoft.
 
-De asemenea, datele de serviciu obligatorii sunt colectate și trimise la Microsoft pentru servicii esențiale Office, cum ar fi serviciul de licențiere care confirmă că sunteți corect licențiat pentru a utiliza Office. Aceste date pentru servicii esențiale sunt trimise indiferent de alte setări legate de confidențialitate pe care le-ați configurat.
+Datele de serviciu necesare sunt, de asemenea, colectate și trimise către Microsoft pentru [serviciile esențiale](essential-services.md) ale Office, cum ar fi serviciul de licențiere care confirmă că sunteți licențiat în mod corespunzător pentru a utiliza Office. Deși puteți controla multe dintre experiențele conectate care sunt la dispoziția dvs. sau a utilizatorilor dvs. în cazul în care sunteți administratorul organizației dvs., există un set de servicii care sunt esențiale pentru modul în care funcționează Office și care, prin urmare, nu pot fi dezactivate. Datele pentru serviciile esențiale sunt întotdeauna trimise și prelucrate de Microsoft atunci când utilizați Office, indiferent de modul în care sunt configurate celelalte setări legate de confidențialitate.
 
-Pentru mai multe informații, consultați următoarele:
+Datele necesare serviciului sunt disponibile prin intermediul cererilor de servicii de date (DSRs). Pentru mai multe informații, consultați [angajamentul de respectare a confidențialității Microsoft](https://privacy.microsoft.com/privacystatement) și [solicitările de subiect de date Office 365 pentru](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-office365)GDPR și CCPA.
 
-- [Experiențe în mod conectat în Office](connected-experiences.md)
-- [Servicii esențiale pentru Office](essential-services.md)
-- [Utilizarea Vizualizatorului de date de diagnosticare cu Office](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
-
-Dacă sunteți administratorul organizației dvs., ați putea fi interesat și de următoarele:
+Dacă sunteți administrator pentru organizația dvs. și doriți să gestionați experiențele conectate, consultați următoarele articole:
 
 - [Prezentare generală a controalelor de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere](overview-privacy-controls.md)
 - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere](manage-privacy-controls.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pe dispozitivele iOS.](ios-privacy-preferences.md)
 - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office pe dispozitivele Android](android-privacy-controls.md)
+- [Utilizarea setărilor de politică pentru a gestiona controalele de confidențialitate pentru Office pentru aplicațiile web](office-web-privacy-controls.md)
 
-## <a name="examples-of-events-for-service-diagnostic-data"></a>Exemple de evenimente pentru datele de diagnosticare serviciu
+## <a name="categories-of-required-service-data"></a>Categorii de date de serviciu obligatorii
 
-Datele de diagnosticare de serviciu apar în Vizualizatorul de date de diagnosticare și sunt organizate în aceleași categorii care sunt utilizate pentru date de diagnosticare obligatorii și opționale. De exemplu, *Utilizare produse și servicii* sau *Performanță produse și servicii.*
+Datele de diagnosticare necesare sunt organizate în următoarele categorii:
 
-Evenimentele pentru datele de diagnosticare de serviciu ne furnizează informațiile necesare efectuarea unei experiențe în mod conectat așa cum așteaptă un client. De exemplu, dacă serviciul utilizat de experiența în mod conectat a început cu succes și dacă a fost disponibil atunci când a fost necesar, dacă au existat erori sau alte probleme neprevăzute (căderi) la interacțiunea cu serviciul și capacitatea de răspuns sau performanța serviciul.
+- Inventar și instalare software
+- Utilizarea produselor și a serviciilor
+- Performanța produselor și a serviciilor
+- Conectivitatea și configurarea dispozitivelor
 
-Următorul tabel oferă câteva exemple de evenimente pentru datele de diagnosticare de serviciu.
+Informațiile din aceste categorii permit Microsoft să evalueze dacă o experiență conectată sau un serviciu esențial este sigură, actualizată și funcționează așa cum vă așteptați.
 
-| **Nume**      | **Descriere**    |
-| ---------- | --------------------- |
-| Office.Excel.Coauth.SaveXrr     | Un eveniment declanșat în Excel, atunci când se utilizează serviciul de colaborare care raportează detalii despre revizuiri individuale care sunt scrise în jurnalul de revizuire. Acesta furnizează monitorizarea latenței și indică erorile din Excel care sunt legate de colaborare  |
-| Office.Excel.Coauth.CloseWorkbook  | Un eveniment declanșat în Excel atunci când utilizați serviciul de colaborare care raportează când un registru de lucru este închis. Acest lucru este necesar în determinarea erorilor cu reîncărcarea și reîmprospătarea automată. Furnizează măsurători ale succesului pentru activitățile de serviciu de colaborare.   |
-| Office.Security.OCX.NonTrustedEncounter    | Un eveniment declanșat în aplicațiile Office (inclusiv Word, Excel, Outlook, PowerPoint și Visio) atunci când un utilizator deschide un document care nu prezintă încredere și are un control ActiveX. Acesta este utilizat pentru a evalua pe larg utilizarea controalelor ActiveX încorporate în documente Office și a conduce diminuarea riscurilor de securitate ca răspuns la incidentele de securitate.  |
-| Office.Security.UrlReputation.GetUrlReputation | Un eveniment declanșat în aplicațiile Office (inclusiv Word, Excel, PowerPoint, Visio și Publisher) care urmărește succesul sau eșecul apelurilor Linkuri sigure. Acesta este utilizat pentru a vă asigura că serviciul Linkuri sigure funcționează corect și pentru a diagnostica probleme.  |
-| Office.Voice.VoiceManager.StreamingAudio   | Un eveniment declanșat în aplicațiile Office (inclusiv Word, Outlook și PowerPoint) care oferă informații despre starea de funcționare a redării în flux audio în serviciul de vorbire. Acesta conține informații despre dimensiunea audio redată în flux și despre erorile care pot apărea. Aceste informații sunt utilizate pentru a monitoriza starea de funcționare a serviciilor și pentru a diagnostica orice probleme care au fost raportate de clienți. |
+De exemplu, informațiile din categoria performanță produse și servicii pot acoperi probleme neașteptate (avarii), timpi de răspuns săraci sau performanțe sau erori de funcționalitate.
+
+Pentru categoria de utilizare a produselor și a serviciilor, este posibil să se colecteze informații care indică dacă serviciul utilizat de o experiență conectată s-a produs cu succes și a fost disponibil atunci când este necesar.

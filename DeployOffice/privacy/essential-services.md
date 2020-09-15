@@ -13,30 +13,23 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre servicii esențiale în Office, cum ar fi Clic și Pornire și Licențiere, și asigură o listă de evenimente și câmpuri de date pentru aceste servicii esențiale.
 hideEdit: true
-ms.openlocfilehash: 81694daded27994d5026d923acd36302a79acc9f
-ms.sourcegitcommit: 5fc8194df704f79d340d9e8872a03ab2b0ebc62b
+ms.openlocfilehash: 8b4c473736bfe19edffde227be009dd2555852df
+ms.sourcegitcommit: 73158b40bdc2d83bdadedeafe0fd152b449d2a44
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "46815333"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47440501"
 ---
 # <a name="essential-services-for-office"></a>Servicii esențiale pentru Office
 
-> [!IMPORTANT]
-> Informațiile din acest articol se aplică la versiunea 1904 sau la o versiune mai recentă a următorului software client Office instalat pe un computer care rulează Windows:
-> - Aplicații Microsoft 365 pentru întreprindere (numite anterior Office 365 ProPlus)
-> - Aplicații Microsoft 365 pentru afaceri (numite anterior Office 365 Business)
-> - Microsoft 365 Personal, Microsoft 365 Family sau alte versiuni de Office care fac parte dintr-un abonament Microsoft 365.
-> - Aplicațiile desktop Project și Visio care sunt însoțite de anumite planuri de abonament, cum ar fi Project Plan 5 sau Visio Plan 2.
->
-> Informațiile se aplică și la versiunea 16.28 sau la versiunile mai recente ale următoarelor aplicații Office pentru Mac: Excel, Outlook, OneNote, PowerPoint și Word.
+> [!NOTE]
+> Pentru o listă de produse Office care sunt reglementate de aceste informații despre confidențialitate, consultați [Controale de confidențialitate disponibile pentru produsele Office](products-versions-privacy-controls.md).
 
-Office constă din aplicațiile software client și experiențe conectate proiectate pentru a vă permite să creați, să comunicați și să colaborați mai eficient. Deși puteți controla multe dintre experiențele conectate care sunt la dispoziția dvs. sau a utilizatorilor dvs. în cazul în care sunteți administratorul organizației dvs., există un set de servicii care sunt esențiale pentru modul în care funcționează Office și care, prin urmare, nu pot fi dezactivate. De exemplu, serviciul de licențiere care confirmă că aveți licența corectă pentru a utiliza Office. Datele de serviciu necesare cu privire la aceste servicii sunt colectate și trimise la Microsoft, indiferent ce alte setări de politică privind confidențialitatea ați configurat. Puteți vedea aceste date utilizând Vizualizatorul de date de diagnosticare.
+Office constă din aplicațiile software client și experiențe conectate proiectate pentru a vă permite să creați, să comunicați și să colaborați mai eficient. Deși puteți controla multe dintre experiențele conectate care sunt la dispoziția dvs. sau a utilizatorilor dvs. în cazul în care sunteți administratorul organizației dvs., există un set de servicii care sunt esențiale pentru modul în care funcționează Office și care, prin urmare, nu pot fi dezactivate. De exemplu, serviciul de licențiere care confirmă că aveți licența corectă pentru a utiliza Office. Datele de serviciu necesare cu privire la aceste servicii sunt colectate și trimise la Microsoft, indiferent ce alte setări de politică privind confidențialitatea ați configurat.
 
 Pentru mai multe informații, consultați următoarele:
 
 - [Date de serviciu obligatorii pentru Office](required-service-data.md)
-- [Utilizarea Vizualizatorului de date de diagnosticare cu Office](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
 - [Experiențe conectate în Office](connected-experiences.md)
 
 Dacă sunteți administratorul organizației dvs., ați putea fi interesat și de următoarele:
@@ -46,6 +39,7 @@ Dacă sunteți administratorul organizației dvs., ați putea fi interesat și d
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pe dispozitivele iOS.](ios-privacy-preferences.md)
 - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office pe dispozitivele Android](android-privacy-controls.md)
+- [Utilizarea setărilor de politică pentru a gestiona controalele de confidențialitate pentru Office pentru aplicațiile web](office-web-privacy-controls.md)
 
 ## <a name="list-of-essential-services-for-office"></a>Listă de servicii esențiale pentru Office 
 
@@ -60,7 +54,7 @@ Următorul tabel conține o listă a serviciilor esențiale pentru Office și o 
 |[Microsoft AutoUpdate (MAU)](#microsoft-autoupdate-mau-events)|Microsoft AutoUpdate (MAU) este tehnologia utilizată pentru actualizarea aplicațiilor Microsoft produse pentru macOS, cum ar fi Office. MAU va detecta dacă sunt necesare actualizări ale aplicațiilor, inclusiv actualizări de securitate, le va descărca și le va instala.|
 |[Sincronizare OneNote](#onenote-sync-events)|OneNote pentru Mac acceptă doar blocnotesurile stocate pe internet în OneDrive sau SharePoint Online. OneNote pentru Mac sincronizează continuu toate notele utilizatorului cu OneDrive sau SharePoint Online. Acest lucru le permite utilizatorilor să deschidă, să vizualizeze și să editeze blocnotesurile de pe toate dispozitivele, astfel încât blocnotesurile lor să fie întotdeauna actualizate.
  [Configurare servicii](#services-configuration-events)  | Configurare servicii oferă capacitatea de a efectua actualizări la setările de configurare Office pentru a activa sau a dezactiva caracteristici client. Este apelat de fiecare dată când pornește o aplicație Office și oferă detalii despre alte configurații și servicii Office. Configurare servicii controlează, de asemenea, ce servicii sunt desemnate ca servicii esențiale.  |
-| [Telemetrie ](#telemetry-events)  | Serviciul de telemetrie este utilizat pentru a colecta date de diagnosticare din aplicațiile Office. Acesta permite colectarea datelor de diagnosticare generate de Office, atât datele de diagnosticare obligatorii, cât și cele opționale. De asemenea, este responsabil pentru colectarea porțiunii de date de diagnosticare a serviciului din datele de serviciu necesare pentru Office.  |
+| [Telemetrie ](#telemetry-events)  | Serviciul de telemetrie este utilizat pentru a colecta date de diagnosticare din aplicațiile Office. Acesta permite colectarea datelor de diagnosticare generate de Office, atât datele de diagnosticare obligatorii, cât și cele opționale. De asemenea, este responsabil pentru colectarea unor date de serviciu necesare pentru Office.  |
 
 ## <a name="events-and-data-fields-for-essential-services-for-office"></a>Evenimente și câmpuri de date pentru servicii esențiale pentru Office
 
@@ -70,9 +64,6 @@ Secțiunile următoare furnizează următoarele informații:
 - O descriere a fiecărui eveniment
 - O listă de câmpuri de date în fiecare eveniment
 - O descriere a fiecărui câmp de date
-
-Puteți vedea aceste evenimente utilizând Vizualizatorul de date de diagnosticare.
-
 
 
 ## <a name="authentication-events"></a>Evenimente de autentificare
@@ -3175,7 +3166,7 @@ Se colectează următoarele câmpuri:
 
 - **Tag** - ne spune la ce pas am oprit căutarea unei legături. Etichete posibile:
   - 0x03113809  Eroare lipsă conexiune la internet/serviciu în timpul validării codului PIN
-   - 0x0311380a Eroare de validare a codului PIN, trimis cu câmpul PinValidationFailure
+  - 0x0311380a Eroare de validare a codului PIN, trimis cu câmpul PinValidationFailure
   - 0x0310410f Succes, trimis cu câmpul Success
   - 0x0311380d  Erori de reîncercare (probleme de internet, erori necunoscute)
   - 0x0311380e  Erori care nu pot fi reîncercate (oferta de legătură a expirat)
@@ -14567,7 +14558,7 @@ Se colectează următoarele câmpuri:
 
 ## <a name="services-configuration-events"></a>Evenimente de configurare servicii
 
-Configurare servicii nu colectează niciun eveniment cu date necesare de diagnosticare a serviciului.
+Nu sunt colectate date necesare de serviciu de Configurația Serviciilor.
 
 ## <a name="telemetry-events"></a>Evenimente de telemetrie
 

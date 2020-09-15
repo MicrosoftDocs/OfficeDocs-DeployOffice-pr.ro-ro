@@ -15,14 +15,17 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorii Office primesc o prezentare generală a controalelor de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere (numite anterior Office 365 ProPlus), inclusiv pentru date de diagnosticare și experiențe conectate.
 hideEdit: true
-ms.openlocfilehash: f5a957d57a7c8f95503091f456aef5a9c1e0fca7
-ms.sourcegitcommit: f441b1a5f8853c0941b3e23c7781c89abf0be641
+ms.openlocfilehash: f367550169e75d0f1dbb0726e947ce8797fb1003
+ms.sourcegitcommit: 73158b40bdc2d83bdadedeafe0fd152b449d2a44
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "45087708"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "47440576"
 ---
 # <a name="overview-of-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Prezentare generală a controalelor de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere
+
+> [!NOTE]
+> Pentru o listă de produse Office care sunt reglementate de aceste informații despre confidențialitate, consultați [Controale de confidențialitate disponibile pentru produsele Office](products-versions-privacy-controls.md).
 
 Microsoft se angajează să vă furnizeze informațiile și controalele de care aveți nevoie pentru a face alegeri privind modul de colectare și de utilizare a datelor dvs. atunci când utilizați Aplicații Microsoft 365 pentru întreprindere (numite anterior Office 365 ProPlus).
 
@@ -31,17 +34,6 @@ Microsoft se angajează să vă furnizeze informațiile și controalele de care 
 - ***Experiențe conectate*** care utilizează funcționalitatea în cloud pentru a vă furniza caracteristici îmbunătățite de Office dvs. și utilizatorilor dvs.
 
 Ca parte a acestor modificări, există elemente de interfață de utilizator (UI) și setări de politică noi și actualizate.
-
-> [!IMPORTANT]
-> - Aceste modificări se aplică la Access, Excel, OneNote, Outlook, PowerPoint, Publisher și Word.
-> - Aceste modificări se aplică și pentru următoarele:
->   - Versiunea 16.28 sau la versiunile mai recente ale următoarelor aplicații Office pentru Mac: Excel, Outlook, OneNote, PowerPoint și Word.
->   - Versiunea 1904 sau versiunile mai recente ale versiunilor desktop de Project și Visio care sunt oferite cu anumite planuri de abonament, cum ar fi Project Plan 5 sau Visio Plan 2.
-> - Aceste controale de confidențialitate sunt incluse în versiunea 1908 sau în versiunile mai recente ale Canalului Enterprise semestrial (previzualizare) și ale Canalului Enterprise semestrial.
-> - Aceste controale de confidențialitate sunt disponibile pentru versiunea 2.30 și versiunile mai recente ale versiunilor iOS de Excel, OneNote, PowerPoint și Word, precum și pentru versiunea 1.17 și versiuni mai recente de Visio Viewer pentru iOS.
-> - Aceste controale de confidențialitate sunt disponibile pentru versiunea 16.0.12226.10000 și versiunile mai recente ale versiunilor Android de Excel, PowerPoint și Word, precum și pentru versiunea 16.0.12228.20004 și versiunile mai recente de OneNote pentru Android.
-> - Majoritatea aplicațiilor Office pentru web utilizează noul control de confidențialitate pentru [experiențe conectate opționale](optional-connected-experiences.md). Aceste aplicații sunt următoarele: Excel pentru web, OneNote pentru web, PowerPoint pentru web, Visio pentru web și Word pentru web. Puteți utiliza [Serviciul de politică pentru cloud Office](../overview-office-cloud-policy-service.md) pentru a configura [setarea de politică](manage-privacy-controls.md#policy-setting-for-optional-connected-experiences) corespunzătoare.
-> - Vom extinde aceste controale de confidențialitate noi și îmbunătățite la clienți Office suplimentari, inclusiv pentru Teams și aplicațiile noastre mobile. Vom oferi mai multe informații despre aceste modificări în lunile următoare. Vom continua să ascultăm cu atenție feedbackul dvs. și să facem îmbunătățiri pentru toți clienții și toate serviciile Office 365 (și Microsoft 365).
 
 ## <a name="diagnostic-data-sent-from-microsoft-365-apps-for-enterprise-to-microsoft"></a>Datele de diagnosticare trimise din Aplicații Microsoft 365 pentru întreprindere la Microsoft
 
@@ -77,7 +69,7 @@ Pentru mai multe informații, consultați următoarele:
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pe dispozitivele iOS.](ios-privacy-preferences.md)
 - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office pe dispozitivele Android](android-privacy-controls.md)
-- [Utilizarea Vizualizatorului de date de diagnosticare cu Office](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
+- [Utilizarea Vizualizatorului de date de diagnosticare cu Office](https://support.microsoft.com/office/cf761ce9-d805-4c60-a339-4e07f3182855)
 
 ## <a name="connected-experiences-for-microsoft-365-apps-for-enterprise"></a>Experiențe conectate pentru Aplicații Microsoft 365 pentru întreprindere
 
@@ -113,7 +105,7 @@ Acestea sunt experiențe conectate opționale, care nu sunt acoperite de acordul
 
 Întrucât aceste experiențe conectate opțional sunt guvernate de termeni și condiții separate, le gestionați separat din experiențele conectate menționate mai sus. Ca administrator al organizației dvs., veți putea să utilizați o setare de politică care să vă permită să alegeți dacă doriți să puneți aceste experiențe conectate opționale ca grup la dispoziția utilizatorilor dvs.  Dacă nu configurați această setare de politică, aceste experiențe conectate opționale sunt disponibile pentru utilizatorii dvs.
 
-Chiar dacă alegeți să puneți aceste experiențe conectate opționale la dispoziția utilizatorilor dvs., utilizatorii dvs. vor avea opțiunea de a dezactiva aceste experiențe conectate ca grup, accesând [caseta de dialog pentru setările de confidențialitate](https://support.office.com/article/3e7bc183-bf52-4fd0-8e6b-78978f7f121b) Utilizatorii dvs. vor avea această opțiune doar dacă sunt conectați la Office cu acreditările organizației lor (la care se face uneori referire ca la contul de la locul de muncă sau de la școală), însă nu și dacă sunt conectați cu o adresă de e-mail personală.
+Chiar dacă alegeți să puneți aceste experiențe conectate opționale la dispoziția utilizatorilor dvs., utilizatorii dvs. vor avea opțiunea de a dezactiva aceste experiențe conectate ca grup, accesând [caseta de dialog pentru setările de confidențialitate](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b) Utilizatorii dvs. vor avea această opțiune doar dacă sunt conectați la Office cu acreditările organizației lor (la care se face uneori referire ca la contul de la locul de muncă sau de la școală), însă nu și dacă sunt conectați cu o adresă de e-mail personală.
 
 Pentru mai multe informații, consultați următoarele:
 
@@ -122,24 +114,13 @@ Pentru mai multe informații, consultați următoarele:
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pe dispozitivele iOS.](ios-privacy-preferences.md)
 - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office pe dispozitivele Android](android-privacy-controls.md)
+- [Utilizarea setărilor de politică pentru a gestiona controalele de confidențialitate pentru Office pentru aplicațiile web](office-web-privacy-controls.md)
 
 ## <a name="required-service-data-for-connected-experiences"></a>Date de serviciu obligatorii pentru experiențe în mod conectat
 
-Datele de serviciu obligatorii sunt datele care ne permit să furnizăm aceste experiențe în mod conectat în cloud, precum și să contribuim la securizarea lor și la funcționarea lor așa cum este de așteptat. Trei tipuri de informații alcătuiesc datele de serviciu obligatorii.
+Pe măsură ce utilizați o experiență conectată, datele se trimit și se procesează de către Microsoft pentru a vă oferi acea experiență conectată. Aceste date sunt cruciale, deoarece aceste informații ne permit să furnizăm aceste experiențe conectate bazate pe cloud. Vom face referire la aceste date ca date de serviciu necesare.
 
-- **Conținutul creat de utilizator**, care este conținutul pe care l-ați creat utilizând Office, cum ar fi textul introdus într-un document Word.
-- **Datele funcționale**, care includ informațiile necesare ca o experiență conectată să efectueze activități, cum ar fi informațiile de configurație despre aplicație.
-- **Datele de diagnosticare serviciu**, care includ datele necesare pentru a menține serviciul securizat, actualizat și într-o stare de funcționare conform așteptărilor. Întrucât aceste date sunt strâns legate de experiența în mod conectat, ele sunt separate de nivelurile de date de diagnosticare obligatorii sau opționale.
-
-Pentru a vă ajuta să înțelegeți datele de serviciu obligatorii, în continuare se va prezenta un exemplu ce utilizează PowerPoint Designer, care este o experiență în mod conectat pe care o puteți utiliza atunci când creați diapozitive pentru o prezentare. PowerPoint Designer vă ajută să vă îmbunătățiți diapozitivele generând automat idei de proiectare din care puteți alege. În timp ce plasați conținutul într-un diapozitiv, Designer operează în fundal, pentru a corela conținutul respectiv cu aspecte proiectate profesionist.
-
-Datele de serviciu obligatorii care sunt trimise la Microsoft pentru a activa această experiență de mod conectat pentru dvs. ar putea include următoarele:
-
-- *Conținut creat de utilizator*, cum ar fi text sau imagini pe care le-ați adăugat la diapozitiv.
-- *Date funcționale*, cum ar fi diapozitivul la care lucrați și aspectul său.
-- *Date de diagnosticare serviciu*, cum ar fi evenimentele care ne spun dacă ideea de proiectare a fost aplicată corect la diapozitiv și dacă apelurile de serviciu au fost efectuate corect.
-
-Dacă alegeți să nu le oferiți utilizatorilor categoria de experiențe în mod conectat care includ PowerPoint Designer, caracteristica va fi dezactivată și niciuna dintre aceste date de serviciu obligatorii nu va fi trimisă la noi.
+Datele de serviciu necesare pot include informații legate de funcționarea experienței conectate necesare pentru a menține serviciile subiacente sigure, actualizate și efectuarea așa cum vă așteptați. Dacă alegeți să utilizați o experiență conectată care analizează conținutul, de exemplu, Traducere în Word, textul pe care l-ați tastat și selectat pentru a-l traduce în document este, de asemenea, trimis și procesat pentru a vă oferi experiența conectată. Datele necesare serviciului pot include, de asemenea, informații necesare pentru o experiență conectată pentru a-și efectua activitatea, cum ar fi informații de configurare despre aplicația Office.
 
 Pentru mai multe informații, consultați [Date de serviciu obligatorii pentru Office](required-service-data.md).
 
