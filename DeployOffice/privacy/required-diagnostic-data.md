@@ -13,23 +13,17 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre datele de diagnosticare obligatorii în Office și le furnizează o listă de evenimente și câmpuri de date.
 hideEdit: true
-ms.openlocfilehash: 777c0bdb8651a046022e8078820870b67e99f2f7
-ms.sourcegitcommit: 721c6d39465a5b0ab8e32b876c2e74bb5aaf4b81
+ms.openlocfilehash: 5772f8b3c105f56833a34f12f7d0e212fc4d55c5
+ms.sourcegitcommit: b4e08427f3e30a134fcbf86257bab5bf05a5ee82
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "46683278"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "47941004"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Date de diagnosticare obligatorii pentru Office
 
-> [!IMPORTANT]
-> Informațiile din acest articol se aplică la versiunea 1904 sau la o versiune mai recentă a următorului software client Office instalat pe un computer care rulează Windows:
-> - Aplicații Microsoft 365 pentru întreprindere (numite anterior Office 365 ProPlus)
-> - Aplicații Microsoft 365 pentru afaceri (numite anterior Office 365 Business)
-> - Microsoft 365 Personal, Microsoft 365 Family sau alte versiuni de Office care fac parte dintr-un abonament Microsoft 365.
-> - Aplicațiile desktop Project și Visio care sunt însoțite de anumite planuri de abonament, cum ar fi Project Plan 5 sau Visio Plan 2.
->
-> Informațiile se aplică și la versiunea 16.28 sau la versiunile mai recente ale următoarelor aplicații Office pentru Mac: Excel, Outlook, OneNote, PowerPoint și Word.
+> [!NOTE]
+> Pentru o listă de produse Office care sunt reglementate de aceste informații despre confidențialitate, consultați [Controale de confidențialitate disponibile pentru produsele Office](products-versions-privacy-controls.md).
 
 Datele de diagnosticare se folosesc pentru a păstra Office în siguranță și la zi, pentru a detecta, a diagnostica și a remedia problemele și pentru a îmbunătăți produsele. Aceste date nu includ numele sau adresa de e-mail a unui utilizator, nici conținutul fișierelor acestuia sau informații despre aplicații care nu au legătură cu Office.
 
@@ -42,7 +36,7 @@ Datele de diagnosticare obligatorii ajută la identificarea problemelor cu Offic
 Pentru mai multe informații despre datele de diagnosticare, consultați linkul următor:
 
 - [Date de diagnosticare opționale pentru Office](optional-diagnostic-data.md)
-- [Utilizarea Vizualizatorului de date de diagnosticare cu Office](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
+- [Utilizarea Vizualizatorului de date de diagnosticare cu Office](https://support.microsoft.com/office/cf761ce9-d805-4c60-a339-4e07f3182855)
 
 Dacă sunteți administratorul organizației dvs., ați putea fi interesat și de următoarele:
 
@@ -237,9 +231,9 @@ Această categorie conține următoarele câmpuri:
 
   - **CV** - valoare care identifică relația dintre activități și activități secundare. Ne permite să reconstruim relația dintre activități imbricate.
 
-  - **Duration** - cât timp a fost necesar pentru executarea activității. Ne permite să identificăm probleme de performanță care au impact negativ asupra experienței utilizatorilor.
+  - **Duration** - cât timp a fost necesar pentru executarea activității. Ne permite să identificăm problemele de performanță care au impact negativ asupra experienței utilizatorilor.
 
-  - **Result**.**Code** - cod definit de aplicație pentru a identifica anumite rezultate. Ne permite să stabilim detalii mai specifice ale unei erori date, cum ar fi un cod de eroare care poate fi utilizat pentru a clasifica și a remedia problemele.
+  - **Result**.**Code** - cod definit de aplicație pentru a identifica un anumit rezultat. Ne permite să stabilim detalii mai specifice ale unei erori date, cum ar fi un cod de eroare care poate fi utilizat pentru a clasifica și a remedia problemele.
 
   - **Result.Tag** - etichetă întreagă, care identifică locația din codul unde a fost generat rezultatul. Ne permite să identificăm clar locația din cod unde a fost generat un rezultat, care permite clasificarea eșecurilor.
 
@@ -365,9 +359,9 @@ Această categorie conține următoarele câmpuri:
 
   - **RuleVersion** - identificator al regulii care a generat datele dacă acestea au fost generate de o regulă. Ne permite să identificăm sursa unor date, astfel încât să putem valida și gestiona parametrii acelor evenimente.
 
-  - **SampleRate** - indicație legată de procentul de utilizatori care trimit aceste date Acest lucru ne permite să efectuăm analiza statistică a datelor, iar pentru punctele de date foarte obișnuite, nu trebuie să fie trimise de toți utilizatorii.
+  - **SampleRate** - o indicație a procentului de utilizatori care trimit această parte din date. Acest lucru ne permite să efectuăm analiza statistică a datelor, iar pentru punctele de date foarte obișnuite nu trebuie să fie trimise de toți utilizatorii.
 
-  - **SchemaVersion** - versiunea schemei utilizate pentru a genera datele de diagnosticare. Obligatoriu pentru a gestiona datele trimise de client. Acest lucru permite modificări în timp în care datele sunt trimise de la fiecare client.
+  - **SchemaVersion** - versiunea schemei utilizate pentru a genera datele de diagnosticare. Necesar pentru a gestiona datele trimise de client. Acest lucru permite modificări în timp în care datele sunt trimise de la fiecare client.
 
   - **Sequence** - contor care identifică ordinea în care un eveniment a fost generat la client. Permite ca datele primite să fie ordonate, astfel încât să putem identifica pașii care este posibil să fi condus la o problemă care afectează clienții.
 
@@ -417,7 +411,7 @@ Această categorie conține următoarele câmpuri:
 
   - **SamplingMethod** - metoda utilizată pentru a stabili politica de eșantionare. Ne permite să înțelegem ce date provin dintr-o sesiune.
 
-  - **Sequence** - identificator numeric unic pentru sesiune. Permite ordonarea sesiunilor pentru analiza acelor probleme care este posibil să fi apărut.
+  - **Sequence** - identificator numeric unic pentru sesiune. Permite ordonarea sesiunilor pentru analiza problemelor care puteau să apară.
 
   - **Start** - ora de inițializare a sesiunii de proces. Ne permite să stabilim când începe sesiunea.
 
@@ -450,7 +444,7 @@ Următoarele câmpuri de date sunt comune pentru toate evenimentele OneNote pe M
 
 - **Activity_DetachedDurationInMicroseconds** - durata de timp în care o activitate este inactivă și nu efectuează lucrări reale, dar timpul este totuși contorizat la timpul total al activității.
 
-- **Activity_DurationInMicroseconds** - perioada necesară pentru executarea activității. Ne permite să identificăm probleme de performanță care au impact negativ asupra experienței utilizatorilor.
+- **Activity_DurationInMicroseconds** - perioada necesară pentru executarea activității. Ne permite să identificăm problemele de performanță care au impact negativ asupra experienței utilizatorilor.
 
 - **Activity_Expiration** - o dată în format numeric care indică momentul în care acest eveniment va înceta trimiterea de la clienți.
 
@@ -592,7 +586,7 @@ Următoarele câmpuri de date sunt comune pentru toate evenimentele Outlook pent
 
 - **eventpriority** - prioritatea relativă a evenimentului telemetrie față de alte evenimente, astfel încât sistemele noastre să poată gestiona cu succes evenimentele care sosesc
 
-- **first_launch_date** - prima dată când a fost lansată aplicația pentru a ne ajuta să înțelegem când a început prima problemă
+- **first_launch_date** - prima dată când a fost lansată aplicația pentru a ne ajuta să înțelegem când a început o problemă
 
 - **hashed_email** - identificator sub pseudonim care reprezintă email-ul utilizatorului curent
 
@@ -731,9 +725,9 @@ Se colectează următoarele câmpuri:
 
 - **abFlights** - „NoNL:NoFlights” atunci când caracteristicile flight nu sunt configurate. În caz contrar „holdoutinfo = unknown”.
 
-- **AppSessionGuid** - identificator al unei anumite sesiuni de aplicație care începe la ora de creare a procesului și persistă până la sfârșitul procesului. Este formatat ca GUID standard pe 128 de biți, dar alcătuit din 4 părți. Aceste patru părți sunt în ordine: (1) ID-ul de proces pe 32 de biți (2) ID-ul de sesiune pe 16 biți (3) ID-ul de inițializare pe 16 biți (4) ora de creare a procesului pe 64 de biți, în UTC 100ns
+- **AppSessionGuid** - identificator al unei anumite sesiuni de aplicație care începe la ora de creare a procesului și persistă până la sfârșitul procesului. Este formatat ca GUID standard pe 128 de biți, dar alcătuit din 4 părți. Aceste patru părți sunt, în ordine: (1) ID-ul de proces pe 32 de biți (2) ID-ul de sesiune pe 16 biți (3) ID-ul de inițializare pe 16 biți (4) timpul de creare a procesului pe 64 de biți în UTC 100ns
 
-- **appVersionBuild** - numărul de versiune al aplicației.
+- **appVersionBuild** – Numărul de versiune al aplicației.
 
 - **appVersionMajor** - numărul de versiune majoră al aplicației.
 
@@ -784,13 +778,14 @@ Semnal critic utilizat pentru a ne asigura că utilizatorii noi pot lansa și ru
 #### <a name="officeonenotefirstrunfirstrunformsa"></a>Office.OneNote.FirstRun.FirstRunForMSA
 
 Semnal critic utilizat pentru a ne asigura că utilizatorii consumatori noi (cont Microsoft) pot lansa și utiliza pentru prima dată cu succes OneNote.
-Cum se folosea Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot lansa aplicația pentru prima dată, acest lucru va declanșa un incident de severitate înaltă.
+
+Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot lansa aplicația pentru prima dată, acest lucru va declanșa un incident de severitate înaltă.
 
 Se colectează următoarele câmpuri:
 
 - **Attempt** - de câte ori este necesar să încercați din nou prima experiență de rulare.
 
-- **Error A** - obiectul eroare din OneNote indică o eroare în timpul unei erori în timpul primei execuții, dacă există.
+- **Error A** - un obiect eroare din OneNote care indică o eroare în timpul primei execuții, dacă aceasta există.
 
 - **FAllowAddingGuide** - indică dacă OneNote va permite crearea unui blocnotes ghid sau nu.
 
@@ -810,7 +805,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeonenotefirstrunfirstrunfororgid"></a>Office.OneNote.FirstRun.FirstRunForOrgId
 
-Semnal critic utilizat pentru a ne asigura că utilizatorii noi de tip întreprindere (AAD/OrgID) pot lansa și rula pentru prima dată cu succes OneNote.  Cum se folosea Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot lansa aplicația pentru prima dată, acest lucru va declanșa un incident de severitate înaltă.
+Semnal critic utilizat pentru a ne asigura că utilizatorii noi de tip întreprindere (AAD/OrgID) pot lansa și rula pentru prima dată cu succes OneNote.  Telemetria utilizată pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot lansa aplicația pentru prima dată, acest lucru va declanșa un incident de severitate înaltă.
 
 - **Attempt** - de câte ori este necesar să încercați din nou prima experiență de rulare.
 
@@ -1106,9 +1101,9 @@ Se colectează următoarele câmpuri:
 
   - **ManifestsRequested** - numărul de manifeste necesare
 
-  - **ManifestsReturned** - numărul de manifeste returnate de server
+  - **ManifestsReturned** – numărul de manifeste returnate de pe server
 
-  - **ManifestsToRetrieve** - numărul de manifeste de obținut de la server
+  - **ManifestsToRetrieve** – numărul de manifeste de obținut de pe server
 
   - **ReturnedManifestsParsed** - numărul de manifeste returnate de server care au fost analizate cu succes
 
@@ -2656,7 +2651,17 @@ Se colectează următoarele câmpuri:
 
 - **Data_SilhouetteDuration**- durata de randare a fișierului deschis.
 
-- **Data_TimeSplitMeasurements**- o valoare șir care înregistrează în jurnal durata de timp petrecută în anumite apeluri de funcție, într-un format cu eticheta funcției și ora de început și durata. 
+- **Data_TimeSplitMeasurements**- o valoare șir de logare durata de timp petrecută în anumite apeluri de funcție, într-un format cu eticheta funcției și ora de început și durata. 
+
+#### <a name="officeandroiddocsuipaywallcontrolskuchoosertoggled"></a>Office.Android.DocsUI.PaywallControl.SkuChooserToggled
+
+Telemetrie de utilizare pentru a vedea de câte ori comută utilizatorul între SKU-uri diferite înainte de a încerca o achiziție. Utilizat pentru a înțelege utilizarea selectorului SKU și pentru optimizarea experienței de achiziționare în cadrul aplicației în versiunile viitoare.
+
+Se colectează următoarele câmpuri:
+
+- **EventDate** – marca de timp pentru când a avut loc evenimentul 
+
+- **SessionID** – GUID pentru conectarea evenimentelor după sesiune
 
 #### <a name="office_android_earlytelemetry_expansionfilesavailability"></a>Office_Android_EarlyTelemetry_ExpansionFilesAvailability
 
@@ -4206,7 +4211,6 @@ Evenimentul este colectat când fluxul este prezentat utilizatorului. Evenimentu
 - **hostAppRing** - populația utilizatorilor cărora le-a fost distribuită aplicația.
 
 - **properties** - conține proprietăți metadate suplimentare, colectate pentru fiecare eveniment. *[Acest eveniment a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
-  - **ClientTimeStamp** - marca de timp a momentului în care evenimentul a fost înregistrat în jurnal de către client.
 
 - **publicEventName** - nume eveniment orientat spre public.  
 
@@ -5090,6 +5094,57 @@ Se colectează următoarele câmpuri:
 
 - **Data_FirstRunPanelName** - numele panoului din care a început experiența
 
+#### <a name="officeiospaywallpaywallpresented"></a>Office.iOS.Paywall.Paywall.Presented
+
+Această telemetrie de utilizare critică este colectată atunci când se afișează controlul Paywall utilizatorului și este utilizat pentru înțelegerea experienței de achiziție în cadrul aplicației pentru utilizator și pentru optimizarea acesteia pentru versiunile viitoare.
+
+Se colectează următoarele câmpuri:
+
+- **entryPoint** - Șir – butonul/fluxul din care a fost afișat Paywall. Cum ar fi „Buton upgrade premium” sau „Primul flux de rulare”
+
+- **isFRE** - Boolean – Afișăm prima experiență de rulare sau interfața utilizator obișnuită?
+
+#### <a name="officeiospaywallpaywallstats"></a>Office.iOS.Paywall.Paywall.Stats
+
+Această metadată pe baza sesiunii este colectată atunci când este afișat utilizatorului interfața de utilizator Paywall, durata interacțiunii și dacă o achiziție a fost încercată cu sau fără succes.    Datele sunt utilizate pentru a înțelege utilizarea și starea de funcționare a întregii experiențe de plată și depanare, pentru a optimiza și a depana experiența de achiziție în cadrul aplicației în versiunile viitoare.
+
+Se colectează următoarele câmpuri:
+
+- **entryPoint** - Șir – butonul/fluxul din care a fost afișat Paywall. Cum ar fi „Buton upgrade premium” sau „Primul flux de rulare”.
+
+- **isFRE** - Boolean – Afișăm prima experiență de rulare sau interfața utilizator obișnuită?
+
+- **status** - Șir – Stare de ieșire Paywall. Cum ar fi „inițiat”, „paymentDone”, „provisionFailed”
+
+- **userDuration** - Dublu – Durata în milisecunde a timpului petrecut de utilizator în Paywall
+
+#### <a name="officeiospaywallskuchoosermorebenefitsstats"></a>Office.iOS.Paywall.SKUChooser.MoreBenefits.Stats
+
+Acest eveniment colectează caracteristicile și aplicațiile pe care le extinde utilizatorul din „Vedeți mai multe beneficii”, precum și durata și timpul consumat.  Datele sunt utilizate pentru înțelegerea caracteristicii „Vedeți mai multe beneficii” și pentru optimizarea ulterioară a experienței în versiunile viitoare.
+
+Se colectează următoarele câmpuri:
+
+- **appsExpanded** - Șir - lista separată prin virgulă de servicii/aplicații pentru care au fost extinse beneficiile.
+
+- **productId** - Șir - ID-ul produsului din App Store pentru care utilizatorul vizualizează mai multe beneficii oferite
+
+- **userDuration** - Dublu – Durata în milisecunde a timpului petrecut de utilizator pe ecranul beneficii.
+
+#### <a name="officeiospaywallskuchooserstats"></a>Office.iOS.Paywall.SKUChooser.Stats
+
+Această telemetrie de utilizare este colectată pentru a vedea cum a accesat utilizatorul selectorul SKU, cât timp a petrecut pe ecranul selectorului SKU și de ce a ieșit din selectorul SKU.  Datele sunt utilizate pentru înțelegerea utilizării selectorului SKU și pentru optimizarea experienței de achiziție în cadrul aplicației în versiunile viitoare.
+
+Se colectează următoarele câmpuri:
+
+- **entryPoint** - Șir – butonul/fluxul din care a fost afișat Paywall. Cum ar fi „Buton upgrade premium” sau „Primul flux de rulare”.
+
+- **exitReason** - Șir – motivul ieșirii din selectorul SKU. Cum ar fi „Buybutton”, „CloseButton”
+
+- **isFRE** - Boolean – Afișăm prima experiență de rulare sau interfața utilizator obișnuită?
+
+- **userDuration** - Dublu – Durata în milisecunde a timpului petrecut de utilizator în selectorul SKU.
+
+
 #### <a name="officelivepersonacardconfigurationsetaction"></a>Office.LivePersonaCard.ConfigurationSetAction
 
 Ne conectăm când utilizatorul se află într-o aplicație care încarcă un card de persoană în anticiparea utilizatorului care deschide Cardul de persoană live.  Datele sunt utilizate pentru a determina dacă respectivul card este încărcat corect. 
@@ -5541,7 +5596,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="office_officemobile_pdfviewer_pdffileoperations"></a>Office_OfficeMobile_PdfViewer_PdfFileOperations
 
-Evenimentul este colectat pentru aplicația Office pentru Android. Acesta înregistrează când are loc o operațiune de deschidere, închidere sau salvare PDF și este utilizată pentru a înțelege și a acorda prioritate experienței de utilizator bazată pe informațiile despre operațiunea cu fișierul PDF. Evenimentul ne permite să menținem operațiunile de deschidere, închidere și salvare a fișierului PDF funcționale așa cum este de așteptat și să îmbunătățim performanța operațiunilor cu fișiere PDF.
+Evenimentul este colectat pentru aplicația Office pentru Android. Acesta înregistrează când are loc o operațiune de deschidere, închidere sau salvare de .pdf și este utilizată pentru a înțelege și a acorda prioritate experienței de utilizator bazată pe informațiile despre operațiunea cu fișierul .pdf. Evenimentul ne permite să menținem operațiunile funcționale de deschidere, închidere și salvare a fișierului .pdf așa cum este de așteptat și să îmbunătățim performanța operațiunilor cu fișierele .pdf.
 
 Se colectează următoarele câmpuri:
 
@@ -5584,8 +5639,6 @@ Se colectează următoarele câmpuri:
 Evenimentul este colectat pentru aplicația Office pentru iOS. Acesta înregistrează când are loc o operațiune de deschidere, închidere sau salvare de .pdf și este utilizată pentru a înțelege și a acorda prioritate experienței de utilizator bazată pe informațiile despre operațiunea cu fișierul .pdf. Evenimentul ne permite să menținem operațiunile funcționale de deschidere, închidere și salvare a fișierului .pdf așa cum este de așteptat și să îmbunătățim performanța operațiunilor cu fișierele .pdf. 
 
 - **Data_Doc_FileOpSessionID** - ID unic pentru o sesiune de document 
-
-- **Data_Doc_URLHash** - un GUID pentru adresa URL a fișierului 
 
 - **Data_ErrorCode** - eroare în caz de erori de deschidere a fișierelor/descărcare nereușită/descărcare anulată 
 
@@ -8139,7 +8192,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="settings_action"></a>settings_action
 
-Ne permite să detectăm situațiile în care există un posibil impact negativ asupra capacității de a configura setările de aplicație, cum ar fi setările de notificare, contul de e-mail principal și configurarea semnăturii de corespondență.
+Acest eveniment colectează informații de configurare din setări. Datele ne permit să detectăm situații în care există un posibil impact negativ asupra capacității utilizatorului de a configura setările de aplicație, cum ar fi setările de notificare, contul de e-mail principal și configurarea semnăturii de e-mail.
 
 Se colectează următoarele câmpuri: 
 
@@ -8149,49 +8202,44 @@ Se colectează următoarele câmpuri:
 
 - **auth_type** - tipul de autentificare utilizat de cont, astfel încât să putem înțelege ce strat de sincronizare back-end utilizăm pentru a ne ajuta să diagnosticăm probleme 
 
-- **auth_type** - indică tipul de autentificare back-end care ne permite să știm dacă există o problemă cu un anumit tip de cont
-
-- **badge_count_state** - indică tipul de contor de ecusoane solicitat de utilizator, de ex. Fără ecusoane, Doar pentru mesajele prioritare etc. 
-
 - **changed_folder** - se capturează dacă s-a modificat un folder pentru a ne ajuta să diagnosticăm probleme. 
-
-- **changed_folder** - determină dacă această acțiune a fost arhivată, planificată sau altă acțiune.
 
 - **delete_scope** - în timpul unei ștergeri de cont, indiferent dacă ați șters contul de pe acest dispozitiv sau de pe toate dispozitivele cu Outlook.  
 
-- **delete_scope** - urmărește dacă această acțiune are legătură cu ștergerea unei persoane doar pe acest dispozitiv sau pe toate dispozitivele, dacă este cazul. 
-
 - **enabled_state** - dacă răspunsul dvs. automat, salvarea persoanelor de contact și blocarea setărilor de imagini externe sunt configurate corect  
 
-- **enabled_state** - dacă starea asociată cu acțiunea este activată
+- **notification_action** - pentru a verifica dacă ați configurat acțiuni de notificare pentru sortarea mesajelor de e-mail, pentru a ne ajuta să ne asigurăm că această setare funcționează cu succes 
 
-- **in_app_language** - limba selectată din aplicație, tipul de șir (implicit, en-US, fa, ru etc.)  
+- **notification_action_number** - pentru a verifica dacă acțiunile de notificare (acțiunea unu sau acțiunea doi) sunt configurate corect
 
-- **notification_state** - indică tipul de contor de ecusoane solicitat de utilizator, de ex. Fără ecusoane, Doar pentru mesajele prioritare etc.
+- **server_type** - asemănător cu auth_type, ne spune ce tip de cont aveți pentru a ne ajuta să diagnosticăm mai bine problemele.  Exemple: Office365, Gmail, Outlook
 
-- **server_type** - asemănător cu auth_type, ne spune ce tip de cont aveți pentru a ne ajuta să diagnosticăm mai bine problemele. Exemple**- Office365, Gmail, Outlook
+- **setting_properties** - urmărește relația proprietăților cu acțiunea de setare detaliată mai jos: 
+   - **alternate_app_icon_setting** - pictograma aplicației alternative selectate (luminos, întunecat)
+   - **auth_type** - indică tipul de autentificare back-end care ne permite să știm dacă există o problemă cu un anumit tip de cont
+   - **badge_count_state** - indică tipul de contor de ecusoane solicitat de utilizator, de ex. fără ecusoane, doar pentru mesajele prioritare etc. 
+   - **changed_folder** - determină dacă această acțiune a fost arhivată, planificată sau altă acțiune.
+   - **delete_scope** - urmărește dacă această acțiune are legătură cu ștergerea unei persoane doar pe acest dispozitiv sau pe toate dispozitivele, dacă este cazul. 
+  - **enabled_state** - dacă starea asociată cu acțiunea este activată
+  - **in_app_language** - limba selectată din aplicație, tipul de șir (implicit, en-US, fa, ru etc.)
+  - **notification_action_setting** - indică detaliile, dacă este cazul, setărilor pentru acțiunile de notificare asociate cu această acțiune
+    - **notification_action** - indică ce încerca să facă utilizatorul, de exemplu, să semnaleze, să șteargă, să arhiveze; ne permite să determinăm ce acțiune a încercat să efectueze utilizatorul asupra notificării și dacă acțiunea a fost realizată cu sau fără succes. 
+    - **notification_action_number** - indică pentru ce număr de acțiune (două din trei acțiuni sunt particularizate) a fost atribuită o acțiune de notificare, de exemplu, acțiunea unu, acțiunea doi.  Acest lucru ne ajută să determinăm dacă există o problemă cu o anumită acțiune.
+   - **notification_state** - indică tipul de contor de ecusoane solicitat de utilizator, de ex. fără ecusoane, doar pentru mesajele prioritare etc.
+   - **server_type** - indică tipul de server back-end care ne permite să știm dacă există o problemă cu un anumit tip de server
+   - **source** - indică sursa notificărilor, dacă este cazul, din setări sau setarea nu deranjați 
+   - **swipe_setting** - indică detalii despre, dacă este cazul, setările de tragere cu degetul asociate cu această acțiune
+     - **swipe_action** - indică ce încerca utilizatorul să facă, de ex. să semnaleze, să șteargă, să arhiveze, ne permite să determinăm acțiunea dorită de utilizator și dacă acțiunea nu a reușit sau nu. 
+     - **swipe_direction** - indică modul în care utilizatorul a configurat glisarea, de ex. de la stânga la dreapta sau de la dreapta la stânga. Acest lucru ne permite să determinăm dacă există o problemă cu o anumită direcție de tragere cu degetul.
+   - **ui_mode_setting** - modul selectat de UI (întunecat, luminos, setarea implicită a sistemului, baterie descărcată etc.)
+   - **signature_setting** - indică dacă setarea a fost aplicată pentru întregul cont sau pentru un cont individual
 
-- **server_type** - indică tipul de server back-end care ne permite să știm dacă există o problemă cu un anumit tip de server
-
-- **setting_properties** - urmărește relația proprietăților cu acțiunea de setare 
-
-- **signature_setting** - indică dacă setarea a fost aplicată pentru întregul cont sau pentru un cont individual
-
-- **source** - indică sursa notificărilor, dacă este cazul, din setări sau setarea nu deranjați 
-
-- **state_changed_to** - pentru a verifica dacă setarea pornit/oprit Mesaje prioritare este configurată corect 
+- **state_changed_to** - pentru a verifica dacă setarea activat/dezactivat mesaje prioritare este configurată corect 
 
 - **swipe_action** - pentru a verifica dacă ați configurat toate acțiunile de tragere cu degetul pentru sortarea mesajelor de e-mail, pentru a ne ajuta să ne asigurăm că această setare funcționează cu succes 
 
-- **swipe_action** - indică ce încerca utilizatorul să facă, de ex. să semnaleze, să șteargă, să arhiveze, ne permite să determinăm acțiunea dorită de utilizator și dacă acțiunea nu a reușit sau nu. 
-
 - **swipe_direction** - pentru a verifica dacă direcțiile de tragere (la stânga sau la dreapta) sunt configurate corect
 
-- **swipe_direction** - indică modul în care utilizatorul a configurat glisarea, de ex. de la stânga la dreapta sau de la dreapta la stânga. Acest lucru ne permite să determinăm dacă există o problemă cu o anumită direcție de tragere cu degetul.
-
-- **swipe_setting** - indică detalii despre, dacă este cazul, setările de tragere cu degetul asociate cu această acțiune
-
-- **ui_mode_setting** - modul selectat de UI (întunecat, luminos, setarea implicită a sistemului, baterie descărcată etc.)
 
 #### <a name="sidebar_action"></a>sidebar_action
 
@@ -8908,7 +8956,7 @@ Se colectează următoarele câmpuri:
 
 - **ANY_DIALOG_SHOWN**-indică dacă se afișează o casetă de dialog în timpul încărcării
 
-- **APP_SUSPEND_DURING_EVENT**-indică dacă încărcarea a fost preinstalată
+- **APP_SUSPEND_DURING_EVENT** - indică dacă încărcarea a fost preinstalată
 
 - **APP_THREAD_CREATION_WAIT_TIME_TIME_FOR_APP_THREAD_CREATION** - timp necesar pentru a crea fire de aplicație
 
@@ -10960,6 +11008,24 @@ Se colectează următoarele câmpuri:
 
 - **view_duration** - ne spune cât timp a fost necesar pentru a reda diferitele componente de calendar UI pentru a ne ajuta să detectăm probleme de performanță care influențează experiența dvs. de calendar
 
+#### <a name="contact_action"></a>contact_action
+
+Acest eveniment este declanșat de acțiuni diferite pentru persoanele de contact, vizualizarea, actualizarea și ștergerea persoanelor de contact, precum și vizualizarea listei de persoane de contact. Acest lucru este utilizat pentru a determina dacă există regresii de performanță care au legătură cu persoanele de contact.
+
+Se colectează următoarele câmpuri: 
+
+- **accounts_with_filters** - numărul conturilor cu filtre aplicate la lista de persoane de contact
+
+- **action** - acțiunea efectuată, de exemplu, vizualizarea unei persoane de contact
+ 
+- **duration_initial_view_load** - durata de la deschiderea vizualizării până la încărcarea inițială a listei de persoane de contact
+
+- **duration_show_contacts** - durata de la deschiderea vizualizării până la afișarea listei de persoane de contact
+ 
+- **total_contacts** - numărul persoanelor de contact fără filtre aplicate
+ 
+- **total_filtered_contacts** - numărul persoanelor de contact cu filtre aplicate
+
 #### <a name="conversation_load_time"></a>conversation_load_time
 
 Acest eveniment ne permite să detectăm și să remediem problemele în care există un impact de performanță perceptibil asupra încărcării conversațiilor de e-mail pentru a vă asigura că e-mailurile se încarcă așa cum vă așteptați.
@@ -11541,6 +11607,16 @@ Se colectează următoarele câmpuri:
 
 - **TypeId** - GUID pentru interfața pe care se apelează această metodă
 
+#### <a name="officeiospaywallfailedscreenretrybuttontap"></a>Office.iOS.Paywall.FailedScreen.RetryButtonTap
+
+Această telemetrie de utilizare este colectată pentru a afla când a eșuat Achiziționarea/Asigurarea accesului/Activarea, iar utilizatorul a apăsat butonul „Reîncercare”.  Utilizat pentru a depana scenariile de erori de achiziție care duc la reîncercarea și îmbunătățirea fiabilității procesului.
+
+Se colectează următoarele câmpuri:
+
+- **failureReason** - Șir – indică eroarea pentru care utilizatorul reîncearcă. Cum ar fi „provisioningFailed”, „purchaseFailed”, „activationFailed”.
+
+- **productid** - Șir – ID-ul produsului din App Store pentru care utilizatorul reîncearcă solicitarea nereușită
+
 
 #### <a name="officemanageabilityserviceapplypolicy"></a>Office.Manageability.Service.ApplyPolicy
 
@@ -11663,13 +11739,23 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officepowerpointpptandroidrehearseview"></a>Office.PowerPoint.PPT.Android.RehearseView
 
-Acest eveniment este declanșat la Stop în sesiunea de repetiții. În combinație cu Office.PowerPoint.PPT.Android.RehearseView.StartSession acesta va fi primul indicator pentru orice avarie sau eroare cu care se confruntă utilizatorul.
+Acest eveniment denotă faptul că utilizatorul a oprit sesiunea de repetiție. În combinație cu Office.PowerPoint.PPT.Android.RehearseView.StartSession acesta va fi primul indicator pentru orice avarie sau eroare cu care se confruntă utilizatorul.
 
 Se colectează următoarele câmpuri:
+
+- **ConnectionCreationTime** - timpul necesar pentru crearea conexiunilor din partea serviciului.
+
+- **CountDownAlertTime** – timpul în care a fost afișată alerta pentru numărătoarea inversă.
+
+- **CountdownInitTime–** timpul între finalizarea încărcării diapozitivelor și începutul numărătorii inverse.
 
 - **CritiqueSummary** - rezumat a ceea ce au văzut toate criticile cu numărul de utilizatori.
 
 - **ExitEventCode** - cod pentru a identifica sub care dintre scenarii utilizatorul a ieșit din sesiunea de repetare, fie că a fost scenariul erorii, fie că a ieșit cu succes. 
+
+- **FRETime** - timpul între începutul afișării ecranului FRE și momentul în care utilizatorul l-a dezactivat. 
+
+- **MicrophonePermissionTime** - timpul în care a fost afișată alerta pentru permisiunea pentru microfon, până când utilizator a selectat una dintre opțiuni.
 
 - **PauseRehearsingCount** - numărul de clicuri ale unui utilizator pe pauză de repetiție.
 
@@ -11730,7 +11816,7 @@ Se colectează următoarele câmpuri:
 
 - **FirstAudioDelayInMs** - acesta este timpul necesar în milisecunde pentru primirea primelor date audio.
 
-- **InitMediaCaptureLayerDurationInMs** - acesta este timpul necesar în milisecunde pentru a inițializa stratul de captură media/audio.
+- **InitMediaCaptureLayerDurationInMs** – acesta este timpul necesar în milisecunde pentru a inițializa stratul de captură media/audio.
 
 - **LocallyDroppedMessageCount** - acesta este numărul total de mesaje abandonate local.
 
@@ -12403,6 +12489,25 @@ Se colectează următoarele câmpuri:
 
 - **UriScheme**- schema URL
 
+#### <a name="officeandroidauthaceerrors"></a>Office.Android.AuthACEErrors
+
+Acest eveniment utilizează contul Microsoft (MAS) pentru a determina utilizatorul care încearcă să se conecteze la aplicație, timp în care este declanșată telemetria în discuție, ca parte a unei încercări nereușite.  
+
+Acest eveniment ajută cu analiza de distribuire pentru eroarea de conectare MSA care ajută la înțelegerea motivelor din spatele fluxului de conectare nereușite MSA.
+
+Se colectează următoarele câmpuri:
+
+- **ExceptionsName** - indică clasele de excepție cu privire la etichetele de excepție care au loc în timpul fluxului de conectare la contul Microsoft.
+
+- **ExceptionsTag** - indică ce excepții de flux prezente în uniune au loc pentru fluxul de conectare MSA.
+
+- **IDCRLACEErrorCode** - oferă codul de eroare care apare în timpul fluxului de conectare MSA. Coduri de eroare diferite menționate la %SRCROOT%\identity\coreapi\public\IdentityData.h
+
+- **IDCRLAuthenticationStatusErrorCode** - indică codurile de eroare pentru stările nevalide a rezultatului de autentificare din contul Microsoft (MSA).
+
+- **IDCRLUserInteractionMissingError** - indică dacă fluxul de conectare în contul Microsoft (MSA) invocat cu semnalizarea showUI ca false determină accesarea.
+
+
 #### <a name="officeandroidbcserrors"></a>Erori Office. Android. BCS.
 
 Telemetrie erori de conversie binare pentru imprimare și partajare ca PDF.  Microsoft îl utilizează pentru a identifica punctele de eroare în timpul conversiilor BCS în Word, Excel sau PowerPoint.
@@ -12423,7 +12528,7 @@ Se colectează următoarele câmpuri:
 
 - **PdfConversionHRStatus**- Cod stare conversie PDF
 
-- **PdfConversionResult**- PDF reconversie rezultat-enumerare.  Valori: "reușită", "eroare" și "anulat"
+- **PdfConversionResult**- PDF reconversie rezultat-enumerare.  Valori: „Succes”, „Nereușit” și „Anulat”
 
 - **PdfFileSize -** - Dimensiunea PDF-ului
 
@@ -12494,6 +12599,37 @@ Se colectează următoarele câmpuri:
 - **Data_ExceptionType** - un câmp text opțional care reprezintă numele excepției lansat din codul sursă.
 
 - **Data_MethodName** - text reprezentând numele metodei din codul sursă unde există o eroare.
+
+#### <a name="office_android_earlytelemetry_extractionerror"></a>Office_Android_EarlyTelemetry_ExtractionError
+
+Pentru a reduce dimensiunea aplicațiilor Office Android, aplicăm comprimarea resurselor în pachetul final. În timpul execuției, extragem mai întâi aceste resurse înainte de a le utiliza. Câteodată apar erori neașteptate în timpul efectuării extracțiilor, ceea ce duce la căderea aplicației. 
+
+Prin intermediul acestui eveniment, colectăm informații de diagnosticare legate de extracție, precum numele resursei extrase, calea de extragere etc., spațiul liber disponibil pe disk etc. Aceste date sunt colectate doar atunci când există erori de extragere.
+
+Utilizăm aceste date pentru a înțelege cauza erorilor de extragere, precum și pentru a îmbunătăți experiența de utilizator pentru aplicațiile noastre.
+
+Se colectează următoarele câmpuri:
+
+- **Data_ArchiveName** - numele resursei care este extrasă.
+
+- **Data_ArchivePath** - calea în care resursa este memorată temporar în cache.
+
+- **Data_ArchiveSizeKB** - dimensiunea resursei care este extrasă.
+ 
+- **Data_ClassName** - numele fișierului în codul sursă în care apare eroarea.
+
+- **Data_ErrorDetail** - textul care descrie mai multe detalii despre cauza erorii, precum codul de eroare etc.
+
+- **Data_ErrorMessage** - textul care descrie tipul de eroare întâmpinată în timpul extragerii.
+
+- **Data_ExtractionDestinationPath** - calea în care este salvată resursa după extragere.
+
+- **Data_FreeDiskSpaceMB** - volumul spațiului liber pe disk disponibil pe dispozitiv, măsurat în megabyți. 
+
+- **Data_ItemToExtract** - numele resursei care este extrasă.
+
+- **Data_MethodName** - numele metodei în codul sursă în care s-a produs eroarea.
+
 
 #### <a name="office_android_earlytelemetry_registryerrors"></a>Office_Android_EarlyTelemetry_RegistryErrors
 
