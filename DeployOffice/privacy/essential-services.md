@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre servicii esențiale în Office, cum ar fi Clic și Pornire și Licențiere, și asigură o listă de evenimente și câmpuri de date pentru aceste servicii esențiale.
 hideEdit: true
-ms.openlocfilehash: 8b4c473736bfe19edffde227be009dd2555852df
-ms.sourcegitcommit: 73158b40bdc2d83bdadedeafe0fd152b449d2a44
+ms.openlocfilehash: ed550129f7d3aef9e340456b5ee2d09f85c18b07
+ms.sourcegitcommit: b4e08427f3e30a134fcbf86257bab5bf05a5ee82
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47440501"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "47941040"
 ---
 # <a name="essential-services-for-office"></a>Servicii esențiale pentru Office
 
@@ -426,6 +426,461 @@ Se colectează următoarele câmpuri:
   - **Wamapi** - identifică ce WAM API este apelat
 
   - **Wamtelemetrybatch** - momentan neutilizat. În viitor, permite componentei WAM să expedieze informații suplimentare referitoare la evenimentul de autentificare.
+
+
+### <a name="officematsoneauthactionmicrosoftofficewin32"></a>Office.MATS.OneAuth.ActionMicrosoftOfficeWin32
+
+Microsoft Auth Telemetry System (MATS) este colectat atunci când Office încearcă să obțină un simbol de autentificare, fie în mod silențios, fie prin solicitare. Atunci când încercările de achiziționare eșuează, sunt incluse informații de eroare. Aceste evenimente ajută utilizatorii să nu intre în stări de autentificare întreruptă după cum urmează:
+
+1) Identifică dacă clienții pot obține cu succes un simbol de autentificare din serviciu sau dacă au intrat într-o stare de autentificare întreruptă.
+
+2) Evaluați când anume au loc modificări la nivelul clientului sau al serviciilor, dacă acestea duc la regresii critice ale fiabilității și experienței de autentificare a utilizatorului
+
+3) Atunci când apar erori, aceste semnale emit coduri de eroare importante de la componenta responsabilă (cod de client Office, biblioteci de autentificare sau servicii de autoritate) care pot fi utilizate pentru triere, diagnosticare și atenuare
+
+4) Aceste semnale alimentează diverse monitoare de pregătire pentru expediere și bună funcționare care declanșează avertizări pentru ca inginerii noștri să se implice rapid și să reducă timpul de atenuare a erorilor critice.
+
+Se colectează următoarele câmpuri:
+
+- **Accounttype** - tipul contului utilizat pentru acest eveniment de autentificare, de exemplu, consumator sau organizație.
+
+- **Actionname** - numele prietenos pentru acest eveniment, dacă s-a furnizat unul.
+
+- **Actiontype** - specifică tipul bibliotecii de autentificare în uz.
+
+- **Appaudience** - este versiunea de aplicație pentru uz intern sau extern
+
+- **Appforcedprompt** - a înlocuit aplicația memoria cache și a impus afișarea unei solicitări
+
+- **Appname** - numele aplicației care efectuează autentificarea
+
+- **Appver** - versiunea aplicației care efectuează autentificarea
+
+- **Askedforcreds** - i-a solicitat aplicația utilizatorului să introducă acreditări pentru această acțiune
+
+- **Authoutcome** - a reușit încercarea de autentificare, a eșuat sau a fost anulată
+
+- **Blockingprompt** - a lansat aplicația o solicitare care necesită interacțiune cu utilizatorul
+
+- **Correlationid** - identificatorul utilizat pentru a asocia informațiile despre acest eveniment individual cu datele de servicii
+
+- **Count** - numărul total de acțiuni agregate care au fost raportate în acest eveniment de date.
+
+- **Devicenetworkstate** - este dispozitivul conectat la internet.
+
+- **Deviceprofiletelemetryid** - ID-ul de dispozitiv anonim, utilizat pentru a măsura experiența de autentificare și fiabilitatea la nivelul dispozitivului.
+
+- **Duration** - cât a durat autentificarea
+
+- **duration_max** - durata maximă a oricăruia dintre evenimentele agregate
+
+- **duration_min** - durata minimă a oricăruia dintre evenimentele agregate
+
+- **duration_sum** - suma duratei tuturor evenimentelor agregate
+
+- **endtime** - când s-a terminat evenimentul de autentificare
+
+- **error** - codul de eroare dacă autentificarea nu a reușit
+
+- **errordescription** - scurtă descriere a erorii
+
+- **errorsource** - a provenit eroarea de la serviciu, de la biblioteca de autentificare sau de la aplicație
+
+- **eventtype** - este un eveniment care raportează un punct de date de autentificare sau un eveniment de eroare de calitate a datelor. Utilizat pentru a măsura calitatea datelor.
+
+- **from_cache** - boolean care reprezintă dacă înregistrarea este din memoria cache de bază WAM sau din plugin
+
+- **hasadaltelemetry** - indică dacă biblioteca de autentificare Azure Active Directory (ADAL) a furnizat telemetrie pentru acest eveniment.
+
+- **Identityservice** - a fost invocat serviciul Microsoft Service Account (MSA) sau Azure Active Directory (AAD)
+
+- **Interactiveauthcontainer** - ce tip de solicitare a fost afișată
+
+- **Issilent** - a fost o solicitare afișată sau a fost un eveniment de autentificare silențioasă (în fundal)
+
+- **Microsoft_ADAL_adal_version** - versiunea bibliotecii de autentificare Azure Active Directory (ADAL)
+
+- **Microsoft_ADAL_api_error_code** - codul de eroare emis de biblioteca de autentificare pentru această încercare de autentificare
+
+- **Microsoft_ADAL_api_id** - API invocat pentru această încercare de autentificare
+
+- **Microsoft_ADAL_application_name** - numele aplicației / procesului care utilizează ADAL.
+
+- **Microsoft_ADAL_application_version** - versiunea aplicației care utilizează ADAL.
+
+- **Microsoft_ADAL_authority** - URL-ul autorității Azure Active Directory responsabil pentru autentificarea utilizatorului
+
+- **Microsoft_ADAL_authority_type** - acordul de furnizare a serviciilor pentru consumator / Microsoft (MSA) vs Azure Active Directory (AAD) / de organizație; în prezent întotdeauna AAD
+
+- **Microsoft_ADAL_authority_validation_status** - specifică dacă autentificarea a fost finalizată pe partea serviciului
+
+- **Microsoft_ADAL_broker_app** - specifică dacă ADAL a utilizat un broker pentru autentificare
+
+- **Microsoft_ADAL_broker_app_used** - specifică numele brokerului (de exemplu, Windows Account Management)
+
+- **Microsoft_ADAL_broker_version** - specifică versiunea brokerului, dacă este utilizat
+
+- **Microsoft_ADAL_cache_event_count** - numărul de evenimente cache efectuate de ADAL în timpul regăsirii simbolului
+
+- **Microsoft_ADAL_cache_event_count_max** - dacă acest semnal este agregat, numărul maxim de evenimente cache ale oricăruia dintre evenimentele agregate
+
+- **Microsoft_ADAL_cache_event_count_min** - dacă acest semnal este agregat, numărul minim de evenimente cache ale oricăruia dintre evenimentele agregate
+
+- **Microsoft_ADAL_cache_event_count_sum** - dacă acest semnal este agregat, suma evenimentelor cache ale tuturor evenimentelor agregate
+
+- **Microsoft_ADAL_cache_read_count** - de câte ori a citit API din cache-ul de pe disc. Prezent dacă a existat cel puțin o citire
+
+- **Microsoft_ADAL_cache_read_error_count** - de câte ori a eșuat citirea cache de pe disc. Este prezent dacă a existat cel puțin o nereușită
+
+- **Microsoft_ADAL_cache_read_last_error** - codul de eroare ADAL. Prezent dacă a existat cel puțin o citire nereușită
+
+- **Microsoft_ADAL_cache_read_last_system_error** - codul de eroare de sistem.  Este prezent dacă a existat cel puțin o citire nereușită
+
+- **Microsoft_ADAL_cache_write_count** - de câte ori a scris API în cache-ul de pe disc. Prezent dacă a existat cel puțin o scriere
+
+- **Microsoft_ADAL_cache_write_error_count** - de câte ori a eșuat scrierea în cache-ul de pe disc. Prezent dacă a existat cel puțin o nereușită
+
+- **Microsoft_ADAL_cache_write_last_error** - codul de eroare ADAL. Prezent dacă a existat cel puțin o scriere nereușită
+
+- **Microsoft_ADAL_cache_write_last_system_error** - codul de eroare de sistem. Prezent dacă a existat cel puțin o scriere nereușită
+
+- **Microsoft_ADAL_client_id** - ID aplicație Azure Active Directory hash
+
+- **Microsoft_ADAL_device_id** - ID dispozitiv local generat de ADAL.
+
+- **Microsoft_ADAL_error_domain** - domeniul/componenta care a generat codul de eroare.
+
+- **Microsoft_ADAL_error_protocol_code** - codul de eroare de protocol OAuth returnat de serviciu, înregistrat de ADAL.
+
+- **Microsoft_ADAL_extended_expires_on_setting** - specificarea adevărat/fals dacă simbolul are o durată de viață extinsă
+
+- **Microsoft_ADAL_http_event_count** - numărul solicitărilor HTTP generate de ADAL.
+
+- **Microsoft_ADAL_idp** - Furnizorul de identitate (idp) utilizat de ADAL.
+
+- **Microsoft_ADAL_network_event_count** - contorizarea apelurilor de rețea efectuate de ADAL.
+
+- **Microsoft_ADAL_http_event_count_max** - dacă acest semnal este agregat, numărul maxim de apeluri http efectuate de ADAL
+
+- **Microsoft_ADAL_http_event_count_min** - dacă acest semnal este agregat, numărul minim de apeluri http efectuate de ADAL
+
+- **Microsoft_ADAL_http_event_count_sum** - dacă semnalul este agregat, suma apelurilor http efectuate de ADAL
+
+- **Microsoft_ADAL_network_event_count_max** - dacă acest semnal este agregat, numărul maxim de apeluri de rețea efectuate de ADAL din orice eveniment agregat
+
+- **Microsoft_ADAL_network_event_count_min** - dacă acest semnal este agregat, numărul minim de apeluri de rețea efectuate de ADAL din orice eveniment agregat
+
+- **Microsoft_ADAL_network_event_count_sum** - dacă acest semnal este agregat, suma apelurilor de rețea efectuate de ADAL din toate evenimentele agregate
+
+- **Microsoft_ADAL_is_silent_ui** - specificarea adevărat/fals dacă UI a fost afișată (solicitare) de ADAL
+
+- **Microsoft_ADAL_is_successfull** - specificarea adevărat/fals dacă ADAL API a reușit (MacOS)
+
+- **Microsoft_ADAL_is_successful** - specificarea adevărat/fals dacă ADAL API a reușit 
+
+- **Microsoft_ADAL_logging_pii_enabled** - specificarea adevărat/fals dacă modul înregistrare în jurnal completă ADAL este activat. Aceste date sunt înregistrate în jurnal doar local, fără să fie emise în telemetrie
+
+- **Microsoft_ADAL_ntlm** - specificarea adevărat/fals dacă ADAL a utilizat autentificarea de bază (NTLM).
+
+- **Microsoft_ADAL_oauth_error_code** - codul de eroare de protocol OAuth returnată de serviciu
+
+- **Microsoft_ADAL_prompt_behavior** - parametru de conectare sau niciunul transferat la serviciu pentru a specifica dacă interfața cu utilizatorul poate fi afișată
+
+- **Microsoft_ADAL_request_id** - GUID tranzacțional pentru solicitarea emisă de ADAL pentru serviciu
+
+- **Microsoft_ADAL_response_code** - codul de răspuns de rețea de la serviciu
+
+- **Microsoft_ADAL_response_time** - cât timp a fost necesar serviciului pentru a reveni la ADAL
+
+- **Microsoft_ADAL_response_time_max** - dacă semnalul este agregat, timpul maxim necesar pentru ca ADAL să revină de la API printre oricare dintre evenimentele agregate
+
+- **Microsoft_ADAL_response_time_min** - dacă semnalul este agregat, timpul minim necesar serviciului pentru a răspunde la ADAL printre oricare dintre evenimentele agregate
+
+- **Microsoft_ADAL_response_time_sum** - dacă semnalul este agregat, suma timpului necesar pentru ca ADAL să revină de la API printre toate evenimentele agregate
+
+- **Microsoft_ADAL_rt_age** - vârsta simbolului de reîmprospătare
+
+- **Microsoft_ADAL_server_error_code** - codul de eroare returnat de server
+
+- **Microsoft_ADAL_server_sub_error_code** - subcodul de eroare returnată de server pentru a contribui la clarificarea motivului pentru care solicitarea nu a reușit
+
+- **Microsoft_ADAL_spe_info** - specificarea adevărat/fals dacă utilizatorul a utilizat cercul interior Secure Production Enterprise (numai angajații Microsoft)
+
+- **Microsoft_ADAL_spe_ring** - specificarea adevărat/fals dacă utilizatorul a utilizat cercul interior Secure Production Enterprise (numai angajații Microsoft)
+
+- **Microsoft_ADAL_start_time** - ora la care a fost efectuat apelul ADAL API
+
+- **Microsoft_ADAL_status** - starea de succes/eroare în invocația generală ADAL
+
+- **Microsoft_ADAL_stop_time** - ora la care apelul ADAL API a fost returnat
+
+- **Microsoft_ADAL_telemetry_pii_enabled** - specificarea adevărat/fals dacă modul de telemetrie completă ADAL este activat. Numele este un termen impropriu, deoarece nu sunt emise PII/EUII
+
+- **Microsoft_ADAL_tenant_id** - un GUID care identifică entitatea găzduită căreia îi aparține utilizatorul autentificat
+
+- **Microsoft_ADAL_token_acquisition_from_context** - descrie comportamentul ADAL pe baza simbolurilor din contextul de autentificare
+
+- **Microsoft_ADAL_token_frt_status** - starea simbolului de reîmprospătare: dacă a fost încercat, nu este necesar, nu a fost găsit sau a fost șters.
+
+- **Microsoft_ADAL_token_mrrt_status** - starea MultiResourceRefreshToken: dacă a fost încercat, nu este necesar, nu a fost găsit sau a fost șters.
+
+- **Microsoft_ADAL_token_rt_status** - starea simbolului de reîmprospătare: dacă a fost încercat, nu este necesar, nu a fost găsit sau a fost șters.
+
+- **Microsoft_ADAL_token_type** - simbolul de reîmprospătare (RT) sau simbolul de reîmprospătare cu resurse multiple (MRRT)
+
+- **Microsoft_ADAL_ui_event_count** - numărul de solicitări afișate utilizatorului. Posibil să fi fost silențios
+
+- **Microsoft_ADAL_user_cancel** - adevărat/fals dacă fereastra interfeței cu utilizatorul a fost anulată
+
+- **Microsoft_ADAL_x_ms_request_id** - ID de solicitare suplimentară furnizat în antetul de rețea la serviciu de ADAL
+
+- **Microsoft_ADAL_x_client_cpu** - informații despre arhitectura CPU a dispozitivului
+
+- **Microsoft_ADAL_x_client_os** - versiunea sistemului de operare al dispozitivului.
+
+- **Microsoft_ADAL_x_client_sku** - numele SKU pentru sistemul de operare al dispozitivului.
+
+- **Microsoft_ADAL_x_client_ver** - versiunea bibliotecii ADAL.
+
+- **MSAL_all_error_tags** - toate etichetele de eroare întâlnite de biblioteca de autentificare Microsoft (MSAL) în timpul fluxului de autentificare.
+
+- **MSAL_api_error_code** - dacă MSAL întâlnește o eroare din sistemul de operare, codurile de eroare ale platformei sunt stocate aici.
+
+- **MSAL_api_error_context** - șir ce conține detalii suplimentare ce poate fi citit de oameni despre ultima eroare MSAL întâlnită. 
+
+- **MSAL_api_error_tag** - șir unic pentru locul în cod unde s-a produs eroarea.
+
+- **MSAL_api_name** - numele API-ului de nivel superior MSAL, apelat pentru a porni acest flux de autentificare.
+
+- **MSAL_api_status_code** - starea codului MSAL returnat pentru acest rezultat al fluxului de autentificare.
+
+- **MSAL_auth_flow** - pașii MSAL încercați în timpul acestui flux de autentificare (AT, PRT, LRT, FRT, ART, IRT). Separat prin simbolul bară verticală „|” pentru analiză simplă.
+
+- **MSAL_auth_flow_last_error** - codul de eroare primit de la server pe penultimul element din AuthFLow. (De exemplu: dacă AuthFlow = "PRT|LRT", eroarea PRT ar fi în AuthFlowLastError).
+
+- **MSAL_authority_type** - a fost această solicitare pentru un utilizator: AAD, Federativ sau MSA.
+
+- **MSAL_broker_app_used** - a fost folosită o aplicație broker în acest flux de autentificare.
+
+- **MSAL_client_id** - ID-ul de client al aplicației de apelare
+
+- **MSAL_correlation_id** - GUID unic pentru acest eveniment, utilizat pentru a asocia acțiunile din jurnalele de client, de server și de aplicații.
+
+- **MSAL_delete_token** - lista simbolurilor care au fost șterse din memoria cache în timpul fluxului de autentificare.
+
+- **MSAL_http_call_count** - numărul apelurilor HTTP efectuate de MSAL în timpul fluxului de autentificare.
+
+- **MSAL_is_successful** - a fost fluxul de autentificare reușit.
+
+- **MSAL_last_http_response_code** - dacă MSAL a efectuat unul sau mai multe apeluri HTTP, acesta este ultimul cod de răspuns HTTP primit.
+
+- **MSAL_msal_version** - șir versiune MSAL, format X.X.X+(„OneAuth”, „local” sau un hash de comitere). 
+
+- **MSAL_read_token** - simboluri citite din cache (AT, ART, FRT, LRT, IRT, PRT, EAT [EAT = AT-ul expirat a fost citit, dar a fost eliminat]).
+
+- **MSAL_read_token_last_error** - dacă MSAL a întâlnit o eroare la citirea din cache, vom stoca informațiile aici. (De exemplu: eroare de citire disc din SO, eroare portchei în MacOS).
+
+- **MSAL_request_duration** - cât a durat solicitarea de când s-a apelat API-ul de nivel superior MSAL, până când v-am returnat un rezultat.
+
+- **MSAL_request_id** - ID-ul de solicitare pentru ultimul apel efectuat către serviciul de simbol de securitate Microsoft.
+
+- **MSAL_server_error_code** - codul specific de eroare numeric al serviciului de simbol de securitate Microsoft, dacă am primit unul.
+
+- **MSAL_server_spe_ring** - informațiile cercului Secure Production Enterprise al serviciului de simbol de securitate Microsoft, dacă le-am primit.
+
+- **MSAL_server_suberror_code** - șir de cod specific de suberoare al serviciului de simbol de securitate Microsoft, dacă am primit unul.
+
+- **MSAL_start_time** - ora la care a fost începută solicitarea MSAL la API-ul public de nivel superior.
+
+- **MSAL_stop_time** - ora la care s-a finalizat procesarea solicitării și s-a returnat rezultatul apelantului.
+
+- **MSAL_tenant_id** - GUID Microsoft care identifică entitatea găzduită în care există utilizatorul.
+
+- **MSAL_ui_event_count** - numărul solicitărilor IU pe care le-a afișat MSAL pe ecran.
+
+- **MSAL_wam_telemetry** - conține un lot de date de telemetrie WAM într-un șir JSON care va fi analizat și convertit la câmpurile din acest document care provin din WAM.
+
+- **MSAL_was_request_throttled** - adevărat dacă MSAL a reglat această solicitare și a împiedicat-o să lovească rețeaua. Dacă acest lucru este vreodată adevărat, este cel mai probabil că există o buclă în aplicația de apelare.
+
+- **MSAL_write_token** - simbolurile care au fost scrise în cache  (AT, ART, FRT, LRT, IRT, PRT, EAT [EAT = AT-ul expirat a fost citit, dar a fost eliminat]).
+
+- **MSAL_write_token_last_error** - dacă MSAL a întâlnit o eroare la scrierea în cache, vom stoca informațiile aici. (De exemplu: eroare de citire disc din SO, eroare portchei în MacOS).
+
+- **oneauth_api** - OneAuth API invocat pentru această încercare de autentificare.
+
+- **oneauth_transactionuploadid** - GUID care specifică un apel individual către OneAuth API.
+
+- **oneauth_version** - versiunea OneAuth SDK.
+
+- **Platform** - Platforma sistemului de operare (0: Windows desktop, 1: Android, 2: iOS, 3: MacOS, 4: UWP)
+
+- **Promptreasoncorrelationid** - un identificator de corelare care poate fi utilizat pentru a căuta un eveniment de autentificare anterior, care este utilizat pentru a explica de ce i s-a solicitat utilizatorului să se autentifice.
+
+- **Resource** - resursa pentru care se solicită un simbol.
+
+- **Scenarioid** - mai multe evenimente pot aparține unui singur scenariu, de ex., scenariul poate fi adăugarea unui cont nou, dar există mai multe solicitări care apar ca parte a scenariului respectiv. Acest identificator activează corelarea acelor evenimente conexe.
+
+- **Scenarioname** - numele scenariului de aplicație în care se solicită autentificarea, de ex., prima inițializare, verificarea licenței, etc.
+
+- **Scope** - domeniul pentru care se solicită un simbol.
+
+- **Sdkver** - versiunea bibliotecii de sisteme de telemetrie de autentificare Microsoft utilizată pentru a produce aceste date
+
+- **Sessionid** - identificatorul pentru sesiunea de boot
+
+- **Starttime** - ora la care a început evenimentul de autentificare.
+
+- **Tenantid** - GUID de identificare a entității găzduite căreia îi aparține utilizatorul autentificat (în cazuri non-ADAL)
+
+- **Uploadid** - GUID unic pentru acest eveniment, utilizat pentru deduplicare
+
+- **wamapi** - identifică care API Web Account Management (WAM) este denumit
+
+- **wamtelemetrybatch** - momentan neutilizat. În viitor, permite componentei WAM să expedieze informații suplimentare referitoare la evenimentul de autentificare
+
+- **WAM_account_join_on_end** - starea asocierii contului la sfârșitul unei operațiuni WAM.  Valori posibile: „principal”, „secundar”, „not_joined”
+
+- **WAM_account_join_on_start** - starea asocierii contului la începutul unei operațiuni WAM.  Valori posibile: „principal”, „secundar”, „not_joined”
+
+- **WAM_api_error_code** - dacă a venit un răspuns de eroare de la pluginul AAD WAM, acest câmp va exista și va conține codul de eroare
+
+- **WAM_authority** - șir ce conține URL-ul de autoritate—acesta ar trebui să fie punctul final login.windows.net utilizat
+
+- **WAM_broker_version** - prezent, dacă a fost utilizat WAM, acesta este șirul de versiune de broker
+
+- **WAM_cache_event_count** - numărul evenimentelor cache WAM în cadrul operațiunii
+
+- **WAM_client_id** - identificator pentru asocierea la date de servicii, acest lucru identifică aplicația client.
+
+- **WAM_correlation_id** - Identificator de asociere a evenimentelor cu datele serviciilor
+
+- **WAM_device_join** - starea asocierii dispozitivului; valorile posibile sunt „aadj”, „haadj”
+
+- **WAM_network_event_count** - prezent, dacă a avut loc cel puțin un apel de rețea; numărul apelurilor de rețea către serviciul pentru operațiunea WAM
+
+- **WAM_network_status** - prezent, dacă a avut loc cel puțin un apel de rețea, conține un cod de eroare HTTP, dacă solicitarea de rețea nu a reușit.
+
+- **WAM_idp** - specifică dacă a fost utilizat consumatorul WAM sau pluginul de autentificare de organizație.
+
+- **WAM_is_cached** - specifică dacă răspunsul furnizat de WAM a fost preluat din cache.
+
+- **WAM_oauth_error_code** - conține codul de eroare returnată de serviciu ca parte din protocolul OAuth.
+
+- **WAM_prompt_behavior** - specifică dacă această solicitare este forțată de aplicație, sau, dacă această solicitare poate omite solicitarea dacă realizează autentificarea în mod silențios.
+
+- **WAM_provider_id** - specifică punctul final Microsoft pentru autoritatea utilizată în scenariul de autentificare.
+
+- **WAM_redirect_uri** - URL-ul de redirecționare înregistrat pentru aplicația în Azure Active Directory.
+
+- **WAM_resource**  - resursa pentru care se solicită un simbol.
+
+- **WAM_server_error_code** - codul de eroare returnată de serviciu către WAM.
+
+- **WAM_server_sub_code** - un cod de eroare suplimentar utilizat pentru a descompune și mai mult cauzele erorii, returnat de serviciu.
+
+- **WAM_silent_code** - codul de eroare întâmpinat de încercarea internă silențioasă WAM, înainte de a solicita utilizatorului.
+
+- **WAM_silent_mats** - neutilizat.
+
+- **WAM_silent_message** - mesajul de eroare asociat cu încercarea internă silențioasă efectuată de WAM, înainte de a solicita utilizatorului.
+
+- **WAM_silent_status** - starea de succes/eroare pentru încercarea internă silențioasă efectuată de WAM, înainte de a solicita utilizatorului.
+
+- **WAM_tenant_id** - un identificator pentru entitatea găzduită căreia îi aparține utilizatorul AAD autentificat, dacă este returnat de serviciu
+
+- **WAM_ui_visible** - prezent dacă cel puțin o fereastră IU a fost afișată utilizatorului, fie „adevărat” sau „fals”
+
+- **WAM_x_ms_clitelem** - prezent dacă serviciul returnează „x-ms-clitelem”
+
+
+### <a name="officematsoneauthtransactionmicrosoftofficewin32"></a>Office.MATS.OneAuth.TransactionMicrosoftOfficeWin32
+
+Microsoft Auth Telemetry System (MATS) este colectat atunci când Office încearcă să obțină un simbol de autentificare, fie în mod silențios, fie prin solicitare. Acest eveniment este părintele unuia sau a mai multor evenimente, permițând evenimentele conexe să fie grupate împreună. Aceste evenimente ajută utilizatorii să nu intre în stări de autentificare întreruptă după cum urmează:
+
+1) Identifică dacă clienții pot obține cu succes un simbol de autentificare din serviciu sau dacă au intrat într-o stare de autentificare întreruptă.
+
+2) Evaluați când anume au loc modificări la nivelul clientului sau al serviciilor, dacă acestea duc la regresii critice ale fiabilității și experienței de autentificare a utilizatorului
+
+3) Atunci când apar erori, aceste semnale emit coduri de eroare importante de la componenta responsabilă (cod de client Office, biblioteci de autentificare sau servicii de autoritate) care pot fi utilizate pentru triere, diagnosticare și atenuare
+
+4) Aceste semnale alimentează diverse monitoare de pregătire pentru expediere și bună funcționare care declanșează avertizări pentru ca inginerii noștri să se implice rapid și să reducă timpul de atenuare a erorilor critice.
+
+Se colectează următoarele câmpuri:
+
+- **Actiontype** - singura valoare este „oneauthtransaction”.
+
+- **Appaudience** - public aplicație (automatizare, pre-producție și producție)
+
+- **Appname** - numele aplicației
+
+- **Appver** - versiunea aplicației
+
+- **Authoutcome** - a reușit încercarea de autentificare, a eșuat sau a fost anulată
+
+- **Correlationid** - identificatorul utilizat pentru a asocia informațiile despre acest eveniment individual cu datele de servicii
+
+- **Count** - de câte ori s-a produs eroarea
+
+- **Devicenetworkstate** - starea de rețea a dispozitivului
+
+- **Deviceprofiletelemetryid** - ID-ul de telemetrie a profilului pentru dispozitiv (șir utilizat de MATS pentru a identifica un anumit dispozitiv)
+
+- **duration_max** - durata minimă, în milisecunde, a tranzacțiilor agregate pe acest semnal.
+
+- **duration_min** - durata maximă, în milisecunde, a tranzacțiilor agregate pe acest semnal.
+
+- **duration_sum** - suma duratei, în milisecunde, a tranzacțiilor agregate pe acest semnal.
+
+- **Endtime** - ora la care s-a terminat tranzacția OneAuth.
+
+- **Error** - codul stării OneAuth.
+
+- **Eventtype** - tipul evenimentului
+
+- **Issilent** - fals, dacă a fost afișat IU; adevărat, dacă a fost un eveniment de fundal.
+
+- **oneauth_api** - specifică API-ul public de OneAuth care a fost invocat.
+
+- **oneauth_Domain** - dacă apelul API a dus la o eroare, acesta este domeniul de sistem al acelei erori.
+
+- **oneauth_ErrorCode** - codul de eroare care reprezintă starea de eroare internă pentru OneAuth. Înlocuiește câmpul vechi oneauth_errortag.
+
+- **oneauth_errortag** - identificatorul numeric pentru o linie de cod, responsabilă pentru generarea unei erori.
+
+- **oneauth_ExecutionFlow** - o serie de etichete care identifică calea de cod a invocației API.
+
+- **oneauth_internalerror** - codul de eroare care reprezintă starea de eroare internă pentru OneAuth.
+
+- **oneauth_ServerErrorCode** - eroare de server returnată la OneAuth la încheierea acestui apel API, dacă aceasta a avut loc.
+
+- **oneauth_SystemErrorCode** - eroarea de sistem returnată la OneAuth la încheierea acestui apel API, dacă aceasta a avut loc.
+
+- **oneauth_Tag** - eticheta OneAuth care desemnează locul final din cod, atins la încheierea acestui apel API.
+
+- **oneauth_transactionuploadid** - specifică GUID-ul intern generat aleatoriu care mapează invocația specifică a unui API OneAuth.
+
+- **oneauth_version** - versiunea OneAuth SDK.
+
+- **Platform** - platforma SO (0: Win32, 1: Android, 2: iOS, 3: MacOS, 4: WinRT
+
+- **Scenarioname** - numele scenariului pentru care autentificarea este necesară, specificat de aplicația de apelare.
+
+- **Schemaver** - versiunea schemei
+
+- **Sdkver** - versiunea de MATS sdk
+
+- **Sessionid** - ID-ul sesiunii
+
+- **severityError** - severitatea
+
+- **starttime** - ora la care a început tranzacția OneAuth.
+
+- **Timestamp** - marca de timp
+
+- **Type** - tipul erorii
+
+- **Uploaded** - identificator unic pentru acest eveniment, pentru scopuri de duplicare.
+
 
 ### <a name="onenotesigninssoexternalappsaccountfound"></a>OneNote.SignIn.SSOExternalAppsAccountFound
  
@@ -2794,6 +3249,101 @@ Se colectează următoarele câmpuri:
 
 ## <a name="licensing-events"></a>Evenimente de licențiere
 
+### <a name="officeandroiddocsuipaywallcontrolautoredeempendingpurchaseresult"></a>Office.Android.DocsUI.PaywallControl.AutoRedeemPendingPurchaseResult
+
+Telemetrie de inginerie critică pentru a înregistra rezultatul unei încercări automate de a încerca să valorificați achiziționările în așteptare a unui utilizator. Telemetrie de produs utilizate pentru reconcilierea informațiilor de tranzacție de achiziție cu sistemul de comerț Microsoft pentru a activa beneficiile asociate abonamentului.
+
+Se colectează următoarele câmpuri:
+
+- **EventDate** – marca de timp pentru când a avut loc evenimentul 
+
+- **Result** – Int care denotă rezultatul de enumerare a operațiunii. 
+
+- **SessionID** – GUID pentru conectarea evenimentelor după sesiune
+
+### <a name="officeandroiddocsuipaywallcontrolpaywalluishown"></a>Office.Android.DocsUI.PaywallControl.PaywallUIShown
+
+Telemetrie de utilizare critică pentru atunci când este afișat control paywall pentru utilizator. Utilizat pentru a înțelege experiența de achiziționare în cadrul aplicației pentru utilizator și pentru a optimiza același lucru în versiunile viitoare.
+
+Se colectează următoarele câmpuri:
+
+- **EventDate** – marca de timp pentru când a avut loc evenimentul 
+
+- **IsModeFRE** – boolean pentru a indica tipul experienței, dialogul Upsell sau selectorul SKU
+
+- **SessionID** – GUID pentru conectarea evenimentelor după sesiune
+
+### <a name="officeandroiddocsuipaywallcontrolpurchasebuttonclicked"></a>Office.Android.DocsUI.PaywallControl.PurchaseButtonClicked
+
+Telemetrie de utilizare critică pentru a afla când apasă utilizatorul butonul Achiziționare. Utilizat pentru a deduce modelul de utilizare și măsurătoarea de conversie pentru utilizatorii care încearcă să achiziționeze un abonament în aplicație.
+
+Se colectează următoarele câmpuri:
+
+- **EventDate** – marca de timp pentru când a avut loc evenimentul
+
+- **IsDefaultSku** – boolean care indică dacă utilizatorul încearcă să achiziționeze Sku, afișat primul/implicit
+
+- **ProductID** – șir ce identifică care utilizator de abonament încearcă să achiziționeze cum este configurat în magazin
+
+- **SessionID** – GUID pentru conectarea evenimentelor după sesiune
+
+### <a name="officeandroiddocsuipaywallcontrolpurchaseresult"></a>Office.Android.DocsUI.PaywallControl.PurchaseResult
+
+Telemetria de inginerie critică pentru înregistrarea rezultatului de încercare de achiziționare declanșată manual de utilizator. Telemetrie de produs utilizate pentru reconcilierea informațiilor de tranzacție de achiziție cu sistemul de comerț Microsoft pentru a activa beneficiile asociate abonamentului.
+
+Se colectează următoarele câmpuri:
+
+- **EventDate** – marca de timp pentru când a avut loc evenimentul 
+
+- **IsModeFre** – boolean pentru a indica dacă achiziționarea a fost efectuată din dialogul ecranul FRE upsell sau din selectorul SKU
+
+- **Result** – Int care denotă rezultatul de enumerare a operațiunii.
+
+- **SessionID** – GUID pentru conectarea evenimentelor după sesiune
+
+
+### <a name="officeandroiddocsuipaywallcontrolseeallfeaturesanalytics"></a>Office.Android.DocsUI.PaywallControl.SeeAllFeaturesAnalytics
+
+Colectăm această telemetrie de utilizare pentru a vedea cât timp este consumat de utilizator pe ecranul „Vedeți mai multe beneficii”.  Datele sunt utilizate pentru înțelegerea utilizării caracteristicii „Vedeți mai multe beneficii” și pentru optimizarea ulterioară a experienței în versiunile viitoare.
+
+Se colectează următoarele câmpuri:
+
+- **Duration** - întreg lung care indică timpul consumat, în milisecunde, de către utilizator pe ecranul „Vedeți toate caracteristicile”
+
+- **EventDate** – marca de timp pentru când a avut loc evenimentul 
+
+- **MostExplored** - număr care denotă indexul elementului cel mai comutat din lista de aplicații M365 și caracteristicile lor
+
+- **SessionID** - identificatorul unic global (GUID) pentru a conecta evenimentele după sesiune
+
+### <a name="officeandroiddocsuipaywallcontrolskuchooseranalytics"></a>Office.Android.DocsUI.PaywallControl.SkuChooserAnalytics
+
+Telemetria de utilizare pentru a vedea cât timp petrece utilizatorul pe ecranul selector SKU. Telemetria de utilizare pentru a vedea cât timp petrece utilizatorul pe ecranul selector Sku.
+
+Se colectează următoarele câmpuri:
+
+- **Duration** – întreg lung care indică timpul consumat, în milisecunde, de către utilizator, pe ecranul selector SKU
+
+- **EventDate** – marca de timp pentru când a avut loc evenimentul
+
+- **SessionID** – GUID pentru conectarea evenimentelor după sesiune
+
+
+### <a name="officeiospaywallskuchooserbuybuttontap"></a>Office.iOS.Paywall.SKUChooser.BuyButtonTap
+
+Telemetria de utilizare critică este colectată pentru a indica momentul în care utilizatorul apasă butonul Achiziționare/Cumpărare.  Datele sunt utilizate pentru a deduce modelul de utilizare și măsurătoarea de conversie pentru utilizatorii care încearcă să achiziționeze un abonament în aplicație.
+
+Se colectează următoarele câmpuri:
+
+- **entryPoint** - Șir – butonul/fluxul din care a fost afișat Paywall. Cum ar fi „Buton upgrade premium” sau „Primul flux de rulare”.
+
+- **isDefaultSKU** - Bool - dacă utilizatorul achiziționează produsul recomandat de noi prin afișarea acestuia ca implicit.
+
+- **productId** - Șir – ID-ul de produs din App Store al produsului pentru care a fost apăsat butonul Achiziționare
+
+- **toggleCount** - Int – de câte ori a comutat utilizatorul între vizualizare diferitelor produse înainte de a apăsa butonul Achiziționare, în sesiunea curentă de Paywall.
+
+
 ### <a name="officelicensingaccepteulaforcurrentlicense"></a>Office.Licensing.AcceptEulaForCurrentLicense 
 
 Se colectează atunci când utilizatorul obține licența și acceptă Termenii licenței pentru licența curentă
@@ -2810,7 +3360,7 @@ Se colectează următoarele câmpuri:
 
 După configurarea licenței pe computer, încercăm să activăm licența prin apelarea serviciului AVS. Acesta raportează rezultatul apelului de activare
 
-Este de importanță critică în a detecta câți utilizatori întâmpină probleme de activare. Dispunem de o detectare a anomaliilor pentru a detecta orice regresie. Acest lucru este de importanța critică absolută deoarece avem o dependență externă de AVS iar acest semnal indică dacă partenerii noștri externi sunt sănătoși. Este utilizat, de asemenea, în scopuri de diagnosticare și sănătate a sistemului dacă un utilizator raportează o problemă cu computerul
+Este de importanță critică în a detecta câți utilizatori întâmpină probleme de activare. Dispunem de o detectare a anomaliilor pentru a detecta orice regresie. Acest lucru este de importanța critică absolută, deoarece avem o dependență externă de AVS, iar acest semnal indică dacă partenerii noștri externi sunt sănătoși. Este utilizat, de asemenea, în scopuri de diagnosticare și sănătate a sistemului dacă un utilizator raportează o problemă cu computerul
 
 Se colectează următoarele câmpuri:
 
@@ -2834,7 +3384,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officelicensingexpirationdialogshown"></a>Office.Licensing.ExpirationDialogShown
 
-Se colectează când afișăm utilizatorului caseta de dialog de expirare care spune că licența a expirat. Este de importanță critică pentru a detecta dacă utilizatorul se află în stare bună, fără să îi lipsească funcționalități, este utilizat pentru sănătatea sistemului și în scopuri de diagnosticare dacă un utilizator raportează o problemă cu computerul
+Acest lucru este colectat atunci când afișăm caseta de dialog de expirare utilizatorului care spune că licența lor a expirat. Este de importanță critică pentru a detecta dacă utilizatorul se află în stare bună, fără să îi lipsească funcționalități, este utilizat pentru sănătatea sistemului și în scopuri de diagnosticare dacă un utilizator raportează o problemă cu computerul
 
 Se colectează următoarele câmpuri:
 
@@ -2923,7 +3473,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officelicensinginvokelicensewizard"></a>Office.Licensing.InvokeLicenseWizard
 
-În cazul în care observăm probleme cu fluxul de lucru de Activare, declanșăm un expert de licențe și trimitem acest semnal pentru a indica același lucru Este de importanță critică pentru a detecta dacă utilizatorul se află în stare bună, fără să îi lipsească funcționalități, este utilizat pentru sănătatea sistemului și în scopuri de diagnosticare dacă un utilizator raportează o problemă cu computerul
+În cazul în care vedem probleme cu fluxul de lucru de activare, declanșăm un expert de licență și trimitem acest semnal pentru a indica același lucru. Este de importanță critică pentru a detecta dacă utilizatorul se află în stare bună, fără să îi lipsească funcționalități, este utilizat pentru sănătatea sistemului și în scopuri de diagnosticare dacă un utilizator raportează o problemă cu computerul
 
 Se colectează următoarele câmpuri:
 
@@ -2955,7 +3505,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officelicensingloadidentityticket"></a>Office.Licensing.LoadIdentityTicket
 
-În cadrul procesului în care se încearcă licențierea dispozitivului, aplicația încearcă să încarce identitatea utilizatorului pentru a vedea dacă utilizatorul are drepturi de Office sau nu. Acest eveniment raportează succesul sau eșecul în aceeași situație împreună cu codul de eroare Este de importanță critică pentru a detecta dacă utilizatorul se află în stare bună, fără să îi lipsească funcționalități, este utilizat pentru sănătatea sistemului și în scopuri de diagnosticare dacă un utilizator raportează o problemă cu computerul.
+În cadrul procesului în care se încearcă licențierea dispozitivului, aplicația încearcă să încarce identitatea utilizatorului pentru a vedea dacă utilizatorul are drepturi de Office sau nu. Acest eveniment raportează succesul sau eșecul împreună cu codul de eroare. Este de importanță critică pentru a detecta dacă utilizatorul se află în stare bună, fără să îi lipsească funcționalități, este utilizat pentru sănătatea sistemului și în scopuri de diagnosticare dacă un utilizator raportează o problemă cu computerul.
 
 Se colectează următoarele câmpuri:
 
@@ -2991,7 +3541,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officelicensingnulvalidationfullvalidation"></a>Office.Licensing.Nul.Validation.FullValidation 
 
-Se colectează la fiecare sesiune a unui dispozitiv care rulează pe stiva de licențiere modernă. Raportează starea de licențiere a computerului și erorile vizualizate de utilizator din cauza cărora nu poate să utilizeze aplicația. Acest eveniment indică dacă computerul utilizatorului este în bună stare de funcționare pe stiva de licențiere modernă. Avem configurată o detectare a anomaliilor pentru acest eveniment pentru a indica dacă o regresie provoacă un comportament inadecvat al utilizatorului. Și acesta este de importanță critică la diagnosticarea problemelor utilizatorului și pentru monitorizarea sănătății sistemului.
+Se colectează la fiecare sesiune a unui dispozitiv care rulează pe stiva de licențiere modernă. Se raportează starea de licențiere a computerului și erorile vizualizate de utilizator din cauza cărora nu poate să utilizeze aplicația. Acest eveniment indică dacă computerul utilizatorului este în bună stare de funcționare în  stiva de licențiere modernă. Avem configurată o detectare a anomaliilor pentru acest eveniment pentru a indica dacă o regresie provoacă un comportament inadecvat al utilizatorului. Și acesta este de importanță critică la diagnosticarea problemelor utilizatorului și pentru monitorizarea sănătății sistemului.
 
 Se colectează următoarele câmpuri:
 
@@ -3075,7 +3625,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officelicensingsearchforsessiontoken"></a>Office.Licensing.SearchForSessionToken
 
-Dacă utilizatorul rulează în modul de activare computer partajat, încercăm să căutăm un simbol de sesiune pe computer care permite utilizatorului să folosească aplicația. Acest eveniment raportează succesul sau eșecul scenariului împreună cu codul de eroare Este de importanță critică pentru a detecta dacă utilizatorul se află în stare bună, fără să îi lipsească funcționalități, este utilizat pentru sănătatea sistemului și în scopuri de diagnosticare dacă un utilizator raportează o problemă cu computerul.
+Dacă utilizatorul rulează în modul de activare computer partajat, încercăm să căutăm un simbol de sesiune pe computer care permite utilizatorului să folosească aplicația. Acest eveniment raportează succesul sau eșecul scenariului împreună cu codul de eroare. Este de importanță critică pentru a detecta dacă utilizatorul se află în stare bună, fără să îi lipsească funcționalități, este utilizat pentru sănătatea sistemului și în scopuri de diagnosticare dacă un utilizator raportează o problemă cu computerul.
 
 Se colectează următoarele câmpuri:
 
@@ -4113,7 +4663,7 @@ Se colectează următoarele câmpuri:
     
 ### <a name="controller_checkwindow_noupdatefoundok"></a>controller_checkwindow_noupdatefoundok
 
-Acest eveniment indică faptul că în urma unei verificări a actualizărilor nu au fost găsite actualizări. Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite corect, pentru a optimiza încărcarea serviciilor și pentru a defini frecvența de verificare a actualizărilor. De asemenea, dorim să optimizăm cadență noastră de lansare pe baza așteptărilor utilizatorilor față de actualizări.
+Acest eveniment indică faptul că o verificare a actualizărilor nu au fost găsite actualizări. Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite corect, pentru a optimiza încărcarea serviciilor și pentru a defini frecvența de verificare a actualizărilor. De asemenea, dorim să optimizăm cadență noastră de lansare pe baza așteptărilor utilizatorilor față de actualizări.
 
 Se colectează următoarele câmpuri:
 
@@ -8021,6 +8571,8 @@ Se colectează următoarele câmpuri:
 
 - **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
 
+- **ScreenLocked** – indicați dacă descărcarea este inițiată în spatele ecranului blocat
+
 - **SessionId** - identificatorul pentru sesiune
 
 
@@ -8151,6 +8703,8 @@ Se colectează următoarele câmpuri:
 - **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
 
 - **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **ScreenLocked** – indicați dacă descărcarea este inițiată în spatele ecranului blocat
 
 - **SessionId** - identificatorul pentru sesiune
 
@@ -9847,7 +10401,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="installstatus_helper"></a>installstatus_helper
 
-Acest eveniment înregistrează starea instrumentului de asistență al aplicației Daemon Microsoft Autoupdate. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
+Acest eveniment înregistrează starea instrumentului de ajutor Daemon Microsoft Actualizare automată. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
 Se colectează următoarele câmpuri:
 
@@ -14562,13 +15116,60 @@ Nu sunt colectate date necesare de serviciu de Configurația Serviciilor.
 
 ## <a name="telemetry-events"></a>Evenimente de telemetrie
 
+### <a name="officeandroiddocsuiviewspaywalloperationmetrics"></a>Office.Android.DocsUI.Views.PaywallOperationMetrics
+
+Microsoft îl utilizează pentru a obține starea de bună funcționare, succesul sau ratele de eroare pentru utilizator cu privire la achiziții, pentru a asigura investițiile corespunzătoare pentru a îmbunătăți experiența de achiziționare a clientului pe platformele mobile.
+
+Se colectează următoarele câmpuri:
+
+- **OperationTimeInMs** - timpul necesar pentru finalizarea operațiunii de achiziționare (lung – milisecunde)
+
+- **PaywallOperationResult** - succes / cod de eroare / utilizator anulat (enumerare / număr întreg – finit)
+
+- **PaywallOperationType** - tipul operațiunii Paywall (enumerare / număr întreg – finit)
+
+
 ### <a name="office_firstrun_apple_telemetryoptin"></a>Office_FirstRun_Apple_TelemetryOptIn
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a monitoriza starea de funcționare a fluxului nostru de optare pentru telemetrie în prima experiență de rulare. Culegem un cod care denotă ce tip de opțiune de colectare a datelor de diagnostic a fost selectată de către utilizator.
 
 Se colectează următoarele câmpuri:
 
- - **Data_EventId** - un cod care indică preferința de colectare a datelor de diagnostic selectată de utilizator.
+- **Data_EventId** - un cod care indică preferința de colectare a datelor de diagnostic selectată de utilizator.
+
+### <a name="officeiospaywallprovisioningresponse"></a>Office.iOS.Paywall.Provisioning.Response
+
+Telemetria de produs utilizat pentru reconcilierea informațiilor tranzacției de achiziționare cu sistemul de comerț Microsoft pentru activarea beneficiilor asociate abonamentului. Utilizat pentru a facilita înregistrarea în jurnal a tranzacției și asigurarea accesului la abonament pentru referințe viitoare și reconciliere internă.
+
+Se colectează următoarele câmpuri:
+
+- **entryPoint** - Șir – butonul/fluxul din care a fost afișat Paywall. Cum ar fi „Buton upgrade premium” sau „Primul flux de rulare”.
+
+- **failureReason** - Șir – adăugat doar atunci când starea este „eroare”. Indică răspunsul de eroare dat de răspunsul de asigurare RFS.
+
+- **productId** - Șir – ID-ul produsului în App Store pentru care a fost făcută solicitarea
+
+- **status** - Șir – succes sau eroare, indică dacă solicitarea a fost realizată cu sau fără succes
+
+
+### <a name="officeiospaywallstorekitresponse"></a>Office.iOS.Paywall.StoreKit.Response
+
+Datele sunt colectate ca telemetrie de inginerie critică pentru a înregistra rezultatul încercării de achiziționare declanșată manual de utilizator. Telemetria de produs este utilizat pentru reconcilierea informațiilor tranzacției de achiziționare cu sistemul de comerț Microsoft pentru activarea beneficiilor asociate abonamentului.
+
+Se colectează următoarele câmpuri:
+
+- **entryPoint** - Șir – butonul/fluxul din care a fost afișat Paywall. Cum ar fi „Buton upgrade premium” sau „Primul flux de rulare”.
+
+- **failureReason** - Șir – adăugat doar atunci când starea este „eroare”. Indică răspunsul de eroare dat de răspunsul de la App Store
+
+- **productId** - Șir – doar pentru „MakePurchase”, „PendingPurchase”, ID-ul de App Store al produsului pentru care s-a efectuat solicitarea.
+
+- **productsCount** -Int – doar pentru „ProductsFetch”, numărul de produse returnate de Store.
+
+- **requestType** - Șir – tipul solicitării StoreKit. Cum ar fi „ProductsFetch”, „PendingPurchase”
+
+- **status** - Șir – succes sau eroare, indică dacă solicitarea a fost realizată cu sau fără succes
+
 
 ### <a name="officesystemgracefulexitgracefulappexitdesktop"></a>Office.System.GracefulExit.GracefulAppExitDesktop
 
