@@ -13,29 +13,26 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate opționale, inclusiv condițiile de utilizare care se aplică.
 hideEdit: true
-ms.openlocfilehash: e6caae439e71236eb16fc47c6130526ace4d3afb
-ms.sourcegitcommit: cdb47c4dc3297a8ad70112a084ebd1f5028e2c07
+ms.openlocfilehash: c7593aed7e4bc6037bca6b84181c0434b2e27e30
+ms.sourcegitcommit: 288d54b2e6b463f67358f701ef0dd5424237f811
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "46896203"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "48322382"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Prezentare generală a experiențelor conectate opționale în Office
 
-Dacă aveți un cont de la locul de muncă sau de la școală, este posibil ca administratorul organizației dvs. să vă fi oferit posibilitatea de a utiliza unul sau mai multe servicii cloud (denumite și „experiențe conectate opționale”) în timp ce utilizați aplicațiile Office, cum ar fi Word sau Excel, care sunt incluse în Aplicațiile Microsoft 365 pentru întreprindere (denumite anterior Office 365 ProPlus). Aceste servicii cloud sunt opționale. Depinde de dvs. dacă le utilizați sau nu. Ele vă sunt puse la dispoziție conform condițiilor din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). În unele cazuri, se pot aplica și alte condiții. Acest articol enumeră serviciile cloud, explică condițiile de utilizare și descrie cum le puteți activa sau dezactiva în orice moment.
+> [!NOTE]
+> Pentru o listă de produse Office care sunt reglementate de aceste informații de confidențialitate, consultați [Controale de confidențialitate disponibile pentru produsele Office](products-versions-privacy-controls.md).
+
+Dacă aveți un cont de la locul de muncă sau de la școală, este posibil ca administratorul organizației dvs. să vă fi oferit posibilitatea de a utiliza unul sau mai multe servicii cloud (denumite și „experiențe conectate opționale”) în timp ce utilizați aplicațiile Office, cum ar fi Word sau Excel, care sunt incluse în Aplicațiile Microsoft 365 pentru întreprindere (denumite anterior Office 365 ProPlus). Aceste servicii cloud sunt opționale. Depinde de dvs. dacă le utilizați sau nu. Ele vă sunt puse la dispoziție conform condițiilor din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). În unele cazuri, se pot aplica și alte condiții. Acest articol enumeră serviciile cu backup în cloud, explică mai în detaliu condițiile de utilizare și descrie cum le puteți dezactiva sau activa în orice moment.
 
 > [!NOTE]
-> Dacă sunteți administrator, consultați următoarele articole pentru a afla cum să le furnizați sau să le restricționați utilizatorilor capacitatea de a utiliza experiențe conectate opționale:
-> - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere](manage-privacy-controls.md)
-> - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md)
-> - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pe dispozitivele iOS.](ios-privacy-preferences.md)
-> - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office pe dispozitivele Android](android-privacy-controls.md)
->
-> Majoritatea experiențelor conectate opționale pot fi gestionate și prin controale de confidențialitate pentru experiențe conectate. De exemplu, inserarea imaginilor poate fi gestionată și prin setarea de politică *Permiteți utilizarea de experiențe conectate în Office care descarcă conținut online*.
+> Dacă sunteți administrator, consultați [controalele de administrator pentru experiențe conectate opționale](#admin-controls-for-optional-connected-experiences).
 
 ### <a name="if-you-use-these-services-what-terms-of-use-do-you-need-to-agree-to"></a>Dacă utilizați aceste servicii, cu ce condiții de utilizare trebuie să fiți de acord?
 
-Este important să știți că aceste servicii cloud opționale nu sunt acoperite de licența organizației dvs. de Microsoft. În schimb, vă sunt licențiate direct. Utilizând aceste servicii cloud opționale sunteți, de asemenea, de acord cu condițiile din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). În funcție de serviciile pe care le utilizați, se pot aplica și alte condiții. În majoritatea cazurilor, nu se percepe nicio taxă la utilizarea acestor servicii. Dacă se aplică totuși o taxă (cum s-ar putea întâmpla în cazul unor [Programe de completare Office](https://support.microsoft.com/office/16278816-1948-4028-91E5-76DCA5380F8D) disponibile pentru descărcare prin Magazinul Office), veți clar informat înainte de utilizare.
+Este important să știți că aceste servicii cloud opționale nu sunt acoperite de licența organizației dvs. de Microsoft. În schimb, vă sunt licențiate direct. Utilizând aceste servicii cloud opționale sunteți, de asemenea, de acord cu condițiile din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). În funcție de serviciile pe care le utilizați, se pot aplica și alte condiții. În majoritatea cazurilor, nu se percepe nicio taxă la utilizarea acestor servicii. Dacă se aplică totuși o taxă (cum s-ar putea întâmpla în cazul unor [programe de completare](https://support.microsoft.com/office/16278816-1948-4028-91E5-76DCA5380F8D) disponibile pentru descărcare prin Magazinul Office), veți fi clar informați înainte de utilizare.
 
 ## <a name="experiences-that-rely-on-bing"></a>Experiențe care se bazează pe Bing
 
@@ -53,7 +50,7 @@ Bing pune la dispoziție în Outlook pentru iOS și Android experiențele următ
 
 [Asistent pentru CV](https://support.microsoft.com/office/444ff6f0-ef74-4a9c-9091-ffd7a9d1917a) oferă o experiență în Word, pe platformă LinkedIn. Acesta transmite idei pentru CV-ul dvs. LinkedIn este o altă firmă deținută de Microsoft. Dacă utilizați Asistentul pentru CV, [acordul de utilizator](https://www.linkedin.com/legal/user-agreement) și [politica de confidențialitate](https://www.linkedin.com/legal/privacy-policy) LinkedIn se aplică alături de [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/) Toate interogările de căutare pe care le furnizați organizației Aplicații Microsoft 365 pentru întreprindere în timp ce utilizați aceste servicii sunt trimise către LinkedIn. Acestea nu sunt legate pentru dvs. de organizația LinkedIn. Nu trebuie să aveți un cont LinkedIn pentru a utiliza acest serviciu cloud.
 
-Notă: Setarea de confidențialitate descrisă mai jos nu controlează experiențe care vă solicită să vă conectați contul LinkedIn la contul Microsoft de la locul de muncă sau de la școală. Pentru a controla aceste tipuri de experiențe (cum ar fi informațiile din LinkedIn dintr-o [fișă de profil](https://support.microsoft.com/office/e80f931f-5fc4-4a59-ba6e-c1e35a85b501) în Outlook), consultați [LinkedIn în aplicații și servicii Microsoft](https://support.microsoft.com/office/dc81cc70-4d64-4755-9f1c-b9536e34d381).
+Notă: [Setările de confidențialitate](#your-privacy-settings) nu controlează experiențe care solicită să vă conectați contul LinkedIn la contul Microsoft de la locul de muncă sau de la școală. Pentru a controla aceste tipuri de experiențe (cum ar fi informațiile din LinkedIn dintr-o [fișă de profil](https://support.microsoft.com/office/e80f931f-5fc4-4a59-ba6e-c1e35a85b501) în Outlook), consultați [LinkedIn în aplicații și servicii Microsoft](https://support.microsoft.com/office/dc81cc70-4d64-4755-9f1c-b9536e34d381).
 
 ## <a name="experiences-that-rely-on-other-microsoft-owned-online-services-andor-services-owned-by-third-parties"></a>Experiențe care se bazează pe alte servicii online deținute de Microsoft și/sau servicii deținute de terți
 
@@ -75,14 +72,18 @@ MERP se conectează la serviciul Watson.microsoft.com pentru a trimite date de d
 
 ### <a name="office-store"></a>Magazinul Office 
 
-Atunci când utilizați Magazinul Office, utilizarea site-ului magazinului propriu-zis este licențiată prin [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). Cu toate acestea, toate [Programele de completare Office](https://support.microsoft.com/office/16278816-1948-4028-91E5-76DCA5380F8D) pe care le descărcați prin Magazinul Office sunt acoperite de condițiile de utilizare ale furnizorului programului de completare. Acestea pot fi diverse organizații sau firme, iar unele pot chiar percepe o taxă de utilizare. Va trebui să verificați permisiunile, angajamentul de respectare a confidențialității și clauzele licenței pentru fiecare program de completare pentru a afla ce condiții se aplică și pentru a decide dacă sunteți acord cu condițiile de utilizare oferite de organizație. 
+Atunci când utilizați Magazinul Office, utilizarea site-ului magazinului propriu-zis este licențiată prin [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). Cu toate acestea, orice [programe de completare](https://support.microsoft.com/office/16278816-1948-4028-91E5-76DCA5380F8D) pe care le descărcați prin Magazinul Office sunt acoperite de condițiile de utilizare ale furnizorului programului de completare. Acești furnizori pot fi diverse organizații sau firme, iar unele pot percepe o taxă de utilizare. Va trebui să verificați permisiunile, angajamentul de respectare a confidențialității și clauzele licenței pentru fiecare program de completare pentru a afla ce condiții se aplică și pentru a decide dacă sunteți acord cu condițiile de utilizare oferite de organizație. 
+
+> [!NOTE]
+> - Administratorul din organizația dvs. vă poate oferi programe de completare, chiar dacă nu alegeți să utilizați Magazinul Office.
+> - Dacă sunteți administrator, pentru mai multe informații despre programele de completare, consultați secțiunea "Experiențe conectate opționale" din [Confidențialitate și securitate pentru programele de completare Office](https://docs.microsoft.com/office/dev/add-ins/concepts/privacy-and-security) și [Confidențialitate, permisiuni și securitate pentru programele de completare Outlook](https://docs.microsoft.com/office/dev/add-ins/outlook/privacy-and-security).
 
 ### <a name="research"></a>Cercetare
 
 [Cercetare](https://support.microsoft.com/office/b862efc5-9a7b-4f88-a23d-93712d6e4397) se conectează la serviciile cu backup în cloud pentru a obține rezultate de căutare din dicționar, lexicon, traducere și cuvinte. Atunci când utilizați această experiență, aceasta se conectează la servicii deținute de Microsoft în mod implicit și se aplică condițiile din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). Cercetare vă permite să adăugați alți furnizori de servicii. Dacă decideți să utilizați alt furnizor de servicii, se pot aplica condiții suplimentare.
 
 > [!NOTE]
-> Opțiunea Cercetare (Research) din fila Revizuire nu este totuna cu Cercetare (Researcher) din fila Referințe. În versiunile mai noi de Office, pe lângă opțiunea Cercetare (Research) este disponibilă și o experiență denumită Cercetare (Researcher). Cercetare (Researcher) este un serviciu mai nou, pe platformă Bing, iar informații despre acest instrument sunt prezentate mai sus, în [Experiențe care se bazează pe Bing](#experiences-that-rely-on-bing).
+> Opțiunea Cercetare (Research) din fila Revizuire nu este totuna cu Cercetare (Researcher) din fila Referințe. În versiunile mai noi de Office, pe lângă opțiunea Cercetare (Research) este disponibilă și o experiență denumită Cercetare (Researcher). Cercetare este un serviciu mai nou, pe platforma Bing și este discutat în secțiunea:[Experiențe care se bazează pe Bing](#experiences-that-rely-on-bing).
 
 ### <a name="travel-time-in-up-next-in-outlook-for-ios"></a>Timp de călătorie în Urmează în Outlook pentru iOS
 
@@ -92,12 +93,13 @@ Atunci când utilizați Magazinul Office, utilizarea site-ului magazinului propr
 
 [Bara meteo](https://support.microsoft.com/office/d11b7532-7c58-489e-8103-5cc5d727b06b) în Outlook afișează prognoza meteo pentru locațiile geografice dorite. În timpul utilizării, Bara meteo în Outlook se conectează la Meteo MSN în mod implicit. MSN este deținut de Microsoft, aplicându-se condițiile din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). Atunci când utilizați Bara meteo cu Meteo MSN, Microsoft nu vă detectează locația, iar orașele pe care doriți să le afișați nu sunt corelate pentru dvs. Puteți să [modificați această setare implicită](https://docs.microsoft.com/office/client-developer/outlook/weather/extending-the-weather-bar-in-outlook) pentru a vă conecta la alți furnizori de servicii meteo. Dacă decideți să apelați la alt furnizor de servicii meteo, va trebui să consultați angajamentul de respectare a confidențialității și clauzele licenței respectivului furnizor pentru a ști ce condiții se aplică.
 
-
 ## <a name="how-to-determine-if-your-admin-has-given-you-the-ability-to-use-optional-connected-experiences"></a>Cum stabiliți dacă administratorul dvs. v-a oferit capacitatea de a utiliza experiențe conectate opționale
 
 Pentru a determina dacă administratorul v-a oferit capacitatea de a utiliza experiențe conectate opționale în aplicațiile Office incluse în Aplicațiile Microsoft 365 pentru întreprindere pe un dispozitiv Windows, accesați **Fișier** > **Cont** > **Confidențialitate cont** și selectați **Gestionare setări**. Dacă administratorul nu v-a oferit control, se va afișa mesajul: „Administratorul organizației este cel care vă gestionează setările de confidențialitate, iar el a decis să dezactiveze experiențele conectate opționale.”
 
 Dacă utilizați Office pentru Mac, deschideți orice aplicație Office și selectați meniul de aplicații (cum ar fi Word sau Excel) > **Preferințe** > **Confidențialitate**. Această acțiune va deschide caseta de dialog Setări de confidențialitate de cont, unde puteți vizualiza opțiunile de confidențialitate.
+
+Pentru mai multe informații, consultați: [Setări de confidențialitate pentru cont](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b).
 
 ## <a name="your-privacy-settings"></a>Setări de confidențialitate
 
@@ -105,13 +107,22 @@ Dacă administratorul v-a oferit capacitatea de a utiliza experiențe conectate 
 
 Dacă utilizați Office pentru Mac, deschideți orice aplicație Office și selectați meniul de aplicații (cum ar fi Word sau Excel) > **Preferințe** > **Confidențialitate**. Această acțiune va deschide caseta de dialog Setări de confidențialitate de cont, unde puteți vizualiza opțiunile de confidențialitate.
 
-## <a name="diagnostic-data"></a>Date de diagnosticare
+Pentru mai multe informații, consultați: [Setări de confidențialitate pentru cont](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b).
 
-Atunci când utilizați un serviciu cloud opțional descris în acest articol, Microsoft poate colecta date de diagnosticare (cum ar fi datele de utilizare, erorile și datele despre performanță) despre performanța experienței în momentul în care ați utilizat-o. Aceste date de diagnosticare pot conține „date personale”, așa cum sunt definite de Articolul 4 din RGPD din Europa.Toate datele de diagnosticare pe care Microsoft le colectează în timpul utilizării aplicațiilor și serviciilor Aplicații Microsoft 365 pentru întreprindere folosesc pseudonime, conform definiției din ISO/IEC 19944:2017, (secțiunea 8.3.3) standard.
+## <a name="required-service-data"></a>Date de serviciu necesare
 
+Atunci când utilizați orice serviciu opțional cu backup în cloud descris în acest articol, Microsoft poate colecta [date de diagnosticare necesare](required-service-data.md) (cum ar fi datele de utilizare, erorile și datele despre performanță) despre performanța experienței atunci când ați utilizat-o. Aceste date de serviciu necesare pot conține „date personale”, așa cum sunt definite de Articolul 4 din RGPD din Europa.Toate date de serviciu necesare pe care Microsoft le colectează în timpul utilizării oricărei aplicații și serviciu din Aplicații Microsoft 365 pentru întreprindere folosesc pseudonime, conform definiției din ISO/IEC 19944:2017, (secțiunea 8.3.3) standard.
 
-## <a name="related-articles"></a>Articole asociate
+## <a name="admin-controls-for-optional-connected-experiences"></a>Controale de administrator pentru experiențe conectate opționale 
 
-- [Prezentare generală a controalelor de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere](overview-privacy-controls.md)
-- [Date de serviciu obligatorii pentru Office](required-service-data.md)
-- [Setările de confidențialitate ale contului](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b)
+Dacă sunteți administrator, consultați următoarele articole pentru a afla cum să le furnizați sau să le restricționați utilizatorilor capacitatea de a utiliza experiențe conectate opționale:
+
+- [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere](manage-privacy-controls.md)
+- [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md)
+- [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pe dispozitivele iOS.](ios-privacy-preferences.md)
+- [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office pe dispozitivele Android](android-privacy-controls.md)
+- [Utilizarea setărilor de politică pentru a gestiona controalele de confidențialitate pentru Office pentru aplicațiile web](office-web-privacy-controls.md)
+
+Majoritatea experiențelor conectate opționale pot fi gestionate și prin controale de confidențialitate pentru experiențe conectate. De exemplu, inserarea imaginilor poate fi gestionată și prin setarea de politică *Permiteți utilizarea de experiențe conectate în Office care descarcă conținut online*.
+
+Pentru mai multe informații, consultați [Prezentare generală a controalelor de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere](overview-privacy-controls.md).
