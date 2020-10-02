@@ -13,23 +13,17 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre datele de diagnosticare opționale din Office, inclusiv exemple de evenimente.
 hideEdit: true
-ms.openlocfilehash: 6769c7a0bf254b5a33f92c5410ec517b7d568d8e
-ms.sourcegitcommit: 721c6d39465a5b0ab8e32b876c2e74bb5aaf4b81
+ms.openlocfilehash: 2183863e1f7050d7d6ba838b639debf2b53ac9bd
+ms.sourcegitcommit: e1e4c309d62d0708404b7838c96416ce89f1b8b7
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "46683191"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "48328331"
 ---
 # <a name="optional-diagnostic-data-for-office"></a>Date de diagnosticare opționale pentru Office
 
-> [!IMPORTANT]
-> Informațiile din acest articol se aplică la versiunea 1904 sau la o versiune mai recentă a următorului software client Office instalat pe un computer care rulează Windows:
-> - Aplicații Microsoft 365 pentru întreprindere (numite anterior Office 365 ProPlus)
-> - Aplicații Microsoft 365 pentru afaceri (numite anterior Office 365 Business)
-> - Microsoft 365 Personal, Microsoft 365 Family sau alte versiuni de Office care fac parte dintr-un abonament Microsoft 365.
-> - Aplicațiile desktop Project și Visio care sunt însoțite de anumite planuri de abonament, cum ar fi Project Plan 5 sau Visio Plan 2.
->
-> Informațiile se aplică și la versiunea 16.28 sau la versiunile mai recente ale următoarelor aplicații Office pentru Mac: Excel, Outlook, OneNote, PowerPoint și Word.
+> [!NOTE]
+> Pentru o listă de produse Office care sunt reglementate de aceste informații despre confidențialitate, consultați [Controale de confidențialitate disponibile pentru produsele Office](products-versions-privacy-controls.md).
 
 Datele de diagnosticare se folosesc pentru a păstra Office în siguranță și la zi, pentru a detecta, a diagnostica și a remedia problemele și pentru a îmbunătăți produsele. Aceste date nu includ numele sau adresa de e-mail a unui utilizator, nici conținutul fișierelor acestuia sau informații despre aplicații care nu au legătură cu Office.
 
@@ -41,12 +35,12 @@ Dacă alegeți să ne trimiteți date de diagnosticare opționale, sunt incluse 
 
 Exemplele de date de diagnosticare opționale includ datele pe care le colectăm despre formele inserate de utilizatori în documente Word, astfel încât să oferim opțiuni mai bune, și datele pe care le colectăm despre timpul necesar ca un diapozitiv PowerPoint să apară pe ecran; astfel, putem îmbunătăți experiența dacă ea este lentă.
 
-Pentru mai multe informații despre datele de diagnosticare, consultați linkul următor:
+Pentru mai multe informații despre datele de diagnosticare, consultați articolele următoare:
 
 - [Date de diagnosticare obligatorii pentru Office](required-diagnostic-data.md)
-- [Utilizarea Vizualizatorului de date de diagnosticare cu Office](https://support.office.com/article/cf761ce9-d805-4c60-a339-4e07f3182855)
+- [Utilizarea Vizualizatorului de date de diagnosticare cu Office](https://support.microsoft.com/office/cf761ce9-d805-4c60-a339-4e07f3182855)
 
-Dacă sunteți administratorul organizației dvs., ați putea fi interesat și de următoarele:
+Dacă sunteți administratorul organizației dvs., v-ar putea interesa și următoarele articole:
 
 - [Prezentare generală a controalelor de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere](overview-privacy-controls.md)
 - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere](manage-privacy-controls.md)
