@@ -13,25 +13,17 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate pentru Office, cum ar fi experiențele care analizează conținut sau experiențele care descarcă conținut online.
 hideEdit: true
-ms.openlocfilehash: ed9198f19bcd3ed7dcf11014ed46016fb7121dd6
-ms.sourcegitcommit: cdb47c4dc3297a8ad70112a084ebd1f5028e2c07
+ms.openlocfilehash: 3e44c9c20bed531f46390c91a41ce559cabc9e72
+ms.sourcegitcommit: 25a0925e7caf8fbb53e6757e8a65126eb2c9da65
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "46896293"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "48338194"
 ---
 # <a name="connected-experiences-in-office"></a>Experiențe conectate în Office
 
-> [!IMPORTANT]
-> Informațiile din acest articol se aplică la versiunea 1904 sau la o versiune mai recentă a următorului software client Office instalat pe un computer care rulează Windows:
-> - Aplicații Microsoft 365 pentru întreprindere (numite anterior Office 365 ProPlus)
-> - Aplicații Microsoft 365 pentru afaceri (numite anterior Office 365 Business)
-> - Microsoft 365 Personal, Microsoft 365 Family sau alte versiuni de Office care fac parte dintr-un abonament Microsoft 365.
-> - Aplicațiile desktop Project și Visio care sunt însoțite de anumite planuri de abonament, cum ar fi Project Plan 5 sau Visio Plan 2.
->
-> Informațiile se aplică și la versiunea 16.28 sau la versiunile mai recente ale următoarelor aplicații Office pentru Mac: Excel, Outlook, OneNote, PowerPoint și Word.
->
-> Aceste informații se vor aplica la o versiune de Outlook pentru iOS și Android, care va fi lansată la sfârșitul lunii ianuarie 2020.
+> [!NOTE]
+> Pentru o listă de produse Office care sunt reglementate de aceste informații de confidențialitate, consultați [Controale de confidențialitate disponibile pentru produsele Office](products-versions-privacy-controls.md).
 
 Office constă din aplicațiile software client și experiențe conectate proiectate pentru a vă permite să creați, să comunicați și să colaborați mai eficient. Lucrul cu alte persoane într-un document stocat pe OneDrive sau traducerea conținutului unui document Word într-o altă limbă sunt câteva exemple de experiențe conectate.
 
@@ -46,21 +38,26 @@ Următorul tabel furnizează o listă de experiențe conectate care vă analizea
 | *Hărți 3D*\*    | [Introducere în Hărți 3D](https://support.microsoft.com/office/6b56a50d-3c3e-4a9e-a527-eea62a387030)   |
 | Txt alternativ automat   | [Tot ce trebuie să știți pentru a scrie eficient text alternativ](https://support.microsoft.com/office/df98f884-ca3d-456c-807b-1a1fa82f5dc2) |
 |Recomandări de diagramă (Excel pentru web)|[Crearea unei diagrame cu diagrame recomandate](https://support.microsoft.com/office/cd131b77-79c7-4537-a438-8db20cea84c0#ID0EAADAAA=Web)|
-| Tipuri de date                  | [Tipuri de date Excel: Cotații bursiere și geografie](https://support.microsoft.com/office/61a33056-9935-484f-8ac8-f1a89e210877)   |
+|Programe de completare Blocnotes școlar (OneNote)|[Introducere în aplicația Blocnotes școlar OneNote: prezentare pentru profesori](https://support.microsoft.com/office/28666b8e-b0ae-48fe-b001-1874f5f6db58)|
+| Tipuri de date| [Tipuri de date Excel: Cotații bursiere și geografie](https://support.microsoft.com/office/61a33056-9935-484f-8ac8-f1a89e210877)   |
 | Dictare  | [Dictarea documentelor Word](https://support.microsoft.com/office/d4fd296e-8f15-4168-afec-1f95b13a6408) |
 |Editor<sup>1</sup> |[Microsoft Editor verifică gramatica și multe altele în documente, corespondență și pe web](https://support.microsoft.com/office/91ecbe1b-d021-4e9e-a82e-abc4cd7163d7)|
 | Idei     | [Idei în Excel](https://support.microsoft.com/office/3223aab8-f543-4fda-85ed-76bb0295ffc4) |
 | Cerneală în text, Cerneală în formă, Cerneală în expresie matematică | [Modificați cerneală scrisă de mână în forme, în text sau în expresie matematică în PowerPoint pentru Microsoft 365](https://support.microsoft.com/office/0740dec3-6291-4c1f-8baa-011d18449919) |
+|Instrumente de învățare|[Instrumente de învățare](https://support.microsoft.com/office/eff7f7e3-7e21-42f0-a6f1-da7027f98261)|
 | Inserarea datelor din imagine| [Inserare date din imagine](https://support.microsoft.com/office/3c1bb58d-2c59-4bc0-b04a-a671a6868fd7)|
 | Subtitrări în direct |  [Prezentați subtitrări în timp real, automate în PowerPoint](https://support.microsoft.com/office/68d20e49-aec3-456a-939d-34a79e8ddd5f)   |
 | *Diagramă hartă*\*    | [Crearea unei diagrame hartă în Excel](https://support.microsoft.com/office/f2cfed55-d622-42cd-8ec9-ec8a358b593b)  |
 | Hărțile în Power View   | [Hărțile în Power View](https://support.microsoft.com/office/8A9B2AF3-A055-4131-A327-85CC835271F7) |
 | Serviciu de prezentări Office   | [Difuzați prezentarea online PowerPoint unui public la distanță](https://support.microsoft.com/office/25330108-518e-44be-a281-e3d85f784fee)    |
+|Recomandări de PivotTable (Excel pentru web)|[Crearea unui raport PivotTable pentru analiza datelor dintr-o foaie de lucru](https://support.microsoft.com/office/a9a84538-bfe9-40a9-a8e9-f99134456576#OfficeVersion=Web)|
 | PowerPoint Designer   | [Creați aspecte de diapozitiv profesioniste cu PowerPoint Designer](https://support.microsoft.com/office/53c77d7b-dc40-45c2-b684-81415eac0617)   |
+|Îndrumător pentru prezentări (PowerPoint)|[Repetați prezentarea cu Îndrumătorul pentru prezentări](https://support.microsoft.com/office/cd7fc941-5c3b-498c-a225-83ef3f64f07b)|
 | Publicare în Power BI   | [Publicați în Power BI din Excel](https://docs.microsoft.com/power-bi/service-publish-from-excel) |
 | Publicare în Microsoft Stream    | [Transformați prezentarea într-un videoclip](https://support.microsoft.com/office/c140551f-cb37-4818-b5d4-3e30815c3e83#bkmk_microsoftstream)  |
 | *Cercetare*\*   | [Adăugați sau modificați servicii de cercetare](https://support.microsoft.com/office/b862efc5-9a7b-4f88-a23d-93712d6e4397)  |
 | Scanați o carte de vizită|  [Scanați sau atingeți pentru a adăuga persoane de contact în Outlook pentru Android](https://support.microsoft.com/office/4818ef14-0fc8-4ec2-bb4d-440ea8cae17b)|
+|Notificare de partajare|[Primiți notificări atunci când membrii echipei dvs. actualizează fișierul partajat](https://support.microsoft.com/office/9cc94893-02d5-4d96-9b3f-8b9414d5047a)|
 |*Verificator de similaritate*\* (o caracteristică a Editorului)|[Verificați-vă documentul de similarități cu sursele online](https://support.microsoft.com/office/6d942360-b5ca-445f-a84d-6e8c66fc40d2) |
 | *Căutare inteligentă*\*   | [Obțineți detalii despre ceea ce lucrați cu Căutare inteligentă](https://support.microsoft.com/office/debf2083-5ac0-4739-8667-ae2467bec044) |
 | Răspunsuri sugerate | [Ce sunt răspunsurile sugerate?](https://www.osupportweb.com/a/outlook-mobile/?p=all&s=feature-walkthroughs&f=what-are-suggested-replies)|
@@ -129,12 +126,14 @@ Următorul tabel furnizează o listă a acelor experiențe conectate și furnize
 | *Programe de completare Office*\* | [Implementați programe de completare în centrul de administrare](https://docs.microsoft.com/microsoft-365/admin/manage/manage-deployment-of-add-ins) |
 | Feedback Office |[Cum pot trimite feedback pentru Microsoft Office?](https://support.microsoft.com/office/2b102d44-b43f-4dd2-9ff4-23cf144cfb11)  |
 | Asistența Office (contactați-ne) |Atunci când alegeți **Ajutor** > **Contactați asistența** în panglică |
-| Organigramă (Visio) |[Crearea unei organigrame în Visio](https://support.microsoft.com/office/abb3dd17-2692-439f-9945-3a015767d96a)  |
+| Organigramă (Visio) |[Crearea unei organigrame în Visio](https://support.microsoft.com/office/abb3dd17-2692-439f-9945-3a015767d96a)|
 | Outlook Social Connector | [Activați Outlook Social Connector](https://support.microsoft.com/office/255447E8-82CD-48E7-9B79-1DD8721A2907) |
 | *Outlook UserVoice*\* | [Cum pot trimite feedback pentru Microsoft Office?](https://support.microsoft.com/office/2b102d44-b43f-4dd2-9ff4-23cf144cfb11) |
+|Diagrama Pivot (Visio)|[Crearea unei diagrame Pivot în Visio](https://support.microsoft.com/office/0d061d05-60b5-4549-b301-4d0b37625a4c)|
 | Documente recente |[Deschideți fișierele din meniul Fișier](https://support.microsoft.com/office/97f087d8-3136-4485-8e86-c5b12a8c4176)  |
 | *Asistent pentru CV*\* |[Utilizați Asistent pentru CV și LinkedIn pentru CV-uri impresionante ](https://support.microsoft.com/office/444ff6f0-ef74-4a9c-9091-ffd7a9d1917a")  |
 | Instrument de găsire sală (Outlook)|[Cum să controlați Instrumentul de găsire sală în Outlook](https://support.microsoft.com/help/2673231/how-to-control-the-room-finder-in-outlook)  |
+|Documente sigure|[Documente sigure](https://support.microsoft.com/office/e2071599-fb31-442b-a30c-198c25e2aacd) <br/> [Documente sigure în Microsoft 365 E5](https://docs.microsoft.com/microsoft-365/security/office-365-security/safe-docs)|
 | Linkuri sigure |[Linkuri sigure ATP](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-safe-links)  |
 | Etichete de confidențialitate  |[Aplicați etichete de confidențialitate fișierelor dvs. și e-mailurilor în Office](https://support.microsoft.com/office/2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9)  |
 | Partajare  |[Partajarea registrului de lucru Excel cu alte persoane](https://support.microsoft.com/office/8D8A52BB-03C3-4933-AB6C-330AABF1E589) <br/>[Partajarea unei prezentări (PowerPoint)](https://support.microsoft.com/office/fdcad9ad-4f13-4f5b-9910-12b4108a4c86) <br/>[Partajați un document (Word)](https://support.microsoft.com/office/d39f3cd8-0aa0-412f-9a35-1abba926d354) |
@@ -156,7 +155,8 @@ Dacă sunteți conectat cu un cont Microsoft, deschideți o aplicație Office, c
 Dacă sunteți conectat cu un cont de la locul de muncă sau de la școală, administratorul din organizația dvs. va decide dacă aceste experiențe conectate sunt disponibile pentru dvs. Nu veți vedea opțiunile pentru aceste experiențe conectate dacă accesați **Fișier** > **Cont** > **Confidențialitate cont** > **Gestionare setări**.
 
 > [!NOTE]
-> Dacă utilizați Office pentru Mac, deschideți orice aplicație Office și selectați meniul de aplicații (cum ar fi Word sau Excel) > **Preferințe** > **Confidențialitate**. Aceasta va deschide caseta de dialog Setări de confidențialitate ale contului unde puteți să vizualizați opțiunile de confidențialitate.
+> - Dacă utilizați Office pentru Mac, deschideți orice aplicație Office și selectați meniul de aplicații (cum ar fi Word sau Excel) > **Preferințe** > **Confidențialitate**. Aceasta va deschide caseta de dialog Setări de confidențialitate ale contului unde puteți să vizualizați opțiunile de confidențialitate.
+> - Pentru mai multe informații, consultați [Setări de confidențialitate pentru cont](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b).
 
 Dacă sunteți administrator pentru organizația dvs., puteți utiliza setările de politică pentru a determina dacă aceste experiențe conectate sunt disponibile pentru utilizatorii dvs. Dacă nu utilizați aceste setări de politică, toate experiențele conectate vor fi disponibile pentru utilizatorii dvs. Pentru informații suplimentare despre utilizarea acestor setări de politică, consultați articolele următoare: 
 
@@ -169,10 +169,9 @@ Dacă alegeți să dezactivați unele tipuri de experiențe conectate, fie pangl
 
 Chiar dacă vă hotărâți să dezactivați aceste experiențe conectate, anumite funcționalități Office vor rămâne disponibile, cum ar fi sincronizarea unei cutii poștale în Outlook, Teams și Skype for Business vor continua să funcționeze. De asemenea, există un set de servicii esențiale pentru modul în care funcționează Office care nu pot fi dezactivate, cum ar fi serviciul de licențiere care confirmă că aveți licență corectă pentru a utiliza Office.
 
-## <a name="related-topics"></a>Subiecte asociate
+## <a name="related-articles"></a>Articole asociate
 
 - [Prezentare generală a controalelor de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere](overview-privacy-controls.md)
 - [Prezentare generală a experiențelor conectate opționale în Office](optional-connected-experiences.md)
 - [Date de serviciu obligatorii pentru Office](required-service-data.md)
 - [Servicii esențiale pentru Office](essential-services.md)
-- [Setările de confidențialitate ale contului](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b)
