@@ -21,3 +21,4 @@
 ### [Date de serviciu obligatorii](required-service-data.md)
 
 ## [Servicii esențiale](essential-services.md)
+## [Recomandări în cadrul produsului](in-product-recommendations.md)
