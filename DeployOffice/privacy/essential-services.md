@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre servicii esențiale în Office, cum ar fi Clic și Pornire și Licențiere, și asigură o listă de evenimente și câmpuri de date pentru aceste servicii esențiale.
 hideEdit: true
-ms.openlocfilehash: ed550129f7d3aef9e340456b5ee2d09f85c18b07
-ms.sourcegitcommit: b4e08427f3e30a134fcbf86257bab5bf05a5ee82
+ms.openlocfilehash: 2449c56af99d40bcc1a4a3f85575984da6af3252
+ms.sourcegitcommit: a8c69c9c02320edec51c3bd7bb8dce28fa737e47
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "47941040"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "48367470"
 ---
 # <a name="essential-services-for-office"></a>Servicii esențiale pentru Office
 
@@ -3312,7 +3312,7 @@ Se colectează următoarele câmpuri:
 
 - **EventDate** – marca de timp pentru când a avut loc evenimentul 
 
-- **MostExplored** - număr care denotă indexul elementului cel mai comutat din lista de aplicații M365 și caracteristicile lor
+- **MostExplored** - întreg care denotă indexul elementului cel mai comutat dintr-o listă de aplicații Microsoft 365 și caracteristicile lor
 
 - **SessionID** - identificatorul unic global (GUID) pentru a conecta evenimentele după sesiune
 
@@ -3844,7 +3844,7 @@ Se colectează următoarele câmpuri:
 
 ## <a name="microsoft-autoupdate-mau-events"></a>Evenimente Microsoft AutoUpdate (MAU)
 
-### <a name="additionalappinfo_invalidpreference"></a>additionalappinfo_invalidpreference
+### <a name="additionalappinfoinvalidpreference"></a>additionalappinfo.invalidpreference
 
 Aceste rapoarte de evenimente despre preferința nevalidă sunt setate pentru a afișa mai multe informații cu privire la sfârșitul serviciului pentru un produs. Vom utiliza aceste informații pentru a recomanda clienților să își seteze corect preferințele pentru a vedea informații suplimentare.
  
@@ -3882,7 +3882,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="appdelegate_launch"></a>appdelegate_launch
+### <a name="appdelegatelaunch"></a>appdelegate.launch
 
 Acest eveniment indică faptul că s-a produs o încercare de lansare a aplicației. Vom înregistra rezultatul (eșecul sau succesul). Vom utiliza acest eveniment pentru a identifica cazurile în care MAU nu reușește să fie lansat
 
@@ -3923,7 +3923,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="appdelegate_terminate"></a>appdelegate_terminate
+### <a name="appdelegateterminate"></a>appdelegate.terminate
 
 Acest eveniment indică faptul că a avut loc o ieșire elegantă din aplicație. Vom utiliza acest eveniment pentru a distinge ieșirile elegante din aplicație de cele neelegante.
 
@@ -3964,7 +3964,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="appinstall_connecttoxpc"></a>appinstall_connecttoxpc
+### <a name="appinstallconnecttoxpc"></a>appinstall.connecttoxpc
 
 Acest eveniment indică faptul că s-au produs erori la conectarea la MAU Helper (o componentă care efectuează instalarea aplicației).  Acest eveniment indică o potențială corupție a aplicației MAU. Dispozitivul nu va putea instala actualizări.
 
@@ -4004,7 +4004,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="appinstall_logscanned"></a>appinstall_logscanned
+### <a name="appinstalllogscanned"></a>appinstall.logscanned
 
 Acest eveniment este utilizat pentru a determina dacă s-a procesat cu succes fișierul jurnal. Vom utiliza acest eveniment pentru a detecta și a rezolva problemele apărute în timpul instalării aplicațiilor. 
  
@@ -4044,7 +4044,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="appregistry_config"></a>appregistry_config
+### <a name="appregistryconfig"></a>appregistry.config
 
 Acest eveniment raportează despre orice erori întâlnite în timpul încărcării informațiilor din registry aplicație. Utilizăm acest raport pentru a consilia administratorii IT în formatul corect de configurare a înregistrărilor de aplicații client.
  
@@ -4084,7 +4084,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="appregistry_info"></a>appregistry_info
+### <a name="appregistryinfo"></a>appregistry.info
 
 Acest eveniment indică faptul că aplicația a fost lansată. Vom utiliza acest eveniment pentru a lista aplicațiile pentru care MAU poate controla actualizările, numărul de copii disponibile, precum și versiunea acestora și locația de instalare (implicită sau altele).
 
@@ -4125,7 +4125,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="appregistry_remove"></a>appregistry_remove
+### <a name="appregistryremove"></a>appregistry.remove
 
 Acest eveniment indică faptul că a avut loc o încercare de eliminare a unei aplicații din lista de aplicații gestionate de MAU. Vom utiliza acest eveniment pentru a confirma faptul că doar aplicațiile lansate de MAU sunt gestionate prin MAU (aici nu ar trebui să apară aplicații AppStore).
 
@@ -4166,7 +4166,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="catalog_errorsignature"></a>catalog_errorsignature
+### <a name="catalogerrorsignature"></a>catalog.errorsignature
 
 Acest eveniment indică faptul că s-a produs o eroare în timpul validării semnăturii codului pentru un fișier de actualizare colateral.  Orice verificare colaterală nereușită a semnăturii codului trebuie să fie considerată nevalidă.
 
@@ -4206,9 +4206,9 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="cloningtask_begin"></a>cloningtask_begin
+### <a name="cloningtaskbegin"></a>cloningtask.begin
 
-Acest eveniment indică începutul activității de clonare anterior actualizării aplicațiilor. Vom utiliza acest eveniment împreună cu evenimentul cloningtask_status pentru a determina volumul de erori de clonare, pentru a determina dacă caracteristica de clonare ar trebui să fie limitată pe diferite canale de audiență.
+Acest eveniment indică începutul activității de clonare anterior actualizării aplicațiilor. Vom utiliza acest eveniment împreună cu evenimentul cloningtask.status pentru a determina volumul de erori de clonare, pentru a determina dacă caracteristica de clonare ar trebui să fie limitată pe diferite canale de audiență.
  
 Se colectează următoarele câmpuri:
 
@@ -4249,7 +4249,7 @@ Se colectează următoarele câmpuri:
 - **UpdateID** - identificatorul pentru actualizare.
 
 
-### <a name="cloningtask_helpertoolconnection"></a>cloningtask_helpertoolconnection
+### <a name="cloningtaskhelpertoolconnection"></a>cloningtask.helpertoolconnection
 
 Acest eveniment înregistrează probleme cu instalarea pe clonă (de exemplu, dacă nu reușim să ne conectăm la ajutor pentru a aplica o actualizare sau ne conectăm, dar ajutorul nu poate aplica actualizarea). Dacă primim vreodată o înregistrare raportată, acest lucru înseamnă că instalarea pe clonă nu a reușit și acum va trebui să revenim la o actualizare locală.
 
@@ -4289,7 +4289,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="cloningtask_status"></a>cloningtask_status
+### <a name="cloningtaskstatus"></a>cloningtask.status
 
 Acest eveniment indică starea procesului de clonare pentru ca aplicația să fie actualizată. Vom utiliza acest eveniment pentru a determina rata de succes, precum și tipurile de erori întâlnite care duce la nereușită. Acest eveniment este utilizat pentru a determina dacă caracteristica de clonare ar trebui să fie limitată în funcție de diferite canale de public.
 
@@ -4335,7 +4335,7 @@ Se colectează următoarele câmpuri:
 
 - **UpdateID** - identificatorul pentru actualizare.
 
-### <a name="cloningtask_status_finish"></a>cloningtask_status_finish
+### <a name="cloningtaskstatusfinish"></a>cloningtask.status.finish
 
 Acest eveniment raportează despre finalizarea activității de „clonare“. Acest eveniment face parte din raportul pâlniei de actualizare și îl utilizăm pentru a determina starea de funcționare a actualizărilor aplicației.
  
@@ -4376,7 +4376,7 @@ Se colectează următoarele câmpuri:
 - **UpdateID** - identificatorul actualizării.
 
 
-### <a name="configuration_channel"></a>configuration_channel
+### <a name="configurationchannel"></a>configuration.channel
 
 Acest eveniment înregistrează încercările de comutare a canalelor (grup de public) în MAU.  Utilizăm acest lucru pentru a înregistra încercările și rezultatele acestora (succes sau eșec).
 
@@ -4417,7 +4417,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="configuration_metadata"></a>configuration_metadata
+### <a name="configurationmetadata"></a>configuration.metadata
 
 Acest eveniment este înregistrat de fiecare dată când se inițializează MAU. Acesta este un tip de eveniment MAU cu mesaje repetate
 
@@ -4457,7 +4457,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune.
 
-### <a name="configuration_systemversion"></a>configuration_systemVersion
+### <a name="configurationsystemversion"></a>configuration.systemVersion
 
 Acest eveniment indică faptul că o încercare de a recupera versiunea de sistem a eșuat. De asemenea, conține informații despre informațiile colectate din sistem de Microsoft AutoUpdate (MAU). Utilizăm acest eveniment pentru a determina dacă MAU ar trebui să răspundă pentru erori. Rețineți că versiunea de sistem este utilizată pentru a determina dacă o actualizare poate să fie aplicată la dispozitivul clientului.
  
@@ -4497,7 +4497,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="controller_alertmanager_reinstallresponse"></a>controller_alertmanager_reinstallresponse
+### <a name="controlleralertmanagerreinstallresponse"></a>controller.alertmanager.reinstallresponse
 
 Acest eveniment indică faptul că MAU a intrat într-o stare inutilizabilă/irecuperabilă și trebuie reinstalat. Acest eveniment indică o eroare irecuperabilă și necesitatea intervenției utilizatorilor.
 
@@ -4538,7 +4538,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="controller_alertmanager_tmpdiskfull"></a>controller_alertmanager_tmpdiskfull
+### <a name="controlleralertmanagertmpdiskfull"></a>controller.alertmanager.tmpdiskfull
 
 Acest eveniment indică faptul că a fost detectat insuficient spațiu pe disc. Nu vom putea instala actualizări din cauza spațiului insuficient pe disc.
 
@@ -4579,7 +4579,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="controller_alertmanager_tmpdiskfullretry"></a>controller_alertmanager_tmpdiskfullretry
+### <a name="controlleralertmanagertmpdiskfullretry"></a>controller.alertmanager.tmpdiskfullretry
 
 Acest eveniment indică faptul că a fost inițiată o reîncercare de instalare a unei actualizări după detectarea spațiului insuficient pe disc. Încercăm din nou instalarea după ce nu am putut să instalăm actualizări din cauza spațiului insuficient pe disc.
 
@@ -4620,7 +4620,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
     
 
-### <a name="controller_alertmanager_tmpdiskfullretrycancel"></a>controller_alertmanager_tmpdiskfullretrycancel
+### <a name="controlleralertmanagertmpdiskfullretrycancel"></a>controller.alertmanager.tmpdiskfullretrycancel
 
 Acest eveniment indică faptul că a fost detectată o anulare a unei reîncercări de instalare după detectarea spațiului insuficient pe disc. Vom utiliza acest eveniment pentru a determina dacă mecanismul nostru de rezervă a fost suficient pentru a ghida utilizatorul prin procesul de actualizare atunci când s-a detectat insuficient spațiu pe disc.
 
@@ -4661,7 +4661,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="controller_checkwindow_noupdatefoundok"></a>controller_checkwindow_noupdatefoundok
+### <a name="controllercheckwindownoupdatefoundok"></a>controller.checkwindow.noupdatefoundok
 
 Acest eveniment indică faptul că o verificare a actualizărilor nu au fost găsite actualizări. Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite corect, pentru a optimiza încărcarea serviciilor și pentru a defini frecvența de verificare a actualizărilor. De asemenea, dorim să optimizăm cadență noastră de lansare pe baza așteptărilor utilizatorilor față de actualizări.
 
@@ -4703,7 +4703,7 @@ Se colectează următoarele câmpuri:
 
     
 
-### <a name="controller_checkwindow_updatecheck"></a>controller_checkwindow_updatecheck
+### <a name="controllercheckwindowupdatecheck"></a>controller.checkwindow.updatecheck
 
 Acest eveniment indică faptul că a fost efectuată o verificare a actualizărilor. Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite corect, pentru a optimiza încărcarea serviciilor și pentru a defini frecvența de verificare a actualizărilor. De asemenea, dorim să optimizăm cadență noastră de lansare pe baza așteptărilor utilizatorilor față de actualizări.
 
@@ -4744,7 +4744,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="controller_checkwindow_updatecheckcancel"></a>controller_checkwindow_updatecheckcancel
+### <a name="controllercheckwindowupdatecheckcancel"></a>controller.checkwindow.updatecheckcancel
 
 Acest eveniment indică faptul că procesul de verificare a actualizărilor a fost anulat (de către utilizator sau de către sistem). Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite corect, pentru a optimiza încărcarea serviciilor și pentru a defini frecvența de verificare a actualizărilor. De asemenea, dorim să optimizăm cadență noastră de lansare pe baza așteptărilor utilizatorilor față de actualizări.
 
@@ -4785,7 +4785,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="controller_checkwindow_updatecheckcanceluser"></a>controller_checkwindow_updatecheckcanceluser
+### <a name="controllercheckwindowupdatecheckcanceluser"></a>controller.checkwindow.updatecheckcanceluser
 
 Acest eveniment indică faptul că procesul de verificare a actualizărilor a fost anulat de către utilizator.  Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite corect, pentru a optimiza încărcarea serviciilor și pentru a defini frecvența de verificare a actualizărilor. De asemenea, dorim să optimizăm cadență noastră de lansare pe baza așteptărilor utilizatorilor față de actualizări.
 
@@ -4826,7 +4826,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="controller_checkwindow_updatesfound"></a>controller_checkwindow_updatesfound
+### <a name="controllercheckwindowupdatesfound"></a>controller.checkwindow.updatesfound
 
 Acest eveniment indică faptul că în urma procesului de verificare a actualizărilor nu au fost găsite actualizări.  Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite corect.
 
@@ -4867,7 +4867,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="controller_checkwindow_uptodate"></a>controller_checkwindow_uptodate
+### <a name="controllercheckwindowuptodate"></a>controller.checkwindow.uptodate
 
 Acest eveniment indică faptul că în urma procesului de verificare a actualizărilor nu au fost găsite actualizări din cauză că aplicațiile din dispozitiv sunt actualizate.  Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite corect.
 
@@ -4908,7 +4908,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="controller_downloadwindow_applaunchwithpendingupdate"></a>controller_downloadwindow_applaunchwithpendingupdate
+### <a name="controllerdownloadwindowapplaunchwithpendingupdate"></a>controller.downloadwindow.applaunchwithpendingupdate
 
 Acest eveniment indică faptul că a fost lansată o aplicație care este în curs de instalare a actualizărilor. Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite corect. Ar trebui să prevenim instalarea actualizărilor pentru aplicațiile deschise. Aplicațiile trebuie să fie închise înainte de actualizare.
 
@@ -4949,7 +4949,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="controller_downloadwindow_closeapplicationdialog"></a>controller_downloadwindow_closeapplicationdialog
+### <a name="controllerdownloadwindowcloseapplicationdialog"></a>controller.downloadwindow.closeapplicationdialog
 
 Acest eveniment indică faptul că a fost lansată o aplicație care este în curs de instalare a actualizărilor. Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite corect. Ar trebui să prevenim instalarea actualizărilor pentru aplicațiile deschise. Aplicațiile trebuie să fie închise înainte de actualizare.
 
@@ -4990,7 +4990,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="controller_downloadwindow_curtasknull"></a>controller_downloadwindow_curtasknull
+### <a name="controllerdownloadwindowcurtasknull"></a>controller.downloadwindow.curtasknull
 
 Acest eveniment indică faptul că s-a produs o eroare neașteptată în timpul încercării de aplicare a unei actualizări. Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite corect.
 
@@ -5031,7 +5031,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="controller_downloadwindow_downloadcancel"></a>controller_downloadwindow_downloadcancel
+### <a name="controllerdownloadwindowdownloadcancel"></a>controller.downloadwindow.downloadcancel
 
 Acest eveniment indică faptul că procesul de descărcare a fost anulat de către utilizator.  Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite corect.
 
@@ -5072,7 +5072,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="controller_downloadwindow_downloadfailed"></a>controller_downloadwindow_downloadfailed
+### <a name="controllerdownloadwindowdownloadfailed"></a>controller.downloadwindow.downloadfailed
 
 Acest eveniment indică faptul că s-a produs o eroare în timpul descărcării unei actualizări. Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite și descărcate corect.
 
@@ -5113,7 +5113,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="controller_downloadwindow_downloadfailedok"></a>controller_downloadwindow_downloadfailedok
+### <a name="controllerdownloadwindowdownloadfailedok"></a>controller.downloadwindow.downloadfailedok
 
 Acest eveniment indică faptul că s-a produs o eroare în timpul descărcării unei actualizări și că utilizatorul a fost notificat. Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite și descărcate corect și că, în cazul unei erori, utilizatorul va primi o notificare.
 
@@ -5154,7 +5154,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="controller_downloadwindow_downloadpathmissing"></a>controller_downloadwindow_downloadpathmissing
+### <a name="controllerdownloadwindowdownloadpathmissing"></a>controller.downloadwindow.downloadpathmissing
 
 Acest eveniment indică faptul că s-a produs o eroare în timpul descărcării unei actualizări. Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite și descărcate corect. Acest eveniment indică faptul că lipsește un URL de descărcare.
 
@@ -5195,7 +5195,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="controller_downloadwindow_downloadtasknull"></a>controller_downloadwindow_downloadtasknull
+### <a name="controllerdownloadwindowdownloadtasknull"></a>controller.downloadwindow.downloadtasknull
 
 Acest eveniment indică faptul că s-a produs o eroare în timpul descărcării unei actualizări. Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite și descărcate corect. Acest eveniment indică faptul că aplicația Microsoft Autoupdate a fost solicitată să întrerupă/reia o descărcare, dar nu a putut găsi managerul de descărcare corespunzător.
 
@@ -5236,7 +5236,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="controller_downloadwindow_filesignaturenotverified"></a>controller_downloadwindow_filesignaturenotverified
+### <a name="controllerdownloadwindowfilesignaturenotverified"></a>controller.downloadwindow.filesignaturenotverified
 
 Acest eveniment indică faptul că s-a produs o eroare în timpul descărcării unei actualizări. Acest eveniment indică faptul că Microsoft Autoupdate nu a reușit să verifice dacă această actualizare a fost publicată de Microsoft. Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite și descărcate corect. 
 
@@ -5277,7 +5277,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="controller_downloadwindow_installcomplete"></a>controller_downloadwindow_installcomplete
+### <a name="controllerdownloadwindowinstallcomplete"></a>controller.downloadwindow.installcomplete
 
 Acest eveniment indică faptul că instalarea tuturor actualizărilor oferite de Microsoft Autoupdate a fost finalizată. Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite și descărcate corect. 
 
@@ -5318,7 +5318,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="controller_downloadwindow_networkunavailablealert"></a>controller_downloadwindow_networkunavailablealert
+### <a name="controllerdownloadwindownetworkunavailablealert"></a>controller.downloadwindow.networkunavailablealert
 
 Acest eveniment indică faptul că conectivitatea la rețea a fost pierdută în timpul descărcării actualizărilor.  Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
 
@@ -5359,7 +5359,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="controller_downloadwindow_networkunavailablealertok"></a>controller_downloadwindow_networkunavailablealertok
+### <a name="controllerdownloadwindownetworkunavailablealertok"></a>controller.downloadwindow.networkunavailablealertok
 
 Acest eveniment indică faptul că conectivitatea la rețea a fost pierdută în timpul descărcării actualizărilor. De asemenea, indică faptul că utilizatorul a fost notificat de această eroare. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
 
@@ -5400,7 +5400,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="controller_downloadwindow_noconnectionok"></a>controller_downloadwindow_noconnectionok
+### <a name="controllerdownloadwindownoconnectionok"></a>controller.downloadwindow.noconnectionok
 
 Acest eveniment indică faptul că conectivitatea la rețea a fost pierdută în timpul descărcării actualizărilor. De asemenea, indică faptul că utilizatorul a fost notificat de această eroare. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
 
@@ -5441,7 +5441,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="controller_downloadwindow_repairrequired"></a>controller_downloadwindow_repairrequired
+### <a name="controllerdownloadwindowrepairrequired"></a>controller.downloadwindow.repairrequired
 
 Acest eveniment indică faptul că procesul de actualizare nu a reușit. De asemenea, indică faptul că s-a finalizat o actualizare, însă Microsoft Autoupdate a găsit o problemă cu aplicația actualizată și este necesară repararea. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
 
@@ -5481,7 +5481,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="controller_downloadwindow_updateaborted"></a>controller_downloadwindow_updateaborted
+### <a name="controllerdownloadwindowupdateaborted"></a>controller.downloadwindow.updateaborted
 
 Acest eveniment indică faptul că procesul de actualizare a fost anulat. De asemenea, indică faptul că o actualizare era deja în curs prin Daemon și că utilizatorul a făcut clic pe OK pentru a anula descărcarea. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
 
@@ -5522,7 +5522,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="controller_downloadwindow_updatefailed"></a>controller_downloadwindow_updatefailed
+### <a name="controllerdownloadwindowupdatefailed"></a>controller.downloadwindow.updatefailed
 
 Acest eveniment indică faptul că una sau mai multe actualizări din lotul actual nu au reușit. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
 
@@ -5563,7 +5563,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="controller_downloadwindow_updatesuccessful"></a>controller_downloadwindow_updatesuccessful
+### <a name="controllerdownloadwindowupdatesuccessful"></a>controller.downloadwindow.updatesuccessful
 
 Acest eveniment indică faptul că toate actualizările din lotul actual au fost efectuate cu succes. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
 
@@ -5604,7 +5604,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="controller_downloadwindow_userpaused"></a>controller_downloadwindow_userpaused
+### <a name="controllerdownloadwindowuserpaused"></a>controller.downloadwindow.userpaused
 
 Acest eveniment indică faptul că toate actualizările din lotul actual au fost efectuate cu succes. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
 
@@ -5645,7 +5645,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="controller_downloadwindow_userresumed"></a>controller_downloadwindow_userresumed
+### <a name="controllerdownloadwindowuserresumed"></a>controller.downloadwindow.userresumed
 
 Acest eveniment indică faptul că procesul de descărcare a actualizărilor a fost reluat cu succes după întrerupere. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
 
@@ -5686,7 +5686,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="controller_mainwindow_setautomaticdownloadinstall"></a>controller_mainwindow_setautomaticdownloadinstall
+### <a name="controllermainwindowsetautomaticdownloadinstall"></a>controller.mainwindow.setautomaticdownloadinstall
 
 Acest eveniment indică faptul că dispozitivul a fost înscris în modul de Actualizare automată. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
 
@@ -5727,7 +5727,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="controller_mainwindow_setmanualchecking"></a>controller_mainwindow_setmanualchecking
+### <a name="controllermainwindowsetmanualchecking"></a>controller.mainwindow.setmanualchecking
 
 Acest eveniment indică faptul că dispozitivul a fost înscris în modul de Actualizare manuală. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
 
@@ -5768,7 +5768,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="controller_templateawindow_cancel"></a>controller_templateawindow_cancel
+### <a name="controllertemplateawindowcancel"></a>controller.templateawindow.cancel
 
 Acest eveniment indică faptul că utilizatorul a ales să anuleze sau să ignore un mesaj de avertizare furnizat. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
 
@@ -5809,7 +5809,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="controller_templateawindow_enroll"></a>controller_templateawindow_enroll
+### <a name="controllertemplateawindowenroll"></a>controller.templateawindow.enroll
 
 Acest eveniment indică faptul că utilizatorul a ales să urmeze o recomandare de avertizare furnizată. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
 
@@ -5851,7 +5851,7 @@ Se colectează următoarele câmpuri:
 
 
 
-### <a name="controller_templateawindow_install"></a>controller_templateawindow_install
+### <a name="controllertemplateawindowinstall"></a>controller.templateawindow.install
 
 Acest eveniment indică faptul că utilizatorul a ales să urmeze o recomandare de avertizare furnizată legată de inițierea unei acțiuni de instalare de software. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
 
@@ -5892,7 +5892,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="controller_updatewindow_begindownloadingapps"></a>controller_updatewindow_begindownloadingapps
+### <a name="controllerupdatewindowbegindownloadingapps"></a>controller.updatewindow.begindownloadingapps
 
 Acest eveniment indică faptul că descărcarea actualizărilor a fost începută prin fereastra Actualizare. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
 
@@ -5933,7 +5933,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="controller_updatewindow_networkretry"></a>controller_updatewindow_networkretry
+### <a name="controllerupdatewindownetworkretry"></a>controller.updatewindow.networkretry
 
 Acest eveniment indică faptul că a fost declanșată o reîncercare în Foaia de actualizări din cauza unei erori de rețea. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
 
@@ -5974,7 +5974,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="controller_updatewindow_networkretrycancel"></a>controller_updatewindow_networkretrycancel
+### <a name="controllerupdatewindownetworkretrycancel"></a>controller.updatewindow.networkretrycancel
 
 Acest eveniment indică faptul că nu a putut fi declanșată o reîncercare în Foaia de actualizări din cauza unei erori de rețea. Acest eveniment indică faptul că utilizatorul a ales să anuleze actualizările după ce a fost alertat că rețeaua va fi indisponibilă. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -6015,7 +6015,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="controller_updatewindow_networkunavailable"></a>controller_updatewindow_networkunavailable
+### <a name="controllerupdatewindownetworkunavailable"></a>controller.updatewindow.networkunavailable
 
 Acest eveniment indică faptul că conectivitatea la rețea a fost pierdută brusc. Acest eveniment indică faptul că serverul nu este accesibil atunci când se încearcă descărcarea unui pachet de actualizare. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -6056,7 +6056,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="controller_updatewindow_noupdateavailable"></a>controller_updatewindow_noupdateavailable
+### <a name="controllerupdatewindownoupdateavailable"></a>controller.updatewindow.noupdateavailable
 
 Acest eveniment indică faptul că a existat o căutare de actualizări în urma căreia nu a fost găsită nicio actualizare disponibilă. Acest eveniment indică faptul că nu s-au găsit actualizări disponibile de către Microsoft Autoupdate. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -6097,7 +6097,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="controller_updatewindow_noupdatestoselect"></a>controller_updatewindow_noupdatestoselect
+### <a name="controllerupdatewindownoupdatestoselect"></a>controller.updatewindow.noupdatestoselect
 
 Acest eveniment indică faptul că s-a produs o eroare, rezultând o listă de actualizări necompletată. Acest eveniment indică faptul că Microsoft Autoupdate afișează o foaie de actualizări necompletată. Acest lucru nu ar trebui să se întâmple. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -6138,7 +6138,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="controller_updatewindow_updateavailable"></a>Controller_UpdateWindow_UpdateAvailable
+### <a name="controllerupdatewindowupdateavailable"></a>Controller.UpdateWindow.UpdateAvailable
 
 Acest eveniment indică faptul că a existat o căutare de actualizări în urma căreia au fost găsite actualizări. Utilizăm acest eveniment pentru a determina dacă actualizările sunt oferite pentru a fi vizualizate de către utilizator, dacă sunt afișate actualizările corespunzătoare sau dacă blocarea actualizărilor funcționează în mod corect. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -6179,7 +6179,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="controller_updatewindow_updateavailablecancel"></a>controller_updatewindow_updateavailablecancel
+### <a name="controllerupdatewindowupdateavailablecancel"></a>controller.updatewindow.updateavailablecancel
 
 Acest eveniment indică faptul că un utilizator a anulat actualizarea după ce am afișat foaia de actualizări cu actualizările. Utilizăm acest eveniment pentru a explica motivele pentru care nu se realizează actualizarea (adică, utilizatorul anulează de bună voie). Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -6220,7 +6220,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="downloadactor_pause"></a>downloadactor_pause
+### <a name="downloadactorpause"></a>downloadactor.pause
 
 Acest eveniment indică faptul că utilizatorul a emis o solicitare de întrerupere a descărcării. Utilizăm acest eveniment pentru a explica motivele pentru care actualizările par că nu sunt finalizate. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -6261,7 +6261,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="downloadactor_redirect"></a>downloadactor_redirect
+### <a name="downloadactorredirect"></a>downloadactor.redirect
 
 Acest eveniment indică faptul că agentul de descărcare este îndreptat către un punct final care emite o redirecționare URL pentru solicitarea de descărcare. Utilizăm acest eveniment pentru a explica motivele erorilor de descărcare și diagnosticarea problemelor proxy. De asemenea, ne poate ajuta la diagnosticarea motivelor pentru care se observă că utilizatorii instalează compilări mai vechi. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -6302,7 +6302,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="downloadactor_resume"></a>downloadactor_resume
+### <a name="downloadactorresume"></a>downloadactor.resume
 
 Acest eveniment indică faptul că utilizatorul a emis o solicitare de reluare a unei descărcări întrerupte. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -6343,7 +6343,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="downloadactor_resumeerror"></a>downloadactor_resumeerror
+### <a name="downloadactorresumeerror"></a>downloadactor.resumeerror
 
 Acest eveniment indică faptul că utilizatorul a emis o solicitare de reluare a unei descărcări întrerupte. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -6384,7 +6384,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="downloadactor_status"></a>downloadactor_status
+### <a name="downloadactorstatus"></a>downloadactor.status
 
 Acest eveniment înregistrează faptul că există încercări de preluare a fișierelor colaterale și rezultatul acestora (succes sau eșec). Dorim să știm care sunt fișierele colaterale și pachetele preluate. Un fișier incorect preluat poate indica o problemă de compilare/colaterală. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -6425,7 +6425,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="downloadmanifest_configuration"></a>downloadmanifest_configuration
+### <a name="downloadmanifestconfiguration"></a>downloadmanifest.configuration
 
 Acest eveniment raportează o eroare cu configurația Microsoft AutoUpdate (MAU); fie cu configurarea Server particularizat din preferințe sau cu definițiile de punct final din Asistentul de actualizare din componentele MAU instalate. Folosim acest eveniment pentru a consilia administratorii IT în vederea setării corecte a punctelor finale din serverul manifest.
  
@@ -6464,7 +6464,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="downloadmanifest_downloadcatalogfail"></a>downloadmanifest_downloadcatalogfail
+### <a name="downloadmanifestdownloadcatalogfail"></a>downloadmanifest.downloadcatalogfail
 
 Acest eveniment indică faptul că a avut loc o eroare de descărcare. Fișierul care nu s-a descărcat este înregistrat. Dorim să știm care sunt fișierele colaterale și pachetele preluate. O eroare de descărcare a unui manifest poate indica o eroare de generare colaterală a compilării, o eroare de configurare CDN, o eroare de configurare a clientului, o eroare de rețea. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -6505,7 +6505,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="downloadmanifest_downloadcatalogsuccess"></a>downloadmanifest_downloadcatalogsuccess
+### <a name="downloadmanifestdownloadcatalogsuccess"></a>downloadmanifest.downloadcatalogsuccess
 
 Acest eveniment indică faptul că un fișier a fost descărcat cu succes. O eroare de descărcare a unui manifest poate indica o eroare de generare colaterală a compilării, o eroare de configurare CDN, o eroare de configurare a clientului, o eroare de rețea. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -6546,7 +6546,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="downloadmanifest_downloadfail"></a>downloadmanifest_downloadfail
+### <a name="downloadmanifestdownloadfail"></a>downloadmanifest.downloadfail
 
 Acest eveniment indică faptul că s-a produs o eroare de descărcare. Fișierul cu manifestul sau pachetul care nu a reușit să fie descărcat, precum și detaliile erorii, sunt înregistrate. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -6587,7 +6587,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="downloadmanifest_downloadfromurl"></a>downloadmanifest_downloadfromurl
+### <a name="downloadmanifestdownloadfromurl"></a>downloadmanifest.downloadfromurl
 
 Acest eveniment indică faptul că a început descărcarea unui fișier catalog. Înregistrăm adresa URL de la care se descarcă fișierul catalog. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -6628,7 +6628,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="downloadmanifest_downloading"></a>downloadmanifest_downloading
+### <a name="downloadmanifestdownloading"></a>downloadmanifest.downloading
 
 Acest eveniment indică faptul că a început descărcarea unui fișier catalog. Înregistrăm adresa URL de la care se descarcă fișierul catalog. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -6669,7 +6669,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="downloadmanifest_downloadsuccess"></a>downloadmanifest_downloadsuccess
+### <a name="downloadmanifestdownloadsuccess"></a>downloadmanifest.downloadsuccess
 
 Acest eveniment indică faptul că descărcarea unui fișier XML și de pachet a reușit. Înregistrăm adresa URL de la care se descarcă fișierul. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -6710,7 +6710,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="downloadmanifest_downloadurl"></a>downloadmanifest_downloadurl
+### <a name="downloadmanifestdownloadurl"></a>downloadmanifest.downloadurl
 
 Acest eveniment indică faptul că s-a produs o solicitare de descărcare a unui fișier. Înregistrăm adresa URL de la care se descarcă fișierul. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -6751,7 +6751,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="downloadmanifest_filenameerror"></a>downloadmanifest_filenameerror
+### <a name="downloadmanifestfilenameerror"></a>downloadmanifest.filenameerror
 
 Acest eveniment indică faptul că s-a produs o eroare neașteptată. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -6792,7 +6792,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="downloadmanifest_invalidhash"></a>downloadmanifest_invalidhash
+### <a name="downloadmanifestinvalidhash"></a>downloadmanifest.invalidhash
 
 Acest eveniment indică faptul că validarea securității fișierelor noastre nu a reușit. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -6833,7 +6833,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="downloadmanifest_missingdaemon"></a>downloadmanifest_missingdaemon
+### <a name="downloadmanifestmissingdaemon"></a>downloadmanifest.missingdaemon
 
 Acest eveniment indică faptul că un utilizator a încercat să caute actualizări și am descoperit că aplicației MAU îi lipsește o componentă de bază (Daemon). Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -6874,7 +6874,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="downloadmanifest_signatureerror"></a>downloadmanifest_signatureerror
+### <a name="downloadmanifestsignatureerror"></a>downloadmanifest.signatureerror
 
 Acest eveniment indică faptul că verificarea semnăturii codului nu a reușit pentru un pachet. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -6915,7 +6915,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="downloadmanifest_status"></a>downloadmanifest_status
+### <a name="downloadmanifeststatus"></a>downloadmanifest.status
 
 Acest eveniment înregistrează o agregare rezumativă a încercărilor/eșecurilor din timpul procesului de descărcare pentru fișiere manifest și pachet. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -6956,7 +6956,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="downloadmgr_downloadend"></a>downloadmgr_downloadend
+### <a name="downloadmgrdownloadend"></a>downloadmgr.downloadend
 
 Acest eveniment înregistrează un marcator care indică procesul de descărcare finalizat pe cont propriu. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -6997,7 +6997,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="downloadmgr_downloadstart"></a>downloadmgr_downloadstart
+### <a name="downloadmgrdownloadstart"></a>downloadmgr.downloadstart
 
 Acest eveniment înregistrează actualizarea care urmează să fie descărcată. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -7037,7 +7037,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="downloadtask_downloadbegin"></a>downloadtask_downloadbegin
+### <a name="downloadtaskdownloadbegin"></a>downloadtask.downloadbegin
 
 Acest eveniment indică începutul activității de descărcare pentru o actualizare de aplicație. Acesta face parte din pâlnia de actualizare și îl utilizăm pentru a determina starea de funcționare a actualizărilor de aplicații.
  
@@ -7086,7 +7086,7 @@ Se colectează următoarele câmpuri:
 - **UpdateVersion** - versiunea aplicației după actualizare
 
 
-### <a name="downloadtask_downloadfailure"></a>downloadtask_downloadfailure
+### <a name="downloadtaskdownloadfailure"></a>downloadtask.downloadfailure
 
 Acest eveniment înregistrează faptul că s-a produs o eroare la descărcarea unui fișier pachet. Înregistrăm calea actualizării și eroarea. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -7133,7 +7133,7 @@ Se colectează următoarele câmpuri:
 - **UpdateID** - identificatorul actualizării care se descarcă.
 
 
-### <a name="downloadtask_downloadsuccess"></a>downloadtask_downloadsuccess
+### <a name="downloadtaskdownloadsuccess"></a>downloadtask.downloadsuccess
 
 Descărcarea cu succes a unui fișier pachet. Înregistrăm calea actualizării utilizate. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -7177,7 +7177,7 @@ Se colectează următoarele câmpuri:
 
 - **UpdateID** - identificatorul actualizării descărcate.
 
-### <a name="downloadtask_updatertypeerror"></a>downloadtask_updatertypeerror
+### <a name="downloadtaskupdatertypeerror"></a>downloadtask.updatertypeerror
 
 Acest eveniment raportează o eroare de tip actualizator în fișierul manifest descărcat. Folosim acest eveniment pentru a notifica proprietarul fișierului manifest, astfel încât eroarea să poată fi remediată.
  
@@ -7221,7 +7221,7 @@ Se colectează următoarele câmpuri:
 
 - **UpdateURL** - URL-ul pachetului de actualizare care trebuie aplicat
 
-### <a name="downloadtask_urlerror"></a>downloadtask_urlerror
+### <a name="downloadtaskurlerror"></a>downloadtask.urlerror
 
 Acest eveniment raportează o eroare din URL-ul specificat în fișierul manifest descărcat. Folosim acest eveniment pentru a notifica proprietarul fișierului manifest, astfel încât eroarea să poată fi remediată.
  
@@ -7263,7 +7263,7 @@ Se colectează următoarele câmpuri:
 
 - **UpdateURL** - URL-ul pachetului de actualizare care trebuie aplicat
 
-### <a name="fba_changelastupdate"></a>fba_changelastupdate
+### <a name="fbachangelastupdate"></a>fba.changelastupdate
 
 Acest eveniment raportează atunci când Microsoft Auto Update (MAU) a căutat actualizări. Folosim acest eveniment pentru depanare atunci când nu se oferă o actualizare unui anumit dispozitiv pentru o perioadă prelungită de timp.
 
@@ -7302,7 +7302,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="fba_checkforupdate"></a>fba_checkforupdate
+### <a name="fbacheckforupdate"></a>fba.checkforupdate
 
 Acest eveniment indică faptul că un proces de fundal caută actualizări. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -7343,7 +7343,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="fba_checkforupdateskip"></a>fba_checkforupdateskip
+### <a name="fbacheckforupdateskip"></a>fba.checkforupdateskip
 
 Acest eveniment indică faptul că un proces de fundal a ignorat actualizarea din cauza faptului că MAU GUI este deschis. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -7384,7 +7384,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="fba_forceinstallmsgsent"></a>fba_forceinstallmsgsent
+### <a name="fbaforceinstallmsgsent"></a>fba.forceinstallmsgsent
 
 Acest eveniment indică faptul că a fost inițiată o actualizare forțată din interfața utilizator. Acest eveniment face parte din pâlnie și este folosit pentru a determina buna funcționare a caracteristicii de actualizare forțată.
 
@@ -7422,7 +7422,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="fba_forceupdatecheck"></a>fba_forceupdatecheck
+### <a name="fbaforceupdatecheck"></a>fba.forceupdatecheck
 
 Acest eveniment indică faptul că verificarea actualizării este forțată. Folosim acest eveniment pentru a determina volumul de verificări forțate ale actualizărilor care au loc în afara ciclului normal de verificare a actualizărilor.
 
@@ -7462,7 +7462,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="fba_guiappopen"></a>fba_guiappopen
+### <a name="fbaguiappopen"></a>fba.guiappopen
 
 Acest eveniment indică faptul că interfața de utilizator este lansată în modul de Verificare automată, având o aplicație cu actualizare aplicabilă deschisă acum. Acest eveniment este folosit pentru a determina volumul de lansări de interfață cu utilizatorul din modul de Verificare automată pentru dezvoltarea caracteristicilor viitoare.
 
@@ -7502,7 +7502,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="fba_installpending"></a>fba_installpending
+### <a name="fbainstallpending"></a>fba.installpending
 
 Acest eveniment indică faptul că Microsoft Auto Update (MAU) a trimis o notificare cu privire la actualizările în așteptare. Acest eveniment este folosit pentru a determina volumul de actualizări care sunt inițiate din notificările de utilizator și sunt utilizate pentru a îmbunătăți experiența utilizatorilor prin minimizarea întreruperilor pentru utilizator în versiunile ulterioare.
 
@@ -7542,7 +7542,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="fba_launch"></a>fba_launch
+### <a name="fbalaunch"></a>fba.launch
 
 Acest eveniment indică începutul Asistentului de actualizare Microsoft cu privire la metoda de lansare. Acest eveniment este utilizat pentru a determina dacă Asistentul pentru actualizare Microsoft este lansat într-un context incorect.
 
@@ -7582,7 +7582,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="fba_launchbyagent"></a>fba_launchbyagent
+### <a name="fbalaunchbyagent"></a>fba.launchbyagent
 
 Acest eveniment indică faptul că Asistentul pentru actualizare Microsoft a fost lansat prin intermediul Agentului de lansare. Acest eveniment este utilizat pentru a determina volumul Asistentului de actualizare Microsoft lansat din interfața de utilizator pentru dezvoltare viitoare.
 
@@ -7622,7 +7622,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="fba_launchfromprotocol"></a>fba_launchfromprotocol
+### <a name="fbalaunchfromprotocol"></a>fba.launchfromprotocol
 
 Acest eveniment indică faptul că Asistentul de actualizare Microsoft a fost lansat prin intermediul protocolului de URL. Acest eveniment este utilizat pentru a determina volumul Asistentului de actualizare Microsoft lansat prin URL pentru dezvoltare viitoare.
 
@@ -7662,7 +7662,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="fba_launchgui"></a>fba_launchgui
+### <a name="fbalaunchgui"></a>fba.launchgui
 
 Acest eveniment indică faptul că Asistentul de actualizare Microsoft încearcă să lanseze Interfața grafică cu utilizatorul (GUI). Acest eveniment este folosit pentru a determina volumul de lansări UI inițiate din Asistentul de actualizare Microsoft, pentru a ajuta cu dezvoltarea viitoare, inclusiv cu minimizarea întreruperii utilizatorului din cauza lansării frecvente de UI.
 
@@ -7703,7 +7703,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="fba_launchstatus"></a>fba_launchstatus
+### <a name="fbalaunchstatus"></a>fba.launchstatus
 
 Acest eveniment înregistrează erorile Daemon ale MAU în timpul încercării de lansare. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -7748,7 +7748,7 @@ Se colectează următoarele câmpuri:
 - **Success** - șirul de caractere boolean care indică dacă s-a lansat cu succes sau nu procesul daemon MAU.
 
 
-### <a name="fba_mausilentupdate"></a>fba_mausilentupdate
+### <a name="fbamausilentupdate"></a>fba.mausilentupdate
 
 Acest eveniment indică faptul că Asistentul de actualizare Microsoft inițiază actualizări silențioase. Acest eveniment este utilizat pentru a determina volumul de actualizări aplicate fără intervenția utilizatorului, pentru a contribui la îmbunătățirea experienței de utilizator.
 
@@ -7788,7 +7788,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="fba_moreinfofromappnotification"></a>fba_moreinfofromappnotification
+### <a name="fbamoreinfofromappnotification"></a>fba.moreinfofromappnotification
 
 Acest eveniment raportează despre informațiile pe care le distribuie o aplicație înregistrată prin intermediul Microsoft auto update (MAU). De exemplu, mesajele de la sfârșitul serviciului sunt transmise prin notificarea MAU. Folosim acest eveniment pentru a determina volumul de dispozitive care afișează această notificare specială, pentru a determina reușita diseminării informațiilor.
 
@@ -7830,7 +7830,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="fba_multipledaemon"></a>fba_multipledaemon
+### <a name="fbamultipledaemon"></a>fba.multipledaemon
 
 Acest eveniment indică faptul că a fost detectată o altă instanță a asistentului de actualizare Microsoft, iar instanța curentă va fi încheiată. Vom folosi acest eveniment pentru a determina volumul de dispozitive care încearcă să ruleze mai multe instanțe ale asistentului de actualizare și să proiecteze o soluție, dacă este necesar.
 
@@ -7870,7 +7870,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="fba_nofifyappclosed"></a>fba_nofifyappclosed
+### <a name="fbanofifyappclosed"></a>fba.nofifyappclosed
 
 Acest eveniment indică faptul că asistentul de actualizare Microsoft trimite o notificare pentru actualizări în așteptare, deoarece nu există nicio aplicație înregistrată deschisă, iar actualizările pot continua fără a întrerupe utilizatorul. Folosim acest eveniment pentru a determina volumul de actualizări care se pot aplica, dar aveți nevoie de acțiunea utilizatorului pentru a face acest lucru. Acest eveniment este folosit pentru a contribui la îmbunătățirea experienței de utilizator.
 
@@ -7910,7 +7910,7 @@ Se colectează următoarele câmpuri:
     
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="fba_nofifyappopen"></a>fba_nofifyappopen
+### <a name="fbanofifyappopen"></a>fba.nofifyappopen
 
 Acest eveniment indică faptul că asistentul de actualizare Microsoft trimite o notificare pentru actualizări în așteptare, deoarece există aplicații înregistrate deschise, iar pentru a continua actualizările trebuie închise aplicațiile.  Folosim acest eveniment pentru a determina volumul de actualizări care necesită intervenția utilizatorului.  Acest eveniment este folosit pentru a contribui la îmbunătățirea experienței de utilizator.
 
@@ -7950,7 +7950,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="fba_settimerfail"></a>fba_settimerfail  
+### <a name="fbasettimerfail"></a>fba.settimerfail  
 
 Acest eveniment indică faptul că o încercare de a configura cronometrul pentru a declanșa o actualizare viitoare a eșuat. Acest eveniment este esențial și îl folosim pentru a determina volumul de erori pentru a crea soluții temporare, dacă este necesar.
 
@@ -7991,7 +7991,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="fba_silentupdateoptin"></a>fba_silentupdateoptin
+### <a name="fbasilentupdateoptin"></a>fba.silentupdateoptin
 
 Acest eveniment indică faptul că utilizatorul optează pentru actualizările silențioase. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -8031,7 +8031,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="fba_skipforcedupdate"></a>fba_skipforcedupdate
+### <a name="fbaskipforcedupdate"></a>fba.skipforcedupdate
 
 Acest eveniment indică faptul că verificatorul de actualizări forțate este ignorat din cauza aplicațiilor deschise. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -8072,7 +8072,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="fba_startforcedupdate"></a>fba_startforcedupdate
+### <a name="fbastartforcedupdate"></a>fba.startforcedupdate
 
 Acest eveniment indică faptul că s-a produs o încercare de aplicare a unei actualizări forțate. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -8113,7 +8113,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="fba_terminate"></a>fba_terminate
+### <a name="fbaterminate"></a>fba.terminate
 
 Acest eveniment indică faptul că Daemon MAU s-a oprit normal. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -8154,7 +8154,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="fba_updatefound"></a>fba_updatefound
+### <a name="fbaupdatefound"></a>fba.updatefound
 
 Acest eveniment indică faptul că Daemon MAU a găsit actualizări disponibile oferite. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -8195,7 +8195,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="fba_updatetimer"></a>fba_updatetimer
+### <a name="fbaupdatetimer"></a>fba.updatetimer
 
 Acest eveniment indică faptul că procesul Daemon Microsoft Autoupdate a devenit activ pentru a căuta actualizări după ce a fost inactiv pentru o perioadă de timp setată. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -8236,7 +8236,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="fbasilentupdate_allappsclosed"></a>fbasilentupdate_allappsclosed
+### <a name="fbasilentupdateallappsclosed"></a>fbasilentupdate.allappsclosed
 
 Acest eveniment înregistrează dacă toate aplicațiile au fost închise înaintea unei instalări. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -8277,7 +8277,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="fbasilentupdate_applaunchafterupdate"></a>fbasilentupdate_applaunchafterupdate
+### <a name="fbasilentupdateapplaunchafterupdate"></a>fbasilentupdate.applaunchafterupdate
 
 Acest eveniment înregistrează o încercare de a relansa aplicația după o actualizare silențioasă și modul de actualizare (clonă sau nu). Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -8322,7 +8322,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="fbasilentupdate_applaunchwileinstalling"></a>fbasilentupdate_applaunchwileinstalling
+### <a name="fbasilentupdateapplaunchwileinstalling"></a>fbasilentupdate.applaunchwileinstalling
 
 Înregistrăm când s-a efectuat o lansare de aplicație în timpul instalării unei actualizări. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -8363,7 +8363,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="fbasilentupdate_appneedtoclose"></a>fbasilentupdate_appneedtoclose
+### <a name="fbasilentupdateappneedtoclose"></a>fbasilentupdate.appneedtoclose
 
 Înregistrăm când s-a lansat un proces de actualizare și descoperim că aplicația care trebuie actualizată a fost deschisă. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -8404,7 +8404,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="fbasilentupdate_appterminationeventreceived"></a>fbasilentupdate_appterminationeventreceived
+### <a name="fbasilentupdateappterminationeventreceived"></a>fbasilentupdate.appterminationeventreceived
 
 Acest eveniment indică faptul că Microsoft Autoupdate a primit un eveniment Apple care informează că aplicația a fost oprită. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -8451,7 +8451,7 @@ Se colectează următoarele câmpuri:
 - **UpdateID** - identificatorul actualizării aplicației.
 
 
-### <a name="fbasilentupdate_clientsession"></a>FBASilentUpdate_ClientSession
+### <a name="fbasilentupdateclientsession"></a>FBASilentUpdate.ClientSession
 
 Acest eveniment este folosit pentru a calcula indicatorul de stare de funcționare a actualizării esențiale calculate pentru Microsoft AutoUpdate (MAU). Acest eveniment ne permite să indicăm ce sesiune de actualizare (descărcare sau instalare) gestionează backend-ul în acest moment.
  
@@ -8492,7 +8492,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="fbasilentupdate_codesignfailure"></a>fbasilentupdate_codesignfailure
+### <a name="fbasilentupdatecodesignfailure"></a>fbasilentupdate.codesignfailure
 
 Acest eveniment înregistrează rezultatul verificării semnăturii codului după aplicarea unei actualizări. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -8533,7 +8533,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="fbasilentupdate_download"></a>fbasilentupdate_download
+### <a name="fbasilentupdatedownload"></a>fbasilentupdate.download
 
 Acest eveniment indică faptul că se descarcă o actualizare. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -8576,7 +8576,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="fbasilentupdate_downloadfailed"></a>fbasilentupdate_downloadfailed
+### <a name="fbasilentupdatedownloadfailed"></a>fbasilentupdate.downloadfailed
 
 Acest eveniment indică faptul că s-a produs o eroare în timpul descărcării unei actualizări. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -8625,7 +8625,7 @@ Se colectează următoarele câmpuri:
 - **UpdateName** - numele actualizării aplicației.
 
 
-### <a name="fbasilentupdate_downloadinbackground"></a>fbasilentupdate_downloadinbackground
+### <a name="fbasilentupdatedownloadinbackground"></a>fbasilentupdate.downloadinbackground
 
 Acest eveniment indică faptul că începem descărcarea unui set de actualizări pe fundal (înregistrăm numărul de actualizări descărcate concomitent). Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -8666,7 +8666,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="fbasilentupdate_downloadingrepairupdate"></a>fbasilentupdate_downloadingrepairupdate
+### <a name="fbasilentupdatedownloadingrepairupdate"></a>fbasilentupdate.downloadingrepairupdate
 
 Acest eveniment indică faptul că am inițiat o încercare de descărcare a unui fișier de reparare pentru o actualizare eșuată. Înregistrăm versiunea și actualizarea. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -8709,7 +8709,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="fbasilentupdate_duplicatedownloadattempted"></a>fbasilentupdate_duplicatedownloadattempted
+### <a name="fbasilentupdateduplicatedownloadattempted"></a>fbasilentupdate.duplicatedownloadattempted
 
 Acest eveniment indică faptul că s-a produs o eroare. Ar trebui să descărcăm pe rând fiecare actualizare pentru o anumită aplicație. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -8750,7 +8750,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="fbasilentupdate_installattemptfailed"></a>fbasilentupdate_installattemptfailed
+### <a name="fbasilentupdateinstallattemptfailed"></a>fbasilentupdate.installattemptfailed
 
 Acest eveniment indică faptul că o încercare de instalare a unei actualizări (versiuni) nu a reușit. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -8791,7 +8791,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="fbasilentupdate_installcomplete"></a>fbasilentupdate_installcomplete
+### <a name="fbasilentupdateinstallcomplete"></a>fbasilentupdate.installcomplete
 
 Acest eveniment indică faptul că toate actualizările din grup au fost instalate. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -8832,7 +8832,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="fbasilentupdate_installed"></a>fbasilentupdate_installed
+### <a name="fbasilentupdateinstalled"></a>fbasilentupdate.installed
 
 Acest eveniment indică faptul că o actualizare individuală a fost instalată cu succes. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -8873,7 +8873,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="fbasilentupdate_installing"></a>fbasilentupdate_installing
+### <a name="fbasilentupdateinstalling"></a>fbasilentupdate.installing
 
 Acest eveniment indică faptul că a fost inițiată o actualizare individuală. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -8913,7 +8913,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="fbasilentupdate_installstatus"></a>fbasilentupdate_installstatus
+### <a name="fbasilentupdateinstallstatus"></a>fbasilentupdate.installstatus
 
 Acest eveniment raportează despre starea activității de actualizare a aplicației. Acest eveniment face parte din pâlnia de actualizare a aplicației și o utilizăm pentru a monitoriza starea de funcționare a actualizărilor aplicației.
 
@@ -8963,7 +8963,7 @@ Se colectează următoarele câmpuri:
 
 - **UpdatePkg** - numele pachetului de actualizare aplicată
 
-### <a name="fbasilentupdate_notificationerror"></a>fbasilentupdate_notificationerror
+### <a name="fbasilentupdatenotificationerror"></a>fbasilentupdate.notificationerror
 
 Acest eveniment raportează despre o eroare întâlnită în timpul încercării de a trimite notificarea utilizatorului. Acest eveniment va fi folosit pentru a depana cauza erorii și a efectua acțiuni de revizuire.
 
@@ -9009,7 +9009,7 @@ Se colectează următoarele câmpuri:
 
 - **Type** - tipul notificării
 
-### <a name="fbasilentupdate_notificationremoved"></a>fbasilentupdate_notificationremoved
+### <a name="fbasilentupdatenotificationremoved"></a>fbasilentupdate.notificationremoved
 
 Acest eveniment indică faptul că o actualizare care a fost blocată nu mai este blocată. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -9050,7 +9050,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="fbasilentupdate_queueinstall"></a>fbasilentupdate_queueinstall
+### <a name="fbasilentupdatequeueinstall"></a>fbasilentupdate.queueinstall
 
 Acest eveniment indică faptul că o actualizare va fi pusă în coada de așteptare pentru instalarea silențioasă. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -9091,7 +9091,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="fbasilentupdate_requiredappsclosed"></a>fbasilentupdate_requiredappsclosed
+### <a name="fbasilentupdaterequiredappsclosed"></a>fbasilentupdate.requiredappsclosed
 
 Înregistrăm când o aplicație care are o actualizare în așteptare a fost închisă. Acest lucru indică momentul în care se poate continua instalarea propriu-zisă. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -9131,7 +9131,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="fbasilentupdate_timerforapptermination"></a>FBASilentUpdate_TimerForAppTermination
+### <a name="fbasilentupdatetimerforapptermination"></a>FBASilentUpdate.TimerForAppTermination
 
 Acest eveniment este folosit pentru a calcula indicatorul de stare de funcționare a actualizării esențiale calculate pentru Microsoft AutoUpdate (MAU). Acest eveniment ne permite să monitorizăm evenimentul de încetare a utilizării aplicației deschise și durata stării de deschidere.
  
@@ -9171,7 +9171,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="fbasilentupdate_updateavailablenotification"></a>fbasilentupdate_updateavailablenotification
+### <a name="fbasilentupdateupdateavailablenotification"></a>fbasilentupdate.updateavailablenotification
 
 Acest eveniment indică faptul că este declanșată o notificare de actualizare disponibilă. Trebuie să ne asigurăm că fluxul de solicitare a actualizărilor se declanșează atunci când este detectată o actualizare. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -9212,7 +9212,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="fbasilentupdate_userclicknotification"></a>fbasilentupdate_userclicknotification
+### <a name="fbasilentupdateuserclicknotification"></a>fbasilentupdate.userclicknotification
 
 Acest eveniment indică faptul că utilizatorul a făcut clic pe secțiunea de conținut a notificării de actualizare disponibilă și aplicația Microsoft Autoupdate GUI este lansată. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -9253,7 +9253,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="fbasilentupdate_userselectinstalllater"></a>fbasilentupdate_userselectinstalllater
+### <a name="fbasilentupdateuserselectinstalllater"></a>fbasilentupdate.userselectinstalllater
 
 Acest eveniment indică faptul că utilizatorul a optat pentru instalarea ulterioară după ce a fost afișată notificarea de actualizare disponibilă. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -9294,7 +9294,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="fbasilentupdate_userselectinstallnow"></a>fbasilentupdate_userselectinstallnow
+### <a name="fbasilentupdateuserselectinstallnow"></a>fbasilentupdate.userselectinstallnow
 
 Acest eveniment indică faptul că utilizatorul a optat pentru instalarea în momentul de față după ce a fost afișată notificarea de actualizare disponibilă. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -9334,7 +9334,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="gui_dashboardview_appisopendialog_display"></a>gui_dashboardview_appisopendialog_display 
+### <a name="guidashboardviewappisopendialogdisplay"></a>gui.dashboardview.appisopendialog.display 
 
 Acest eveniment indică faptul că interfața de utilizator a afișat o casetă de dialog pentru a închide o aplicație deschisă în vederea continuării cu actualizarea aplicației. Acest eveniment este utilizat pentru a determina volumul de actualizări întârziate cu scopul de a oferi îmbunătățiri viitoare pentru a minimiza întreruperea utilizatorului.
 
@@ -9378,7 +9378,7 @@ Se colectează următoarele câmpuri:
 
 - **UpdateName** - numele actualizării așa cum apare în fișierul manifest descărcat
 
-### <a name="gui_dashboardview_appisopendialogbutton_clicked"></a>gui_dashboardview_appisopendialogbutton_clicked
+### <a name="guidashboardviewappisopendialogbuttonclicked"></a>gui.dashboardview.appisopendialogbutton.clicked
 
 Acest eveniment indică dacă s-a ignorat actualizarea aplicației sau se mai încearcă o dată după ce se afișează o casetă de dialog deschisă pentru aplicație. Acest eveniment este utilizat pentru a determina volumul de actualizări ignorate și utilizate pentru îmbunătățiri viitoare cu scopul de a minimiza întreruperea utilizatorului.
 
@@ -9424,7 +9424,7 @@ Se colectează următoarele câmpuri:
 
 - **UpdateName** - numele actualizării așa cum apare în fișierul manifest descărcat
 
-### <a name="gui_dashboardview_updateinprogressdialog_display"></a>gui_dashboardview_updateinprogressdialog_display
+### <a name="guidashboardviewupdateinprogressdialogdisplay"></a>gui.dashboardview.updateinprogressdialog.display
 
 Acest eveniment înregistrează dacă o casetă de dialog a fost afișată pentru utilizatori indicând dacă actualizarea mai este în curs.
  
@@ -9462,7 +9462,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="gui_dashboardview_updatemodebutton_clicked"></a>gui_dashboardview_updatemodebutton_clicked
+### <a name="guidashboardviewupdatemodebuttonclicked"></a>gui.dashboardview.updatemodebutton.clicked
 
 Acest eveniment indică modul de actualizare schimbat din controlul interfeței de utilizator. Acest eveniment este folosit pentru a determina volumul de dispozitive care se deplasează de la un mod la altul și este utilizat pentru a determina de ce clienții se îndepărtează de actualizările automate. 
 
@@ -9502,7 +9502,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="gui_feedbackwindow_buttonclicked"></a>gui_feedbackwindow_buttonclicked
+### <a name="guifeedbackwindowbuttonclicked"></a>gui.feedbackwindow.buttonclicked
 
 Acest eveniment raportează dacă feedbackul este trimis sau anulat înainte de trimitere. Acest eveniment este utilizat pentru a determina volumul de feedback trimis într-o anumită versiune de lansare. Acest lucru vă ajută să izolați mai devreme eventuale probleme.
 
@@ -9542,7 +9542,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="gui_preferenceview_consentsheet_display"></a>gui_preferenceview_consentsheet_display
+### <a name="guipreferenceviewconsentsheetdisplay"></a>gui.preferenceview.consentsheet.display
 
 Acest eveniment indică faptul că o foaie de consimțământ este afișată, dacă este disponibilă. Acest eveniment este folosit pentru a determina volumul de dispozitive înscrise recent în canalul public aplicabil (Insider rapid/Insider lent). De asemenea, folosim acest eveniment pentru a ne asigura că afișarea casetei de dialog de consimțământ funcționează pentru a afișa condițiile de utilizare.
  
@@ -9582,7 +9582,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="gui_preferenceview_consentsheet_licenseerror"></a>gui_preferenceview_consentsheet_licenseerror
+### <a name="guipreferenceviewconsentsheetlicenseerror"></a>gui.preferenceview.consentsheet.licenseerror
 
 Acest eveniment raportează despre eroarea întâlnită în timpul încercării de afișare a casetei de dialog de consimțământ. Acest eveniment este esențial și este folosit pentru a corecta orice problemă cauzată de o modificare a produsului, dacă este cazul.
 
@@ -9624,7 +9624,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="gui_preferenceview_switchchannel"></a>gui_preferenceview_switchchannel
+### <a name="guipreferenceviewswitchchannel"></a>gui.preferenceview.switchchannel
 
 Acest eveniment raportează despre tranziția dintre canalele selectate de utilizator. Acest eveniment este folosit pentru a determina de ce clienții renunță la canalele Insider.  
 
@@ -9666,7 +9666,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="gui_updatemanager_applaunchduringupdate"></a>gui_updatemanager_applaunchduringupdate
+### <a name="guiupdatemanagerapplaunchduringupdate"></a>gui.updatemanager.applaunchduringupdate
 
 Acest eveniment raportează că a fost lansată o aplicație în timpul actualizării, iar Microsoft AutoUpdate finalizează aplicația lansată. Rețineți că lansarea unei aplicații în timp ce este actualizată poate avea drept consecință deteriorarea aplicațiilor. Vom utiliza acest eveniment pentru a ne asigura că procesul de actualizare nu este afectat de aplicația lansată înainte să fie gata de utilizare.
  
@@ -9710,7 +9710,7 @@ Se colectează următoarele câmpuri:
 
 - **UpdateID** - identificatorul actualizării aplicației.
 
-### <a name="gui_updatemanager_downloadupdateforapp"></a>gui_updatemanager_downloadupdateforapp
+### <a name="guiupdatemanagerdownloadupdateforapp"></a>gui.updatemanager.downloadupdateforapp
 
 Acest eveniment raportează despre starea finalizării descărcării pentru o actualizare. Folosim acest eveniment pentru a asigura starea de funcționare a procesului de actualizare și punctul de eroare de urmărire/adresă.
 
@@ -9759,7 +9759,7 @@ Se colectează următoarele câmpuri:
 - **UpdateName** - numele actualizării.
 
 
-### <a name="gui_updatemanager_error"></a>gui_updatemanager_error
+### <a name="guiupdatemanagererror"></a>gui.updatemanager.error
 
 Acest eveniment raportează din nou orice eroare întâlnită în timpul actualizărilor de aplicație. Acest lucru poate indica o eroare în secvența de execuție Microsoft AutoUpdate (MAU).  Folosim acest raport cu scopul de a aplica actualizări la MAU pentru a răspunde pentru scenarii de erori comune.
 
@@ -9801,7 +9801,7 @@ Se colectează următoarele câmpuri:
 
 - **Success** - Valoarea Boolean a șirului care indică dacă aplicația a fost finalizată cu succes.
 
-### <a name="gui_updatemanager_installcleanupforapp"></a>gui_updatemanager_installcleanupforapp
+### <a name="guiupdatemanagerinstallcleanupforapp"></a>gui.updatemanager.installcleanupforapp
 
 Acest eveniment indică faptul că fișierele temporare create în timpul instalării aplicației s-au curățat cu succes. Acesta face parte din pâlnia de actualizare utilizată pentru a determina starea de funcționare a actualizării aplicației.
  
@@ -9846,7 +9846,7 @@ Se colectează următoarele câmpuri:
 - **UpdateID** – identificatorul actualizării.
 
 
-### <a name="gui_updatemanager_installsuccessforapp"></a>gui_updatemanager_installsuccessforapp
+### <a name="guiupdatemanagerinstallsuccessforapp"></a>gui.updatemanager.installsuccessforapp
 
 Acest eveniment indică actualizarea cu succes a aplicației. Acest eveniment face parte din pâlnia de actualizare pe care o utilizăm pentru a determina starea de funcționare a actualizării.
  
@@ -9890,7 +9890,7 @@ Se colectează următoarele câmpuri:
 
 - **UpdateID** - identificatorul actualizării.
 
-### <a name="gui_updatemanager_installupdateforapp"></a>gui_updatemanager_installupdateforapp
+### <a name="guiupdatemanagerinstallupdateforapp"></a>gui.updatemanager.installupdateforapp
 
 Acest eveniment indică începutul procesului de instalare curent pentru o actualizare de aplicație. Acest eveniment face parte din pâlnia de actualizare a aplicației pe care o utilizăm pentru a determina starea de funcționare a actualizării.
  
@@ -9932,7 +9932,7 @@ Se colectează următoarele câmpuri:
 
 - **UpdateID** - identificatorul actualizării.
 
-### <a name="gui_updatemanager_queueinstallforapp"></a>gui_updatemanager_queueinstallforapp
+### <a name="guiupdatemanagerqueueinstallforapp"></a>gui.updatemanager.queueinstallforapp
 
 Acest eveniment indică începutul procesului de instalare curent pentru o actualizare de aplicație. Acest eveniment face parte din pâlnia de actualizare a aplicației pe care o utilizăm pentru a determina starea de funcționare a actualizării.
  
@@ -9974,7 +9974,7 @@ Se colectează următoarele câmpuri:
 
 - **UpdateID** - identificatorul actualizării.
 
-### <a name="gui_updatemanager_relaunchapp"></a>gui_updatemanager_relaunchapp
+### <a name="guiupdatemanagerrelaunchapp"></a>gui.updatemanager.relaunchapp
 
 Acest eveniment înregistrează dacă s-au relansat cu succes aplicațiile după actualizări.
  
@@ -10020,7 +10020,7 @@ Se colectează următoarele câmpuri:
 
 - **UpdateName** - numele actualizării.
 
-### <a name="installdata_checkrunning"></a>installdata_checkrunning
+### <a name="installdatacheckrunning"></a>installdata.checkrunning
 
 Acest eveniment înregistrează rezultatul unei verificări între aplicațiile care vor fi instalate și dacă încercarea de instalare va continua în funcție de aplicația care este deschisă. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -10061,7 +10061,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="installdata_cleanup"></a>installdata_cleanup
+### <a name="installdatacleanup"></a>installdata.cleanup
 
 Fișierele pachet trebuie eliminate după instalare. Acest eveniment înregistrează instanțele în care nu reușim să le eliminăm. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -10102,7 +10102,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="installedapp_invalidbundle"></a>installedapp_invalidbundle
+### <a name="installedappinvalidbundle"></a>installedapp.invalidbundle
 
 Acest eveniment indică faptul că Microsoft Autoupdate nu a putut recupera informațiile despre pachet pentru aplicația înregistrată în calea dată. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -10143,7 +10143,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="installedapp_invalidpreference"></a>installedapp_invalidpreference
+### <a name="installedappinvalidpreference"></a>installedapp.invalidpreference
 
 Acest eveniment înregistrează cazurile în care preferința utilizatorului conține o intrare de aplicație nevalidă. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -10184,7 +10184,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="installedapp_nilbundleid"></a>installedapp_nilbundleid
+### <a name="installedappnilbundleid"></a>installedapp.nilbundleid
 
 Acest eveniment înregistrează cazurile în care ID-ul pachetului lipsește pentru o aplicație. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -10225,7 +10225,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="installedapp_nilbundlename"></a>installedapp_nilbundlename
+### <a name="installedappnilbundlename"></a>installedapp.nilbundlename
 
 Acest eveniment înregistrează cazurile în care numele pachetului lipsește pentru o aplicație. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -10266,7 +10266,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="installedapp_sendcoreappleevent"></a>installedapp_sendcoreappleevent
+### <a name="installedappsendcoreappleevent"></a>installedapp.sendcoreappleevent
 
 Acest eveniment indică faptul că Microsoft AutoUpdate (MAU) trimite un eveniment Apple unei aplicații înregistrate pentru a rezilia aplicația pentru a continua cu actualizarea de aplicație în așteptare. Acest eveniment este utilizat în prezent pentru a contribui la dezvoltarea viitoarelor îmbunătățiri, pentru a minimiza întreruperea utilizatorului în timpul actualizărilor aplicației. 
 
@@ -10317,7 +10317,7 @@ Se colectează următoarele câmpuri:
 - **Success** - indică dacă aplicația vizată a raportat reușita operațiunii
 
     
-### <a name="installstatus_codesign"></a>installstatus_codesign
+### <a name="installstatuscodesign"></a>installstatus.codesign
 
 Acest eveniment înregistrează starea binară a semnăturii codului pentru sistemul de operare. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -10358,7 +10358,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="installstatus_daemon"></a>installstatus_daemon
+### <a name="installstatusdaemon"></a>installstatus.daemon
 
 Acest eveniment înregistrează starea aplicației Daemon Microsoft Autoupdate. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -10399,7 +10399,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="installstatus_helper"></a>installstatus_helper
+### <a name="installstatushelper"></a>installstatus.helper
 
 Acest eveniment înregistrează starea instrumentului de ajutor Daemon Microsoft Actualizare automată. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -10440,7 +10440,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="installupdatestask_applaunched"></a>installupdatestask_applaunched
+### <a name="installupdatestaskapplaunched"></a>installupdatestask.applaunched
 
 Acest eveniment indică faptul că Microsoft Autoupdate a detectat aplicația lansare pentru o actualizare blocată, dar nu a putut găsi programul de instalare potrivit. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -10481,7 +10481,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="installupdatestask_applaunchwithpendingupdate"></a>installupdatestask_applaunchwithpendingupdate
+### <a name="installupdatestaskapplaunchwithpendingupdate"></a>installupdatestask.applaunchwithpendingupdate
 
 Acest eveniment indică faptul că Microsoft Autoupdate a detectat aplicația lansare pentru o aplicație cu o actualizare în așteptare. Aplicația lansată va fi oprită. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -10522,7 +10522,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="installupdatestask_codesignverificationfail"></a>installupdatestask_codesignverificationfail
+### <a name="installupdatestaskcodesignverificationfail"></a>installupdatestask.codesignverificationfail
 
 Acest eveniment indică faptul că verificarea CodeSign nu a reușit pentru o actualizare de aplicație. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -10563,7 +10563,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="installupdatestask_codesignverificationstart"></a>installupdatestask_codesignverificationstart
+### <a name="installupdatestaskcodesignverificationstart"></a>installupdatestask.codesignverificationstart
 
 Acest eveniment indică faptul că verificarea CodeSign a început pentru o actualizare de aplicație. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -10604,7 +10604,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="installupdatestask_codesignverificationsuccess"></a>installupdatestask_codesignverificationsuccess
+### <a name="installupdatestaskcodesignverificationsuccess"></a>installupdatestask.codesignverificationsuccess
 
 Acest eveniment indică faptul că verificarea CodeSign a reușit pentru o actualizare de aplicație. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -10645,7 +10645,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="installupdatestask_failsilentinstall"></a>installupdatestask_failsilentinstall
+### <a name="installupdatestaskfailsilentinstall"></a>installupdatestask.failsilentinstall
 
 Acest eveniment înregistrează erorile din timpul aplicării actualizărilor silențioase și dacă aceasta a fost o instalare clonată sau obișnuită. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -10686,7 +10686,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="installupdatestask_multiplerelocatablepackage"></a>installupdatestask_multiplerelocatablepackage
+### <a name="installupdatestaskmultiplerelocatablepackage"></a>installupdatestask.multiplerelocatablepackage
 
 Acest eveniment indică faptul că Microsoft Autoupdate a găsit mai multe instanțe de intrare de aplicație pentru un pachet de actualizare dat din manifestul descărcat. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -10727,7 +10727,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="installupdatestask_removeclone"></a>installupdatestask_removeclone
+### <a name="installupdatestaskremoveclone"></a>installupdatestask.removeclone
 
 Acest eveniment indică faptul că o clonă a fost eliminată. Eliminăm o clonă când procesul de Instalare pe clonă s-a finalizat sau atunci când începe un proces nou și pe computer se găsește o versiune mai veche clonată. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -10768,7 +10768,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="installupdatestask_retryfail"></a>installupdatestask_retryfail
+### <a name="installupdatestaskretryfail"></a>installupdatestask.retryfail
 
 Acest eveniment indică faptul că au fost întâmpinate erori în timpul procesului de reîncercare a instalării. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -10809,7 +10809,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="installupdatestask_retryproxyerror"></a>installupdatestask_retryproxyerror
+### <a name="installupdatestaskretryproxyerror"></a>installupdatestask.retryproxyerror
 
 Acest eveniment înregistrează erorile de comunicare din proces (comunicarea cu instrumentul de asistență MAU). Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -10850,7 +10850,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="installupdatestask_retryproxyerror"></a>installupdatestask_retryproxyerror
+### <a name="installupdatestaskretryproxyerror"></a>installupdatestask.retryproxyerror
 
 Acest eveniment înregistrează erorile de comunicare din proces (comunicarea cu instrumentul de asistență MAU). Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -10892,7 +10892,7 @@ Se colectează următoarele câmpuri:
 
     
 
-### <a name="installupdatestask_retryresponse"></a>installupdatestask_retryresponse
+### <a name="installupdatestaskretryresponse"></a>installupdatestask.retryresponse
 
 Acest eveniment înregistrează faptul că o reîncercare nu a funcționat. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -10933,7 +10933,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="installupdatestask_retrysuccess"></a>installupdatestask_retrysuccess
+### <a name="installupdatestaskretrysuccess"></a>installupdatestask.retrysuccess
 
 Acest eveniment înregistrează o instalare de actualizare reușită după o reîncercare. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -10974,7 +10974,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="installupdatestask_setreopengui"></a>installupdatestask_setreopengui
+### <a name="installupdatestasksetreopengui"></a>installupdatestask.setreopengui
 
 Acest eveniment indică dacă setarea preferinței de redeschidere a interfeței GUI după instalare a reușit. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -11015,7 +11015,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="installupdatestask_updatestatus"></a>installupdatestask_updatestatus
+### <a name="installupdatestaskupdatestatus"></a>installupdatestask.updatestatus
 
 Acest eveniment raportează despre starea activității de instalare. Acesta face parte dintr-o pâlnie actualizată și este utilizată pentru a determina starea de funcționare a actualizărilor aplicației.
 
@@ -11069,8 +11069,58 @@ Se colectează următoarele câmpuri:
 
 - **UpdatePkg** - numele pachetului de actualizare aplicată
 
+### <a name="lifecycleperiodiccheck"></a>Lifecycle.periodiccheck
 
-### <a name="msupdate_cli_eventhandler"></a>msupdate_cli_eventhandler
+Acest eveniment raportează periodic despre starea procesului MicrosoftAutoUpdate. Mai exact, raportează despre activitățile pe care le așteaptă procesul pentru finalizarea Asistentului de actualizare și, în cazul interfeței de utilizator, raportează dacă procesul se încheie din cauza inacțiunii utilizatorului.  Vom utiliza acest eveniment pentru a determina ce împiedică Asistentul de actualizare să finalizeze actualizările și să se închidă și dacă interfața de utilizator se încheie din cauza inacțiunii utilizatorului.
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **dataCollectionDialog** - boolean care indică dacă procesul așteaptă răspunsul utilizatorului la caseta de dialog Colectare date
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **forcedUpdateDialog** - boolean care indică dacă procesul așteaptă răspunsul utilizatorului la caseta de dialog Actualizare forțată
+
+- **HowToCheck** - cum se verifică setările
+
+- **isBusy** - boolean care indică dacă procesul este ocupat cu actualizarea activă
+
+- **isInactive** - boolean care indică dacă procesul așteaptă acțiunea utilizatorului de mai mult timp
+
+- **isWaiting** - boolean care indică dacă procesul așteaptă răspunsul utilizatorului la notificare
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **SessionLength** - durata sesiunii procesului curent în secunde
+
+
+### <a name="msupdateclieventhandler"></a>msupdate.cli.eventhandler
 
 Acest eveniment este folosit pentru a calcula utilizarea diferitelor tipuri de interfețe cu linie de comandă API din Microsoft AutoUpdate (MAU).
 
@@ -11113,7 +11163,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="msupdate_cli_eventhandler_applyupdates_appids"></a>msupdate_cli_eventhandler_applyupdates_appids
+### <a name="msupdateclieventhandlerapplyupdatesappids"></a>msupdate.cli.eventhandler.applyupdates.appids
 
 Acest eveniment indică faptul că a fost emisă o comandă CLI (interfață client-linie) pentru aplicarea unei actualizări. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -11154,7 +11204,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="msupdate_cli_eventhandler_config"></a>msupdate_cli_eventhandler_config
+### <a name="msupdateclieventhandlerconfig"></a>msupdate.cli.eventhandler.config
 
 Acest eveniment indică faptul că modulul de interfață pentru linia de comandă Microsoft Autoupdate a primit un eveniment Apple pentru configurare. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -11195,7 +11245,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="msupdate_cli_eventhandler_updates"></a>msupdate_cli_eventhandler_updates
+### <a name="msupdateclieventhandlerupdates"></a>msupdate.cli.eventhandler.updates
 
 Acest eveniment indică faptul că modulul de interfață pentru linia de comandă Microsoft Autoupdate a primit un eveniment Apple pentru afișarea de actualizări. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -11236,7 +11286,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="msupdate_monitor_progress_downloaded"></a>msupdate_monitor_progress_downloaded
+### <a name="msupdatemonitorprogressdownloaded"></a>msupdate.monitor.progress.downloaded
 
 Acest eveniment indică faptul că s-au descărcat actualizări. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -11277,7 +11327,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="msupdate_monitor_progress_failure"></a>msupdate_monitor_progress_failure
+### <a name="msupdatemonitorprogressfailure"></a>msupdate.monitor.progress.failure
 
 Acest eveniment înregistrează o listă de actualizări în așteptare care nu au reușit să fie aplicate. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -11318,7 +11368,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="msupdate_monitor_progress_finished"></a>msupdate_monitor_progress_finished
+### <a name="msupdatemonitorprogressfinished"></a>msupdate.monitor.progress.finished
 
 Acest eveniment înregistrează o listă de actualizări în așteptare care au fost instalate. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -11359,7 +11409,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="msupdate_monitor_progress_queued"></a>msupdate_monitor_progress_queued
+### <a name="msupdatemonitorprogressqueued"></a>msupdate.monitor.progress.queued
 
 Acest eveniment înregistrează o listă de actualizări în așteptare. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -11441,7 +11491,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="sauforcedupdate_autodismiss"></a>sauforcedupdate_autodismiss
+### <a name="sauforcedupdateautodismiss"></a>sauforcedupdate.autodismiss
 
 Acest eveniment indică faptul că se respinge caseta de dialog de actualizare forțată afișată din cauza inactivității utilizatorului. Acest eveniment este utilizat pentru a determina volumul de actualizări forțate care continuă fără ca utilizatorii să furnizeze o intrare la notificarea afișată. Acest eveniment este folosit pentru a îmbunătăți interfața de utilizator cu scopul de a minimiza întreruperea.
 
@@ -11481,7 +11531,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="sauforcedupdate_close"></a>sauforcedupdate_close
+### <a name="sauforcedupdateclose"></a>sauforcedupdate.close
 
 Acest eveniment indică faptul că utilizatorul a ales să închidă caseta de dialog a actualizării forțate. Acest eveniment este utilizat pentru a determina volumul de actualizări forțate amânat de acțiunea utilizatorului. Acest eveniment este folosit pentru a îmbunătăți interfața de utilizator cu scopul de a minimiza întreruperea. 
 
@@ -11521,7 +11571,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="sauforcedupdate_completeautodismiss"></a>sauforcedupdate_completeautodismiss
+### <a name="sauforcedupdatecompleteautodismiss"></a>sauforcedupdate.completeautodismiss
 
 Acest eveniment indică faptul că se respinge caseta de dialog a actualizării forțate afișate din caracteristica termen limită din cauza inactivității utilizatorului. Acest eveniment este utilizat pentru a determina volumul de actualizări forțate care continuă fără ca utilizatorii să furnizeze o intrare la notificarea afișată. Acest eveniment este folosit pentru a îmbunătăți interfața de utilizator cu scopul de a minimiza întreruperea în ceea ce privește caracteristica termen limită.
 
@@ -11561,7 +11611,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="sauforcedupdate_completeclose"></a>sauforcedupdate_completeclose
+### <a name="sauforcedupdatecompleteclose"></a>sauforcedupdate.completeclose
 
 Acest eveniment indică finalizarea cu succes a unei actualizări forțate. Acest eveniment este folosit pentru a determina starea de funcționare a caracterisiticii de actualizate forțată. 
 
@@ -11601,7 +11651,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="sauforcedupdate_display"></a>sauforcedupdate_display
+### <a name="sauforcedupdatedisplay"></a>sauforcedupdate.display
 
 Acest eveniment indică faptul că o casetă de dialog cu actualizare forțată s-a finalizat cu succes.  Acest eveniment face parte din pâlnia actualizării forțate și este folosit pentru a determina starea de funcționare a caracteristicii de actualizare forțată.
 
@@ -11641,7 +11691,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="sauforcedupdate_displayfinalhour"></a>sauforcedupdate_displayfinalhour
+### <a name="sauforcedupdatedisplayfinalhour"></a>sauforcedupdate.displayfinalhour
 
 Acest eveniment indică faptul că o casetă de dialog cu actualizare forțată de ultima oră a fost afișată. Acest eveniment face parte din pâlnie de actualizare forțată și este folosit pentru a determina starea de funcționare a caracteristicii de actualizare forțată.
 
@@ -11681,7 +11731,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="sauforcedupdate_done"></a>sauforcedupdate_done
+### <a name="sauforcedupdatedone"></a>sauforcedupdate.done
 
 Acest eveniment indică faptul că o actualizare forțată s-a finalizat cu succes. Acest eveniment face parte din pâlnie de actualizare forțată și este folosit pentru a determina starea de funcționare a caracteristicii de actualizare forțată. 
 
@@ -11721,7 +11771,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="sauforcedupdate_enabled"></a>sauforcedupdate_enabled
+### <a name="sauforcedupdateenabled"></a>sauforcedupdate.enabled
 
 Acest eveniment este declanșat atunci când Microsoft AutoUpdate (MAU) determină ca actualizarea forțată să fie aplicabilă.  Acest eveniment este folosit pentru a determina starea caracterisiticii de actualizate forțată. 
 
@@ -11763,7 +11813,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="sauforcedupdate_forcedupdatedismiss"></a>sauforcedupdate_forcedupdatedismiss
+### <a name="sauforcedupdateforcedupdatedismiss"></a>sauforcedupdate.forcedupdatedismiss
 
 Acest eveniment indică faptul că se respinge caseta de dialog referitoare la ultima oră de actualizare forțată afișat din cauza inactivității utilizatorului. Acest eveniment este utilizat pentru a determina volumul de actualizări forțate care continuă fără ca utilizatorii să furnizeze o intrare la notificarea afișată. Acest eveniment este folosit pentru a îmbunătăți interfața de utilizator cu scopul de a minimiza întreruperea. 
 
@@ -11803,7 +11853,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="sauforcedupdate_forcequitandupdatenow"></a>sauforcedupdate_forcequitandupdatenow
+### <a name="sauforcedupdateforcequitandupdatenow"></a>sauforcedupdate.forcequitandupdatenow
 
 Acest eveniment indică începutul actualizării forțate inițiate de utilizator. Acest eveniment face parte din pâlnie și este folosit pentru a determina starea de funcționare a caracteristicii de actualizare forțată. 
 
@@ -11843,7 +11893,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune 
 
-### <a name="sauforcedupdate_forceterminate"></a>sauforcedupdate_forceterminate
+### <a name="sauforcedupdateforceterminate"></a>sauforcedupdate.forceterminate
 
 Acest eveniment indică începutul actualizării forțate, cu aplicația finalizată forțat.  Acest eveniment face parte din pâlnie și este folosit pentru a determina starea de funcționare a caracteristicii de actualizare forțată.
 
@@ -11883,7 +11933,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="sauforcedupdate_quitandupdatenow"></a>sauforcedupdate_quitandupdatenow
+### <a name="sauforcedupdatequitandupdatenow"></a>sauforcedupdate.quitandupdatenow
 
 Acest eveniment indică faptul că utilizatorul a ales să închidă aplicația și să aplice actualizarea. Acest eveniment face parte din pâlnie și este folosit pentru a determina starea de funcționare a caracteristicii de actualizare forțată. 
 
@@ -11923,7 +11973,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="sauforcedupdate_snooze"></a>sauforcedupdate_snooze
+### <a name="sauforcedupdatesnooze"></a>sauforcedupdate.snooze
 
 Acest eveniment indică faptul că utilizatorul a ales să amâne actualizarea forțată. Acest eveniment face parte din pâlnie și este folosit pentru a determina starea de funcționare a caracteristicii de actualizare forțată. 
 
@@ -11963,7 +12013,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="sauforcedupdate_terminate"></a>sauforcedupdate_terminate
+### <a name="sauforcedupdateterminate"></a>sauforcedupdate.terminate
 
 Acest eveniment indică începutul actualizării forțate, cu aplicația finalizată. Acest eveniment face parte din pâlnie și este folosit pentru a determina starea de funcționare a caracteristicii de actualizare forțată.
 
@@ -12003,7 +12053,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="sauforcedupdate_updatenow"></a>sauforcedupdate_updatenow
+### <a name="sauforcedupdateupdatenow"></a>sauforcedupdate.updatenow
 
 Acest eveniment indică faptul că utilizatorul a ales să actualizeze aplicația acum.  Acest eveniment face parte din pâlnie și este folosit pentru a determina starea de funcționare a caracteristicii de actualizare forțată.
 
@@ -12085,7 +12135,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="update_applaunchdetected"></a>update_applaunchdetected
+### <a name="updateapplaunchdetected"></a>update.applaunchdetected
 
 Acest eveniment indică faptul că a fost lansată o aplicație atunci când era în desfășurare o actualizare. Acest eveniment este folosit pentru a determina volumul de aplicații lansate în timpul actualizării și este utilizat pentru îmbunătățirea experienței de utilizator în versiunile viitoare.
 
@@ -12129,7 +12179,7 @@ Se colectează următoarele câmpuri:
 
 - **UpdateID** - identificatorul pentru o actualizare de aplicație
 
-### <a name="update_appterminationreceived"></a>update_appterminationreceived
+### <a name="updateappterminationreceived"></a>update.appterminationreceived
 
 Acest eveniment indică faptul că o aplicație cu actualizare blocată s-a finalizat și dacă Microsoft AutoUpdate (MAU) poate continua actualizarea. Acesta face parte dintr-o pâlnie și este utilizată pentru a determina starea de funcționare a actualizărilor aplicației.
 
@@ -12175,7 +12225,7 @@ Se colectează următoarele câmpuri:
 
 - **UpdateID** - identificatorul pentru o actualizare de aplicație
 
-### <a name="update_blockedappclosed"></a>update_blockedappclosed
+### <a name="updateblockedappclosed"></a>update.blockedappclosed
 
 Acest eveniment indică faptul că Microsoft AutoUpdate (MAU) a detectat că o aplicație cu actualizare blocată s-a închis și poate continua actualizarea. Acest eveniment face parte din pâlnie și este utilizat pentru a determina starea de funcționare a actualizărilor aplicației. 
 
@@ -12219,7 +12269,7 @@ Se colectează următoarele câmpuri:
 
 - **UpdateID** - identificatorul pentru o actualizare de aplicație
 
-### <a name="update_blockedinstallskip"></a>update_blockedinstallskip
+### <a name="updateblockedinstallskip"></a>update.blockedinstallskip
 
 Acest eveniment înregistrează o eroare găsită atunci când se încearcă omiterea unei actualizări de aplicație. Acest eveniment este esențial și este utilizat pentru a investiga erorile raportate.  
 
@@ -12261,7 +12311,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="update_clientsession"></a>update_clientsession
+### <a name="updateclientsession"></a>update.clientsession
 
 Acest eveniment este raportat atunci când se modifică starea dispozitivului de client, determinând asistentul de actualizare Microsoft să întrerupă sau să reia procesul de actualizare. Acest eveniment face parte din pâlnie și este utilizat pentru a determina starea de funcționare a actualizărilor aplicației. 
 
@@ -12301,7 +12351,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="update_download_begin"></a>update_download_begin 
+### <a name="updatedownloadbegin"></a>update.download.begin 
 
 Acest eveniment indică începutul procesului de actualizare a aplicației. Acesta face parte dintr-o pâlnie actualizată și este utilizată pentru a determina starea de funcționare a actualizărilor aplicației. 
 
@@ -12347,7 +12397,7 @@ Se colectează următoarele câmpuri:
 
 - **UpdateName** - numele actualizării așa cum apare în fișierul manifest descărcat
 
-### <a name="update_download_finish"></a>update_download_finish
+### <a name="updatedownloadfinish"></a>update.download.finish
 
 Acest eveniment indică finalizarea fazei de descărcare pentru actualizarea aplicației. Acesta face parte dintr-o pâlnie actualizată și este utilizată pentru a determina starea de funcționare a actualizărilor aplicației.  
 
@@ -12393,7 +12443,7 @@ Se colectează următoarele câmpuri:
 
 - **UpdateName** - numele actualizării așa cum apare în fișierul manifest descărcat
 
-### <a name="update_downloadresume"></a>update_downloadresume
+### <a name="updatedownloadresume"></a>update.downloadresume
 
 Acest eveniment raportează că s-a produs o eroare în timpul ce se încerca reluarea activității de descărcare întreruptă. Acest eveniment este esențial și este utilizat pentru a investiga erorile raportate. 
 
@@ -12437,7 +12487,7 @@ Se colectează următoarele câmpuri:
 
 - **UpdateID** - identificatorul pentru o actualizare de aplicație
 
-### <a name="update_error"></a>update_error
+### <a name="updateerror"></a>update.error
 
 Acest eveniment raportează că s-a produs o eroare în timpul ce se încerca actualizarea aplicației înregistrate.  Acest eveniment este esențial și este utilizat pentru a investiga erorile raportate. 
 
@@ -12479,7 +12529,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="update_installcleanupforapp"></a>update_installcleanupforapp
+### <a name="updateinstallcleanupforapp"></a>update.installcleanupforapp
 
 Acest eveniment indică faptul că instalarea actualizărilor s-a finalizat și Microsoft AutoUpdate (MAU) este în curs de curățare.  Acesta face parte din pâlnia de actualizare și îl utilizăm pentru a determina starea de funcționare a actualizărilor de aplicații.
 
@@ -12523,7 +12573,7 @@ Se colectează următoarele câmpuri:
 
 - **UpdateID** - identificatorul pentru o actualizare de aplicație
 
-### <a name="update_installupdateforapp"></a>update_installupdateforapp
+### <a name="updateinstallupdateforapp"></a>update.installupdateforapp
 
 Acest eveniment este folosit pentru a raporta despre începutul procesului de instalare a actualizării aplicațiilor. Acesta face parte din pâlnia de actualizare și îl utilizăm pentru a determina starea de funcționare a actualizărilor de aplicații. 
 
@@ -12569,7 +12619,7 @@ Se colectează următoarele câmpuri:
 
 - **UpdateName** - numele actualizării așa cum apare în fișierul manifest descărcat
 
-### <a name="update_installupdateforapp_success"></a>update_installupdateforapp_success
+### <a name="updateinstallupdateforappsuccess"></a>update.installupdateforapp.success
 
 Acest eveniment raportează despre starea activității de instalare. Acesta face parte din pâlnia de actualizare și îl utilizăm pentru a determina starea de funcționare a actualizărilor de aplicații. 
 
@@ -12615,7 +12665,7 @@ Se colectează următoarele câmpuri:
 
 - **UpdateID** - identificatorul pentru o actualizare de aplicație
 
-### <a name="update_installvariance"></a>Update_InstallVariance
+### <a name="updateinstallvariance"></a>Update.InstallVariance
 
 Acest eveniment este folosit pentru a calcula indicatorul stării de funcționare a actualizării esențiale pentru MAU. Acest eveniment ne permite să determinăm indicatorii succesului caracteristicii de instalare prioritare și să verificăm integritatea caracteristicii.
  
@@ -12655,7 +12705,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="update_multipleappupdates"></a>update_multipleappupdates 
+### <a name="updatemultipleappupdates"></a>update.multipleappupdates 
 
 Acest eveniment indică faptul că mai multe actualizări ale aplicației sunt în curs de desfășurare în fundal. Acesta face parte din pâlnia de actualizare și îl utilizăm pentru a determina starea de funcționare a actualizărilor de aplicații.
 
@@ -12695,7 +12745,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="update_previousidnil"></a>update_previousidnil
+### <a name="updatepreviousidnil"></a>update.previousidnil
 
 Acest eveniment indică faptul că s-a descărcat un pachet de actualizare a reparațiilor, dar nu există nicio informație de descărcare anterioară. Acest eveniment este esențial și este utilizat pentru a investiga erorile raportate. 
 
@@ -12737,7 +12787,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="update_queueinstallforapp"></a>update_queueinstallforapp 
+### <a name="updatequeueinstallforapp"></a>update.queueinstallforapp 
 
 Acest eveniment indică faptul că un pachet de actualizare descărcat a fost plasat într-o coadă pentru instalare.  Acesta face parte din pâlnia de actualizare și îl utilizăm pentru a determina starea de funcționare a actualizărilor de aplicații.
 
@@ -12783,7 +12833,7 @@ Se colectează următoarele câmpuri:
 
 - **UpdateName** - numele actualizării așa cum apare în fișierul manifest descărcat
 
-### <a name="update_relaunchafterupdate"></a>update_relaunchafterupdate 
+### <a name="updaterelaunchafterupdate"></a>update.relaunchafterupdate 
 
 Acest eveniment indică faptul că actualizarea aplicației s-a finalizat și este relansată. Acesta face parte din pâlnia de actualizare și îl utilizăm pentru a determina starea de funcționare a actualizărilor de aplicații. 
 
@@ -12827,7 +12877,7 @@ Se colectează următoarele câmpuri:
 
 - **UpdateID** - identificatorul pentru o actualizare de aplicație
 
-### <a name="update_timerforapptermination"></a>update_timerforapptermination 
+### <a name="updatetimerforapptermination"></a>update.timerforapptermination 
 
 Acest eveniment indică începutul/sfârșitul cronometrării pentru verificarea aplicației de stare. Acest eveniment vine la pachet și este utilizat pentru a determina dacă toate obiectele de cronometrare sunt eliminate atunci când actualizarea aplicației progresează.
 
@@ -12868,7 +12918,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="updatecore_appregistration"></a>updatecore_appregistration
+### <a name="updatecoreappregistration"></a>updatecore.appregistration
 
 Acest eveniment înregistrează încercările de înregistrare a unei aplicații și rezultatul/motivul. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -12909,7 +12959,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="updatecore_loadinglaunchagent"></a>updatecore_loadinglaunchagent
+### <a name="updatecoreloadinglaunchagent"></a>updatecore.loadinglaunchagent
 
 Acest eveniment indică faptul că Agentul de lansare este încărcat. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -12949,7 +12999,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="updatecore_runnstaskcommand"></a>updatecore_runnstaskcommand
+### <a name="updatecorerunnstaskcommand"></a>updatecore.runnstaskcommand
 
 Acest eveniment raportează despre o eroare în timpul încercării de a lansa o activitate. Acest eveniment este esențial și este utilizat pentru a investiga erorile raportate.  
 
@@ -12989,7 +13039,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="updatecore_server_connectionfail"></a>updatecore_server_connectionfail
+### <a name="updatecoreserverconnectionfail"></a>updatecore.server.connectionfail
 
 Acest eveniment înregistrează erorile întâmpinate în timp ce contactați CDN. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -13029,7 +13079,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="updatecore_server_nullurl"></a>updatecore_server_nullurl
+### <a name="updatecoreservernullurl"></a>updatecore.server.nullurl
 
 Acest eveniment raportează o eroare care indică faptul că nu s-a putut ajunge la un anumit server. Acest eveniment este utilizat pentru a determina rată de eșec a actualizării cauzată de problema rețelei. 
 
@@ -13069,7 +13119,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="updatefilterhelper_cannotretrievebuilddate"></a>updatefilterhelper_cannotretrievebuilddate
+### <a name="updatefilterhelpercannotretrievebuilddate"></a>updatefilterhelper.cannotretrievebuilddate
 
 Putem filtra actualizările prin serviciul MAU doar când actualizarea oferită nu este mai veche decât un anumit număr zile. Aici înregistrăm faptul că nu am putut recupera datele din metadatele aplicației. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -13110,7 +13160,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="updatefilterhelper_invalidappid"></a>updatefilterhelper_invalidappid
+### <a name="updatefilterhelperinvalidappid"></a>updatefilterhelper.invalidappid
 
 Acest eveniment raportează o eroare care indică faptul că nu s-au găsit fișiere manifest care se potrivesc cu ID-ul de aplicație preluat de la răspunsul web. Acest eveniment este utilizat pentru a investiga erorile raportate.
 
@@ -13150,7 +13200,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="updatefilterhelper_invalidappidfromwebservices"></a>updatefilterhelper_invalidappidfromwebservices
+### <a name="updatefilterhelperinvalidappidfromwebservices"></a>updatefilterhelper.invalidappidfromwebservices
 
 Acest eveniment raportează o eroare care indică faptul că ID-ul de aplicație preluat de la răspunsul web nu este în format așteptat. Acest eveniment este utilizat pentru a investiga erorile raportate.
 
@@ -13190,7 +13240,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="updatefilterhelper_invalidresponsefromupdatefiltering"></a>updatefilterhelper_invalidresponsefromupdatefiltering
+### <a name="updatefilterhelperinvalidresponsefromupdatefiltering"></a>updatefilterhelper.invalidresponsefromupdatefiltering
 
 Putem filtra actualizările prin serviciul MAU doar când actualizarea oferită nu este mai veche decât un anumit număr zile. Aici înregistrăm faptul că data lipsește din metadatele aplicației. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -13231,7 +13281,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="updatefilterhelper_missingbuilddate"></a>updatefilterhelper_missingbuilddate
+### <a name="updatefilterhelpermissingbuilddate"></a>updatefilterhelper.missingbuilddate
 
 Putem filtra actualizările prin serviciul MAU doar când actualizarea oferită nu este mai veche decât un anumit număr zile. Aici înregistrăm faptul că data lipsește din metadatele aplicației. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -13272,7 +13322,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="updatefilterhelper_updatebypassedoldage"></a>updatefilterhelper_updatebypassedoldage
+### <a name="updatefilterhelperupdatebypassedoldage"></a>updatefilterhelper.updatebypassedoldage
 
 Putem filtra actualizările prin serviciul MAU doar când actualizarea oferită nu este mai veche decât un anumit număr zile. Aici înregistrăm faptul că serviciul este ignorat din cauza datei de actualizare vechi. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -13313,7 +13363,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="updatefinder_check_error"></a>updatefinder_check_error
+### <a name="updatefindercheckerror"></a>updatefinder.check.error
 
 Acest eveniment raportează o eroare care s-a produs în timpul verificării actualizărilor. Acest eveniment este esențial și este utilizat pentru a investiga erorile raportate. 
 
@@ -13356,7 +13406,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
  
-### <a name="updatefinder_check_start"></a>updatefinder_check_start
+### <a name="updatefindercheckstart"></a>updatefinder.check.start
 
 Acest eveniment înregistrează fiecare moment în care inițiem o operațiune de verificare a actualizărilor. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -13397,7 +13447,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="updatefinder_check_status"></a>updatefinder_check_status
+### <a name="updatefindercheckstatus"></a>updatefinder.check.status
 
 Acest eveniment colectează starea operațiunilor de verificare a actualizărilor (pâlnia de la căutare până la descărcare). Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -13438,7 +13488,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="updatefinder_check_updatefound"></a>updatefinder_check_updatefound
+### <a name="updatefindercheckupdatefound"></a>updatefinder.check.updatefound
 
 Înregistrăm fiecare moment în care în cadrul unei verificări a actualizărilor nu sunt găsite actualizări. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -13479,7 +13529,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="updatefinder_check_updatenotfound"></a>updatefinder_check_updatenotfound
+### <a name="updatefindercheckupdatenotfound"></a>updatefinder.check.updatenotfound
 
 Înregistrăm fiecare moment în care în cadrul unei verificări a actualizărilor nu este oferită nicio actualizare din cauză că nu a fost găsită nicio actualizare. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -13520,7 +13570,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="updatefinder_check_uptodate"></a>updatefinder_check_uptodate
+### <a name="updatefindercheckuptodate"></a>updatefinder.check.uptodate
 
 Înregistrăm fiecare moment în care în cadrul unei verificări a actualizărilor nu este oferită nicio actualizare din cauză că toate aplicațiile sunt deja actualizate. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -13561,7 +13611,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="updatefinder_offerupdates_invalidappid"></a>updatefinder_offerupdates_invalidappid
+### <a name="updatefinderofferupdatesinvalidappid"></a>updatefinder.offerupdates.invalidappid
 
 Acest eveniment raportează o eroare în timp ce se încearcă să se evalueze dacă se aplică o actualizare. Acest eveniment este esențial și este utilizat pentru a investiga erorile raportate.  
 
@@ -13603,7 +13653,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="updatefinder_offerupdates_minoscheckfail"></a>updatefinder_offerupdates_minoscheckfail
+### <a name="updatefinderofferupdatesminoscheckfail"></a>updatefinder.offerupdates.minoscheckfail
 
 Înregistrăm fiecare moment în care am blocat o actualizare din cauză că aceasta nu a îndeplinit cerințele sistemului de operare. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -13643,7 +13693,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="updatefinder_offerupdates_missingtrigger"></a>updatefinder_offerupdates_missingtrigger
+### <a name="updatefinderofferupdatesmissingtrigger"></a>updatefinder.offerupdates.missingtrigger
 
 Acest eveniment raportează o eroare în timp ce se încearcă să se evalueze declanșatoarele din manifestul de actualizare a aplicației descărcate. Acesta este esențial și este utilizat pentru a investiga erorile raportate.  
 
@@ -13685,7 +13735,7 @@ Se colectează următoarele câmpuri:
 
 - **Triggers** - dicționarul declanșatoarelor găsit în manifest
 
-### <a name="updatefinder_offerupdates_nullbundleforappid"></a>updatefinder_offerupdates_nullbundleforappid
+### <a name="updatefinderofferupdatesnullbundleforappid"></a>updatefinder.offerupdates.nullbundleforappid
 
 Acest eveniment indică faptul că Microsoft Autoupdate nu a putut încărca informațiile despre pachet pentru ID-ul de aplicație specificat în fișierul manifest descărcat. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -13726,7 +13776,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="updatefinder_offerupdates_updaterulematched"></a>updatefinder_offerupdates_updaterulematched
+### <a name="updatefinderofferupdatesupdaterulematched"></a>updatefinder.offerupdates.updaterulematched
 
 Acest eveniment indică faptul că a fost găsită o actualizare pentru o aplicație și o linie de bază. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -13767,7 +13817,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="updatefinder_registeredapps"></a>updatefinder_registeredapps
+### <a name="updatefinderregisteredapps"></a>updatefinder.registeredapps
 
 Înregistrăm aplicațiile instalate/înregistrate/controlate de MAU. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -13807,7 +13857,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="updatefinder_suite_invalidsuiteversion"></a>updatefinder_suite_invalidsuiteversion
+### <a name="updatefindersuiteinvalidsuiteversion"></a>updatefinder.suite.invalidsuiteversion
 
 Acest eveniment raportează o eroare a versiunii suitei în timp ce se încearcă să se evalueze dacă se aplică o actualizare. Acest eveniment este esențial și este utilizat pentru a investiga erorile raportate.
 
@@ -13847,7 +13897,7 @@ Se colectează următoarele câmpuri:
 
 - **Suite** - numele suitei avută în vedere
 
-### <a name="updatefinder_suite_keyvaluemissing"></a>updatefinder_suite_keyvaluemissing
+### <a name="updatefindersuitekeyvaluemissing"></a>updatefinder.suite.keyvaluemissing
 
 Acest eveniment raportează o eroare în timpul încercării de a adăuga o aplicație la Suite. Acest eveniment este esențial și este utilizat pentru a investiga erorile raportate.
 
@@ -13890,7 +13940,7 @@ Se colectează următoarele câmpuri:
 - **Suite** - numele aplicației suitei va fi adăugată
 
     
-### <a name="updatefinder_suite_missingcollateral"></a>updatefinder_suite_missingcollateral
+### <a name="updatefindersuitemissingcollateral"></a>updatefinder.suite.missingcollateral
 
 Suite Update - înregistrăm fiecare moment în care o actualizare a suitei nu este aplicabilă din cauza lipsei fișierului colateral. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -13931,7 +13981,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="updatefinder_suite_staleversion"></a>updatefinder_suite_staleversion
+### <a name="updatefindersuitestaleversion"></a>updatefinder.suite.staleversion
 
 Suite Update - înregistrăm fiecare moment în care o actualizare a suitei nu este aplicabilă din cauză că versiunea de bază este prea veche. Înregistrăm versiunea de bază și suita AppId. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -13972,7 +14022,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="updatefinder_suite_updateapplicable"></a>updatefinder_suite_updateapplicable
+### <a name="updatefindersuiteupdateapplicable"></a>updatefinder.suite.updateapplicable
 
 Suite Update - înregistrăm fiecare moment în care o actualizare a suitei este aplicabilă. Înregistrăm versiunea de bază și suita AppId. Înregistrăm versiunea de bază și suita AppId. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -14013,7 +14063,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="updatefinder_suite_updatenotapplicabledefaultpath"></a>updatefinder_suite_updatenotapplicabledefaultpath
+### <a name="updatefindersuiteupdatenotapplicabledefaultpath"></a>updatefinder.suite.updatenotapplicabledefaultpath
 
 Suite Update - înregistrăm fiecare moment în care o actualizare a suitei nu este oferită din cauză că nu toate aplicațiile suitei sunt instalate în calea implicită. Înregistrăm versiunea de bază și suita AppId. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -14054,7 +14104,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="updatefinder_suite_updatenotapplicableversion"></a>updatefinder_suite_updatenotapplicableversion
+### <a name="updatefindersuiteupdatenotapplicableversion"></a>updatefinder.suite.updatenotapplicableversion
 
 Suite Update - înregistrăm fiecare moment în care o actualizare a suitei nu este oferită din cauză că nu toate aplicațiile suitei au aceeași versiune de bază. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -14095,7 +14145,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="updatefinder_suite_updatenotoffered"></a>updatefinder_suite_updatenotoffered
+### <a name="updatefindersuiteupdatenotoffered"></a>updatefinder.suite.updatenotoffered
 
 Suite Update - înregistrăm fiecare moment în care o actualizare a suitei nu este oferită din cauză că dimensiunea suitei este mai mare decât actualizările individuale. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -14136,7 +14186,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="updatefinder_suite_updateoffered"></a>updatefinder_suite_updateoffered
+### <a name="updatefindersuiteupdateoffered"></a>updatefinder.suite.updateoffered
 
 Suite Update - înregistrăm fiecare moment în care este oferită o actualizare a suitei. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -14177,7 +14227,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="updatemanager_checkupdate"></a>updatemanager_checkupdate
+### <a name="updatemanagercheckupdate"></a>updatemanager.checkupdate
 
 Acest eveniment înregistrează numărul de actualizări găsite de Microsoft Autoupdate în timpul căutării de actualizări disponibile. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -14218,7 +14268,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="updatemanager_updatespending"></a>updatemanager_updatespending
+### <a name="updatemanagerupdatespending"></a>updatemanager.updatespending
 
 Acest eveniment indică faptul că s-au găsit actualizări și instalarea este în așteptare. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -14258,7 +14308,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="updatestatus_codesign"></a>UpdateStatus_Codesign
+### <a name="updatestatuscodesign"></a>UpdateStatus.Codesign
 
 Acest eveniment raportează starea din verificarea proiectării în comun a asistentului de actualizare Microsoft care rulează după instalarea actualizărilor aplicației de client. Vom utiliza acest eveniment pentru a ne asigura că furnizăm pachetele valide și vom actualiza aplicația instalată la cea mai recentă versiune.
 
@@ -14308,7 +14358,7 @@ Se colectează următoarele câmpuri:
 
 - **UpdatePkg** - numele pachetului de actualizare aplicat
 
-### <a name="urlutilities_getmauinfo"></a>urlutilities_getmauinfo
+### <a name="urlutilitiesgetmauinfo"></a>urlutilities.getmauinfo
 
 Acest eveniment raportează că s-a produs o eroare atunci când se accesează pachetul de aplicații Microsoft AutoUpdate (MAU). Acest eveniment este esențial și este utilizat pentru a investiga erorile raportate.
 
@@ -14348,7 +14398,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
    
-### <a name="webservices_checkforsilentupdates"></a>webservices_checkforsilentupdates
+### <a name="webservicescheckforsilentupdates"></a>webservices.checkforsilentupdates
 
 Acest eveniment indică faptul că au fost găsiți candidați pentru actualizarea silențioasă. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -14389,7 +14439,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="webservices_deltaupdater"></a>webservices_deltaupdater
+### <a name="webservicesdeltaupdater"></a>webservices.deltaupdater
 
 Acest eveniment înregistrează interacțiunile dintre codul clientului și poarta de caracteristică care verifică dacă clientul ar trebui să permită actualizări Delta. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -14430,7 +14480,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="webservices_serviceaction"></a>webservices_serviceaction
+### <a name="webservicesserviceaction"></a>webservices.serviceaction
 
 Înregistrăm orice erori rezultate dintr-un răspuns webservice neașteptat. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -14471,7 +14521,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="webservices_serviceaction"></a>webservices_serviceaction
+### <a name="webservicesserviceaction"></a>webservices.serviceaction
 
 Înregistrăm orice erori rezultate dintr-un răspuns webservice neașteptat. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -14512,7 +14562,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
-### <a name="webservices_serviceresponse"></a>webservices_serviceresponse
+### <a name="webservicesserviceresponse"></a>webservices.serviceresponse
 
 Acest eveniment înregistrează solicitările către serviciul MAU, timpii de răspuns și erorile. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -14553,7 +14603,7 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
     
-### <a name="webservices_silentupdate"></a>webservices_silentupdate
+### <a name="webservicessilentupdate"></a>webservices.silentupdate
 
 Înregistrăm solicitările de verificare a regulilor de aplicabilitate a „actualizării forțate”, adică, trebuie să mutăm un utilizator din compilarea N în compilarea N+1 din cauza unei probleme majore. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -14593,7 +14643,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="webservices_updatefiltering"></a>webservices_updatefiltering
+### <a name="webservicesupdatefiltering"></a>webservices.updatefiltering
 
 Acest eveniment indică filtrarea efectuată în lista de actualizări aplicabile prin intermediul serviciilor web. Vom folosit acest eveniment pentru a ne asigura că blocurile de aplicație funcționează corect dacă trebuie să blocăm o actualizare.
 
@@ -14633,7 +14683,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="webservices_webcontent"></a>webservices_webcontent
+### <a name="webserviceswebcontent"></a>webservices.webcontent
 
 Înregistrăm solicitările și răspunsurile primite prin webservices. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
  
@@ -14673,7 +14723,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
-### <a name="webservices_whatsnew"></a>webservices_whatsnew
+### <a name="webserviceswhatsnew"></a>webservices.whatsnew
 
 Acest eveniment este declanșat atunci când Microsoft AutoUpdate (MAU) interoghează servicii web pe caracteristica „Noutăți” pentru aplicațiile înregistrate. Acest eveniment este utilizat pentru a determina starea caracteristicii „Noutăți”. 
 
@@ -15128,8 +15178,26 @@ Se colectează următoarele câmpuri:
 
 - **PaywallOperationType** - tipul operațiunii Paywall (enumerare / număr întreg – finit)
 
+### <a name="officeandroiddocsuiviewspaywallsessiondata"></a>Office.Android.DocsUI.Views.PaywallSessionData
 
-### <a name="office_firstrun_apple_telemetryoptin"></a>Office_FirstRun_Apple_TelemetryOptIn
+Metadate bazate pe sesiune atunci când interfața de utilizator Paywall este afișată utilizatorului. Microsoft le utilizează pentru a obține traseul utilizatorului și a înțelege versiunile de dispozitiv și de sistem de operare folosite de utilizator cu scopul de a susține deciziile privind investițiile în îmbunătățirea experienței în aceste domenii.
+
+Se colectează următoarele câmpuri:
+
+- **Versiunea aplicației** - cod de versiune al aplicației consumatoare
+
+- **ClientId** - identificator anonim unic non-PII de dispozitiv (GUID/șir)
+
+- **Punct de intrare** - identificator unic pentru punctele de intrare contextuale sau constante din aplicația consumatoare
+
+- **isTablet** - dacă dispozitivul afișează UX tabletă
+
+- **OSVersion** - versiunea sistemului de operare Android al dispozitivului
+
+- **SessionId** - GUID: identificator unic de sesiune Paywall
+
+
+### <a name="officefirstrunappletelemetryoptin"></a>Office.FirstRun.Apple.TelemetryOptIn
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a monitoriza starea de funcționare a fluxului nostru de optare pentru telemetrie în prima experiență de rulare. Culegem un cod care denotă ce tip de opțiune de colectare a datelor de diagnostic a fost selectată de către utilizator.
 
