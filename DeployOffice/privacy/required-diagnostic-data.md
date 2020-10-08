@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre datele de diagnosticare obligatorii în Office și le furnizează o listă de evenimente și câmpuri de date.
 hideEdit: true
-ms.openlocfilehash: 5772f8b3c105f56833a34f12f7d0e212fc4d55c5
-ms.sourcegitcommit: b4e08427f3e30a134fcbf86257bab5bf05a5ee82
+ms.openlocfilehash: f200e22e639f2c89315c2f7fa2e9eab0367f86b1
+ms.sourcegitcommit: 1b12952b55f071b87026b49d372158209ed2e322
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "47941004"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "48368649"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Date de diagnosticare obligatorii pentru Office
 
@@ -115,37 +115,37 @@ Informații cu privire la consimțământul utilizatorilor pentru date de diagno
 
 Această categorie conține următoarele câmpuri:
 
-  - **UserCategory -** identifică tipul de utilizatori care și-au exprimat consimțământul. Unul dintre MSAUser, AADUser sau LocalDeviceUser
+  - **ControllerConnectedServicesSourceLocation** – indică modul în care a fost efectuată opțiunea utilizatorului pentru experiențe de mod conectat opționale
 
-  - **DiagnosticConsentLevel** - indică nivelul de consimțământ pentru datele de diagnosticare oferite de utilizator
-
-  - **DiagnosticConsentSourceLocation** - indică modul în care utilizatorul și-a exprimat consimțământul pentru datele de diagnosticare
-
-  - **DiagnosticConsentConsentTime** - indică momentul în care utilizatorul și-a exprimat consimțământul pentru datele de diagnosticare Data va apărea ca o dată ușor de citit de către oameni sau ca dată codificată de calculator sub forma unui număr mare.
-
-  - **ServiceConnectionState** - indică dacă utilizatorul a ales să utilizeze sau nu toate experiențele de mod conectat
-
-  - **ServiceConnectionStateSourceLocation** -indică modul în care utilizatorul a furnizat opțiunea de a utiliza sau nu toate experiențele de mod conectat
-
-  - **ServiceConnectionStateConsentTime** - indică momentul în care utilizatorul a ales dacă să utilizeze sau nu toate experiențele de mod conectat. Data va apărea ca o dată ușor de citit de către oameni sau ca dată codificată de calculator sub forma unui număr mare.
-
-  - **ControllerConnectedServicesState** - indică dacă utilizatorul are acces la experiențele de mod conectat opționale
-
-  - **ControllerConnectedServicesStateSourceLocation** - indică modul în care a fost efectuată opțiunea utilizatorului pentru experiențe de mod conectat opționale
+  - **ControllerConnectedServicesState** - indică dacă utilizatorul are acces la experiență de mod conectat opțională
 
   - **ControllerConnectedServicesStateConsentTime** - indică momentul în care utilizatorul a ales starea experiențelor de mod conectat opționale. Data va apărea ca o dată ușor de citit de către oameni sau ca dată codificată de calculator sub forma unui număr mare.
 
-  - **UserContentDependentState** - indică dacă utilizatorul a ales să activeze sau să dezactiveze experiențe de mod conectat care analizează conținut
+  - **DiagnosticConsentConsentTime** - indică momentul în care utilizatorul și-a exprimat consimțământul pentru datele de diagnosticare Data va apărea ca o dată ușor de citit de către oameni sau ca dată codificată de calculator sub forma unui număr mare.
 
-  - **UserContentDependentStateSourceLocation** - indică modul în care a fost efectuată opțiunea utilizatorului de a activa sau de a dezactiva experiențele de mod conectat care analizează conținut
+  - **DiagnosticConsentLevel** - indică nivelul de consimțământ pentru datele de diagnosticare oferite de utilizator
 
-  - **UserContentDependentStateConsentTime** - indică momentul în care utilizatorul a optat să activeze sau să dezactiveze experiențe de mod conectat care analizează conținut. Data va apărea ca o dată ușor de citit de către oameni sau ca dată codificată de calculator sub forma unui număr mare.
+  - **DiagnosticConsentLevelSourceLocation** – indică modul în care utilizatorul și-a exprimat consimțământul pentru datele de diagnosticare
+
+  - **DownloadContentSourceLocation** - indică modul în care utilizatorul a efectuat alegerea de a activa sau dezactiva experiență de mod conectat care descarcă conținut online
 
   - **DownloadContentState** - indică dacă utilizatorul a ales să activeze sau să dezactiveze experiențe de mod conectat care descarcă online conținut
 
-  - **DownloadContentStateSourceLocation** - indică modul în care utilizatorul a efectuat alegerea de a activa sau dezactiva experiențe de mod conectat care descarcă conținut online
-
   - **DownloadContentStateSourceLocation** - indică momentul în care utilizatorul a efectuat alegerea de a activa sau dezactiva experiențe de mod conectat care descarcă conținut online Data va apărea ca o dată ușor de citit de către oameni sau ca dată codificată de calculator sub forma unui număr mare.
+
+  - **ServiceConnectionState** - indică dacă utilizatorul a ales să utilizeze sau nu toate experiențele de mod conectat
+
+  - **ServiceConnectionStateConsentTime** - indică momentul în care utilizatorul a ales dacă să utilizeze sau nu toate experiențele de mod conectat. Data va apărea ca o dată ușor de citit de către oameni sau ca dată codificată de calculator sub forma unui număr mare.
+
+  - **ServiceConnectionStateSourceLocation** -indică modul în care utilizatorul a furnizat opțiunea de a utiliza sau nu toate experiențele de mod conectat
+
+  - **UserCategoryValue –** identifică tipul de utilizatori care și-au exprimat consimțământul. Unul dintre MSAUser, AADUser sau LocalDeviceUser
+
+  - **UserContentDependentSourceLocation** – indică modul în care a fost efectuată opțiunea utilizatorului de a activa sau de a dezactiva experiențele de mod conectat care analizează conținut
+
+  - **UserContentDependentState** - indică dacă utilizatorul a ales să activeze sau să dezactiveze experiențe de mod conectat care analizează conținut
+
+  - **UserContentDependentStateConsentTime** - indică momentul în care utilizatorul a optat să activeze sau să dezactiveze experiențe de mod conectat care analizează conținut. Data va apărea ca o dată ușor de citit de către oameni sau ca dată codificată de calculator sub forma unui număr mare.
 
 #### <a name="device"></a>Dispozitiv 
 
@@ -199,7 +199,15 @@ Această categorie conține următoarele câmpuri:
 
   - **MeasuresEnabled** - semnalizare care indică dacă datele curente ale sesiunilor sunt eșantionate sau nu. Ne permite să stabilim cum să evaluăm în mod statistic datele care sunt colectate dintr-o sesiune dată.
 
-  - **SamplingClientId** -ID-ul clientului utilizat pentru a stabili dacă face parte din eșantionare. Ne permite să stabilim de ce o sesiune individuală a fost inclusă sau exclusă din eșantionare.
+  - **SamplingClientIdValue** - ID-ul clientului utilizat pentru a stabili dacă face parte din eșantionare. Ne permite să stabilim de ce o sesiune individuală a fost inclusă sau exclusă din eșantionare.
+  
+ - **SubAppName** - pentru aplicația Office Mobile, acest câmp reprezintă aplicația subiacentă utilizată pentru a deschide un document. De exemplu, dacă deschideți un document Word în aplicația Office, acest câmp va raporta valoarea „Word”.
+
+ - **VirtualizationType** - tipul de virtualizare dacă Office rulează într-una. Valorile posibile sunt: 
+    - 0 = Fără
+    - 1 = Desktop virtual Windows
+    - 2 = Protecție aplicații Windows Defender
+    - 3 = Sistem de operare de bază Windows
 
 #### <a name="user"></a>Utilizator
 
@@ -407,25 +415,25 @@ Această categorie conține următoarele câmpuri:
 
   - **DisableTelemetry** - semnalizare care indică dacă cheia DisableTelemetry este setată. Ne permite să știm dacă o sesiune nu a raportat date de diagnosticare altele decât EssentialServiceMetadata.
 
-  - **SamplingKey** - cheia este utilizată pentru a stabili dacă sesiunea este eșantionată sau nu. Ne permite să înțelegem cum aleg sesiunile individuale dacă să fie eșantionate sau nu.
-
-  - **SamplingMethod** - metoda utilizată pentru a stabili politica de eșantionare. Ne permite să înțelegem ce date provin dintr-o sesiune.
-
-  - **Sequence** - identificator numeric unic pentru sesiune. Permite ordonarea sesiunilor pentru analiza problemelor care puteau să apară.
-
-  - **Start** - ora de inițializare a sesiunii de proces. Ne permite să stabilim când începe sesiunea.
-
-  - **TimeZoneBiasInMinutes** - diferența în minute între UTC și ora locală. Permite normalizarea orelor UTC înapoi la ora locală.
-
   - **SamplingClientIdValue** - valoarea cheii utilizate pentru a determina eșantionarea. Ne permite să determinăm de ce o sesiune a fost eșantionată sau nu.
 
   - **SamplingDeviceIdValue** - valoarea cheii utilizate pentru a determina eșantionarea. Ne permite să determinăm de ce o sesiune a fost eșantionată sau nu.
+
+  - **SamplingKey** - cheia este utilizată pentru a stabili dacă sesiunea este eșantionată sau nu. Ne permite să înțelegem cum aleg sesiunile individuale dacă să fie eșantionate sau nu.
+
+  - **SamplingMethod** - metoda utilizată pentru a stabili politica de eșantionare. Ne permite să înțelegem ce date provin dintr-o sesiune.
 
   - **SamplingSessionKValue** - metadate complexe de eșantionare. Utilizate pentru a evalua semnificația statistică a datelor primite.
 
   - **SamplingSessionNValue** - metadate complexe de eșantionare. Utilizate pentru a evalua semnificația statistică a datelor primite.
 
+  - **Sequence** - identificator numeric unic pentru sesiune. Permite ordonarea sesiunilor pentru analiza problemelor care puteau să apară.
+
+  - **Start** - ora de inițializare a sesiunii de proces. Ne permite să stabilim când începe sesiunea.
+
   - **TelemetryPermissionLevel** - valoare care indică nivelul datelor de diagnosticare pentru care utilizatorul a optat. Ne permite să înțelegem la ce nivel de date de diagnosticare să ne așteptăm de la o sesiune.
+
+  - **TimeZoneBiasInMinutes** - diferența în minute între UTC și ora locală. Permite normalizarea orelor UTC înapoi la ora locală.
 
 ## <a name="data-fields-that-are-common-for-onenote-events"></a>Câmpuri de date care sunt comune pentru evenimentele OneNote
 
@@ -662,7 +670,7 @@ Iată subtipurile de date din această categorie:
 
 Produsul instalat, versiunea și starea de instalare.
 
-#### <a name="add_sso_account"></a>add_sso_account
+#### <a name="addssoaccount"></a>add.sso.account
 
 Acest lucru va alerta Microsoft pentru succesul sau eșecul unui utilizator la adăugarea unui cont prin sign-on unic (SSO).
 
@@ -1267,7 +1275,7 @@ Se colectează următoarele câmpuri:
 
 Condițiile de eroare ale documentelor, caracteristicilor și programelor de completare care pot compromite securitatea, inclusiv pregătirea pentru actualizarea produselor.
 
-#### <a name="office_appguard_createcontainer"></a>Office_AppGuard_CreateContainer
+#### <a name="officeappguardcreatecontainer"></a>Office.AppGuard.CreateContainer
 
 Colectăm coduri de eroare și dacă containerul exista deja sau nu. De asemenea, colectăm coduri de eroare pentru un eveniment de resetare, în caz că nu reușim să creăm containerul la prima încercare. Datele vor fi utilizate pentru a identifica procentul de sesiuni prin care am creat cu succes containerul pentru lansarea aplicațiilor Protecție aplicații Office. De asemenea, datele vor permite ca Microsoft să identifice și să abordeze codurile de eroare din crearea containerului.
 
@@ -1293,7 +1301,7 @@ Se colectează următoarele câmpuri:
 
 - **WarmBoot** - Identifică dacă containerul a fost creat deja sau nu.
 
-#### <a name="office_appguard_launchfile"></a>Office_AppGuard_LaunchFile
+#### <a name="officeappguardlaunchfile"></a>Office.AppGuard.LaunchFile
 
 Acest eveniment indică rezultatul unei executări de lansare a fișierului din Protecție aplicații. Vom putea defini procentul de sesiuni în care am lansat un fișier Word, Excel sau PowerPoint și codurile de eroare pentru încercările eșuate.
 
@@ -1502,7 +1510,7 @@ Iată subtipurile de date din această categorie:
 
 Succesul funcționalității aplicației. Limitat la deschiderea și închiderea aplicației și a documentelor, editarea fișierelor și partajarea fișierelor (colaborare).
 
-#### <a name="account_action"></a>account_action
+#### <a name="accountaction"></a>account.action
 
 Necesar pentru a garanta funcționarea cu succes a configurării contului și este utilizat pentru a monitoriza starea creării contului, capacitatea de a adăuga noi conturi de e-mail și de a monitoriza resetări soft de cont 
 
@@ -1538,7 +1546,7 @@ Se colectează următoarele câmpuri:
  
 - **total_file_accounts** - numărul de conturi de fișier din aplicație în momentul acțiunii
 
-#### <a name="account_lifecycle"></a>account_lifecycle
+#### <a name="accountlifecycle"></a>account.lifecycle
 
 Acest eveniment este colectat pentru a garanta funcționarea cu succes a configurării contului și este utilizat pentru a monitoriza starea creării contului, capacitatea de a adăuga noi conturi de e-mail și de a monitoriza resetări soft de cont
 
@@ -1546,7 +1554,7 @@ Se colectează următoarele câmpuri:
 
 - **action** - Tipul de acțiune efectuată asupra contului, cum ar fi adăugare, eliminare sau resetare
 
-#### <a name="add_new_account_step"></a>add_new_account_step
+#### <a name="addnewaccountstep"></a>add.new.account.step
 
 Acest eveniment ne permite să detectăm cât de departe a ajuns utilizatorul în formularul de creare a unui nou cont.  Indică când utilizatorul s-a mutat în alt pas sau dacă s-a retras.  Avem nevoie de aceste informații pentru a detecta dacă orice pași eșuează și pentru a vă asigura că crearea conturilor de utilizator a reușit. 
 
@@ -1554,7 +1562,7 @@ Următorul câmp este colectat:
 
 - **OTAddAccountCurrentStep** - care poate avea următoarele valori: profile_form, redirect_mobile_check, mobile_check_success
 
-#### <a name="app_error"></a>app_error
+#### <a name="apperror"></a>app.error
 
 Urmărește erorile critice ale aplicației utilizate astfel încât să putem preveni problemele care ar putea duce la căderea aplicației sau care ar putea să vă împiedice să citiți e-mailurile.
 
@@ -1600,7 +1608,7 @@ Se colectează următoarele câmpuri:
 
 Toate caracterele sunt posibile proprietăți. Aceasta ne ajută să înțelegem caracterele din corpul mesajului de schiță în care s-a produs eroarea. De exemplu, „a”, „b”, „c” sunt posibile proprietăți.
 
-#### <a name="app_launch_report"></a>app_launch_report
+#### <a name="applaunchreport"></a>app.launch.report
 
 Acest eveniment ne permite să detectăm și să remediem probleme în care Outlook pornește lent sau incomplet, îngreunând utilizarea aplicației de către utilizatori. Acesta include informații despre caracteristici specifice care au fost activate și despre durata de pornire al părților.
 
@@ -1636,7 +1644,7 @@ Se colectează următoarele câmpuri:
 
 - **num_mail_accounts** - ne spune numărul de conturi de e-mail din aplicație.
 
-#### <a name="calendar_action"></a>calendar_action
+#### <a name="calendaraction"></a>calendar.action
 
 Este utilizat cu scopul de a monitoriza orice impact posibil negativ asupra capacității dvs. de a efectua acțiuni de calendar de bază, cum ar fi crearea sau editarea evenimentelor.  Evenimentul ar putea include și o serie de nume de proprietate și dacă s-au modificat sau nu. De exemplu, „title_changed”, „online_meeting_changed” și „description_changed” sunt nume de proprietăți incluse pentru a ne ajuta să înțelegem dacă există probleme la editarea anumitor proprietăți.
 
@@ -1714,7 +1722,7 @@ Se colectează următoarele câmpuri:
 
 - **value** - detaliu specific acțiunii, cum ar fi durata întârzierii alertei sau categoria repetare-până la. Ne ajută să înțelegem contextul în care a fost efectuată acțiunea. 
 
-#### <a name="combined_search_use"></a>combined_search_use
+#### <a name="combinedsearchuse"></a>combined.search.use
 
 Este utilizat pentru a monitoriza posibilul impact negativ asupra capacității dvs. de a efectua funcționalități de căutare-cheie, cum ar fi căutarea de e-mailuri, persoane de contact sau evenimente.
 
@@ -1723,6 +1731,8 @@ Se colectează următoarele câmpuri pentru Android:
 - **account_switcher_action_type** - acest tip de acțiune urmărește dacă utilizatorul a utilizat comutatorul de cont în descoperire sau dacă s-a decis să comute între conturi
 
 - **action_type** - tipul de acțiune efectuat pentru căutare. Acest lucru identifică dacă o căutare a fost începută, este în curs sau s-a încheiat și ce acțiuni au fost întreprinse în timpul căutării, de exemplu, dacă a fost utilizat un microfon. Acest lucru este esențial pentru a asigura căutări precise și utile. 
+
+- **conversation_id** - ID unic pentru fiecare sesiune de căutare (de exemplu, de fiecare dată când utilizatorul intră în caseta de căutare)
 
 - **entrance_type** - acesta determină modul în care utilizatorul a început interogarea de căutare, din fila Căutare, interogare zero, titlu de căutare sau rezultat de căutare. 
 
@@ -1764,6 +1774,8 @@ Următoarele câmpuri sunt colectate în aplicațiile iOS ale Outlook Mobile:
 
 - **conversation_result_selected_count** - urmărește câte conversații au fost selectate în timpul sesiunilor de căutare combinate
 
+- **mail_paging_gesture_count** - urmărește câte gesturi de paginare pentru căutare de e-mail au fost efectuate în cadrul sesiunii de căutare combinată
+
 - **mail_requests_count** - urmărește câte solicitări de căutare de e-mail au fost trimise în sesiunea de căutare combinată
 
 - **people_filter_selected_contacts_count** - urmărește câte contacte au fost selectate în filtrul utilizatori
@@ -1786,7 +1798,7 @@ Următoarele câmpuri sunt colectate în aplicațiile iOS ale Outlook Mobile:
 
 - **ui_reload_status_time** - înregistrează timpul total petrecut pentru reîncărcarea UI din cauza actualizării de stare (în timpul interogării corespunzătoare)
 
-#### <a name="compose_mail_accessory"></a>compose_mail_accessory
+#### <a name="composemailaccessory"></a>compose.mail.accessory
 
 Acest eveniment ne permite să detectăm și să remediem problemele privind acțiunile principale de compunere a e-mailului, pentru a vă împiedica să întâmpinați probleme la atașarea unui fișier, realizarea unei fotografie ca atașare sau trimiterea disponibilității.
 
@@ -1801,7 +1813,7 @@ Se colectează următoarele câmpuri:
 - **toolbar_type**– Spuneți-ne tipul de bară de instrumente care se prezintă pe pagina de alcătuire. Valorile posibile sunt compose_actions și formatare.
 
 
-#### <a name="conversation_view_action"></a>conversation_view_action
+#### <a name="conversationviewaction"></a>conversation.view.action
 
 Este utilizat pentru a monitoriza posibilul impact negativ asupra capacității de a vizualiza și a răspunde la mesajele de e-mail
 
@@ -1823,7 +1835,7 @@ Se colectează următoarele câmpuri:
 
 - **use_default_quick_reply_mode** - ne spune dacă s-a utilizat modul implicit de răspuns rapid pentru a ne ajuta să detectăm probleme legate de experiența de răspuns rapid pentru mesajele de e-mail
 
-#### <a name="draft_action"></a>draft_action
+#### <a name="draftaction"></a>draft.action
 
 Este utilizat pentru a monitoriza posibilul impact negativ asupra capacității de a crea și a salva schițe de e-mail
 
@@ -1849,7 +1861,7 @@ Se colectează următoarele câmpuri:
  
 - **thread_id** - ID-ul de fir al schiței de conversație este asociat cu
 
-#### <a name="drag_and_drop"></a>drag_and_drop
+#### <a name="draganddrop"></a>drag.and.drop
 
 Acest eveniment ne permite să detectăm dacă acțiunea de glisare și fixare a reușit sau nu.  Se utilizează pentru a vă asigura că experiențele de glisare și fixare funcționează corect între aplicații, atât ca eveniment de fixare în Outlook, cât și ca eveniment de glisare care iese din Outlook.  Cu aceste date, avem capacitatea de a ne asigura că întreaga experiență cu alte aplicații funcționează așa cum este de așteptat.
 
@@ -1861,7 +1873,7 @@ Se colectează următoarele câmpuri:
 
 - **source** - în cazul unei acțiuni de fixare, acesta ne va spune din ce locație a început utilizatorul glisarea. Aceasta ne ajută să descoperim mai bine problemele cu o anumită sursă, cum ar fi OneDrive sau Fișiere, într-o anumită locație de fixare, cum ar fi un mesaj de e-mail nou.
 
-#### <a name="drawer_event"></a>drawer_event
+#### <a name="drawerevent"></a>drawer.event
 
 Este utilizat pentru a monitoriza posibilul impact negativ asupra capacității de a accesa foldere în inbox
 
@@ -2378,7 +2390,7 @@ Se colectează următoarele câmpuri:
 - **RMS.StatusCode** - ID al scenariului definit de API
 
 
-#### <a name="link_clicked_action"></a>link_clicked_action
+#### <a name="linkclickedaction"></a>link.clicked.action
 
 Evenimentul este utilizat pentru a urmări succesul utilizatorilor în vizualizarea unei adrese URL în vizualizarea web Microsoft Edge și pentru a finaliza scenarii web standard în acea vizualizare web fără a se confrunta cu erori
 
@@ -2411,7 +2423,7 @@ Se colectează următoarele câmpuri:
 - **txp_component** - dacă vizualizarea web Microsoft Edge a fost lansată dintr-un card TXP, tipul de componentă de interfață utilizator pentru acel card
 
 
-#### <a name="mail_action"></a>mail_action
+#### <a name="mailaction"></a>mail.action
 
 Este utilizat pentru a monitoriza posibilul impact negativ asupra capacității dvs. de a efectua acțiuni critice de corespondență (cum ar fi rularea modului filetat de corespondență, asigurarea funcționării acțiunilor de triere a corespondenței) pentru a vă asigura că aplicația funcționează corect pentru e-mail.
 
@@ -2501,7 +2513,7 @@ Se colectează următoarele câmpuri:
 
 - **type** - tip de document deschis prin intermediul linkului
 
-#### <a name="mail_compose"></a>mail_compose
+#### <a name="mailcompose"></a>mail.compose
 
 Este utilizat pentru a monitoriza posibilul impact negativ asupra capacității de a compune și a răspunde la mesaje de e-mail, cum ar fi să întâmpinați probleme privind răspunsul, să vă formatați e-mailul sau să trimiteți mesaje de e-mail.
 
@@ -2525,7 +2537,7 @@ Se colectează următoarele câmpuri:
 
 - **thread_id** - ID-ul firului conversației la care s-a răspuns sau de la care s-a redirecționat pentru a ne ajuta să detectăm probleme legate de un anumit mesaj
 
-#### <a name="meeting_call_to_action"></a>meeting_call_to_action
+#### <a name="meetingcalltoaction"></a>meeting.call.to.action
 
 Este utilizat cu scopul de a monitoriza posibilul impact negativ asupra capacității dvs. de a efectua acțiuni de întâlnire foarte importante, cum ar fi crearea și editarea evenimentelor, precum și oferirea de răspuns la ele.
 
@@ -2553,7 +2565,7 @@ Se colectează următoarele câmpuri:
 
 - **with_message_enabled** - indică dacă un utilizator poate răspunde cu un mesaj pentru a ne ajuta să detectăm probleme privind răspunsul la invitații la întâlnire
 
-#### <a name="office_android_docsui_fileoperations_opendocumentmeasurements"></a>Office_Android_DocsUI_FileOperations_OpenDocumentMeasurements
+#### <a name="officeandroiddocsuifileoperationsopendocumentmeasurements"></a>Office.Android.DocsUI.FileOperations.OpenDocumentMeasurements
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforma Android și înregistrările atunci când are loc o operațiune de deschidere a fișierelor. Evenimentul vă ajută să păstrați operațiunea de deschidere a fișierelor în siguranță, actualizată și corect funcțională. Scopul colectării acestor date este de a îmbunătăți în permanență performanța de deschidere a fișierelor. 
 
@@ -2663,7 +2675,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionID** – GUID pentru conectarea evenimentelor după sesiune
 
-#### <a name="office_android_earlytelemetry_expansionfilesavailability"></a>Office_Android_EarlyTelemetry_ExpansionFilesAvailability
+#### <a name="officeandroidearlytelemetryexpansionfilesavailability"></a>Office.Android.EarlyTelemetry.ExpansionFilesAvailability
 
 Activăm fișierele de extindere Pachet kit Android (APK) pentru aplicația Office pentru dispozitive mobile. Fișierele de extindere APK sunt fișiere de resurse suplimentare pe care dezvoltatorii de aplicații Android le pot publica împreună cu aplicația. Pentru a înțelege fiabilitatea fișierelor de extindere, vom înregistra în jurnal o semnalizare care indică dacă fișierele de extindere sunt disponibile sau nu, la fiecare boot.
 
@@ -2671,7 +2683,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_ExpansionFilesAvailable** - un semnalizator boolean care indică dacă fișierele de extindere APK sunt disponibile pe dispozitiv la momentul bootării aplicației.
 
-#### <a name="office_android_earlytelemetry_expansionfilesdownloader"></a>Office_Android_EarlyTelemetry_ExpansionFilesDownloader
+#### <a name="officeandroidearlytelemetryexpansionfilesdownloader"></a>Office.Android.EarlyTelemetry.ExpansionFilesDownloader
 
 Activăm fișierele de extindere Pachet kit Android (APK) pentru aplicația Office pentru dispozitive mobile. Fișierele de extindere APK sunt fișiere de resurse suplimentare, pe care dezvoltatorii de aplicații Android le pot publica împreună cu aplicația lor.  Pentru a înțelege fiabilitatea mecanismului de descărcare a fișierului nostru de extindere, înregistrăm o semnalizare care indică dacă reușim să descărcăm cu succes fișiere de extindere.
 
@@ -2680,15 +2692,15 @@ Se colectează următoarele câmpuri:
 - **Data_DownloadSuccess** - Un semnalizator Boolean care indică dacă descărcarea fișierelor de extindere APK este reușită, de fiecare dată când încercăm o descărcare în timpul bootării aplicației.
 
 
-#### <a name="office_android_intune_intunecompliancerequest"></a>Office_Android_Intune_IntuneComplianceRequest
+#### <a name="officeandroidintuneintunecompliancerequest"></a>Office.Android.Intune.IntuneComplianceRequest
 
-Acest eveniment este colectat pentru aplicații Office care rulează pe Android, inclusiv Office Mobile, Word, Excel, PowerPoint și OneNote. Evenimentul indică o încercare de conectare la un cont de organizație licențiat Intune, unde administratorul organizației a configurat politica pentru a impune accesul condiționat la aplicație. Acesta este utilizat pentru a înțelege numărul de utilizatori finali care încearcă să utilizeze aplicațiile sub această configurare a politicii și este combinat cu un alt eveniment, Office_Android_Intune_IntuneComplianceStatus pentru a garanta impunerea politicii configurate. 
+Acest eveniment este colectat pentru aplicații Office care rulează pe Android, inclusiv Office Mobile, Word, Excel, PowerPoint și OneNote. Evenimentul indică o încercare de conectare la un cont de organizație licențiat Intune, unde administratorul organizației a configurat politica pentru a impune accesul condiționat la aplicație. Acesta este utilizat pentru a înțelege numărul de utilizatori finali care încearcă să utilizeze aplicațiile sub această configurare a politicii și este combinat cu un alt eveniment, Office.Android.Intune.IntuneComplianceStatus, pentru a garanta impunerea politicii configurate. 
 
 Nu se colectează câmpuri de date.
 
-#### <a name="office_android_intune_intunecompliancestatus"></a>Office_Android_Intune_IntuneComplianceStatus
+#### <a name="officeandroidintuneintunecompliancestatus"></a>Office.Android.Intune.IntuneComplianceStatus
 
-Acest eveniment este colectat pentru aplicații Office care rulează pe Android, inclusiv Office Mobile, Word, Excel, PowerPoint și OneNote. Evenimentul indică o încercare de conectare la un cont de organizație licențiat Intune, unde administratorul organizației a configurat politica pentru a impune accesul condiționat la aplicație. Acest eveniment indică starea de conformitate a aplicației la care utilizatorul s-a conectat și este utilizat pentru a investiga erorile. Acesta este combinat cu un alt eveniment, Office_Android_Intune_IntuneComplianceRequest, pentru a garanta impunerea politicii configurate.
+Acest eveniment este colectat pentru aplicații Office care rulează pe Android, inclusiv Office Mobile, Word, Excel, PowerPoint și OneNote. Evenimentul indică o încercare de conectare la un cont de organizație licențiat Intune, unde administratorul organizației a configurat politica pentru a impune accesul condiționat la aplicație. Acest eveniment indică starea de conformitate a aplicației la care utilizatorul s-a conectat și este utilizat pentru a investiga erorile. Acesta este combinat cu un alt eveniment, Office.Android.Intune.IntuneComplianceRequest, pentru a garanta impunerea politicii configurate.
   
 Se colectează următoarele câmpuri:
 
@@ -2801,9 +2813,9 @@ Se colectează următoarele câmpuri:
 
   - **Data.CollectionTime** - marcă de timp privind momentul în care a fost înregistrat în jurnal un eveniment de cădere
 
-#### <a name="office_appdocs_appdocs_documentoperation"></a>Office_AppDocs_AppDocs_DocumentOperation
+#### <a name="officeappdocsappdocsdocumentoperation"></a>Office.AppDocs.AppDocs.DocumentOperation
 
-Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Android, iOS, Universal sau Windows. Evenimentul înregistrează momentul când are loc o operațiune de fișier (creare/deschidere/salvare/export/etc/) și este utilizat pentru a înțelege experiențele de utilizator, pe baza informațiilor de operațiune a fișierelor.
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Android, iOS, Universal și Windows. Evenimentul înregistrează momentul când are loc o operațiune de fișier (creare/deschidere/salvare/export/etc/) și este utilizat pentru a înțelege experiențele de utilizator, pe baza informațiilor de operațiune a fișierelor.
 
 Se colectează următoarele câmpuri:
 
@@ -2919,7 +2931,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_UnpackLinkPromptResult** – enumerarea reprezentând răspunsul solicitării de dezarhivare a linkului.
 
-#### <a name="office_docs_appdocs_operationopenfrommrubypath"></a>Office_Docs_AppDocs_OperationOpenFromMruByPath
+#### <a name="officedocsappdocsoperationopenfrommrubypath"></a>Office.Docs.AppDocs.OperationOpenFromMruByPath
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Android, iOS, Universal și Windows. Acest eveniment înregistrează atunci când are loc o operațiune de deschidere a fișierelor din calea furnizată de lista utilizată cel mai recent și este folosit pentru a înțelege și pentru a acorda prioritate experienței utilizatorului pe baza informațiilor operațiunii de deschidere a fișierelor.
 
@@ -3031,7 +3043,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_UnpackLinkPromptResult** – enumerarea reprezentând răspunsul solicitării de dezarhivare a linkului.
 
-#### <a name="office_docs_appdocs_operationopenfrommrubyurl"></a>Office_Docs_AppDocs_OperationOpenFromMruByUrl
+#### <a name="officedocsappdocsoperationopenfrommrubyurl"></a>Office.Docs.AppDocs.OperationOpenFromMruByUrl
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Android, iOS, Universal și Windows. Evenimentul înregistrează atunci când are loc o operațiune de deschidere a fișierelor din URL-ul furnizat în lista utilizată cel mai recent și este folosit pentru a înțelege și pentru a acorda prioritare experienței utilizatorului, pe baza informațiilor despre operațiune de deschidere a fișierului. 
 
@@ -3144,7 +3156,7 @@ Se colectează următoarele câmpuri:
 - **Data_UnpackLinkPromptResult** – enumerarea reprezentând răspunsul solicitării de dezarhivare a linkului.
 
 
-#### <a name="office_docs_appdocs_operationopenfrompath"></a>Office_Docs_AppDocs_OperationOpenFromPath
+#### <a name="officedocsappdocsoperationopenfrompath"></a>Office.Docs.AppDocs.OperationOpenFromPath
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Android, iOS, Universal și Windows. Evenimentul înregistrează atunci când are loc o operațiune de deschidere a fișierului de pe o cale și este folosit pentru a înțelege și pentru a acorda prioritare experiențelor utilizatorului, pe baza informațiilor despre operațiunea de deschidere a fișierelor.
 
@@ -3256,7 +3268,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_UnpackLinkPromptResult** – enumerarea reprezentând răspunsul solicitării de dezarhivare a linkului.
 
-#### <a name="office_docs_appdocs_operationopenfromprotocolhandler"></a>Office_Docs_AppDocs_OperationOpenFromProtocolHandler
+#### <a name="officedocsappdocsoperationopenfromprotocolhandler"></a>Office.Docs.AppDocs.OperationOpenFromProtocolHandler
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Android, iOS, Universal și Windows. Evenimentul înregistrează atunci când are loc o operațiune de deschidere a fișierului dintr-o altă aplicație folosind interfața rutinei de tratare al protocolului și este folosit pentru a înțelege și pentru a acorda prioritare experiențelor utilizatorului, pe baza informațiilor despre operațiune de deschidere a fișierelor.
 
@@ -3368,7 +3380,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_UnpackLinkPromptResult** – enumerarea reprezentând răspunsul solicitării de dezarhivare a linkului.
 
-#### <a name="office_docs_appdocs_operationopenfromshell"></a>Office_Docs_AppDocs_OperationOpenFromShell
+#### <a name="officedocsappdocsoperationopenfromshell"></a>Office.Docs.AppDocs.OperationOpenFromShell
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Android, iOS, Universal și Windows. Evenimentul înregistrează atunci când are loc o operațiune de deschidere a fișierelor din adresa URL furnizat în lista utilizată cel mai recent și este folosit pentru a înțelege și pentru a acorda prioritare experiențelor de utilizator, pe baza informațiilor despre operațiune de deschidere a fișierelor.
 
@@ -3481,7 +3493,7 @@ Se colectează următoarele câmpuri:
 - **Data_UnpackLinkPromptResult** – enumerarea reprezentând răspunsul solicitării de dezarhivare a linkului.
 
 
-#### <a name="office_docs_appdocs_operationopenfromurl"></a>Office_Docs_AppDocs_OperationOpenFromUrl
+#### <a name="officedocsappdocsoperationopenfromurl"></a>Office.Docs.AppDocs.OperationOpenFromUrl
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Android, iOS, Universal și Windows. Evenimentul înregistrează atunci când are loc o operațiune de deschidere a fișierelor din URL-ul și pentru a acorda prioritare experiențelor de utilizator, pe baza informațiilor despre operațiune de deschidere a fișierelor.
 
@@ -3594,7 +3606,7 @@ Se colectează următoarele câmpuri:
 - **Data_UnpackLinkPromptResult** – enumerarea reprezentând răspunsul solicitării de dezarhivare a linkului.
 
 
-#### <a name="office_apple_activateperpetual"></a>Office_Apple_ActivatePerpetual
+#### <a name="officeappleactivateperpetual"></a>Office.Apple.ActivatePerpetual
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a monitoriza starea fluxului de activare perpetuă, precum și a investiga cauzele erorilor, prin revizuirea valorilor FailedAt.
 
@@ -3602,7 +3614,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_FailedAt** - colectăm un șir reprezentând locul erorii în fluxul de activare a licenței permanente.
 
-#### <a name="office_apple_activatesubscription"></a>Office_Apple_ActivateSubscription
+#### <a name="officeappleactivatesubscription"></a>Office.Apple.ActivateSubscription
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Colectăm informații despre migrarea de la stiva de cod de licențiere moștenită la piuneza codului de licențiere vNext. Acest lucru este utilizat pentru a monitoriza starea fluxului de activare a abonamentului, precum și pentru a urmări dacă aceasta este o migrare de licențiere către vNext și dacă s-a utilizat identitatea primară.
 
@@ -3612,7 +3624,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_NULSubscriptionLicensed** - o valoare adevărat/fals care denotă starea abonamentului
 
-#### <a name="office_apple_cisauthticketwithidentity"></a>Office_Apple_CISAuthTicketWithIdentity
+#### <a name="officeapplecisauthticketwithidentity"></a>Office.Apple.CISAuthTicketWithIdentity
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru capturarea erorilor de generare a tokenurilor de autentificare în timpul InAppPurchase pe Mac (evenimentul înregistrează codul de eroare primit).  Acest eveniment este utilizat pentru detectarea și pentru a ajuta la depanarea erorilor de generare a tokenurilor de autentificare.
 
@@ -3624,7 +3636,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_ValidIdentity** - dacă clientul are o identitate validă
 
-#### <a name="office_apple_inappassociationactivity"></a>Office_Apple_InAppAssociationActivity
+#### <a name="officeappleinappassociationactivity"></a>Office.Apple.InAppAssociationActivity
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Colectăm informații legate de asocierea produselor după o achiziție în cadrul aplicației. Înregistrăm ce SKU de abonament asociem.  Acest lucru este utilizat pentru a monitoriza starea asociațiilor de produs achiziționare din aplicație.
 
@@ -3632,7 +3644,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_ProductID**-SKU-ul de abonament pe care încercăm să-l asociem produsului.
 
-#### <a name="office_apple_inapppurchaseactivity"></a>Office_Apple_InAppPurchaseActivity
+#### <a name="officeappleinapppurchaseactivity"></a>Office.Apple.InAppPurchaseActivity
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. 
 
@@ -3646,7 +3658,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_PurchaseRequestType** - tipul de solicitare de achiziție
 
-#### <a name="office_apple_intune"></a>Office_Apple_InTune
+#### <a name="officeappleintune"></a>Office.Apple.InTune
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Vom colecta dacă sesiunea curentă este gestionată de Intune. Acest lucru este utilizat pentru a pivota/filtra în sesiunile gestionate Intune și ne permite să investigăm eventualele probleme legate de executarea Office ca aplicație gestionată de Intune.
 
@@ -3654,7 +3666,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_EventID** - colectăm un șir reprezentând un cod care indică dacă sesiunea este gestionată de Intune.
 
-#### <a name="office_apple_licensing_mac_licensingstate"></a>Office_Apple_Licensing_Mac_LicensingState
+#### <a name="officeapplelicensingmaclicensingstate"></a>Office.Apple.Licensing.Mac.LicensingState
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul captează starea curentă a licenței pentru o sesiune dintr-un computer (ID-ul de licență OLS, SKU-ul utilizat, existența sau absența perioadei de grație, RFM etc.). Datele colectate sunt utilizate pentru detectarea erorilor și pentru investigarea cauzelor erorilor. 
 
@@ -3706,7 +3718,7 @@ Se colectează următoarele câmpuri:
 
 - **Activity_DateTimeTicks** - Oră Dată pentru activitate
 
-#### <a name="office_docs_apple_docsuxiossaveasthroughfilemenu"></a>Office_Docs_Apple_DocsUXiOSSaveAsThroughFileMenu 
+#### <a name="officedocsappledocsuxiossaveasthroughfilemenu"></a>Office.Docs.Apple.DocsUXiOSSaveAsThroughFileMenu 
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează atunci când are loc o operațiune „Salvare ca“ și este utilizată pentru a înțelege și a acorda prioritate experienței utilizatorului, pe baza informațiilor de operațiune de fișier, cum ar fi categoriile de locație.  O operațiune „salvare ca“ are loc de fiecare dată când un utilizator creează un fișier nou și îl salvează pentru prima dată sau salvează o copie a unui fișier existent într-o locație nouă.
 
@@ -3716,7 +3728,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_ServiceType** - clasificarea abstractă a locației originale a unui fișier după finalizarea salvării, cum ar fi „SharePoint“, „OneDrive“, „locală“, „WOPI“ etc. și în mod explicit nu este locația reală a fișierului.
 
-#### <a name="office_docs_apple_docsuxmacatmentioninsertedatmention"></a>Office_Docs_Apple_DocsUXMacAtMentionInsertedAtMention 
+#### <a name="officedocsappledocsuxmacatmentioninsertedatmention"></a>Office.Docs.Apple.DocsUXMacAtMentionInsertedAtMention 
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează atunci când un utilizator menționează cu „@“ un alt utilizator și este utilizat pentru a înțelege și a acorda prioritate experienței utilizatorilor, în funcție de modul în care utilizatorii colaborează cu alți utilizatori.
 
@@ -3724,7 +3736,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_CharactersTyped** - o valoare numerică care indică numărul total de caractere tastate în textul de menționare cu „@“.
 
-#### <a name="office_docs_apple_docsuxmacodspsharingwebviewsharingcompleted"></a>Office_Docs_Apple_DocsUXMacODSPSharingWebViewSharingCompleted 
+#### <a name="officedocsappledocsuxmacodspsharingwebviewsharingcompleted"></a>Office.Docs.Apple.DocsUXMacODSPSharingWebViewSharingCompleted 
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează atunci când un utilizator alege să partajeze un document în cloud utilizând experiența de partajare OneDrive și este utilizat pentru a înțelege mai bine și a acorda prioritate experienței utilizatorilor pe baza partajării documentelor.
 
@@ -3734,7 +3746,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_ShareWebViewMode** - un șir specificat în cod care indică ce tip de mod de partajare era activ când s-a finalizat partajarea, inclusiv, dar fără a se limita la „ManageAccess“, „AtMentions“, „Partajare“.
 
-#### <a name="office_docsui_collaboration_coauthorgalleryrowtapped"></a>Office_DocsUI_Collaboration_CoauthorGalleryRowTapped 
+#### <a name="officedocsuicollaborationcoauthorgalleryrowtapped"></a>Office.DocsUI.Collaboration.CoauthorGalleryRowTapped 
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează atunci când un utilizator selectează să vizualizeze lista de co-autori actuali.  Aceste date se utilizează pentru a înțelege mai bine și a acorda prioritate experiențelor de utilizator legate de elaborarea în comun a unui document în același timp.
 
@@ -3742,7 +3754,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_CoauthorCount** - o valoare numerică care reprezintă numărul total de persoane care editează în prezent același document ca al utilizatorului.
 
-#### <a name="office_docsui_collaboration_collabcornerpeoplegallerycoauthorsupdated"></a>Office_DocsUI_Collaboration_CollabCornerPeopleGalleryCoauthorsUpdated 
+#### <a name="officedocsuicollaborationcollabcornerpeoplegallerycoauthorsupdated"></a>Office.DocsUI.Collaboration.CollabCornerPeopleGalleryCoauthorsUpdated 
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul înregistrează atunci când se modifică numărul de co-autori activi într-un document din cloud.  Aceste date se utilizează pentru a înțelege mai bine și a acorda prioritate experiențelor de utilizator legate de elaborarea în comun a unui document în același timp.
 
@@ -3758,7 +3770,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_ServiceType** - o clasificare abstractă a locației unui fișier, cum ar fi „SharePoint“, „OneDrive“, „locală“, „WOPI“ etc. și în mod explicit nu este locația reală a fișierului.
 
-#### <a name="office_docsui_docstage_docstagecreatenewfromtemplate"></a>Office_DocsUI_DocStage_DocStageCreateNewFromTemplate 
+#### <a name="officedocsuidocstagedocstagecreatenewfromtemplate"></a>Office.DocsUI.DocStage.DocStageCreateNewFromTemplate 
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul înregistrează atunci când se creează un nou fișier din experiența „Nou din șablon“ și este utilizat pentru a înțelege mai bine și a acorda prioritate experienței utilizatorului, pe baza informațiilor de creare a documentelor.
 
@@ -3776,7 +3788,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_TemplateType** - o clasificare ajutătoare pentru a distinge tipul de șablon, cum ar fi, dar fără limitare, șabloane „online“, șabloane „căutare online“, șabloane „locale“.
 
-#### <a name="office_docsui_docstage_recommendedopen"></a>Office_DocsUI_DocStage_RecommendedOpen
+#### <a name="officedocsuidocstagerecommendedopen"></a>Office.DocsUI.DocStage.RecommendedOpen
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează atunci când are loc o operațiune din secțiunea fișierelor recomandate a galeriei de documente și este utilizată pentru a înțelege și a acorda prioritate experienței utilizatorului, pe baza informațiilor de operațiune de fișier.
 
@@ -3784,7 +3796,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_Success** - o valoare booleană pentru a indica dacă operațiunea a reușit.
 
-#### <a name="office_docsui_fileoperations_docsuifileopenmacrequired"></a>Office_DocsUI_FileOperations_DocsUIFileOpenMacRequired
+#### <a name="officedocsuifileoperationsdocsuifileopenmacrequired"></a>Office.DocsUI.FileOperations.DocsUIFileOpenMacRequired
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează atunci când are loc o operațiune de deschidere de fișier și este utilizată pentru a înțelege și a acorda prioritate experienței utilizatorului, pe baza informațiilor operațiunii de deschidere de fișier, cum ar fi categoriile de locație „ServiceType“ și primele patru caractere ale extensiei.
 
@@ -3794,7 +3806,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_ServiceType** - clasificarea abstractă a locației unui fișier, cum ar fi „SharePoint“, „OneDrive“, „locală“, „WOPI“ etc.
 
-#### <a name="office_docsui_fileoperations_opendocumentmeasurements"></a>Office_DocsUI_FileOperations_OpenDocumentMeasurements
+#### <a name="officedocsuifileoperationsopendocumentmeasurements"></a>Office.DocsUI.FileOperations.OpenDocumentMeasurements
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme iOS. Acest eveniment înregistrează atunci când are loc o operațiune de deschidere a fișierului și este utilizată pentru a înțelege și a acorda prioritate experienței utilizatorului, pe baza informațiilor de operațiune a deschiderii fișierului, în mod special informații legate de funcționalitate.
 
@@ -3898,7 +3910,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_TimeSplitMeasurements**- o valoare șir de logare durata de timp petrecută în anumite apeluri de funcție, într-un format cu eticheta funcției și ora de început și durata.
 
-#### <a name="office_docsui_fileoperations_openfilewithreason"></a>Office_DocsUI_FileOperations_OpenFileWithReason 
+#### <a name="officedocsuifileoperationsopenfilewithreason"></a>Office.DocsUI.FileOperations.OpenFileWithReason 
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează atunci când are loc o operațiune de deschidere de fișier și este utilizată pentru a înțelege și a acorda prioritate experienței utilizatorului, pe baza informațiilor operațiunii de deschidere de fișier, cum ar fi categoriile de locație „ServiceType“ și locul din cadrul aplicației de unde utilizatorul a solicitat deschiderea unui fișier.
 
@@ -3912,7 +3924,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_ServiceType** - clasificarea numerică abstractă a locației unui fișier, cum ar fi „SharePoint“, „OneDrive“, „locală“, „WOPI“ etc. și în mod explicit nu este locația reală a fișierului.
 
-#### <a name="office_docsui_fileoperations_savetourl"></a>Office_DocsUI_FileOperations_SaveToURL
+#### <a name="officedocsuifileoperationssavetourl"></a>Office.DocsUI.FileOperations.SaveToURL
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul înregistrează atunci când apare o operațiune de „salvare ca“ și este utilizată pentru a înțelege și a acorda prioritate experienței utilizatorului, pe baza informațiilor operațiunii de deschidere de fișier, cum ar fi categoriile de locație și primele patru caractere ale extensiei.  O operațiune „salvare ca“ are loc de fiecare dată când un utilizator creează un fișier nou și îl salvează pentru prima dată sau salvează o copie a unui fișier existent într-o locație nouă.
 
@@ -3932,7 +3944,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_SaveOperationType** - o valoare numerică definită de grupul de valori NSSaveOperationType al Apple.
 
-#### <a name="office_docsui_sharingui_cloudupsellshown"></a>Office_DocsUI_SharingUI_CloudUpsellShown 
+#### <a name="officedocsuisharinguicloudupsellshown"></a>Office.DocsUI.SharingUI.CloudUpsellShown 
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează atunci când un utilizator trece prin documentul de vânzări la flux în cloud.  Aceste date se utilizează pentru a înțelege mai bine și a acorda prioritate experiențelor de utilizator legate de mutarea documentelor in locații din cloud.
 
@@ -3950,7 +3962,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_IsSheetModal** - un Boolean care indică dacă experiența de vânzări a fost prezentată modal sau nu.
 
-#### <a name="office_docsui_sharingui_cloudupsellupload"></a>Office_DocsUI_SharingUI_CloudUpsellUpload 
+#### <a name="officedocsuisharinguicloudupsellupload"></a>Office.DocsUI.SharingUI.CloudUpsellUpload 
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează atunci când un utilizator alege să încarce un fișier nou sau local în cloud, precum și rezultatul operațiunii respective.  Aceste date se utilizează pentru a înțelege mai bine și a acorda prioritate experiențelor de utilizator legate de mutarea documentelor in locații din cloud.
 
@@ -3976,7 +3988,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_UploadResult** - un șir specificat în cod, care indică rezultatul tentativei de încărcare, inclusiv, dar fără a se limita la „Success“, „UserCancelledUpload“ și „PreAuthFailed“.
 
-#### <a name="office_docsui_sharingui_copylinkoperation"></a>Office_DocsUI_SharingUI_CopyLinkOperation
+#### <a name="officedocsuisharinguicopylinkoperation"></a>Office.DocsUI.SharingUI.CopyLinkOperation
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment se înregistrează atunci când un utilizator alege să partajeze un document prin generarea unui link la un document din cloud și este utilizat pentru a înțelege mai bine și a acorda prioritate experienței utilizatorilor pe baza partajării documentelor.
 
@@ -3988,7 +4000,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_ShareScenario** - o descriere de șir specificat în cod în care, în interfața de utilizator a aplicației fișierul este partajat din, inclusiv, dar fără a se limita la, „FileMenu“, „OpenTabShareActionMenu“, „RecentTabShareActionMenu“.
 
-#### <a name="office_docsui_sharingui_docsuionedriveshare"></a>Office_DocsUI_SharingUI_DocsUIOneDriveShare 
+#### <a name="officedocsuisharinguidocsuionedriveshare"></a>Office.DocsUI.SharingUI.DocsUIOneDriveShare 
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează atunci când un utilizator alege să partajeze un document în cloud utilizând experiența de partajare OneDrive și este utilizat pentru a înțelege mai bine și a acorda prioritate experienței utilizatorilor pe baza partajării documentelor.
 
@@ -4004,7 +4016,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_WebViewLoadTimeInMs** - o valoare numerică care înregistrează perioada de timp necesară pentru ca interfața de utilizator Web să se încarce.
 
-#### <a name="office_docsui_sharingui_invitepeople"></a>Office_DocsUI_SharingUI_InvitePeople 
+#### <a name="officedocsuisharinguiinvitepeople"></a>Office.DocsUI.SharingUI.InvitePeople 
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează atunci când un utilizator alege să invite persoane la un document din cloud și este utilizat pentru a înțelege mai bine și a acorda prioritate experienței utilizatorilor pe baza partajării documentelor.
 
@@ -4020,7 +4032,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_ShareScenario** - o descriere de șir specificat în cod în care, în interfața de utilizator a aplicației fișierul este partajat din, inclusiv, dar fără a se limita la, „FileMenu“, „OpenTabShareActionMenu“, „RecentTabShareActionMenu“.
 
-#### <a name="office_docsui_sharingui_sendacopyoperation"></a>Office_DocsUI_SharingUI_SendACopyOperation
+#### <a name="officedocsuisharinguisendacopyoperation"></a>Office.DocsUI.SharingUI.SendACopyOperation
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul înregistrează atunci când un utilizator alege să trimită o copie a unui document și este utilizat pentru a înțelege mai bine și a acorda prioritate experienței utilizatorilor pe baza partajării documentelor.
 
@@ -4040,7 +4052,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_SharingService** - un boolean care indică dacă fișierul a fost creat atunci când utilizatorul căuta un șablon.
 
-#### <a name="office_docsui_sharingui_upsellshare"></a>Office_DocsUI_SharingUI_UpsellShare 
+#### <a name="officedocsuisharinguiupsellshare"></a>Office.DocsUI.SharingUI.UpsellShare 
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează atunci când un utilizator trece prin documentul de vânzări la flux în cloud pentru a încerca să partajeze un document.   Aceste date se utilizează pentru a înțelege mai bine și a acorda prioritate experiențelor de utilizator legate de mutarea documentelor in locații din cloud.
 
@@ -4902,7 +4914,7 @@ Se colectează următoarele câmpuri:
 
 - **EventName** - numele evenimentului conectat
 
-#### <a name="office_firstrun_apple_activationresult"></a>Office_FirstRun_Apple_ActivationResult
+#### <a name="officefirstrunappleactivationresult"></a>Office.FirstRun.Apple.ActivationResult
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a monitoriza starea fluxului nostru de activare a aplicațiilor. Colectăm date pentru a afla rezultatul activității de activare a abonamentului Office 365, împreună cu fluxul utilizat pentru activare (prima experiență de rulare, fluxul în aplicație, achiziționare etc.).
 
@@ -4914,9 +4926,9 @@ Se colectează următoarele câmpuri:
 
 - **Data_ActivationStatusFlowType** - o valoare numerică indicând tipul de flux de activare
 
-#### <a name="office_firstrun_apple_activationstatus"></a>Office_FirstRun_Apple_ActivationStatus
+#### <a name="officefirstrunappleactivationstatus"></a>Office.FirstRun.Apple.ActivationStatus
 
-Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Apple. Acest eveniment este utilizat pentru a afla rezultatul activității de activare a abonamentului Office 365, împreună cu fluxul utilizat pentru activare (FRE, în aplicație, achiziționare etc.). Colectăm date care conțin tipul de activare, tipul de flux (FRE/DocStage/Purchase) și ID-ul serviciului de licențiere Office.
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment este utilizat pentru a afla rezultatul activității de activare a abonamentului Office 365, împreună cu fluxul utilizat pentru activare (FRE, în aplicație, achiziționare etc.). Colectăm date care conțin tipul de activare, tipul de flux (FRE/DocStage/Purchase) și ID-ul serviciului de licențiere Office.
 
 Se colectează următoarele câmpuri:
 
@@ -4928,7 +4940,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_ActivationTypeStatus** - un cod de stare de activare.
 
-#### <a name="office_firstrun_apple_firstruncomplete"></a>Office_FirstRun_Apple_FirstRunComplete
+#### <a name="officefirstrunapplefirstruncomplete"></a>Office.FirstRun.Apple.FirstRunComplete
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul ne anunță dacă utilizatorul rulează în freemium, tipul de flux în execuție (FRE/DocStage/Purchase) și tipul de identitate (MSA/OrgID). Utilizăm acest eveniment pentru a ne da seama dacă s-a finalizat prima experiență de rulare (FRE) și tipul de identitate utilizat pentru conectare (MSA/OrgID).
 
@@ -4942,7 +4954,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_FirstRunCompletedIdentityType** - tipul de identitate al utilizatorului care a terminat fluxul
 
-#### <a name="office_firstrun_apple_firstrunstart"></a>Office_FirstRun_Apple_FirstRunStart
+#### <a name="officefirstrunapplefirstrunstart"></a>Office.FirstRun.Apple.FirstRunStart
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul ne anunță că un utilizator a introdus prima experiență de rulare și tipul de flux care rulează (FRE/DocStage/Purchase). Utilizăm acest eveniment pentru a ne da seama dacă prima experiență de rulare (FRE) a fost începută cu succes.
 
@@ -4952,7 +4964,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_FirstRunStartedFlowType** - un cod care denotă tipul de flux de utilizator care a fost finalizat 
 
-#### <a name="office_firstrun_apple_firstrunstartedandcompleted"></a>Office_FirstRun_Apple_FirstRunStartedAndCompleted
+#### <a name="officefirstrunapplefirstrunstartedandcompleted"></a>Office.FirstRun.Apple.FirstRunStartedAndCompleted
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul ne anunță dacă utilizatorul rulează în freemium, tipul de flux în execuție (FRE/DocStage/Purchase) și tipul de identitate (MSA/OrgID). Vom utiliza acest eveniment pentru a ne da seama care este starea de funcționare a fluxului nostru de experiență de prima rulare (FRE).
 
@@ -4970,7 +4982,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_FirstRunStartedFlowType** - un cod care denotă tipul de flux de utilizator care a fost început
 
-#### <a name="office_firstrun_apple_inapppurchaseactivationfail"></a>Office_FirstRun_Apple_InAppPurchaseActivationFail
+#### <a name="officefirstrunappleinapppurchaseactivationfail"></a>Office.FirstRun.Apple.InAppPurchaseActivationFail
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a monitoriza starea fluxului nostru de activare a aplicațiilor. Colectăm date pentru a afla rezultatul activității de activare a achiziției în cadrul aplicației, împreună cu fluxul utilizat pentru activare (prima experiență de rulare, achiziționarea în aplicația Flow etc.). 
 
@@ -4984,7 +4996,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_AssoicatedSuccessfullyFlowType** - un cod care denotă tipul de flux de utilizator care a fost exercitat
 
-#### <a name="office_firstrun_apple_inapppurchaseactivationsuccess"></a>Office_FirstRun_Apple_InAppPurchaseActivationSuccess
+#### <a name="officefirstrunappleinapppurchaseactivationsuccess"></a>Office.FirstRun.Apple.InAppPurchaseActivationSuccess
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a monitoriza starea fluxului nostru de activare a aplicațiilor. Colectăm date pentru a afla rezultatul activității de activare a achiziției în cadrul aplicației, împreună cu fluxul utilizat pentru activare (prima experiență de rulare, achiziționarea în aplicația Flow etc.). 
 
@@ -4998,7 +5010,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_AssoicatedSuccessfullyFlowType** - un cod care denotă tipul de flux de utilizator care a fost exercitat
 
-#### <a name="office_firstrun_apple_inapppurchaseassociationfailed"></a>Office_FirstRun_Apple_InAppPurchaseAssociationFailed
+#### <a name="officefirstrunappleinapppurchaseassociationfailed"></a>Office.FirstRun.Apple.InAppPurchaseAssociationFailed
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a monitoriza starea fluxului nostru de activare a aplicațiilor. Colectăm date pentru a afla rezultatul activității de activare a achiziției în cadrul aplicației, împreună cu fluxul utilizat pentru activare (prima experiență de rulare, achiziționarea în aplicația Flow etc.). 
 
@@ -5014,7 +5026,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_AssociationFailedResult** - un cod care denotă tipul de eroare observată
 
-#### <a name="office_firstrun_apple_inapppurchaseassociationsuccess"></a>Office_FirstRun_Apple_InAppPurchaseAssociationSuccess
+#### <a name="officefirstrunappleinapppurchaseassociationsuccess"></a>Office.FirstRun.Apple.InAppPurchaseAssociationSuccess
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a monitoriza starea fluxului nostru de activare a aplicațiilor. Colectăm date pentru a afla rezultatul activității de activare a achiziției în cadrul aplicației, împreună cu fluxul utilizat pentru activare (prima experiență de rulare, achiziționarea în aplicația Flow etc.). 
 
@@ -5028,7 +5040,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_AssoicatedSuccessfullyFlowType** - un cod care denotă tipul de flux de utilizator care a fost exercitat
 
-#### <a name="office_firstrun_apple_inapppurchasefailures"></a>Office_FirstRun_Apple_InAppPurchaseFailures
+#### <a name="officefirstrunappleinapppurchasefailures"></a>Office.FirstRun.Apple.InAppPurchaseFailures
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a monitoriza starea fluxului nostru de activare a aplicațiilor. Colectăm date despre rezultatul fluxului de achiziții în cadrul aplicației.
 
@@ -5042,7 +5054,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_EventId** - un cod care denotă tipul de eroare observată
 
-#### <a name="office_firstrun_apple_inapppurchasesattempted"></a>Office_FirstRun_Apple_InAppPurchasesAttempted
+#### <a name="officefirstrunappleinapppurchasesattempted"></a>Office.FirstRun.Apple.InAppPurchasesAttempted
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a monitoriza starea fluxului nostru de achiziție în cadrul aplicațiilor. Colectăm date pentru a urmări încercările de achiziție din cadrul aplicației și tipul lor de SKU achiziționat (lunar/anual/Home/personal).
 
@@ -5054,7 +5066,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_PurchaseSuccessfulFlowType** - un cod care denotă tipul de flux de utilizator care a fost exercitat
 
-#### <a name="office_firstrun_apple_inapprestoreattempted"></a>Office_FirstRun_Apple_InAppRestoreAttempted
+#### <a name="officefirstrunappleinapprestoreattempted"></a>Office.FirstRun.Apple.InAppRestoreAttempted
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a monitoriza starea fluxului nostru de achiziție în cadrul aplicațiilor. Colectăm date pentru a urmări restaurările încercate în cadrul aplicațiilor
 
@@ -5064,7 +5076,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_RestoreAttemptFlowType** - un cod care denotă tipul de flux de utilizator care a fost exercitat
 
-#### <a name="office_firstrun_apple_inapprestoreattemptfailed"></a>Office_FirstRun_Apple_InAppRestoreAttemptFailed
+#### <a name="officefirstrunappleinapprestoreattemptfailed"></a>Office.FirstRun.Apple.InAppRestoreAttemptFailed
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a monitoriza starea fluxului nostru de achiziție în cadrul aplicațiilor. Colectăm date pentru a urmări restaurările încercate în cadrul aplicațiilor precum și fluxurile și erorile lor asociate.
 
@@ -5078,7 +5090,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_RestoredFailedUnKnownResult** - dacă încercarea nu a reușit din motive necunoscute
 
-#### <a name="office_firstrun_apple_macfirstruncompleted"></a>Office_FirstRun_Apple_MacFirstRunCompleted
+#### <a name="officefirstrunapplemacfirstruncompleted"></a>Office.FirstRun.Apple.MacFirstRunCompleted
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul ne anunță că un utilizator a trecut prin prima experiență de rulare. Utilizăm acest eveniment pentru a ne da seama dacă prima experiență de rulare (FRE) a fost finalizată cu succes.
 
@@ -5086,7 +5098,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_FirstRunCollectionTime** - un marcaj de timp care înregistrează ora la care s-a finalizat fluxul.
 
-#### <a name="office_firstrun_apple_macwxpfirstrunstarted"></a>Office_FirstRun_Apple_MacWXPFirstRunStarted
+#### <a name="officefirstrunapplemacwxpfirstrunstarted"></a>Office.FirstRun.Apple.MacWXPFirstRunStarted
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul ne anunță că un utilizator a intrat în prima experiență de rulare. Utilizăm acest eveniment pentru a ne da seama dacă prima experiență de rulare (FRE) a fost începută cu succes.
 
@@ -5563,7 +5575,7 @@ Se colectează următoarele câmpuri:
 
   - **Data.Log** - mesaj de jurnal particularizat care indică succesul sau eșecul pre-verificării
 
-#### <a name="office_officemobile_pdfviewer_pdffileopenmeasurements"></a>Office_OfficeMobile_PdfViewer_PdfFileOpenMeasurements
+#### <a name="officeofficemobilepdfviewerpdffileopenmeasurements"></a>Office.OfficeMobile.PdfViewer.PdfFileOpenMeasurements
 
 Acest eveniment este colectat pentru aplicația Office pentru iOS și înregistrează atunci când are loc o operațiune de deschidere de fișier. Colectăm aceste date pentru a asigura o performanță bună pentru deschiderea tuturor fișierelor din aplicație. 
 
@@ -5594,7 +5606,7 @@ Se colectează următoarele câmpuri:
 - **Doc_RenderDurationms** - timp de redare a unui fișier pdf
 
 
-#### <a name="office_officemobile_pdfviewer_pdffileoperations"></a>Office_OfficeMobile_PdfViewer_PdfFileOperations
+#### <a name="officeofficemobilepdfviewerpdffileoperations"></a>Office.OfficeMobile.PdfViewer.PdfFileOperations
 
 Evenimentul este colectat pentru aplicația Office pentru Android. Acesta înregistrează când are loc o operațiune de deschidere, închidere sau salvare de .pdf și este utilizată pentru a înțelege și a acorda prioritate experienței de utilizator bazată pe informațiile despre operațiunea cu fișierul .pdf. Evenimentul ne permite să menținem operațiunile funcționale de deschidere, închidere și salvare a fișierului .pdf așa cum este de așteptat și să îmbunătățim performanța operațiunilor cu fișierele .pdf.
 
@@ -5634,7 +5646,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_Type** - tipul de operațiune de fișier (deschidere, închidere sau salvare) 
 
-#### <a name="office_officemobile_pdfviewer_pdffileoperations"></a>Office_OfficeMobile_PdfViewer_PdfFileOperations
+#### <a name="officeofficemobilepdfviewerpdffileoperations"></a>Office.OfficeMobile.PdfViewer.PdfFileOperations
 
 Evenimentul este colectat pentru aplicația Office pentru iOS. Acesta înregistrează când are loc o operațiune de deschidere, închidere sau salvare de .pdf și este utilizată pentru a înțelege și a acorda prioritate experienței de utilizator bazată pe informațiile despre operațiunea cu fișierul .pdf. Evenimentul ne permite să menținem operațiunile funcționale de deschidere, închidere și salvare a fișierului .pdf așa cum este de așteptat și să îmbunătățim performanța operațiunilor cu fișierele .pdf. 
 
@@ -5694,6 +5706,35 @@ Se colectează următoarele câmpuri:
 - **IMAGE_COUNT** - indică numărul de imagini efectuate
 
 - **LAUNCH_REASON** - indică fluxul în care a fost lansat OfficeLens. Poate fi peste ecranul de blocare sau prin intermediul opțiunilor Cameră sau Galerie din Note adezive sau prin OneNote Canvas etc.
+
+
+#### <a name="officeonenoteandroidstickynotesnotecreated"></a>Office.OneNote.Android.StickyNotes.NoteCreated
+ 
+Semnal critic utilizat pentru a monitoriza capacitatea utilizatorilor de Note adezive de a crea note în aplicație.   Telemetria se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu pot crea o notă, acest lucru va declanșa un incident de mare severitate.
+
+Se colectează următoarele câmpuri:
+
+- **IsExportable** - o semnalizare care indică dacă acest eveniment a fost rezultatul unei acțiuni a utilizatorului sau nu. Ar trebui setată la True, deoarece NoteCreated este o acțiune declanșată de utilizator.
+
+- **NoteLocalId** - Identificator unic distinctiv atribuit unei note în momentul în care un utilizator creează nota în cadrul aplicației.
+
+- **StickyNotes-SDKVersion** - număr de versiune care indică versiunea de Note Adezive folosită de utilizator. Ne permite să identificăm ce versiuni de produs afișează o problemă, astfel încât să o putem stabili corect ca prioritate.
+
+
+#### <a name="officeonenoteandroidstickynotesnoteviewed"></a>Office.OneNote.Android.StickyNotes.NoteViewed
+
+Semnal critic utilizat pentru a monitoriza capacitatea utilizatorilor de Note adezive de a vizualiza note în aplicație.  Telemetria se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Dacă utilizatorii nu-și pot vizualiza notele, acest lucru va declanșa un incident cu severitate ridicată.
+
+Se colectează următoarele câmpuri:
+
+- **HasImages** - o semnalizare care indică dacă nota vizualizată conține imagini stocate.
+
+- **IsExportable** - o semnalizare care indică dacă acest eveniment a fost rezultatul unei acțiuni a utilizatorului sau nu. Ar trebui setată la True, deoarece NoteViewed este o acțiune declanșată de utilizator.
+
+- **NoteLocalId** - Identificator unic distinctiv atribuit unei note în momentul în care un utilizator creează nota în cadrul aplicației.
+
+- **StickyNotes-SDKVersion** - număr de versiune care indică versiunea de Note Adezive folosită de utilizator. Ne permite să identificăm ce versiuni de produs afișează o problemă, astfel încât să o putem stabili corect ca prioritate.
+
 
 #### <a name="officeonenotecanvasinkinkstrokelogger"></a>Office.OneNote.Canvas.Ink.InkStrokeLogger 
 
@@ -5837,6 +5878,16 @@ Se colectează următoarele câmpuri:
 -  **TimeToLastResultInMs** - indică intervalul de timp necesar pentru OneNote pentru a găsi ultima potrivire.
 
 -  **TimeToMedianResultInMs** - indică mediana intervalului de timp necesar pentru ca OneNote să găsească toate potrivirile.
+
+### <a name="officeonenotesigscriticalerrorencountered"></a>Office.OneNote.SIGS.CriticalErrorEncountered
+
+Acest eveniment capturează un semnal critic utilizat pentru a monitoriza starea de bună funcționare a Serviciului de integrare a semnalului (SIGS), conectându-se de fiecare dată când se întâlnește o eroare critică. Erorile critice pot bloca întregul SIGS, iar acesta ne va ajuta să găsim toate aceste probleme imediat ce sunt întâmpinate de utilizatori. 
+
+Fără acesta, vom fi dependenți de utilizatori pentru a raporta problemele cu care se confruntă. Absența unei astfel de telemetrii ar cauza ca durata de procesare pentru astfel de probleme să fie mult mai lungă.
+
+Se colectează următoarele câmpuri: 
+
+- **ErrorCode** - codul problemei care a fost atins de utilizator.
 
 
 #### <a name="officeonenotestickynotesnotecreated-on-ios-onenotestickynotesnotecreated-on-android"></a>Office.OneNote.StickyNotes.NoteCreated (pe iOS), OneNote.StickyNotes.NoteCreated (pe Android)
@@ -8076,7 +8127,7 @@ Se colectează următoarele câmpuri:
 
 - **RMS.VerifySignatureDuration** - durată timp pentru a verifica semnătura
 
-#### <a name="read_conversation"></a>read_conversation
+#### <a name="readconversation"></a>read.conversation
 
 Este utilizat pentru a monitoriza posibilul impact negativ asupra stării și performanței de redare a unui mesaj de e-mail
 
@@ -8108,7 +8159,7 @@ Se colectează următoarele câmpuri:
  
 - **view_duration** - cât timp a fost vizualizată componenta de către utilizator
 
-#### <a name="save_attempt"></a>save_attempt
+#### <a name="saveattempt"></a>save.attempt
 
 Ne permite să identificăm impactul problemelor cauzate de utilizatori în încercarea de a salva un fișier prin evaluarea numărului de sesiuni care sunt afectate și dacă există caracteristici comune ale sesiunilor respective.
 
@@ -8120,9 +8171,9 @@ Se colectează următoarele câmpuri:
 
 - **token_type** - tipul de simbol utilizat pentru autentificarea contului pentru a salva fișierul, astfel încât să ne ajute să detectăm probleme de autentificare asociate cu salvarea unui fișier
 
-#### <a name="search_subtab_selected"></a>search_subtab_selected
+#### <a name="searchsubtabselected"></a>search.subtab.selected
 
-Acest eveniment ne permite să urmărim elementele fragment de tip (toate, corespondență, contacte și calendar) pe care le folosesc utilizatorii atunci când își realizează căutările, astfel încât să ne asigurăm că mecanismele de filtrare de căutare funcționează corect.
+Acest eveniment colectează punctele originale pentru motivul pentru care a fost selectată o căutare sub_tab. Subfilele se află sub bara de căutare a aplicației principale, pentru a filtra datele. Acest eveniment ne permite să urmărim elementele fragment de tip (toate, corespondență, contacte și calendar) pe care le folosesc utilizatorii atunci când își realizează căutările, astfel încât să ne asigurăm că mecanismele de filtrare de căutare funcționează corect.
 
 Se colectează următoarele câmpuri:
 
@@ -8130,9 +8181,9 @@ Se colectează următoarele câmpuri:
 
 - **selected_reason** - cauza pentru care este selectat un fragment de tip, care ar putea fi una dintre aceste trei valori: tap_on_header, tap_on_see_all, enter_search_mode
 
-- **subtab_type** - fragmentul de tip care a fost selectat, care ar putea fi una dintre aceste patru valori: all, mail, contact, event.
+- **subtab_type** - fragmentul de tip care a fost selectat, care ar putea fi una dintre aceste patru valori: toate, e-mail, contact, eveniment.
 
-#### <a name="send_message"></a>send_message
+#### <a name="sendmessage"></a>send.message
 
 Este utilizat pentru a monitoriza posibilul impact negativ asupra performanței și stării trimiterii de mesaje de e-mail
 
@@ -8190,7 +8241,7 @@ Se colectează următoarele câmpuri:
 
 - **has_hx** - ne spune că acest cont folosește noul nostru serviciu de sincronizare, pentru a ne ajuta să detectăm problemele provocate de serviciul nostru de sincronizare
 
-#### <a name="settings_action"></a>settings_action
+#### <a name="settingsaction"></a>settings.action
 
 Acest eveniment colectează informații de configurare din setări. Datele ne permit să detectăm situații în care există un posibil impact negativ asupra capacității utilizatorului de a configura setările de aplicație, cum ar fi setările de notificare, contul de e-mail principal și configurarea semnăturii de e-mail.
 
@@ -8241,7 +8292,7 @@ Se colectează următoarele câmpuri:
 - **swipe_direction** - pentru a verifica dacă direcțiile de tragere (la stânga sau la dreapta) sunt configurate corect
 
 
-#### <a name="sidebar_action"></a>sidebar_action
+#### <a name="sidebaraction"></a>sidebar.action
 
 Ne permite să detectăm situațiile în care există un posibil impact negativ asupra capacității de a configura setările de aplicație, cum ar fi setările de notificare, contul de e-mail principal și configurarea semnăturii de corespondență.
 
@@ -8350,7 +8401,7 @@ Se colectează următoarele câmpuri:
 
 Stabilește dacă au avut loc anumite evenimente de caracteristici, cum ar fi pornirea sau oprirea, și dacă respectiva caracteristică rulează.
 
-#### <a name="app_startup"></a>app_startup
+#### <a name="appstartup"></a>app.startup
 
 Acest eveniment ne permite să detectăm și să remediem probleme în care Outlook pornește lent sau incomplet, îngreunând utilizarea aplicației de către utilizatori.  Acesta include informații despre caracteristici specifice care au fost activate și despre durata de pornire al părților.
 
@@ -8378,7 +8429,7 @@ Se colectează următoarele câmpuri:
 
 - **total_millis** - timpul total de la începerea încărcării la finalizarea reluării Activității Android
 
-#### <a name="boot_time"></a>boot_time 
+#### <a name="boottime"></a>boot.time 
 
 Acest eveniment ne permite să detectăm când s-au produs erori critice ale aplicațiilor, care ar putea duce la căderea aplicației dvs. sau la probleme serioase, cum ar fi vizualizarea unor rânduri goale în inboxul dvs. Acest eveniment colectează informații care ne permit să clasificăm și să dispunem pe categorii problemele pentru a ne ajuta să stabilim priorități în ceea ce privește impactul problemelor asupra clienților.
 
@@ -8440,7 +8491,7 @@ Se colectează următoarele câmpuri:
 
 - **RMS.StatusCode** - cod de stare al rezultatului operațiunii
 
-#### <a name="first_visible"></a>first_visible
+#### <a name="firstvisible"></a>first.visible
 
 Acest eveniment ne permite să detectăm prima dată când aplicația este lansată în mod intenționat de către utilizator. Acest eveniment este necesar pentru a vă asigura că aplicația funcționează cu succes în compilările OEM (producător de echipamente originale).
 
@@ -8933,6 +8984,21 @@ Se colectează următoarele câmpuri:
 - **TotalTime** - timp total
 
 - **UsesSharedRuntime** - arată dacă aplicația utilizează sau nu sharedRuntime.
+
+#### <a name="officeofficemobileappactivationlaunch"></a>Office.OfficeMobile.AppActivation.Launch
+
+Acest eveniment identifică prima dată și activările ulterioare prin triggere externe care activează aplicația. Activarea aplicației încarcă anumite dependențe responsabile pentru rularea fără probleme a aplicației și acest eveniment va înregistra dacă s-a încărcat cu succes. De asemenea, va înregistra sursa activării și intenția aplicației responsabilă pentru activarea aplicației
+
+Se colectează următoarele câmpuri:
+
+- **ActionName** - maparea valorilor întregi la numele acțiunii/caracteristicii invocate din punctul de activare.
+ 
+- **ActivationType** - maparea valorilor întregi la sursa de activare
+  
+- **IsActionTriggered** - valoarea booleană pentru a stabili dacă acțiunea a fost declanșată după activarea cu succes a aplicației.
+
+- **IsFirstRun** - valoarea booleană pentru a stabili dacă a fost prima rulare a aplicației sau o rulare ulterioară.
+ 
 
 #### <a name="officeofficemobilefrefirstrunsetup"></a>Office.OfficeMobile.FRE.FirstRunSetup
 
@@ -10231,7 +10297,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_Data\_ZoomText –** indică dacă ZoomText rula în timpul sesiunii
 
-#### <a name="office_apple_darkmode"></a>Office_Apple_DarkMode
+#### <a name="officeappledarkmode"></a>Office.Apple.DarkMode
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul ne spune dacă utilizatorul rulează un sistem pe DarkMode și dacă utilizatorul a suprascris setarea sistemului DarkMode în Office.  Utilizăm acest eveniment pentru a asigura accesibilitatea și a acorda prioritate optimizării experienței de utilizator.
 
@@ -10241,7 +10307,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_RequiresAquaSystemAppearanceEnabled** - dacă DarkMode este suprascris în Office.
 
-#### <a name="office_apple_hardwarekeyboardinuse_apple"></a>Office_Apple_HardwareKeyboardInUse_Apple
+#### <a name="officeapplehardwarekeyboardinuseapple"></a>Office.Apple.HardwareKeyboardInUse.Apple
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul ne spune că un utilizator atașează o tastatură la dispozitivul său mobil. Evenimentul ne ajută să îmbunătățim accesibilitatea și să optimizăm experiența noastră de utilizator.
 
@@ -10249,7 +10315,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_CollectionTime** - un marcaj de timp care denotă data colecției evenimentului.
 
-#### <a name="office_apple_mbuinstrument_deviceaccessibilitysettings"></a>Office_Apple_MbuInstrument_DeviceAccessibilitySettings
+#### <a name="officeapplembuinstrumentdeviceaccessibilitysettings"></a>Office.Apple.MbuInstrument.DeviceAccessibilitySettings
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul colectează starea diferitelor opțiuni de accesibilitate disponibile în timpul unei sesiuni. Utilizăm acest eveniment pentru a asigura accesibilitatea și a acorda prioritate optimizării experienței de utilizator.
 
@@ -10372,7 +10438,7 @@ Iată subtipurile de date din această categorie:
 
 Ieșirile neașteptate ale aplicației și starea aplicației atunci când se întâmplă acest lucru.
 
-#### <a name="app_startup_reason"></a>app_startup_reason
+#### <a name="appstartupreason"></a>app.startup.reason
 
 Acest eveniment ne permite să detectăm și să remediem problemele în care Outlook a înregistrat o cădere în timpul pornirii aplicației.  Acest eveniment include informații referitoare la motivul pentru care s-a produs căderea, pentru ca noi să putem să remediem problema rapid.
 
@@ -10399,7 +10465,7 @@ Câmpurile următoare sunt colectate doar pentru Outlook Mobile pentru iOS:
 - **is_watch_supported_and_active** - indică dacă este acceptat un ceas și dacă este activ în timpul sesiunii
 
 
-#### <a name="application_crash"></a>application_crash
+#### <a name="applicationcrash"></a>application.crash
 
 Utilizat pentru monitorizarea căderilor critice ale aplicației și ne ajută să colectăm informații despre motivul pentru care s-a blocat aplicația și cum să o preveniți.
 
@@ -10446,7 +10512,7 @@ Se colectează următoarele câmpuri:
 - **glEsVersion** - cheie de versiune de sisteme încorporate OpenGL
 
 
-#### <a name="crash_event"></a>crash_event
+#### <a name="crashevent"></a>crash.event
 
 Ne permite să detectăm și să remediem situațiile în care s-au produs căderi critice ale aplicației și ne ajută să colectăm informații despre motivul pentru care a căzut aplicația și cum să preveniți căderea.
 
@@ -10454,7 +10520,11 @@ Se colectează următoarele câmpuri:
 
 - **crashTime** - data și ora la care s-a produs căderea pentru a ajuta la investigare
 
+- **crash_time_from_start** – timpul scurs de la pornirea aplicației până la cădere, pentru a ajuta la investigație
+
 - **exceptionName** - numele excepției care a declanșat căderea pentru a ajuta la investigare
+
+- **exception_reason** – motivul excepției care a declanșat căderea pentru a ajuta la investigație
 
 - **hasHx** - ne spune că acest cont folosește noul nostru serviciu de sincronizare, pentru a ne ajuta să detectăm problemele provocate de serviciul nostru de sincronizare
 
@@ -10497,7 +10567,7 @@ Se colectează următoarele câmpuri:
 
 - **Event name** – categoria evenimentului și eticheta acestuia.
 
-#### <a name="office_apple_identitydomainname"></a>Office_Apple_IdentityDomainName
+#### <a name="officeappleidentitydomainname"></a>Office.Apple.IdentityDomainName
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment este utilizat pentru a monitoriza starea de funcționare a sistemului nostru, precum și pentru a investiga cauzele erorilor unor utilizatori de domeniu. Colectăm domeniul utilizat de utilizatorii noștri atunci când aceștia se autentifică.  Utilizăm aceste date pentru a ne ajuta să identificăm și să remediem problemele care să nu pară că au un impact mare la un nivel mai larg, dar acest lucru poate afecta un anumit domeniu de utilizatori.
 
@@ -10509,7 +10579,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_IdentityProviderEnum** - codul furnizorului de identitate de autentificare. (Un număr)
 
-#### <a name="office_apple_systemhealthappexitmacandios"></a>Office_Apple_SystemHealthAppExitMacAndiOS
+#### <a name="officeapplesystemhealthappexitmacandios"></a>Office.Apple.SystemHealthAppExitMacAndiOS
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a monitoriza starea de funcționare a aplicațiilor noastre Office, precum și pentru a investiga cauzele erorilor. Colectăm date la fiecare ieșire din aplicație pentru a determina dacă o aplicație a ieșit cu corect.
 
@@ -10926,7 +10996,7 @@ Se colectează următoarele câmpuri:
 - Fără
 
 
-#### <a name="telemetry_error"></a>telemetry_error
+#### <a name="telemetryerror"></a>telemetry.error
 
 Acest eveniment ne permite să diagnosticăm și să remediem problemele care împiedică generarea sau trimiterea datelor de diagnostic necesare. Aceste evenimente ne permit să înțelegem dacă lipsesc date critice necesare pentru a identifica probleme de securitate sau probleme majore referitoare la modul în care funcționează aplicația.
 
@@ -10937,7 +11007,7 @@ Se colectează următoarele câmpuri:
 - **type** - ne spune tipul de eroare de temporizator pentru a ne ajuta să detectăm când întâmpină aplicația noastră probleme privind trimiterea de date de telemetrie de diagnosticare
 
 
-#### <a name="watchdog_anr"></a>watchdog_anr
+#### <a name="watchdoganr"></a>watchdog.anr
 
 Este necesar pentru monitorizarea erorilor de performanță ale aplicațiilor pentru a împiedica cazurile în care aplicația nu mai răspunde, iar ecranul se blochează în aplicație (denumită ANR - aplicația nu răspunde).
 
@@ -10962,7 +11032,7 @@ Se colectează următoarele câmpuri:
 
 Timpii de răspuns slabi sau performanțele scăzute pentru scenarii precum pornirea aplicației sau deschiderea unui fișier.
 
-#### <a name="android_frame_metrics"></a>android_frame_metrics
+#### <a name="androidframemetrics"></a>android.frame.metrics
 
 Ne permite să detectăm și să remediem situațiile în care componentele aplicațiilor noastre Android cauzează probleme de performanță, de exemplu, dacă inboxul dvs. defilează fără probleme.
 
@@ -10988,7 +11058,7 @@ Se colectează următoarele câmpuri:
 
 - **unknown_delay** - întârziere cauzată de surse necunoscute, altele decât duratele urmărite în mod explicit
 
-#### <a name="cal_component"></a>cal_component
+#### <a name="calcomponent"></a>cal.component
 
 Acest eveniment ne permite să detectăm și să remediem problemele cu impact de performanță perceptibil asupra componentelor UI de calendar, care ar putea cauza probleme de defilare la nivelul calendarului.
 
@@ -11008,7 +11078,7 @@ Se colectează următoarele câmpuri:
 
 - **view_duration** - ne spune cât timp a fost necesar pentru a reda diferitele componente de calendar UI pentru a ne ajuta să detectăm probleme de performanță care influențează experiența dvs. de calendar
 
-#### <a name="contact_action"></a>contact_action
+#### <a name="contactaction"></a>contact.action
 
 Acest eveniment este declanșat de acțiuni diferite pentru persoanele de contact, vizualizarea, actualizarea și ștergerea persoanelor de contact, precum și vizualizarea listei de persoane de contact. Acest lucru este utilizat pentru a determina dacă există regresii de performanță care au legătură cu persoanele de contact.
 
@@ -11026,7 +11096,7 @@ Se colectează următoarele câmpuri:
  
 - **total_filtered_contacts** - numărul persoanelor de contact cu filtre aplicate
 
-#### <a name="conversation_load_time"></a>conversation_load_time
+#### <a name="conversationloadtime"></a>conversation.load.time
 
 Acest eveniment ne permite să detectăm și să remediem problemele în care există un impact de performanță perceptibil asupra încărcării conversațiilor de e-mail pentru a vă asigura că e-mailurile se încarcă așa cum vă așteptați.
 
@@ -11034,7 +11104,7 @@ Se colectează următoarele câmpuri:
 
 - **time** - ne spune intervalul de timp necesar pentru încărcarea conversației de e-mail.
 
-#### <a name="core_data_migration"></a>core_data_migration
+#### <a name="coredatamigration"></a>core.data.migration
 
 Ne permite să detectăm și să remediem situațiile în care s-a produs o eroare la actualizarea datelor de e-mail de pe dispozitivul dvs. la o versiune mai nouă.
 
@@ -11048,7 +11118,7 @@ Se colectează următoarele câmpuri:
 
 - **migration_duration_seconds** - urmărește durata de migrare rotunjită la unul dintre aceste segmente de timp: 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180 (180 și după aceea ar trebui să fie doar 180)
 
-#### <a name="core_data_performance"></a>core_data_performance
+#### <a name="coredataperformance"></a>core.data.performance
 
 Ne permite să detectăm și să remediem situațiile în care datele de e-mail pe care le stocăm pe dispozitivul dvs. cauzează probleme de performanță.
 
@@ -11064,9 +11134,9 @@ Se colectează următoarele câmpuri:
 
 - **operation** - valoarea brută a operațiunii, indiferent că este vorba despre salvare, preluare sau „coadă citire scriere blocată”
 
-#### <a name="inbox_component"></a>inbox_component
+#### <a name="inboxcomponent"></a>inbox.component
 
-Acest eveniment ne permite să detectăm și să remediem problemele în care există un impact de performanță perceptibil asupra componentelor UI din Inbox, care ar putea face ca e-mailurile, avatarul, starea citit/necitit să nu se încarce sau să nu se afișeze corect.
+Acest eveniment colectează două tipuri de date: starea abonamentului Microsoft 365 și dacă utilizatorul vede anunțuri.  Acest eveniment ne ajută să detectăm și să remediem problemele în care există un impact de performanță perceptibil asupra componentelor UI ale utilizatorului din inbox care ar putea face ca e-mailurile, avatarul, starea citit/necitit să nu se încarce sau să nu se afișeze corect.
 
 Se colectează următoarele câmpuri: 
 
@@ -11082,7 +11152,9 @@ Se colectează următoarele câmpuri:
 
 - **ad_shown** - dacă a fost afișată o reclamă (dacă sunt activate reclamele)
 
-- **age** - vârsta persoanei (utilizată pentru a confirma conformitatea cu limitările de vârstă pentru reclame)
+- **ad_shown_for_premium** - afișarea în mod neașteptat a anunțului utilizatorilor premium 
+
+- **age** - vârsta persoanei (utilizată pentru a confirma conformitatea cu limitările de vârstă a anunțurilor) *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
 - **app_instance** - Outlook are 2 puncte de intrare pentru Duo, unul este pentru calendar și altul este pentru Mail, iar ambele pot fi lansate alăturat într-un mediu cu mai multe instanțe. Acest lucru ne va permite să știm ce instanță face acest apel de raportare, Mail sau Calendar
 
@@ -11102,6 +11174,8 @@ Se colectează următoarele câmpuri:
 
 - **orientation** - orientarea ecranului la ora evenimentului (portret sau peisaj)
 
+- **provider** – furnizorul (Xandr sau Facebook) anunțului curent afișat
+
 - **sub_error_type** - tip de eroare detaliat
 
 - **taskId** - TaskId ne va oferi identificatorul activității al instanței curente. Acest lucru va fi necesar în medii cu mai multe instanțe, dacă utilizatorul dorește să lanseze aceeași instanță (Calendar, Calendar sau Mail, Mail) alăturat
@@ -11110,7 +11184,7 @@ Se colectează următoarele câmpuri:
 
 - **view_duration** - cât timp a fost vizualizată componenta de către utilizator
 
-#### <a name="initial_page_landing"></a>Initial_page_landing 
+#### <a name="initialpagelanding"></a>Initial.page.landing 
  
 Acest eveniment ajută urmărirea tipului de experiență pe care o văd utilizatorii atunci când aterizează în pagina noastră de aplicații.  Aceste date se utilizează pentru a determina traficul de utilizatori canalizat în fiecare experiență din aplicația noastră și, de asemenea, ne ajută să sintetizăm cu ușurință rezultatele experimentale.
  
@@ -11274,7 +11348,7 @@ Se colectează următoarele câmpuri:
 
 - **UserInfo.UserObjectId** - ID-ul obiectului utilizator
 
-#### <a name="json_parse_error"></a>json_parse_error 
+#### <a name="jsonparseerror"></a>json.parse.error 
  
 Acest eveniment indică faptul că a fost lansată o eroare de către parserul json.  Vom putea depana șirul de regiștrii citiți care a fost trimis la parserul json, pentru a permite o experiență netedă pentru utilizatorii noștri.
  
@@ -11282,7 +11356,7 @@ Se colectează următoarele câmpuri:
 
 - **Error** - acest lucru constă în mesajul de eroare pe care îl returnează obiectul de eroare.
 
-#### <a name="mail_filter_component"></a>mail_filter_component
+#### <a name="mailfiltercomponent"></a>mail.filter.component
 
 Acest eveniment ne permite să detectăm și să remediem problemele în care există un impact de performanță perceptibil asupra experienței de filtrare a e-mailului, care ar putea face ca filtrele dvs. să nu se încarce sau să nu se afișeze corect.
 
@@ -11391,7 +11465,7 @@ Se colectează următoarele câmpuri:
 - **UserDialogInterruptionDuringBoot**- Boolean pentru orice casetă de dialog de blocare afișată în timpul încărcării
 
 
-#### <a name="office_apple_apple_appboot_mac"></a>Office_Apple_Apple_AppBoot_Mac
+#### <a name="officeappleappleappbootmac"></a>Office.Apple.Apple.AppBoot.Mac
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a colecta timpul necesar pentru a încărca aplicația, precum și câteva detalii despre tipul de încărcare efectuat. Acest eveniment ne ajută să monitorizăm performanța și să furnizăm îmbunătățiri ale acesteia.
 
@@ -11421,7 +11495,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_SentToBackground** - dacă aplicația a fost trimisă în fundal în timpul încărcării.
 
-#### <a name="office_apple_diskruleresultserializererroronstreamop"></a>Office_Apple_DiskRuleResultSerializerErrorOnStreamOp
+#### <a name="officeapplediskruleresultserializererroronstreamop"></a>Office.Apple.DiskRuleResultSerializerErrorOnStreamOp
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a monitoriza starea infrastructurilor noastre de telemetrie. Acest eveniment indică faptul că s-a produs o eroare.
 
@@ -11433,7 +11507,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_IsWriteOp** - dacă suntem pe punctul de a executa o operațiune de scriere
 
-#### <a name="office_apple_macbootresourceusage"></a>Office_Apple_MacBootResourceUsage
+#### <a name="officeapplemacbootresourceusage"></a>Office.Apple.MacBootResourceUsage
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a colecta mai mulți indicatori din jurul resurselor consumate în timpul încărcării de aplicații Office. Acest eveniment ne ajută să monitorizăm performanța și să furnizăm îmbunătățiri ale acesteia.
 
@@ -11477,7 +11551,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_VoluntaryContextSwitchesNvcsw** - numărul de comutatoare de context involuntar
 
-#### <a name="office_apple_mau_validation"></a>Office_Apple_MAU_Validation
+#### <a name="officeapplemauvalidation"></a>Office.Apple.MAU.Validation
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a monitoriza starea componentei de actualizare automată Microsoft, care este utilizată pentru a distribui și a instala actualizările aplicațiilor. Datele colectate sunt utilizate pentru detectarea erorilor și pentru investigarea cauzelor acestora.
 
@@ -11487,7 +11561,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_Message** - colectăm un șir care conține o descriere a erorii
 
-#### <a name="office_apple_mbuinstrument_hang_detection_spin_control"></a>Office_Apple_MbuInstrument_Hang_Detection_Spin_Control
+#### <a name="officeapplembuinstrumenthangdetectionspincontrol"></a>Office.Apple.MbuInstrument.Hang.Detection.Spin.Control
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este înregistrat de fiecare dată când o aplicație pare că nu răspunde. Acest eveniment ne ajută să monitorizăm performanța și să furnizăm îmbunătățiri ale acesteia.
 
@@ -11495,7 +11569,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_CountSpinControlStart** - un marcator decât indică faptul că aplicația pare să nu răspundă (sau este lentă în a răspunde)
 
-#### <a name="office_apple_mbuinstrument_vmondocumentclose"></a>Office_Apple_MbuInstrument_VMOnDocumentClose
+#### <a name="officeapplembuinstrumentvmondocumentclose"></a>Office.Apple.MbuInstrument.VMOnDocumentClose
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a colecta un instantaneu al stării de memorie în timpul închiderii documentului. Acest eveniment ne ajută să monitorizăm performanța și să furnizăm îmbunătățiri ale acesteia.
 
@@ -11507,7 +11581,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_VirtualMemory** - valoarea de memorie virtuală observată
 
-#### <a name="office_apple_mbuinstrument_vmonshutdown"></a>Office_Apple_MbuInstrument_VMOnShutdown
+#### <a name="officeapplembuinstrumentvmonshutdown"></a>Office.Apple.MbuInstrument.VMOnShutdown
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a colecta un instantaneu al stării de memorie în timpul închiderii aplicației. Acest eveniment ne ajută să monitorizăm performanța și să furnizăm îmbunătățiri ale acesteia.
 
@@ -11519,7 +11593,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_VirtualMemory** - valoarea de memorie virtuală observată
 
-#### <a name="office_apple_mbuinstrument_vmonstart"></a>Office_Apple_MbuInstrument_VMOnStart
+#### <a name="officeapplembuinstrumentvmonstart"></a>Office.Apple.MbuInstrument.VMOnStart
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a colecta un instantaneu al stării de memorie în timpul pornirii aplicației. Acest eveniment ne ajută să monitorizăm performanța și să furnizăm îmbunătățiri ale acesteia.
 
@@ -11531,7 +11605,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_VirtualMemory** - valoarea de memorie virtuală observată
 
-#### <a name="office_apple_msoappdelegate_bootperf"></a>Office_Apple_MsoAppDelegate_BootPerf
+#### <a name="officeapplemsoappdelegatebootperf"></a>Office.Apple.MsoAppDelegate.BootPerf
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a colecta timp și memorie consumate în timpul încărcării de aplicații Office, precum și câteva detalii despre tipul de încărcare efectuat. Acest eveniment ne ajută să monitorizăm performanța și să furnizăm îmbunătățiri ale acesteia.
 
@@ -11547,7 +11621,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_VirtualMemory** - un instantaneu al memoriei rezidente disponibile în timpul încărcării
 
-#### <a name="office_apple_ungracefulappexithangsinprevioussession"></a>Office_Apple_UngracefulAppExitHangsInPreviousSession
+#### <a name="officeappleungracefulappexithangsinprevioussession"></a>Office.Apple.UngracefulAppExitHangsInPreviousSession
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a monitoriza starea de funcționare a aplicațiilor noastre Office, precum și pentru a investiga cauzele erorilor. Colectăm de câte ori a apărut o aplicație care nu răspunde înainte de a atinge o ieșire incorectă de aplicație.
 
@@ -11561,7 +11635,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_SessionVersion** - versiunea majoră a aplicației în care a fost observată o ieșire incorectă.
 
-#### <a name="office_apple_whatsnewerrorandwarning"></a>Office_Apple_WhatsNewErrorAndWarning
+#### <a name="officeapplewhatsnewerrorandwarning"></a>Office.Apple.WhatsNewErrorAndWarning
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a monitoriza starea caracteristicii Noutăți. Acest eveniment denotă faptul că s-a produs o eroare/avertisment în timp ce analizați conținutul Noutăți, indicând probleme potențiale de creare de conținut.
 
@@ -11712,29 +11786,35 @@ Colectat atunci când o aplicație Office este inițializată. Include dacă ini
 
 Se colectează următoarele câmpuri:
 
-  - **ActivationKind** - dacă aplicația a fost pornită prin lansare din meniul Start, prin deschiderea unui fișier sau prin automatizare OLE.
+- **ActivationKind** - dacă aplicația a fost pornită prin lansare din meniul Start, prin deschiderea unui fișier sau prin automatizare OLE.
   
-  - **BootToStart** - dacă utilizatorul a ales să afișeze ecranul de start când începe această aplicație.
+- **BootToStart** - dacă utilizatorul a ales să afișeze ecranul de start când începe această aplicație.
 
-  - **ColdBoot** - dacă este prima dată când aplicația Office rulează după ce un sistem repornește sau un cod binar de aplicație trebuia să fie încărcat de pe disc.
+- **ColdBoot** - dacă este prima dată când aplicația Office rulează după ce un sistem repornește sau un cod binar de aplicație trebuia să fie încărcat de pe disc.
 
-  - **DeviceModel** - Modelul de dispozitiv.
+- **DeviceModel** - Modelul de dispozitiv.
 
-  - **DocLocation** - când se deschide un document arată ce serviciu a furnizat documentul (OneDrive, server de fișiere, SharePoint etc.)
+- **DocLocation** - când se deschide un document arată ce serviciu a furnizat documentul (OneDrive, server de fișiere, SharePoint etc.)
 
-  - **DurationUntilMso20Initialization** - durata în microsecunde între momentul când procesul Office a fost inițializat și mso20win32client.dll a fost încărcat.
+- **DurationUntilMso20Initialization** - durata în microsecunde între momentul când procesul Office a fost inițializat și mso20win32client.dll a fost încărcat.
 
-  - **FirstBoot** – dacă aceasta a fost prima inițializare a aplicației.
+- **Încorporarea** – dacă aplicația a fost deschisă pentru încorporarea OLE.
 
-  - **InitializationDuration** – durata necesară în microsecunde pentru a inițializa prima dată procesul Office.
+- **FirstBoot** – dacă aceasta a fost prima inițializare a aplicației.
 
-  - **InterruptionMessageId** – dacă inițializarea a fost întreruptă de o casetă de dialog care solicită introducerea utilizatorului, ID-ul casetei de dialog.
+- **InitializationDuration** – durata necesară în microsecunde pentru a inițializa prima dată procesul Office.
 
-  - **TotalWorkingSetMB** – volumul de memorie în megabyți din setul de lucru al procesului.
+- **InterruptionMessageId** – dacă inițializarea a fost întreruptă de o casetă de dialog care solicită introducerea utilizatorului, ID-ul casetei de dialog.
 
-  - **VirtualSetMB** – volumul de memorie în megabyți din setul virtual al procesului. (Numai MacOS/iOS)
+- **LegacyDuration** - durata de timp pentru execuția activității, măsurată utilizând puncte de început și de sfârșit, diferite de Activity.Duration.
 
-  - **WorkingSetPeakMB** – cel mai mare volum de memorie în megabyți care a fost vreodată în setul de lucru al procesului până acum.
+- **OpenAsNew** – dacă aplicația a fost pornită prin deschiderea unui document ca șablonul pentru unul nou. 
+
+- **TotalWorkingSetMB** – volumul de memorie în megabyți din setul de lucru al procesului.
+
+- **VirtualSetMB** – volumul de memorie în megabyți din setul virtual al procesului. (Numai MacOS/iOS)
+
+- **WorkingSetPeakMB** – cel mai mare volum de memorie în megabyți care a fost vreodată în setul de lucru al procesului până acum.
 
 
 #### <a name="officepowerpointpptandroidrehearseview"></a>Office.PowerPoint.PPT.Android.RehearseView
@@ -11785,12 +11865,25 @@ Eveniment declanșat când se încarcă pagina rezumativă. Acest eveniment ne a
 
 Se colectează următoarele câmpuri:
 
-- **PageURL:String** - Aceasta este adresa URL a paginii pe care o putem utiliza pentru a identifica dacă sesiunea a reușit sau dacă s-a produs o eroare.
+- **PayloadCreationTime** – timpul necesar în milisecunde pentru a crea sarcina. 
 
-- **IDSesiune:String** - Acesta este ID-ul de sesiune a discursului oficial. Îl putem utiliza pentru a depana jurnalele de servicii.
+- **PostUrlCallTime** – timpul necesar în milisecunde pentru a trimite apelul URL de publicare. 
 
-- **SummaryPageLoadTime:int** - timpul (în ms) luat pentru a încărca pagina rezumativă. Printre acestea se numără timpul de creare a sarcinilor 
+- **RehearseSessionid** - acesta este ID-ul sesiunii de discurs oficial. Îl putem utiliza pentru a depana jurnalele de servicii.
 
+- **RequestPayloadSize** – aceasta este dimensiunea sarcinii de solicitare. 
+
+- **ResourcesLoadTime** – timpul necesar în milisecunde pentru a încărca resursele (js, css). 
+
+- **SummaryPageErrorReceived** – aceasta este o valoare booleană care indică dacă a fost primită pagina rezumativă sau dacă a apărut o problemă.
+
+- **SummaryPageHtmlLoadTime** – timpul necesar în milisecunde pentru a încărca summarypageHtml. 
+
+- **SummaryPageLoadStartTime** – timpul necesar în milisecunde pentru a primi primul răspuns de la server. 
+
+- **SummaryPageLoadTime** - timpul (în ms) necesar pentru a încărca pagina rezumativă. Printre acestea se numără timpul de creare a sarcinilor 
+
+- **ThumbnailsCount** – acesta este numărul total de imagini reduse care vor face parte din pagina rezumativă. 
 
 #### <a name="officepowerpointpptandroidrehearseviewstartsession"></a>Office.PowerPoint.PPT.Android.RehearseView.StartSession
 
@@ -11806,6 +11899,10 @@ Eveniment declanșat atunci când sesiunea de vorbire este oprită pentru Îndru
 
 Se colectează următoarele câmpuri:
 
+- **ActualRehearseBootTimeInMs** – timpul real necesar pentru crearea conexiunilor.
+
+- **AdaptationTextSize** – dimensiunea textului trimis serviciului.
+
 - **AuthDurationInMs** - acesta este timpul necesar pentru autentificare în milisecunde (reîmprospătați simbolul de autentificare).
 
 - **AuthError** - acesta descrie eroarea de autentificare care a avut loc (dacă există).
@@ -11816,15 +11913,23 @@ Se colectează următoarele câmpuri:
 
 - **FirstAudioDelayInMs** - acesta este timpul necesar în milisecunde pentru primirea primelor date audio.
 
+- **FRetriedOnOpenConnection** – aceasta este o valoare booleeană, care indică dacă reîncercați să aibă loc pentru OpenConnection sau nu.
+
 - **InitMediaCaptureLayerDurationInMs** – acesta este timpul necesar în milisecunde pentru a inițializa stratul de captură media/audio.
 
 - **LocallyDroppedMessageCount** - acesta este numărul total de mesaje abandonate local.
+
+- **NumReconnectAttemptsDuringSession** – acesta indică numărul de ori când s-a efectuat o încercare de a se reconecta la servicii de vorbire.
+
+- **NumTriesDuringEachReconnectAttempt** – aceasta este o matrice care indică numărul de încercări efectuate în timpul încercării de reconectare.
 
 - **OpenFrontDoorConnectionDurationInMs** - acesta este timpul necesar în milisecunde pentru a deschide conexiunea la serviciul FrontDoor.
 
 - **SendAdaptationTextDurationInMs** - acesta este timpul necesar în milisecunde pentru a trimite textul de adaptare la serviciu.
 
 - **ServiceDroppedMessageCount** - acesta este numărul total de mesaje abandonate de serviciu.
+
+- **SessionDurationInMs** – aceasta este durata de timp a întregii sesiuni, de la momentul în care utilizatorul face clic pe pornire, până la momentul în care utilizatorul face clic pe oprire.
 
 - **SessionId** - acesta este ID-ul de sesiune de discurs oficial. Îl putem utiliza pentru a depana jurnalele de servicii.
 
@@ -11833,6 +11938,8 @@ Se colectează următoarele câmpuri:
 - **SpeechHResultsWithTimestamps** - acesta este un șir de coduri de eroare primite împreună cu mărci de timp, care vă pot ajuta să depanați.
 
 - **StartSpeechCaptureDurationInMs** - acesta este timpul necesar în milisecunde pentru a începe capturarea vorbirii.
+
+- **StartSpeechServiceDurationInMs** – aceasta este o matrice de timp necesar pentru a porni sesiunea de vorbire de fiecare dată când există o reconectare, inclusiv durata pornirii primei sesiuni de vorbire. 
 
 - **TotalMessageCount** - acesta este numărul total de mesaje audio trimise la serviciu.
 
@@ -12017,7 +12124,7 @@ Se colectează următoarele câmpuri:
 
 - **ServerType** - returnează tipul de server care oferă serviciul
 
-#### <a name="perf_event"></a>perf_event
+#### <a name="perfevent"></a>perf.event
 
 Este utilizat pentru a monitoriza posibilul impact negativ asupra performanței de încărcare a diferitelor părți ale aplicației, de ex. pentru a vă asigura că, atunci când deschideți pentru prima dată aplicația, inboxul se încarcă rapid.
 
@@ -12033,15 +12140,23 @@ Se colectează următoarele câmpuri:
 
 - **total_time_elapsed** - ne spune cât timp a durat evenimentul de performanță pentru a ne ajuta să înțelegem gravitatea problemei de performanță
 
-#### <a name="performance_record"></a>performance_record
+#### <a name="performancerecord"></a>performance.record
 
-Vă permite să detectați și să remediați situațiile în care utilizarea memoriei de aplicație și utilizarea CPU devin extrem de înalte, ceea ce ar putea determina încetinirea aparatului
+Acest eveniment colectează măsurătorile de performanță ale aplicației. Acesta ne permite să detectăm și să remediem situații în care utilizarea memoriei de aplicație și utilizarea CPU devin extrem de ridicate sau au alte probleme de performanță care pot determina încetinirea dispozitivului.
 
 Se colectează următoarele câmpuri: 
+
+- **app_exit_metric** - ne spune măsurătorile despre contorizări de diverse tipuri de performanță pentru ieșirile din aplicații în prim-plan și din cele în fundal, pentru a ne ajuta să înțelegem ieșirile din aplicație în mod neașteptat cu motive de performanță negativă.
+
+- **average_suspended_memory** - ne spune volumul mediu de memorie utilizată de către aplicație atunci când este suspendată, pentru a avea un termen de comparație și pentru a ne ajuta să înțelegem impactul de performanță negativ.
 
 - **category** - ne spune dacă aplicația se află în prim plan sau în fundal în acel moment. Posibilele valori includ prim plan și fundal.
 
 - **cpu_usage** - ne spune cât CPU a fost utilizat de aplicație astfel încât să avem un termen de comparație, pentru a ne ajuta să înțelegem impactul de performanță negativ
+
+- **cumulative_CPU_time** - ne spune volumul total de CPU utilizat de către aplicație cu măsurarea duratei de timp, pentru a avea un termen de comparație și pentru a ne ajuta să înțelegem impactul de performanță negativ.
+
+- **cumulative_GPU_time** - ne spune volumul total de GPU utilizat de către aplicație pentru a avea un termen de comparație și pentru a ne ajuta să înțelegem impactul negativ al duratei de viață a bateriei.
 
 - **is_watch_app_installed** - ne spune dacă utilizatorul utilizează în prezent un Apple Watch și dacă este instalat, pentru a ne ajuta să înțelegem impactul negativ asupra performanței cauzat de Watch
 
@@ -12052,6 +12167,10 @@ Se colectează următoarele câmpuri:
 - **memoAry_used_percentage** - ne spune ce procent din memorie a fost utilizat de aplicație, pentru a avea un termen de comparație și pentru a ne ajuta să înțelegem impactul negativ asupra performanței
 
 - **memory_used** - ne spune câtă memorie a fost utilizată de aplicație pentru a avea un termen de comparație și pentru a ne ajuta să înțelegem impactul de performanță negativ
+
+- **peak_memory_usage** - ne spune cel mai mare volum de memorie utilizată de către aplicație pentru a avea un termen de comparație și pentru a ne ajuta să înțelegem impactul de performanță negativ.
+
+- **scroll_hitch_time_ratio** - ne spune raportul timpului petrecut conectându-vă în timp ce defilați pe interfața utilizatorului, pentru a ne ajuta să înțelegem impactul negativ asupra performanței interfeței utilizatorului.
 
 
 ### <a name="application-activity-error-subtype"></a>*Subtipul de eroare de activitate a aplicației*
@@ -12080,7 +12199,7 @@ Se colectează următoarele câmpuri:
 
 - **type** - tipul de eroare pentru afirmație care a apărut, de ex. null_folder_name, compose_selected_null_account, pentru a ne ajuta să detectăm probleme legate de o anumită parte a codului
 
-#### <a name="edit_contact_error"></a>edit_contact_error
+#### <a name="editcontacterror"></a>edit.contact.error
 
 Ne permite să detectăm și să remediem situațiile în care s-au produs erori atunci când ați încercat să vizualizați sau să editați persoanele de contact prin intermediul aplicației.
 
@@ -12092,7 +12211,7 @@ Se colectează următoarele câmpuri:
 
 - **version** - versiunea serviciului de cărți de vizită pe care îl utilizăm pentru a ne ajuta să diagnosticăm problema
 
-#### <a name="error_report"></a>error_report
+#### <a name="errorreport"></a>error.report
 
 Acest eveniment ne permite să detectăm unde s-au produs erorile critice ale aplicației astfel încât să putem preveni problemele care ar putea determina căderea aplicației sau care ar putea să vă împiedice să citiți e-mailurile. 
 
@@ -12584,7 +12703,7 @@ Se colectează următoarele câmpuri:
 
 - **ExceptionErrorMessage**- mesaj de eroare detaliat
 
-#### <a name="office_android_earlytelemetry_expansionfileserrors"></a>Office_Android_EarlyTelemetry_ExpansionFilesErrors
+#### <a name="officeandroidearlytelemetryexpansionfileserrors"></a>Office.Android.EarlyTelemetry.ExpansionFilesErrors
 
 Setul de extensii APK pentru aplicația mobilă Office sunt fișierele suplimentare de resurse pe care dezvoltatorii de aplicații Android le pot publica împreună cu aplicația lor. Pentru ca fișierele noastre de extindere să fie mai fiabile, înregistrăm în jurnal cauza erorilor care au loc în descărcarea fișierelor de extindere sau în timp ce se citesc fișierele de extindere descărcate.
 
@@ -12600,7 +12719,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_MethodName** - text reprezentând numele metodei din codul sursă unde există o eroare.
 
-#### <a name="office_android_earlytelemetry_extractionerror"></a>Office_Android_EarlyTelemetry_ExtractionError
+#### <a name="officeandroidearlytelemetryextractionerror"></a>Office.Android.EarlyTelemetry.ExtractionError
 
 Pentru a reduce dimensiunea aplicațiilor Office Android, aplicăm comprimarea resurselor în pachetul final. În timpul execuției, extragem mai întâi aceste resurse înainte de a le utiliza. Câteodată apar erori neașteptate în timpul efectuării extracțiilor, ceea ce duce la căderea aplicației. 
 
@@ -12631,7 +12750,7 @@ Se colectează următoarele câmpuri:
 - **Data_MethodName** - numele metodei în codul sursă în care s-a produs eroarea.
 
 
-#### <a name="office_android_earlytelemetry_registryerrors"></a>Office_Android_EarlyTelemetry_RegistryErrors
+#### <a name="officeandroidearlytelemetryregistryerrors"></a>Office.Android.EarlyTelemetry.RegistryErrors
 
 Acest eveniment capturează toate erorile cu care se confruntă în timpul accesului la registry Android. Aceste date ale evenimentului ne ajută să înțelegem erorile de utilizator și cum să realizăm o caracteristică de registry mai robustă.
 
@@ -12852,7 +12971,7 @@ Se colectează următoarele câmpuri:
 - **WasIdentitySignedOut**- indică dacă contul a fost deconectat.
 
 
-#### <a name="office_apple_licensing_mac_dractivationfailures"></a>Office_Apple_Licensing_Mac_DRActivationFailures
+#### <a name="officeapplelicensingmacdractivationfailures"></a>Office.Apple.Licensing.Mac.DRActivationFailures
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru capturarea erorilor de activare a fluviului digital (evenimentul înregistrează cheia și produsul utilizat pentru activare, precum și codul de eroare primit).  Acest eveniment este utilizat pentru detectarea și pentru a ajuta la depanarea erorilor activare (probleme Digital River).
 
@@ -12866,7 +12985,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_ProductKeyHash** - o cheie de produs codificată activată
 
-#### <a name="office_apple_licensing_mac_getmachinestatuserrors"></a>Office_Apple_Licensing_Mac_GetMachineStatusErrors
+#### <a name="officeapplelicensingmacgetmachinestatuserrors"></a>Office.Apple.Licensing.Mac.GetMachineStatusErrors
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul colectează codul de eroare returnat în timp ce verifică periodic validitatea unei licențe de abonament. Codul de eroare poate însemna indisponibilitatea serverelor, dar și expirarea licenței, limita contorului de mașină, ID-ul de hardware nevalid etc. Acest eveniment este utilizat pentru a monitoriza starea serviciului de licențiere Office, dar și pentru a investiga problemele legate de managementul abonamentului computerului.
 
@@ -12886,7 +13005,7 @@ Se colectează următoarele câmpuri:
 
 - **Result** - cod de eroare rezultat
 
-#### <a name="office_firstrun_apple_maconiolkfirstrunstarted"></a>Office_FirstRun_Apple_MacONIOLKFirstRunStarted
+#### <a name="officefirstrunapplemaconiolkfirstrunstarted"></a>Office.FirstRun.Apple.MacONIOLKFirstRunStarted
 
 Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul ne anunță că un utilizator a intrat în prima experiență de rulare. Utilizăm acest eveniment pentru a ne da seama dacă prima experiență de rulare (FRE) a fost începută cu succes.
 
@@ -12906,7 +13025,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_TagID** – identificatorul erorii care a apărut
 
-#### <a name="officeoutlookdesktopcalendaracceptcalsharenavigatetosharedfolder_error"></a>Office.Outlook.Desktop.Calendar.AcceptCalShareNavigateToSharedFolder\_Error
+#### <a name="officeoutlookdesktopcalendaracceptcalsharenavigatetosharedfoldererror"></a>Office.Outlook.Desktop.Calendar.AcceptCalShareNavigateToSharedFolder.Error
 
 Colectează informații atunci când apare o eroare în timp ce se navighează la calendarul partajat. Aceste date se utilizează pentru a monitoriza starea API-ului de partajare a calendarelor și interacțiunea Outlook cu calendarele partajate.
 
@@ -13190,7 +13309,7 @@ Se colectează următoarele câmpuri:
 
 - **RMS.SDKVersion** - versiunea clientului pentru Serviciul de administrare a drepturilor
 
-#### <a name="save_error"></a>save_error
+#### <a name="saveerror"></a>save.error
 
 Ne permite să detectăm și să remediem situațiile în care s-a produs o eroare atunci când ați încercat să salvați un fișier.  Urmărește erorile cauzate de erori la salvarea unui fișier, inclusiv un mesaj de eroare descriptiv, pentru a ne ajuta să rezolvăm problema.
 
@@ -13216,7 +13335,7 @@ Iată subtipurile de date din această categorie:
 
 Starea conexiunii la rețea și setările dispozitivelor, cum ar fi memoria.
 
-#### <a name="application_did_receive_memory_warning"></a>application_did_receive_memory_warning
+#### <a name="applicationdidreceivememorywarning"></a>application.did.receive.memory.warning
 
 Acest eveniment este trimis atunci când Apple ne spune că aplicația nu mai are memorie suficientă. Aceasta ne spune că am introdus o problemă cu gestionarea memoriei pe dispozitivul dvs.
 
@@ -13240,7 +13359,7 @@ Se colectează următoarele câmpuri:
 
 - **running_time** - ne spune intervalul de timp petrecut de aplicație în momentul în care aplicația nu mai avea memorie suficientă.
 
-#### <a name="conversation_memory_leak"></a>conversation_memory_leak
+#### <a name="conversationmemoryleak"></a>conversation.memory.leak
 
 Ne permite să detectăm situațiile în care vizualizarea noastră de conversație prin e-mail ne determină să utilizăm mai mult spațiu de stocare pe dispozitivul dvs. decât era de așteptat.
 
@@ -13248,7 +13367,7 @@ Se colectează următoarele câmpuri:
 
 - Nu s-au colectat câmpuri sau date suplimentare. Doar jurnalele sunt colectate dacă există o irosire de memorie corelată cu un fir de conversație.
 
-#### <a name="core_data_corruption"></a>core_data_corruption
+#### <a name="coredatacorruption"></a>core.data.corruption
 
 Ne permite să detectăm situațiile în care nu vă putem afișa e-mailul sau calendarul, deoarece locul în care stocăm e-mailul pe dispozitivul dvs. s-a deteriorat.
 
@@ -13258,7 +13377,7 @@ Se colectează următoarele câmpuri:
 
 - **sqlError** - cod de eroare numeric listat la https://www.sqlite.org/c3ref/c_abort.html
 
-#### <a name="core_data_corruption_user_reset"></a>core_data_corruption_user_reset
+#### <a name="coredatacorruptionuserreset"></a>core.data.corruption.user.reset
 
 Ne permite să detectăm situațiile în care v-ați șters sau resetat contul din aplicația noastră, situație cauzată de o corupere în datele de e-mail pe care le-am stocat pe dispozitivul dvs.
 
@@ -13266,7 +13385,7 @@ Se colectează următoarele câmpuri:
 
 - **errorSource** - dictează unde s-a produs corupția, fie în timpul salvării, fie în timpul creării
 
-#### <a name="core_data_diagnostics"></a>core_data_diagnostics 
+#### <a name="coredatadiagnostics"></a>core.data.diagnostics 
 
 Ne permite să detectăm și să remediem situațiile în care spațiul nostru de stocare e-mailul utilizează prea mult din spațiul de stocare al dispozitivelor dvs.
 
@@ -13274,7 +13393,7 @@ Se colectează următoarele câmpuri:
 
 - **db_size_megabytes** - urmărește dimensiunea bazei de date nucleu rotunjită la cei mai apropiați 25 de megaocteți și cu un număr maxim de MB de 500
 
-#### <a name="general_properties_log"></a>general_properties_log
+#### <a name="generalpropertieslog"></a>general.properties.log
 
 Acest eveniment colectează informații care ne permit să clasificăm și să dispunem pe categorii problemele din aplicația Outlook care sunt asociate cu setările de accesibilitate și de dispozitive.  Această clasificare este necesară pentru a prioritiza impactul problemelor asupra clienților.
 
@@ -13332,7 +13451,7 @@ Se colectează următoarele câmpuri pentru Android:
 
 - **webview_package_version**: numele de versiune a vizualizării web de pe dispozitiv, pentru a ne ajuta să detectăm probleme de compatibilitate legate de versiunea de vizualizare web a paginii.
 
-#### <a name="low_storage_warning"></a>low_storage_warning
+#### <a name="lowstoragewarning"></a>low.storage.warning
 
 Acest lucru este necesar pentru a monitoriza dacă aplicația noastră ocupă brusc cea mai mare parte a spațiului de stocare al dispozitivului din cauza unei utilizări de memorie de înaltă calitate, indicând atunci când dispozitivul este redus la spațiu de stocare
 
@@ -13450,7 +13569,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeserviceabilitymanagerofficesvcmgrprofile"></a>Office.ServiceabilityManager.OfficeSvcMgrProfile
 
-Acest eveniment se declanșează atunci când Office Manager pornește la parametrii optimi și este esențial pentru furnizarea de detalii exacte legate de starea de implementare și aplicație, iar programul de completare se blochează în entitatea găzduită a clientului, permițându-ne să generăm detalii pentru ca administratorul IT să poată să facă cu încredere actualizări pentru utilajele lor de întreprindere.  
+Acest eveniment se declanșează atunci când Office Serviceability Manager pornește și este esențial pentru furnizarea de detalii exacte legate de starea de implementare și aplicație, iar programul de completare se blochează în entitatea găzduită a clientului, permițându-ne să generăm detalii pentru ca administratorul IT să poată să facă cu încredere actualizări pentru utilajele lor de întreprindere.  
 
 Se colectează următoarele câmpuri:
 
