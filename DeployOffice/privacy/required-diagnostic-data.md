@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre datele de diagnosticare obligatorii în Office și le furnizează o listă de evenimente și câmpuri de date.
 hideEdit: true
-ms.openlocfilehash: f200e22e639f2c89315c2f7fa2e9eab0367f86b1
-ms.sourcegitcommit: 1b12952b55f071b87026b49d372158209ed2e322
+ms.openlocfilehash: 7d9b2918983933ba4601ebce2b3930409001688d
+ms.sourcegitcommit: e2ba452c1e353fc388512d71c14b89d0928369c0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "48368649"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "48491518"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Date de diagnosticare obligatorii pentru Office
 
@@ -356,6 +356,8 @@ Această categorie conține următoarele câmpuri:
   - **Flags** - informații utilizate pentru a modifica modul în care răspunde un anumit eveniment. Utilizat pentru a gestiona modul în care un anumit eveniment este tratat cu scopul de a încărca datele în Microsoft.
 
   - **Id** - identificator unic pentru eveniment. Ne permite să identificăm evenimentele care sunt primite.
+
+  - **Level** - denotă tipul de eveniment.
 
   - **Name** - numele evenimentului. Permite să identificăm evenimentul care a fost trimis de la client.
 
