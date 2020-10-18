@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate pentru Office, cum ar fi experiențele care analizează conținut sau experiențele care descarcă conținut online.
 hideEdit: true
-ms.openlocfilehash: 3e44c9c20bed531f46390c91a41ce559cabc9e72
-ms.sourcegitcommit: 25a0925e7caf8fbb53e6757e8a65126eb2c9da65
+ms.openlocfilehash: ca3139f95f20392efce25bb00572c2973cec82db
+ms.sourcegitcommit: e2ba452c1e353fc388512d71c14b89d0928369c0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "48338194"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "48491590"
 ---
 # <a name="connected-experiences-in-office"></a>Experiențe conectate în Office
 
@@ -40,6 +40,7 @@ Următorul tabel furnizează o listă de experiențe conectate care vă analizea
 |Recomandări de diagramă (Excel pentru web)|[Crearea unei diagrame cu diagrame recomandate](https://support.microsoft.com/office/cd131b77-79c7-4537-a438-8db20cea84c0#ID0EAADAAA=Web)|
 |Programe de completare Blocnotes școlar (OneNote)|[Introducere în aplicația Blocnotes școlar OneNote: prezentare pentru profesori](https://support.microsoft.com/office/28666b8e-b0ae-48fe-b001-1874f5f6db58)|
 | Tipuri de date| [Tipuri de date Excel: Cotații bursiere și geografie](https://support.microsoft.com/office/61a33056-9935-484f-8ac8-f1a89e210877)   |
+|Proiectant (Word pentru web)|[Utilizarea proiectantului pentru a crea mai multe documente îngrijite](https://support.microsoft.com/office/97844bd3-b52d-4c94-9deb-b51db7f36d91    )|
 | Dictare  | [Dictarea documentelor Word](https://support.microsoft.com/office/d4fd296e-8f15-4168-afec-1f95b13a6408) |
 |Editor<sup>1</sup> |[Microsoft Editor verifică gramatica și multe altele în documente, corespondență și pe web](https://support.microsoft.com/office/91ecbe1b-d021-4e9e-a82e-abc4cd7163d7)|
 | Idei     | [Idei în Excel](https://support.microsoft.com/office/3223aab8-f543-4fda-85ed-76bb0295ffc4) |
@@ -62,6 +63,7 @@ Următorul tabel furnizează o listă de experiențe conectate care vă analizea
 | *Căutare inteligentă*\*   | [Obțineți detalii despre ceea ce lucrați cu Căutare inteligentă](https://support.microsoft.com/office/debf2083-5ac0-4739-8667-ae2467bec044) |
 | Răspunsuri sugerate | [Ce sunt răspunsurile sugerate?](https://www.osupportweb.com/a/outlook-mobile/?p=all&s=feature-walkthroughs&f=what-are-suggested-replies)|
 | Atingere pentru Word (Adăugare din fișiere)   | [Găsiți și utilizați conținutul de care aveți nevoie, atunci când aveți nevoie, fără a ieși din Word](https://support.microsoft.com/office/860118fc-1f61-41f6-922f-40084a284658)   |
+|Predicții text (o caracteristică a Editorului)|[Scrieți mai repede cu predicții de text în Word](https://support.microsoft.com/office/7afcb4f3-4aa2-443a-9b08-125a5d692576)|
 |Transcriere |[Transcrierea înregistrărilor](https://support.microsoft.com/office/7fc2efec-245e-45f0-b053-2a97531ecf57)|
 | Transformare la pagina web   | [Transformați un document Word într-o pagină web Sway](https://support.microsoft.com/office/65912b2d-8b81-41e1-ac52-c20a65ce8ecf) |
 | Translator   | [Traduceți text în altă limbă](https://support.microsoft.com/office/287380e4-a56c-48a1-9977-f2dca89ce93f)  |

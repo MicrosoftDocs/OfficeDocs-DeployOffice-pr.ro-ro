@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre servicii esențiale în Office, cum ar fi Clic și Pornire și Licențiere, și asigură o listă de evenimente și câmpuri de date pentru aceste servicii esențiale.
 hideEdit: true
-ms.openlocfilehash: 2449c56af99d40bcc1a4a3f85575984da6af3252
-ms.sourcegitcommit: a8c69c9c02320edec51c3bd7bb8dce28fa737e47
+ms.openlocfilehash: 94f248d64c74cd6575b4039178270f62b3715d15
+ms.sourcegitcommit: e2ba452c1e353fc388512d71c14b89d0928369c0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "48367470"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "48491554"
 ---
 # <a name="essential-services-for-office"></a>Servicii esențiale pentru Office
 
@@ -293,6 +293,12 @@ Se colectează următoarele câmpuri:
 
   - **Duration** - cât a durat autentificarea
 
+  - **Duration_Max** - dacă acest semnal este agregat, durata maximă a oricărui eveniment agregat.
+
+  - **Duration_Min** - dacă acest semnal este agregat, durata minimă a oricărui eveniment agregat.
+
+  - **Duration_Sum** - dacă acest semnal este agregat, suma duratelor tuturor evenimentelor agregate.
+
   - **Endtime** - când s-a terminat evenimentul de autentificare
 
   - **Error** - codul de eroare dacă autentificarea nu a reușit
@@ -407,11 +413,19 @@ Se colectează următoarele câmpuri:
 
   - **Microsoft\_ADAL\_user\_cancel** - adevărat/fals dacă fereastra interfeței cu utilizatorul a fost anulată.
 
+  - **Microsoft_ADAL_was_request_throttled** – adevărat/fals indicând dacă acest eveniment a fost accelerat de ADAL din cauza prea multor solicitări.
+ 
   - **Microsoft\_ADAL\_x\_ms\_request\_id** - ID solicitare suplimentar furnizat în antetul HTTP la serviciu de către ADAL.
 
   - **Platform** - Win32/WinRT/Android/iOS/Mac
 
+  - **Promptreasoncorrelationid** – pentru solicitări, acesta este ID-ul de corelare a unui alt eveniment, care explică de ce utilizatorul poate vedea o solicitare de autentificare.
+
+  - **Resource** – resursa pentru care utilizatorul solicită un simbol, cum ar fi Exchange sau SharePoint.
+
   - **Scenarioid** - GUID. Mai multe evenimente pot aparține unui singur scenariu, de ex., scenariul poate fi adăugarea unui cont nou, dar există mai multe solicitări care apar ca parte a scenariului respectiv. Acest ID permite corelarea.
+
+  - **Scenarioname** – numele scenariului căruia îi aparține acest eveniment de autentificare.
 
   - **Sessionid** - GUID de identificare a sesiunii de pornire
 
