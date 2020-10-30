@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate pentru Office, cum ar fi experiențele care analizează conținut sau experiențele care descarcă conținut online.
 hideEdit: true
-ms.openlocfilehash: ca3139f95f20392efce25bb00572c2973cec82db
-ms.sourcegitcommit: e2ba452c1e353fc388512d71c14b89d0928369c0
+ms.openlocfilehash: 2ffbac14694578fc1f5964cef2c92eea6d6a2172
+ms.sourcegitcommit: 596a0a60394011aafe1119f353ac76f27e1a4d1b
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "48491590"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48794756"
 ---
 # <a name="connected-experiences-in-office"></a>Experiențe conectate în Office
 
@@ -71,7 +71,7 @@ Următorul tabel furnizează o listă de experiențe conectate care vă analizea
 <sup>1</sup> Funcționalitatea de bază a Editorului rămâne disponibilă chiar dacă nu sunteți conectat la internet. Aceeași funcționalitate de bază rămâne, de asemenea, disponibilă dacă vă hotărâți să dezactivați utilizarea experiențelor conectate care vă analizează conținutul. În niciunul dintre cazuri nu sunt trimise date despre utilizarea Editorului către Microsoft.
 
 > [!NOTE]
-> \*Când utilizatorii sunt conectați cu un cont de la locul de muncă sau de la școală, experiențele conectate, listate mai sus în italice, sunt opționale și sunt furnizate în termenii[Contractului de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [a angajamentului de respectare a confidențialității](https://privacy.microsoft.com/) și, potențial, a altor termeni. Pentru mai multe informații, consultați [Prezentare generală a experiențelor conectate opționale în Office](optional-connected-experiences.md). Dacă sunteți administrator, această experiență conectată poate fi gestionată prin controale de confidențialitate pentru experiențele conectate sau setarea de politică *Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office*.
+> \*Când utilizatorii sunt conectați cu un cont de la locul de muncă sau de la școală, experiențele conectate, listate mai sus în italice, sunt opționale și sunt furnizate în termenii[Contractului de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [a angajamentului de respectare a confidențialității](https://privacy.microsoft.com/) și, potențial, a altor termeni. Pentru mai multe informații, consultați [Prezentare generală a experiențelor conectate opționale în Office](optional-connected-experiences.md). Dacă sunteți administrator, această experiență conectată poate fi gestionată prin controale de confidențialitate pentru experiențele conectate sau setarea de politică *Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office* .
 
 ## <a name="connected-experiences-that-download-online-content"></a>Experiențe conectate care descarcă conținut online
 
@@ -103,7 +103,7 @@ Următorul tabel furnizează o listă de experiențe conectate care descarcă co
 | *Bara meteo*\* (Outlook)| [Modificați localitatea pentru prognoza Barei meteo din calendar](https://support.microsoft.com/office/D11B7532-7C58-489E-8103-5CC5D727B06B) |
 
 > [!NOTE]
->\*Când utilizatorii sunt conectați cu un cont de la locul de muncă sau de la școală, experiențele conectate, listate mai sus în italice, sunt opționale și sunt furnizate în termenii[Contractului de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [a angajamentului de respectare a confidențialității](https://privacy.microsoft.com/) și, potențial, a altor termeni. Pentru mai multe informații, consultați [Prezentare generală a experiențelor conectate opționale în Office](optional-connected-experiences.md). Dacă sunteți administrator, această experiență conectată poate fi gestionată prin controale de confidențialitate pentru experiențele conectate sau setarea de politică *Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office*.
+>\*Când utilizatorii sunt conectați cu un cont de la locul de muncă sau de la școală, experiențele conectate, listate mai sus în italice, sunt opționale și sunt furnizate în termenii[Contractului de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [a angajamentului de respectare a confidențialității](https://privacy.microsoft.com/) și, potențial, a altor termeni. Pentru mai multe informații, consultați [Prezentare generală a experiențelor conectate opționale în Office](optional-connected-experiences.md). Dacă sunteți administrator, această experiență conectată poate fi gestionată prin controale de confidențialitate pentru experiențele conectate sau setarea de politică *Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office* .
 
 ## <a name="other-connected-experiences"></a>Alte experiențe conectate
 
@@ -125,7 +125,7 @@ Următorul tabel furnizează o listă a acelor experiențe conectate și furnize
 | Mesaje prioritare (Outlook) |[Mesaje prioritare pentru Outlook](https://support.microsoft.com/office/f445ad7f-02f4-4294-a82e-71d8964e3978)  |
 | Information Rights Management |[Deschideți un fișier cu permisiuni restricționate](https://support.microsoft.com/office/c7a70797-6b1e-493f-acf7-92a39b85e30c)  |
 | Carte de vizită LinkedIn |[LinkedIn în aplicațiile și servicii Microsoft](https://support.microsoft.com/office/dc81cc70-4d64-4755-9f1c-b9536e34d381)  |
-| *Programe de completare Office*\* | [Implementați programe de completare în centrul de administrare](https://docs.microsoft.com/microsoft-365/admin/manage/manage-deployment-of-add-ins) |
+| *Programe de completare Office*\* | [Vizualizarea, gestionarea și instalarea programelor de completare în programele Office](https://support.microsoft.com/office/16278816-1948-4028-91e5-76dca5380f8d) *(pentru utilizatori)* <br/> [Implementarea programelor de completare în centrul de administrare](https://docs.microsoft.com/microsoft-365/admin/manage/manage-deployment-of-add-ins) *(pentru administratori)* |
 | Feedback Office |[Cum pot trimite feedback pentru Microsoft Office?](https://support.microsoft.com/office/2b102d44-b43f-4dd2-9ff4-23cf144cfb11)  |
 | Asistența Office (contactați-ne) |Atunci când alegeți **Ajutor** > **Contactați asistența** în panglică |
 | Organigramă (Visio) |[Crearea unei organigrame în Visio](https://support.microsoft.com/office/abb3dd17-2692-439f-9945-3a015767d96a)|
@@ -146,18 +146,18 @@ Următorul tabel furnizează o listă a acelor experiențe conectate și furnize
 | În timp ce erați plecat |[Primiți notificări atunci când membrii echipei dvs. actualizează fișierul partajat](https://support.microsoft.com/office/9cc94893-02d5-4d96-9b3f-8b9414d5047a)  |
 
 > [!NOTE]
->\*Când utilizatorii sunt conectați cu un cont de la locul de muncă sau de la școală, experiențele conectate, listate mai sus în italice, sunt opționale și sunt furnizate în termenii[Contractului de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [a angajamentului de respectare a confidențialității](https://privacy.microsoft.com/) și, potențial, a altor termeni. Pentru mai multe informații, consultați [Prezentare generală a experiențelor conectate opționale în Office](optional-connected-experiences.md). Dacă sunteți administrator, această experiență conectată poate fi gestionată prin controale de confidențialitate pentru experiențele conectate sau setarea de politică *Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office*.
+>\*Când utilizatorii sunt conectați cu un cont de la locul de muncă sau de la școală, experiențele conectate, listate mai sus în italice, sunt opționale și sunt furnizate în termenii[Contractului de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [a angajamentului de respectare a confidențialității](https://privacy.microsoft.com/) și, potențial, a altor termeni. Pentru mai multe informații, consultați [Prezentare generală a experiențelor conectate opționale în Office](optional-connected-experiences.md). Dacă sunteți administrator, această experiență conectată poate fi gestionată prin controale de confidențialitate pentru experiențele conectate sau setarea de politică *Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office* .
 
 ## <a name="choose-whether-these-connected-experiences-are-available-to-use"></a>Alegeți dacă aceste experiențe conectate sunt disponibile pentru utilizare
 
 Puteți alege dacă anumite tipuri de experiențe conectate, cum ar fi experiențe conectate care descarcă conținut online, sunt disponibile pentru utilizare. Modul în care faceți alegerea depinde de faptul că sunteți sau nu conectat la Office cu un cont Microsoft, cum ar fi o adresă de e-mail personală outlook.com sau de la locul de muncă ori de la școală.
 
-Dacă sunteți conectat cu un cont Microsoft, deschideți o aplicație Office, cum ar fi Word și accesați **Fișier** > **Cont** > **Confidențialitate cont** > **Gestionare setări**. În secțiunea **Experiențe conectate**, puteți alege dacă anumite tipuri de experiențe conectate, cum ar fi experiențele care vă analizează conținutul, sunt disponibile pentru utilizare. Dacă nu accesați **Gestionare setări**, toate experiențele conectate vor fi disponibile pentru dvs.
+Dacă sunteți conectat cu un cont Microsoft, deschideți o aplicație Office, cum ar fi Word și accesați **Fișier** > **Cont** > **Confidențialitate cont** > **Gestionare setări** . În secțiunea **Experiențe conectate** , puteți alege dacă anumite tipuri de experiențe conectate, cum ar fi experiențele care vă analizează conținutul, sunt disponibile pentru utilizare. Dacă nu accesați **Gestionare setări** , toate experiențele conectate vor fi disponibile pentru dvs.
 
-Dacă sunteți conectat cu un cont de la locul de muncă sau de la școală, administratorul din organizația dvs. va decide dacă aceste experiențe conectate sunt disponibile pentru dvs. Nu veți vedea opțiunile pentru aceste experiențe conectate dacă accesați **Fișier** > **Cont** > **Confidențialitate cont** > **Gestionare setări**.
+Dacă sunteți conectat cu un cont de la locul de muncă sau de la școală, administratorul din organizația dvs. va decide dacă aceste experiențe conectate sunt disponibile pentru dvs. Nu veți vedea opțiunile pentru aceste experiențe conectate dacă accesați **Fișier** > **Cont** > **Confidențialitate cont** > **Gestionare setări** .
 
 > [!NOTE]
-> - Dacă utilizați Office pentru Mac, deschideți orice aplicație Office și selectați meniul de aplicații (cum ar fi Word sau Excel) > **Preferințe** > **Confidențialitate**. Aceasta va deschide caseta de dialog Setări de confidențialitate ale contului unde puteți să vizualizați opțiunile de confidențialitate.
+> - Dacă utilizați Office pentru Mac, deschideți orice aplicație Office și selectați meniul de aplicații (cum ar fi Word sau Excel) > **Preferințe** > **Confidențialitate** . Aceasta va deschide caseta de dialog Setări de confidențialitate ale contului unde puteți să vizualizați opțiunile de confidențialitate.
 > - Pentru mai multe informații, consultați [Setări de confidențialitate pentru cont](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b).
 
 Dacă sunteți administrator pentru organizația dvs., puteți utiliza setările de politică pentru a determina dacă aceste experiențe conectate sunt disponibile pentru utilizatorii dvs. Dacă nu utilizați aceste setări de politică, toate experiențele conectate vor fi disponibile pentru utilizatorii dvs. Pentru informații suplimentare despre utilizarea acestor setări de politică, consultați articolele următoare: 

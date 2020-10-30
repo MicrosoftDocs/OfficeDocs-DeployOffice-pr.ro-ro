@@ -13,29 +13,25 @@ ms.custom:
 - Ent_Office_Privacy
 description: Furnizează administratorilor Office informații despre cum să gestioneze setările de confidențialitate pentru Office pe dispozitive Android.
 hideEdit: true
-ms.openlocfilehash: 6086ecd1b2cd55bbf6cb4577879714f1d20a2f93
-ms.sourcegitcommit: 81295dff0f2fa474f0db39fd40560e3a23fff32a
+ms.openlocfilehash: 2c1ecab42f31c85616faca42a5cb01b183a36087
+ms.sourcegitcommit: 596a0a60394011aafe1119f353ac76f27e1a4d1b
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "45092130"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48794453"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-office-on-android-devices"></a>Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office pe dispozitivele Android
 
-Există noi setări de politică pentru Office pe dispozitivele Android care vă permit să controlați setările asociate cu:
+> [!NOTE]
+> Pentru o listă de produse Office care sunt reglementate prin aceste informații de confidențialitate, consultați [Controale de confidențialitate disponibile pentru produsele Office](products-versions-privacy-controls.md).
 
-- ***Date de diagnosticare*** care sunt colectate și trimise la Microsoft despre software-ul client Office utilizat
+Există setări de politică pentru Office pe dispozitivele Android care vă permit să controlați setările asociate cu:
 
-- ***Experiențe conectate*** care utilizează funcționalitatea în cloud pentru a vă furniza caracteristici îmbunătățite de Office dvs. și utilizatorilor dvs.
+- ***Date de diagnosticare** care sunt colectate și trimise la Microsoft despre software-ul client Office utilizat.
+
+- _*_Experiențe conectate_*_ care utilizează funcționalitatea bazată pe cloud pentru a furniza caracteristici Office îmbunătățite pentru dvs. și utilizatorilor dvs.
 
 Pentru mai multe informații despre datele de diagnosticare și experiențele conectate, consultați [Prezentare generală a controalelor de confidențialitate](overview-privacy-controls.md).
-
-Aceste setări de politică se aplică la următoarele aplicații:
-- Versiunea 16.0.12228.20260 și versiunile ulterioare de Word pentru Android, Excel pentru Android și PowerPoint pentru Android.
-- Versiunea 4.1.71 și versiunile ulterioare de Outlook pentru Android.
-- Versiunea 16.0.12228.20004 și versiunile ulterioare de OneNote pentru Android.
-- Versiunea 5.47 și versiunile ulterioare de OneDrive pentru Android.
-- Versiunea 16.0.12430.20254 și versiunile ulterioare ale aplicației Office pentru Android.
 
 ## <a name="policy-settings-available-for-office-on-android-devices"></a>Setări de politică disponibile pentru Office pe dispozitive Android
 
@@ -43,7 +39,7 @@ Următorul tabel enumeră setările de politică disponibile pentru Office pe di
 
 > [!NOTE]
 >- Informațiile suplimentare furnizate se referă la setările de politică pentru Office pe dispozitive care rulează Windows. Dar aceste informații se aplică și la Office pe dispozitive Android, deoarece setările de politică sunt aceleași.
->- Setarea de politică *Permiteți utilizarea de experiențe conectate în Office* disponibilă pentru Office pe dispozitive care rulează Windows nu se aplică la Office pe dispozitive Android. 
+>- Setarea de politică Permiteți utilizarea de experiențe conectate în Office* care este disponibilă pentru Office pe dispozitive care rulează Windows nu se aplică la Office pe dispozitive Android. 
 
 
 |Numele setării de politică  |Informații suplimentare |
