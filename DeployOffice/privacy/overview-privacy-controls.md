@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorii Office primesc o prezentare generală a controalelor de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere (numite anterior Office 365 ProPlus), inclusiv pentru date de diagnosticare și experiențe conectate.
 hideEdit: true
-ms.openlocfilehash: f367550169e75d0f1dbb0726e947ce8797fb1003
-ms.sourcegitcommit: 73158b40bdc2d83bdadedeafe0fd152b449d2a44
+ms.openlocfilehash: f894db695caf8a6dfa56dd6db541d8b8fd4bd564
+ms.sourcegitcommit: 596a0a60394011aafe1119f353ac76f27e1a4d1b
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47440576"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48794771"
 ---
 # <a name="overview-of-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Prezentare generală a controalelor de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere
 
@@ -30,8 +30,8 @@ ms.locfileid: "47440576"
 Microsoft se angajează să vă furnizeze informațiile și controalele de care aveți nevoie pentru a face alegeri privind modul de colectare și de utilizare a datelor dvs. atunci când utilizați Aplicații Microsoft 365 pentru întreprindere (numite anterior Office 365 ProPlus).
 
 Începând cu versiunea 1904 a Aplicațiilor Microsoft 365 pentru întreprindere, vă furnizăm controale de confidențialitate noi, actualizate și îmbunătățite pentru următoarele domenii:
-- ***Date de diagnosticare*** care sunt colectate și trimise la Microsoft privind software-ul client Office utilizat pe computerele care rulează Windows în organizația dvs.
-- ***Experiențe conectate*** care utilizează funcționalitatea în cloud pentru a vă furniza caracteristici îmbunătățite de Office dvs. și utilizatorilor dvs.
+- ***Diagnostic data** _ care sunt colectate și trimise la Microsoft privind software-ul client Office utilizat pe computerele care rulează Windows în organizația dvs.
+- _*_Experiențe conectate_*_ care utilizează funcționalitatea în cloud pentru a vă furniza caracteristici îmbunătățite de Office dvs. și utilizatorilor dvs.
 
 Ca parte a acestor modificări, există elemente de interfață de utilizator (UI) și setări de politică noi și actualizate.
 
@@ -39,11 +39,11 @@ Ca parte a acestor modificări, există elemente de interfață de utilizator (U
 
 Datele de diagnosticare sunt utilizate pentru a menține Office securizat și actualizat, pentru a detecta, a diagnostica și a remedia problemele și, de asemenea, pentru a face îmbunătățiri de produs. Aceste date nu includ numele sau adresa de e-mail a unui utilizator, nici conținutul fișierelor acestuia sau informații despre aplicații care nu au legătură cu Office.
 
-Datele de diagnosticare sunt colectate și trimise la Microsoft privind software-ul client Office utilizat pe computerele care rulează Windows în organizația dvs.
+Aceste date de diagnostic sunt colectate și trimise către Microsoft despre software-ul client Office care rulează pe dispozitivul utilizatorului.
 
 Există trei niveluri de date de diagnosticare pentru software-ul client Aplicații Microsoft 365 pentru întreprindere dintre care puteți să alegeți:
 
-- **Obligatoriu** Datele minime necesare pentru a păstra Office securizat, actualizat și într-o stare de funcționare conform așteptărilor pe dispozitivul pe care este instalat.
+- _ *Obligatoriu* * Datele minime necesare pentru a păstra Office securizat, actualizat și într-o stare de funcționare conform așteptărilor pe dispozitivul pe care este instalat.
 
 - **Opțional** Date suplimentare care ne ajută să îmbunătățim produsele și furnizează mai multe informații care ne permit să detectăm, să diagnosticăm și să remediem problemele.
 
@@ -61,7 +61,7 @@ Aceste date diagnosticare nu includ numele utilizatorilor, adresele lor de e-mai
 
 Pentru a vedea ce date de diagnosticare sunt trimise la Microsoft, puteți utiliza Vizualizatorul de date de diagnosticare, pe care îl puteți descărca și instala din Microsoft Store, gratuit.
 
-Pentru mai multe informații, consultați următoarele:
+Pentru mai multe informații, consultați articolele de mai jos:
 
 - [Date de diagnosticare obligatorii pentru Office](required-diagnostic-data.md)
 - [Date de diagnosticare opționale pentru Office](optional-diagnostic-data.md)
@@ -89,7 +89,7 @@ Dacă alegeți să nu le oferiți utilizatorilor dvs. unele tipuri de experienț
 
 Utilizatorii dvs. nu vor putea să aleagă dacă să activeze aceste experiențe conectate sau să le dezactiveze dacă sunt conectați la Office cu acreditările organizației lor, la care se face uneori referire ca la contul de la locul de muncă sau de la școală.
 
-Pentru mai multe informații, consultați următoarele:
+Pentru mai multe informații, consultați articolele de mai jos:
 
 - [Experiențe conectate în Office](connected-experiences.md)
 - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere](manage-privacy-controls.md)
@@ -107,7 +107,7 @@ Acestea sunt experiențe conectate opționale, care nu sunt acoperite de acordul
 
 Chiar dacă alegeți să puneți aceste experiențe conectate opționale la dispoziția utilizatorilor dvs., utilizatorii dvs. vor avea opțiunea de a dezactiva aceste experiențe conectate ca grup, accesând [caseta de dialog pentru setările de confidențialitate](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b) Utilizatorii dvs. vor avea această opțiune doar dacă sunt conectați la Office cu acreditările organizației lor (la care se face uneori referire ca la contul de la locul de muncă sau de la școală), însă nu și dacă sunt conectați cu o adresă de e-mail personală.
 
-Pentru mai multe informații, consultați următoarele:
+Pentru mai multe informații, consultați articolele de mai jos:
 
 - [Prezentare generală a experiențelor conectate opționale în Office](optional-connected-experiences.md)
 - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere](manage-privacy-controls.md)
@@ -130,6 +130,6 @@ Există, de asemenea, un set de servicii esențiale pentru modul în care funcț
 
 Pentru mai multe informații, consultați [Servicii esențiale pentru Office](essential-services.md).
 
-## <a name="related-topics"></a>Subiecte asociate
+## <a name="related-articles"></a>Articole asociate
 - [Confidențialitatea la Microsoft](https://privacy.microsoft.com/)
 - [Confidențialitatea Windows](https://docs.microsoft.com/windows/privacy/)
