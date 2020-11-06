@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate opționale, inclusiv condițiile de utilizare care se aplică.
 hideEdit: true
-ms.openlocfilehash: c7593aed7e4bc6037bca6b84181c0434b2e27e30
-ms.sourcegitcommit: 288d54b2e6b463f67358f701ef0dd5424237f811
+ms.openlocfilehash: d0eea79f28d2c2f79991ac0d59ebb6a567fecb21
+ms.sourcegitcommit: e64b8f2b7f92a3972d8dc83f47d84648fbe17370
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "48322382"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931448"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Prezentare generală a experiențelor conectate opționale în Office
 
@@ -99,7 +99,10 @@ Pentru a determina dacă administratorul v-a oferit capacitatea de a utiliza exp
 
 Dacă utilizați Office pentru Mac, deschideți orice aplicație Office și selectați meniul de aplicații (cum ar fi Word sau Excel) > **Preferințe** > **Confidențialitate**. Această acțiune va deschide caseta de dialog Setări de confidențialitate de cont, unde puteți vizualiza opțiunile de confidențialitate.
 
-Pentru mai multe informații, consultați: [Setări de confidențialitate pentru cont](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b).
+Pentru mai multe informații, consultați [Setări de confidențialitate pentru cont](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b).
+
+> [!NOTE]
+> Dacă administratorul organizației dvs. v-a oferit o versiune de licențiere în volum de Office 2019, Project 2019 sau Visio 2019, accesați **Fișier** > **Opțiuni** > **Centru de autorizare** > **Setări Centru de autorizare** > **Opțiuni de confidențialitate**. Acolo ar trebui să vedeți o casetă de selectare pentru **Activarea experiențelor conectate opționale**. Dacă nu vedeți această casetă de selectare în Project 2019 sau Visio 2019, alegeți **Setări de confidențialitate...** în caseta de dialog **Centru de autorizare**. Apoi, ar trebui să apară caseta de dialog **Setări de confidențialitate** cu o casetă de selectare pentru **Activați experiențele conectate opționale**.
 
 ## <a name="your-privacy-settings"></a>Setări de confidențialitate
 
@@ -107,11 +110,14 @@ Dacă administratorul v-a oferit capacitatea de a utiliza experiențe conectate 
 
 Dacă utilizați Office pentru Mac, deschideți orice aplicație Office și selectați meniul de aplicații (cum ar fi Word sau Excel) > **Preferințe** > **Confidențialitate**. Această acțiune va deschide caseta de dialog Setări de confidențialitate de cont, unde puteți vizualiza opțiunile de confidențialitate.
 
-Pentru mai multe informații, consultați: [Setări de confidențialitate pentru cont](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b).
+Pentru mai multe informații, consultați [Setări de confidențialitate pentru cont](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b).
+
+> [!NOTE]
+> Dacă administratorul organizației dvs. v-a oferit o versiune de licențiere în volum de Office 2019, Project 2019 sau Visio 2019, accesați **Fișier** > **Opțiuni** > **Centru de autorizare** > **Setări Centru de autorizare** > **Opțiuni de confidențialitate**. Acolo ar trebui să vedeți o casetă de selectare pentru **Activarea experiențelor conectate opționale**. Dacă nu vedeți această casetă de selectare în Project 2019 sau Visio 2019, alegeți **Setări de confidențialitate...** în caseta de dialog **Centru de autorizare**. Apoi, ar trebui să apară caseta de dialog **Setări de confidențialitate** cu o casetă de selectare pentru **Activați experiențele conectate opționale**.
 
 ## <a name="required-service-data"></a>Date de serviciu necesare
 
-Atunci când utilizați orice serviciu opțional cu backup în cloud descris în acest articol, Microsoft poate colecta [date de diagnosticare necesare](required-service-data.md) (cum ar fi datele de utilizare, erorile și datele despre performanță) despre performanța experienței atunci când ați utilizat-o. Aceste date de serviciu necesare pot conține „date personale”, așa cum sunt definite de Articolul 4 din RGPD din Europa.Toate date de serviciu necesare pe care Microsoft le colectează în timpul utilizării oricărei aplicații și serviciu din Aplicații Microsoft 365 pentru întreprindere folosesc pseudonime, conform definiției din ISO/IEC 19944:2017, (secțiunea 8.3.3) standard.
+Atunci când utilizați orice serviciu opțional cu backup în cloud descris în acest articol, Microsoft poate colecta [date de diagnosticare necesare](required-service-data.md) (cum ar fi datele de utilizare, erorile și datele despre performanță) despre performanța experienței atunci când ați utilizat-o. Aceste date de serviciu necesare pot conține „date personale”, așa cum sunt definite de Articolul 4 din RGPD din Europa. Toate date de serviciu necesare pe care Microsoft le colectează în timpul utilizării oricărei aplicații și serviciu din Aplicații Microsoft 365 pentru întreprindere folosesc pseudonime, conform definiției din ISO/IEC 19944:2017, (secțiunea 8.3.3) standard.
 
 ## <a name="admin-controls-for-optional-connected-experiences"></a>Controale de administrator pentru experiențe conectate opționale 
 

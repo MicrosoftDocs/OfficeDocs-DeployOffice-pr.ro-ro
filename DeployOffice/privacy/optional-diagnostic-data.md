@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre datele de diagnosticare opționale din Office, inclusiv exemple de evenimente.
 hideEdit: true
-ms.openlocfilehash: bcb9a8d4a886fefde3fbb42280183bf163b315c3
-ms.sourcegitcommit: 596a0a60394011aafe1119f353ac76f27e1a4d1b
+ms.openlocfilehash: 7dc10c50baed0306e3e7fc6dd70e0d798a72d0bc
+ms.sourcegitcommit: e64b8f2b7f92a3972d8dc83f47d84648fbe17370
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48794813"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931266"
 ---
 # <a name="optional-diagnostic-data-for-office"></a>Date de diagnosticare opționale pentru Office
 
@@ -28,6 +28,9 @@ ms.locfileid: "48794813"
 Datele de diagnosticare se folosesc pentru a păstra Office în siguranță și la zi, pentru a detecta, a diagnostica și a remedia problemele și pentru a îmbunătăți produsele. Aceste date nu includ numele sau adresa de e-mail a unui utilizator, nici conținutul fișierelor acestuia sau informații despre aplicații care nu au legătură cu Office.
 
 Aceste date de diagnosticare sunt colectate și trimise la Microsoft despre software-ul client Office care rulează pe dispozitivul utilizatorului. Anumite date de diagnosticare sunt obligatorii, în timp ce altele sunt opționale. Vă oferim posibilitatea de a alege dacă să ne trimiteți datele de diagnosticare obligatorii sau opționale, utilizând controalele de confidențialitate, cum ar fi setările de politici pentru organizații. Puteți vedea datele de diagnosticare care ne sunt trimise utilizând Vizualizatorul de date de diagnosticare.
+
+> [!NOTE]
+> Dacă utilizați o versiune de Office 2019 sau Office 2016 care nu vă oferă dvs. sau administratorului posibilitatea de a alege dacă doriți să ne trimiteți date de diagnosticare obligatorii sau opționale, sunt trimise doar datele de diagnosticare obligatorii. De exemplu, dacă utilizați Office Professional Plus 2019 sau Office Standard 2016, care nu oferă această opțiune, sunt trimise doar datele de diagnosticare obligatorii. Office 2013 nu trimite date de diagnosticare obligatorii sau opționale. Pentru mai multe informații despre versiunile de Office care oferă această posibilitate, consultați [Controale de confidențialitate disponibile pentru produsele Office](products-versions-privacy-controls.md).
 
 ***Datele de diagnosticare opționale** sunt date suplimentare care ne ajută să îmbunătățim produsele și furnizează informații detaliate care ne ajută să detectăm, să diagnosticăm și să remediem problemele.
 

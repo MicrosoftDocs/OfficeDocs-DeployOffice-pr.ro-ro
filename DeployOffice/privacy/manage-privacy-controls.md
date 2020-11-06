@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre gestionarea controalelor de confidențialitate în Aplicații Microsoft 365 pentru întreprindere (numite anterior Office 365 ProPlus), utilizând setările de politică.
 hideEdit: true
-ms.openlocfilehash: f02714428dd580d79a3fc8f160b00d6df95c4237
-ms.sourcegitcommit: 73158b40bdc2d83bdadedeafe0fd152b449d2a44
+ms.openlocfilehash: 401cc5ca875dac28a5cda321a812e9b6c25289e5
+ms.sourcegitcommit: e64b8f2b7f92a3972d8dc83f47d84648fbe17370
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47440249"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931230"
 ---
 # <a name="use-policy-settings-to-manage-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere
 
@@ -31,9 +31,9 @@ Microsoft se angajează să vă furnizeze informațiile și controalele de care 
 
 Începând cu versiunea 1904 pentru Aplicații Microsoft 365 pentru întreprindere, există noi setări de politică care vă permit să controlați setările asociate cu:
 
-- ***Date de diagnosticare*** care sunt colectate și trimise la Microsoft despre software-ul client Office utilizat
+- ***Date de diagnosticare** _ care sunt colectate și trimise la Microsoft despre software-ul client Office utilizat.
 
-- ***Experiențe conectate*** care utilizează funcționalitatea în cloud pentru a vă furniza caracteristici îmbunătățite de Office dvs. și utilizatorilor dvs.
+- _*_Experiențe conectate_*_ care utilizează funcționalitatea în cloud pentru a vă furniza caracteristici îmbunătățite de Office dvs. și utilizatorilor dvs.
 
 Iată cele cinci noi setări de politică:
 
@@ -64,15 +64,15 @@ Cât despre noile setări de politică, trebuie să le testați cu atenție le �
 
 Datele de diagnosticare sunt utilizate pentru a menține Office securizat și actualizat, pentru a detecta, a diagnostica și a remedia problemele și, de asemenea, pentru a face îmbunătățiri de produs.
 
-Puteți utiliza setarea de politică *Configurați nivelul datelor de diagnosticare pentru software-ul client trimise de Office la Microsoft* pentru a alege ce nivel al datelor de diagnosticare să fie trimis la Microsoft.
+Puteți utiliza setarea de politică _Configurați nivelul datelor de diagnosticare pentru software-ul client trimise de Office la Microsoft* pentru a alege ce nivel al datelor de diagnosticare să fie trimis la Microsoft.
 
 Dacă activați această setare de politică, trebuie să alegeți ce nivel al datelor de diagnosticare să fie trimis la Microsoft. Opțiunile dvs. sunt Obligatoriu, Opțional sau Fără.
 
-- Dacă alegeți ***Obligatoriu***, la Microsoft sunt trimise datele minime necesare pentru a păstra Office securizat, actualizat și într-o stare de funcționare conform așteptărilor pe dispozitivul pe care este instalat.
+- Dacă alegeți * **Obligatoriu** _, la Microsoft sunt trimise datele minime necesare pentru a păstra Office securizat, actualizat și într-o stare de funcționare conform așteptărilor pe dispozitivul pe care este instalat.
 
-- Dacă alegeți ***Opțional***, la Microsoft sunt trimise date suplimentare care ne ajută să îmbunătățim produsele și furnizează mai multe informații care ne permit să detectăm, să diagnosticăm și să remediem problemele. Dacă alegeți să trimiteți date de diagnosticare opționale, vor fi incluse și datele de diagnosticare obligatorii.
+- Dacă alegeți _*_Opțional_*_ , la Microsoft sunt trimise date suplimentare care ne ajută să îmbunătățim produsele și furnizează mai multe informații care ne permit să detectăm, să diagnosticăm și să remediem problemele. Dacă alegeți să trimiteți date de diagnosticare opționale, vor fi incluse și datele de diagnosticare obligatorii.
 
-- Dacă alegeți ***Fără***, la Microsoft nu sunt trimise date de diagnosticare despre software-ul client Office care rulează pe dispozitivul utilizatorului. Însă această opțiune, limitează semnificativ capacitatea Microsoft de a detecta, a diagnostica și a remedia problemele pe care utilizatorii dvs. le pot întâmpina când utilizează Office.
+- Dacă alegeți _*_Fără_*_ , la Microsoft nu sunt trimise date de diagnosticare despre software-ul client Office care rulează pe dispozitivul utilizatorului. Însă această opțiune, limitează semnificativ capacitatea Microsoft de a detecta, a diagnostica și a remedia problemele pe care utilizatorii dvs. le pot întâmpina când utilizează Office.
 
 Dacă dezactivați sau nu configurați această setare de politică, atât datele de diagnosticare opționale, cât și cele obligatorii sunt trimise la Microsoft.
 
@@ -104,9 +104,9 @@ Utilizatorii dvs. nu vor putea să aleagă dacă să activeze sau să dezactivez
 
 Acestea sunt experiențe care utilizează conținutul dvs. Office pentru a vă oferi recomandări de proiectare, sugestii de editare, detalii privind datele și caracteristici similare. De exemplu, PowerPoint Designer sau Translator. Pentru o listă a acestor experiențe conectate, consultați [Experiențe conectate în Office](connected-experiences.md)
 
-Puteți utiliza setarea de politică *Permiteți utilizarea de experiențe conectate în Office care analizează conținut* pentru a controla dacă aceste tipuri de experiențe conectate sunt disponibile pentru utilizatorii dvs. Dacă nu configurați această setare de politică, aceste experiențe conectate vor fi disponibile pentru utilizatorii dvs.
+Puteți utiliza setarea de politică _Permiteți utilizarea de experiențe conectate în Office care analizează conținut* pentru a controla dacă aceste tipuri de experiențe conectate sunt disponibile pentru utilizatorii dvs. Dacă nu configurați această setare de politică, aceste experiențe conectate vor fi disponibile pentru utilizatorii dvs.
 
-Rețineți că dacă dezactivați setarea de politică *Permiteți utilizarea de experiențe conectate în Office*, experiențele conectate care analizează conținut nu vor fi disponibile pentru utilizatorii dvs.
+Rețineți că dacă dezactivați setarea de politică *Permiteți utilizarea de experiențe conectate în Office* , experiențele conectate care analizează conținut nu vor fi disponibile pentru utilizatorii dvs.
 
 ### <a name="policy-setting-for-connected-experiences-that-download-online-content"></a>Setarea de politică pentru experiențe conectate care descarcă conținut online
 
@@ -114,7 +114,7 @@ Acestea sunt experiențe care vă permit să căutați și să descărcați con�
 
 Puteți utiliza setarea de politică *Permiteți utilizarea de experiențe conectate în Office care descarcă conținut online* pentru a controla dacă aceste tipuri de experiențe conectate sunt disponibile pentru utilizatorii dvs. Dacă nu configurați această setare de politică, aceste experiențe conectate vor fi disponibile pentru utilizatorii dvs.
 
-Rețineți că dacă dezactivați setarea de politică *Permiteți utilizarea de experiențe conectate în Office*, experiențele conectate care descarcă conținut online nu vor fi disponibile pentru utilizatorii dvs.
+Rețineți că dacă dezactivați setarea de politică *Permiteți utilizarea de experiențe conectate în Office* , experiențele conectate care descarcă conținut online nu vor fi disponibile pentru utilizatorii dvs.
 
 ### <a name="policy-setting-for-optional-connected-experiences"></a>Setarea de politică pentru experiențe conectate opționale
 
@@ -124,9 +124,12 @@ Aceste experiențe conectate sunt diferite, deoarece nu sunt acoperite de acordu
 
 Puteți utiliza setarea de politică *Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office* pentru a controla dacă aceste tipuri de experiențe conectate sunt disponibile pentru utilizatorii dvs. Dacă nu configurați această setare de politică, aceste experiențe conectate opționale vor fi disponibile pentru utilizatorii dvs.
 
+> [!NOTE]
+> Pentru a aplica setarea de politică *Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office* la versiunile de licențiere în volum de Office 2019, Project 2019 sau Visio 2019, trebuie să utilizați Politica de grup. Nu puteți utiliza serviciul de politici cloud pentru Office. Acest lucru se aplică atunci când Office 2019, Project 2019 sau Visio 2019, este configurat să utilizeze canalul de actualizare PerpetualVL2019.
+
 Chiar dacă alegeți să puneți aceste experiențe conectate opționale la dispoziția utilizatorilor dvs., utilizatorii dvs. vor avea opțiunea de a le dezactiva ca grup, accesând [caseta de dialog pentru setările de confidențialitate](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b). Utilizatorii dvs. vor avea această opțiune doar dacă sunt conectați la Office cu acreditările organizației lor (la care se face uneori referire ca la contul de la locul de muncă sau de la școală), însă nu și dacă sunt conectați cu o adresă de e-mail personală.
 
-De asemenea, unele dintre aceste experiențe conectate opționale sunt considerate și experiențe conectate care analizează conținut sau care descarcă conținut online. De exemplu, Inserare imagini online este o experiență conectată opțională, pe platformă Microsoft Bing, dar este considerată și o experiență conectată care descarcă conținut online. Așadar, dacă dezactivați setarea de politică *Permiteți utilizarea de experiențe conectate în Office care descarcă conținut online*, Inserare imagini online nu va fi disponibilă pentru utilizatorii dvs. Aceasta nu va fi disponibilă, chiar dacă ați activat setarea de politică *Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office*. Pentru mai multe informații despre care experiențe conectate analizează conținut sau descarcă conținut online, consultați [Experiențe conectate în Office](connected-experiences.md).
+De asemenea, unele dintre aceste experiențe conectate opționale sunt considerate și experiențe conectate care analizează conținut sau care descarcă conținut online. De exemplu, Inserare imagini online este o experiență conectată opțională, pe platformă Microsoft Bing, dar este considerată și o experiență conectată care descarcă conținut online. Așadar, dacă dezactivați setarea de politică *Permiteți utilizarea de experiențe conectate în Office care descarcă conținut online* , Inserare imagini online nu va fi disponibilă pentru utilizatorii dvs. Aceasta nu va fi disponibilă, chiar dacă ați activat setarea de politică *Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office*. Pentru mai multe informații despre care experiențe conectate analizează conținut sau descarcă conținut online, consultați [Experiențe conectate în Office](connected-experiences.md).
 
 Există o excepție de care trebuie să ținem cont. Setarea de politică *Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office* nu controlează experiențe care vă solicită să conectați contul LinkedIn la contul Microsoft de la locul de muncă sau de la școală. Pentru a controla aceste tipuri de experiențe, cum ar fi informațiile LinkedIn de pe [ o fișă de profil](https://support.microsoft.com/office/365-e80f931f-5fc4-4a59-ba6e-c1e35a85b501) în Outlook, consultați [LinkedIn din aplicațiile și serviciile Microsoft](https://support.microsoft.com/office/dc81cc70-4d64-4755-9f1c-b9536e34d381) și [integrarea conexiunilor din contul LinkedIn în Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/linkedin-integration).
 
@@ -146,9 +149,9 @@ Chiar dacă dezactivați această setare de politică, funcționalitatea Office 
 
 Există două setări de politică care nu se mai aplică la Aplicații Microsoft 365 pentru întreprindere, începând cu versiunea 1904. Iată acele setări de politică:
 
-- **Trimiteți informații personale**, care pot fi găsite în Configurația de utilizator\\Politici\\Șabloane administrative\\Microsoft Office 2016\\Confidențialitate\\Centrul de autorizare.
+- **Trimiteți informații personale** , care pot fi găsite în Configurația de utilizator\\Politici\\Șabloane administrative\\Microsoft Office 2016\\Confidențialitate\\Centrul de autorizare.
 
-- **Opțiuni conținut online**, care pot fi găsite în Configurația de utilizator\\Politici\\Șabloane administrative\\Microsoft Office 2016\\Instrumente | Opțiuni | Generale | Opțiuni de servicii... \\Conținut online.
+- **Opțiuni conținut online** , care pot fi găsite în Configurația de utilizator\\Politici\\Șabloane administrative\\Microsoft Office 2016\\Instrumente | Opțiuni | Generale | Opțiuni de servicii... \\Conținut online.
 
 Începând cu versiunea 1904, configurarea acestor două setări de politică existente nu va avea niciun efect asupra Aplicații Microsoft 365 pentru întreprindere. Ele nu se mai aplică deoarece funcționalitatea lor este înlocuită de aceste noi setări de politică:
 
@@ -157,7 +160,7 @@ Există două setări de politică care nu se mai aplică la Aplicații Microsof
 - Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office
 - Permiteți utilizarea de experiențe conectate în Office
 
-Aceste noi setări de politică vă pot oferi un control mai fin al nivelului decât cele două setări de politică existente. De exemplu, dacă anterior ați utilizat setarea de politică *Trimiteți informații personale*, atât Pornirea rapidă PowerPoint, cât și Căutarea inteligentă trebuiau să fie dezactivate. Dar acum, cu noile setări de politică, dacă utilizați setarea de politică *Permiteți utilizarea de experiențe conectate în Office care analizează conținut* pentru a dezactiva acel tip de experiențe conectate, doar Căutarea inteligentă este dezactivată. Pornirea rapidă PowerPoint va fi încă disponibilă pentru utilizatorii dvs.
+Aceste noi setări de politică vă pot oferi un control mai fin al nivelului decât cele două setări de politică existente. De exemplu, dacă anterior ați utilizat setarea de politică *Trimiteți informații personale* , atât Pornirea rapidă PowerPoint, cât și Căutarea inteligentă trebuiau să fie dezactivate. Dar acum, cu noile setări de politică, dacă utilizați setarea de politică *Permiteți utilizarea de experiențe conectate în Office care analizează conținut* pentru a dezactiva acel tip de experiențe conectate, doar Căutarea inteligentă este dezactivată. Pornirea rapidă PowerPoint va fi încă disponibilă pentru utilizatorii dvs.
 
 Setările de politică apar încă în instrumentul de Gestionare a politicilor de grup, întrucât sunt încă aplicabile la versiunile de licențiere în volum de Office 2016 și Office 2019, cum ar fi Office Professional Plus 2019.
 
@@ -165,13 +168,13 @@ Setările de politică apar încă în instrumentul de Gestionare a politicilor 
 
 După cum probabil știți deja, există unele setări de politică care vă permit să controlați experiențe conectate. Iată câteva exemple de setări de politică existente:
 
-- *Opțiuni PowerPoint Designer*, în Configurația de utilizator\\Politici\\Șabloane administrative\\Microsoft Office 2016\\Instrumente | Opțiuni | Generale | Opțiuni de servicii... \\PowerPoint Designer
+- *Opțiuni PowerPoint Designer* , în Configurația de utilizator\\Politici\\Șabloane administrative\\Microsoft Office 2016\\Instrumente | Opțiuni | Generale | Opțiuni de servicii... \\PowerPoint Designer
 
-- *Dezactivați pornirea rapidă*, la Configurare utilizator\\Politici\\Șabloane administrative\\Microsoft PowerPoint 2016\\Opțiuni PowerPoint\\Generale
+- *Dezactivați pornirea rapidă* , la Configurare utilizator\\Politici\\Șabloane administrative\\Microsoft PowerPoint 2016\\Opțiuni PowerPoint\\Generale
 
-- *Permiteți caracteristica Asistent pentru CV LinkedIn*, în Configurare utilizator\\Politici\\Șabloane administrative\\Microsoft Word 2016\\Opțiuni Word\\Generale
+- *Permiteți caracteristica Asistent pentru CV LinkedIn* , în Configurare utilizator\\Politici\\Șabloane administrative\\Microsoft Word 2016\\Opțiuni Word\\Generale
 
- Puteți utiliza încă aceste setări de politică existente, dacă doriți să dezactivați experiențe conectate individuale. Dar rețineți că dacă utilizați una dintre noile setări de politică, acea setare nouă de politică poate dezactiva o experiență conectată pe care ați activat-o utilizând o setare de politică diferită. De exemplu, dacă activați setarea de politică *Permiteți caracteristica Asistent pentru CV LinkedIn*, dar dezactivați setarea de politică *Permiteți utilizarea de experiențe conectate în Office*, Asistentul pentru CV LinkedIn nu va fi disponibil pentru utilizatorii dvs.
+ Puteți utiliza încă aceste setări de politică existente, dacă doriți să dezactivați experiențe conectate individuale. Dar rețineți că dacă utilizați una dintre noile setări de politică, acea setare nouă de politică poate dezactiva o experiență conectată pe care ați activat-o utilizând o setare de politică diferită. De exemplu, dacă activați setarea de politică *Permiteți caracteristica Asistent pentru CV LinkedIn* , dar dezactivați setarea de politică *Permiteți utilizarea de experiențe conectate în Office* , Asistentul pentru CV LinkedIn nu va fi disponibil pentru utilizatorii dvs.
 
 În general, dacă o setare de politică este configurată pentru a activa o anumită experiență conectată în timp ce o altă setare de politică este configurată simultan pentru a dezactiva acel tip de experiență conectată, atunci acea experiență conectată este dezactivată pentru utilizatorii dvs.
 
@@ -185,13 +188,13 @@ Dacă ați ales să le oferiți utilizatorilor [experiențe conectate opționale
 
 ### <a name="privacy-settings-removed-from-the-office-ui"></a>Setările de confidențialitate au fost eliminate din interfața de utilizator Office
 
-Următoarele setări sunt eliminate din **Fișier** > **Opțiuni** > **Centrul de autorizare** > **Setări Centrul de autorizare...** > **Opțiuni de confidențialitate**:
+Următoarele setări sunt eliminate din **Fișier** > **Opțiuni** > **Centrul de autorizare** > **Setări Centrul de autorizare...** > **Opțiuni de confidențialitate** :
 
 - Obțineți proiecte, informații, recomandări și servicii, permițând ca Office să acceseze și să efectueze îmbunătățiri de produs pe baza conținutului Office de pe dispozitivul meu.
 
 - Permiteți Office să se conecteze la serviciile online Microsoft pentru a furniza funcționalități relevante pentru locația și preferințele dvs.
 
-De asemenea, în **Fișier** > **Opțiuni** > **Generale**, opțiunea de a activa serviciile inteligente Office este eliminată.
+De asemenea, în **Fișier** > **Opțiuni** > **Generale** , opțiunea de a activa serviciile inteligente Office este eliminată.
 
 Ca administrator pentru organizația dvs., puteți controla acum setările echivalente ale acestora prin noile setări de politică descrise anterior.
 
@@ -199,7 +202,7 @@ Ca administrator pentru organizația dvs., puteți controla acum setările echiv
 
 Iată câteva elemente noi care au fost adăugate la interfața de utilizator Office:
 
-- La **Fișier** > **Cont**, utilizatorii vor vedea o opțiune nouă pentru **Confidențialitate cont** > **Gestionare setări**. La **Gestionare setări** utilizatorii pot dezactiva experiențe conectate opționale, dacă le-ați pus la dispoziție opțiunea respectivă.
+- La **Fișier** > **Cont** , utilizatorii vor vedea o opțiune nouă pentru **Confidențialitate cont** > **Gestionare setări**. La **Gestionare setări** utilizatorii pot dezactiva experiențe conectate opționale, dacă le-ați pus la dispoziție opțiunea respectivă.
 
 - La **Fișier** > **Opțiuni** > **Centru de autorizare** > **Setări centru de autorizare...** > **Opțiuni de confidențialitate,** există o opțiune pentru a permite utilizarea [Vizualizatorului de date de diagnosticare](https://support.microsoft.com/office/cf761ce9-d805-4c60-a339-4e07f3182855) pe dispozitiv.
 

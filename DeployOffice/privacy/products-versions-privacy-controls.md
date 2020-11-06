@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Furnizează informații despre produsele și versiunile Office care au cele mai recente controale de confidențialitate.
 hideEdit: true
-ms.openlocfilehash: d6fc46501b2137f2f22cd30dad4a2168bc490360
-ms.sourcegitcommit: da41d41b443c8392c96e64a4d2fc674957abddf5
+ms.openlocfilehash: 8434891947997908bb4de61ad56606f8b4b59614
+ms.sourcegitcommit: e64b8f2b7f92a3972d8dc83f47d84648fbe17370
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47431972"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931194"
 ---
 # <a name="privacy-controls-available-for-office-products"></a>Controalele de confidențialitate disponibile pentru produsele Office
 
@@ -42,7 +42,6 @@ Controalele noastre de confidențialitate cele mai recente sunt disponibile pent
 - Versiunile comerciale ale Office 2019 și Office 2016, care sunt disponibile ca achiziționare singulară. De exemplu, Office Professional 2019 sau Office 2016 pentru acasă
 - Versiunile desktop de Project și Visio care sunt oferite cu anumite planuri de abonament, cum ar fi Project Plan 5 sau Visio Plan 2.
 - Versiunile comerciale ale Proiect 2019, Proiect 2016, Visio 2019 și Visio 2016, care sunt disponibile ca achiziționare singulară.
-- Versiunile cu licențiere în volum ale Project 2016 și Visio 2016 care sunt instalate utilizând Clic și pornire, în loc să fie instalate utilizând Windows Installer (MSI). De exemplu, Project Professional 2016 sau Visio Standard 2016.
 
 Pentru dispozitivele Windows, următorul tabel listează aplicațiile și versiunile minime ale aplicațiilor respective care au cele mai recente controale de confidențialitate.
 
@@ -74,6 +73,12 @@ Pentru acele versiuni de aplicații Office de pe dispozitive Windows, sunt dispo
 Este posibil ca unele produse Office să nu aibă anumite tipuri de experiențe conectate, așa că anumite controale de confidențialitate nu vor fi relevante.
 
 Pentru a configura aceste controale de confidențialitate pentru utilizatorii dvs. care utilizează Office pe dispozitive Windows în organizația dvs., puteți să utilizați Politica de grup sau serviciul de politici cloud pentru Office. Pentru mai multe informații, consultați [Utilizați setările de politică pentru a gestiona controalele de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere](manage-privacy-controls.md)
+
+> [!NOTE]
+> Controlul de confidențialitate „Permiteți utilizarea de experiențe conectate opționale, suplimentare în Office” este acceptat în următoarele versiuni *de licențiere în volum* de Office, Project și Visio.
+> - Office 2019, Project 2019 și Visio 2019, atunci când sunt configurate să utilizeze canalul de actualizare PerpetualVL2019. În acest caz, trebuie să utilizați cel puțin versiunea 1808 (compilarea 10367,20048), care a fost lansată pe 13 octombrie 2020.
+> - Project 2019 și Visio 2019, atunci când sunt configurate să utilizeze un canal de actualizare diferit de PerpetualVL2019. De exemplu, dacă sunt configurate să utilizeze Canalul curent, Canalul Enterprise lunar sau Canalul Enterprise semestrial. În acest caz, trebuie să utilizați cel puțin versiunea 1904.
+> - Project 2016 și Visio 2016 care sunt instalate utilizând Clic și pornire în loc să fie instalate utilizând Windows Installer (MSI). În acest caz, trebuie să utilizați cel puțin versiunea 1904.
 
 ## <a name="office-on-mac-devices"></a>Office pe dispozitive Mac
 
