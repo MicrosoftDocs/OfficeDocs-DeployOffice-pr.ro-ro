@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre datele de diagnosticare obligatorii în Office și le furnizează o listă de evenimente și câmpuri de date.
 hideEdit: true
-ms.openlocfilehash: e8b54e50ca8fc080cf09b26d83f4b7f28bc81290
-ms.sourcegitcommit: 521da3465e94ca9d29f3c6f49b78dd5f952d9cc6
+ms.openlocfilehash: 97d334551743566bde549da4b3b4a2476255d248
+ms.sourcegitcommit: 1c635a2906afb601e7c92b3f48dde3d271d06105
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "49088131"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "49367373"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Date de diagnosticare obligatorii pentru Office
 
@@ -1534,7 +1534,7 @@ Se colectează următoarele câmpuri:
  
 - **number_of_accounts** - numărul total de conturi în care s-a efectuat acțiunea
  
-- **result** - rezultatul acțiunii, de ex. succes, eșec.
+- **rezultat** - rezultatul acțiunii, de ex. succes, eșec.
    
 - **server_type** - tipul de server pentru cont, asemănător cu account_type
  
@@ -1554,9 +1554,9 @@ Acest eveniment este colectat pentru a garanta funcționarea cu succes a configu
 
 Se colectează următoarele câmpuri: 
 
-- **account_creation_source** – proprietate opțională, care este utilizată pentru a găsi și a diagnostica orice probleme care apar în timpul creării contului, atunci când tipul de acțiune este Adăugare.  Poate avea valori, cum ar fi sign-on unic (SS0), create_new_account, manual etc.
+- **account_creation_source** – proprietate opțională, care este utilizată pentru a găsi și a diagnostica orice probleme care apar în timpul creării contului, atunci când tipul de acțiune este Adăugare.  Poate avea valori precum sign-on unic (SS0), create_new_account, manual etc.
 
-- **action** - Tipul de acțiune efectuată asupra contului, cum ar fi adăugare, eliminare sau resetare
+- **action** - tipul de acțiune efectuată asupra contului, cum ar fi adăugare, eliminare sau resetare
 
 #### <a name="addnewaccountstep"></a>add.new.account.step
 
@@ -2355,7 +2355,7 @@ Se colectează următoarele câmpuri:
 
 - **RMS.StatusCode** - cod de stare al rezultatului returnat
 
-- **RMS.TokenProvided** - indică dacă se furnizează tokenul ca intrare pentru apelul API sau nu 
+- **RMS.TokenProvided** - Indică dacă se furnizează tokenul ca intrare pentru apelul API sau nu 
 
 - **RMS.UserProvided** - indică dacă se furnizează consumatorul ca intrare pentru apelul API sau nu 
 
@@ -4174,7 +4174,7 @@ Acest eveniment este colectat când începe inițializarea fluxului. Acest eveni
 
 - **UserInfo.Id** - identificatorul de utilizator unic global pentru un cont Microsoft Enterprise.
 
-- **UserInfo.IdType** - specifică tipul de ID utilizator. 
+- **UserInfo.IdType** - Specifică tipul de ID utilizator. 
 
 - **UserInfo.Language** - limba utilizatorului în format de etichetă de limbă IETF.
 
@@ -5090,7 +5090,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_RestoreButtonFlowType** - un cod care denotă tipul de flux de utilizator care a fost exercitat
 
-- **Data_RestoredFailedPaymentCancelledFlowType** - un cod care denotă tipul de flux de anulare a plăților care a fost exercitat
+- **Data_RestoredFailedPaymentCancelledFlowType** - Un cod care denotă tipul de flux de anulare a plăților care a fost exercitat
 
 - **Data_RestoredFailedUnKnownFlowType** - dacă încercarea nu a reușit din cauza exercițiului unui flux de utilizator neașteptat
 
@@ -5946,7 +5946,7 @@ Se colectează următoarele câmpuri
 
 - **InitialReplicationInSession** - dacă această reproducere este sau nu prima reproducere a blocnotesului după deschidere
 
-- **IsBackgroundSync** - este o sincronizare de fundal sau nu
+- **IsBackgroundSync** - este sau nu o sincronizare de fundal
 
 - **IsCachedErrorSuppressed** - este eroarea memorată în cache suprimată sau nu
 
@@ -6841,7 +6841,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_DstDoc_IdentityUniqueId:string** - identificator unic al identității folosite pentru acțiunea Documente partajate
 
-- **Data_DstDoc_IOFlags:long** - bitmask pentru diferite semnalizări legate de IO pentru un anumit document
+- **Data_DstDoc_IOFlags:long** - Bitmask pentru diferite semnalizări legate de IO pentru un anumit document
 
 - **Data_DstDoc_IrmRights:long** - set predefinit de valori pentru tipul de Information Rights Management aplicat pentru acest document (Redirecționare, Răspuns, SecureReader, Editare etc.)
 
@@ -11245,7 +11245,7 @@ Se colectează următoarele câmpuri:
 
 - **above_40fps** - numărul de cadre redate peste 40fps
 
-- **above_40fps** - numărul de cadre redate peste 40fps
+- **above_40fps** - cadre radio redate peste 40fps
 
 - **above_50fps** - numărul de cadre redate peste 50fps
 
@@ -11383,7 +11383,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="initialpagelanding"></a>Initial.page.landing 
  
-Acest eveniment ajută urmărirea tipului de experiență pe care o văd utilizatorii atunci când aterizează în pagina noastră de aplicații.  Aceste date se utilizează pentru a determina traficul de utilizatori canalizat în fiecare experiență din aplicația noastră și, de asemenea, ne ajută să sintetizăm cu ușurință rezultatele experimentale.
+Acest eveniment ajută la urmărirea tipului de experiență pe care o văd utilizatorii atunci când aterizează în pagina noastră de aplicații.  Aceste date se utilizează pentru a determina traficul de utilizatori canalizat în fiecare experiență din aplicația noastră și, de asemenea, ne ajută să sintetizăm cu ușurință rezultatele experimentale.
  
 Se colectează următoarele câmpuri: 
 
