@@ -1534,7 +1534,7 @@ Se colectează următoarele câmpuri:
  
 - **number_of_accounts** - numărul total de conturi în care s-a efectuat acțiunea
  
-- **rezultat** - rezultatul acțiunii, de ex. succes, eșec.
+- **result** - rezultatul acțiunii, de ex. succes, eșec.
    
 - **server_type** - tipul de server pentru cont, asemănător cu account_type
  
@@ -1556,7 +1556,7 @@ Se colectează următoarele câmpuri:
 
 - **account_creation_source** – proprietate opțională, care este utilizată pentru a găsi și a diagnostica orice probleme care apar în timpul creării contului, atunci când tipul de acțiune este Adăugare.  Poate avea valori precum sign-on unic (SS0), create_new_account, manual etc.
 
-- **action** - tipul de acțiune efectuată asupra contului, cum ar fi adăugare, eliminare sau resetare
+- **action** - Tipul de acțiune efectuată asupra contului, cum ar fi adăugare, eliminare sau resetare
 
 #### <a name="addnewaccountstep"></a>add.new.account.step
 
@@ -2355,7 +2355,7 @@ Se colectează următoarele câmpuri:
 
 - **RMS.StatusCode** - cod de stare al rezultatului returnat
 
-- **RMS.TokenProvided** - Indică dacă se furnizează tokenul ca intrare pentru apelul API sau nu 
+- **RMS.TokenProvided** - indică dacă se furnizează tokenul ca intrare pentru apelul API sau nu 
 
 - **RMS.UserProvided** - indică dacă se furnizează consumatorul ca intrare pentru apelul API sau nu 
 
@@ -3960,7 +3960,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_FileType** - primele patru caractere din extensia fișierului actual.
 
-- **Data_InDocStage** - o valoare Booleană care indică dacă experiența de upsell este afișată din galeria de documente sau dintr-o fereastră de document.
+- **Data_InDocStage** - un Boolean care indică dacă experiența din vânzări este afișată din galeria de documente sau dintr-o fereastră de document.
 
 - **Data_IsDocumentOpened** - un Boolean care indică dacă documentul curent pentru care se afișează experiența din vânzări este, de asemenea, deschis.
 
@@ -4174,7 +4174,7 @@ Acest eveniment este colectat când începe inițializarea fluxului. Acest eveni
 
 - **UserInfo.Id** - identificatorul de utilizator unic global pentru un cont Microsoft Enterprise.
 
-- **UserInfo.IdType** - Specifică tipul de ID utilizator. 
+- **UserInfo.IdType** - specifică tipul de ID utilizator. 
 
 - **UserInfo.Language** - limba utilizatorului în format de etichetă de limbă IETF.
 
@@ -5090,7 +5090,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_RestoreButtonFlowType** - un cod care denotă tipul de flux de utilizator care a fost exercitat
 
-- **Data_RestoredFailedPaymentCancelledFlowType** - Un cod care denotă tipul de flux de anulare a plăților care a fost exercitat
+- **Data_RestoredFailedPaymentCancelledFlowType** - un cod care denotă tipul de flux de anulare a plăților care a fost exercitat
 
 - **Data_RestoredFailedUnKnownFlowType** - dacă încercarea nu a reușit din cauza exercițiului unui flux de utilizator neașteptat
 
@@ -5946,7 +5946,7 @@ Se colectează următoarele câmpuri
 
 - **InitialReplicationInSession** - dacă această reproducere este sau nu prima reproducere a blocnotesului după deschidere
 
-- **IsBackgroundSync** - este sau nu o sincronizare de fundal
+- **IsBackgroundSync** - este o sincronizare de fundal sau nu
 
 - **IsCachedErrorSuppressed** - este eroarea memorată în cache suprimată sau nu
 
@@ -6170,7 +6170,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_Doc\_IdentityTelemetryId:string -** GUID unic al utilizatorului
 
-  - **Data\_Doc\_IdentityUniqueId:string -** identificator unic al identității folosite pentru acțiunea Documente partajate
+  - **Data\_Doc\_IdentityUniqueId:string –** identificator unic al identității folosite pentru acțiunea Documente partajate
 
   - **Data\_Doc\_IOFlags:long -** bitmask pentru diferite semnalizări legate de IO pentru un anumit document
 
@@ -6306,7 +6306,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_Doc\_IdentityTelemetryId:string -** GUID unic al utilizatorului
 
-  - **Data\_Doc\_IdentityUniqueId:string -** identificator unic al identității folosite pentru acțiunea Documente partajate
+  - **Data\_Doc\_IdentityUniqueId:string –** identificator unic al identității folosite pentru acțiunea Documente partajate
 
   - **Data\_Doc\_IOFlags:long -** bitmask pentru diferite semnalizări legate de IO pentru un anumit document
 
@@ -6430,7 +6430,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_Doc\_IdentityTelemetryId:string -** GUID unic al utilizatorului
 
-  - **Data\_Doc\_IdentityUniqueId:string -** identificator unic al identității folosite pentru acțiunea Documente partajate
+  - **Data\_Doc\_IdentityUniqueId:string –** identificator unic al identității folosite pentru acțiunea Documente partajate
 
   - **Data\_Doc\_IOFlags:long -** bitmask pentru diferite semnalizări legate de IO pentru un anumit document
 
@@ -6841,7 +6841,7 @@ Se colectează următoarele câmpuri:
 
 - **Data_DstDoc_IdentityUniqueId:string** - identificator unic al identității folosite pentru acțiunea Documente partajate
 
-- **Data_DstDoc_IOFlags:long** - Bitmask pentru diferite semnalizări legate de IO pentru un anumit document
+- **Data_DstDoc_IOFlags:long** - bitmask pentru diferite semnalizări legate de IO pentru un anumit document
 
 - **Data_DstDoc_IrmRights:long** - set predefinit de valori pentru tipul de Information Rights Management aplicat pentru acest document (Redirecționare, Răspuns, SecureReader, Editare etc.)
 
@@ -11383,7 +11383,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="initialpagelanding"></a>Initial.page.landing 
  
-Acest eveniment ajută la urmărirea tipului de experiență pe care o văd utilizatorii atunci când aterizează în pagina noastră de aplicații.  Aceste date se utilizează pentru a determina traficul de utilizatori canalizat în fiecare experiență din aplicația noastră și, de asemenea, ne ajută să sintetizăm cu ușurință rezultatele experimentale.
+Acest eveniment ajută urmărirea tipului de experiență pe care o văd utilizatorii atunci când aterizează în pagina noastră de aplicații.  Aceste date se utilizează pentru a determina traficul de utilizatori canalizat în fiecare experiență din aplicația noastră și, de asemenea, ne ajută să sintetizăm cu ușurință rezultatele experimentale.
  
 Se colectează următoarele câmpuri: 
 
@@ -12856,7 +12856,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidclientsideiap"></a>Office.Android.ClientSideIAP
 
-Telemetrie cu erori critice pentru erori de bază de date în timp ce răsfoiți fișiere și adaugați locuri.  Microsoft îl utilizează pentru a identifica problemele de corupție DB din aplicațiile care pot împiedica utilizatorul să adauge locuri sau să le răsfoiți din aplicație în Word, Excel sau PowerPoint.
+Telemetrie pentru erori critice pentru erori de bază de date în timp ce răsfoiți fișiere și adaugați locuri.  Microsoft îl utilizează pentru a identifica problemele de corupție DB din aplicațiile care pot împiedica utilizatorul să adauge locuri sau să le răsfoiți din aplicație în Word, Excel sau PowerPoint.
 
 Se colectează următoarele câmpuri:
 
