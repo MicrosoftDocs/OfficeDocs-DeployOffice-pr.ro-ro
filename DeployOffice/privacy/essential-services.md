@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre servicii esențiale în Office, cum ar fi Clic și Pornire și Licențiere, și asigură o listă de evenimente și câmpuri de date pentru aceste servicii esențiale.
 hideEdit: true
-ms.openlocfilehash: 03274656b30fe1e30e609ef32aa38947917a23cd
-ms.sourcegitcommit: 954510a42df092730412aa25cd8683f6a629537c
+ms.openlocfilehash: 8934226591ed83c630a1c98e5be70e521c93295e
+ms.sourcegitcommit: 862ffbcfc2d7c3722dddb5b008d7b68c9316c675
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "49685841"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "49799147"
 ---
 # <a name="essential-services-for-office"></a>Servicii esențiale pentru Office
 
@@ -327,7 +327,7 @@ Se colectează următoarele câmpuri:
 
   - **Microsoft\_ADAL\_broker\_app** - informează dacă ADAL a utilizat un broker pentru autentificare
 
-  - **Microsoft\_ADAL\_broker\_app\_used** - menționează numele brokerului (de ex., Windows Account Management)
+  - **Microsoft\_ADAL\_broker\_app\_used** - menționează numele brokerului (de exemplu, Windows Account Management)
 
   - **Microsoft\_ADAL\_broker\_version** - menționează versiunea brokerului în cazul în care s-a utilizat
 
@@ -423,7 +423,7 @@ Se colectează următoarele câmpuri:
 
   - **Resource** – resursa pentru care utilizatorul solicită un simbol, cum ar fi Exchange sau SharePoint.
 
-  - **Scenarioid** - GUID. Mai multe evenimente pot aparține unui singur scenariu, de ex., scenariul poate fi adăugarea unui cont nou, dar există mai multe solicitări care apar ca parte a scenariului respectiv. Acest ID permite corelarea.
+  - **Scenarioid** - GUID. Mai multe evenimente pot aparține unui singur scenariu, de exemplu, scenariul poate fi adăugarea unui cont nou, dar există mai multe solicitări care apar ca parte a scenariului respectiv. Acest ID permite corelarea.
 
   - **Scenarioname** – numele scenariului căruia îi aparține acest eveniment de autentificare.
 
@@ -588,7 +588,7 @@ Se colectează următoarele câmpuri:
 
 - **Microsoft_ADAL_is_silent_ui** - specificarea adevărat/fals dacă UI a fost afișată (solicitare) de ADAL
 
-- **Microsoft_ADAL_is_successfull** - specificarea adevărat/fals dacă ADAL API a reușit (MacOS)
+- **Microsoft_ADAL_is_successfull** - specificarea adevărat/fals dacă ADAL API a reușit (macOS)
 
 - **Microsoft_ADAL_is_successful** - specificarea adevărat/fals dacă ADAL API a reușit 
 
@@ -692,7 +692,7 @@ Se colectează următoarele câmpuri:
 
 - **MSAL_read_token** - simboluri citite din cache (AT, ART, FRT, LRT, IRT, PRT, EAT [EAT = AT-ul expirat a fost citit, dar a fost eliminat]).
 
-- **MSAL_read_token_last_error** - dacă MSAL a întâlnit o eroare la citirea din cache, vom stoca informațiile aici. (De exemplu: eroare de citire disc din SO, eroare portchei în MacOS).
+- **MSAL_read_token_last_error** - dacă MSAL a întâlnit o eroare la citirea din cache, vom stoca informațiile aici. (De exemplu: eroare de citire disc din SO, eroare Portchei în macOS).
 
 - **MSAL_request_duration** - cât a durat solicitarea de când s-a apelat API-ul de nivel superior MSAL, până când v-am returnat un rezultat.
 
@@ -718,7 +718,7 @@ Se colectează următoarele câmpuri:
 
 - **MSAL_write_token** - simbolurile care au fost scrise în cache  (AT, ART, FRT, LRT, IRT, PRT, EAT [EAT = AT-ul expirat a fost citit, dar a fost eliminat]).
 
-- **MSAL_write_token_last_error** - dacă MSAL a întâlnit o eroare la scrierea în cache, vom stoca informațiile aici. (De exemplu: eroare de citire disc din SO, eroare portchei în MacOS).
+- **MSAL_write_token_last_error** - dacă MSAL a întâlnit o eroare la scrierea în cache, vom stoca informațiile aici. (De exemplu: eroare de citire disc din SO, eroare Portchei în macOS).
 
 - **oneauth_api** - OneAuth API invocat pentru această încercare de autentificare.
 
@@ -726,15 +726,15 @@ Se colectează următoarele câmpuri:
 
 - **oneauth_version** - versiunea OneAuth SDK.
 
-- **Platform** - Platforma sistemului de operare (0: Windows desktop, 1: Android, 2: iOS, 3: MacOS, 4: UWP)
+- **Platform** - Platforma sistemului de operare (0: Windows desktop, 1: Android, 2: iOS, 3: macOS, 4: UWP)
 
 - **Promptreasoncorrelationid** - un identificator de corelare care poate fi utilizat pentru a căuta un eveniment de autentificare anterior, care este utilizat pentru a explica de ce i s-a solicitat utilizatorului să se autentifice.
 
 - **Resource** - resursa pentru care se solicită un simbol.
 
-- **Scenarioid** - mai multe evenimente pot aparține unui singur scenariu, de ex., scenariul poate fi adăugarea unui cont nou, dar există mai multe solicitări care apar ca parte a scenariului respectiv. Acest identificator activează corelarea acelor evenimente conexe.
+- **Scenarioid** - mai multe evenimente pot aparține unui singur scenariu, de exemplu, scenariul poate fi adăugarea unui cont nou, dar există mai multe solicitări care apar ca parte a scenariului respectiv. Acest identificator activează corelarea acelor evenimente conexe.
 
-- **Scenarioname** - numele scenariului de aplicație în care se solicită autentificarea, de ex., prima inițializare, verificarea licenței, etc.
+- **Scenarioname** - numele scenariului de aplicație în care se solicită autentificarea, de exemplu, prima inițializare, verificarea licenței, etc.
 
 - **Scope** - domeniul pentru care se solicită un simbol.
 
@@ -823,7 +823,7 @@ Se colectează următoarele câmpuri:
 
 - **Actiontype** - singura valoare este „oneauthtransaction”.
 
-- **Appaudience** - public aplicație (automatizare, pre-producție și producție)
+- **Appaudience** - public aplicație (automatizare, pre-producție sau producție)
 
 - **Appname** - numele aplicației
 
@@ -875,7 +875,7 @@ Se colectează următoarele câmpuri:
 
 - **oneauth_version** - versiunea OneAuth SDK.
 
-- **Platform** - platforma SO (0: Win32, 1: Android, 2: iOS, 3: MacOS, 4: WinRT
+- **Platform** - platforma SO (0: Win32, 1: Android, 2: iOS, 3: macOS, 4: WinRT
 
 - **Scenarioname** - numele scenariului pentru care autentificarea este necesară, specificat de aplicația de apelare.
 
@@ -2988,7 +2988,7 @@ Raportează rezultatul încercării de instalare completă
 
 Raportează acțiunea care stabilește intrarea colectată utilizând CollectParameters
 
-- **BitField -** valoarea întreagă a argumentului BitField, care ne spune dacă s-a solicitat un canal de instalare/actualizare explicit. De exemplu, Canal Beta, Canal curent (previzualizare), Canal curent, Canal Enterprise lunar, Canal Enterprise semestrial (previzualizare) sau Canal Enterprise semestrial.
+- **BitField –** valoarea întreagă a argumentului BitField, care ne spune dacă s-a solicitat un canal de instalare/actualizare explicit. De exemplu, Canal Beta, Canal curent (previzualizare), Canal curent, Canal Enterprise lunar, Canal Enterprise semestrial (previzualizare) sau Canal Enterprise semestrial.
 
 - **ChannelID -** întreg reprezentând valoarea de enumerare a canalului de actualizare/instalare selectat. De exemplu, Canal Beta, Canal curent (previzualizare), Canal curent, Canal Enterprise lunar, Canal Enterprise semestrial (previzualizare), Canal Enterprise semestrial sau nevalid.
 
@@ -3067,7 +3067,7 @@ Raportează acțiunea care citește intrarea etichetată din semnătura încorpo
 
 Raportează parametrii utilizați pentru instalarea Office
 
-- **BitField -** valoarea întreagă a argumentului BitField, care ne spune dacă s-a solicitat un canal de instalare/actualizare explicit. De exemplu, Canal Beta, Canal curent (previzualizare), Canal curent, Canal Enterprise lunar, Canal Enterprise semestrial (previzualizare) sau Canal Enterprise semestrial.
+- **BitField –** valoarea întreagă a argumentului BitField, care ne spune dacă s-a solicitat un canal de instalare/actualizare explicit. De exemplu, Canal Beta, Canal curent (previzualizare), Canal curent, Canal Enterprise lunar, Canal Enterprise semestrial (previzualizare) sau Canal Enterprise semestrial.
 
 - **ChannelID -** întreg reprezentând valoarea de enumerare a canalului de actualizare/instalare selectat. De exemplu, Canal Beta, Canal curent (previzualizare), Canal curent, Canal Enterprise lunar, Canal Enterprise semestrial (previzualizare), Canal Enterprise semestrial sau nevalid.
 
@@ -3315,6 +3315,20 @@ Se colectează următoarele câmpuri:
 
 - **SessionID** – GUID pentru conectarea evenimentelor după sesiune
 
+### <a name="officeandroiddocsuipaywallcontrolpurchasetokenredemptionresponse"></a>Office.Android.DocsUI.PaywallControl.PurchaseTokenRedemptionResponse
+
+*[Acest eveniment se numea anterior Office.Android.DocsUI.Views.PurchaseTokenRedemptionResponse.]*
+
+Această telemetrie de produs este colectată pentru urmărirea și înregistrarea informațiilor cu privire la starea tranzacțiilor interne și la reconciliere, pentru a îmbunătăți fiabilitatea și performanța.   Microsoft utilizează date pentru a analiza și a îmbunătăți fiabilitatea și performanța procesării tranzacțiilor interne și a mecanismelor de reconciliere.
+
+Se colectează următoarele câmpuri:
+
+- **MicrosoftPurchaseOrderId** - ID comandă Microsoft trimis de Serviciul de federație cu amănuntul (RFS) pentru urmărire.
+
+- **ResponseCode** - cod răspuns HTTP (int)
+
+- **StatusCode** - RFS cod de stare de răspuns (RFS definit de enumerare integrată - finită)
+
 
 ### <a name="officeandroiddocsuipaywallcontrolseeallfeaturesanalytics"></a>Office.Android.DocsUI.PaywallControl.SeeAllFeaturesAnalytics
 
@@ -3343,22 +3357,26 @@ Se colectează următoarele câmpuri:
 - **SessionID** – GUID pentru conectarea evenimentelor după sesiune
 
 
-### <a name="officeandroiddocsuiviewspurchasetokenredemptionresponse"></a>Office.Android.DocsUI.Views.PurchaseTokenRedemptionResponse
+### <a name="officeandroiddocsuiviewsdimeerror"></a>Office.Android.DocsUI.Views.DimeError
 
-Această telemetrie de produs este colectată pentru urmărirea și înregistrarea informațiilor cu privire la starea tranzacțiilor interne și la reconciliere, pentru a îmbunătăți fiabilitatea și performanța.   Microsoft utilizează date pentru a analiza și a îmbunătăți fiabilitatea și performanța procesării tranzacțiilor interne și a mecanismelor de reconciliere.
+Acest eveniment este colectat pentru aplicația Office pentru Android (lansată pe Huawei și în China Stores) Acest eveniment indică o încercare nereușită de a cumpăra un abonament Microsoft 365 prin Dime (un webURL încărcat în clientul webview). Doar scenariile de eroare sunt capturate. Datele despre acest eveniment sunt doar date despre erori și sunt utilizate pentru a asigura starea de funcționare a fluxului de achiziții Dime din client.
 
 Se colectează următoarele câmpuri:
 
-- **MicrosoftPurchaseOrderId** - ID comandă Microsoft trimis de Serviciul de federație cu amănuntul (RFS) pentru urmărire.
+- **CorrelationID** - ID care identifică în mod unic o sesiune de achiziții Dime.
 
-- **ResponseCode** - cod răspuns HTTP (int)
-
-- **StatusCode** - RFS cod de stare de răspuns (RFS definit de enumerare integrată - finită)
+- **ErrorReason** - indică motivul pentru care s-a produs eroarea.
+  - 0 – Eroare necunoscută
+  - 1 – Internet indisponibil
+  - 2 – validare nereușită a identificatorului unic universal (UUID)
+  - 3 – Identificatorul unic universal (UUID) este null sau necompletat
+  - 4 – Eroare de injectare JavaScript în care aplicația Office pentru Android nu poate transfera authToken la Dime
+  - 5 – WebURL de bază încărcat în client nu este valid
 
 
 ### <a name="officedimesdkhealth"></a>Office.Dime.Sdk.Health
 
-Acest eveniment capturează date care ajută să monitorizați starea componentelor Dime. Datele sunt utilizate pentru a monitoriza și a alerta despre starea fluxului de achiziționare Dime, pentru a asigura funcționarea conform așteptărilor. 
+Acest eveniment capturează date care ajută să monitorizați starea componentelor Dime. De exemplu, pentru fluxul de achiziție din cadrul aplicației, atunci când un utilizator optează pentru a cumpăra un abonament Microsoft 365 din cadrul aplicației Office pentru Android sau de pe dispozitive care rulează Windows.
 
 Se colectează următoarele câmpuri:
 
@@ -3410,23 +3428,23 @@ Se colectează următoarele câmpuri:
 
 - **Data_QosLevel** - severitate 0/1/2
 
-- **Data_SDX_AssetId** -ID activ al conținutului de găzduire a serviciului Service Delivered Experience (SDX)
+- **Data_SDX_AssetId** - ID de activ al conținutului de găzduire pentru Win32 al serviciului Service Delivered Experience (SDX)
 
-- **Data_SDX_BrowserToken** - tokenul browserului
+- **Data_SDX_BrowserToken** - tokenul browserului pentru Win32
 
-- **Data_SDX_HostJsVersion** - versiunea de bibliotecă JavaScript
+- **Data_SDX_HostJsVersion** - versiunea de bibliotecă JavaScript pentru Win32
 
-- **Data_SDX_Id** - Id Service Delivered Experience
+- **Data_SDX_Id** - Id Service Delivered Experience pentru Win32
 
-- **Data_SDX_InstanceId** - ID-ul de instanță al SDX
+- **Data_SDX_InstanceId** - ID-ul de instanță al SDX pentru Win32
 
-- **Data_SDX_MarketplaceType** - tip de market SDX
+- **Data_SDX_MarketplaceType** - tip de market SDX pentru Win32
 
-- **Data_SDX_OfficeJsVersion** - Versiune JS Office
+- **Data_SDX_OfficeJsVersion** - Versiune JS Office pentru Win32
 
-- **Data_PageSessionId** - ID-ul de sesiune SDX
+- **Data_PageSessionId** - ID-ul de sesiune SDX pentru Win32
 
-- **Data_SDX_Version** - versiunea SDX
+- **Data_SDX_Version** - versiunea SDX pentru Win32
 
 - **CollectionTime** – marca de timp a evenimentului
 
@@ -3459,7 +3477,7 @@ Se colectează următoarele câmpuri:
 
   - **ACID** - identificator GUID care reprezintă produsul Office pentru care are licență utilizatorul
 
-  - **DwEulaId** - identificator numeric al tipului de Termeni ai licenței care tocmai au fost acceptați de către utilizator
+  - **DwEulaId** - identificator numeric al tipului de Termeni ai licenței care au fost acceptați de către utilizator
 
 ### <a name="officelicensingactivation"></a>Office.Licensing.Activation 
 
@@ -3565,7 +3583,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officelicensingheartbeat"></a>Office.Licensing.Heartbeat 
 
-La fiecare sesiune verificăm dacă au trecut 72 de ore de la ultima reînnoire de licență și încercăm să extindem valabilitatea licenței curente. Acest eveniment raportează succesul sau eșecul apelului pe care îl efectuăm pentru a ne asigura că putem extinde valabilitatea licenței și să păstrăm funcțională instalarea Office a utilizatorului. Este de importanță critică în diagnosticarea problemelor legate de abonament și serviciu pentru utilizator și în detectarea regresiilor pentru utilizatorii care dețin deja un abonament activat.
+La fiecare sesiune, verificăm dacă au trecut 72 de ore de la ultima reînnoire de licență și încercăm să extindem valabilitatea licenței curente. Acest eveniment raportează succesul sau eșecul apelului pe care îl efectuăm pentru a ne asigura că putem extinde valabilitatea licenței și să păstrăm funcțională instalarea Office a utilizatorului. Este de importanță critică în diagnosticarea problemelor legate de abonament și serviciu pentru utilizator și în detectarea regresiilor pentru utilizatorii care dețin deja un abonament activat.
 
 Se colectează următoarele câmpuri:
 
@@ -15405,7 +15423,9 @@ Nu sunt colectate date necesare de serviciu de Configurația Serviciilor.
 
 ## <a name="telemetry-events"></a>Evenimente de telemetrie
 
-### <a name="officeandroiddocsuiviewspaywalloperationmetrics"></a>Office.Android.DocsUI.Views.PaywallOperationMetrics
+### <a name="officeandroiddocsuipaywallcontrolpaywalloperationmetrics"></a>Office.Android.DocsUI.PaywallControl.PaywallOperationMetrics
+
+*[Acest eveniment se numea anterior Office.Android.DocsUI.Views.PaywallOperationMetrics.]*
 
 Microsoft îl utilizează pentru a obține starea de bună funcționare, succesul sau ratele de eroare pentru utilizator cu privire la achiziții, pentru a asigura investițiile corespunzătoare pentru a îmbunătăți experiența de achiziționare a clientului pe platformele mobile.
 
@@ -15417,7 +15437,9 @@ Se colectează următoarele câmpuri:
 
 - **PaywallOperationType** - tipul operațiunii Paywall (enumerare / număr întreg – finit)
 
-### <a name="officeandroiddocsuiviewspaywallsessiondata"></a>Office.Android.DocsUI.Views.PaywallSessionData
+### <a name="officeandroiddocsuipaywallcontrolpaywallsessiondata"></a>Office.Android.DocsUI.PaywallControl.PaywallSessionData
+
+*[Acest eveniment se numea anterior Office.Android.DocsUI.Views.PaywallSessionData.]*
 
 Metadate bazate pe sesiune atunci când interfața de utilizator Paywall este afișată utilizatorului. Microsoft le utilizează pentru a obține traseul utilizatorului și a înțelege versiunile de dispozitiv și de sistem de operare folosite de utilizator cu scopul de a susține deciziile privind investițiile în îmbunătățirea experienței în aceste domenii.
 
@@ -16898,8 +16920,6 @@ Se colectează următoarele câmpuri:
   - **ErrorRuleVersion** - versiunea regulii de telemetrie care a cauzat eroarea
 
   - **WarningInfo** - număr informații de diagnosticare avertisment
-
-<!-- end list -->
 
   - **QueueFlushCount** - numărul de goliri ale cozii de așteptare
 
