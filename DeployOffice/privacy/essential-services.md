@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre servicii esențiale în Office, cum ar fi Clic și Pornire și Licențiere, și asigură o listă de evenimente și câmpuri de date pentru aceste servicii esențiale.
 hideEdit: true
-ms.openlocfilehash: 8934226591ed83c630a1c98e5be70e521c93295e
-ms.sourcegitcommit: 862ffbcfc2d7c3722dddb5b008d7b68c9316c675
+ms.openlocfilehash: 7660e79628e31b17fb2b1c606378391419f15e8e
+ms.sourcegitcommit: 163de1916420d26e4a0ef9de941fc4e86ade0412
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49799147"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "50242166"
 ---
 # <a name="essential-services-for-office"></a>Servicii esențiale pentru Office
 
@@ -3466,6 +3466,14 @@ Se colectează următoarele câmpuri:
 
 - **toggleCount** - Int – de câte ori a comutat utilizatorul între vizualizare diferitelor produse înainte de a apăsa butonul Achiziționare, în sesiunea curentă de Paywall.
 
+### <a name="officeiospaywallsuccessscreenseeallbenefitsbuttontap"></a>Office.iOS.Paywall.SuccessScreen.SeeAllBenefitsButtonTap
+
+Telemetrie de utilizare pentru a afla când atinge utilizatorul „Vedeți toate avantajele” după o achiziție reușită, pentru a vedea aplicațiile și caracteristicile incluse în achiziția pe care tocmai a făcut-o. Aceste date sunt utilizate pentru a contribui la dezvoltarea viitoarelor îmbunătățiri, pentru a minimiza întreruperea utilizatorului în timpul actualizărilor aplicației.
+
+Se colectează următoarele câmpuri:
+
+- **productId** - Șir - ID-ul produsului din App Store pentru care utilizatorul vizualizează toate avantajele oferite
+
 
 ### <a name="officelicensingaccepteulaforcurrentlicense"></a>Office.Licensing.AcceptEulaForCurrentLicense 
 
@@ -4332,7 +4340,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="catalogerrorsignature"></a>catalog.errorsignature
 
-Acest eveniment indică faptul că s-a produs o eroare în timpul validării semnăturii codului pentru un fișier de actualizare colateral.  Orice verificare colaterală nereușită a semnăturii codului trebuie să fie considerată nevalidă.
+Acest eveniment raportează diverse probleme cu fișierele descărcate, inclusiv nepotrivirile legate de semnătura furnizorului și valoarea hash din fișierul descărcat. Utilizăm acest eveniment pentru a detecta problemele cu publicarea setului manifest pentru aplicații.
 
 Se colectează următoarele câmpuri:
 
@@ -4360,9 +4368,15 @@ Se colectează următoarele câmpuri:
 
 - **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
 
+- **FileHash** – valoarea hash a fișierului descărcat
+
+- **NumeFișier** – numele fișierului care afișează nepotrivirea legată de valoarea hash
+
+- **HashInCatalog** – intrare de valoare hash în fișierul catalog corespunzător
+
 - **HowTocheck** - preferința pentru verificarea actualizărilor
 
-- **Payload** - conține numele fișierului catalog cu semnătura nevalidă. Textul static diferit descrie condiții de eroare diferite.
+- **Codul de** - conține informații despre problema de raportare a aplicației
 
 - **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
 
@@ -7987,11 +8001,13 @@ Se colectează următoarele câmpuri:
 
 - **HowToCheck** - cum se verifică setările
 
-- **Payload** - text static
+- **Activity Result** - text static *[Acest câmp a fost eliminat din compilările de Office actuale, dar poate apărea în continuare în compilări mai vechi.]*
 
 - **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
 
 - **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **Motivul** - textul static care indică faptul că o actualizare silențioasă nu poate continua, întrucât interfața utilizator este deschisă
 
 - **SessionId** - identificatorul pentru sesiune
 
@@ -9392,6 +9408,8 @@ Se colectează următoarele câmpuri:
 
 - **Channel** - preferința pentru public
 
+- **Notificare particularizată** - valoare booleană care indică dacă s-a utilizat o notificare particularizată.
+
 - **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
 
 - **DeviceID** - identificatorul dispozitivului
@@ -9410,7 +9428,7 @@ Se colectează următoarele câmpuri:
 
 - **HowTocheck** - preferința pentru verificarea actualizărilor
 
-- **Payload** - text care indică natura evenimentului.
+- **Payload** - text care indică natura evenimentului. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
 - **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
 
@@ -10523,6 +10541,7 @@ Se colectează următoarele câmpuri:
 
 - **Success** - indică dacă aplicația vizată a raportat reușita operațiunii
 
+- **UpdateID** - identificatorul actualizării.
     
 ### <a name="installstatuscodesign"></a>installstatus.codesign
 
@@ -10577,7 +10596,11 @@ Se colectează următoarele câmpuri:
 
 - **AppVersionLong** - versiunea aplicației
 
+- **BundleReachable** - valoare booleană care indică dacă a existat o problemă la accesarea pachetului de aplicații Microsoft AutoUpdate.
+
 - **Channel** - preferința pentru public
+
+- **Codesigned** - valoare booleană, care indică dacă Asistentul de actualizare a fost proiectat în comun în mod corect.
 
 - **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
 
@@ -10595,9 +10618,11 @@ Se colectează următoarele câmpuri:
 
 - **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
 
+- **Exists** - valoare booleană care indică dacă asistentul de actualizare există pe disc.
+
 - **HowTocheck** - preferința pentru verificarea actualizărilor
 
-- **Payload** - conține o indicație privind existența componentei Daemon în locația așteptată și dacă codul acesteia este semnat.
+- **Payload** - conține o indicație privind existența componentei Daemon în locația așteptată și dacă codul acesteia este semnat. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
 - **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
 

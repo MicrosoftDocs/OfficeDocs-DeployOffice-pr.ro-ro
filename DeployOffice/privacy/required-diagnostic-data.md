@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre datele de diagnosticare obligatorii în Office și le furnizează o listă de evenimente și câmpuri de date.
 hideEdit: true
-ms.openlocfilehash: 6b099a73550f3a2c31147b9c7a5adb34dce6ff5f
-ms.sourcegitcommit: 9f4afc7525d1d4cb6fbc0feef721a8eaffc09048
+ms.openlocfilehash: 7bf7ce172600d1b944f521da6bb5e0420d6d59f2
+ms.sourcegitcommit: 163de1916420d26e4a0ef9de941fc4e86ade0412
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "49867464"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "50242202"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Date de diagnosticare obligatorii pentru Office
 
@@ -29,7 +29,7 @@ Datele de diagnosticare se folosesc pentru a păstra Office în siguranță și 
 
 Aceste date de diagnostic sunt colectate și trimise către Microsoft despre software-ul client Office care rulează pe dispozitivul utilizatorului. Anumite date de diagnosticare sunt obligatorii, în timp ce altele sunt opționale. Vă oferim posibilitatea de a alege dacă să ne trimiteți datele de diagnosticare obligatorii sau opționale, utilizând controalele de confidențialitate, cum ar fi setările de politici pentru organizații. Puteți vedea datele de diagnosticare care ne sunt trimise utilizând Vizualizatorul de date de diagnosticare.
 
-***Datele de diagnosticare obligatorii** _ sunt datele minime necesare pentru a păstra Office securizat, actualizat și într-o stare de funcționare conform așteptărilor pe dispozitivul pe care este instalat.
+***Datele de diagnosticare obligatorii*** sunt datele minime necesare pentru a păstra Office securizat, actualizat și într-o stare de funcționare conform așteptărilor pe dispozitivul pe care este instalat.
 
 Datele de diagnosticare obligatorii ajută la identificarea problemelor cu Office care pot fi asociate cu o configurație de dispozitiv sau software. De exemplu, ne poate ajuta să stabilim dacă o caracteristică de Office înregistrează căderi mai frecvent într-o anumită versiune de sistem de operare, cu caracteristici nou-introduse, sau atunci când anumite caracteristici de Office sunt dezactivate. Datele de diagnosticare obligatorii ne ajută să detectăm, să diagnosticăm și să remediem aceste probleme mai rapid, astfel încât impactul asupra utilizatorilor sau organizațiilor este redus.
 
@@ -57,7 +57,7 @@ Următorul tabel furnizează o listă de categorii pentru datele de diagnosticar
 - O listă de câmpuri de date în fiecare eveniment
 - O descriere a fiecărui câmp de date
 
-| _ *Categorie**       | **Subtip de date**| **Descriere**    |
+| **Categorie**       | **Subtip de date**| **Descriere**    |
 | ---------- | ------------- | ---- |
 | **Inventar și instalare software** | [Inventar și instalare Office](#office-setup-and-inventory-subtype)   | Produsul instalat, versiunea și starea de instalare.  |
 | | [Configurație program de completare Office](#office-add-in-configuration-subtype)  | Programele de completare software și setările lor.     |
@@ -1291,6 +1291,7 @@ Se colectează următoarele câmpuri:
   
   - **LoadResult** -starea de succes a încărcării
 
+  - **OfficeArchitecture** - Arhitectura clientului Office
 
 #### <a name="officevisiovisioaddonload"></a>Office.Visio.Visio.AddonLoad
 
@@ -2064,7 +2065,7 @@ Se colectează următoarele câmpuri:
 
 - **iKey** - ID al serverului pentru servicii de înregistrare
 
-- **RMS.AuthCallbackProvided** - indică dacă se furnizează apelare inversă pentru autentificare ca intrare pentru apelul API sau nu
+- **RMS.AuthCallbackProvided** - indică dacă se furnizează callback pentru autentificare ca intrare pentru apelul API sau nu
 
 - **RMS.ConnectionInfo.ExtranetUrl** - URL de extranet pentru informațiile de conexiune
 
@@ -2126,7 +2127,7 @@ Se colectează următoarele câmpuri:
 
 - **iKey** - ID al serverului pentru servicii de înregistrare
 
-- **RMS.AuthCallbackProvided** - indică dacă se furnizează apelare inversă pentru autentificare ca intrare pentru apelul API sau nu
+- **RMS.AuthCallbackProvided** - indică dacă se furnizează callback pentru autentificare ca intrare pentru apelul API sau nu
 
 - **RMS.ConnectionInfo.ExtranetUrl** - URL de extranet pentru informațiile de conexiune
 
@@ -5367,6 +5368,37 @@ Se colectează următoarele câmpuri:
 
 - **userDuration** - Dublu – Durata în milisecunde a timpului petrecut de utilizator în Paywall
 
+
+#### <a name="officeiospaywallprovisioningresponse"></a>Office.iOS.Paywall.Provisioning.Response
+
+Telemetrie tehnologică critică cu Serviciul de federație cu amănuntul Microsoft (RFS), pentru a colecta informațiile furnizate în acest eveniment. RFS este serviciul intern utilizat în cadrul Microsoft pentru verificarea încrucișată a achiziției. Datele sunt utilizate pentru a face ca starea de funcționare a apelului API să fie efectuată la RFS, ceea ce ar ajuta la înțelegerea ratei de succes și depanarea oricărei erori.
+
+Se colectează următoarele câmpuri:
+
+- **entryPoint** - Șir – butonul/fluxul din care a fost afișat Paywall. Cum ar fi „Buton upgrade premium” sau „Primul flux de rulare”.
+
+- **failureReason** - Șir – adăugat doar atunci când starea este „eroare”. Indică răspunsul de eroare dat de răspunsul de asigurare a accesului RFS.
+
+- **productId** - Șir – ID-ul de produs din App Store pentru care a fost făcută solicitarea
+
+- **status** - Șir – Succes sau Eroare, indică dacă solicitarea a fost realizată cu sau fără succes
+
+
+#### <a name="officeiospaywallskuchooserbuybuttontap"></a>Office.iOS.Paywall.SKUChooser.BuyButtonTap
+
+Telemetrie de utilizare critică, care indică momentul în care utilizatorul apasă butonul Achiziționare/Cumpărare. Utilizat pentru a deduce modelul de utilizare și măsurătoarea de conversie pentru utilizatorii care încearcă să achiziționeze un abonament în aplicație.
+
+Se colectează următoarele câmpuri:
+
+- **entryPoint** - Șir – butonul/fluxul din care a fost afișat Paywall. Cum ar fi „Buton upgrade premium” sau „Primul flux de rulare”.
+
+- **isDefaultSKU** - Bool - dacă utilizatorul achiziționează produsul recomandat de noi, prin afișarea acestuia ca implicit.
+
+- **productId** - Șir – ID-ul de produs din App Store al produsului pentru care a fost apăsat butonul Cumpărare
+
+- **toggleCount** - Int – de câte ori a comutat utilizatorul între vizualizarea produselor diferite, înainte de a apăsa butonul Cumpărare, în sesiunea curentă de Paywall.
+
+
 #### <a name="officeiospaywallskuchoosermorebenefitsstats"></a>Office.iOS.Paywall.SKUChooser.MoreBenefits.Stats
 
 Acest eveniment colectează caracteristicile și aplicațiile pe care le extinde utilizatorul din „Vedeți mai multe beneficii”, precum și durata și timpul consumat.  Datele sunt utilizate pentru înțelegerea caracteristicii „Vedeți mai multe beneficii” și pentru optimizarea ulterioară a experienței în versiunile viitoare.
@@ -5378,6 +5410,16 @@ Se colectează următoarele câmpuri:
 - **productId** - Șir - ID-ul produsului din App Store pentru care utilizatorul vizualizează mai multe beneficii oferite
 
 - **userDuration** - Dublu – Durata în milisecunde a timpului petrecut de utilizator pe ecranul beneficii.
+
+
+### <a name="officeiospaywallskuchooserproductswitched"></a>Office.iOS.Paywall.SKUChooser.ProductSwitched
+
+Telemetrie de utilizare pentru a vedea de câte ori comută utilizatorul între SKU-uri diferite înainte de a încerca o achiziție.
+
+Se colectează următoarele câmpuri:
+
+- **productId**- șir - ID-ul App Store al produsului pe care utilizatorul tocmai a comutat de la vizualizarea de produse disponibile din selectorul SKU.
+
 
 #### <a name="officeiospaywallskuchooserstats"></a>Office.iOS.Paywall.SKUChooser.Stats
 
@@ -11469,6 +11511,7 @@ Se colectează următoarele câmpuri:
 
 - **Metoda** -metodă COM a programului de completare, care a dus la blocare 
 
+- **OfficeArchitecture** - Arhitectura clientului Office
 
 #### <a name="officeprogrammabilitytelemetryaddincrash"></a>Office.Programmability.Telemetry.AddInCrash
 
