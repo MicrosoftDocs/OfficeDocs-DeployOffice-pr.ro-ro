@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate opționale, inclusiv condițiile de utilizare care se aplică.
 hideEdit: true
-ms.openlocfilehash: d0eea79f28d2c2f79991ac0d59ebb6a567fecb21
-ms.sourcegitcommit: e64b8f2b7f92a3972d8dc83f47d84648fbe17370
+ms.openlocfilehash: ed197ed1cc8dd3c19d10a227510fe687da54d9c7
+ms.sourcegitcommit: f7496035cde1b3a5a4efb9013fd30064fb0c9132
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931448"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "50597378"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Prezentare generală a experiențelor conectate opționale în Office
 
@@ -42,7 +42,7 @@ Bing pune la dispoziție în Outlook pentru iOS și Android experiențele următ
 
 - **Sugestii despre locație:**   Atunci când adăugați un loc public cu o adresă poștală la un element de calendar, adresa poștală completă este inclusă în câmpul Locație.
 - **Calendare interesante:**   Vă puteți [abona](https://support.microsoft.com/office/cff1429c-5af6-41ec-a5b4-74f2c278e98c) la calendare cu echipele sportive sau emisiunile TV favorite.
-- **Timp de călătorie în Urmează:** Următorul eveniment va fi rezumat în partea de sus a inboxului de e-mail într-o fișă denumită [Urmează](https://www.osupportweb.com/a/outlook-mobile/?s=up-next&f=how-does-up-next-work). În Outlook pentru Android, această experiență necesită Hărți Bing ca să furnizeze timpul de călătorie estimat.
+- **Timp de călătorie în Urmează:** Următorul eveniment va fi rezumat în partea de sus a inboxului de e-mail într-o fișă denumită [Urmează](https://support.microsoft.com/office/d316ba95-c0d8-4a6e-87a3-84dd17f3775e). În Outlook pentru Android, această experiență necesită Hărți Bing ca să furnizeze timpul de călătorie estimat.
 
  Aceste experiențe bazate pe Bing vă sunt licențiate conform condițiilor din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și sunt acoperite de [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). Toate interogările de căutare pe care le furnizați organizației Aplicații Microsoft 365 pentru întreprindere în timp ce utilizați aceste servicii sunt trimise către Microsoft Bing. Acestea nu sunt legate pentru dvs. de organizația Bing.
 
@@ -99,7 +99,7 @@ Pentru a determina dacă administratorul v-a oferit capacitatea de a utiliza exp
 
 Dacă utilizați Office pentru Mac, deschideți orice aplicație Office și selectați meniul de aplicații (cum ar fi Word sau Excel) > **Preferințe** > **Confidențialitate**. Această acțiune va deschide caseta de dialog Setări de confidențialitate de cont, unde puteți vizualiza opțiunile de confidențialitate.
 
-Pentru mai multe informații, consultați [Setări de confidențialitate pentru cont](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b).
+Pentru mai multe informații, consultați: [Setări de confidențialitate pentru cont](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b).
 
 > [!NOTE]
 > Dacă administratorul organizației dvs. v-a oferit o versiune de licențiere în volum de Office 2019, Project 2019 sau Visio 2019, accesați **Fișier** > **Opțiuni** > **Centru de autorizare** > **Setări Centru de autorizare** > **Opțiuni de confidențialitate**. Acolo ar trebui să vedeți o casetă de selectare pentru **Activarea experiențelor conectate opționale**. Dacă nu vedeți această casetă de selectare în Project 2019 sau Visio 2019, alegeți **Setări de confidențialitate...** în caseta de dialog **Centru de autorizare**. Apoi, ar trebui să apară caseta de dialog **Setări de confidențialitate** cu o casetă de selectare pentru **Activați experiențele conectate opționale**.
@@ -110,7 +110,7 @@ Dacă administratorul v-a oferit capacitatea de a utiliza experiențe conectate 
 
 Dacă utilizați Office pentru Mac, deschideți orice aplicație Office și selectați meniul de aplicații (cum ar fi Word sau Excel) > **Preferințe** > **Confidențialitate**. Această acțiune va deschide caseta de dialog Setări de confidențialitate de cont, unde puteți vizualiza opțiunile de confidențialitate.
 
-Pentru mai multe informații, consultați [Setări de confidențialitate pentru cont](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b).
+Pentru mai multe informații, consultați: [Setări de confidențialitate pentru cont](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b).
 
 > [!NOTE]
 > Dacă administratorul organizației dvs. v-a oferit o versiune de licențiere în volum de Office 2019, Project 2019 sau Visio 2019, accesați **Fișier** > **Opțiuni** > **Centru de autorizare** > **Setări Centru de autorizare** > **Opțiuni de confidențialitate**. Acolo ar trebui să vedeți o casetă de selectare pentru **Activarea experiențelor conectate opționale**. Dacă nu vedeți această casetă de selectare în Project 2019 sau Visio 2019, alegeți **Setări de confidențialitate...** în caseta de dialog **Centru de autorizare**. Apoi, ar trebui să apară caseta de dialog **Setări de confidențialitate** cu o casetă de selectare pentru **Activați experiențele conectate opționale**.
