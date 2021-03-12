@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate pentru Office, cum ar fi experiențele care analizează conținut sau experiențele care descarcă conținut online.
 hideEdit: true
-ms.openlocfilehash: 8471214380e05fde406d0298dd70b10924f898ef
-ms.sourcegitcommit: 6cffc990cc0d883e2bc84eff12abad37807f9975
+ms.openlocfilehash: fe0d70bb03699af3b393de560234f9a1bb32c3c7
+ms.sourcegitcommit: f7496035cde1b3a5a4efb9013fd30064fb0c9132
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "50152777"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "50597342"
 ---
 # <a name="connected-experiences-in-office"></a>Experiențe conectate în Office
 
@@ -63,7 +63,7 @@ Următorul tabel furnizează o listă de experiențe conectate care vă analizea
 |Notificare de partajare|[Primiți notificări atunci când membrii echipei dvs. actualizează fișierul partajat](https://support.microsoft.com/office/9cc94893-02d5-4d96-9b3f-8b9414d5047a)|
 |*Verificator de similaritate*\* (o caracteristică a Editorului)|[Verificați-vă documentul de similarități cu sursele online](https://support.microsoft.com/office/6d942360-b5ca-445f-a84d-6e8c66fc40d2) |
 | *Căutare inteligentă*\*   | [Obțineți detalii despre ceea ce lucrați cu Căutare inteligentă](https://support.microsoft.com/office/debf2083-5ac0-4739-8667-ae2467bec044) |
-| Răspunsuri sugerate | [Ce sunt răspunsurile sugerate?](https://www.osupportweb.com/a/outlook-mobile/?p=all&s=feature-walkthroughs&f=what-are-suggested-replies)|
+| Răspunsuri sugerate | [Ce sunt răspunsurile sugerate?](https://support.microsoft.com/office/58517b93-946e-42d4-95d0-777aa5aa42a5) <br/> [Cum sunt generate răspunsurile sugerate?](https://support.microsoft.com/office/af9cfa57-4f4f-419f-b76d-bb305c3a9d4d)|
 | Atingere pentru Word (Adăugare din fișiere)   | [Găsiți și utilizați conținutul de care aveți nevoie, atunci când aveți nevoie, fără a ieși din Word](https://support.microsoft.com/office/860118fc-1f61-41f6-922f-40084a284658)   |
 |Predicții text (o caracteristică a Editorului)|[Scrieți mai repede cu predicții de text în Word](https://support.microsoft.com/office/7afcb4f3-4aa2-443a-9b08-125a5d692576)|
 |Transcriere |[Transcrierea înregistrărilor](https://support.microsoft.com/office/7fc2efec-245e-45f0-b053-2a97531ecf57)|
@@ -83,9 +83,9 @@ Următorul tabel furnizează o listă de experiențe conectate care descarcă co
 
 | **Nume**      | **Mai multe informații**  |
 | ------------- | ------------- |
-| Aplicațiile de calendar| [Ce sunt aplicațiile de calendar?](https://www.osupportweb.com/a/outlook-mobile/?p=android&s=getting-started-on-outlook&f=what-are-calendar-apps) |
+| Aplicațiile de calendar| [Ce sunt aplicațiile de calendar?](https://support.microsoft.com/office/57f5ad1d-c364-4054-924e-c796b80f382b) |
 | Fonturi cloud                 | [Fonturi cloud în Office](https://support.microsoft.com/office/f7b009fe-037f-45ed-a556-b5fe6ede6adb)  |
-| Întrebări frecvente |Atunci când alegeți **Setări** > **Ajutor și feedback** > **Întrebări frecvente** la Outlook pentru iOS și Android, vi se solicită să [https://www.osupportweb.com/a/outlook-mobile](https://www.osupportweb.com/a/outlook-mobile).|
+| Întrebări frecvente |Atunci când alegeți **Setări** > **Ajutor și Feedback** > **Întrebări Frecvente** despre Outlook pentru iOS și Android, sunteți dus la [Ajutor Outlook pentru iOS](https://support.microsoft.com/article/4456b5ef-d20e-4e86-abee-c95f9eba26da) sau [Ajutor Outlook pentru Android](https://support.microsoft.com/article/8ffeb4f6-b231-4b20-b36a-07e2bce0504b).|
 | Efecte de cerneală                 | [Desenați și scrieți cu cerneală în Office](https://support.microsoft.com/office/6D76C674-7F4B-414D-B67F-B3FFEF6CCF53)  |
 | Inserarea pictogramelor                | [Inserați pictograme în Microsoft Office](https://support.microsoft.com/office/e2459f17-3996-4795-996e-b9a13486fa79)   |
 | Inserarea Microsoft Forms      | [Inserați un formular sau un test în PowerPoint](https://support.microsoft.com/office/1a316f81-9ea7-4bc2-bda0-024c0d780df1) |
@@ -94,14 +94,14 @@ Următorul tabel furnizează o listă de experiențe conectate care descarcă co
 | *Inserați video online*\*     | [Inserați un videoclip de pe YouTube sau de pe alt site](https://support.microsoft.com/office/8340ec69-4cee-4fe1-ab96-4849154bc6db) |
 | *Calendare interesante*\*| [Abonați-vă la un calendar](https://support.microsoft.com/office/cff1429c-5af6-41ec-a5b4-74f2c278e98c) referitor la echipele sportive sau emisiunile TV preferate în Outlook pentru iOS și Android. |
 | *Sugestii de locație*\* | Atunci când adăugați un loc public cu o adresă poștală la un element de calendar, Outlook pentru iOS și Android va include și adresa poștală completă în câmpul Locație. |
-| Hărți în detaliile evenimentului | Știți unde trebuie să mergeți cu [hărți](https://www.osupportweb.com/a/outlook-mobile/?s=time-to-leave&f=how-can-i-choose-which-map-will-open-when-i-click-on-get-directions&p=all) în detaliile evenimentului în Outlook pentru iOS și Android. |
+| Hărți în detaliile evenimentului | Pagina cu detaliile evenimentului va afișa [hartă](https://support.microsoft.com/office/0678bfde-9cb7-4beb-9581-712abfe2bb46) pe baza adresei locației evenimentului pe Outlook pentru iOS și Android. |
 | Ajutor Office                 | Atunci când alegeți **Ajutor** > **Ajutor** din panglică sau utilizați F1 într-o aplicație Office   |
 | Căutare formă online (Visio) | [Găsiți mai multe forme și tipare](https://support.microsoft.com/office/0475ddea-2a0a-4dec-ab8c-7dda9e63bca9)  |
 | *Pornire rapidă PowerPoint*\*     | [Cercetați un subiect cu Pornire rapidă PowerPoint](https://support.microsoft.com/office/4784f273-0b2c-456c-9c89-24e5b977c224) |
 | *Cercetare*\*    | [Faceți cu ușurință cercetare pentru o lucrare în Word](https://support.microsoft.com/office/1728f286-8702-4d72-8169-ab7677ca0e1f) |
 | Spune-mi    | [Rezolvați treburile rapid cu funcția „Spune-mi”](https://support.microsoft.com/office/f20d2198-17b8-4b09-a3e5-007a337f1e4e)  |
 | Șabloane  | [Descărcați șabloane gratuite, predefinite](https://support.microsoft.com/office/29f2a18d-29a6-4a07-998b-cfe5ff7ffbbb)  |
-|*Timp de călătorie estimat în Urmează*\*|Atunci când alegeți să permiteți ca Outlook pentru iOS și Android să vă acceseze locația, o estimare a timpului de deplasare către următorul eveniment va fi inclusă în fișa [Urmează](https://www.osupportweb.com/a/outlook-mobile/?s=up-next&f=how-does-up-next-work) din partea de sus a inboxului.|
+|*Timp de călătorie estimat în Urmează*\*|Atunci când alegeți să permiteți ca Outlook pentru iOS și Android să vă acceseze locația, o estimare a timpului de deplasare către următorul eveniment va fi inclusă în fișa [Urmează](https://support.microsoft.com/office/d316ba95-c0d8-4a6e-87a3-84dd17f3775e) din partea de sus a inboxului.<br/><br/> [Ce sunt notificările Timpul de Plecare?](https://support.microsoft.com/office/ff4896c5-d3a7-40ef-8954-e5c99e8b88bd)|
 | *Bara meteo*\* (Outlook)| [Modificați localitatea pentru prognoza Barei meteo din calendar](https://support.microsoft.com/office/D11B7532-7C58-489E-8103-5CC5D727B06B) |
 
 > [!NOTE]
