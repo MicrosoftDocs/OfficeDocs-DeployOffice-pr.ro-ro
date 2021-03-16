@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate opționale, inclusiv condițiile de utilizare care se aplică.
 hideEdit: true
-ms.openlocfilehash: ed197ed1cc8dd3c19d10a227510fe687da54d9c7
-ms.sourcegitcommit: f7496035cde1b3a5a4efb9013fd30064fb0c9132
+ms.openlocfilehash: 942f32d7a8d177e6d74530a8382c145e94bec41a
+ms.sourcegitcommit: dee7b8706ba5a0e763052d2f2f79fb2d3d3a6907
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "50597378"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "50826418"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Prezentare generală a experiențelor conectate opționale în Office
 
@@ -87,7 +87,7 @@ Atunci când utilizați Magazinul Office, utilizarea site-ului magazinului propr
 
 ### <a name="travel-time-in-up-next-in-outlook-for-ios"></a>Timp de călătorie în Urmează în Outlook pentru iOS
 
-În Outlook pentru iOS, următorul eveniment va fi rezumat în partea de sus a inboxului de e-mail într-o fișă denumită [Urmează](https://www.osupportweb.com/a/outlook-mobile/?s=up-next&f=how-does-up-next-work). Această experiență necesită un serviciu deținut de Apple, denumit Hărți Apple, pentru a oferi timpul de călătorie estimat. Se aplică [termenii de utilizare](https://www.apple.com/legal/internet-services/maps/) Apple Maps și [politica de confidențialitate](https://www.apple.com/legal/privacy) Apple.
+În Outlook pentru iOS, următorul eveniment va fi rezumat în partea de sus a inboxului de e-mail într-o fișă denumită [Urmează](https://support.microsoft.com/office/d316ba95-c0d8-4a6e-87a3-84dd17f3775e). Această experiență necesită un serviciu deținut de Apple, denumit Hărți Apple, pentru a oferi timpul de călătorie estimat. Se aplică [termenii de utilizare](https://www.apple.com/legal/internet-services/maps/) Apple Maps și [politica de confidențialitate](https://www.apple.com/legal/privacy) Apple.
 
 ### <a name="weather-bar-in-outlook"></a>Bara meteo în Outlook
 
