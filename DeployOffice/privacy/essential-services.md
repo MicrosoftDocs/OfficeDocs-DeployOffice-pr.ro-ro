@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre servicii esențiale în Office, cum ar fi Clic și Pornire și Licențiere, și asigură o listă de evenimente și câmpuri de date pentru aceste servicii esențiale.
 hideEdit: true
-ms.openlocfilehash: 7660e79628e31b17fb2b1c606378391419f15e8e
-ms.sourcegitcommit: 163de1916420d26e4a0ef9de941fc4e86ade0412
+ms.openlocfilehash: 8408a2e8a6e9c8594e428762034ba5b8e8a54548
+ms.sourcegitcommit: a31e96cefd11ffece917dce618414989bf3a98da
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "50242166"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "51031995"
 ---
 # <a name="essential-services-for-office"></a>Servicii esențiale pentru Office
 
@@ -1134,7 +1134,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_16\_Version -** versiunea Office 16 
 
-  - **Data\_AddingFixedProducts-** Produsele pe care le adăugăm 
+  - **Data\_AddingFixedProducts-** produsele pe care le adăugăm 
 
   - **Data\_AddingProducts -** Ce produse ni s-a solicitat să adăugăm 
 
@@ -1882,7 +1882,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
+  - **Data\_15\_UpdateVersion -**  la ce versiune Office 15 actualizăm 
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -3374,6 +3374,42 @@ Se colectează următoarele câmpuri:
   - 5 – WebURL de bază încărcat în client nu este valid
 
 
+### <a name="officeandroiddocsuiviewspremiumfeatureupsell"></a>Office.Android.DocsUI.Views.PremiumFeatureUpsell
+
+Acest eveniment capturează clicuri făcute de un utilizator gratuit pentru a vizualiza o caracteristică din spatele peretelui de plată. Aceste date se utilizează pentru a măsura interacțiunea utilizatorilor cu experiența contextuală de vânzări și pentru a înțelege ce caracteristici sunt preferate de utilizator pentru a-l determina să cumpere un abonament. Acest lucru ne ajută să investim pentru a îmbunătăți setul preferat de puncte de intrare. 
+
+Se colectează următoarele câmpuri:
+
+- **featureId** - TCID pentru caracteristica premium
+
+- **FeatureName** - Titlu Caracteristică Premium
+
+- **consultațiPlanButtonClick** - de câte ori se face clic pe "Vedeți butoanele de plan" în interfața de utilizator actualizată
+
+### <a name="officeappleiapreviewyoursubscriptionios"></a>Office.Apple.IAPReviewYourSubscriptioniOS
+
+Acest eveniment capturează metadatele bazate pe sesiune atunci când interfața de utilizator In-App-Purchase (IAP) este afișată utilizatorului și butoanele cu care interacționează ulterior utilizatorul. Aceste date sunt utilizate pentru a ne ajuta să înțelegem divergentele din fluxul de achiziționare și le compară cu pâlnia din altă experiență de achiziție, pentru a înțelege ce experiență este mai bună pentru utilizator. 
+
+Se colectează următoarele câmpuri:
+
+- **TipFlux** - Integral - Fluxul de unde a fost lansat IAP.
+
+- **Restaurare** - Șir - eticheta regulii este înregistrată atunci când se face clic pe butonul restaurare
+
+- **CaracteristiciPremium** - Șir - eticheta regulii este înregistrată atunci când se face clic pe butonul "CaracteristiciPremium"
+
+- **Produs** - Șir - SKU-ul selectat de utilizatori
+
+
+### <a name="officeappleinapppurchasecontext"></a>Office.Apple.InAppPurchaseContext
+
+Acest eveniment măsoară telemetria de utilizare critică pentru punctul de intrare a ecranului de achiziționare în aplicație. Datele ajută la înțelegerea și îmbunătățirea experienței de utilizator prin identificarea punctului de intrare preferat pentru o achiziție în aplicație.
+
+Se colectează următoarele câmpuri:
+
+- **context** - Șir - Fluxul prin care utilizatorul a ajuns pe pagina de achiziționare a aplicației
+
+
 ### <a name="officedimesdkhealth"></a>Office.Dime.Sdk.Health
 
 Acest eveniment capturează date care ajută să monitorizați starea componentelor Dime. De exemplu, pentru fluxul de achiziție din cadrul aplicației, atunci când un utilizator optează pentru a cumpăra un abonament Microsoft 365 din cadrul aplicației Office pentru Android sau de pe dispozitive care rulează Windows.
@@ -3452,6 +3488,16 @@ Se colectează următoarele câmpuri:
 
 - **Data_UserAgent** - antet Tag-uri
 
+
+### <a name="officedocssharedpremiumfeaturemessagebar"></a>Office.Docs.Shared.PremiumFeatureMessageBar
+
+Acest eveniment colectează atingerile utilizatorului gratuit pentru o caracteristică premium aflată în spatele paywallului. Datele sunt utilizate pentru a înțelege setul de caracteristici cu care interacționează consumatorii în timp ce se transformă în utilizatori plătiți. Acest lucru ne spune punctele de intrare preferate ale utilizatorilor și îmbunătățește experiența de utilizator.
+
+Se colectează următoarele câmpuri:
+
+- **featureId** - TCID pentru caracteristica premium pe care utilizatorul le atinge
+
+
 ### <a name="officeiospaywallskuchooserbuybuttontap"></a>Office.iOS.Paywall.SKUChooser.BuyButtonTap
 
 Telemetria de utilizare critică este colectată pentru a indica momentul în care utilizatorul apasă butonul Achiziționare/Cumpărare.  Datele sunt utilizate pentru a deduce modelul de utilizare și măsurătoarea de conversie pentru utilizatorii care încearcă să achiziționeze un abonament în aplicație.
@@ -3504,6 +3550,26 @@ Se colectează următoarele câmpuri:
 Dacă nu putem activa automat licența dintr-un motiv sau altul, afișăm utilizatorului un expert de activare. Acesta raportează faptul că expertul i se afișează utilizatorului. Este de importanță critică pentru a detecta dacă utilizatorul se află în stare bună, fără să îi lipsească funcționalități, este utilizat pentru sănătatea sistemului și în scopuri de diagnosticare dacă un utilizator raportează o problemă cu computerul
 
 Acest eveniment nu colectează niciun câmp.
+
+### <a name="officelicensingbusbarcheckfordynamicbusbarexperiment"></a>Office.Licensing.BusBar.CheckForDynamicBusbarExperiment
+
+Acest eveniment se declanșează o singură dată pentru fiecare tip de bară de business cu licențiere afișată care are activată bara de zbor business dinamică (grup de tratament). Acest eveniment de date raportează dacă există o campanie dinamică de bară de business a Platformei de Programare a Ciclului de Viață pregătită pe disc. Datele vor fi utilizate pentru a măsura starea noii tehnologii a barei de business cu licențiere dinamică a Platformei de Programare a Ciclului de Viață.
+
+Se colectează următoarele câmpuri:
+
+- **Does InformareAignExist (bool)** - Indică dacă campania este pe disc
+
+- **Tip (int32)** - indică tipul de bară de business de licențiere
+
+
+### <a name="officelicensingbusbarshowstashedbusbar"></a>Office.Licensing.BusBar.ShowStashedBusbar
+
+Acest eveniment se declanșează atunci când bara dinamică de business Platformă de Programare a Ciclului de Viață nu se afișează și se afișează în schimb bara de business statică. Acest eveniment de date va fi utilizat pentru a vă asigura că revenirea la bara de business statică are succes.
+
+Se colectează următoarele câmpuri:
+
+- **Tip (int32)** - indică tipul de bară de business de licențiere
+
 
 ### <a name="officelicensingdialogswebviewdialogclose"></a>Office.Licensing.Dialogs.WebViewDialog.Close
  
@@ -4014,6 +4080,17 @@ Se colectează următoarele câmpuri:
  
 - **EnrollmentResult** - rezultatul înscrierii în Intune
 
+### <a name="skuproductpricenullevent"></a>SKU.PREȚ.PRODUS.NUL.EVENIMENT
+
+Acest eveniment este utilizat pentru a capta evenimentele pentru a cuantifica impactul erorii, datorită cărora utilizatorii de astăzi văd "Nul" în loc de un preț pe ecranul de alegere SKU. Eroarea va fi diagnosticată și mai mult, pentru a determina o remediere. 
+
+Se colectează următoarele câmpuri:
+
+- **PrețNegăsit** - Prețurile nu se găsesc în magazin.
+
+- **MagazinNeinițializat** - când magazinul nu este inițializat cu succes.
+
+
 ## <a name="microsoft-autoupdate-mau-events"></a>Evenimente Microsoft AutoUpdate (MAU)
 
 ### <a name="additionalappinfoinvalidpreference"></a>additionalappinfo.invalidpreference
@@ -4215,6 +4292,49 @@ Se colectează următoarele câmpuri:
 - **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
 
 - **SessionId** - identificatorul pentru sesiune
+
+### <a name="appinstallxpcremoteobjecterror"></a>appinstall.xpcremoteobjecterror
+
+Acest eveniment raportează o eroare găsită în timp ce încearcă să se conecteze la Instrumentul de Ajutor Privilegiat prin conexiunea XPC. Utilizăm acest eveniment pentru a urmări și a rezolva problemele posibile de instalare MAU.
+
+Se colectează următoarele câmpuri:
+
+- **App** – procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul aplicației.
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** – versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowTocheck** - preferința pentru verificarea actualizărilor
+
+- **Payload** - Conține informații despre natura erorii întâlnite cu înregistrarea aplicațiilor.
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
 
 ### <a name="appregistryconfig"></a>appregistry.config
 
@@ -9559,6 +9679,50 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
+
+### <a name="guidashboardrowviewupdatestate"></a>gui.dashboardrowview.updatestate
+
+Acest eveniment raportează despre o eroare găsită în timp ce s-a încercat afișarea informațiilor despre aplicație în interfața de utilizator MAU. Folosim acest eveniment pentru a asigura starea de funcționare a MAU și punctul de eroare și urmărire adresă.
+
+Se colectează următoarele câmpuri:
+
+- **App** – procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul aplicației.
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** – versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowTocheck** - preferința pentru verificarea actualizărilor
+
+- **Payload** -conține informații despre natura erorii întâlnite cu înregistrarea aplicațiilor.
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+
 ### <a name="guidashboardviewappisopendialogdisplay"></a>gui.dashboardview.appisopendialog.display 
 
 Acest eveniment indică faptul că interfața de utilizator a afișat o casetă de dialog pentru a închide o aplicație deschisă în vederea continuării cu actualizarea aplicației. Acest eveniment este utilizat pentru a determina volumul de actualizări întârziate cu scopul de a oferi îmbunătățiri viitoare pentru a minimiza întreruperea utilizatorului.
@@ -10325,6 +10489,55 @@ Se colectează următoarele câmpuri:
 - **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
 
 - **SessionId** - identificatorul pentru sesiune
+
+
+### <a name="installedappacknowledgedcoreappleevent"></a>installedapp.acknowledgedcoreappleevent
+
+Acest eveniment indică faptul că Microsoft AutoUpdate (MAU) a primit un eveniment de confirmare Apple al unei aplicații înregistrate de a închide aplicația pentru a continua cu actualizarea de aplicație în așteptare. Acest eveniment este utilizat pentru a contribui la dezvoltarea viitoarelor îmbunătățiri, pentru a minimiza întreruperea utilizatorului în timpul actualizărilor aplicației. 
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul pentru aplicația actualizată
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppleEventClass** -indică tipul de eveniment trimis/recunoscut
+
+- **AppleEventID** - identificator unic pentru evenimentul trimis/recunoscut
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - conține număru de înregistrări
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **UpdateID** - identificatorul actualizării.
 
 
 ### <a name="installedappinvalidbundle"></a>installedapp.invalidbundle
@@ -11197,7 +11410,7 @@ Se colectează următoarele câmpuri:
 
 - **HowTocheck** - preferința pentru verificarea actualizărilor
 
-- **Payload** - text care indică succesul operațiunii.
+- **Payload** - text care indică succesul operațiunii. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
 - **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
 
@@ -11205,6 +11418,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
+- **Succes** - Boolean care indică succesul operațiunii.
 
 ### <a name="installupdatestaskupdatestatus"></a>installupdatestask.updatestatus
 
@@ -11846,11 +12060,13 @@ Se colectează următoarele câmpuri:
 
 - **HowToCheck** - cum se verifică setările
 
-- **Payload** - text static
+- **Activity Result** - text static *[Acest câmp a fost eliminat din compilările de Office actuale, dar poate apărea în continuare în compilări mai vechi.]*
 
 - **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
 
 - **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **Motiv** - Text static
 
 - **SessionId** - identificatorul pentru sesiune
 
@@ -12168,11 +12384,13 @@ Se colectează următoarele câmpuri:
 
 - **HowToCheck** - cum se verifică setările
 
-- **Payload** - text static
+- **Activity Result** - text static *[Acest câmp a fost eliminat din compilările de Office actuale, dar poate apărea în continuare în compilări mai vechi.]*
 
 - **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
 
 - **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **Motiv** - Text static
 
 - **SessionId** - identificatorul pentru sesiune
 
@@ -12320,6 +12538,8 @@ Se colectează următoarele câmpuri:
 
 - **DeviceInfo_OsBuild** - versiunea sistemului de operare
 
+- **Durata** - Text care indică durata amânării
+
 - **Event_ReceivedTime** - ora la care s-a primit telemetria
 
 - **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
@@ -12328,7 +12548,7 @@ Se colectează următoarele câmpuri:
 
 - **HowToCheck** - cum se verifică setările
 
-- **Payload** - text static
+- **Activity Result** - text static *[Acest câmp a fost eliminat din compilările de Office actuale, dar poate apărea în continuare în compilări mai vechi.]*
 
 - **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
 
@@ -14590,6 +14810,47 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
+
+### <a name="updatemanagernetwork"></a>updatemanager.network
+
+Acest eveniment înregistrează disponibilitatea rețelei. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
+ 
+Se colectează următoarele câmpuri:
+
+- **App** – procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** – versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - Țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - Modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - Ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowTocheck** - preferința pentru verificarea actualizărilor
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **ServerReacheable** - Boolean care indică dacă rețeaua este disponibilă.
+
     
 ### <a name="updatemanagerupdatespending"></a>updatemanager.updatespending
 
@@ -15447,6 +15708,19 @@ Se colectează următoarele câmpuri:
 Nu sunt colectate date necesare de serviciu de Configurația Serviciilor.
 
 ## <a name="telemetry-events"></a>Evenimente de telemetrie
+
+### <a name="appdeeplink"></a>app.deep.link
+
+Acest eveniment vă ajută să urmăriți utilizarea lansării întâlnirii din calendar, pe diferite puncte finale. Acest eveniment ne permite să detectăm două lucruri atunci când este lansată o întâlnire prin Skype for Business și atunci când este lansată o întâlnire prin Teams și dacă este instalată aplicația Teams.
+
+Se colectează următoarele câmpuri: 
+
+- **cont** - Informația arhivată a contului care a efectuat acțiunea
+
+- **action_type** - acțiune efectuată, cum ar fi lansarea întâlnirii sau de instalarea aplicației
+
+- **aplicație** - Aplicația care a fost lansată printr-un link profund, cum ar fi Teams sau Skype for Business
+
 
 ### <a name="officeandroiddocsuipaywallcontrolpaywalloperationmetrics"></a>Office.Android.DocsUI.PaywallControl.PaywallOperationMetrics
 
@@ -16363,81 +16637,100 @@ Se colectează următoarele câmpuri:
 
   - **AppName -** numele aplicației afectate. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
-  - **CrashedAssignedFlights -** ediții flight atribuite procesului care a suferit o cădere. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+- **AppUsedVirtualMemory** - memorie virtuală utilizată de aplicația Office
 
-  - **CrashedConfigIds -** configurația atribuită procesului care a suferit o cădere. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+- **BucketId** - identificator bucket Watson pentru cădere
 
-  - **CrashedEcsETag -** Identificator de experiment pentru procesul care a suferit o cădere.
+- **CabGuid** - identificator Globally Unique Identifier (GUID) pentru cab Watson.
 
-  - **CrashedImpressionId -** identificatorul de impresie al procesului care a suferit o cădere. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+- **CallStack** - Stiva de apeluri interne Microsoft care provoacă căderea.
 
-  - **CrashedModuleName -** numele modulului cu erori
+- **CrashedAssignedFlights -** ediții flight atribuite procesului care a suferit o cădere. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
-  - **CrashedProcessSessionID -** identificator unic al procesului care a suferit o cădere. 
+- **CrashedConfigIds -** configurația atribuită procesului care a suferit o cădere. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
-  - **CrashedProcessSessionInitTime -** ora la care a început procesul afectat. 
+- **CrashedEcsETag -** Identificator de experiment pentru procesul care a suferit o cădere.
 
-  - **CrashedProcessSessionUninitTime** - ora la care s-a încheiat procesul afectat.
+- **CrashedImpressionId -** identificatorul de impresie al procesului care a suferit o cădere. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
-  - **HexCrashTag -** - identificatorul unic pentru codul căderii.
+- **CrashedModuleName -** numele modulului cu erori
 
-  - **CrashType -** identificator de bucket pentru tipul de cădere.
+- **CrashedProcessSessionID -** identificator unic al procesului care a suferit o cădere. 
 
-  - **DetectionTime -** ora la care s-a detectat ieșirea neprevăzută. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+- **CrashedProcessSessionInitTime -** ora la care a început procesul afectat. 
 
-  - **ErrorString -** descrierea erorii. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+- **CrashedProcessSessionUninitTime** - ora la care s-a încheiat procesul afectat.
 
-  - **ExceptionAddress -** adresa din programul unde a apărut eroarea. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+- **HexCrashTag -** - identificatorul unic pentru codul căderii.
 
-  - **ExceptionCode -** identificator de bucket pentru excepție.
+- **CrashType -** identificator de bucket pentru tipul de cădere.
 
-  - **FaultAppName -** numele aplicației defecte. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+- **DetectionTime -** ora la care s-a detectat ieșirea neprevăzută. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
-  - **InstallMethod -** dacă pentru versiunea de compilare curentă a Office s-a efectuat upgrade, dacă s-a revenit la ea sau dacă este o instalare nouă.
+- **ErrorString -** descrierea erorii. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
-  - **InstallType -** identificator pentru metoda prin care a fost instalat Office. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+- **ExceptionAddress -** adresa din programul unde a apărut eroarea. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
-  - **InstallTypeName -** un identificator pentru metoda prin care a fost instalat Office. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+- **ExceptionCode -** identificator de bucket pentru excepție.
 
-  - **IsLabMachine -** dacă Office rulează într-un laborator Microsoft. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+- **ExceptionInfo** - informații de sistem pentru excepție.
 
-  - **IsMsftInternal -** dacă utilizatorul Windows care rulează Office este angajat Microsoft. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+- **FaultAppName -** numele aplicației defecte. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+- **HangTypeCode** - reprezintă clasa de agățat în cazul în care procesul atârnat în timpul execuției.
 
-  - **ModuleBaseAddress -** adresa de bază a modulului cu erori. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+- **InstallMethod -** dacă pentru versiunea de compilare curentă a Office s-a efectuat upgrade, dacă s-a revenit la ea sau dacă este o instalare nouă.
 
-  - **ModuleBuildVersion -** numărul versiunii compilate a modulului cu erori. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+- **InstallType -** identificator pentru metoda prin care a fost instalat Office. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
-  - **ModuleMajorVersion -** numărul versiunii majore a modulului cu erori. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+- **InstallTypeName -** un identificator pentru metoda prin care a fost instalat Office. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
-  - **ModuleMinorVersion -** numărul versiunii minore a modulului cu erori. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+- **IsLabMachine -** dacă Office rulează într-un laborator Microsoft. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
-  - **ModuleName -** numele modulului cu erori. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+- **IsMsftInternal -** dacă utilizatorul Windows care rulează Office este angajat Microsoft. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
-  - **ModuleOffset -** deplasare în octeți (în hexazecimale) de la adresa de bază unde a apărut eroarea.
+- **ModuleBaseAddress -** adresa de bază a modulului cu erori. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
-  - **ModuleRevisionVersion -** numărul versiunii de revizuire compilate a modulului cu erori. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+- **ModuleBuildVersion -** numărul versiunii compilate a modulului cu erori. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
-  - **ModuleSize -** dimensiunea modulului cu erori în octeți. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+- **ModuleMajorVersion -** numărul versiunii majore a modulului cu erori. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
-  - **ModuleVersion** - versiune a modulului defect responsabil pentru o cădere.
+- **ModuleMinorVersion -** numărul versiunii minore a modulului cu erori. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
-  - **OfficeArchitectureText** - arhitectura instalației: x64, x86 etc.
+- **ModuleName -** numele modulului cu erori. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
-  - **OpenUILang -** Limba interfeței cu utilizatorul pentru aplicația Office.
+- **ModuleOffset -** deplasare în octeți (în hexazecimale) de la adresa de bază unde a apărut eroarea.
 
-  - **OSEnvironment -** identificator pentru mediul în care rulează Office.
+- **ModuleRevisionVersion -** numărul versiunii de revizuire compilate a modulului cu erori. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
-  - **PreviousBuild -** versiune compilată instalată anterior
+- **ModuleSize -** dimensiunea modulului cu erori în octeți. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
-  - **ProcessorArchitecture** - procesor arhitectură pentru mediul înconjurător: x64, x86 etc.
+- **ModuleVersion** - versiune a modulului defect responsabil pentru o cădere.
 
-  - **SessionFlags** - definește condițiile din sesiune, cum ar fi: s-a deschis fișierul sau s-a editat, s-a deschis un document în cloud, a fost finalizată secvența de încărcare etc. 
+- **OfficeArchitectureText** - arhitectura instalației: x64, x86 etc.
 
-  - **UAETypeName -** identificator de bucket privind modul brusc în care s-a închis aplicația. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+- **OpenUILang -** Limba interfeței cu utilizatorul pentru aplicația Office.
 
-  - **UninitLibletId –** identificatorul unic pentru componenta cu erori a căderii.
+- **OSEnvironment -** identificator pentru mediul în care rulează Office.
 
-  - **VerifyElseCrashTag -** identificator unic al locului unde a căzut aplicația. *[Acest eveniment a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+- **PreviousBuild -** versiune compilată instalată anterior
+
+- **ProcessorArchitecture** - procesor arhitectură pentru mediul înconjurător: x64, x86 etc.
+
+- **SessionFlags** - definește condițiile din sesiune, cum ar fi: s-a deschis fișierul sau s-a editat, s-a deschis un document în cloud, a fost finalizată secvența de încărcare etc. 
+
+- **StackHash** - furnizează o identitate codificată pentru stiva de erori din Office.
+
+- **SystemAvailableMemory** - memoria disponibilă în sistemul de operare
+
+- **UAETypeName -** identificator de bucket privind modul brusc în care s-a închis aplicația. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+
+- **UninitLibletId –** identificatorul unic pentru componenta cu erori a căderii.
+
+- **VerifyElseCrashTag -** identificator unic al locului unde a căzut aplicația. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+
+- **WatsonReportId** - identificator de raport trimis serviciului Windows Watson.
+
+- **WerEventCreatedTime** - marcă de timp pentru eveniment de raportare a erorilor Windows.
 
 ### <a name="officesystemsystemhealthungracefulappexitimmersive"></a>Office.System.SystemHealthUngracefulAppExitImmersive
 
