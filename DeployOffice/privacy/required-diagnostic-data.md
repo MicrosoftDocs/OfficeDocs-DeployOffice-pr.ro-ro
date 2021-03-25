@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre datele de diagnosticare obligatorii în Office și le furnizează o listă de evenimente și câmpuri de date.
 hideEdit: true
-ms.openlocfilehash: 7bf7ce172600d1b944f521da6bb5e0420d6d59f2
-ms.sourcegitcommit: 163de1916420d26e4a0ef9de941fc4e86ade0412
+ms.openlocfilehash: 52922aee6117744074d382f6c86e7ec50c6f874b
+ms.sourcegitcommit: f006f5890d12988e03a3878937eb02aa7e265f8d
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "50242202"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "51167381"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Date de diagnosticare obligatorii pentru Office
 
@@ -1788,6 +1788,8 @@ Se colectează următoarele câmpuri pentru Android:
 
 - **include_deleted** - în cazul în care căutarea afișează opțiunile șterse în rezultatele căutării 
 
+- **is_best_match_suggestion** - dacă sugestia de căutare selectată se potrivește cel mai bine.
+
 - **is_ics_external_data** - capturează dacă un eveniment adăugat este intern (adică adăugat în Outlook la calendarul Outlook) sau extern (adică adăugată din altă aplicație de e-mail, cum ar fi Gmail la calendarul Outlook).
 
 - **is_network_fully_connected** - valoare utilizată pentru a obține un indiciu despre motivul din spatele căutării offline. Dacă rețeaua este conectată și căutarea este offline, motivul poate fi expirarea serverului
@@ -2620,6 +2622,18 @@ Se colectează următoarele câmpuri:
 - **txp** - indică ce tip de întâlnire a fost generată din rezervări de zbor și livrări, pentru a ne ajuta să detectăm probleme legate de acest tip de întâlnire
 
 - **with_message_enabled** - indică dacă un utilizator poate răspunde cu un mesaj pentru a ne ajuta să detectăm probleme privind răspunsurile la invitații la întâlnire
+
+
+#### <a name="multiwindowlaunch"></a>multi.window.launch
+
+Acest eveniment capturează momentul în care utilizatorul ia măsuri care implică lansarea mai multor ferestre pe dispozitive pliabile, de exemplu, de exemplu compunerea mesajelor de e-mail, evenimente, deschiderea ferestrei calendarului.  Acesta utilizează acțiunea pentru a reține o astfel de acțiune, de exemplu, pentru a primi în continuare solicitarea sau pentru a lansa întotdeauna într-o fereastră nouă.  Datele colectate de acest eveniment vor fi utilizate pentru a evalua capacitatea de descoperire, eficiența, precum și preferințele generale ale utilizatorului, pentru a stimula dezvoltările curente și viitoare ale funcționalităților asociate experiențelor cu mai multe ferestre.
+
+Se colectează următoarele câmpuri: 
+
+- **is_remembered** - dacă preferința de a lansa într-o fereastră nouă din locația raportată a fost salvată de utilizator.
+
+- **multi_window_origin** - locația din aplicație unde are loc interacțiunea de a lansa un alt ecran de aplicație într-o fereastră nouă.
+
 
 #### <a name="officeandroiddocsuifileoperationsopendocumentmeasurements"></a>Office.Android.DocsUI.FileOperations.OpenDocumentMeasurements
 
@@ -6592,6 +6606,28 @@ Se colectează următoarele câmpuri:
 
   - **Data\_CloseAndReopen:bool -** a fost acest document închis și redeschis?
 
+  - **Data_ClpDocHasDrmDoc:bool** - dacă documentul are un document DRM
+
+  - **Data_ClpDocHasIdentity:bool**  - dacă documentul are informații de identitate (utilizate pentru a obține și a seta etichete de confidențialitate)
+
+  - **Data_ClpDocHasSessionMetadata:bool** - dacă documentul are metadate ale etichetelor de confidențialitate de lucru din sesiune
+
+  - **Data_ClpDocHasSessionMetadata:bool** - dacă documentul are metadate ale etichetelor de confidențialitate din SPO prin IMetadataCache
+
+  - **Data_ClpDocHasSpoPackage:bool** – dacă documentul are metadate ale etichetelor de confidențialitate din SPO prin IPackage
+
+  - **Data_ClpDocIsProtected:bool** - dacă documentul este protejat sau nu de IRM
+
+  - **Data_ClpDocMetadataSource:int** - enumerație care specifică de unde provin metadatele etichetelor de confidențialitate (IRM, parte OPC, Sharepoint etc)
+
+  - **Data_ClpDocNeedsUpconversion:bool** - dacă documentul trebuie să convertească în sus datele etichetelor de confidențialitate din partea custom.xml
+
+  - **Data_ClpDocNumFailedSetLabels:int** - numărul etichetelor de confidențialitate care nu au reușit să fie setate în document
+
+  - **Data_ClpDocHasSessionMetadata:bool** - dacă documentul are metadate ale etichetelor de confidențialitate de lucru care au fost corupte
+
+  - **Data_ClpDocWasInTrustBoundary:bool** – dacă documentul se afla la marginea de încredere (permițând elaborarea în comun în documentele protejate de etichetele de sensibilitate)
+
   - **Data\_DetachedDuration:long -** timpul cât activitatea a fost detașată/nu a rulat
 
   - **Data\_Doc\_AccessMode:long -** cum a fost deschis acest document (doar în citire | citire-scriere)
@@ -6711,6 +6747,28 @@ Se colectează următoarele câmpuri:
   - **Data\_ClearDirtyFlagTimeMS:long -** timpul necesar pentru a elimina semnalizarea cu erori a documentului
 
   - **Data\_CloneDocumentTimeMS:long -** timpul necesar pentru clona documentul înainte de a începe salvarea
+
+  - **Data_ClpDocHasDrmDoc:bool** - dacă documentul are un document DRM
+
+  - **Data_ClpDocHasIdentity:bool**  - dacă documentul are informații de identitate (utilizate pentru a obține și a seta etichete de confidențialitate)
+
+  - **Data_ClpDocHasSessionMetadata:bool** - dacă documentul are metadate ale etichetelor de confidențialitate de lucru din sesiune
+
+  - **Data_ClpDocHasSessionMetadata:bool** - dacă documentul are metadate ale etichetelor de confidențialitate din SPO prin IMetadataCache
+
+  - **Data_ClpDocHasSpoPackage:bool** – dacă documentul are metadate ale etichetelor de confidențialitate din SPO prin IPackage
+
+  - **Data_ClpDocIsProtected:bool** - dacă documentul este protejat sau nu de IRM
+
+  - **Data_ClpDocMetadataSource:int** - enumerație care specifică de unde provin metadatele etichetelor de confidențialitate (IRM, parte OPC, Sharepoint etc)
+
+  - **Data_ClpDocNeedsUpconversion:bool** - dacă documentul trebuie să convertească în sus datele etichetelor de confidențialitate din partea custom.xml
+
+  - **Data_ClpDocNumFailedSetLabels:int** - numărul etichetelor de confidențialitate care nu au reușit să fie setate în document
+
+  - **Data_ClpDocHasSessionMetadata:bool** - dacă documentul are metadate ale etichetelor de confidențialitate de lucru care au fost corupte
+
+  - **Data_ClpDocWasInTrustBoundary:bool** – dacă documentul se afla la marginea de încredere (permițând elaborarea în comun în documentele protejate de etichetele de sensibilitate)
 
   - **Data\_CommitTransactionTimeMS:long -** timpul necesar pentru a valida tranzacția de salvare
 
@@ -6857,6 +6915,28 @@ Colectat ori de câte ori PowerPoint efectuează o Salvare ca. Include tipul de 
 Se colectează următoarele câmpuri:
 
 - **Data_AddDocTelemetryResult:long** - această intrare în jurnal are toate datele de telemetrie necesare pentru documente (câmpurile Data_Doc_*)? Dacă nu, de ce?
+
+- **Data_ClpDocHasDrmDoc:bool** - dacă documentul are un document DRM
+
+- **Data_ClpDocHasIdentity:bool**  - dacă documentul are informații de identitate (utilizate pentru a obține și a seta etichete de confidențialitate)
+
+- **Data_ClpDocHasSessionMetadata:bool** - dacă documentul are metadate ale etichetelor de confidențialitate de lucru din sesiune
+
+- **Data_ClpDocHasSessionMetadata:bool** - dacă documentul are metadate ale etichetelor de confidențialitate din SPO prin IMetadataCache
+
+- **Data_ClpDocHasSpoPackage:bool** – dacă documentul are metadate ale etichetelor de confidențialitate din SPO prin IPackage
+
+- **Data_ClpDocIsProtected:bool** - dacă documentul este protejat sau nu de IRM
+
+- **Data_ClpDocMetadataSource:int** - enumerație care specifică de unde provin metadatele etichetelor de confidențialitate (IRM, parte OPC, Sharepoint etc)
+
+- **Data_ClpDocNeedsUpconversion:bool** - dacă documentul trebuie să convertească în sus datele etichetelor de confidențialitate din partea custom.xml
+
+- **Data_ClpDocNumFailedSetLabels:int** - numărul etichetelor de confidențialitate care nu au reușit să fie setate în document
+
+- **Data_ClpDocHasSessionMetadata:bool** - dacă documentul are metadate ale etichetelor de confidențialitate de lucru care au fost corupte
+
+- **Data_ClpDocWasInTrustBoundary:bool** – dacă documentul se afla la marginea de încredere (permițând elaborarea în comun în documentele protejate de etichetele de sensibilitate)
 
 - **Data_CppUncaughtExceptionCount:long** - excepții native neprinse în timp ce rula activitatea
 
@@ -7044,6 +7124,28 @@ Colectat ori de câte ori PowerPoint efectuează o salvare utilizând calea de c
 Se colectează următoarele câmpuri:
 
 - **Data_AddDocTelemetryResult:long** - această intrare în jurnal are toate datele de telemetrie necesare pentru documente (câmpurile Data_Doc_*)? Dacă nu, de ce?
+
+- **Data_ClpDocHasDrmDoc:bool** - dacă documentul are un document DRM
+
+- **Data_ClpDocHasIdentity:bool**  - dacă documentul are informații de identitate (utilizate pentru a obține și a seta etichete de confidențialitate)
+
+- **Data_ClpDocHasSessionMetadata:bool** - dacă documentul are metadate ale etichetelor de confidențialitate de lucru din sesiune
+
+- **Data_ClpDocHasSessionMetadata:bool** - dacă documentul are metadate ale etichetelor de confidențialitate din SPO prin IMetadataCache
+
+- **Data_ClpDocHasSpoPackage:bool** – dacă documentul are metadate ale etichetelor de confidențialitate din SPO prin IPackage
+
+- **Data_ClpDocIsProtected:bool** - dacă documentul este protejat sau nu de IRM
+
+- **Data_ClpDocMetadataSource:int** - enumerație care specifică de unde provin metadatele etichetelor de confidențialitate (IRM, parte OPC, Sharepoint etc)
+
+- **Data_ClpDocNeedsUpconversion:bool** - dacă documentul trebuie să convertească în sus datele etichetelor de confidențialitate din partea custom.xml
+
+- **Data_ClpDocNumFailedSetLabels:int** - numărul etichetelor de confidențialitate care nu au reușit să fie setate în document
+
+- **Data_ClpDocHasSessionMetadata:bool** - dacă documentul are metadate ale etichetelor de confidențialitate de lucru care au fost corupte
+
+- **Data_ClpDocWasInTrustBoundary:bool** – dacă documentul se afla la marginea de încredere (permițând elaborarea în comun în documentele protejate de etichetele de sensibilitate)
 
 - **Data_CppUncaughtExceptionCount:long** - excepții native neprinse în timp ce rula activitatea
 
@@ -8750,6 +8852,12 @@ Se colectează următoarele câmpuri:
 
 - **has_mip_label** - indică dacă o etichetă MIP a fost atribuită sau nu mesajului
 
+- **image_attachment_count** - indică numărul de imagini trimise ca atașări la mesaj
+
+- **image_body_count** - indică numărul de imagini trimise în linie ca parte a corpului mesajului
+
+- **image_movement_count** indică câte imagini din mesaj au fost mutate în linie sau care au fost mutate înapoi.
+
 - **is_group_escalation** - este acesta un mesaj escaladat în grup, „mesajul escaladat” este un mesaj care a fost trimis la cutia poștală a utilizatorului din cauza unei escaladări (abonat la grup)
 
 - **is_groups** - urmărește dacă mesajul trimis este un mesaj de grup sau nu
@@ -9779,6 +9887,28 @@ Se colectează următoarele câmpuri:
   - **Data\_CheckWebSharingViolationForIncOpen –** durata executării metodei CheckWebSharingViolationForIncOpen în milisecunde
    
   - **Data_CloseAndReopenWithoutDiscard -** dacă un document a fost închis și redeschis în timpul procesului de deschidere fără a fi eliminat.
+
+  - **Data_ClpDocHasDrmDoc:bool** - dacă documentul are un document DRM
+
+  - **Data_ClpDocHasIdentity:bool**  - dacă documentul are informații de identitate (utilizate pentru a obține și a seta etichete de confidențialitate)
+
+  - **Data_ClpDocHasSessionMetadata:bool** - dacă documentul are metadate ale etichetelor de confidențialitate de lucru din sesiune
+
+  - **Data_ClpDocHasSessionMetadata:bool** - dacă documentul are metadate ale etichetelor de confidențialitate din SPO prin IMetadataCache
+
+  - **Data_ClpDocHasSpoPackage:bool** – dacă documentul are metadate ale etichetelor de confidențialitate din SPO prin IPackage
+
+  - **Data_ClpDocIsProtected:bool** - dacă documentul este protejat sau nu de IRM
+
+  - **Data_ClpDocMetadataSource:int** - enumerație care specifică de unde provin metadatele etichetelor de confidențialitate (IRM, parte OPC, Sharepoint etc)
+
+  - **Data_ClpDocNeedsUpconversion:bool** - dacă documentul trebuie să convertească în sus datele etichetelor de confidențialitate din partea custom.xml
+
+  - **Data_ClpDocNumFailedSetLabels:int** - numărul etichetelor de confidențialitate care nu au reușit să fie setate în document
+
+  - **Data_ClpDocHasSessionMetadata:bool** - dacă documentul are metadate ale etichetelor de confidențialitate de lucru care au fost corupte
+
+  - **Data_ClpDocWasInTrustBoundary:bool** – dacă documentul se afla la marginea de încredere (permițând elaborarea în comun în documentele protejate de etichetele de sensibilitate)
 
   - **Data\_ContentTransaction –** set predefinit de valori pentru momentul când se poate crea tranzacția (AllowedOnLoadDocument, AllowedOnOpenComplete etc.)
 
@@ -12520,9 +12650,9 @@ Se colectează următoarele câmpuri:
   
 - **BootToStart** - dacă utilizatorul a ales să afișeze ecranul de start când începe această aplicație.
 
-- **ColdBoot** - dacă este prima dată când aplicația Office rulează după ce un sistem repornește sau un cod binar de aplicație trebuia să fie încărcat de pe disc.
+- **ColdBoot** - dacă este prima rulare a aplicației Office rulează după repornirea unui sistem sau dacă un cod binar de aplicație a trebuit să fie încărcat de pe disc. (doar MacOS/iOS)
 
-- **DeviceModel** - Modelul de dispozitiv.
+- **DeviceModel** - modelul de dispozitiv. (doar MacOS/iOS)
 
 - **DocLocation** - când se deschide un document arată ce serviciu a furnizat documentul (OneDrive, server de fișiere, SharePoint etc.)
 
@@ -12532,6 +12662,8 @@ Se colectează următoarele câmpuri:
 
 - **FirstBoot** – dacă aceasta a fost prima inițializare a aplicației.
 
+- **FreeMemoryPercentage** – ce procent din memoria dispozitivului este liber. (doar Windows)
+
 - **InitializationDuration** – durata necesară în microsecunde pentru a inițializa prima dată procesul Office.
 
 - **InterruptionMessageId** – dacă inițializarea a fost întreruptă de o casetă de dialog care solicită introducerea utilizatorului, ID-ul casetei de dialog.
@@ -12540,9 +12672,19 @@ Se colectează următoarele câmpuri:
 
 - **OpenAsNew** – dacă aplicația a fost pornită prin deschiderea unui document ca șablonul pentru unul nou. 
 
+- **PageFaultCount** - numărul de erori de pagină pentru proces. (doar Windows)
+
+- **PrimaryDiskType** – dacă dispozitivul de stocare principal este o unitate SSD sau o unitate de rotire și viteza de rotire a acesteia, dacă este cazul. (doar MacOS/iOS)
+
+- **PrivateCommitUsageMB** – sarcina validată (de exemplu, volumul de memorie validat de managerul de memorie pentru acest proces), exprimată în megabaiți, pentru acest proces. (doar Windows)
+
+- **ProcessorCount** - numărul de procesoare de pe computer. (doar MacOS/iOS)
+
+- **TotalPhysicalMemory** – volumul total de memorie fizică de pe dispozitiv. (doar MacOS/iOS)
+
 - **TotalWorkingSetMB** – volumul de memorie în megabyți din setul de lucru al procesului.
 
-- **VirtualSetMB** – volumul de memorie în megabyți din setul virtual al procesului. (Numai MacOS/iOS)
+- **VirtualSetMB** – volumul de memorie în megabyți din setul virtual al procesului. (doar MacOS/iOS)
 
 - **WorkingSetPeakMB** – cel mai mare volum de memorie în megabyți care a fost vreodată în setul de lucru al procesului până acum.
 
