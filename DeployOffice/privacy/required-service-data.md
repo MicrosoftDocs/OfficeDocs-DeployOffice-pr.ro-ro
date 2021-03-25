@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferiți administratorilor Office o prezentare generală a datelor de serviciu obligatorii care sunt colectate despre experiențele de mod conectat din Office.
 hideEdit: true
-ms.openlocfilehash: faa3507708b4768ee3b2b0f51257273c31ad2de7
-ms.sourcegitcommit: 73158b40bdc2d83bdadedeafe0fd152b449d2a44
+ms.openlocfilehash: 7480869114096dc8f858ce2b1551575c6224ae64
+ms.sourcegitcommit: 2c4bf05e77415559080766cc7d7f241e9f968108
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "47440198"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "51181931"
 ---
 # <a name="required-service-data-for-office"></a>Date de serviciu obligatorii pentru Office
 
@@ -51,7 +51,7 @@ Datele de serviciu necesare sunt separate de [date de diagnostic](overview-priva
 
 Datele de serviciu necesare sunt, de asemenea, colectate și trimise către Microsoft pentru [serviciile esențiale](essential-services.md) ale Office, cum ar fi serviciul de licențiere care confirmă că sunteți licențiat în mod corespunzător pentru a utiliza Office. Deși puteți controla multe dintre experiențele conectate care sunt la dispoziția dvs. sau a utilizatorilor dvs. în cazul în care sunteți administratorul organizației dvs., există un set de servicii care sunt esențiale pentru modul în care funcționează Office și care, prin urmare, nu pot fi dezactivate. Datele pentru serviciile esențiale sunt întotdeauna trimise și prelucrate de Microsoft atunci când utilizați Office, indiferent de modul în care sunt configurate celelalte setări legate de confidențialitate.
 
-Datele necesare serviciului sunt disponibile prin intermediul cererilor de servicii de date (DSRs). Pentru mai multe informații, consultați [angajamentul de respectare a confidențialității Microsoft](https://privacy.microsoft.com/privacystatement) și [solicitările de subiect de date Office 365 pentru](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-office365)GDPR și CCPA.
+Datele necesare serviciului sunt disponibile prin intermediul cererilor de servicii de date (DSRs). Pentru mai multe informații, consultați [angajamentul de respectare a confidențialității Microsoft](https://privacy.microsoft.com/privacystatement) și [solicitările de subiect de date Office 365 pentru](/microsoft-365/compliance/gdpr-dsr-office365)GDPR și CCPA.
 
 Dacă sunteți administrator pentru organizația dvs. și doriți să gestionați experiențele conectate, consultați următoarele articole:
 

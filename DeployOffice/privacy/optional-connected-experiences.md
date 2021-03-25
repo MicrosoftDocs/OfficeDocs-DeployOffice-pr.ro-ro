@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate opționale, inclusiv condițiile de utilizare care se aplică.
 hideEdit: true
-ms.openlocfilehash: 942f32d7a8d177e6d74530a8382c145e94bec41a
-ms.sourcegitcommit: dee7b8706ba5a0e763052d2f2f79fb2d3d3a6907
+ms.openlocfilehash: d651fb94cb031a0fc1a154201e2875c28f979f2a
+ms.sourcegitcommit: 2c4bf05e77415559080766cc7d7f241e9f968108
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "50826418"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "51181743"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Prezentare generală a experiențelor conectate opționale în Office
 
@@ -76,7 +76,7 @@ Atunci când utilizați Magazinul Office, utilizarea site-ului magazinului propr
 
 > [!NOTE]
 > - Administratorul din organizația dvs. vă poate oferi programe de completare, chiar dacă nu alegeți să utilizați Magazinul Office.
-> - Dacă sunteți administrator, pentru mai multe informații despre programele de completare, consultați secțiunea "Experiențe conectate opționale" din [Confidențialitate și securitate pentru programele de completare Office](https://docs.microsoft.com/office/dev/add-ins/concepts/privacy-and-security) și [Confidențialitate, permisiuni și securitate pentru programele de completare Outlook](https://docs.microsoft.com/office/dev/add-ins/outlook/privacy-and-security).
+> - Dacă sunteți administrator, pentru mai multe informații despre programele de completare, consultați secțiunea "Experiențe conectate opționale" din [Confidențialitate și securitate pentru programele de completare Office](/office/dev/add-ins/concepts/privacy-and-security) și [Confidențialitate, permisiuni și securitate pentru programele de completare Outlook](/office/dev/add-ins/outlook/privacy-and-security).
 
 ### <a name="research"></a>Cercetare
 
@@ -91,7 +91,7 @@ Atunci când utilizați Magazinul Office, utilizarea site-ului magazinului propr
 
 ### <a name="weather-bar-in-outlook"></a>Bara meteo în Outlook
 
-[Bara meteo](https://support.microsoft.com/office/d11b7532-7c58-489e-8103-5cc5d727b06b) în Outlook afișează prognoza meteo pentru locațiile geografice dorite. În timpul utilizării, Bara meteo în Outlook se conectează la Meteo MSN în mod implicit. MSN este deținut de Microsoft, aplicându-se condițiile din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). Atunci când utilizați Bara meteo cu Meteo MSN, Microsoft nu vă detectează locația, iar orașele pe care doriți să le afișați nu sunt corelate pentru dvs. Puteți să [modificați această setare implicită](https://docs.microsoft.com/office/client-developer/outlook/weather/extending-the-weather-bar-in-outlook) pentru a vă conecta la alți furnizori de servicii meteo. Dacă decideți să apelați la alt furnizor de servicii meteo, va trebui să consultați angajamentul de respectare a confidențialității și clauzele licenței respectivului furnizor pentru a ști ce condiții se aplică.
+[Bara meteo](https://support.microsoft.com/office/d11b7532-7c58-489e-8103-5cc5d727b06b) în Outlook afișează prognoza meteo pentru locațiile geografice dorite. În timpul utilizării, Bara meteo în Outlook se conectează la Meteo MSN în mod implicit. MSN este deținut de Microsoft, aplicându-se condițiile din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). Atunci când utilizați Bara meteo cu Meteo MSN, Microsoft nu vă detectează locația, iar orașele pe care doriți să le afișați nu sunt corelate pentru dvs. Puteți să [modificați această setare implicită](/office/client-developer/outlook/weather/extending-the-weather-bar-in-outlook) pentru a vă conecta la alți furnizori de servicii meteo. Dacă decideți să apelați la alt furnizor de servicii meteo, va trebui să consultați angajamentul de respectare a confidențialității și clauzele licenței respectivului furnizor pentru a ști ce condiții se aplică.
 
 ## <a name="how-to-determine-if-your-admin-has-given-you-the-ability-to-use-optional-connected-experiences"></a>Cum stabiliți dacă administratorul dvs. v-a oferit capacitatea de a utiliza experiențe conectate opționale
 

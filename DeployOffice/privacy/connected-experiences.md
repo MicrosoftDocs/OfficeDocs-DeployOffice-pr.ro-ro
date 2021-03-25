@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate pentru Office, cum ar fi experiențele care analizează conținut sau experiențele care descarcă conținut online.
 hideEdit: true
-ms.openlocfilehash: fe0d70bb03699af3b393de560234f9a1bb32c3c7
-ms.sourcegitcommit: f7496035cde1b3a5a4efb9013fd30064fb0c9132
+ms.openlocfilehash: d7c4af6af94025136ab09f0709d8c65382f456dd
+ms.sourcegitcommit: 2c4bf05e77415559080766cc7d7f241e9f968108
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "50597342"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "51181274"
 ---
 # <a name="connected-experiences-in-office"></a>Experiențe conectate în Office
 
@@ -57,7 +57,7 @@ Următorul tabel furnizează o listă de experiențe conectate care vă analizea
 | PowerPoint Designer   | [Creați aspecte de diapozitiv profesioniste cu PowerPoint Designer](https://support.microsoft.com/office/53c77d7b-dc40-45c2-b684-81415eac0617)   |
 |Îndrumător pentru prezentări (PowerPoint)|[Repetați prezentarea cu Îndrumătorul pentru prezentări](https://support.microsoft.com/office/cd7fc941-5c3b-498c-a225-83ef3f64f07b)|
 | Publicare în Microsoft Stream    | [Transformați prezentarea într-un videoclip](https://support.microsoft.com/office/c140551f-cb37-4818-b5d4-3e30815c3e83#bkmk_microsoftstream)  |
-| Publicare în Power BI   | [Publicați în Power BI din Excel](https://docs.microsoft.com/power-bi/service-publish-from-excel) |
+| Publicare în Power BI   | [Publicați în Power BI din Excel](/power-bi/service-publish-from-excel) |
 | *Cercetare*\*   | [Adăugați sau modificați servicii de cercetare](https://support.microsoft.com/office/b862efc5-9a7b-4f88-a23d-93712d6e4397)  |
 | Scanați o carte de vizită|  [Scanați sau atingeți pentru a adăuga persoane de contact în Outlook pentru Android](https://support.microsoft.com/office/4818ef14-0fc8-4ec2-bb4d-440ea8cae17b)|
 |Notificare de partajare|[Primiți notificări atunci când membrii echipei dvs. actualizează fișierul partajat](https://support.microsoft.com/office/9cc94893-02d5-4d96-9b3f-8b9414d5047a)|
@@ -120,14 +120,14 @@ Următorul tabel furnizează o listă a acelor experiențe conectate și furnize
 | În curând (Outlook)  |[În curând](https://support.microsoft.com/office/d4b7db49-b4e0-4f98-a0dc-156952e551e2)  |
 | Contactați asistența (Outlook) | Atunci când alegeți **Ajutor** > **Contactați asistența** în panglică|
 | Import particularizat (Visio)  | [Importați date la forme din desen](https://support.microsoft.com/office/d174b3fd-3079-42fd-81e8-2dbf8d38bb03) |
-| Notificări privind politica de prevenire a pierderii datelor (DLP) |[Trimiteți notificări prin e-mail și afișați notificările privind politica pentru politici DLP](https://docs.microsoft.com/microsoft-365/compliance/use-notifications-and-policy-tips)  |
+| Notificări privind politica de prevenire a pierderii datelor (DLP) |[Trimiteți notificări prin e-mail și afișați notificările privind politica pentru politici DLP](/microsoft-365/compliance/use-notifications-and-policy-tips)  |
 | Vizualizator date (Visio) |[Creați o diagramă Vizualizator date](https://support.microsoft.com/office/17211b46-d144-4ca2-9ea7-b0f48f0ae0a6)  |
 | Fluxuri de proiectare (Visio)  | [Proiectați un flux de lucru automat în Visio](https://support.microsoft.com/office/35f0c9a9-912b-486d-88f7-4fc68013ad1a) |
 | Listă externă (Outlook) |[Conectați o listă externă la Outlook](https://support.microsoft.com/office/9F00540E-A6B8-4510-9CE1-C79E31CBC8C9)  |
 | Mesaje prioritare (Outlook) |[Mesaje prioritare pentru Outlook](https://support.microsoft.com/office/f445ad7f-02f4-4294-a82e-71d8964e3978)  |
 | Information Rights Management |[Deschideți un fișier cu permisiuni restricționate](https://support.microsoft.com/office/c7a70797-6b1e-493f-acf7-92a39b85e30c)  |
 | Carte de vizită LinkedIn |[LinkedIn în aplicațiile și servicii Microsoft](https://support.microsoft.com/office/dc81cc70-4d64-4755-9f1c-b9536e34d381)  |
-| *Programe de completare Office*\* | [Vizualizarea, gestionarea și instalarea programelor de completare în programele Office](https://support.microsoft.com/office/16278816-1948-4028-91e5-76dca5380f8d) *(pentru utilizatori)* <br/> [Implementarea programelor de completare în centrul de administrare](https://docs.microsoft.com/microsoft-365/admin/manage/manage-deployment-of-add-ins) *(pentru administratori)* |
+| *Programe de completare Office*\* | [Vizualizarea, gestionarea și instalarea programelor de completare în programele Office](https://support.microsoft.com/office/16278816-1948-4028-91e5-76dca5380f8d) *(pentru utilizatori)* <br/> [Implementarea programelor de completare în centrul de administrare](/microsoft-365/admin/manage/manage-deployment-of-add-ins) *(pentru administratori)* |
 | Feedback Office |[Cum pot trimite feedback pentru Microsoft Office?](https://support.microsoft.com/office/2b102d44-b43f-4dd2-9ff4-23cf144cfb11)  |
 | Asistența Office (contactați-ne) |Atunci când alegeți **Ajutor** > **Contactați asistența** în panglică |
 | Organigramă (Visio) |[Crearea unei organigrame în Visio](https://support.microsoft.com/office/abb3dd17-2692-439f-9945-3a015767d96a)|
@@ -136,8 +136,8 @@ Următorul tabel furnizează o listă a acelor experiențe conectate și furnize
 | Documente recente |[Deschideți fișierele din meniul Fișier](https://support.microsoft.com/office/97f087d8-3136-4485-8e86-c5b12a8c4176)  |
 | *Asistent pentru CV*\* |[Utilizați Asistent pentru CV și LinkedIn pentru CV-uri impresionante ](https://support.microsoft.com/office/444ff6f0-ef74-4a9c-9091-ffd7a9d1917a")  |
 | Instrument de găsire sală (Outlook)|[Cum să controlați Instrumentul de găsire sală în Outlook](https://support.microsoft.com/help/2673231/how-to-control-the-room-finder-in-outlook)  |
-|Documente sigure|[Documente sigure](https://support.microsoft.com/office/e2071599-fb31-442b-a30c-198c25e2aacd) <br/> [Documente sigure în Microsoft 365 E5](https://docs.microsoft.com/microsoft-365/security/office-365-security/safe-docs)|
-| Linkuri sigure |[Linkuri sigure ATP](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-safe-links)  |
+|Documente sigure|[Documente sigure](https://support.microsoft.com/office/e2071599-fb31-442b-a30c-198c25e2aacd) <br/> [Documente sigure în Microsoft 365 E5](/microsoft-365/security/office-365-security/safe-docs)|
+| Linkuri sigure |[Linkuri sigure ATP](/microsoft-365/security/office-365-security/atp-safe-links)  |
 | Etichete de confidențialitate  |[Aplicați etichete de confidențialitate fișierelor dvs. și e-mailurilor în Office](https://support.microsoft.com/office/2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9)  |
 | Partajare  |[Partajarea registrului de lucru Excel cu alte persoane](https://support.microsoft.com/office/8D8A52BB-03C3-4933-AB6C-330AABF1E589) <br/>[Partajarea unei prezentări (PowerPoint)](https://support.microsoft.com/office/fdcad9ad-4f13-4f5b-9910-12b4108a4c86) <br/>[Partajați un document (Word)](https://support.microsoft.com/office/d39f3cd8-0aa0-412f-9a35-1abba926d354) |
 | Partajate cu mine |[Vedeți fișierele pe care alte persoane le-au partajat cu dvs.](https://support.microsoft.com/office/e0476dc7-bf2f-4203-b9ad-c809578b03e7)  |
