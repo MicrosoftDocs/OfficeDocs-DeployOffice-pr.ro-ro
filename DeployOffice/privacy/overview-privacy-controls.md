@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Administratorii Office primesc o prezentare generală a controalelor de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere (numite anterior Office 365 ProPlus), inclusiv pentru date de diagnosticare și experiențe conectate.
 hideEdit: true
-ms.openlocfilehash: f894db695caf8a6dfa56dd6db541d8b8fd4bd564
-ms.sourcegitcommit: 596a0a60394011aafe1119f353ac76f27e1a4d1b
+ms.openlocfilehash: d984be8ef09c8a46c4588ae643c4d6ebad1b2533
+ms.sourcegitcommit: 2c4bf05e77415559080766cc7d7f241e9f968108
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48794771"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "51181707"
 ---
 # <a name="overview-of-privacy-controls-for-microsoft-365-apps-for-enterprise"></a>Prezentare generală a controalelor de confidențialitate pentru Aplicații Microsoft 365 pentru întreprindere
 
@@ -30,8 +30,8 @@ ms.locfileid: "48794771"
 Microsoft se angajează să vă furnizeze informațiile și controalele de care aveți nevoie pentru a face alegeri privind modul de colectare și de utilizare a datelor dvs. atunci când utilizați Aplicații Microsoft 365 pentru întreprindere (numite anterior Office 365 ProPlus).
 
 Începând cu versiunea 1904 a Aplicațiilor Microsoft 365 pentru întreprindere, vă furnizăm controale de confidențialitate noi, actualizate și îmbunătățite pentru următoarele domenii:
-- ***Diagnostic data** _ care sunt colectate și trimise la Microsoft privind software-ul client Office utilizat pe computerele care rulează Windows în organizația dvs.
-- _*_Experiențe conectate_*_ care utilizează funcționalitatea în cloud pentru a vă furniza caracteristici îmbunătățite de Office dvs. și utilizatorilor dvs.
+- ***Date de diagnosticare*** care sunt colectate și trimise la Microsoft privind software-ul client Office utilizat pe dispozitivele utilizatorului în organizația dvs.
+- ***Experiențe conectate*** care utilizează funcționalitatea în cloud pentru a vă furniza caracteristici îmbunătățite de Office dvs. și utilizatorilor dvs.
 
 Ca parte a acestor modificări, există elemente de interfață de utilizator (UI) și setări de politică noi și actualizate.
 
@@ -43,7 +43,7 @@ Aceste date de diagnostic sunt colectate și trimise către Microsoft despre sof
 
 Există trei niveluri de date de diagnosticare pentru software-ul client Aplicații Microsoft 365 pentru întreprindere dintre care puteți să alegeți:
 
-- _ *Obligatoriu* * Datele minime necesare pentru a păstra Office securizat, actualizat și într-o stare de funcționare conform așteptărilor pe dispozitivul pe care este instalat.
+- **Obligatoriu** Datele minime necesare pentru a păstra Office securizat, actualizat și într-o stare de funcționare conform așteptărilor pe dispozitivul pe care este instalat.
 
 - **Opțional** Date suplimentare care ne ajută să îmbunătățim produsele și furnizează mai multe informații care ne permit să detectăm, să diagnosticăm și să remediem problemele.
 
@@ -132,4 +132,4 @@ Pentru mai multe informații, consultați [Servicii esențiale pentru Office](es
 
 ## <a name="related-articles"></a>Articole asociate
 - [Confidențialitatea la Microsoft](https://privacy.microsoft.com/)
-- [Confidențialitatea Windows](https://docs.microsoft.com/windows/privacy/)
+- [Confidențialitatea Windows](/windows/privacy/)
