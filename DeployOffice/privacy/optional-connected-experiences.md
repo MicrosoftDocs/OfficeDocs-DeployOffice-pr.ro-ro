@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate opționale, inclusiv condițiile de utilizare care se aplică.
 hideEdit: true
-ms.openlocfilehash: d651fb94cb031a0fc1a154201e2875c28f979f2a
-ms.sourcegitcommit: 2c4bf05e77415559080766cc7d7f241e9f968108
+ms.openlocfilehash: 8a5f236c3dbb2cb3bb61a9a987f764880987a189
+ms.sourcegitcommit: 54b9d411bb6a021fb6db8df4acfb28287693c84c
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "51181743"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "51914957"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Prezentare generală a experiențelor conectate opționale în Office
 
@@ -43,6 +43,7 @@ Bing pune la dispoziție în Outlook pentru iOS și Android experiențele următ
 - **Sugestii despre locație:**   Atunci când adăugați un loc public cu o adresă poștală la un element de calendar, adresa poștală completă este inclusă în câmpul Locație.
 - **Calendare interesante:**   Vă puteți [abona](https://support.microsoft.com/office/cff1429c-5af6-41ec-a5b4-74f2c278e98c) la calendare cu echipele sportive sau emisiunile TV favorite.
 - **Timp de călătorie în Urmează:** Următorul eveniment va fi rezumat în partea de sus a inboxului de e-mail într-o fișă denumită [Urmează](https://support.microsoft.com/office/d316ba95-c0d8-4a6e-87a3-84dd17f3775e). În Outlook pentru Android, această experiență necesită Hărți Bing ca să furnizeze timpul de călătorie estimat.
+- **Vremea în calendar:** Prognoza meteo [prognoza meteo](https://support.microsoft.com/office/04c48f70-4780-47d6-bc2e-d77d2f4c4ef2) pentru locația curentă va apărea în partea de sus a ecranului calendarului.
 
  Aceste experiențe bazate pe Bing vă sunt licențiate conform condițiilor din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și sunt acoperite de [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). Toate interogările de căutare pe care le furnizați organizației Aplicații Microsoft 365 pentru întreprindere în timp ce utilizați aceste servicii sunt trimise către Microsoft Bing. Acestea nu sunt legate pentru dvs. de organizația Bing.
 

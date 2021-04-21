@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre datele de diagnosticare obligatorii în Office și le furnizează o listă de evenimente și câmpuri de date.
 hideEdit: true
-ms.openlocfilehash: 52922aee6117744074d382f6c86e7ec50c6f874b
-ms.sourcegitcommit: f006f5890d12988e03a3878937eb02aa7e265f8d
+ms.openlocfilehash: 69abd5fc0355db7758debc0193b4439754eda2f2
+ms.sourcegitcommit: b6f55a032079a9525cedd93b9e431c188ca24775
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "51167381"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "51889796"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Date de diagnosticare obligatorii pentru Office
 
@@ -633,6 +633,8 @@ Următoarele câmpuri de date sunt comune pentru toate evenimentele Outlook pent
 
 - **gcc_restrictions_enabled** - ne indică dacă s-au aplicat restricții GCC la aplicație, astfel încât să ne asigurăm că clienții noștri GCC utilizează aplicația în siguranță
  
+- **multi_pane_mode** - ne spune dacă utilizatorul de pe iPad își utilizează inboxul cu mai multe panouri activate, în care își pot vedea lista de foldere în timp ce triază mesajele de e-mail. Acest lucru este necesar pentru a ne ajuta să detectăm problemele specifice utilizatorilor care își utilizează inboxul cu mai multe panouri deschise.
+
 - **multi_window_mode** – ne indică dacă utilizatorul pe iPad folosește mai multe ferestre pentru a ne ajuta să detectăm probleme legate de utilizarea ferestrelor multiple.
 
 - **office_session_id** - un ID unic care urmărește sesiunea pentru serviciile Office conectate, pentru a ajuta la detectarea problemelor specifice unui serviciu Office integrat în Outlook, precum Word
@@ -5237,6 +5239,16 @@ Se colectează următoarele câmpuri:
 
 - **Data_FirstRunPanelName** - numele panoului din care a început experiența
 
+
+#### <a name="officefloodgateuserfactappusage"></a>Office.Floodgate.UserFact.AppUsage
+
+Aceasta indică momentul în care un utilizator a utilizat caracteristici de mare valoare în cadrul produsului. Aceasta poate indica dacă utilizatorul a descoperit caracteristica sau a utilizat-o. Semnalul va oferi detalii despre utilizarea caracteristicilor produsului, care ajută la îmbunătățirea produsului.
+
+Se colectează următoarele câmpuri: 
+
+- **FeatureAction** - o etichetă care indică caracteristica de mare valoare și acțiunea efectuată de utilizator, de exemplu, ContentPickerTried, TemplatesSeen.
+
+
 #### <a name="officelenslenssdkcloudconnectorlaunch"></a>Office.Lens.LensSdk.CloudConnectorLaunch
 
 Atunci când utilizatorul decupează imaginea și apasă pe confirmare pe selecția finală a imaginii pentru a utiliza OCR, se colectează acest eveniment.     
@@ -5289,19 +5301,6 @@ Se colectează următoarele câmpuri:
 - **TaskType** - șir care identifica intenția apelului de serviciu.
 
 
-#### <a name="officelenslenssdkpermission"></a>Office.Lens.LensSdk.Permission
-
-Permisiunile sunt o caracteristică sensibilă, întrucât fără acestea, utilizatorul nu poate experimenta niciuna din caracteristicile lentilei. Permisiunile sunt urmărite pentru a înțelege obiceiurile utilizatorilor în legătură cu furnizarea/revocarea permisiunilor. Atunci când utilizatorul interacționează cu orice dialog de permisiune din aplicația noastră, colectăm aceste evenimente. Pe baza tendințelor de utilizator pentru acceptarea și respingerea permisiunilor, identificăm îmbunătățiri ale caracteristicilor, pentru a-i ajuta pe utilizatori să înțeleagă motivul pentru care permisiunile sunt critice.
-
-Se colectează următoarele câmpuri:
-
-- **Data_action** -conține valori precum "CameraPermissionAllowed (sau Denied), StoragePermissionGranted (sau Denied), care ne ajută să înțelegem dacă utilizatorul a acceptat sau a respins permisiunile de stocare și de cameră.
-
-- **Data_Action** -acest câmp ne ajută să înțelegem ce tip de permisiune a fost solicitată de utilizator, precum permisiuni de cameră sau de stocare
-
-- **Data_action** -conține valori precum Allowed, Denied, și DeniedForever, care ne ajută să înțelegem dacă utilizatorul a acceptat sau a respins permisiunile de stocare și de cameră.
-
-
 #### <a name="officelenslenssdksavemedia"></a>Office.Lens.LensSdk.SaveMedia
 
 Acest eveniment este invocat atunci când utilizatorul face clic pe butonul Terminat și salvează imagini pe Android și iOS. Acest lucru ajută în evaluarea nivelului de implicare a utilizatorilor, cuantificând utilizatorii care salvează imagini prin aplicația noastră.
@@ -5349,105 +5348,22 @@ Se colectează următoarele câmpuri pentru iOS:
 
 #### <a name="officelenslenssdkserviceidmapping"></a>Office.Lens.LensSdk.ServiceIDMapping
 
-Atunci când o imagine este încărcată cu succes la serviciu, se colectează acest eveniment. Aceasta înseamnă că serviciul va rula acum una sau mai multe locuri de muncă pentru a procesa imaginea și a conține ID-uri relevante pentru a ajuta la depanarea procesului. De asemenea, vă ajută să analizați utilizarea diferitor caracteristici ale serviciilor.
+Acest eveniment este colectat atunci când Lens SDK interacționează cu serviciul Image-to-document (sau I2D) al Microsoft. Acest lucru înseamnă că evenimentul este apelat:
+
+- Atunci când o imagine este încărcată în serviciul nostru I2D pentru conversia și extragerea de fișiere (OCR).
+- Atunci când utilizatorul trebuie să corecteze rezultatul serviciului, trimitem feedback pentru a îmbunătăți calitatea.
+
+Datele sunt utilizate pentru a analiza problemele de utilizare și depanare legate de serviciu.  
 
 Se colectează următoarele câmpuri:
 
-- **CloudConnectorRequestId** -șir care identifică solicitarea de serviciu care a fost făcută pentru a converti imaginile prin intermediul serviciului.
+- **CloudConnectorRequestId** - șir care identifică solicitările de serviciu din aplicația client pentru scenarii de conversie și feedback.
 
-- **I2DserviceProcessID** -șir care identifică activitatea de serviciu care rulează o anumită subsolicitare 
+- **CustomerId** - acest șir ajută la maparea utilizatorilor la solicitări de servicii și ne ajută să monitorizăm utilizarea. ID-ul de utilizator este necesar pentru a respecta cerințele GDPR, întrucât serviciul nu este expus direct utilizatorilor, ci prin clienți, și pentru a identifica numărul total de persoane care utilizează serviciul, ajutând serviciul să monitorizeze volumul de utilizatori care folosesc produsul. 
 
+- **I2DFeedbackAPICorrelationId** - șir care identifică solicitarea de feedback din serviciul I2D atunci când utilizatorul corectează rezultatul serviciului.
 
-#### <a name="officeiospaywallpaywallpresented"></a>Office.iOS.Paywall.Paywall.Presented
-
-Această telemetrie de utilizare critică este colectată atunci când se afișează controlul Paywall utilizatorului și este utilizat pentru înțelegerea experienței de achiziție în cadrul aplicației pentru utilizator și pentru optimizarea acesteia pentru versiunile viitoare.
-
-Se colectează următoarele câmpuri:
-
-- **entryPoint** - Șir – butonul/fluxul din care a fost afișat Paywall. Cum ar fi „Buton upgrade premium” sau „Primul flux de rulare”
-
-- **isFRE** - Boolean – Afișăm prima experiență de rulare sau interfața utilizator obișnuită?
-
-#### <a name="officeiospaywallpaywallstats"></a>Office.iOS.Paywall.Paywall.Stats
-
-Această metadată pe baza sesiunii este colectată atunci când este afișat utilizatorului interfața de utilizator Paywall, durata interacțiunii și dacă o achiziție a fost încercată cu sau fără succes.    Datele sunt utilizate pentru a înțelege utilizarea și starea de funcționare a întregii experiențe de plată și depanare, pentru a optimiza și a depana experiența de achiziție în cadrul aplicației în versiunile viitoare.
-
-Se colectează următoarele câmpuri:
-
-- **entryPoint** - Șir – butonul/fluxul din care a fost afișat Paywall. Cum ar fi „Buton upgrade premium” sau „Primul flux de rulare”.
-
-- **isFRE** - Boolean – Afișăm prima experiență de rulare sau interfața utilizator obișnuită?
-
-- **status** - Șir – Stare de ieșire Paywall. Cum ar fi „inițiat”, „paymentDone”, „provisionFailed”
-
-- **userDuration** - Dublu – Durata în milisecunde a timpului petrecut de utilizator în Paywall
-
-
-#### <a name="officeiospaywallprovisioningresponse"></a>Office.iOS.Paywall.Provisioning.Response
-
-Telemetrie tehnologică critică cu Serviciul de federație cu amănuntul Microsoft (RFS), pentru a colecta informațiile furnizate în acest eveniment. RFS este serviciul intern utilizat în cadrul Microsoft pentru verificarea încrucișată a achiziției. Datele sunt utilizate pentru a face ca starea de funcționare a apelului API să fie efectuată la RFS, ceea ce ar ajuta la înțelegerea ratei de succes și depanarea oricărei erori.
-
-Se colectează următoarele câmpuri:
-
-- **entryPoint** - Șir – butonul/fluxul din care a fost afișat Paywall. Cum ar fi „Buton upgrade premium” sau „Primul flux de rulare”.
-
-- **failureReason** - Șir – adăugat doar atunci când starea este „eroare”. Indică răspunsul de eroare dat de răspunsul de asigurare a accesului RFS.
-
-- **productId** - Șir – ID-ul de produs din App Store pentru care a fost făcută solicitarea
-
-- **status** - Șir – Succes sau Eroare, indică dacă solicitarea a fost realizată cu sau fără succes
-
-
-#### <a name="officeiospaywallskuchooserbuybuttontap"></a>Office.iOS.Paywall.SKUChooser.BuyButtonTap
-
-Telemetrie de utilizare critică, care indică momentul în care utilizatorul apasă butonul Achiziționare/Cumpărare. Utilizat pentru a deduce modelul de utilizare și măsurătoarea de conversie pentru utilizatorii care încearcă să achiziționeze un abonament în aplicație.
-
-Se colectează următoarele câmpuri:
-
-- **entryPoint** - Șir – butonul/fluxul din care a fost afișat Paywall. Cum ar fi „Buton upgrade premium” sau „Primul flux de rulare”.
-
-- **isDefaultSKU** - Bool - dacă utilizatorul achiziționează produsul recomandat de noi, prin afișarea acestuia ca implicit.
-
-- **productId** - Șir – ID-ul de produs din App Store al produsului pentru care a fost apăsat butonul Cumpărare
-
-- **toggleCount** - Int – de câte ori a comutat utilizatorul între vizualizarea produselor diferite, înainte de a apăsa butonul Cumpărare, în sesiunea curentă de Paywall.
-
-
-#### <a name="officeiospaywallskuchoosermorebenefitsstats"></a>Office.iOS.Paywall.SKUChooser.MoreBenefits.Stats
-
-Acest eveniment colectează caracteristicile și aplicațiile pe care le extinde utilizatorul din „Vedeți mai multe beneficii”, precum și durata și timpul consumat.  Datele sunt utilizate pentru înțelegerea caracteristicii „Vedeți mai multe beneficii” și pentru optimizarea ulterioară a experienței în versiunile viitoare.
-
-Se colectează următoarele câmpuri:
-
-- **appsExpanded** - Șir - lista separată prin virgulă de servicii/aplicații pentru care au fost extinse beneficiile.
-
-- **productId** - Șir - ID-ul produsului din App Store pentru care utilizatorul vizualizează mai multe beneficii oferite
-
-- **userDuration** - Dublu – Durata în milisecunde a timpului petrecut de utilizator pe ecranul beneficii.
-
-
-### <a name="officeiospaywallskuchooserproductswitched"></a>Office.iOS.Paywall.SKUChooser.ProductSwitched
-
-Telemetrie de utilizare pentru a vedea de câte ori comută utilizatorul între SKU-uri diferite înainte de a încerca o achiziție.
-
-Se colectează următoarele câmpuri:
-
-- **productId**- șir - ID-ul App Store al produsului pe care utilizatorul tocmai a comutat de la vizualizarea de produse disponibile din selectorul SKU.
-
-
-#### <a name="officeiospaywallskuchooserstats"></a>Office.iOS.Paywall.SKUChooser.Stats
-
-Această telemetrie de utilizare este colectată pentru a vedea cum a accesat utilizatorul selectorul SKU, cât timp a petrecut pe ecranul selectorului SKU și de ce a ieșit din selectorul SKU.  Datele sunt utilizate pentru înțelegerea utilizării selectorului SKU și pentru optimizarea experienței de achiziție în cadrul aplicației în versiunile viitoare.
-
-Se colectează următoarele câmpuri:
-
-- **entryPoint** - Șir – butonul/fluxul din care a fost afișat Paywall. Cum ar fi „Buton upgrade premium” sau „Primul flux de rulare”.
-
-- **exitReason** - Șir – motivul ieșirii din selectorul SKU. Cum ar fi „Buybutton”, „CloseButton”
-
-- **isFRE** - Boolean – Afișăm prima experiență de rulare sau interfața utilizator obișnuită?
-
-- **userDuration** - Dublu – Durata în milisecunde a timpului petrecut de utilizator în selectorul SKU.
+- **I2DServiceProcessID** - șir care identifică solicitarea de serviciu din serviciul I2D atunci când utilizatorul încarcă imagini pentru conversie.
 
 
 #### <a name="officelivepersonacardconfigurationsetaction"></a>Office.LivePersonaCard.ConfigurationSetAction
@@ -9049,6 +8965,33 @@ Se colectează următoarele câmpuri:
 
 - **RMS.Url** - URL-ul serverului pentru Serviciul de administrare a drepturilor
 
+
+#### <a name="surveyfloodgatetriggermet"></a>Survey.Floodgate.TriggerMet
+
+Monitorizează atunci când un dispozitiv a îndeplinit criteriile pentru a afișa o anchetă. Se utilizează pentru a evalua procesul de declanșare a sondajului, precum și pentru a vă asigura de funcționarea corectă a semnalului utilizat pentru a analiza problemele și stările clienților
+
+Se colectează următoarele câmpuri: 
+
+- **CampaignId** - identificatorul unei campanii de servicii livrate
+
+- **SurveyId** – instanța unică a unei campanii
+
+- **SurveyType** – identifică tipul anchetei
+
+
+#### <a name="surveyuiformsubmit"></a>Survey.UI.Form.Submit
+
+Monitorizează când este remisă o anchetă. Se utilizează pentru a evalua starea procesului de solicitare a anchetei, precum și pentru a asigura funcționarea corectă a semnalului utilizat pentru a analiza problemele și stările clienților.
+
+Se colectează următoarele câmpuri: 
+
+- **CampaignId** - identificatorul unei campanii de servicii livrate
+
+- **SurveyId** – instanța unică a unei campanii
+
+- **SurveyType** – identifică tipul anchetei
+
+
 #### <a name="watchappv2"></a>watchAppV2
 
 Acest eveniment ne permite să detectăm și să remediem eventualele probleme privind capacitățile de pe Apple Watch, cum ar fi primirea de notificări și răspunsul la mesajele de e-mail.
@@ -12511,16 +12454,6 @@ Se colectează următoarele câmpuri:
 
 - **TypeId** - GUID pentru interfața pe care se apelează această metodă
 
-#### <a name="officeiospaywallfailedscreenretrybuttontap"></a>Office.iOS.Paywall.FailedScreen.RetryButtonTap
-
-Această telemetrie de utilizare este colectată pentru a afla când a eșuat Achiziționarea/Asigurarea accesului/Activarea, iar utilizatorul a apăsat butonul „Reîncercare”.  Utilizat pentru a depana scenariile de erori de achiziție care duc la reîncercarea și îmbunătățirea fiabilității procesului.
-
-Se colectează următoarele câmpuri:
-
-- **failureReason** - Șir – indică eroarea pentru care utilizatorul reîncearcă. Cum ar fi „provisioningFailed”, „purchaseFailed”, „activationFailed”.
-
-- **productid** - Șir – ID-ul produsului din App Store pentru care utilizatorul reîncearcă solicitarea nereușită
-
 
 #### <a name="officemanageabilityserviceapplypolicy"></a>Office.Manageability.Service.ApplyPolicy
 
@@ -12650,6 +12583,8 @@ Se colectează următoarele câmpuri:
   
 - **BootToStart** - dacă utilizatorul a ales să afișeze ecranul de start când începe această aplicație.
 
+- **ChildProcessCount** - numărul de procese fiu lansate de aplicație. (doar Windows)
+
 - **ColdBoot** - dacă este prima rulare a aplicației Office rulează după repornirea unui sistem sau dacă un cod binar de aplicație a trebuit să fie încărcat de pe disc. (doar MacOS/iOS)
 
 - **DeviceModel** - modelul de dispozitiv. (doar MacOS/iOS)
@@ -12664,6 +12599,10 @@ Se colectează următoarele câmpuri:
 
 - **FreeMemoryPercentage** – ce procent din memoria dispozitivului este liber. (doar Windows)
 
+- **HandleCount** – numărul de handle-uri pentru sistemul de operare deschise de proces. (doar Windows)
+
+- **HardFaultCount** - numărul de erori pagină hard pentru proces. (doar Windows)
+
 - **InitializationDuration** – durata necesară în microsecunde pentru a inițializa prima dată procesul Office.
 
 - **InterruptionMessageId** – dacă inițializarea a fost întreruptă de o casetă de dialog care solicită introducerea utilizatorului, ID-ul casetei de dialog.
@@ -12672,13 +12611,23 @@ Se colectează următoarele câmpuri:
 
 - **OpenAsNew** – dacă aplicația a fost pornită prin deschiderea unui document ca șablonul pentru unul nou. 
 
+- **OtherOperationCount** – numărul de operațiuni de intrare/ieșire efectuate, altele decât operațiunile de citire și scriere. (doar Windows)
+
+- **OtherTransferCount** - numărul de octeți transferați în timpul operațiunilor diferite de cele de citire și scriere. (doar Windows)
+
 - **PageFaultCount** - numărul de erori de pagină pentru proces. (doar Windows)
 
 - **PrimaryDiskType** – dacă dispozitivul de stocare principal este o unitate SSD sau o unitate de rotire și viteza de rotire a acesteia, dacă este cazul. (doar MacOS/iOS)
 
 - **PrivateCommitUsageMB** – sarcina validată (de exemplu, volumul de memorie validat de managerul de memorie pentru acest proces), exprimată în megabaiți, pentru acest proces. (doar Windows)
 
+- **PrivateWorkingSetMB** – volumul de memorie, în megaocteți, din setul de lucru al procesului, care nu este partajat cu alte procese. (doar Windows)
+
 - **ProcessorCount** - numărul de procesoare de pe computer. (doar MacOS/iOS)
+
+- **ReadOperationCount** – numărul de operațiuni de citire efectuate. (doar Windows)
+
+- **ReadTransferCount** - numărul de octeți citiți.
 
 - **TotalPhysicalMemory** – volumul total de memorie fizică de pe dispozitiv. (doar MacOS/iOS)
 
@@ -12687,6 +12636,10 @@ Se colectează următoarele câmpuri:
 - **VirtualSetMB** – volumul de memorie în megabyți din setul virtual al procesului. (doar MacOS/iOS)
 
 - **WorkingSetPeakMB** – cel mai mare volum de memorie în megabyți care a fost vreodată în setul de lucru al procesului până acum.
+
+- **WriteOperationCount** – numărul de operațiuni de scriere efectuate. (doar Windows)
+
+- **WriteTransferCount** - numărul de octeți scriși. (doar Windows)
 
 
 #### <a name="officepowerpointpptandroidrehearseview"></a>Office.PowerPoint.PPT.Android.RehearseView
@@ -13886,6 +13839,30 @@ Se colectează următoarele câmpuri:
   - **Data\_TagCount** – de căte ori a apărut fiecare eroare
 
   - **Data\_TagID** – identificatorul erorii care a apărut
+
+
+#### <a name="officeofficemobilepersonalizedcampaigningerrors"></a>Office.OfficeMobile.PersonalizedCampaigning.Errors
+
+Pentru a crește gradul de conștientizare cu privire la caracteristicile Office Mobile pe care utilizatorii nu le-au explorat încă, Office Mobile este integrat cu IRIS pentru accepta notificările push și din aplicație. În cazul notificărilor din aplicație, acesta capturează erori care apar în timpul extragerii sau al afișării notificării și atunci când utilizatorul interacționează cu notificarea, precum și furnizează feedback către serverul IRIS. În cazul notificărilor push, acesta capturează erorile care apar în timpul afișării notificării și atunci când utilizatorul interacționează cu notificarea.
+
+Se colectează următoarele câmpuri:
+
+- **Class** - numele clasei în care s-a produs eroarea
+
+- **CreativeId** - ID-ul de notificare, care identifică în mod unic notificarea și conținutul acesteia.
+
+- **ErrorDetails** - detalii despre eroare
+
+- **ErrorMessage** - mesajul erorii.
+
+- **ErrorReason** - motivul subiacent al erorii
+
+- **Method** - numele funcției în care s-a produs eroarea.
+
+- **RequestParams** - parametrii de solicitare utilizați în momentul contactării serverului FTP pentru a extrage notificarea.
+
+- **SurfaceId** - ID-ul suprafeței în care se va afișa notificarea.
+
 
 #### <a name="officeoutlookdesktopcalendaracceptcalsharenavigatetosharedfoldererror"></a>Office.Outlook.Desktop.Calendar.AcceptCalShareNavigateToSharedFolder.Error
 

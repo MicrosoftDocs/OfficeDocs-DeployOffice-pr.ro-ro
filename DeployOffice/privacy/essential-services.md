@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre servicii esențiale în Office, cum ar fi Clic și Pornire și Licențiere, și asigură o listă de evenimente și câmpuri de date pentru aceste servicii esențiale.
 hideEdit: true
-ms.openlocfilehash: 8408a2e8a6e9c8594e428762034ba5b8e8a54548
-ms.sourcegitcommit: a31e96cefd11ffece917dce618414989bf3a98da
+ms.openlocfilehash: d71859f75046ad13901aae1b381bf97227f05383
+ms.sourcegitcommit: 8982800d8026ec2f82e8389b7dfa762381258874
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51031995"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "51891216"
 ---
 # <a name="essential-services-for-office"></a>Servicii esențiale pentru Office
 
@@ -3410,6 +3410,92 @@ Se colectează următoarele câmpuri:
 - **context** - Șir - Fluxul prin care utilizatorul a ajuns pe pagina de achiziționare a aplicației
 
 
+### <a name="officeapplelicensingcommonpaywallcontrol"></a>Office.Apple.Licensing.CommonPaywallControl
+
+Acest eveniment este utilizat pentru a înțelege experiența de achiziționare în aplicație (IAP) a utilizatorului. Ne permite să ne asigurăm că IAP funcționează conform așteptărilor și ne ajută să înțelegem problemele utilizatorilor, astfel încât să putem optimiza experiența IAP.  Colectarea se produce prin intermediul unuia dintre următoarele sub evenimente.
+
+- **Office.iOS.Paywall.Paywall.Presented** - datele sunt colectate atunci când se afișează un control paywall pentru utilizator. Datele se utilizează pentru a construi o vizualizare în vederea măsurării la fiecare pas a ratei de conversie și pentru a asigura că interfața utilizator funcționează conform așteptărilor, utilizatorii confruntându-se cu divergențe minime în timpul experienței de achiziționare.
+
+   Se colectează următoarele câmpuri:
+
+  - **entryPoint** - Șir – butonul/fluxul din care a fost afișat Paywall. Cum ar fi „Buton upgrade premium” sau „Primul flux de rulare”
+  - **isFRE** - Boolean – Afișăm prima experiență de rulare sau interfața utilizator obișnuită?
+
+- **Office.iOS.Paywall.Paywall.Stats** - datele sunt colectate atunci când sunt afișate pentru utilizator interfața de utilizator Paywall, durata interacțiunii și dacă o achiziție a fost încercată, a reușit sau nu a reușit. Datele sunt utilizate pentru a măsura performanța interfeței utilizator și pentru a garanta funcționarea acesteia conform așteptărilor. 
+
+   Se colectează următoarele câmpuri:
+
+   - **entryPoint** - Șir – butonul/fluxul din care a fost afișat Paywall. Cum ar fi „Buton upgrade premium” sau „Primul flux de rulare”.
+   - **isFRE** - Boolean – verifică dacă se afișează prima experiență de rulare sau interfața utilizator obișnuită.
+   - **status** - Șir – stare de ieșire a Paywall. Cum ar fi „inițiat”, „paymentDone”, „provisionFailed”
+   - **userDuration** - dublu – durata, în milisecunde, a timpului petrecut de utilizator în Paywall
+  
+- **Office.iOS.Paywall.SKUHinoser.BuyButtonTap** - se colectează date atunci când utilizatorul atinge butonul Achiziționare/Cumpărare. Datele sunt utilizate pentru a măsura performanța butonului și pentru a garanta funcționarea acestuia conform așteptărilor.
+
+   Se colectează următoarele câmpuri:
+
+   - **entryPoint** - Șir – butonul/fluxul din care a fost afișat Paywall. Cum ar fi „Buton upgrade premium” sau „Primul flux de rulare”.
+   - **isDefaultSKU** - Bool - dacă utilizatorul achiziționează produsul recomandat de noi prin afișarea acestuia ca implicit.
+   - **productId** - șir – ID-ul produsului din App Store pentru care a fost apăsat butonul Cumpărare
+   - **toggleCount** - Int – de câte ori a comutat utilizatorul între vizualizare diferitelor produse înainte de a apăsa butonul Achiziționare, în sesiunea curentă de Paywall.
+
+- **Office.iOS.Paywall.SKUChooser.Stats** - date colectate pentru a vedea a accesat utilizatorul selectorul SKU, cât timp a petrecut pe ecranul selectorului SKU și de ce a ieșit din selectorul SKU. Utilizând aceste informații, putem garanta că selectorul SKU funcționează conform așteptărilor și vom putea optimiza și îmbunătăți experiența utilizatorilor finali.
+
+   Se colectează următoarele câmpuri:
+
+   - **entryPoint** - Șir – butonul/fluxul din care a fost afișat Paywall. Cum ar fi „Buton upgrade premium” sau „Primul flux de rulare”.
+   - **exitReason** - Șir – motivul ieșirii din selectorul SKU. Cum ar fi „Buybutton”, „CloseButton”
+   - **isFRE** - Boolean – Afișăm prima experiență de rulare sau interfața utilizator obișnuită?
+   - **userDuration** - Dublu – durata, în milisecunde, a timpului petrecut de utilizator în selectorul SKU.
+
+- **Office.iOS.Paywall.FailedScreen.RetryButtonTap** - datele colectate pentru a afla când a eșuat Achiziționarea/Asigurarea accesului/Activarea, iar utilizatorul a apăsat butonul „Reîncercare”. Datele sunt utilizate în vederea depanării scenariilor de erori de achiziție și a remedierii acestora, pentru a vă asigura că funcționează conform așteptărilor.
+
+   Se colectează următoarele câmpuri:
+
+   - **failureReason** - șir – indică eroarea pentru care utilizatorul reîncearcă; de exemplu, „provisioningFailed”, „purchaseFailed”, „activationFailed”.
+   - **productid** - șir – ID-ul produsului din App Store pentru care utilizatorul reîncearcă solicitarea nereușită.
+
+- **Office.iOS.Paywall.SKUChooser.MoreBenefits.Stats** - date colectate atunci când utilizatorii ating „Vedeți mai multe avantaje” pentru a vedea toate serviciile, aplicațiile și caracteristicile incluse în achiziție. Acestea trebuie să extindă secțiuni care detaliază caracteristicile fiecărei aplicații. Acest eveniment colectează caracteristicile și aplicațiile extinse, împreună cu timpul consumat. Datele se utilizează pentru a garanta că interfața utilizator oferită utilizatorilor finali pentru a afla despre avantaje funcționează conform așteptărilor. 
+
+   Se colectează următoarele câmpuri:
+
+   - **appsExpanded** - șir - lista, separată prin virgulă, a serviciilor/aplicațiilor pentru care au fost extinse avantajele.
+   - **productId** - șir - ID-ul produsului din App Store pentru care utilizatorul vizualizează mai multe avantaje oferite
+   - **userDuration** - dublu – durata, în milisecunde, a timpului petrecut de utilizator pe ecranul Avantaje.
+
+- **Office.iOS.Paywall.SuccessScreen.SeeAllBenefitsButtonTap** - acest eveniment se colectează atunci când utilizatorul atinge „Vedeți toate avantajele” după o achiziționare reușită, pentru a vedea aplicațiile și caracteristicile incluse în achiziție. Datele sunt utilizate pentru a măsura dacă performanța interfeței utilizator este conform așteptărilor.
+
+   Se colectează următoarele câmpuri:
+
+   - **productId** - șir - ID-ul produsului din App Store pentru care utilizatorul vizualizează toate avantajele oferite.
+
+- **Office.iOS.Paywall.SKUChooser.ProductSwitched** - telemetrie de utilizare pentru a vizualiza interacțiunea utilizatorului final cu interfața de utilizator furnizată, pentru a comuta între SKU-uri diferite și a vă asigura că funcționează conform așteptărilor. 
+
+   Se colectează următoarele câmpuri:
+
+  - **productId**- șir - ID-ul App Store al produsului pe a cărui vizualizare utilizatorul tocmai a comutat din produsele disponibile în selectorul SKU.
+
+- **Office.iOS.Paywall.StoreKit.Response** - telemetrie de inginerie critică, pentru a înregistra în jurnal rezultatul încercării de achiziție declanșate manual de utilizator și răspunsul de la App Store cu privire la eveniment. Datele sunt utilizate pentru a măsura starea unei încercări de achiziție și motivele erorii (dacă există) și pentru a efectua acțiuni de corectare, pentru a vă asigura că IAP și toate punctele de intrare au performanțele așteptate.
+
+   Se colectează următoarele câmpuri:
+
+   - **entryPoint** - Șir – butonul/fluxul din care a fost afișat Paywall. Cum ar fi „Buton upgrade premium” sau „Primul flux de rulare”.
+   - **failureReason** - Șir – adăugat doar atunci când starea este „eroare”. Indică răspunsul de eroare dat de răspunsul de la App Store
+   - **productId** - Șir – doar pentru „MakePurchase”, „PendingPurchase”, ID-ul de App Store al produsului pentru care s-a efectuat solicitarea.
+   - **productsCount** -Int – doar pentru „ProductsFetch”, numărul de produse returnate de Store.
+   - **requestType** - Șir – tipul solicitării StoreKit. Cum ar fi „ProductsFetch”, „PendingPurchase”
+   - **status** - șir – succes sau eroare, indicând dacă solicitarea a fost realizată cu sau fără succes
+
+- **Office.iOS.Paywall.Provisioning.Response** - telemetrie de inginerie critică și contractul cu Serviciul Federației de Retail Microsoft (RFS), pentru a colecta informațiile furnizate în acest eveniment. RFS este serviciul intern utilizat în cadrul Microsoft pentru verificarea încrucișată a achiziției. Acesta este utilizat pentru a obține starea de funcționare a apelului API efectuat la RFS, ceea ce ar ajuta la înțelegerea faptului că performanța integrării este conform așteptărilor.  
+
+   Se colectează următoarele câmpuri:
+
+   - **entryPoint** - Șir – butonul/fluxul din care a fost afișat Paywall. Cum ar fi „Buton upgrade premium” sau „Primul flux de rulare”.
+   - **failureReason** - Șir – adăugat doar atunci când starea este „eroare”. Indică răspunsul de eroare dat de răspunsul de asigurare RFS.
+   - **productId** - Șir – ID-ul produsului în App Store pentru care a fost făcută solicitarea
+   - **status** - Șir – succes sau eroare, indică dacă solicitarea a fost realizată cu sau fără succes
+
+
 ### <a name="officedimesdkhealth"></a>Office.Dime.Sdk.Health
 
 Acest eveniment capturează date care ajută să monitorizați starea componentelor Dime. De exemplu, pentru fluxul de achiziție din cadrul aplicației, atunci când un utilizator optează pentru a cumpăra un abonament Microsoft 365 din cadrul aplicației Office pentru Android sau de pe dispozitive care rulează Windows.
@@ -3496,29 +3582,6 @@ Acest eveniment colectează atingerile utilizatorului gratuit pentru o caracteri
 Se colectează următoarele câmpuri:
 
 - **featureId** - TCID pentru caracteristica premium pe care utilizatorul le atinge
-
-
-### <a name="officeiospaywallskuchooserbuybuttontap"></a>Office.iOS.Paywall.SKUChooser.BuyButtonTap
-
-Telemetria de utilizare critică este colectată pentru a indica momentul în care utilizatorul apasă butonul Achiziționare/Cumpărare.  Datele sunt utilizate pentru a deduce modelul de utilizare și măsurătoarea de conversie pentru utilizatorii care încearcă să achiziționeze un abonament în aplicație.
-
-Se colectează următoarele câmpuri:
-
-- **entryPoint** - Șir – butonul/fluxul din care a fost afișat Paywall. Cum ar fi „Buton upgrade premium” sau „Primul flux de rulare”.
-
-- **isDefaultSKU** - Bool - dacă utilizatorul achiziționează produsul recomandat de noi prin afișarea acestuia ca implicit.
-
-- **productId** - Șir – ID-ul de produs din App Store al produsului pentru care a fost apăsat butonul Achiziționare
-
-- **toggleCount** - Int – de câte ori a comutat utilizatorul între vizualizare diferitelor produse înainte de a apăsa butonul Achiziționare, în sesiunea curentă de Paywall.
-
-### <a name="officeiospaywallsuccessscreenseeallbenefitsbuttontap"></a>Office.iOS.Paywall.SuccessScreen.SeeAllBenefitsButtonTap
-
-Telemetrie de utilizare pentru a afla când atinge utilizatorul „Vedeți toate avantajele” după o achiziție reușită, pentru a vedea aplicațiile și caracteristicile incluse în achiziția pe care tocmai a făcut-o. Aceste date sunt utilizate pentru a contribui la dezvoltarea viitoarelor îmbunătățiri, pentru a minimiza întreruperea utilizatorului în timpul actualizărilor aplicației.
-
-Se colectează următoarele câmpuri:
-
-- **productId** - Șir - ID-ul produsului din App Store pentru care utilizatorul vizualizează toate avantajele oferite
 
 
 ### <a name="officelicensingaccepteulaforcurrentlicense"></a>Office.Licensing.AcceptEulaForCurrentLicense 
@@ -3675,7 +3738,7 @@ Se colectează următoarele câmpuri:
 
 - **ErrorType** - Motivul erorii, cum ar fi "AlreadyRedeemedByOther".
 
-- **InAFOFlow** - Valoare booleană care indică dacă ne aflăm în fluxul de valorificare AFO.
+- **InAFOFlow** - valoare booleană care indică dacă ne aflăm în fluxul de valorificare AFO.
 
 - **StatusCode** - Rezultat de un cuvânt al apelului de serviciu, cum ar fi „Creat”.
 
@@ -3831,6 +3894,107 @@ Dacă dintr-un motiv sau altul nu putem activa un utilizator și trebuie să îi
 
 Acest eveniment nu colectează niciun câmp.
 
+### <a name="officelicensingoobehandledigitalattachfailure"></a>Office.Licensing.OOBE.HandleDigitalAttachFailure
+
+Acest eveniment se declanșează atunci când verificarea serviciului (consultați Office.Licensing.OOBE.SearchForDigitalAttach) nu a găsit pe acest dispozitiv o ofertă de atașare digitală care poate fi solicitată. În funcție de diferitele condiții ale dispozitivului, vom afișa utilizatorului casete de dialog diferite. Acest eveniment va înregistra în jurnal diverse scenarii privind modul în care gestionăm erorile de atașare digitală.
+
+Se colectează următoarele câmpuri:
+
+- **Activity_Result_Tag** ne spune cum trecem utilizatorul la diferite stări de eroare.
+   - 0x222e318f - ar trebui să căutăm în continuare oferta de activare pentru Office.
+   - 0x222e318e - vom reveni la modul OEM în această sesiune atunci când acest dispozitiv nu vine livrat cu o ofertă de atașare digitală.
+   - 0x222e318d - fără conectivitate la internet, ceea ce ne va duce la afișarea casetei de dialog NoInternetConnectivity pentru utilizator 
+   - 0 - vom afișa diverse erori de interfață utilizator, pe baza codului de eroare specific.
+
+- **Data_DigitalAttachErrorType** - ne spune care este codul de eroare specific din apelul serviciului.
+
+- **Data_FallbackFlight** - ne spune dacă este activat sau nu flight pentru UseAFOAsFallBack.
+
+
+### <a name="officelicensingoobehandledigitalattachsuccess"></a>Office.Licensing.OOBE.HandleDigitalAttachSuccess
+
+Acest eveniment se declanșează atunci când verificarea serviciului găsește pe acest dispozitiv o ofertă de atașare digitală care poate fi solicitată. În funcție de diferitele condiții ale dispozitivului, vom afișa utilizatorului casete de dialog diferite. Acest eveniment va înregistra în jurnal diverse scenarii privind modul în care gestionăm o atașare digitală reușită.
+
+Se colectează următoarele câmpuri:
+
+- **Activity_Result_Tag** - ne spune cum gestionăm scenariile reușite de atașare digitală.
+   - 0 - putem încărca automat identitatea și am afișat utilizatorului interfața de utilizator „Aveți Office” (cu cont)..
+   - 0x222e3191 - nu putem încărca automat identitatea, astfel că le vom afișa interfața de utilizator „Aveți Office” (fără cont).
+   - 0x222e3193 - am afișat utilizatorului interfața utilizator „Aveți Office” (fără cont) sau nu trebuie să afișăm utilizatorului interfața utilizator „Aveți Office”, deoarece este o ofertă bazată pe dispozitiv.
+
+- **Data_IsClaimTypeDevice** - ne spune dacă tipul de solicitare a ofertei de atașare digitală se bazează pe dispozitiv.
+
+### <a name="officelicensingoobepopulatedigitalattachoffersignindex"></a>Office.Licensing.OOBE.PopulateDigitalAttachOfferSignInDEX
+
+Producătorii de echipamente originale (OEM) vând dispozitive care sunt împreună cu Office (abonamente de un an sau permanente), care sunt plătite atunci când clientul își achiziționează computerul. Acest eveniment monitorizează când sunt găsite drepturi Office pre-acordate pentru dispozitiv și utilizatorul este deja conectat cu un cont Microsoft, pentru a ne permite să monitorizăm starea de funcționare a sistemului și a serviciilor.
+
+Se colectează următoarele câmpuri:
+
+- **Data_ExpirationDate** - ne spune data de expirare a ofertei de abonament
+
+- **Data_IsSubscription** - ne spune dacă produsul de solicitat este un SKU de abonament sau un SKU permanent
+
+- **Data_ProductName** - ne spune numele produsului ofertei de atașare digitală
+
+
+### <a name="officelicensingoobesearchfordigitalattach"></a>Office.Licensing.OOBE.SearchForDigitalAttach
+
+Producătorii de echipamente originale (OEM) vând dispozitive care sunt împreună cu Office (abonamente de un an sau permanente), care sunt plătite atunci când clientul își achiziționează computerul. Computerele care sunt configurate cu o anumită cheie de registry (OOBEMode: OEMTA) pot avea o ofertă Office atașată digital la acestea. Când pornim Office, efectuăm verificări ale serviciului, pentru a verifica dacă există o ofertă Office atașată digital. Această activitate este utilizată pentru a monitoriza acest lucru. 
+
+Se colectează următoarele câmpuri:
+
+- **Activity_Result_Tag** - ne spune rezultatul general al acestei verificări a serviciului. 
+   - 0x222e318c - Flight pentru atașarea digitală dezactivat, astfel că nu se face nicio verificare a serviciului.
+   - 0x222e318b - clientul nu are internet, deci nu se face nicio verificare a serviciului.
+   - 0x222e318a - s-a găsit o ofertă de atașare digitală care poate fi valorificată
+   - 0x222e3189 - s-a găsit o ofertă de atașare digitală care nu poate fi valorificată
+
+- **Data_EnableDAFlight** - ne spune dacă flight pentru atașarea digitală care permite această verificare a serviciului este ACTIVAT sau nu.
+
+
+### <a name="officelicensingoobeshowtouchlessattachfailuredialog"></a>Office.Licensing.OOBE.ShowTouchlessAttachFailureDialog
+
+Producătorii de echipamente originale (OEM) vând dispozitive care sunt împreună cu Office (abonamente de un an sau permanente), care sunt plătite atunci când clientul își achiziționează computerul. Acest eveniment se declanșează atunci când apare o eroare în fluxul de activare și valorificare a atașării digitale pentru PC-urile OEM care vin împreună cu drepturi Office pre-acordate.  Utilizăm aceste date pentru a monitoriza starea sistemelor și serviciilor și pentru a remedia problemele legate de fluxul de activare pentru Office OEM.
+
+Se colectează următoarele câmpuri:
+
+- **Data_Continue** - ne spune dacă utilizatorul face clic pe "Continuare" în caseta de dialog.
+
+- **Activity_Result_Tag** ne spune butonul pe care a făcut clic utilizatorul în caseta de dialog.
+   - 0x222e319d - utilizatorul face clic pe „Reîncercare" în caseta de dialog
+   - 0x222e319c - utilizatorul face clic pe „Continuare” în caseta de dialog
+   - 0 - utilizatorul iese din caseta de dialog
+
+- **Data_IsForDigitalAttach** - ne spune pe ce platformă și în ce flux de lucru se află utilizatorul - moștenit (activare pentru Office (AFO) sau modern (atașare digitală).
+
+- **Data_Retry** - ne spune dacă utilizatorul face clic pe „Reîncercare” în caseta de dialog.
+
+
+### <a name="officelicensingoobeshowtouchlessattachofferdialog"></a>Office.Licensing.OOBE.ShowTouchlessAttachOfferDialog
+
+Producătorii de echipamente originale (OEM) vând dispozitive care sunt împreună cu Office (abonamente de un an sau permanente), care sunt plătite atunci când clientul își achiziționează computerul. Acest eveniment monitorizează când sunt găsite drepturi Office pre-acordate pentru dispozitiv și utilizatorul nu este conectat cu un cont Microsoft, pentru a ne permite să monitorizăm starea de funcționare a sistemului și a serviciilor.
+
+Se colectează următoarele câmpuri:
+
+- **Activity_Result_Tag** - ne spune dacă s-a găsit o identitate pentru utilizator
+   - 0x222e3194 - nu putem obține identitatea utilizatorului (au anulat conectarea sau autentificarea nu a reușit).
+   - 0 - am primit o identitate de la utilizator.
+
+- **Data_ExpirationDate** - ne spune data de expirare a ofertei de abonament
+
+- **Data_IsCentennial** - ne spune dacă aplicația Office care rulează se află pe platforma Centennial
+
+- **Data_IsForDigitalAttach** - ne spune dacă această casetă de dialog este declanșată din fluxul de Atașare digitală sau din fluxul de activare pentru Office.
+
+- **Data_IsSubscription** - ne spune dacă produsul de solicitat este un SKU de abonament sau un SKU permanent
+
+- **Data_OExType** - ne spune dacă utilizatorul iese din caseta de dialog după ce face clic pe linkul ChangeAccount
+
+- **Data_ProductName** - ne spune numele produsului ofertei de atașare digitală
+
+- **Data_UseInAppRedemption** - ne spune dacă utilizăm valorificarea în aplicație pentru valorificarea web - acest lucru este relevant doar pentru fluxul de activare pentru Office.
+
+
 ### <a name="officelicensingoobetrybuychoice"></a>Office.Licensing.OOBE.TryBuyChoice
 
 Utilizatorilor cu Office preinstalat pe noile dispozitive care nu au drepturi Office li se afișează o casetă de dialog prin care pot să încerce, să cumpere sau să introducă o cheie de produs pentru a obține licența. Acest eveniment capturează acțiunea utilizatorului din caseta de dialog. Acest eveniment este utilizat pentru a urmări acțiunea utilizatorului întreprinsă în caseta de dialog afișată pentru utilizatorii fără drepturi Office, când Office a fost preinstalat pe computer și ajută să determinăm dacă utilizatorul este licențiat sau nelicențiat în mod implicit.
@@ -3965,7 +4129,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officelicensingtelemetryflowshowafodialogs"></a>Office.Licensing.TelemetryFlow.ShowAFODialogs
 
-După obținerea cu succes a unui cod PIN Office valid legat la un calculator cu Office preinstalat, îi afișăm utilizatorului o casetă de dialog de conectare sau o casetă de dialog de valorificare.  După ce codul PIN a fost valorificat, afișăm caseta de dialog EULA.  Ca parte din caracteristica noastră AFO modernizată, am reîmprospătat cele două casete de dialog pentru a transmite mai multe informații despre produsul Office care este livrat cu calculatorul.  Această telemetrie este utilizată pentru a urmări dacă caracteristica noastră reduce cu succes dezacordurile cu utilizatorul la valorificarea produsului său, urmărind fluxul și punctele de ieșire ale procesului de valorificare (ce casetă de dialog a fost respinsă).
+După obținerea cu succes a unui cod PIN Office valid legat la un calculator cu Office preinstalat, îi afișăm utilizatorului o casetă de dialog de conectare sau o casetă de dialog de valorificare.  După ce codul PIN a fost valorificat, afișăm caseta de dialog EULA.  Ca parte a procesului modernizare a caracterisiticii noastre AFO, am reîmprospătat cele două casete de dialog, pentru a oferi mai multe informații despre produsul Office care este livrat cu calculatorul.  Această telemetrie este utilizată pentru a urmări dacă caracteristica noastră reduce cu succes dezacordurile cu utilizatorul la valorificarea produsului său, urmărind fluxul și punctele de ieșire ale procesului de valorificare (ce casetă de dialog a fost respinsă).
 
 Se colectează următoarele câmpuri:
 
@@ -3981,9 +4145,9 @@ Se colectează următoarele câmpuri:
 
 - **DialogEULA** - semnal că am arătat caseta de dialog „Acceptare EULA”. 
 
-- **DialogRedemption** - semnal că am arătat caseta de dialog de verificare AFO.
+- **DialogRedemption** - indică faptul că am afișat caseta de dialog de verificare AFO.
 
-- **DialogSignIn** - semnal că am arătat caseta de dialog de conectare AFO.
+- **DialogSignIn** - indică faptul că am arătat caseta de dialog de conectare AFO.
 
 - **EmptyRedemptionDefaults** - semnal că nu s-a reușit preluarea informațiilor de valorificare implicite.
  
@@ -4014,9 +4178,9 @@ Se colectează următoarele câmpuri:
     - 0x2370e3a2      utilizatorul a făcut clic pe hyperlinkul „Nu îmi arătați niciodată aceasta“, care dezactivează oferta AFO
 
 
-- **UseInAppRedemption** - Ne spune dacă menținem utilizatorii în aplicație pentru valorificare sau îi trimitem pe web pentru a-și valorifica pinul preluat (pre populat).
+- **UseInAppRedemption** - ne spune dacă menținem utilizatorii în aplicație pentru valorificare sau îi trimitem pe web pentru a-și valorifica PIN-ul preluat (pre populat).
 
-- **UseModernAFO** - Ne spune dacă utilizăm noua sau vechea experiență AFO.
+- **UseModernAFO** - ne spune dacă utilizăm noua sau vechea experiență AFO.
 
 ### <a name="officelicensingtelemetryflowshowtrybuydialogforoobe"></a>Office.Licensing.TelemetryFlow.ShowTryBuyDialogForOOBE
 
@@ -10704,6 +10868,55 @@ Se colectează următoarele câmpuri:
 - **SessionId** - identificatorul pentru sesiune
 
 
+### <a name="installedapprespondedcoreappleevent"></a>installedapp.respondedcoreappleevent
+
+Acest eveniment indică faptul că Microsoft AutoUpdate (MAU) a primit un cod Apple de răspuns la eveniment de la o aplicație înregistrată pentru a închide aplicația, în vederea continuării actualizării aplicației în așteptare. Acest eveniment este utilizat pentru a contribui la dezvoltarea viitoarelor îmbunătățiri, pentru a minimiza întreruperea utilizatorului în timpul actualizărilor aplicației. 
+
+Se colectează următoarele câmpuri:
+
+- **App** - procesul aplicației care trimite evenimentul
+
+- **AppID** - identificatorul pentru aplicația actualizată
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppleEventClass** -indică tipul de eveniment trimis/recunoscut
+
+- **AppleEventID** - identificator unic pentru evenimentul trimis/recunoscut
+
+- **AppVersionLong** - versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** - versiunea sistemului de operare
+
+- **Event_ReceivedTime** - ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowToCheck** - cum se verifică setările
+
+- **Payload** - conține număru de înregistrări
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+- **UpdateID** - identificatorul actualizării.
+
+
 ### <a name="installedappsendcoreappleevent"></a>installedapp.sendcoreappleevent
 
 Acest eveniment indică faptul că Microsoft AutoUpdate (MAU) trimite un eveniment Apple unei aplicații înregistrate pentru a rezilia aplicația pentru a continua cu actualizarea de aplicație în așteptare. Acest eveniment este utilizat în prezent pentru a contribui la dezvoltarea viitoarelor îmbunătățiri, pentru a minimiza întreruperea utilizatorului în timpul actualizărilor aplicației. 
@@ -15764,39 +15977,6 @@ Acest eveniment este colectat pentru aplicațiile Office care rulează pe platfo
 Se colectează următoarele câmpuri:
 
 - **Data_EventId** - un cod care indică preferința de colectare a datelor de diagnostic selectată de utilizator.
-
-### <a name="officeiospaywallprovisioningresponse"></a>Office.iOS.Paywall.Provisioning.Response
-
-Telemetria de produs utilizat pentru reconcilierea informațiilor tranzacției de achiziționare cu sistemul de comerț Microsoft pentru activarea beneficiilor asociate abonamentului. Utilizat pentru a facilita înregistrarea în jurnal a tranzacției și asigurarea accesului la abonament pentru referințe viitoare și reconciliere internă.
-
-Se colectează următoarele câmpuri:
-
-- **entryPoint** - Șir – butonul/fluxul din care a fost afișat Paywall. Cum ar fi „Buton upgrade premium” sau „Primul flux de rulare”.
-
-- **failureReason** - Șir – adăugat doar atunci când starea este „eroare”. Indică răspunsul de eroare dat de răspunsul de asigurare RFS.
-
-- **productId** - Șir – ID-ul produsului în App Store pentru care a fost făcută solicitarea
-
-- **status** - Șir – succes sau eroare, indică dacă solicitarea a fost realizată cu sau fără succes
-
-
-### <a name="officeiospaywallstorekitresponse"></a>Office.iOS.Paywall.StoreKit.Response
-
-Datele sunt colectate ca telemetrie de inginerie critică pentru a înregistra rezultatul încercării de achiziționare declanșată manual de utilizator. Telemetria de produs este utilizat pentru reconcilierea informațiilor tranzacției de achiziționare cu sistemul de comerț Microsoft pentru activarea beneficiilor asociate abonamentului.
-
-Se colectează următoarele câmpuri:
-
-- **entryPoint** - Șir – butonul/fluxul din care a fost afișat Paywall. Cum ar fi „Buton upgrade premium” sau „Primul flux de rulare”.
-
-- **failureReason** - Șir – adăugat doar atunci când starea este „eroare”. Indică răspunsul de eroare dat de răspunsul de la App Store
-
-- **productId** - Șir – doar pentru „MakePurchase”, „PendingPurchase”, ID-ul de App Store al produsului pentru care s-a efectuat solicitarea.
-
-- **productsCount** -Int – doar pentru „ProductsFetch”, numărul de produse returnate de Store.
-
-- **requestType** - Șir – tipul solicitării StoreKit. Cum ar fi „ProductsFetch”, „PendingPurchase”
-
-- **status** - Șir – succes sau eroare, indică dacă solicitarea a fost realizată cu sau fără succes
 
 ### <a name="officeonenotegetsharepointidsfordocument"></a>Office.OneNote.GetSharePointIdsForDocument
 
