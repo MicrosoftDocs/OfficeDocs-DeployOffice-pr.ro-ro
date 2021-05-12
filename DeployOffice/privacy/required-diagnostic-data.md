@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre datele de diagnosticare obligatorii în Office și le furnizează o listă de evenimente și câmpuri de date.
 hideEdit: true
-ms.openlocfilehash: 69abd5fc0355db7758debc0193b4439754eda2f2
-ms.sourcegitcommit: b6f55a032079a9525cedd93b9e431c188ca24775
+ms.openlocfilehash: c61c3072c4c0f61926b51c0fab5e46a1b5151e00
+ms.sourcegitcommit: 2796ba69444926d686e7ed587a89d8ee9e313d84
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "51889796"
+ms.lasthandoff: 05/11/2021
+ms.locfileid: "52328435"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Date de diagnosticare obligatorii pentru Office
 
@@ -103,7 +103,7 @@ Această categorie conține următoarele câmpuri:
 
 #### <a name="client"></a>Client 
 
-Identificator care are legătură cu o instanță de Office pe un dispozitiv. Constant pentru toate sesiunile tuturor aplicațiilor unei versiuni de instalare date pentru suite de aplicație multiplă sau constant pentru toate sesiunile unei versiuni de aplicație date.
+Identificator corelat cu o instanță Office pe un dispozitiv. Constant pentru toate sesiunile tuturor aplicațiilor unei versiuni de instalare date pentru suite de aplicații multiple sau constant pentru toate sesiunile unei versiuni de aplicație date.
 
 Această categorie conține următoarele câmpuri:
 
@@ -373,7 +373,7 @@ Această categorie conține următoarele câmpuri:
 
   - **RuleVersion** - identificator al regulii care a generat datele dacă acestea au fost generate de o regulă. Ne permite să identificăm sursa unor date, astfel încât să putem valida și gestiona parametrii acelor evenimente.
 
-  - **SampleRate** - o indicație a procentului de utilizatori care trimit această parte din date. Acest lucru ne permite să efectuăm analiza statistică a datelor, iar pentru punctele de date foarte obișnuite nu trebuie să fie trimise de toți utilizatorii.
+  - **SampleRate** - indicație legată de procentajul utilizatorilor care trimit aceste date. Acest lucru ne permite să efectuăm analiza statistică a datelor, iar pentru punctele de date foarte comune, nu trebuie să fie trimise de toți utilizatorii.
 
   - **SchemaVersion** - versiunea schemei utilizate pentru a genera datele de diagnosticare. Necesar pentru a gestiona datele trimise de client. Acest lucru permite modificări în timp în care datele sunt trimise de la fiecare client.
 
@@ -616,6 +616,8 @@ Următoarele câmpuri de date sunt comune pentru toate evenimentele Outlook pent
 
 - **PipelineInfo.IngestionTime** - Marcă de timp de când se întâmplă ingestia telemetrie pentru acest eveniment
 
+- **sample_rate** - procentajul dispozitivelor care colectează instanțele evenimentului. Ajută la calcularea numărului inițial de instanțe ale evenimentului.
+
 - **Session.Id**-un Identificator unic pentru sesiunea de aplicații, pentru a vă ajuta să identificați problemele legate de sesiune
 
 - **Session.ImpressionId** - un identificator unic pentru gestionarea lansării caracteristicilor noastre, pentru a asigura că caracteristicile sunt lansate cu succes pentru toți utilizatorii și dispozitive
@@ -652,7 +654,13 @@ Următoarele câmpuri de date sunt comune pentru toate evenimentele Outlook pent
 
 - **is_dex_mode_enabled** - dacă este activat modul Samsung DeX, pentru a ajuta la detectarea problemelor specifice modulului DeX cu dispozitive Samsung
 
-- **is_sliding_drawer_enabled** - dacă este activată interfața glisantă pentru sertare, pentru a ajuta la detectarea problemelor provocate de interfața noastră glisantă pentru sertare
+- **is_preload_install** - ne spune dacă aplicația a fost preîncărcată pe dispozitiv (dispozitive cu Android 11 sau versiuni mai recente)
+
+- **is_sliding_drawer_enabled** - dacă este activată interfața pentru sertare glisante, pentru a ajuta la detectarea problemelor provocate de această interfață
+
+- **oem_preinstall** - ne spune dacă aplicația a fost preinstalată pe dispozitiv
+
+- **oem_preload_property** - ne spune dacă aplicația a fost preîncărcată ca parte a unui anumit acord cu OEM
 
 - **orientarea** - orientarea fizică a ecranului (portret/vedere), pentru a ajuta la detectarea problemelor specifice orientărilor dispozitivelor
 
@@ -704,7 +712,7 @@ Se colectează următoarele câmpuri:
  
 #### <a name="officeclicktorunupdatestatus"></a>Office.ClickToRun.UpdateStatus
 
-Se aplică la toate aplicațiile win32. Ne ajută să înțelegem starea procesului de actualizare a suitei Office (succes sau eroare cu detalii despre eroare)
+Se aplică pentru toate aplicațiile Win32. Ne ajută să înțelegem starea procesului de actualizare a suitei Office (succes sau nereușită cu detalii despre eroare)
 
 Se colectează următoarele câmpuri:
 
@@ -921,6 +929,21 @@ Se colectează următoarele câmpuri:
 - **OnPremNBCount** - Numărul blocnotesurilor în serverul local
 
 - **TotalNBCount** - Numărul total de blocnotesuri asociat cu un cont de utilizator
+
+#### <a name="officeonenotesystemapplifecycleuseraccountinfo"></a>Office.OneNote.System.AppLifeCycle.UserAccountInfo
+
+Acest eveniment este declanșat pentru valorile de cod și de înregistrări partajate pentru tipurile de conturi conectate prin isEdu, isMsftInteronale, isIW, isMSA. Datele se colectează prima dată când coada devine inactivă după lansare. Acest marcator este utilizat pentru a urmări tipurile de conturi care au fost conectate pe dispozitiv. Acest lucru ne va ajuta să identificăm utilizatorii EDU în OneNote. 
+
+Se colectează următoarele câmpuri: 
+
+- **IsEdu** - valori posibile - adevărat/fals
+
+- **IsMSA** - valori posibile - adevărat/fals
+
+- **IsIW** - valori posibile - adevărat/fals
+
+- **IsMsftInternal** - valori posibile - adevărat/fals
+
 
 #### <a name="officetargetedmessagingensurecached"></a>Office.TargetedMessaging.EnsureCached 
 
@@ -1201,7 +1224,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeoutlookdesktopadd-insadd-inloaded"></a>Office.Outlook.Desktop.Add-ins.Add-inLoaded
 
-Colectează succesul și eșecul încărcării unui program de completare de către Outlook. Aceste date sunt monitorizate activ pentru a garanta că Outlook funcționează corect cu programele de completare ale clientului. Aceste date sunt utilizate pentru a detecta și investiga probleme.
+Colectează date despre succesul și nereușita Outlook de a încărca un program de completare. Aceste date sunt monitorizate activ pentru a garanta că Outlook funcționează corect cu programele de completare ale clientului. Aceste date sunt utilizate pentru a detecta și investiga probleme.
 
 Se colectează următoarele câmpuri:
 
@@ -1209,7 +1232,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeoutlookmacaddinapiusage"></a>Office.Outlook.Mac.AddinAPIUsage
 
-Colectează succese și eșecuri ale execuției programului de completare în Outlook. Aceste date sunt monitorizate activ pentru a garanta că Outlook funcționează corect cu programele de completare. Aceste date sunt utilizate pentru a detecta și investiga probleme.
+Colectează date despre succesul și nereușita executării programului de completare în Outlook. Aceste date sunt monitorizate activ pentru a garanta că Outlook funcționează corect cu programele de completare. Aceste date sunt utilizate pentru a detecta și investiga probleme.
 
 Se colectează următoarele câmpuri:
 
@@ -1230,7 +1253,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeoutlookmacaddineventapisusage"></a>Office.Outlook.Mac.AddinEventAPIsUsage
 
-Colectează succese sau eșecuri ale execuției programului de completare în Outlook. Aceste date sunt monitorizate activ pentru a garanta că Outlook funcționează corect cu programele de completare. Aceste date sunt utilizate pentru a detecta și investiga probleme.
+Colectează date despre succesul sau nereușita executării programului de completare în Outlook. Aceste date sunt monitorizate activ pentru a garanta că Outlook funcționează corect cu programele de completare. Aceste date sunt utilizate pentru a detecta și investiga probleme.
 
 Se colectează următoarele câmpuri:
 
@@ -1244,7 +1267,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeoutlookmacaddininstallationfrominclientstore"></a>Office.Outlook.Mac.AddInInstallationFromInClientStore
 
-Colectează succese sau eșecuri ale instalării programului de completare în Outlook. Aceste date sunt monitorizate activ pentru a garanta că Outlook funcționează corect cu programele de completare. Aceste date sunt utilizate pentru a detecta și investiga probleme.
+Colectează date despre succesul sau nereușita instalării programului de completare în Outlook. Aceste date sunt monitorizate activ pentru a garanta că Outlook funcționează corect cu programele de completare. Aceste date sunt utilizate pentru a detecta și investiga probleme.
 
 Se colectează următoarele câmpuri:
 
@@ -1351,7 +1374,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeappguardlaunchfile"></a>Office.AppGuard.LaunchFile
 
-Acest eveniment indică rezultatul unei executări de lansare a fișierului din Protecție aplicații. Vom putea defini procentul de sesiuni în care am lansat un fișier Word, Excel sau PowerPoint și codurile de eroare pentru încercările eșuate.
+Acest eveniment indică rezultatul executării unui fișier de lansare pentru Protecția aplicațiilor. Vom putea defini procentul de sesiuni în care am lansat un fișier Word, Excel sau PowerPoint și codurile de eroare pentru încercările eșuate.
 
 Se colectează următoarele câmpuri:
 
@@ -1516,7 +1539,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officesecuritymacroxl4prompted"></a>Office.Security.Macro.XL4Prompted
 
-Urmărește când i se solicită unui utilizator să activeze macrocomenzile XL4. Utilizat pentru a evalua prevalența macrocomenzilor XL4 în Excel pentru a antrena atenuări de securitate viitoare care blochează XL4 în mod implicit ca răspuns la incidentele de securitate care implică folosirea abuzivă a macrocomenzilor XL4.
+Urmărește când unui utilizator i se solicită să activeze macrocomenzile XL4. Utilizat pentru a evalua prevalența macrocomenzilor XL4 în Excel pentru a antrena atenuări de securitate viitoare care blochează XL4 în mod implicit ca răspuns la incidentele de securitate care implică folosirea abuzivă a macrocomenzilor XL4.
 
 Se colectează următoarele câmpuri:
 
@@ -1538,7 +1561,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officesecuritysecurereaderhostopeninosr"></a>Office.Security.SecureReaderHost.OpenInOSR
 
-Urmărește finalizarea unei deschideri în Vizualizarea protejată. Utilizat pentru a diagnostica condiții care conduc la erori când deschiderea fișierelor în Vizualizarea protejată afectează securitatea și productivitatea clienților.
+Urmărește finalizarea unei deschideri în Vizualizare protejată. Utilizat pentru a diagnostica condiții care conduc la erori când deschiderea fișierelor în Vizualizarea protejată afectează securitatea și productivitatea clienților.
 
 Se colectează următoarele câmpuri:
 
@@ -1745,6 +1768,8 @@ Se colectează următoarele câmpuri:
 - **meeting_insights_type** - tipul de detalii despre întâlnire în detaliile evenimentului.  Printre acestea se numără fișierul și mesajul. Ne ajută să înțelegem numărul de detalii de întâlnire care sunt afișate. 
 
 - **meeting_type** - tipul de întâlnire online asociată cu acțiunea.  Printre acestea se numără tipurile de Skype, Skype for Business, Hangout și Teams for Business. Ne ajută să înțelegem dacă întâlnirile online sunt configurate corect. 
+
+- **online_meeting_provider_switch_type** - tipul de comutare efectuată de utilizator între furnizorii de întâlniri online. Ne ajută să înțelegem interacțiunea utilizatorului cu această caracteristică.
 
 - **origin** - originea acțiunii din calendar. Printre acestea se numără tipuri cum ar fi agendă, calendar, agendă widget etc. Ne ajută să ne asigurăm că interacțiunea la nivelul componentelor de calendar funcționează corect 
 
@@ -1963,7 +1988,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="ipccreaterepublishinglicense"></a>IpcCreateRepublishingLicense
 
-Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează apelul API IpcCreateRepublishingLicense. 
+Colectat când un utilizator încearcă să deschidă un document protejat IRM sau să aplice protecții IRM documentului. Conține informațiile necesare pentru a investiga și a diagnostica problemele care apar când se realizează apelul API IpcCreateRepublishingLicense.
 
 Se colectează următoarele câmpuri:
 
@@ -1993,7 +2018,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="ipcgetlicenseproperty"></a>IpcGetLicenseProperty
 
-Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează apelul API IpcGetLicenseProperty. 
+Colectat când un utilizator încearcă să deschidă un document protejat IRM sau să aplice protecții IRM documentului. Conține informațiile necesare pentru a investiga și a diagnostica problemele care apar când se realizează apelul API IpcGetLicenseProperty.
 
 Se colectează următoarele câmpuri:
 
@@ -2025,7 +2050,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="ipcgetserializedlicenseproperty"></a>IpcGetSerializedLicenseProperty
 
-Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează apelul API IpcGetSerializedLicenseProperty. 
+Colectat când un utilizator încearcă să deschidă un document protejat IRM sau să aplice protecții IRM documentului. Conține informațiile necesare pentru a investiga și a diagnostica problemele care apar când se realizează apelul API IpcGetSerializedLicenseProperty.
 
 Se colectează următoarele câmpuri:
 
@@ -2057,7 +2082,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="ipcgettemplateissuerlist"></a>IpcGetTemplateIssuerList
 
-Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează apelul API IpcGetTemplateIssuerList. 
+Colectat când un utilizator încearcă să deschidă un document protejat IRM sau să aplice protecții IRM documentului. Conține informațiile necesare pentru a investiga și a diagnostica problemele care apar când se realizează apelul API IpcGetTemplateIssuerList.
 
 Se colectează următoarele câmpuri:
 
@@ -2119,7 +2144,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="ipcgettemplatelist"></a>IpcGetTemplateList
 
-Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează apelul API IpcGetTemplateList. 
+Colectat când un utilizator încearcă să deschidă un document protejat IRM sau să aplice protecții IRM documentului. Conține informațiile necesare pentru a investiga și a diagnostica problemele care apar când se realizează apelul API IpcGetTemplateList.
 
 Se colectează următoarele câmpuri:
 
@@ -2183,7 +2208,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="ipcpcreatelicensefromscratch"></a>IpcpCreateLicenseFromScratch
 
-Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează apelul API IpcpCreateLicenseFromScratch. 
+Colectat când un utilizator încearcă să deschidă un document protejat IRM sau să aplice protecții IRM documentului. Conține informațiile necesare pentru a investiga și a diagnostica problemele care apar când se realizează apelul API IpcpCreateLicenseFromScratch.
 
 Se colectează următoarele câmpuri:
 
@@ -2237,7 +2262,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="ipcpcreatelicensefromtemplate"></a>IpcpCreateLicenseFromTemplate
 
-Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează apelul API IpcpCreateLicenseFromTemplate.  
+Colectat când un utilizator încearcă să deschidă un document protejat IRM sau să aplice protecții IRM documentului. Conține informațiile necesare pentru a investiga și a diagnostica problemele care apar când se realizează apelul API IpcpCreateLicenseFromTemplate. 
 
 Se colectează următoarele câmpuri:
 
@@ -2275,7 +2300,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="ipcpgettemplatelistforuser"></a>IpcpGetTemplateListForUser
 
-Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează apelul API IpcpGetTemplateListForUser.  
+Colectat când un utilizator încearcă să deschidă un document protejat IRM sau să aplice protecții IRM documentului. Conține informațiile necesare pentru a investiga și a diagnostica problemele care apar când se realizează apelul API IpcpGetTemplateListForUser. 
 
 Se colectează următoarele câmpuri:
 
@@ -2393,7 +2418,7 @@ Se colectează următoarele câmpuri:
 
 - **RMS.LicenseFormat** - formatul licenței: Xrml sau Json
 
-- **RMS.PL.KeyType** – valori „Single” sau „Double”. Indică dacă PL a fost protejat cu protecție cu o singură cheie sau cu protecție cu cheie dublă.
+- **RMS.PL. KeyType** - valorile „single” sau „double” indică dacă PL a fost protejat cu o singură cheie de protecție sau cu o cheie de protecție dublă
 
 - **RMS.RACType** - tipul Certificatului de cont de drepturi
 
@@ -2415,7 +2440,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="ipcsetlicenseproperty"></a>IpcSetLicenseProperty
 
-Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează apelul API IpcSetLicenseProperty. 
+Colectat când un utilizator încearcă să deschidă un document protejat IRM sau să aplice protecții IRM documentului. Conține informațiile necesare pentru a investiga și a diagnostica problemele care apar când se realizează apelul API IpcSetLicenseProperty. 
 
 Se colectează următoarele câmpuri:
 
@@ -2580,6 +2605,8 @@ Este utilizat pentru a monitoriza posibilul impact negativ asupra capacității 
 Se colectează următoarele câmpuri: 
 
 - **draft_message_id** - ID-ul schiță al conversației create ca schiță, pentru a ne ajuta să detectăm probleme legate de e-mailuri schiță
+
+- **from_context_menu** - ne spune dacă o compunere provine din acțiuni ale meniului contextual.
 
 - **message_id** - ID-ul mesajului conversației la care s-a răspuns sau de la care s-a redirecționat, pentru a ne ajuta să detectăm probleme legate de un anumit mesaj
 
@@ -3064,7 +3091,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeappleactivateperpetual"></a>Office.Apple.ActivatePerpetual
 
-Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a monitoriza starea fluxului de activare perpetuă, precum și a investiga cauzele erorilor, prin revizuirea valorilor FailedAt.
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul este utilizat pentru a monitoriza starea fluxului de activare perpetuă, precum și pentru a investiga cauzele erorilor, revizuind valorile FailedAt.
 
 Se colectează următoarele câmpuri:
 
@@ -3176,7 +3203,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officedocsappdocsoperationopenfrommrubypath"></a>Office.Docs.AppDocs.OperationOpenFromMruByPath
 
-Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Android, iOS, Universal și Windows. Acest eveniment înregistrează atunci când are loc o operațiune de deschidere a fișierelor din calea furnizată de lista utilizată cel mai recent și este folosit pentru a înțelege și pentru a acorda prioritate experienței utilizatorului pe baza informațiilor operațiunii de deschidere a fișierelor.
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Android, iOS, Universal sau Windows. Acest eveniment înregistrează când are loc o operație de deschidere a fișierelor din calea furnizată de lista utilizată cel mai recent și este folosit pentru a înțelege și pentru a acorda prioritate erorilor privind experiența utilizatorului pe baza informațiilor operației de deschidere a fișierelor.
 
 Se colectează următoarele câmpuri:
 
@@ -3288,7 +3315,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officedocsappdocsoperationopenfrommrubyurl"></a>Office.Docs.AppDocs.OperationOpenFromMruByUrl
 
-Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Android, iOS, Universal și Windows. Evenimentul înregistrează atunci când are loc o operațiune de deschidere a fișierelor din URL-ul furnizat în lista utilizată cel mai recent și este folosit pentru a înțelege și pentru a acorda prioritare experienței utilizatorului, pe baza informațiilor despre operațiune de deschidere a fișierului. 
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Android, iOS, Universal sau Windows. Evenimentul înregistrează când are loc o operație de deschidere a fișierelor din URL-ul furnizat în lista utilizată cel mai recent și este folosit pentru a înțelege și pentru a acorda prioritate experienței utilizatorului, pe baza informațiilor despre operația de deschidere a fișierului. 
 
 Se colectează următoarele câmpuri:
 
@@ -3862,7 +3889,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officedocsappledocsuxmacatmentioninsertedatmention"></a>Office.Docs.Apple.DocsUXMacAtMentionInsertedAtMention 
 
-Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează atunci când un utilizator menționează cu „@“ un alt utilizator și este utilizat pentru a înțelege și a acorda prioritate experienței utilizatorilor, în funcție de modul în care utilizatorii colaborează cu alți utilizatori.
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează când un utilizator menționează cu „@“ un alt utilizator și este utilizat pentru a înțelege și a acorda prioritate experienței utilizatorilor, în funcție de modul în care aceștia colaborează cu alți utilizatori.
 
 Se colectează următoarele câmpuri:
 
@@ -3870,7 +3897,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officedocsappledocsuxmacodspsharingwebviewsharingcompleted"></a>Office.Docs.Apple.DocsUXMacODSPSharingWebViewSharingCompleted 
 
-Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează atunci când un utilizator alege să partajeze un document în cloud utilizând experiența de partajare OneDrive și este utilizat pentru a înțelege mai bine și a acorda prioritate experienței utilizatorilor pe baza partajării documentelor.
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează când un utilizator alege să partajeze un document în cloud utilizând experiența de partajare OneDrive și este utilizat pentru a înțelege mai bine și a acorda prioritate experienței utilizatorilor pe baza partajării documentelor.
 
 Se colectează următoarele câmpuri:
 
@@ -3922,7 +3949,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officedocsuidocstagerecommendedopen"></a>Office.DocsUI.DocStage.RecommendedOpen
 
-Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează atunci când are loc o operațiune din secțiunea fișierelor recomandate a galeriei de documente și este utilizată pentru a înțelege și a acorda prioritate experienței utilizatorului, pe baza informațiilor de operațiune de fișier.
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează când are loc o operație de deschidere a unui fișier din secțiunea fișierelor recomandate a galeriei de documente și este utilizată pentru a înțelege și a acorda prioritate experienței utilizatorului, pe baza informațiilor operației de deschidere a fișierelor.
 
 Se colectează următoarele câmpuri:
 
@@ -3930,7 +3957,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officedocsuifileoperationsdocsuifileopenmacrequired"></a>Office.DocsUI.FileOperations.DocsUIFileOpenMacRequired
 
-Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează atunci când are loc o operațiune de deschidere de fișier și este utilizată pentru a înțelege și a acorda prioritate experienței utilizatorului, pe baza informațiilor operațiunii de deschidere de fișier, cum ar fi categoriile de locație „ServiceType“ și primele patru caractere ale extensiei.
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează când are loc o operație de deschidere a unui fișier și este utilizată pentru a înțelege și a acorda prioritate experienței utilizatorului, pe baza informațiilor operației de deschidere a fișierelor, cum ar fi categoriile de locație „ServiceType“ și primele patru caractere ale extensiei.
 
 Se colectează următoarele câmpuri:
 
@@ -3940,7 +3967,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officedocsuifileoperationsopendocumentmeasurements"></a>Office.DocsUI.FileOperations.OpenDocumentMeasurements
 
-Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme iOS. Acest eveniment înregistrează atunci când are loc o operațiune de deschidere a fișierului și este utilizată pentru a înțelege și a acorda prioritate experienței utilizatorului, pe baza informațiilor de operațiune a deschiderii fișierului, în mod special informații legate de funcționalitate.
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforma iOS. Acest eveniment înregistrează când are loc o operație de deschidere a unui fișier și este utilizată pentru a înțelege și a acorda prioritate experienței utilizatorului, pe baza informațiilor operației de deschidere a fișierelor, în special a informațiilor legate de performanță.
 
 Se colectează următoarele câmpuri:
 
@@ -4034,6 +4061,8 @@ Se colectează următoarele câmpuri:
 
 - **Data_OpenStartTime**- vremea epocii Unix când s-a deschis fișierul.
 
+- **Data_PrefetchSourceOptions** - o enumerare care indică modul în care fișierul este disponibil offline pentru documentele în cloud, de exemplu, din fișierele recente și recomandate. 
+
 - **Data_SilhouetteDuration**- durata de randare a fișierului deschis.
 
 - **Data_SourceApplication**- un șir indicând ID-ul pachetelor din aplicația sursă atunci când s-a declanșat un fișier deschis de altă aplicație.
@@ -4044,7 +4073,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officedocsuifileoperationsopenfilewithreason"></a>Office.DocsUI.FileOperations.OpenFileWithReason 
 
-Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează atunci când are loc o operațiune de deschidere de fișier și este utilizată pentru a înțelege și a acorda prioritate experienței utilizatorului, pe baza informațiilor operațiunii de deschidere de fișier, cum ar fi categoriile de locație „ServiceType“ și locul din cadrul aplicației de unde utilizatorul a solicitat deschiderea unui fișier.
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează când are loc o operație de deschidere a unui fișier și este utilizată pentru a înțelege și a acorda prioritate experienței utilizatorului, pe baza informațiilor operației de deschidere a fișierelor, cum ar fi categoriile de locație „ServiceType“ și locul din cadrul aplicației de unde utilizatorul a solicitat deschiderea unui fișier.
 
 Se colectează următoarele câmpuri:
 
@@ -4123,7 +4152,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officedocsuisharinguicopylinkoperation"></a>Office.DocsUI.SharingUI.CopyLinkOperation
 
-Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment se înregistrează atunci când un utilizator alege să partajeze un document prin generarea unui link la un document din cloud și este utilizat pentru a înțelege mai bine și a acorda prioritate experienței utilizatorilor pe baza partajării documentelor.
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment se înregistrează când un utilizator alege să partajeze un document prin generarea unui link la un document din cloud și este utilizat pentru a înțelege mai bine și a acorda prioritate experienței utilizatorilor pe baza partajării documentelor.
 
 Se colectează următoarele câmpuri:
 
@@ -4135,7 +4164,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officedocsuisharinguidocsuionedriveshare"></a>Office.DocsUI.SharingUI.DocsUIOneDriveShare 
 
-Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează atunci când un utilizator alege să partajeze un document în cloud utilizând experiența de partajare OneDrive și este utilizat pentru a înțelege mai bine și a acorda prioritate experienței utilizatorilor pe baza partajării documentelor.
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează când un utilizator alege să partajeze un document în cloud utilizând experiența de partajare OneDrive și este utilizat pentru a înțelege mai bine și a acorda prioritate experienței utilizatorilor pe baza partajării documentelor.
 
 Se colectează următoarele câmpuri:
 
@@ -4151,7 +4180,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officedocsuisharinguiinvitepeople"></a>Office.DocsUI.SharingUI.InvitePeople 
 
-Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează atunci când un utilizator alege să invite persoane la un document din cloud și este utilizat pentru a înțelege mai bine și a acorda prioritate experienței utilizatorilor pe baza partajării documentelor.
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Acest eveniment înregistrează când un utilizator alege să invite persoane la un document din cloud și este utilizat pentru a înțelege mai bine și a acorda prioritate experienței utilizatorilor pe baza partajării documentelor.
 
 Se colectează următoarele câmpuri:
 
@@ -4167,7 +4196,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officedocsuisharinguisendacopyoperation"></a>Office.DocsUI.SharingUI.SendACopyOperation
 
-Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul înregistrează atunci când un utilizator alege să trimită o copie a unui document și este utilizat pentru a înțelege mai bine și a acorda prioritate experienței utilizatorilor pe baza partajării documentelor.
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Apple. Evenimentul înregistrează când un utilizator alege să trimită o copie a unui document și este utilizat pentru a înțelege mai bine și a acorda prioritate experienței utilizatorilor pe baza partajării documentelor.
 
 Se colectează următoarele câmpuri:
 
@@ -4416,7 +4445,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officefeedbacksurveyfloodgateclientuserselected"></a>Office.Feedback.Survey.FloodgateClient.UserSelected
 
-Monitorizează atunci când un dispozitiv a fost selectat pentru o anchetă. Se utilizează pentru a evalua experiența sondajului, precum și pentru a vă asigura de funcționarea corectă a semnalului utilizat pentru a analiza problemele și stările clienților.
+Urmărește când a fost selectat un dispozitiv pentru o anchetă. Se utilizează pentru a evalua starea procesului de selecție a utilizatorilor pentru anchetă, precum și pentru a vă asigura de funcționarea corectă a semnalului utilizat pentru analiza problemelor și stărilor clienților.
 
 Se colectează următoarele câmpuri:
 
@@ -4486,7 +4515,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officefeedbacksurveyuiwin32toast"></a>Office.Feedback.Survey.UI.Win32.Toast
 
-Monitorizează când se afișează solicitarea pentru prompt de anchetă. Se utilizează pentru a evalua sănătatea procesului de prompt de anchetă, precum și pentru a vă asigura de funcționarea corectă a semnalului utilizat pentru a analiza problemele și stările clienților.
+Urmărește când se afișează solicitarea anchetei. Se utilizează pentru a evalua starea procesului de solicitare a anchetelor, precum și pentru a vă asigura de funcționarea corectă a semnalului utilizat pentru analiza problemelor și stărilor clienților.
 
 Se colectează următoarele câmpuri:
 
@@ -4500,7 +4529,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officefileiocsiccachedfilecsiloadfilebasic"></a>Office.FileIO.CSI.CCachedFileCsiLoadFileBasic
 
-Ne permite să știm dacă un fișier s-a deschis cu succes din nivelul FIO. Utilizat pentru starea și monitorizarea caracteristicilor.
+Ne permite să știm dacă a reușit deschiderea unui fișier din stratul FIO. Se utilizează pentru starea și monitorizarea caracteristicii.
 
 Se colectează următoarele câmpuri:
 
@@ -4748,7 +4777,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officefileiocsiccachedfilecsisavefilebasic"></a>Office.FileIO.CSI.CCachedFileCsiSaveFileBasic
 
-Ne permite să știm dacă un fișier a fost salvat cu succes din nivelul FIO. Utilizat pentru starea și monitorizarea caracteristicilor.
+Acest eveniment ne permite să știm dacă a reușit salvarea unui fișier din stratul FIO. Utilizat pentru starea și monitorizarea caracteristicilor.
 
 Se colectează următoarele câmpuri:
 
@@ -5252,7 +5281,7 @@ Se colectează următoarele câmpuri:
 #### <a name="officelenslenssdkcloudconnectorlaunch"></a>Office.Lens.LensSdk.CloudConnectorLaunch
 
 Atunci când utilizatorul decupează imaginea și apasă pe confirmare pe selecția finală a imaginii pentru a utiliza OCR, se colectează acest eveniment.     
-Aceasta este înregistrarea utilizator la-solicitare pentru serviciu, deoarece nu există nicio operațiune utilizator-la-serviciu care să se mapeze la serviciu. ID-ul de utilizator trebuie să îndeplinească cerințele de GDPR, întrucât serviciul nu este expus direct utilizatorilor, ci prin clienți, și să identifice numărul total de persoane care utilizează serviciul, ajutând serviciul să urmărească volumul de utilizatori care utilizează produsul, precum și să identifice schimbările în tendințe, să caute și să remedieze problemele din produs.
+Aceasta este înregistrarea utilizator-solicitare pentru serviciu, întrucât nu există o mapare între utilizator și activitatea de serviciu. ID-ul de utilizator este necesar pentru a îndeplini cerințele GDPR, întrucât serviciul nu este expus direct utilizatorilor, ci prin clienți, și pentru a identifica numărul total de persoane care utilizează serviciul, ajutând serviciul să urmărească volumul utilizatorilor care utilizează produsul, precum și să identifice schimbările în tendințe, să caute și să remedieze problemele din produs.
 
 Se colectează următoarele câmpuri:
 
@@ -5368,7 +5397,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officelivepersonacardconfigurationsetaction"></a>Office.LivePersonaCard.ConfigurationSetAction
 
-Ne conectăm când utilizatorul se află într-o aplicație care încarcă un card de persoană în anticiparea utilizatorului care deschide Cardul de persoană live.  Datele sunt utilizate pentru a determina dacă respectivul card este încărcat corect. 
+Înregistrăm când utilizatorul se află într-o aplicație care încarcă un Card personal, anticipând că utilizatorul va deschide Cardul personal live.  Datele sunt utilizate pentru a determina dacă s-a încărcat corect cardul. 
 
 Se colectează următoarele câmpuri: 
 
@@ -5729,7 +5758,7 @@ Se colectează următoarele câmpuri:
 
 - **Data.personaCorrelationId** - un Identificator unic global pentru personaje unice într-o sesiune
 
-- **Data.properties** - metadate suplimentare colectate pentru fiecare eveniment, după cum urmează. *[Acest eveniment a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+- **Data.properties** - metadate suplimentare colectate pentru fiecare eveniment, după cum urmează: *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
     - **cardCorrelationId** - dublură a Data.appContextId de mai sus 
     - **cardPersonaCorrelationId** - dublură a Data.cardCorrelationId de mai sus
@@ -5784,36 +5813,6 @@ Se colectează următoarele câmpuri:
 
   - **Data.Log** - mesaj de jurnal particularizat care indică succesul sau eșecul pre-verificării
 
-#### <a name="officeofficemobilepdfviewerpdffileopenmeasurements"></a>Office.OfficeMobile.PdfViewer.PdfFileOpenMeasurements
-
-Acest eveniment este colectat pentru aplicația Office pentru iOS și înregistrează atunci când are loc o operațiune de deschidere de fișier. Colectăm aceste date pentru a asigura o performanță bună pentru deschiderea tuturor fișierelor din aplicație. 
-
-Se colectează următoarele câmpuri:
-
-- **Data_Doc_ActivationFQDN** - nume de domeniu al aplicației furnizorului, pentru un scenariu de activare a fișierelor (se înregistrează doar informațiile despre aplicația originală).
-
-- **Data_Doc_CreateTelemetryReason** - motivul de telemetrie pentru crearea PDF-ului. (Ex: Creare din scanare, utilizarea acțiunii „imagine la PDF”, utilizarea acțiunii „document la PDF” etc.)
-
-- **Data_Doc_DownloadDurationms** - timp pentru a descărca un fișier PDF în cloud.
-
-- **Data_Doc_DownloadEndTime** - marcă de timp pentru sfârșitul descărcării unui fișier în cloud.
-
-- **Data_Doc_DownloadStartTime** - marcă de timp pentru începutul descărcării unui fișier în cloud.
-
-- **Data_Doc_FileOpSessionID** - ID unic pentru o sesiune de document
-
-- **Data_Doc_Location** - locația în care se află fișierul (local, ODSP, iCloud, aplicație de fișiere de la terți, wopi
-
-- **Data_Doc_OpenCompletionTime** - marcă de timp pentru încheierea operațiunii de deschiderea a unui fișier PDF.
-
-- **Data_Doc_OpenDurationms** - timp pentru a deschide un fișier PDF în milisecunde.
-
-- **Data_Doc_OpenStartTime** - marcă de timp pentru începerea operațiunii de deschidere a unui fișier PDF.
-
-- **Data_Doc_TelemetryReason** - motivul telemetriei pentru evenimentul deschis (de exemplu: deschidere din MRU sau navigare, activarea fișierelor, activarea protocolului etc.)
-
-- **Doc_RenderDurationms** - timp de redare a unui fișier pdf
-
 
 #### <a name="officeofficemobilepdfviewerpdffileoperations-on-android"></a>Office.OfficeMobile.PdfViewer.PdfFileOperations (pe Android)
 
@@ -5828,6 +5827,8 @@ Se colectează următoarele câmpuri:
 - **Data_ErrorMessage** - cod relevant message-to-error
 
 - **Data_FailureReason** - în cazul unei erori de deschidere, aceste enumerări definesc motivul erorii.
+
+- **Data_FetchReason** - indică modul în care a fost preluat fișierul (manual, memorat în cache, nememorat în cache) 
 
 - **Data_FileGUID** - identificator global pentru fișierul generat aleatoriu
 
@@ -5866,6 +5867,8 @@ Evenimentul este colectat pentru aplicația Office pentru iOS. Acesta înregistr
 - **Data_ErrorMessage** - mesaj relevant la codul de eroare 
 
 - **Data_FailureReason** - în cazul unei erori de deschidere, aceste enumerări definesc motivul eșecului. 
+
+- **Data_FetchReason** - indică modul în care a fost preluat fișierul (manual, memorat în cache, nememorat în cache)
 
 - **Data_FileGUID** - identificator global pentru fișierul generat aleatoriu
 
@@ -6166,7 +6169,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeonenotestoragenotebooksyncresult"></a>Office.OneNote.Storage.NotebookSyncResult
  
-Acest eveniment înregistrează rezultatul sincronizării blocnotesului. Este utilizat pentru a afla câte ținte de sincronizare unice există atunci când se calculează scorul de sincronizare OneNote.
+Acest eveniment înregistrează rezultatul sincronizării blocnotesului. Este utilizat pentru a afla numărul țintelor de sincronizare unice la calcularea scorului de sincronizare OneNote.
  
 Se colectează următoarele câmpuri
 
@@ -6510,7 +6513,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officepowerpointdocoperationopencompleteprotocol"></a>Office.PowerPoint.DocOperation.OpenCompleteProtocol
 
-Colectat când PowerPoint deschide prezentări. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care au loc până la etapele finale ale procesului de deschidere.
+Se colectează când PowerPoint deschide prezentări. Conține informațiile necesare pentru a investiga și a diagnostica corect problemele care au loc până în etapele finale ale procesului de deschidere.
 
 Microsoft utilizează aceste date pentru a garanta că această caracteristică funcționează conform așteptărilor și că nu există nicio degradare în ceea ce privește deschiderea prezentărilor.
 
@@ -7318,7 +7321,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officepowerpointpptiosrehearseview"></a>Office.PowerPoint.PPT.IOS.RehearseView 
 
-Acest eveniment denotă faptul că utilizatorul a oprit sesiunea de repetiție. Datele sunt utilizate în combinație cu Office.PowerPoint.IOS.Android.RehearseView.StartSession ca prim indicator pentru orice avarie sau eroare cu care se confruntă utilizatorul.  
+Acest eveniment indică faptul că utilizatorul a oprit sesiunea de repetiții. Datele sunt utilizate în combinație cu Office.PowerPoint.IOS.Android.RehearseView.StartSession ca prim indicator pentru orice avarie sau eroare cu care se confruntă utilizatorul.  
  
 Se colectează următoarele câmpuri:
 
@@ -7969,7 +7972,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officevisiosharedfeatureexperimentation"></a>Office.Visio.Shared.FeatureExperimentation
 
-Urmărește configurația „flighting” a caracteristicii pentru utilizatori. Acest eveniment ne ajută să determinăm succesul sau eșecul edițiilor flight ale caracteristicilor.
+Urmărește lansarea ediției flight a caracteristicii pentru utilizatori. Acest eveniment ne ajută să determinăm succesul sau eșecul edițiilor flight ale caracteristicilor.
 
 Se colectează următoarele câmpuri:
 
@@ -8656,7 +8659,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="parselicenseop"></a>ParseLicenseOp
 
-Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM.  Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează operațiunea de analiză a licențelor. 
+Colectat când un utilizator încearcă să deschidă un document protejat IRM sau să aplice protecții IRM documentului.  Conține informațiile necesare pentru a investiga și a diagnostica problemele care apar când se realizează operația de analizare a licențelor. 
 
 Se colectează următoarele câmpuri:
 
@@ -8796,7 +8799,7 @@ Se colectează următoarele câmpuri:
 
 - **suggestions_requested** - indică câte sugestii de compunere inteligentă au fost solicitate
 
-- **suggestions_results** - un rezultat al sugestiilor inteligente compuse, adică acceptat, respins
+- **suggestions_results** - rezultatul sugestiilor de compunere inteligentă, adică acceptat, respins
 
 - **suggestions_returned** - indică numărul de sugestii de compunere inteligentă returnate de la server
 
@@ -8824,7 +8827,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="settingsaction"></a>settings.action
 
-Acest eveniment colectează informații de configurare din setări. Datele ne permit să detectăm situații în care există un posibil impact negativ asupra capacității utilizatorului de a configura setările de aplicație, cum ar fi setările de notificare, contul de e-mail principal și configurarea semnăturii de e-mail.
+Acest eveniment colectează informațiile de configurare din setări. Datele ne permit să detectăm situațiile în care există un posibil impact negativ asupra capacității utilizatorului de a configura setările aplicației, cum ar fi setările de notificare, contul de e-mail principal și configurarea semnăturii de e-mail.
 
 Se colectează următoarele câmpuri: 
 
@@ -8968,7 +8971,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="surveyfloodgatetriggermet"></a>Survey.Floodgate.TriggerMet
 
-Monitorizează atunci când un dispozitiv a îndeplinit criteriile pentru a afișa o anchetă. Se utilizează pentru a evalua procesul de declanșare a sondajului, precum și pentru a vă asigura de funcționarea corectă a semnalului utilizat pentru a analiza problemele și stările clienților
+Urmărește când îndeplinește un dispozitiv criteriile de afișare a unei anchete. Se utilizează pentru a evalua procesul de declanșare a anchetei, precum și pentru a vă asigura de funcționarea corectă a semnalului utilizat pentru analiza problemelor și stărilor clienților.
 
 Se colectează următoarele câmpuri: 
 
@@ -8981,7 +8984,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="surveyuiformsubmit"></a>Survey.UI.Form.Submit
 
-Monitorizează când este remisă o anchetă. Se utilizează pentru a evalua starea procesului de solicitare a anchetei, precum și pentru a asigura funcționarea corectă a semnalului utilizat pentru a analiza problemele și stările clienților.
+Urmărește când se remite o anchetă. Se utilizează pentru a evalua starea procesului de remitere a anchetei, precum și pentru a asigura funcționarea corectă a semnalului utilizat pentru analiza problemelor și stărilor clienților.
 
 Se colectează următoarele câmpuri: 
 
@@ -9159,7 +9162,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="httpop"></a>HttpOp
 
-Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM.  Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează operațiunea de solicitare http.
+Colectat când un utilizator încearcă să deschidă un document protejat IRM sau să aplice protecții IRM documentului.  Conține informațiile necesare pentru a investiga și a diagnostica problemele care apar când se realizează operația de solicitare HTTP.
 
 Se colectează următoarele câmpuri:
 
@@ -9217,7 +9220,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="ipccreateoauth2token"></a>IpcCreateOauth2Token
 
-Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează apelul API IpcCreateOauth2Token. 
+Colectat când un utilizator încearcă să deschidă un document protejat IRM sau să aplice protecții IRM documentului. Conține informațiile necesare pentru a investiga și a diagnostica problemele care apar când se realizează apelul API IpcCreateOauth2Token.
 
 Se colectează următoarele câmpuri:
 
@@ -9283,7 +9286,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeextensibilityofficejsappactivated"></a>Office.Extensibility.OfficeJS.Appactivated
 
-Înregistrează informații despre opririle neașteptate Office. Acest lucru ne permite să identificăm blocările sau căderile produsului, astfel încât să le putem remedia.
+Înregistrează informații despre închiderile neașteptate ale Office. Acest lucru ne permite să identificăm erorile fatale sau blocările produsului, astfel încât să le putem remedia.
 
 Se colectează următoarele câmpuri:
 
@@ -9626,7 +9629,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeofficemobilefrefirstrunsetup"></a>Office.OfficeMobile.FRE.FirstRunSetup
 
-Prima rulare a aplicației după instalare va declanșa acest eveniment repetat. Acesta va ajuta la identificarea instalărilor și actualizărilor automate din versiuni mai vechi ale aplicației și ne va permite să identificăm erorile actualizărilor automate, inclusiv cele de descărcare a încărcărilor de bibliotecă și a pachetelor de extindere/lingvistice.
+Prima rulare a aplicației după instalare va declanșa acest eveniment repetat. Acesta va ajuta la identificarea instalărilor și upgrade-urilor automate de la versiuni mai vechi ale aplicației și ne va permite să identificăm erorile upgrade-urilor automate, inclusiv cele de descărcare a încărcărilor din bibliotecă și a pachetelor de extindere/lingvistice.
 
 Se colectează următoarele câmpuri:
 
@@ -9978,6 +9981,8 @@ Se colectează următoarele câmpuri:
   - **Data\_FCreateNewFromTemplate –** este acesta un document nou din șabloane
 
   - **Data_FErrorAfterDocWinCreation:boolean-**  s-a produs o eroare sau o excepție după ce a fost creată fereastra de document.
+
+  - **Data_FileIOClpState:int** – set de biți ce conține valorile privind starea etichetei de confidențialitate. De exemplu, printre acestea se numără informații despre activarea elaborării în comun cu etichete protejate, dacă documentul are sau nu o etichetă aplicată de la entitatea găzduită curentă și dacă documentul este sau nu protejat de IRM.
 
   - **Data\_FileUrlLocation –** set predefinit de valori privind locul unde este stocat documentul (NetworkShare, LocalDrive, ServerOther etc.)
 
@@ -10886,7 +10891,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="servicediscoveryop"></a>ServiceDiscoveryOp
 
-Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM.  Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează operațiunea de descoperire a serviciului. 
+Colectat când un utilizator încearcă să deschidă un document protejat IRM sau să aplice protecții IRM documentului.  Conține informațiile necesare pentru a investiga și a diagnostica problemele care apar când se realizează operația de descoperire a servicilor. 
 
 Se colectează următoarele câmpuri:
 
@@ -11344,6 +11349,8 @@ Se colectează următoarele câmpuri:
 - **AssetId** - Asset ID-ul aplicației
 
 - **ErrorCode** - timp total
+
+- **IsArm64** - indică dacă are loc activarea programului de completare într-o aplicație emulată pe un dispozitiv ARM64
 
 - **IsAugmentationScenario** - indică dacă bucla de sincronizare este răspunzătoare de inițializarea comenzii Office Solutions Framework control
 
@@ -11920,7 +11927,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="ipcpbootstrapuser"></a>IpcpBootstrapUser
 
-Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează apelul API IpcpBootstrapUser. 
+Colectat când un utilizator încearcă să deschidă un document protejat IRM sau să aplice protecții IRM documentului. Conține informațiile necesare pentru a investiga și a diagnostica problemele care apar când se realizează apelul API IpcpBootstrapUser.
 
 Se colectează următoarele câmpuri:
 
@@ -11990,7 +11997,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="ipcpgetkey"></a>IpcpGetKey
 
-Se colectează atunci când un utilizator încearcă să deschidă un document protejat cu IRM (Information Rights Management) sau să aplice protecții IRM. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează apelul API IpcpGetKey. 
+Colectat când un utilizator încearcă să deschidă un document protejat IRM (Information Rights Management) sau să aplice protecții IRM documentului. Conține informațiile necesare pentru a investiga și a diagnostica problemele care apar când se realizează apelul API IpcpGetKey.
 
 Se colectează următoarele câmpuri:
 
@@ -12132,7 +12139,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="messagerenderingintercepted"></a>message.rendering.intercepted
 
-Acest eveniment ne permite să urmărim cât de des utilizatorii interceptează procesul de redare înainte de a fi finalizat. Utilizăm aceste date pentru a detecta probleme de performanță.
+Acest eveniment ne permite să urmărim cât de des interceptează utilizatorii procesul de redare înainte de a fi finalizat. Utilizăm aceste date pentru a detecta probleme de performanță.
 
 Se colectează următoarele câmpuri: 
 
@@ -12236,6 +12243,38 @@ Se colectează următoarele câmpuri:
 - **UIRaaSDownloadLanguagePackageBoot**- informații legate de descărcarea pachetului lingvistic
 
 - **UserDialogInterruptionDuringBoot**- Boolean pentru orice casetă de dialog de blocare afișată în timpul încărcării
+
+
+#### <a name="officeandroiddocsuiviewsdimepurchaseflowstate"></a>Office.Android.DocsUI.Views.DimePurchaseFlowState
+
+Acest eveniment al stării de funcționare încearcă să captureze fiecare stare prin care trece un utilizator atunci când încearcă să facă o achiziție prin fluxul de achiziții din aplicație găzduit de Dime. Datele sunt utilizate pentru a monitoriza și a avertiza cu privire la starea fluxului de achiziții declanșat din aplicația Office Mobile atunci când utilizatorul optează să cumpere un abonament Microsoft 365.
+
+Se colectează următoarele câmpuri:
+
+- **EntryPoint** - punctul de intrare al achiziției încercate de utilizator
+
+- **OEMPreInstalled** - identifică dacă aplicația este preinstalată sau instalată organic de utilizator
+
+- **PurchaseState** - starea utilizatorului atunci când încearcă o achiziție
+    - 0 – Eroare necunoscută
+    - 1 - Utilizatorul încearcă Dime pentru deschidere
+    - 2 - Eroare de rețea
+    - 3 - Se afișează Dime utilizatorului
+    - 4 - Dime este anulat de utilizator
+    - 5 - Este necesară reîmprospătarea întrucât s-a reușit achiziția
+    - 6 - S-a reușit achiziția
+    - 7 - Eroare generică Dime
+    - 8 - Telemetria Dime nu poate fi încărcată din cauza unei erori de comunicație
+    - 9 - Rulează două instanțe Dime și provoacă o eroare de întrerupere
+    - 10 - URL-ul web de bază încărcat în aplicația Office Mobile nu este valid
+    - 11 - Comunicația aplicației Office Mobile cu Dime nu a reușit 
+    - 12 - Nu s-a putut stabili niciun canal de comunicații
+    - 13 - ID-ul de comunicații nu s-a putut trimite la Dime
+    - 14 - Aplicația Office Mobile comunică cu punctul final greșit
+    - 15 - Nu este obținut AuthToken pentru acest cont MSA
+    - 16 - AuthToken nu este trimis la Dime
+
+- **WebViewShownDuration** - durata pentru care se i afișează utilizatorului pagina de achiziționare Dime 
 
 
 #### <a name="officeappleappleappbootmac"></a>Office.Apple.Apple.AppBoot.Mac
@@ -12467,6 +12506,58 @@ Se colectează următoarele câmpuri:
 
   - **Data.Last Error** – una din cinci valori șir (enumeratori) pentru a înregistra în jurnal etapa de aplicare a politicii care se executa când a avut loc excepția
 
+
+#### <a name="officeofficemobilepdfviewerpdffileopenmeasurements-on-android"></a>Office.OfficeMobile.PdfViewer.PdfFileOpenMeasurements (pe Android)
+
+Evenimentul este colectat pentru aplicația Office pentru Android. Înregistrează când are loc o operație de deschidere a fișierelor. Colectăm aceste date pentru a asigura o performanță bună pentru deschiderea tuturor fișierelor din aplicație. 
+
+Se colectează următoarele câmpuri:
+
+- **Data_Doc_ActivationFQDN** - nume de domeniu al aplicației furnizorului, pentru un scenariu de activare a fișierelor (se înregistrează doar informațiile despre aplicația originală).
+
+- **Data_Doc_DownloadDurationms** - cât durează să se descarce un fișier PDF din cloud.
+
+- **Data_Doc_Location** - locația în care se află fișierul (local, ODSP, iCloud, aplicație de fișiere de la terți, wopi)
+
+- **Data_Doc_OpenDurationms** - cât durează să se deschidă un fișier PDF, în milisecunde.
+
+- **Data_FetchReason** - indică modul în care a fost preluat fișierul (manual, memorat în cache, nememorat în cache)
+
+- **Doc_RenderDurationms** - timpul de redare a unui fișier pdf
+
+#### <a name="officeofficemobilepdfviewerpdffileopenmeasurements-on-ios"></a>Office.OfficeMobile.PdfViewer.PdfFileOpenMeasurements (pe iOS)
+
+Evenimentul este colectat pentru aplicația Office pentru iOS. Înregistrează când are loc o operație de deschidere a fișierelor. Colectăm aceste date pentru a asigura o performanță bună pentru deschiderea tuturor fișierelor din aplicație. 
+
+Se colectează următoarele câmpuri:
+
+- **Data_Doc_ActivationFQDN** - nume de domeniu al aplicației furnizorului, pentru un scenariu de activare a fișierelor (se înregistrează doar informațiile despre aplicația originală).
+
+- **Data_Doc_CreateTelemetryReason** - motivul de telemetrie pentru crearea PDF-ului. (Ex: Creare din scanare, utilizarea acțiunii „imagine la PDF”, utilizarea acțiunii „document la PDF” etc.)
+
+- **Data_Doc_DownloadDurationms** - timp pentru a descărca un fișier PDF în cloud.
+
+- **Data_Doc_DownloadEndTime** - marcă de timp pentru sfârșitul descărcării unui fișier în cloud.
+
+- **Data_Doc_DownloadStartTime** - marcă de timp pentru începutul descărcării unui fișier în cloud.
+
+- **Data_Doc_FileOpSessionID** - ID unic pentru o sesiune de document
+
+- **Data_Doc_Location** - locația în care se află fișierul (local, ODSP, iCloud, aplicație de fișiere de la terți, wopi
+
+- **Data_Doc_OpenCompletionTime** - marcă de timp pentru încheierea operațiunii de deschiderea a unui fișier PDF.
+
+- **Data_Doc_OpenDurationms** - timp pentru a deschide un fișier PDF în milisecunde.
+
+- **Data_Doc_OpenStartTime** - marcă de timp pentru începerea operațiunii de deschidere a unui fișier PDF.
+
+- **Data_Doc_TelemetryReason** - motivul telemetriei pentru evenimentul deschis (de exemplu: deschidere din MRU sau navigare, activarea fișierelor, activarea protocolului etc.)
+
+- **Data_FetchReason** - indică modul în care a fost preluat fișierul (manual, memorat în cache, nememorat în cache)
+
+- **Doc_RenderDurationms** - timpul de redare a unui fișier pdf
+
+
 #### <a name="officeonenoteandroidsyncprovisioningcompleted"></a>Office.OneNote.Android.Sync.ProvisioningCompleted
 
 *[Acest eveniment a fost denumit anterior OneNote.Sync.ProvisioningCompleted.]*
@@ -12668,7 +12759,7 @@ Se colectează următoarele câmpuri:
 
 - **ResumeRehearsingCount** - numărul de clicuri ale unui utilizator pe reluarea repetiției.
 
-- **Sessionid** - acesta este ID-ul sesiunii de discurs oficial. Este utilizat pentru a depana jurnalele de servicii.
+- **Sessionid** - acesta este ID-ul sesiunii Front Door de vorbire. Îl putem utiliza pentru a depana jurnalele de servicii.
 
 - **SlideshowViewLoadTime** - timpul necesar pentru încărcarea diapozitivelor.
 
@@ -12683,7 +12774,7 @@ Se colectează următoarele câmpuri:
 
 - **PostUrlCallTime** – timpul necesar în milisecunde pentru a trimite apelul URL de publicare. 
 
-- **RehearseSessionId** - acesta este ID-ul sesiunii de discurs oficial. Îl putem utiliza pentru a depana jurnalele de servicii.
+- **RehearseSessionid** - acesta este ID-ul sesiunii Front Door de vorbire. Îl putem utiliza pentru a depana jurnalele de servicii.
 
 - **RequestPayloadSize** – aceasta este dimensiunea sarcinii de solicitare. 
 
@@ -12712,7 +12803,7 @@ Se colectează următoarele câmpuri:
 
 *[Acest eveniment a fost denumit anterior Office.PowerPoint.PPT.Android.RehearseView.Errors]*
 
-Eveniment declanșat atunci când apare o eroare. Acest eveniment ne va ajuta să aflăm erorile cu care s-a confruntat utilizatorul și ne vor ajuta să menținem Îndrumătorul pentru prezentatori performant pe dispozitive mobile.
+Eveniment declanșat când apare vreo eroare. Acest eveniment ne va ajuta să aflăm erorile cu care s-a confruntat utilizatorul și ne vor ajuta să menținem performanța Îndrumătorului pentru prezentări pe dispozitivele mobile.
 
 Se colectează următoarele câmpuri:
 
@@ -12759,7 +12850,7 @@ Se colectează următoarele câmpuri:
 
 - **SessionDurationInMs** – aceasta este durata de timp a întregii sesiuni, de la momentul în care utilizatorul face clic pe pornire, până la momentul în care utilizatorul face clic pe oprire.
 
-- **SessionId** - acesta este ID-ul sesiunii de discurs oficial. Îl putem utiliza pentru a depana jurnalele de servicii.
+- **SessionId** - acesta este ID-ul sesiunii Front Door de vorbire. Îl putem utiliza pentru a depana jurnalele de servicii.
 
 - **SpeechClientResultEventsWithTimestamps** - acesta este un șir de coduri de eroare primite împreună cu mărci de timp, care vă pot ajuta să depanați.
 
@@ -12806,7 +12897,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeuxofficeinsidershowofficeinsiderdlg"></a>Office.UX.OfficeInsider.ShowOfficeInsiderDlg
 
-Semnal critic care urmărește interacțiunea utilizatorului cu caseta de dialog Asociați-vă la Office Insider. Este utilizat pentru a identifica problemele cu efectuarea modificărilor inițiate de utilizator, precum asocierea la/părăsirea programului Office Insider și modificarea nivelului Office Insider.
+Semnal critic ce urmărește interacțiunea utilizatorului cu caseta de dialog Asociați-vă programului Office Insider. Este utilizat pentru a identifica problemele cu efectuarea modificărilor inițiate de utilizator, precum asocierea la/părăsirea programului Office Insider și modificarea nivelului Office Insider.
 
 Se colectează următoarele câmpuri:
 
@@ -12957,7 +13048,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="performancerecord"></a>performance.record
 
-Acest eveniment colectează măsurătorile de performanță ale aplicației. Acesta ne permite să detectăm și să remediem situații în care utilizarea memoriei de aplicație și utilizarea CPU devin extrem de ridicate sau au alte probleme de performanță care pot determina încetinirea dispozitivului.
+Acest eveniment colectează măsurători ale performanței aplicației. Ne permite să detectăm și să remediem situații în care utilizarea memoriei aplicației și utilizarea CPU devin extrem de ridicate sau au alte probleme de performanță care pot determina încetinirea dispozitivului.
 
 Se colectează următoarele câmpuri: 
 
@@ -14036,7 +14127,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officesystemsystemhealtherrorsetwshim"></a>Office.System.SystemHealthErrorsEtwShim
 
-Utilizat pentru a problemele din aplicația curentă care afectează clienții și care se pot manifesta drept căderi sau funcționalitate diminuată. Înregistrează erorile care apar la momentul rulării procesului.
+Utilizat pentru a identifica problemele din aplicația curentă care afectează clienții și care se pot manifesta prin erori fatale sau diminuarea funcționalității. Înregistrează erorile care apar în timpul rulării procesului.
 
 Se colectează următoarele câmpuri:
 
@@ -14052,7 +14143,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officesystemsystemhealtherrorsulsandasserts"></a>Office.System.SystemHealthErrorsUlsAndAsserts
 
-Utilizat pentru a problemele din aplicația curentă care afectează clienții și care se pot manifesta drept căderi sau funcționalitate diminuată. Înregistrează erorile care apar la momentul rulării procesului.
+Utilizat pentru a identifica problemele din aplicația curentă care afectează clienții și care se pot manifesta prin erori fatale sau diminuarea funcționalității. Înregistrează erorile care apar în timpul rulării procesului.
 
 Se colectează următoarele câmpuri:
 
@@ -14068,7 +14159,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officesystemsystemhealtherrorsulsworkaround"></a>Office.System.SystemHealthErrorsUlsWorkaround
 
-Utilizat pentru a problemele din aplicația curentă care afectează clienții și care se pot manifesta drept căderi sau funcționalitate diminuată. Înregistrează erorile care apar la momentul rulării procesului
+Utilizat pentru a identifica problemele din aplicația curentă care afectează clienții și care se pot manifesta prin erori fatale sau diminuarea funcționalității. Înregistrează erorile care apar la rularea procesului.
 
 Se colectează următoarele câmpuri:
 
@@ -14082,7 +14173,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officesystemsystemhealtherrorswithouttag"></a>Office.System.SystemHealthErrorsWithoutTag
 
-Utilizat pentru a problemele din aplicația curentă care afectează clienții și care se pot manifesta drept căderi sau funcționalitate diminuată. Înregistrează erorile care apar la momentul rulării procesului.
+Utilizat pentru a identifica problemele din aplicația curentă care afectează clienții și care se pot manifesta prin erori fatale sau diminuarea funcționalității. Înregistrează erorile care apar la rularea procesului.
 
 Se colectează următoarele câmpuri:
 
@@ -14102,7 +14193,7 @@ Count – numărul fiecărei erori
 
 #### <a name="officesystemsystemhealtherrorswithtag"></a>Office.System.SystemHealthErrorsWithTag
 
-Utilizat pentru a problemele din aplicația curentă care afectează clienții și care se pot manifesta drept căderi sau funcționalitate diminuată. Înregistrează erorile care apar la momentul rulării procesului.
+Utilizat pentru a identifica problemele din aplicația curentă care afectează clienții și care se pot manifesta prin erori fatale sau diminuarea funcționalității. Înregistrează erorile care apar la rularea procesului.
 
 Se colectează următoarele câmpuri:
 
@@ -14236,7 +14327,7 @@ Ne permite să detectăm situațiile în care vizualizarea noastră de conversa�
 
 Se colectează următoarele câmpuri:
 
-- Nu s-au colectat câmpuri sau date suplimentare. Doar jurnalele sunt colectate dacă există o irosire de memorie corelată cu un fir de conversație.
+- Nu se colectează niciun câmp și nici datele adăugate. Doar jurnalele sunt colectate dacă există o irosire de memorie corelată cu un fir de conversație.
 
 #### <a name="coredatacorruption"></a>core.data.corruption
 
@@ -14269,6 +14360,8 @@ Se colectează următoarele câmpuri:
 Acest eveniment colectează informații care ne permit să clasificăm și să dispunem pe categorii problemele din aplicația Outlook care sunt asociate cu setările de accesibilitate și de dispozitive.  Această clasificare este necesară pentru a prioritiza impactul problemelor asupra clienților.
 
 Se colectează următoarele câmpuri pentru iOS:
+
+- **alternate_app_icon**- ne spune ce pictogramă de aplicație alternativă a selectat momentan utilizatorul pentru aplicație
 
 - **bold_text** - ne spune dacă dispozitivul are textul cu caractere aldine activat pentru a ne ajuta să detectăm probleme legate de textul cu caractere aldine
 
@@ -14307,8 +14400,6 @@ Se colectează următoarele câmpuri pentru Android:
 - **high_contrast** - ne spune dacă utilizatorul a activat setarea pentru Contrast înalt pe dispozitiv, pentru a ne ajuta să detectăm probleme legate de această setare
 
 - **large_text** - ne spune dacă dispozitivul are setarea text mare activată pentru a ne ajuta să detectăm probleme legate de această setare
-
-- **oem_preinstall** - ne spune dacă aplicația noastră a fost preinstalată pe dispozitiv (aceasta se aplică numai la dispozitivele Samsung)
 
 - **supported_abis** - ne spune ce tipuri de interfață binare de aplicație (ABI) sunt acceptate de platforma de dispozitive pentru a ne ajuta să detectăm probleme legate de această setare
 
@@ -14434,7 +14525,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officepowerpointpptsharednointernetconnectivity"></a>Office.PowerPoint.PPT.Shared.NoInternetConnectivity
 
-Se colectează de câte ori PowerPoint detectează că nu există conectivitate la internet. Microsoft utilizează aceste date pentru a obține informații de diagnostic despre conexiunea la internet a utilizatorului, spre a înțelege cum afectează aceasta conectivitatea la servicii Office.
+Se colectează ori de câte ori PowerPoint detectează că nu există conectivitate la internet. Microsoft utilizează aceste date pentru a obține informații de diagnostic despre conexiunea la internet a utilizatorului, pentru a înțelege cum afectează aceasta conectivitatea la serviciile Office.
 
 Se colectează următoarele câmpuri:
 

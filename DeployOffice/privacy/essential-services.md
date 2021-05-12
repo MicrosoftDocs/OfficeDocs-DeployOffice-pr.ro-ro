@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre servicii esențiale în Office, cum ar fi Clic și Pornire și Licențiere, și asigură o listă de evenimente și câmpuri de date pentru aceste servicii esențiale.
 hideEdit: true
-ms.openlocfilehash: d71859f75046ad13901aae1b381bf97227f05383
-ms.sourcegitcommit: 8982800d8026ec2f82e8389b7dfa762381258874
+ms.openlocfilehash: d3e5ca5381c9fb68a1e05fca703729e282593ded
+ms.sourcegitcommit: cb1f6e3ba1336fc1a8cdca927f545dc43fd8e829
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "51891216"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "52308157"
 ---
 # <a name="essential-services-for-office"></a>Servicii esențiale pentru Office
 
@@ -47,7 +47,7 @@ Următorul tabel conține o listă a serviciilor esențiale pentru Office și o 
 
 | **Serviciu**  | **Descriere**  |
 | ------ | ---- |
-| [Autentificare](#authentication-events) | Autentificare este un serviciu multi-platformă care validează identitatea dvs. de utilizator Office.   Este necesar pentru a vă permite să vă conectați la Office, să vă activați licența de Office și să accesați fișierele stocate în cloud; oferă o experiență unitară la nivelul sesiunilor de Office și al dispozitivelor dvs.    |
+| [Autentificare](#authentication-events) | Autentificare este un serviciu multi-platformă care validează identitatea dvs. de utilizator Office. Acesta este necesar pentru a vă permite să vă conectați la Office, să vă activați licența de Office și să vă accesați fișierele stocate în cloud; oferă o experiență unitară la nivelul sesiunilor de Office și al dispozitivelor dvs.    |
 | [Clic și Pornire](#click-to-run-events) | Clic și Pornire este tehnologia de instalare utilizată pentru a instala și a actualiza Office pe Windows. Aceasta caută noi versiuni de Office și, atunci când este disponibilă o nouă versiune, o descarcă și o instalează.  Clic și Pornire va detecta dacă sunt necesare actualizări Office, inclusiv actualizări de securitate, le va descărca și le va instala.     |
 | [Serviciul de configurație avansată (ECS)](#enhanced-configuration-service-ecs-events) | ECS oferă Microsoft capacitatea de a reconfigura instalările Office fără a fi nevoie să implementați din nou Office. Este utilizat pentru a controla implementarea treptată de caracteristici sau actualizări, în timp ce impactul implementării este monitorizat pe baza datelor de diagnosticare colectate. Este utilizat, de asemenea, pentru a atenua problemele de securitate sau de performanță cu o caracteristică sau actualizare. În plus, ECS acceptă modificările de configurare legate de datele de diagnosticare pentru a vă ajuta să vă asigurați că evenimentele corespunzătoare sunt colectate. |
 | [Licențiere](#licensing-events)     | Licențiere este un serviciu bazat pe cloud care acceptă activarea Office pentru noile instalări și păstrează licența pe dispozitivele dvs. după ce Office a fost activat. Acesta înregistrează fiecare dintre dispozitivele dvs. și activează Office, verifică starea abonamentului Office și gestionează cheile de produs.    |
@@ -898,7 +898,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="onenotesigninssoexternalappsaccountfound"></a>OneNote.SignIn.SSOExternalAppsAccountFound
  
-Acest eveniment este înregistrat când un cont cu un simbol de reîmprospătare valid se găsește în lista de conturi furnizate de TokenSharingManager.  Acest scenariu este specific pentru Sign-on unic (SSO).
+Acest eveniment este înregistrat când un cont cu un simbol de reîmprospătare valid se află în lista de conturi furnizate de TokenSharingManager.  Acest scenariu este specific pentru Sign-on unic (SSO)
  
 Se colectează următoarele câmpuri:
  
@@ -908,7 +908,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="onenotesigninssoexternalappsinvalidaccount"></a>OneNote.SignIn.SSOExternalAppsInvalidAccount
 
-Acest eveniment se înregistrează când a apărut o eroare atunci când s-a încercat obținerea unui simbol de reîmprospătare pentru un cont din lista de conturi furnizate de TokenSharingManager. Acest scenariu este specific pentru Sign-on unic (SSO)
+Acest eveniment este înregistrat când a apărut o eroare în cazul unei tentative de obținere a simbolului de reîmprospătare pentru un cont din lista de conturi furnizată de TokenSharingManager. Acest scenariu este specific pentru Sign-on unic (SSO)
  
 Se colectează următoarele câmpuri:
  
@@ -1168,7 +1168,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
   - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
@@ -1266,7 +1266,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officeclicktorunscenarioinstalltaskfinalintegrate"></a>Office.ClickToRun.Scenario.InstallTaskFinalintegrate
 
-Date despre instalări și inventar Office colectate atunci când programul de instalare Office instalează setări de licențe și registry. Utilizat pentru a măsura succesul/eșecul instalării Office.
+Date despre instalări și inventar Office colectate atunci când programul de instalare Office instalează licențe și setări de registry. Utilizate pentru a măsura succesul/eșecul instalării Office.
 
 Se colectează următoarele câmpuri:
 
@@ -1320,7 +1320,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
   - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
@@ -1342,7 +1342,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officeclicktorunscenarioinstalltaskfonts"></a>Office.ClickToRun.Scenario.InstallTaskFonts
 
-Date despre instalări și inventar Office colectate atunci când programul de instalare Office instalează fonturi. Utilizat pentru a măsura succesul/eșecul instalării Office.
+Date despre instalări și inventar Office colectate atunci când programul de instalare Office instalează fonturi. Utilizate pentru a măsura succesul/eșecul instalării Office.
 
 Se colectează următoarele câmpuri:
 
@@ -1418,7 +1418,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officeclicktorunscenarioinstalltaskinitupdates"></a>Office.ClickToRun.Scenario.InstallTaskInitupdates
 
-Date despre instalări și inventar Office colectate atunci când programul de instalare Office creează setări pentru ca actualizările să funcționeze corespunzător. Utilizat pentru a măsura succesul/eșecul instalării Office.
+Date despre instalări și inventar Office colectate atunci când programul de instalare Office creează setări pentru funcționarea corectă a actualizărilor. Utilizate pentru a măsura succesul/eșecul instalării Office. 
 
 Se colectează următoarele câmpuri:
 
@@ -1472,7 +1472,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare
+  - **Data\_ScenarioName -** ce scenariu rulează, adică instalare
 
   - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
@@ -1548,7 +1548,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
   - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
@@ -1570,7 +1570,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officeclicktorunscenarioinstalltasklastrun"></a>Office.ClickToRun.Scenario.InstallTaskLastrun
 
-Date despre instalări și inventar Office colectate atunci când programul de instalare Office finalizează instalarea, fixând comenzile rapide și creând setări de registry finale. Utilizat pentru a măsura succesul/eșecul instalării Office.
+Date despre instalări și inventar Office colectate atunci când programul de instalare Office finalizează instalarea, fixează comenzi rapide și creează setări de registry finale. Utilizate pentru a măsura succesul/eșecul instalării Office. 
 
 Se colectează următoarele câmpuri:
 
@@ -1624,7 +1624,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare
+  - **Data\_ScenarioName -** ce scenariu rulează, adică instalare
 
   - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
@@ -1700,7 +1700,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare
+  - **Data\_ScenarioName -** ce scenariu rulează, adică instalare
 
   - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
@@ -1722,7 +1722,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officeclicktorunscenarioinstalltaskpublishrsod"></a>Office.ClickToRun.Scenario.InstallTaskPublishrsod
 
-Date despre instalări și inventar Office colectate atunci când programul de instalare publică registry virtual pentru nivelul de virtualizare AppV. Utilizat pentru a măsura succesul/eșecul instalării Office.
+Date despre instalări și inventar Office colectate atunci când programul de instalare Office publică registry virtual pentru nivelul de virtualizare AppV. Utilizate pentru a măsura succesul/eșecul instalării Office. 
 
 Se colectează următoarele câmpuri:
 
@@ -1852,7 +1852,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
   - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
@@ -1874,7 +1874,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officeclicktorunscenarioinstalltaskstream"></a>Office.ClickToRun.Scenario.InstallTaskStream
 
-Date despre instalări și inventar Office colectate atunci când programul de instalare Office descarcă fișiere noi pentru Office. Utilizat pentru a măsura succesul/eșecul instalării Office.
+Date despre instalări și inventar Office colectate atunci când programul de instalare Office cdescarcă noi fișiere pentru Office. Utilizate pentru a măsura succesul/eșecul instalării Office. 
 
 Se colectează următoarele câmpuri:
 
@@ -1928,7 +1928,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
   - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
@@ -1950,7 +1950,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officeclicktorunscenarioinstalltaskuninstallcentennial"></a>Office.ClickToRun.Scenario.InstallTaskUninstallcentennial
 
-Date despre instalări și inventar Office colectate atunci când programul de instalare Office dezinstalează o versiune anterioară de Office din Store. Utilizat pentru a măsura succesul/eșecul instalării Office.
+Date despre instalări și inventar Office colectate atunci când programul de instalare Office dezinstalează o versiune anterioară de Office din Store. Utilizate pentru a măsura succesul/eșecul instalării Office.
 
 Se colectează următoarele câmpuri:
 
@@ -2004,7 +2004,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
   - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
@@ -2080,7 +2080,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
   - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
@@ -2102,7 +2102,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officeclicktorunscenariorepairtaskfullrepair"></a>Office.ClickToRun.Scenario.RepairTaskFullrepair
 
-Date despre instalări și inventar Office colectate atunci când clientul de reparare Office descarcă cea mai recentă versiune a clientului Clic și Pornire pentru a pregăti computerul pentru dezinstalare și reinstalare. Utilizat pentru a măsura succesul/eșecul reparării Office.
+Date despre instalări și inventar Office colectate atunci când clientul de reparare Office descarcă cea mai recentă versiune a clientului Clic și Pornire, pentru a pregăti computerul pentru dezinstalare și reinstalare. Utilizate pentru a măsura succesul/eșecul reparării Office.
 
 Se colectează următoarele câmpuri:
 
@@ -2156,7 +2156,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
   - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
@@ -2178,7 +2178,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officeclicktorunscenariorepairtaskintegraterepair"></a>Office.ClickToRun.Scenario.RepairTaskIntegraterepair
 
-Date despre instalări și inventar Office colectate atunci când clientul de reparare Office încearcă să repare unele intrări problematice de registry cunoscute. Utilizat pentru a măsura succesul/eșecul reparării Office.
+Date despre instalări și inventar Office colectate atunci când clientul de reparare Office încearcă să repare unele intrări de registry problematice, cunoscute. Utilizate pentru a măsura succesul/eșecul reparării Office.
 
 Se colectează următoarele câmpuri:
 
@@ -2232,7 +2232,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
   - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
@@ -2254,7 +2254,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officeclicktorunscenariorepairtaskremoveinstallation"></a>Office.ClickToRun.Scenario.RepairTaskRemoveinstallation
 
-Date despre instalări și inventar Office colectate atunci când clientul de reparare Office elimină Office de pe dispozitiv pentru a pregăti o reinstalare la reparare. Utilizat pentru a măsura succesul/eșecul reparării Office.
+Date despre instalări și inventar Office colectate atunci când clientul de reparare Office elimină Office de pe dispozitiv pentru a pregăti o reinstalare la reparare. Utilizate pentru a măsura succesul/eșecul reparării Office.
 
 Se colectează următoarele câmpuri:
 
@@ -2308,7 +2308,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
   - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
@@ -2384,7 +2384,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
   - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
@@ -2460,7 +2460,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
   - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
@@ -2482,7 +2482,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officeclicktorunscenarioupdatetaskupdateapply"></a>Office.ClickToRun.Scenario.UpdateTaskUpdateapply
 
-Date despre instalări și inventar Office colectate atunci când clientul Clic și Pornire închide aplicațiile care rulează, dacă este necesar, și instalează fișiere noi care au fost descărcate. Utilizat pentru a măsura succesul/eșecul actualizării Office.
+Date despre instalări și inventar Office colectate atunci când clientul Clic și Pornire închide aplicații care rulează, dacă este necesar, și instalează fișiere noi care au fost descărcate. Utilizate pentru a măsura succesul/eșecul reparării Office.
 
 Se colectează următoarele câmpuri:
 
@@ -2546,7 +2546,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
   - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
@@ -2708,7 +2708,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare
+  - **Data\_ScenarioName -** ce scenariu rulează, adică instalare
 
   - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
@@ -2796,7 +2796,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
   - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
@@ -2818,7 +2818,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officeclicktorunscenarioupdatetaskupdatefinalize"></a>Office.ClickToRun.Scenario.UpdateTaskUpdatefinalize
 
-Date despre instalări și inventar Office colectate atunci când clientul Clic și Pornire este în curs de curățare de la actualizare și restaurează aplicații care au fost deschise anterior. Utilizat pentru a măsura succesul sau eșecul actualizării Office.
+Date despre instalări și inventar Office colectate atunci când clientul Clic și Pornire curăță în urma actualizării și restaurează aplicații care au fost deschise anterior. Utilizate pentru a măsura succesul/eșecul reparării Office.
 
 Se colectează următoarele câmpuri:
 
@@ -2872,7 +2872,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
   - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
@@ -3053,7 +3053,7 @@ Raportează acțiunea care stabilește intrarea colectată utilizând CollectPar
 
 ### <a name="officeclicktorununiversalbootstrappercollectembeddedsignature"></a>Office.ClickToRun.UniversalBootstrapper.CollectEmbeddedSignature
 
-Raportează acțiunea care citește intrarea etichetată din semnătura încorporată exe.  Acesta este un concept nedovedit pentru faptul că iterația anterioară a programului setup.exe nu a fost implementată și este lucrul pe care ne bazăm pentru a transmite opțiunile de produs/limbă/număr de biți ale utilizatorului de la pagina web la procesarea din setup.exe.
+Raportează acțiunea care citește intrarea etichetată din semnătura încorporată exe. Acesta este un concept nedovedit pe care iterația anterioară a programului setup.exe nu l-a implementat și este lucrul pe care ne bazăm pentru a transmite opțiunile de produs/limbă/număr de biți ale utilizatorului de la pagina web în proces, în cadrul setup.exe.
  
 - **ErrorCode–**  Numărul întreg asociat cu o excepție netratată
 
@@ -3277,7 +3277,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officeandroiddocsuipaywallcontrolpaywalluishown"></a>Office.Android.DocsUI.PaywallControl.PaywallUIShown
 
-Telemetrie de utilizare critică pentru atunci când este afișat control paywall pentru utilizator. Utilizat pentru a înțelege experiența de achiziționare în cadrul aplicației pentru utilizator și pentru a optimiza același lucru în versiunile viitoare.
+Telemetrie de utilizare critică pentru când se afișează controlul Paywall utilizatorului. Este utilizată pentru înțelegerea experienței de achiziție în cadrul aplicației pentru utilizator și pentru optimizarea acesteia pentru versiunile viitoare.
 
 Se colectează următoarele câmpuri:
 
@@ -3598,7 +3598,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officelicensingactivation"></a>Office.Licensing.Activation 
 
-După configurarea licenței pe computer, încercăm să activăm licența prin apelarea serviciului AVS. Acesta raportează rezultatul apelului de activare
+După configurarea licenței pe computer, încercăm să activăm licența prin apelarea serviciului AVS. Astfel se raportează rezultatul apelului de activare
 
 Este de importanță critică în a detecta câți utilizatori întâmpină probleme de activare. Dispunem de o detectare a anomaliilor pentru a detecta orice regresie. Acest lucru este de importanța critică absolută, deoarece avem o dependență externă de AVS, iar acest semnal indică dacă partenerii noștri externi sunt sănătoși. Este utilizat, de asemenea, în scopuri de diagnosticare și sănătate a sistemului dacă un utilizator raportează o problemă cu computerul
 
@@ -3644,7 +3644,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officelicensingdialogswebviewdialoghandleerrornotification"></a>Office.Licensing.Dialogs.WebViewDialog.HandleErrorNotification
  
-Acest eveniment este utilizat drept semnal care ne informează dacă experiența de achiziționare în cadrul aplicației a încercat să se încarce, dar s-a produs o eroare care a dus la neafișarea casetei de dialog. Datele sunt utilizate pentru a monitoriza și a alerta starea fluxului de achiziționare în cadrul aplicației, pentru a vă asigura funcționalitatea conform așteptărilor.  
+Acest eveniment este utilizat drept semnal care ne informează dacă experiența de achiziționare în cadrul aplicației a încercat să se încarce, dar s-a produs o eroare care a dus la neafișarea casetei de dialog. Datele sunt utilizate pentru a monitoriza și a alerta starea fluxului de achiziționare în cadrul aplicației, pentru a asigura funcționarea conform așteptărilor.  
  
 Se colectează următoarele câmpuri:
   
@@ -3652,7 +3652,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officelicensingdialogswebviewdialogpreload"></a>Office.Licensing.Dialogs.WebViewDialog.Preload
  
-Acest eveniment este utilizat drept semnal care ne informează dacă experiența de achiziționare în cadrul aplicației se încarcă în fundal. Datele sunt utilizate pentru a monitoriza și a alerta starea fluxului de achiziționare în cadrul aplicației, pentru a vă asigura funcționalitatea conform așteptărilor.  
+Acest eveniment este utilizat drept semnal care ne informează dacă experiența de achiziționare în cadrul aplicației este în curs de încărcare în fundal. Datele sunt utilizate pentru a monitoriza și a alerta starea fluxului de achiziționare în cadrul aplicației, pentru a asigura funcționarea conform așteptărilor.  
  
 Se colectează următoarele câmpuri:
 
@@ -3660,7 +3660,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officelicensingdialogswebviewdialogshow"></a>Office.Licensing.Dialogs.WebViewDialog.Show
  
-Acest eveniment este utilizat drept semnal care ne informează dacă experiența de achiziționare în cadrul aplicației este afișată utilizatorului. Datele sunt utilizate pentru a monitoriza și a alerta starea fluxului de achiziționare în cadrul aplicației.   
+Acest eveniment este utilizat drept semnal care ne informează dacă experiența de achiziționare în cadrul aplicației se afișează utilizatorului. Datele sunt utilizate pentru a monitoriza și a alerta starea fluxului de achiziționare în cadrul aplicației, pentru a asigura funcționarea conform așteptărilor.  
 
 Se colectează următoarele câmpuri:
 
@@ -3685,7 +3685,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officelicensingexpirationdialogshown"></a>Office.Licensing.ExpirationDialogShown
 
-Acest lucru este colectat atunci când afișăm caseta de dialog de expirare utilizatorului care spune că licența lor a expirat. Este de importanță critică pentru a detecta dacă utilizatorul se află în stare bună, fără să îi lipsească funcționalități, este utilizat pentru sănătatea sistemului și în scopuri de diagnosticare dacă un utilizator raportează o problemă cu computerul
+Se colectează când afișăm utilizatorului caseta de dialog de expirare care spune că licența sa a expirat. Este de importanță critică pentru a detecta dacă utilizatorul se află în stare bună, fără să îi lipsească funcționalități, este utilizat pentru sănătatea sistemului și în scopuri de diagnosticare, dacă un utilizator raportează o problemă cu computerul
 
 Se colectează următoarele câmpuri:
 
@@ -3718,6 +3718,29 @@ Se colectează următoarele câmpuri:
 - **EntitlementCount** - numărul de drepturi pe care le are utilizatorul
 
 
+### <a name="officelicensinggetnextuserlicense"></a>Office.Licensing.GetNextUserLicense
+
+Acest eveniment se declanșează atunci când preluați licența pentru drepturile Office bazate pe utilizator alese în timpul în prima experiență de rulare a activării. Utilizăm aceste date pentru a monitoriza starea sistemelor și a serviciilor.
+
+Se colectează următoarele câmpuri:
+
+- **Activity_Success** - Boolean: ne spune dacă am preluat cu succes o licență pentru ca dispozitivul să fie activat în aplicația sa Office.
+
+- **Data_AllowNULPerpetual** - Boolean: ne spune dacă este activat flight pentru activarea vNext Perpetual.
+
+- **Data_AttemptNulReactivation** - Boolean: ne spune dacă acesta este un scenariu de reactivare.
+
+- **Data_CurrentMode** - 0 înseamnă SPP (stiva de licențiere moștenită), 2 înseamnă vNext (stiva de licențiere modernă).
+
+- **Data_HasError** - Boolean: ne spune dacă am primit orice eroare la o tentativă de obținere a unei licențe pentru drepturile bazate pe utilizator alese.
+
+- **Data_IsSubscription** - boolean: ne spune dacă reactivarea este pentru Office de abonament.
+
+- **Data_NewMode** - 0 înseamnă SPP (stiva de licențiere moștenită), 2 înseamnă vNext (stiva de licențiere modernă). Ar trebui să ne așteptăm la 2, în cele mai multe cazuri.
+
+- **Data_SkuToSkuNeeded** - Boolean: ne spune dacă trebuie să facem conversia SKU în SKU, întrucât SKU Office eligibil nu se potrivește cu SKU Office instalat.
+
+
 ### <a name="officelicensingheartbeat"></a>Office.Licensing.Heartbeat 
 
 La fiecare sesiune, verificăm dacă au trecut 72 de ore de la ultima reînnoire de licență și încercăm să extindem valabilitatea licenței curente. Acest eveniment raportează succesul sau eșecul apelului pe care îl efectuăm pentru a ne asigura că putem extinde valabilitatea licenței și să păstrăm funcțională instalarea Office a utilizatorului. Este de importanță critică în diagnosticarea problemelor legate de abonament și serviciu pentru utilizator și în detectarea regresiilor pentru utilizatorii care dețin deja un abonament activat.
@@ -3748,7 +3771,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officelicensinginrfm"></a>Office.Licensing.InRFM 
 
-Dacă dispozitivul intră în modul de funcționalitate redusă, trimitem acest semnal pentru a indica faptul că computerul nu este într-o stare bună de funcționare. Este de importanță critică pentru a detecta dacă utilizatorul se află în stare bună și dacă îi lipsesc funcționalități, este utilizat pentru sănătatea sistemului și în scopuri de diagnosticare dacă un utilizator raportează o problemă cu computerul
+Dacă dispozitivul intră în modul de funcționalitate redusă, trimitem acest semnal pentru a indica faptul că computerul nu este într-o stare bună de funcționare. Este de importanță critică pentru a detecta dacă utilizatorul se află în stare bună, fără să îi lipsească funcționalități, este utilizat pentru sănătatea sistemului și în scopuri de diagnosticare dacă un utilizator raportează o problemă cu computerul
 
 Se colectează următoarele câmpuri:
 
@@ -3774,7 +3797,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officelicensinginvokelicensewizard"></a>Office.Licensing.InvokeLicenseWizard
 
-În cazul în care vedem probleme cu fluxul de lucru de activare, declanșăm un expert de licență și trimitem acest semnal pentru a indica același lucru. Este de importanță critică pentru a detecta dacă utilizatorul se află în stare bună, fără să îi lipsească funcționalități, este utilizat pentru sănătatea sistemului și în scopuri de diagnosticare dacă un utilizator raportează o problemă cu computerul
+În cazul în care observăm probleme cu fluxul de lucru de activare, declanșăm un expert de licențe și trimitem acest semnal pentru a indica problema. Este de importanță critică pentru a detecta dacă utilizatorul se află în stare bună, fără să îi lipsească funcționalități, este utilizat pentru sănătatea sistemului și în scopuri de diagnosticare dacă un utilizator raportează o problemă cu computerul
 
 Se colectează următoarele câmpuri:
 
@@ -3798,7 +3821,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officelicensinglicexitofficeprocess"></a>Office.Licensing.LicExitOfficeProcess 
 
-Dacă în final Office se închide/cade din cauza unei probleme de licențiere, trimitem acest semnal pentru a indica problema. Este de importanță critică pentru a detecta dacă utilizatorul se află în stare bună, fără să îi lipsească funcționalități, este utilizat pentru sănătatea sistemului și în scopuri de diagnosticare dacă un utilizator raportează o problemă cu computerul.
+Dacă în final Office se închide/cade din cauza unei probleme de licențiere, trimitem acest semnal pentru a indica problema. Este de importanță critică pentru a detecta dacă utilizatorul se află în stare bună, fără să îi lipsească funcționalități, este utilizat pentru sănătatea sistemului și în scopuri de diagnosticare dacă un utilizator raportează o problemă cu computerul
 
 Se colectează următoarele câmpuri:
 
@@ -4228,7 +4251,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officelicensingusegracekey"></a>Office.Licensing.UseGraceKey
 
-Dintr-un motiv sau altul, nu putem să licențiem utilizatorul; instalăm o cheie de grație și trimitem acest semnal cu semnificație. Este de importanță critică pentru a detecta dacă utilizatorul se află în stare bună și dacă îi lipsesc funcționalități, este utilizat pentru sănătatea sistemului și în scopuri de diagnosticare dacă un utilizator raportează o problemă cu computerul
+Dacă, dintr-un motiv sau altul, nu putem să licențiem utilizatorul, instalăm o cheie de grație și trimitem acest semnal cu semnificație. Este de importanță critică pentru a detecta dacă utilizatorul se află în stare bună, fără să îi lipsească funcționalități, este utilizat pentru sănătatea sistemului și în scopuri de diagnosticare dacă un utilizator raportează o problemă cu computerul
 
 Se colectează următoarele câmpuri:
 
@@ -4246,7 +4269,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="skuproductpricenullevent"></a>SKU.PREȚ.PRODUS.NUL.EVENIMENT
 
-Acest eveniment este utilizat pentru a capta evenimentele pentru a cuantifica impactul erorii, datorită cărora utilizatorii de astăzi văd "Nul" în loc de un preț pe ecranul de alegere SKU. Eroarea va fi diagnosticată și mai mult, pentru a determina o remediere. 
+Acest eveniment este utilizat pentru a capta evenimentele în vederea cuantificării impactului erorii, datorită căreia utilizatorii văd astăzi „Nul” în loc de un preț, pe ecranul selector SKU. Eroarea va fi diagnosticată în continuare, pentru a stabili o remediere. 
 
 Se colectează următoarele câmpuri:
 
@@ -4542,7 +4565,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="appregistryinfo"></a>appregistry.info
 
-Acest eveniment indică faptul că aplicația a fost lansată. Vom utiliza acest eveniment pentru a lista aplicațiile pentru care MAU poate controla actualizările, numărul de copii disponibile, precum și versiunea acestora și locația de instalare (implicită sau altele).
+Acest eveniment indică faptul că aplicația a fost lansată. Vom utiliza acest eveniment pentru a lista aplicațiile pentru care MAU poate controla actualizările, numărul de copii disponibile, precum și versiunea și locația de instalare a acestora (implicită sau alta).
 
 Se colectează următoarele câmpuri:
 
@@ -4670,7 +4693,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="cloningtaskbegin"></a>cloningtask.begin
 
-Acest eveniment indică începutul activității de clonare anterior actualizării aplicațiilor. Vom utiliza acest eveniment împreună cu evenimentul cloningtask.status pentru a determina volumul de erori de clonare, pentru a determina dacă caracteristica de clonare ar trebui să fie limitată pe diferite canale de audiență.
+Acest eveniment indică începutul activității de clonare anterioare actualizării aplicațiilor. Utilizăm acest eveniment împreună cu evenimentul cloningtask.status, pentru a determina volumul de erori de clonare, în scopul de a stabili dacă caracteristica de clonare ar trebui să fie limitată pe diferite canale de public.
  
 Se colectează următoarele câmpuri:
 
@@ -5127,7 +5150,7 @@ Se colectează următoarele câmpuri:
     
 ### <a name="controllercheckwindownoupdatefoundok"></a>controller.checkwindow.noupdatefoundok
 
-Acest eveniment indică faptul că o verificare a actualizărilor nu au fost găsite actualizări. Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite corect, pentru a optimiza încărcarea serviciilor și pentru a defini frecvența de verificare a actualizărilor. De asemenea, dorim să optimizăm cadență noastră de lansare pe baza așteptărilor utilizatorilor față de actualizări.
+Acest eveniment indică faptul că nu au fost găsite actualizări în urma unei verificări a actualizărilor. Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite corect, pentru a optimiza încărcarea serviciilor și pentru a defini frecvența de verificare a actualizărilor. De asemenea, dorim să optimizăm frecvența lansărilor noastre, pe baza așteptărilor utilizatorilor în ceea ce privește actualizările.
 
 Se colectează următoarele câmpuri:
 
@@ -5333,7 +5356,7 @@ Se colectează următoarele câmpuri:
     
 ### <a name="controllercheckwindowuptodate"></a>controller.checkwindow.uptodate
 
-Acest eveniment indică faptul că în urma procesului de verificare a actualizărilor nu au fost găsite actualizări din cauză că aplicațiile din dispozitiv sunt actualizate.  Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite corect.
+Acest eveniment indică faptul că nu au fost găsite actualizări în urma procesului de verificare a actualizărilor, deoarece aplicațiile de pe dispozitiv sunt actualizate.  Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite corect.
 
 Se colectează următoarele câmpuri:
 
@@ -6932,7 +6955,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="downloadmanifestconfiguration"></a>downloadmanifest.configuration
 
-Acest eveniment raportează o eroare cu configurația Microsoft AutoUpdate (MAU); fie cu configurarea Server particularizat din preferințe sau cu definițiile de punct final din Asistentul de actualizare din componentele MAU instalate. Folosim acest eveniment pentru a consilia administratorii IT în vederea setării corecte a punctelor finale din serverul manifest.
+Acest eveniment raportează o eroare cu configurația Microsoft AutoUpdate (MAU), fie cu configurarea Server particularizat din preferințe sau cu definițiile de punct final din Asistentul de actualizare din componentele MAU instalate. Utilizăm acest eveniment pentru a recomanda administratorilor IT să seteze puncte finale din serverul manifest corecte
  
 Se colectează următoarele câmpuri:
 
@@ -7929,7 +7952,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="fbaforceupdatecheck"></a>fba.forceupdatecheck
 
-Acest eveniment indică faptul că verificarea actualizării este forțată. Folosim acest eveniment pentru a determina volumul de verificări forțate ale actualizărilor care au loc în afara ciclului normal de verificare a actualizărilor.
+Acest eveniment indică faptul că verificarea actualizărilor este forțată. Utilizăm acest eveniment pentru a determina volumul de verificări forțate ale actualizărilor, care au loc în afara ciclului normal de verificare a actualizărilor.
 
 Se colectează următoarele câmpuri:
 
@@ -8009,7 +8032,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="fbainstallpending"></a>fba.installpending
 
-Acest eveniment indică faptul că Microsoft Auto Update (MAU) a trimis o notificare cu privire la actualizările în așteptare. Acest eveniment este folosit pentru a determina volumul de actualizări care sunt inițiate din notificările de utilizator și sunt utilizate pentru a îmbunătăți experiența utilizatorilor prin minimizarea întreruperilor pentru utilizator în versiunile ulterioare.
+Acest eveniment indică faptul că Microsoft Auto Update (MAU) a trimis o notificare cu privire la actualizările în așteptare. Acest eveniment este folosit pentru a determina volumul de actualizări care sunt inițiate din notificările de utilizator și este utilizat pentru a îmbunătăți experiența utilizatorilor, prin minimizarea întreruperilor pentru utilizator în versiunile ulterioare.
 
 Se colectează următoarele câmpuri:
 
@@ -8255,7 +8278,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="fbamausilentupdate"></a>fba.mausilentupdate
 
-Acest eveniment indică faptul că Asistentul de actualizare Microsoft inițiază actualizări silențioase. Acest eveniment este utilizat pentru a determina volumul de actualizări aplicate fără intervenția utilizatorului, pentru a contribui la îmbunătățirea experienței de utilizator.
+Acest eveniment indică faptul că Asistentul de actualizare Microsoft inițiază actualizări silențioase. Acest eveniment este utilizat pentru a determina volumul actualizărilor aplicate fără intervenția utilizatorului, pentru a contribui la îmbunătățirea experienței utilizatorului.
 
 Se colectează următoarele câmpuri:
 
@@ -10017,7 +10040,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="guidashboardviewupdatemodebuttonclicked"></a>gui.dashboardview.updatemodebutton.clicked
 
-Acest eveniment indică modul de actualizare schimbat din controlul interfeței de utilizator. Acest eveniment este folosit pentru a determina volumul de dispozitive care se deplasează de la un mod la altul și este utilizat pentru a determina de ce clienții se îndepărtează de actualizările automate. 
+Acest eveniment indică modul de actualizare schimbat din controlul interfeței utilizator. Acest eveniment este folosit pentru a stabili volumul de dispozitive care trec la un mod la altul și este utilizat pentru a determina de ce clienții renunță la actualizările automate. 
 
 Se colectează următoarele câmpuri:
 
@@ -11733,7 +11756,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="lifecyclelaunch"></a>Lifecycle.launch
 
-Acest eveniment indică pornirea AutoUpdate sau Microsoft Update Assistant. Acest eveniment este utilizat, de asemenea, în timpul procesului de lansare, precum și ca metodă de raportare utilizată pentru lansare în cazul Microsoft Update Assistant.
+Acest eveniment indică pornirea AutoUpdate sau Microsoft Update Assistant. Acest eveniment este utilizat, de asemenea, pentru a raporta orice problemă survenită în timpul procesului de lansare, precum și ca metodă de raportare utilizată pentru lansare în cazul Microsoft Update Assistant.
 
 *[Acest eveniment înlocuiește evenimentele fba.launch și appdelegate.launch.]*
 
@@ -12038,7 +12061,7 @@ Se colectează următoarele câmpuri:
     
 ### <a name="msupdatemonitorprogressdownloaded"></a>msupdate.monitor.progress.downloaded
 
-Acest eveniment indică faptul că s-au descărcat actualizări. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
+Acest eveniment indică faptul că s-au descărcat actualizări. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează conform așteptărilor și pentru a ajuta la depanarea erorilor.
  
 Se colectează următoarele câmpuri:
 
@@ -13918,7 +13941,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="updatefilterhelperinvalidappid"></a>updatefilterhelper.invalidappid
 
-Acest eveniment raportează o eroare care indică faptul că nu s-au găsit fișiere manifest care se potrivesc cu ID-ul de aplicație preluat de la răspunsul web. Acest eveniment este utilizat pentru a investiga erorile raportate.
+Acest eveniment raportează o eroare care indică faptul că nu s-au găsit fișiere manifest care să se potrivească ID-ului de aplicație preluat de la răspunsul web. Acest eveniment este utilizat pentru a investiga erorile raportate.
 
 Se colectează următoarele câmpuri: 
 
@@ -13958,7 +13981,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="updatefilterhelperinvalidappidfromwebservices"></a>updatefilterhelper.invalidappidfromwebservices
 
-Acest eveniment raportează o eroare care indică faptul că ID-ul de aplicație preluat de la răspunsul web nu este în format așteptat. Acest eveniment este utilizat pentru a investiga erorile raportate.
+Acest eveniment raportează o eroare care indică faptul că ID-ul de aplicație preluat de la răspunsul web nu este în formatul așteptat. Acest eveniment este utilizat pentru a investiga erorile raportate.
 
 Se colectează următoarele câmpuri:
 
@@ -15026,7 +15049,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="updatemanagernetwork"></a>updatemanager.network
 
-Acest eveniment înregistrează disponibilitatea rețelei. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
+Acest eveniment înregistrează disponibilitatea rețelei. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează conform așteptărilor și pentru a ajuta la depanarea erorilor.
  
 Se colectează următoarele câmpuri:
 
@@ -15523,7 +15546,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officeonenotestoragenotebooksyncresult"></a>Office.OneNote.Storage.NotebookSyncResult
  
-Acest eveniment înregistrează rezultatul sincronizării blocnotesului. Este utilizat pentru a afla câte ținte de sincronizare unice există atunci când se calculează scorul de sincronizare OneNote.
+Acest eveniment înregistrează rezultatul sincronizării blocnotesului. Acesta este utilizat pentru a afla de câte ținte de sincronizare unice este nevoie pentru calcularea scorului de sincronizare OneNote.
  
 Se colectează următoarele câmpuri
 
@@ -15924,7 +15947,7 @@ Nu sunt colectate date necesare de serviciu de Configurația Serviciilor.
 
 ### <a name="appdeeplink"></a>app.deep.link
 
-Acest eveniment vă ajută să urmăriți utilizarea lansării întâlnirii din calendar, pe diferite puncte finale. Acest eveniment ne permite să detectăm două lucruri atunci când este lansată o întâlnire prin Skype for Business și atunci când este lansată o întâlnire prin Teams și dacă este instalată aplicația Teams.
+Acest eveniment ne ajută să urmărim utilizarea lansării întâlnirii din calendar, pe diferite puncte finale. Acest eveniment ne permite să detectăm două lucruri: când este lansată o întâlnire prin Skype for Business și când este lansată prin Teams, precum și dacă este instalată aplicația Teams.
 
 Se colectează următoarele câmpuri: 
 
@@ -15933,6 +15956,10 @@ Se colectează următoarele câmpuri:
 - **action_type** - acțiune efectuată, cum ar fi lansarea întâlnirii sau de instalarea aplicației
 
 - **aplicație** - Aplicația care a fost lansată printr-un link profund, cum ar fi Teams sau Skype for Business
+
+- **context** - Experiența la care s-a navigat în cadrul aplicației, de exemplu, office_union - word, office_union - excel etc.
+
+- **sursă** - Originea unei acțiuni, de exemplu, inițiată de utilizator, efectuată automat de client etc.
 
 
 ### <a name="officeandroiddocsuipaywallcontrolpaywalloperationmetrics"></a>Office.Android.DocsUI.PaywallControl.PaywallOperationMetrics
@@ -16791,15 +16818,17 @@ Evenimentul este declanșat de o întrerupere anormală a aplicației (de exempl
 
 Se colectează următoarele câmpuri:
 
-  - **AffectedProcessAppBuild -** identificator versiune compilată pentru procesul afectat.
+  - **AffectedProcessAppBuild -** identificator versiune compilată pentru procesul afectat. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
-  - **AffectedProcessAppBuildRevision -** identificator revizuire compilare pentru procesul afectat.
+  - **AffectedProcessAppBuildRevision -** Identificator revizuire compilare pentru procesul afectat. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
-  - **AffectedProcessAppMajorVer -** - identificator versiune minoră pentru procesul afectat.
+  - **AffectedProcessAppMajorVer -** - Identificator versiune majoră pentru procesul afectat. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
-  - **AffectedProcessAppMinorVer -** identificator versiune minoră pentru procesul afectat.
+  - **AffectedProcessAppMinorVer -** Identificator versiune minoră pentru procesul afectat. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
   - **AffectedProcessAppName -** numele procesului afectat. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
+  
+  - **AffectedProcessAppVersion** Identificator versiune pentru procesul afectat.
 
   - **AffectedProcessExeBuildVersion -** numărul versiunii compilate a procesului afectat. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
@@ -16985,6 +17014,8 @@ Se colectează următoarele câmpuri:
   - **BucketId** - identificator bucket Watson pentru cădere
  
   - **CabGuid** - identificator Globally Unique Identifier (GUID) pentru cab Watson.
+
+  - **CallStack** - Stiva de apeluri interne Microsoft care cauzează căderea.
 
   - **CrashedAppBuild -** identificator versiune compilată pentru procesul afectat. *[Acest câmp a fost eliminat din compilările curente de Office, dar poate apărea în continuare în versiuni mai vechi.]*
 
@@ -17433,7 +17464,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officetelemetryrulesenginediskthrottled"></a>Office.Telemetry.RulesEngineDiskThrottled
 
-Limitare măsurători DQ. Este obligatoriu pentru a avea încredere în toate celelalte date.
+Limitare măsurători DQ. Este obligatorie pentru a avea încredere în toate celelalte date.
 
 Se colectează următoarele câmpuri:
 
@@ -17447,13 +17478,13 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officetelemetryrulesenginemediumcostthrottled"></a>Office.Telemetry.RulesEngineMediumCostThrottled
 
-Limitare măsurători DQ. Este obligatoriu pentru a avea încredere în toate celelalte date.
+Limitare măsurători DQ. Este obligatorie pentru a avea încredere în toate celelalte date.
 
 Acest eveniment nu colectează niciun câmp.
 
 ### <a name="officetelemetryrulesenginespikethrottled"></a>Office.Telemetry.RulesEngineSpikeThrottled
 
-Limitare măsurători DQ. Este obligatoriu pentru a avea încredere în toate celelalte date.
+Limitare măsurători DQ. Este obligatorie pentru a avea încredere în toate celelalte date.
 
 Se colectează următoarele câmpuri:
 
@@ -17475,7 +17506,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officetelemetryrulesenginethrottled"></a>Office.Telemetry.RulesEngineThrottled
 
-Limitare măsurători DQ. Este obligatoriu pentru a avea încredere în toate celelalte date.
+Limitare măsurători DQ. Este obligatorie pentru a avea încredere în toate celelalte date.
 
 Se colectează următoarele câmpuri:
 
