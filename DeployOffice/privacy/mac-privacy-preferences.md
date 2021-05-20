@@ -14,14 +14,17 @@ ms.custom:
 - Ent_Office_Mac
 description: Oferă informații administratorilor Office despre gestionarea controalelor de confidențialitate în Office pentru Mac.
 hideEdit: true
-ms.openlocfilehash: d23d1288adf823888c900b44acd5bc905037cd94
-ms.sourcegitcommit: 3890a23390edd0b5fdb2cf33613ec0778566cf97
+ms.openlocfilehash: b7beda7409cff00d54f36851eb21e4d66a8cacce
+ms.sourcegitcommit: 9b5f18c543c286c95e546e22fc8edb60ef541030
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "43992885"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "52578384"
 ---
 # <a name="use-preferences-to-manage-privacy-controls-for-office-for-mac"></a>Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac
+
+> [!NOTE]
+> Pentru o listă de produse Office care sunt reglementate de aceste informații despre confidențialitate, consultați [Controale de confidențialitate disponibile pentru produsele Office](products-versions-privacy-controls.md).
 
 Începând cu versiunea 16.28 pentru Office pentru Mac, există noi setări de preferințe care vă permit să controlați setările asociate cu:
 
@@ -56,19 +59,18 @@ Aceste noi setări de preferințe sunt compatibile cu API-ul CFPreferences și p
 
 Datele de diagnosticare sunt utilizate pentru a menține Office securizat și actualizat, pentru a detecta, a diagnostica și a remedia problemele și, de asemenea, pentru a face îmbunătățiri de produs. Pentru mai multe informații, consultați [Datele de diagnosticare trimise din Aplicații Microsoft 365 pentru întreprindere la Microsoft](overview-privacy-controls.md#diagnostic-data-sent-from-microsoft-365-apps-for-enterprise-to-microsoft).
 
-|||
+|Categorie|Detalii|
 |:-----|:-----|
 |**Domeniu de preferințe**  | `com.microsoft.office` |
 |**Cheie**  | `DiagnosticDataTypePreference`  |
 |**Tip de date**  | Șir |
-|**Valori posibile**  | `BasicDiagnosticData` *(setează nivelul la Necesare)* <br/> `FullDiagnosticData` *(setează nivelul la Opționale)* <br/> `ZeroDiagnosticData` *(setează nivelul la Niciuna)* |
+|**Valori posibile**  | `BasicDiagnosticData` *(această valoare setează nivelul la Necesare)* <br/> `FullDiagnosticData` *(această valoare setează nivelul la Opționale)* <br/> `ZeroDiagnosticData` *(această valoare setează nivelul la Niciuna)* |
 |**Disponibilitate** |16.28 și versiuni mai recente |
 
-Începând cu noile instalări ale versiunii 16.30, dacă nu setați această preferință, sunt trimise doar datele de diagnosticare necesare către Microsoft, dacă utilizatorii cu abonament Office 365 (sau Microsoft 365) sunt conectați cu un cont de la locul de muncă sau de la școală sau dacă utilizatorii au o versiune cu licență de volum de Office 2019 pentru Mac. De asemenea, acești utilizatori nu pot modifica nivelul de date de diagnosticare, indiferent de modul în care setați această preferință.
+Dacă nu setați această preferință, sunt trimise către Microsoft atât datele de diagnostic necesare, cât și cele opționale, dacă utilizatorii cu abonament Office 365 (sau Microsoft 365) sunt conectați cu un cont de la locul de muncă sau de la școală sau dacă au o versiune de Office 2019 pentru Mac cu licență de volum. De asemenea, acești utilizatori nu pot modifica nivelul datelor de diagnosticare, indiferent de modul în care setați această preferință.
 
 > [!NOTE]
-> - Dacă instalați versiunea 16.28 sau 16.29 și nu setați această preferință, către Microsoft se vor trimite atât date de diagnostic opționale cât și necesare. Dacă faceți upgrade apoi la versiunea 16.30 sau o versiune mai recentă, atât datele de diagnostic opționale, cât și cele necesare sunt trimise în continuare către Microsoft, cu excepția cazului în care utilizați această preferință pentru a seta o altă valoare.
-> - Dacă setați această preferință, ea se va aplica, de asemenea, la Versiunea 1.00.217856 și la versiuni mai recente ale Teams pentru Mac și la Versiunea 16.28 și versiunile ulterioare ale Skype for Business pentru Mac.
+> Am actualizat paragraful anterior pentru a clarifica faptul că și datele de diagnosticare opționale sunt trimise către Microsoft dacă nu setați această preferință.
 
 Pentru alți utilizatori, cum ar fi utilizatorii la domiciliu cu abonament Office 365 (sau Microsoft 365), sunt trimise doar date de diagnosticare necesare, cu excepția cazului în care utilizatorul alege să trimită și date de diagnosticare opționale, accesând **Preferințe** > **Confidențialitate**.
 
@@ -76,7 +78,7 @@ Pentru alți utilizatori, cum ar fi utilizatorii la domiciliu cu abonament Offic
 
 Experiențele conectate care vă analizează conținutul sunt experiențe care utilizează conținutul Office pentru vă oferi recomandări de proiectare, sugestii de editare, detalii privind datele și alte caracteristici similare. De exemplu, PowerPoint Designer sau Cercetare în Word. Pentru o listă a acestor experiențe conectate, consultați [Experiențe conectate în Office](connected-experiences.md)
 
-|||
+|Categorie|Detalii|
 |:-----|:-----|
 |**Domeniu de preferințe**  | `com.microsoft.office` |
 |**Cheie**  | `OfficeExperiencesAnalyzingContentPreference`  |
@@ -94,7 +96,7 @@ Pentru alți utilizatori, cum ar fi utilizatori la domiciliu cu un abonament Off
 
 Experiențele conectate care descarcă conținut online sunt experiențe care vă permit să căutați și să descărcați conținut online, inclusiv șabloane, imagini, modele 3D, videoclipuri și materiale de referință pentru a vă îmbunătăți documentele. De exemplu, șabloanele Office sau Pornirea rapidă PowerPoint. Pentru o listă a acestor experiențe conectate, consultați [Experiențe conectate în Office](connected-experiences.md)
 
-|||
+|Categorie|Detalii|
 |:-----|:-----|
 |**Domeniu de preferințe**  | `com.microsoft.office` |
 |**Cheie**  | `OfficeExperiencesDownloadingContentPreference`  |
@@ -112,7 +114,7 @@ Pentru alți utilizatori, cum ar fi utilizatori casnici cu un abonament Office 3
 
 În plus față de experiențele conectate menționate mai sus, există câteva experiențe conectate opționale pe care le puteți alege pentru a le permite utilizatorilor să le acceseze cu contul organizației lor, care este uneori denumit cont de la locul de muncă sau de la școală. De exemplu, caracteristicile LinkedIn ale Asistentului pentru CV în Word sau caracteristica Bară meteo în Outlook, care utilizează Meteo MSN. Pentru mai multe exemple, consultați [Prezentare generală a experiențelor conectate opționale în Office](optional-connected-experiences.md).
 
-|||
+|Categorie|Detalii|
 |:-----|:-----|
 |**Domeniu de preferințe**  | `com.microsoft.office` |
 |**Cheie**  | `OptionalConnectedExperiencesPreference`  |
@@ -128,7 +130,7 @@ Pentru alți utilizatori, cum ar fi utilizatori casnici cu un abonament Office 3
 
 Puteți utiliza această preferință pentru a controla dacă majoritatea experiențelor conectate sunt disponibile pentru utilizatorii dvs.
 
-|||
+|Categorie|Detalii|
 |:-----|:-----|
 |**Domeniu de preferințe**  | `com.microsoft.office` |
 |**Cheie**  | `ConnectedOfficeExperiencesPreference`  |
@@ -153,11 +155,11 @@ Pentru alți utilizatori, cum ar fi utilizatori casnici cu un abonament Office 3
 
 ## <a name="preference-setting-for-the-required-data-notice-dialog-for-microsoft-autoupdate"></a>Setarea preferințelor pentru caseta de dialog notificare de date necesară pentru Microsoft AutoUpdate
 
-Prima dată când este lansată versiunea 4.12 sau o versiune mai recentă de Microsoft AutoUpdate (MAU), utilizatorii vor vedea un dialog **Notificare despre datele necesare**, care le furnizează informații despre care date din MAU sunt trimise către Microsoft.
+Prima dată când este lansată versiunea 4.12 sau o versiune mai recentă de Microsoft AutoUpdate (MAU), utilizatorii vor vedea un dialog **Notificare despre datele necesare**, care le furnizează informații referitoare la ce date din MAU sunt trimise către Microsoft.
 
 Dacă nu doriți ca utilizatorii dvs. să vadă această casetă de dialog **Notificare despre datele necesare** pentru Microsoft AutoUpdate, puteți seta următoarea preferință. Indiferent de valoarea pe care ați setat-o, caseta de dialog nu va fi afișată pentru utilizatorii dvs.
 
-|||
+|Categorie|Detalii|
 |:-----|:-----|
 |**Domeniu de preferințe**  | `com.microsoft.autoupdate2` |
 |**Cheie**  | `AcknowledgedDataCollectionPolicy`  |
@@ -168,7 +170,7 @@ Dacă nu doriți ca utilizatorii dvs. să vadă această casetă de dialog **Not
 Dacă le permiteți utilizatorilor să vadă această casetă de dialog, atunci când utilizatorul alege **OK**, valoarea `RequiredDataOnly` este scrisă în`AcknowledgedDataCollectionPolicy` și caseta de dialog nu este afișată din nou pentru utilizator.
 
 
-## <a name="related-topics"></a>Subiecte asociate
+## <a name="related-articles"></a>Articole asociate
 
 - [Referință privind profilul de configurare (documentația pentru dezvoltatori Apple)](https://go.microsoft.com/fwlink/p/?linkid=852998)
 - [Implementarea preferințelor pentru Office pentru Mac](../mac/deploy-preferences-for-office-for-mac.md)
