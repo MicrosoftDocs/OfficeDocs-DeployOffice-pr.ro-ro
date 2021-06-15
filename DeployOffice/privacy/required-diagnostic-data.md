@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre datele de diagnosticare obligatorii în Office și le furnizează o listă de evenimente și câmpuri de date.
 hideEdit: true
-ms.openlocfilehash: c61c3072c4c0f61926b51c0fab5e46a1b5151e00
-ms.sourcegitcommit: 2796ba69444926d686e7ed587a89d8ee9e313d84
+ms.openlocfilehash: 47ecf8e0195324b1c40a627333275bbed0947253
+ms.sourcegitcommit: 0e2ec395ca334719883a7a48b5313a72217f2eab
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/11/2021
-ms.locfileid: "52328435"
+ms.lasthandoff: 06/11/2021
+ms.locfileid: "52907402"
 ---
 # <a name="required-diagnostic-data-for-office"></a>Date de diagnosticare obligatorii pentru Office
 
@@ -45,6 +45,11 @@ Dacă sunteți administratorul organizației dvs., v-ar putea interesa și urmă
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pentru Mac](mac-privacy-preferences.md)
 - [Utilizați preferințele pentru a gestiona controalele de confidențialitate ale Office pe dispozitivele iOS.](ios-privacy-preferences.md)
 - [Utilizați setările de politică pentru a gestiona controale de confidențialitate pentru Office pe dispozitivele Android](android-privacy-controls.md)
+
+> [!NOTE]
+> Pentru informații despre datele de diagnosticare necesare pentru Microsoft Teams, consultați următoarele articole:
+> - [Date de diagnostic desktop necesare pentru Microsoft Teams](/microsoftteams/policy-control-diagnostic-data-desktop)
+> - [Date de diagnostic mobile necesare pentru Microsoft Teams](/microsoftteams/policy-control-diagnostic-data-mobile)
 
 ## <a name="categories-data-subtypes-events-and-data-fields-for-required-diagnostic-data"></a>Categorii, subtipuri de date, evenimente și câmpuri de date pentru date de diagnosticare obligatorii
 
@@ -153,6 +158,8 @@ Informații despre sistemul de operare și versiune.
 
 Această categorie conține următoarele câmpuri:
 
+  - **Model** - șir care conține modelul fizic al dispozitivului care rulează aplicația. Doar iOS. De exemplu, iPhone13,3 sau iPad11,6.
+  
   - **OsBuild** - numărul de compilare al sistemului de operare instalat pe dispozitiv. Ne permite să identificăm dacă problemele afectează pachete Service Pack sau versiuni ale unui sistem de operare dat, în mod diferit decât altele, astfel încât să putem stabili priorități în ceea ce privește problemele.
 
   - **OsVersion** - versiunea majoră a sistemului de operare instalat pe dispozitiv. Ne permite să stabilim dacă problemele afectează o anumită versiune a sistemului de operare, mai mult decât altele, astfel încât să putem stabili priorități în ceea ce privește problemele.
@@ -360,6 +367,8 @@ Această categorie conține următoarele câmpuri:
   - **Flags** - informații utilizate pentru a modifica modul în care răspunde un anumit eveniment. Utilizat pentru a gestiona modul în care un anumit eveniment este tratat cu scopul de a încărca datele în Microsoft.
 
   - **Id** - identificator unic pentru eveniment. Ne permite să identificăm evenimentele care sunt primite.
+
+  - **IsExportable** - Un câmp pentru a indica dacă acest eveniment necesită o procesare suplimentară prin exportul canalului
 
   - **Level** - denotă tipul de eveniment.
 
@@ -1076,7 +1085,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeextensibilitycatalogexchangegetlastupdate"></a>Office.Extensibility.Catalog.ExchangeGetLastUpdate
 
-Date privind succesul sau nereușita în ceea ce privește regăsirea necesității unor date actualizate privind programele de completare atribuite de administratorul de entitate găzduită Office 365. Utilizat pentru măsurători ale stării, diagrame și analiza problemelor clientului. ExchangeGetLastUpdate va rula întotdeauna la inițializare ca parte a codului gazdă și va determina dacă atribuirile de program de completare s-au modificat pentru un utilizator.   Dacă da, atunci osf.DLL va fi încărcat, astfel încât să putem apela ExchangeGetEntitlements pentru a obține anumite atribuiri (și ExchangeGetManifests va fi apelat pentru a regăsi orice manifest nou care este necesar).   ExchangeGetEntitlements (și ExchangeGetManifests) pot fi apelate și la cerere după ce aplicația-gazdă a rulat.   Ideea este de a nu încărca DLL-ul mare în cazul în care nu este necesar.   Fără acest eveniment în Obligatoriu, nu am putea să spunem dacă utilizatorii nu reușesc să obțină programe de completare atribuite lor dacă primul apel de serviciu nu reușește.   Este, de asemenea, semnalul principal în orice problemă de autentificare cu care ne confruntăm când comunicăm cu serviciul nostru.
+Date privind succesul sau nereușita în ceea ce privește regăsirea necesității unor date actualizate privind programele de completare atribuite de administratorul de entitate găzduită Office 365. Utilizat pentru măsurători ale stării, diagrame și analiza problemelor clientului. ExchangeGetLastUpdate va rula întotdeauna la inițializare ca parte a codului gazdă și va determina dacă atribuirile de program de completare s-au modificat pentru un utilizator.   Dacă da, atunci osf.DLL va fi încărcat, astfel încât să putem apela ExchangeGetEntitlements pentru a obține anumite atribuiri (și ExchangeGetManifests va fi apelat pentru a regăsi orice manifest nou care este necesar).   ExchangeGetEntitlements (și ExchangeGetManifests) pot fi apelate și la cerere după ce aplicația-gazdă a rulat.   Ideea este de a nu încărca DLL-ul mare în cazul în care nu este necesar.   Fără acest eveniment în Obligatoriu, nu am putea să spunem dacă utilizatorii nu reușesc să obțină programe de completare atribuite lor dacă primul apel de serviciu nu reușește.   Este, de asemenea, semnalul principal în orice problemă de autentificare cu care ne confruntăm când comunicăm cu serviciul nostru.
 
 Se colectează următoarele câmpuri:
 
@@ -1747,6 +1756,8 @@ Se colectează următoarele câmpuri:
 
 - **is_all_day** - utilizat împreună cu „meeting_duration” pentru a specifica dacă aceasta este o întâlnire de o zi întreagă. Ne ajută să înțelegem dacă există probleme privind acțiunile efectuate pentru întâlnirile de o zi întreagă. 
 
+- **is_every_meeting_online_on** - Adevărat dacă contul utilizatorului este setat să organizeze în mod implicit întâlniri online. Ne ajută să înțelegem dacă există probleme privind calendarele activate pentru întâlniri online. 
+
 - **is_location_permission_granted** - dacă utilizatorul a acordat permisiunea de locație a sistemului la aplicație. Dacă permisiunea pentru locație este acordată, aplicația poate afișa informații despre utilitate suplimentare în interfața cu utilizatorul. Cunoscând dacă permisiunea de locație este acordată ne permite să aflăm cât de des se afișează utilizatorilor informațiile suplimentare despre utilitate.
 
 - **is_organizer** - ne ajută să înțelegem dacă întâlnirile pot fi editate și create corect de către organizator. 
@@ -1805,7 +1816,9 @@ Se colectează următoarele câmpuri pentru Android:
 
 - **account_switcher_action_type** - acest tip de acțiune urmărește dacă utilizatorul a utilizat comutatorul de cont în descoperire sau dacă s-a decis să comute între conturi
 
-- **action_type** - tipul de acțiune efectuat pentru căutare. Acest lucru identifică dacă o căutare a fost începută, este în curs sau s-a încheiat, și ce acțiuni au fost întreprinse în timpul căutării, de exemplu, dacă a fost utilizat microfonul. Acest lucru este esențial pentru a asigura căutări precise și utile. 
+- **action** - tipul de acțiune efectuat pentru căutare. Acest lucru identifică dacă o căutare a fost începută, este în curs sau s-a încheiat, și ce acțiuni au fost întreprinse în timpul căutării, de exemplu, dacă a fost utilizat microfonul. Acest lucru este esențial pentru a asigura căutări precise și utile.
+
+- **action_type** - tipul de acțiune efectuat pentru căutare. Acest lucru identifică dacă o căutare a fost începută, este în curs sau s-a încheiat, și ce acțiuni au fost întreprinse în timpul căutării, de exemplu, dacă a fost utilizat microfonul. Acest lucru este esențial pentru a asigura căutări precise și utile. *[Acest câmp a fost eliminat din compilări curente de Office, dar poate apărea încă în compilări mai vechi.]* 
 
 - **conversation_id** - ID unic pentru fiecare sesiune de căutare (de exemplu, de fiecare dată când utilizatorul intră în caseta de căutare)
 
@@ -1840,8 +1853,6 @@ Se colectează următoarele câmpuri pentru Android:
 - **search_result_filter_type** - indică ce tip de filtru a fost aplicat pentru căutare, afișare totală sau doar atașări
 
 Următoarele câmpuri sunt colectate în aplicațiile iOS ale Outlook Mobile: 
-
-- **action** - tipul de acțiune efectuat pentru căutare. Acest lucru identifică dacă o căutare a fost începută, este în curs sau s-a încheiat, și ce acțiuni au fost întreprinse în timpul căutării, de exemplu, dacă a fost utilizat microfonul. Acest lucru este esențial pentru a asigura căutări precise și utile.
 
 - **answer_result_selected_count** - urmărește de câte ori căutarea a fost „reușită”, de exemplu dacă utilizatorul a găsit persoana pe care o căuta? Ați compus un mesaj de e-mail? Ați marcat mesajul în document? 
 
@@ -1903,6 +1914,8 @@ Se colectează următoarele câmpuri:
 - **hx_error_type** - ne spune ce eroare s-a produs și a împiedicat serviciul să finalizeze eliminarea, actualizarea sau adăugare unei reacții la un mesaj.
 
 - **hx_string_tag** - ne spune eticheta erorii din codul de bază al serviciului
+
+- **is_pinned** - Ne spune dacă conversația este fixată. Acest lucru este pentru a evalua dacă utilizatorii interacționează cu mesaje fixate și dacă caracteristica de fixare se comportă conform așteptărilor.
 
 - **reaction_origin** - indică originea de unde a reacționat utilizatorul 
 
@@ -2542,6 +2555,8 @@ Se colectează următoarele câmpuri:
 
 - **is_group_escalation** - indică dacă mesajul în care fost întreprinsă acțiunea a fost trimis la cutia poștală a utilizatorului din cauza unei escaladări (abonat la grup)
 
+- **is_pinned** - Ne spune dacă conversația este fixată. Acest lucru este pentru a evalua dacă utilizatorii interacționează cu mesaje fixate și dacă caracteristica de fixare se comportă conform așteptărilor.
+
 - **is_rule** - indică dacă acțiunea de corespondență efectuată resetează o clasificare prioritară/o altă clasificare
 
 - **is_threaded_mode** - indică dacă mesajul a fost în modul cu fir sau nu, de ex. cum sunt grupate mesajele
@@ -2944,7 +2959,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeappcompatappcompatagentscanandupload"></a>Office.AppCompat.AppCompat.AgentScanAndUpload
 
-Colectat doar atunci când utilizatorul final a activat Tabloul de bord de telemetrie Office. Colectează informații privind momentul în care se execută Agentul de telemetrie Office.    Acest lucru se colectează doar atunci când Tabloul de bord de telemetrie Office este activat și este utilizat pentru a determina starea de funcționare a agentului de telemetrie Office.
+Colectat doar atunci când utilizatorul final a activat Tabloul de bord de telemetrie Office. Colectează informații privind momentul în care se execută Agentul de telemetrie Office.    Acest lucru se colectează doar atunci când Tabloul de bord de telemetrie Office este activat și este utilizat pentru a determina starea de funcționare a agentului de telemetrie Office.
 
 Se colectează următoarele câmpuri:
 
@@ -2965,7 +2980,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeappcompatappcompattelemetrydashboardresiliencycrashlog"></a>Office.AppCompat.AppCompat.TelemetryDashboardResiliencyCrashLog
 
-Colectat doar atunci când Tabloul de bord de telemetrie Office a fost activat de utilizatorul final (cel mai probabil un administrator). Colectează apariția unor căderi de documente și programe de completare Office.  Se colectează doar atunci când utilizatorul a activat Tabloul de bord de telemetrie Office și este utilizat pentru a stabili dacă au loc mai multe căderi de programe de completare sau documente.
+Colectat doar atunci când Tabloul de bord de telemetrie Office a fost activat de utilizatorul final (cel mai probabil un administrator). Colectează apariția unor căderi de documente și programe de completare Office.  Se colectează doar atunci când utilizatorul a activat Tabloul de bord de telemetrie Office și este utilizat pentru a stabili dacă au loc mai multe căderi de programe de completare sau documente.
 
 Se colectează următoarele câmpuri:
 
@@ -2973,7 +2988,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeappdocsappdocsdocumentoperation"></a>Office.AppDocs.AppDocs.DocumentOperation
 
-Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Android, iOS, Universal și Windows. Evenimentul înregistrează momentul când are loc o operațiune de fișier (creare/deschidere/salvare/export/etc/) și este utilizat pentru a înțelege experiențele de utilizator, pe baza informațiilor de operațiune a fișierelor.
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Android, iOS, Universal sau Windows. Evenimentul înregistrează când are loc o operație de fișier (creați / deschideți / salvați / exportați / etc.) și este utilizat pentru a înțelege și a prioritiza experiențele utilizatorilor pe baza informațiilor despre operația de fișier.
 
 Se colectează următoarele câmpuri:
 
@@ -3428,7 +3443,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officedocsappdocsoperationopenfrompath"></a>Office.Docs.AppDocs.OperationOpenFromPath
 
-Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Android, iOS, Universal și Windows. Evenimentul înregistrează atunci când are loc o operațiune de deschidere a fișierului de pe o cale și este folosit pentru a înțelege și pentru a acorda prioritare experiențelor utilizatorului, pe baza informațiilor despre operațiunea de deschidere a fișierelor.
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Android, iOS, Universal sau Windows. Evenimentul înregistrează când are loc o operațiune de deschidere a fișierului dintr-o cale și este utilizat pentru a înțelege și a prioritiza experiențele utilizatorului pe baza informațiilor despre operațiunea de deschidere a fișierelor.
 
 Se colectează următoarele câmpuri:
 
@@ -3540,7 +3555,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officedocsappdocsoperationopenfromprotocolhandler"></a>Office.Docs.AppDocs.OperationOpenFromProtocolHandler
 
-Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Android, iOS, Universal și Windows. Evenimentul înregistrează atunci când are loc o operațiune de deschidere a fișierului dintr-o altă aplicație folosind interfața rutinei de tratare al protocolului și este folosit pentru a înțelege și pentru a acorda prioritare experiențelor utilizatorului, pe baza informațiilor despre operațiune de deschidere a fișierelor.
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Android, iOS, Universal sau Windows. Evenimentul înregistrează atunci când are loc o operațiune de deschidere a fișierului dintr-o altă aplicație folosind interfața rutinei de tratare al protocolului și este folosit pentru a înțelege și pentru a acorda prioritare experiențelor utilizatorului, pe baza informațiilor despre operațiune de deschidere a fișierelor.
 
 Se colectează următoarele câmpuri:
 
@@ -3652,7 +3667,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officedocsappdocsoperationopenfromshell"></a>Office.Docs.AppDocs.OperationOpenFromShell
 
-Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Android, iOS, Universal și Windows. Evenimentul înregistrează atunci când are loc o operațiune de deschidere a fișierelor din adresa URL furnizat în lista utilizată cel mai recent și este folosit pentru a înțelege și pentru a acorda prioritare experiențelor de utilizator, pe baza informațiilor despre operațiune de deschidere a fișierelor.
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Android, iOS, Universal sau Windows. Evenimentul înregistrează când are loc o operațiune de deschidere a fișierului din shell și este utilizat pentru a înțelege și a prioritiza experiențele utilizatorului pe baza informațiilor despre operațiunea de deschidere a fișierelor.
 
 Se colectează următoarele câmpuri:
 
@@ -3765,7 +3780,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officedocsappdocsoperationopenfromurl"></a>Office.Docs.AppDocs.OperationOpenFromUrl
 
-Acest eveniment este colectat pentru aplicațiile Office care rulează pe platformele Android, iOS, Universal și Windows. Evenimentul înregistrează atunci când are loc o operațiune de deschidere a fișierelor din URL-ul și pentru a acorda prioritare experiențelor de utilizator, pe baza informațiilor despre operațiune de deschidere a fișierelor.
+Acest eveniment este colectat pentru aplicațiile Office care rulează pe platforme Android, iOS, Universal sau Windows. Evenimentul înregistrează când are loc o operație de deschidere a fișierelor din URL și este folosit pentru a înțelege și pentru a acorda prioritate experienței utilizatorului, pe baza informațiilor despre operația de deschidere a fișierului.
 
 Se colectează următoarele câmpuri:
 
@@ -4414,10 +4429,20 @@ Evenimentul este colectat când fluxul este prezentat utilizatorului. Evenimentu
 
 - **version** - versiunea clientului de flux.
 
+#### <a name="officefeedbacksurveyfloodgateclientgetdecisionforactionprestart"></a>Office.Feedback.Survey.FloodgateClient.GetDecisionForActionPreStart
+
+În aplicațiile Office controlăm frecvența mesajelor din produs și trimitem mesajele printr-un strat de guvernanță. Acest eveniment se conectează în condiții de eroare atunci când încercăm să aplicăm guvernanța la mesajele din aplicație înainte ca modulul care gestionează guvernanța să fie activat complet. Această telemetrie ajută la consolidarea logicii noastre de guvernanță prin colectarea detaliilor scenariilor în care guvernanța nu este aplicată.
+
+Următoarele câmpuri sunt colectate:
+
+- **Data_EventId** - Identificator unic al declarației jurnal.
+
+- **Data_SurveyId** - Numele mesajului pe care încercăm să îl afișăm atunci când este generată această eroare.
+
 
 #### <a name="officefeedbacksurveyfloodgateclientsurveytracked"></a>Office.Feedback.Survey.FloodgateClient.SurveyTracked
 
-Monitorizează atunci când un dispozitiv eligibil pentru o anchetă pornește o aplicație. Se utilizează pentru a evalua experiența sondajului, precum și pentru a vă asigura de funcționarea corectă a semnalului utilizat pentru a analiza problemele și stările clienților.
+Urmărește atunci când un dispozitiv eligibil pentru o anchetă pornește o aplicație. Utilizată pentru a evalua starea procesului de selectare a utilizatorilor anchetei și pentru a asigura că semnalul utilizat pentru a analiza problemele și starea clienților funcționează corect.
 
 Se colectează următoarele câmpuri:
 
@@ -4431,7 +4456,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officefeedbacksurveyfloodgateclienttriggermet"></a>Office.Feedback.Survey.FloodgateClient.TriggerMet
 
-Monitorizează atunci când un dispozitiv a îndeplinit criteriile pentru a afișa o anchetă. Se utilizează pentru a evalua procesul de declanșare a sondajului, precum și pentru a vă asigura de funcționarea corectă a semnalului utilizat pentru a analiza problemele și stările clienților
+Urmărește atunci când un dispozitiv a îndeplinit criteriile pentru a afișa o anchetă. Utilizată pentru a evalua starea procesului de declanșare a anchetei și pentru a asigura că semnalul utilizat pentru a analiza problemele și starea clienților funcționează corect.
 
 Se colectează următoarele câmpuri:
 
@@ -5568,7 +5593,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officelivepersonacarduseractionsclosedpersonacard"></a>Office.LivePersonaCard.UserActions.ClosedPersonaCard
 
-Ne înregistrăm atunci când utilizatorul închide un Card de persoană.  Datele sunt utilizate pentru a determina dacă respectivul card este încărcat corect. 
+Ne conectăm atunci când utilizatorul închide un Card personal. Datele se utilizează pentru a determina dacă cardul s-a închis corect. 
 
 Se colectează următoarele câmpuri: 
 
@@ -6501,9 +6526,9 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officepowerpointdocoperationnewdocument"></a>Office.PowerPoint.DocOperation.NewDocument
 
-Colectat când PowerPoint creează o prezentare nouă.  Include măsurători de eroare și succes și performanță.
+Colectat când PowerPoint creează o prezentare nouă.  Include măsurători de eroare și succes și performanță.
 
-Aceste informații sunt utilizate pentru a garanta că putem crea cu succes fișiere fără degradarea performanței.
+Aceste informații sunt utilizate pentru a garanta că putem crea cu succes fișiere fără degradarea performanței.
 
 Se colectează următoarele câmpuri:
 
@@ -8697,6 +8722,16 @@ Se colectează următoarele câmpuri:
 
 - **RMS.VerifySignatureDuration** - durată timp pentru a verifica semnătura
 
+
+#### <a name="qrcodescan"></a>qr.code.scan
+
+Acest eveniment ne anunță când un utilizator se conectează la Outlook Mobile scanând un cod QR auth pe un client Outlook desktop care conține în siguranță informațiile de conectare ale utilizatorului, eliminând astfel necesitatea conectării manuale. Evenimentul este utilizat pentru a detecta inițierea și finalizarea reușită a procesului de autentificare a utilizatorilor folosind funcționalitatea QR. Evenimentul diagnostichează erorile de conectare care pot împiedica utilizatorul să se autentifice cu succes în aplicația mobilă.
+
+Următoarele câmpuri sunt colectate: 
+
+- **acțiune** - ce acțiune a luat utilizatorul pentru fluxul de cod qrcode
+
+
 #### <a name="readconversation"></a>read.conversation
 
 Este utilizat pentru a monitoriza posibilul impact negativ asupra stării și performanței de redare a unui mesaj de e-mail
@@ -8841,6 +8876,10 @@ Se colectează următoarele câmpuri:
 
 - **delete_scope** - în timpul unei ștergeri de cont, indiferent dacă ați șters contul de pe acest dispozitiv sau de pe toate dispozitivele cu Outlook.  
 
+- **emo_default_provider_selected_type** - Câmp care determină tipul de furnizor implicit de întâlnire setat de utilizator. 
+
+- **emo_default_provider_switch_type** - Tipul de comutare efectuat de utilizator între furnizorii de întâlniri online din ecranul Fiecare întâlnire online. Ne ajută să înțelegem implicarea utilizatorului cu caracteristica. 
+
 - **enabled_state** - dacă răspunsul dvs. automat, salvarea persoanelor de contact și blocarea setărilor de imagini externe sunt configurate corect  
 
 - **notification_action** - pentru a verifica dacă ați configurat acțiuni de notificare pentru sortarea mesajelor de e-mail, pentru a ne ajuta să ne asigurăm că această setare funcționează cu succes 
@@ -8928,7 +8967,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="storeop"></a>StoreOp
 
-Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM.  Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează operațiunea de stocare a licențelor pentru Serviciul de administrare a drepturilor. 
+Colectate atunci când un utilizator încearcă să deschidă un document protejat IRM sau să aplice protecții IRM.  Conține informațiile necesare pentru a putea investiga și diagnostica în mod corespunzător problemele care au loc atunci când se efectuează operațiunea de stocare a licențelor pentru Serviciul de administrare a drepturilor. 
 
 Se colectează următoarele câmpuri:
 
@@ -9066,7 +9105,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="dnslookupop"></a>DnsLookupOp
 
-Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM.  Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează operațiunea de căutare a informațiilor DNS. 
+Colectate atunci când un utilizator încearcă să deschidă un document protejat IRM sau să aplice protecții IRM.  Acesta conține informațiile necesare pentru a putea investiga și diagnostica în mod corespunzător problemele care au loc atunci când se efectuează operațiunea de căutare a informațiilor DNS. 
 
 Se colectează următoarele câmpuri:
 
@@ -9122,7 +9161,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="getuserop"></a>GetUserOp
 
-Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM.  Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează operațiunea obținere a certificatelor de utilizator. 
+Colectate atunci când un utilizator încearcă să deschidă un document protejat IRM sau să aplice protecții IRM.  Acesta conține informațiile necesare pentru a putea investiga și diagnostica în mod corespunzător problemele care au loc atunci când se realizează operarea certificatelor de utilizator. 
 
 Se colectează următoarele câmpuri:
 
@@ -9872,6 +9911,8 @@ Se colectează următoarele câmpuri:
 
   - **Data\_CreateLocalTempFile –** durata executării metodei CreateLocalTempFile în milisecunde
 
+  - **Data_CsiDownloadErrDlgSuppressed:bool** – Dacă a fost suprimat dialogul care ar fi fost afișat de CSI în timpul unei erori de descărcare, de obicei în favoarea unui dialog afișat de PowerPoint.
+
   - **Data\_DetachedDuration:long –** timpul cât activitatea a fost detașată/nu a rulat
 
   - **Data\_DetermineFileType –** durata executării metodei DetermineFileType în milisecunde
@@ -9953,6 +9994,10 @@ Se colectează următoarele câmpuri:
   - **Data\_Doc\_UsedWrsDataOnOpen:bool –** true dacă fișierul a fost deschis incremental folosind datele WRS prememorate în cache pentru gazdă
 
   - **Data\_Doc\_WopiServiceId:string -** identificatorul serviciului WOPI, de ex. „Dropbox”
+
+  - **Data_DownloadErrorCsi:int** – Tipul unei erori de descărcare, așa cum este furnizat de CSI
+
+  - **Data_DownloadErrorHResult:int** – HResult unei erori de descărcare, așa cum este furnizat de CSI
 
   - **Data\_DownloadExcludedData –** durata executării metodei DownloadExcludedData în milisecunde
 
@@ -10299,7 +10344,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officesystemsessionhandoff"></a>Office.System.SessionHandoff
 
-Indică faptul că sesiunea Office curentă este o sesiune de predare. Acest lucru înseamnă că tratarea unei solicitări de la utilizator pentru a deschide un document este transmisă unei instanțe care rulează deja din aceeași aplicație.
+Indică faptul că sesiunea Office curentă este o sesiune de transfer. Aceasta înseamnă că gestionarea cererii unui utilizator de a deschide un document este transferată unei instanțe care rulează deja a aceleiași aplicații.
 
 Se colectează următoarele câmpuri.
 
@@ -10853,7 +10898,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="renewuserop"></a>RenewUserOp
 
-Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM.  Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când se realizează operațiunea înnoire a certificatelor de utilizator. 
+Colectate atunci când un utilizator încearcă să deschidă un document protejat IRM sau să aplice protecții IRM.  Acesta conține informațiile necesare pentru a putea investiga și diagnostica în mod corespunzător problemele care se întâmplă atunci când se efectuează operațiunea de reînnoire a certificatelor utilizatorilor. 
 
 Se colectează următoarele câmpuri:
 
@@ -11436,7 +11481,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officepowerpointsession"></a>Office.PowerPoint.Session
 
-Se colectează utilizarea caracteristicilor pentru fiecare sesiune PowerPoint.  Aceste date se utilizează pentru a calcula raportul de închideri neplanificate PowerPoint la utilizarea unei caracteristici. Raportul de închideri neplanificate PowerPoint este un semnal cheie pentru a garanta că PowerPoint funcționează așa cum vă așteptați.
+Se colectează utilizarea caracteristicilor pentru fiecare sesiune PowerPoint.  Aceste date se utilizează pentru a calcula raportul de închideri neplanificate PowerPoint la utilizarea unei caracteristici. Raportul de închideri neplanificate PowerPoint este un semnal cheie pentru a garanta că PowerPoint funcționează așa cum vă așteptați.
 
 Se colectează următoarele câmpuri:
 
@@ -11680,6 +11725,20 @@ Se colectează următoarele câmpuri:
 - **Exception** – stiva de apeluri pentru excepție
 
 - **Event name** – categoria evenimentului și eticheta acestuia.
+
+
+#### <a name="onenotesafebootaction"></a>OneNote.SafeBootAction
+
+Acest lucru se declanșează în timpul pornirii aplicației dacă aplicația s-a defectat în sesiunea anterioară. Aceste date sunt utilizate pentru a urmări noile defecțiuni și ne vor ajuta să identificăm dacă logica de detectare a defecțiunii funcționează corect și pentru a monitoriza numărul de defecțiuni de pornire și de defecțiuni timpurii.
+
+Următoarele câmpuri sunt colectate: 
+
+- **ActionType** - Valori posibile - IncrementCount, ResetBootCounter, ResetEarlyCounter
+
+- **IsLoop Doarsh** - Valori posibile – Da/Nu
+
+- **IsNative Darsh** - Valori posibile - Da/Nu
+
 
 #### <a name="onenotesafebootresetcrashcounteronappsuspend-officeonenoteandroidsafebootresetcrashcounteronappsuspend-officeandroidearlytelemetrysafebootresetcrashcounteronappsuspend"></a>OneNote.SafeBootResetCrashCounterOnAppSuspend, Office.OneNote.Android.SafeBootResetCrashCounterOnAppSuspend, Office.Android.EarlyTelemetry.SafeBootResetCrashCounterOnAppSuspend
 
@@ -12735,7 +12794,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officepowerpointpptandroidrehearseview"></a>Office.PowerPoint.PPT.Android.RehearseView
 
-Acest eveniment denotă faptul că utilizatorul a oprit sesiunea de repetiție. În combinație cu Office.PowerPoint.PPT.Android.RehearseView.StartSession acesta va fi primul indicator pentru orice avarie sau eroare cu care se confruntă utilizatorul.
+Acest eveniment denotă faptul că utilizatorul a oprit sesiunea de repetiție. În combinație cu Office.PowerPoint.PPT.Android.RehearseView.StartSession, acesta va fi primul indicator pentru toate defecțiunile sau erorile cu care se confruntă utilizatorul.
 
 Se colectează următoarele câmpuri:
 
@@ -13010,7 +13069,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="onenoteappsafebootdialogactiontaken-officeonenoteandroidsafebootdialogactiontaken-officeandroidearlytelemetrysafebootdialogactiontaken"></a>OneNote.App.SafeBootDialogActionTaken, Office.OneNote.Android.SafeBootDialogActionTaken, Office.Android.EarlyTelemetry.SafeBootDialogActionTaken
 
-Semnallul critic utilizat pentru a urmări răspunsul utilizatorului când vede o casetă de dialog de pornire sigură. Caseta de dialog de bootare în siguranță este afișată atunci când nu am reușit să lansăm în mod repetat. Opțiunea utilizatorului pentru bootare în siguranță este utilizată ca permisiune pentru a șterge datele de aplicație pentru reuși lansarea. Aceasta se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Utilizatorul vede când întâmpină o eroare critică de blocare a bootării. Aceste informații vor ajuta să urmăriți dacă a fost rezolvată cauza blocării și dacă utilizatorul poate sau nu lansa aplicația cu succes.
+Semnal critic utilizat pentru a urmări răspunsul utilizatorului atunci când se afișează o casetă de dialog de bootare în siguranță. Caseta de dialog de bootare în siguranță este afișată atunci când nu am reușit să lansăm în mod repetat. Aceasta se folosește pentru a asigura detectarea regresiei critice pentru aplicația OneNote și starea serviciilor. Utilizatorul vede când întâmpină o eroare critică de blocare a bootării. Aceste informații vor ajuta să urmăriți dacă cauza de defecțiune a fost rezolvată și utilizatorul poate lansa aplicația cu succes.
 
 Se colectează următoarele câmpuri: 
 
@@ -13559,7 +13618,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroidclientsideiap"></a>Office.Android.ClientSideIAP
 
-Telemetrie pentru erori critice pentru erori de bază de date în timp ce răsfoiți fișiere și adaugați locuri.  Microsoft îl utilizează pentru a identifica problemele de corupție DB din aplicațiile care pot împiedica utilizatorul să adauge locuri sau să le răsfoiți din aplicație în Word, Excel sau PowerPoint.
+Telemetrie cu eroare critică pentru eroarea bazei de date în timp ce fișierul navighează și adaugă locuri.  Microsoft utilizează acest lucru pentru a identifica problemele deteriorării DB din aplicațiile care ar putea împiedica utilizatorii să adauge locuri sau să navigheze prin acestea din cadrul aplicației în Word, Excel sau PowerPoint.
 
 Se colectează următoarele câmpuri:
 
@@ -13601,7 +13660,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="officeandroiddbfailurecause"></a>Office.Android.DBFailureCause
 
-Telemetrie pentru erori critice pentru erori de bază de date în timp ce răsfoiți fișiere și adaugați locuri.  Microsoft îl utilizează pentru a identifica problemele de corupție DB din aplicațiile care pot împiedica utilizatorul să adauge locuri sau să le răsfoiți din aplicație în Word, Excel sau PowerPoint.
+Telemetrie cu eroare critică pentru eroarea bazei de date în timp ce fișierul navighează și adaugă locuri.  Microsoft utilizează acest lucru pentru a identifica problemele deteriorării DB din aplicațiile care ar putea împiedica utilizatorii să adauge locuri sau să navigheze prin acestea din cadrul aplicației în Word, Excel sau PowerPoint.
 
 Se colectează următoarele câmpuri:
 
@@ -14213,7 +14272,7 @@ Se colectează următoarele câmpuri:
 
 #### <a name="renewidentityfailure"></a>RenewIdentityFailure
 
-Este colectat atunci când un utilizator încearcă să deschidă un document protejat prin IRM sau să aplice protecții IRM. Acesta conține informațiile necesare pentru a investiga și a diagnostica corect problemele care apar atunci când nu reușește înnoirea certificatelor de utilizator.
+Colectate atunci când un utilizator încearcă să deschidă un document protejat IRM sau să aplice protecții IRM. Acesta conține informațiile necesare pentru a putea investiga și diagnostica în mod corespunzător problemele care au loc atunci când nu s-au reînnoit certificatele utilizatorilor.
 
 Se colectează următoarele câmpuri:
 
@@ -14396,6 +14455,8 @@ Se colectează următoarele câmpuri pentru Android:
 - **caption** - ne spune dacă utilizatorul a activat subtitrarea complexă pe dispozitiv, pentru a ne ajuta să detectăm probleme legate de subtitrări
 
 - **color_inversion** - ne spune dacă utilizatorul a activat setarea pentru a inversa culorile pe dispozitiv, pentru a ne ajuta să detectăm probleme legate de această setare
+
+- **density_setting** - Modul de densitate particularizat (selectat de utilizator) utilizat în prezent de aplicație
 
 - **high_contrast** - ne spune dacă utilizatorul a activat setarea pentru Contrast înalt pe dispozitiv, pentru a ne ajuta să detectăm probleme legate de această setare
 

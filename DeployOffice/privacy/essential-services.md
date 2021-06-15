@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Oferă administratorilor Office informații despre servicii esențiale în Office, cum ar fi Clic și Pornire și Licențiere, și asigură o listă de evenimente și câmpuri de date pentru aceste servicii esențiale.
 hideEdit: true
-ms.openlocfilehash: d3e5ca5381c9fb68a1e05fca703729e282593ded
-ms.sourcegitcommit: cb1f6e3ba1336fc1a8cdca927f545dc43fd8e829
+ms.openlocfilehash: 6dede4fdc57074aa5a9daaf28a20a736c813d626
+ms.sourcegitcommit: 0e2ec395ca334719883a7a48b5313a72217f2eab
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "52308157"
+ms.lasthandoff: 06/11/2021
+ms.locfileid: "52907366"
 ---
 # <a name="essential-services-for-office"></a>Servicii esențiale pentru Office
 
@@ -48,7 +48,7 @@ Următorul tabel conține o listă a serviciilor esențiale pentru Office și o 
 | **Serviciu**  | **Descriere**  |
 | ------ | ---- |
 | [Autentificare](#authentication-events) | Autentificare este un serviciu multi-platformă care validează identitatea dvs. de utilizator Office. Acesta este necesar pentru a vă permite să vă conectați la Office, să vă activați licența de Office și să vă accesați fișierele stocate în cloud; oferă o experiență unitară la nivelul sesiunilor de Office și al dispozitivelor dvs.    |
-| [Clic și Pornire](#click-to-run-events) | Clic și Pornire este tehnologia de instalare utilizată pentru a instala și a actualiza Office pe Windows. Aceasta caută noi versiuni de Office și, atunci când este disponibilă o nouă versiune, o descarcă și o instalează.  Clic și Pornire va detecta dacă sunt necesare actualizări Office, inclusiv actualizări de securitate, le va descărca și le va instala.     |
+| [Clic și Pornire](#click-to-run-events) | Clic și Pornire este tehnologia de instalare utilizată pentru a instala și a actualiza Office pe Windows. Aceasta caută noi versiuni de Office și, atunci când este disponibilă o nouă versiune, o descarcă și o instalează.  Clic și Pornire va detecta dacă sunt necesare actualizări Office, inclusiv actualizări de securitate, le va descărca și le va instala.     |
 | [Serviciul de configurație avansată (ECS)](#enhanced-configuration-service-ecs-events) | ECS oferă Microsoft capacitatea de a reconfigura instalările Office fără a fi nevoie să implementați din nou Office. Este utilizat pentru a controla implementarea treptată de caracteristici sau actualizări, în timp ce impactul implementării este monitorizat pe baza datelor de diagnosticare colectate. Este utilizat, de asemenea, pentru a atenua problemele de securitate sau de performanță cu o caracteristică sau actualizare. În plus, ECS acceptă modificările de configurare legate de datele de diagnosticare pentru a vă ajuta să vă asigurați că evenimentele corespunzătoare sunt colectate. |
 | [Licențiere](#licensing-events)     | Licențiere este un serviciu bazat pe cloud care acceptă activarea Office pentru noile instalări și păstrează licența pe dispozitivele dvs. după ce Office a fost activat. Acesta înregistrează fiecare dintre dispozitivele dvs. și activează Office, verifică starea abonamentului Office și gestionează cheile de produs.    |
 |[Microsoft AutoUpdate (MAU)](#microsoft-autoupdate-mau-events)|Microsoft AutoUpdate (MAU) este tehnologia utilizată pentru actualizarea aplicațiilor Microsoft produse pentru macOS, cum ar fi Office. MAU va detecta dacă sunt necesare actualizări ale aplicațiilor, inclusiv actualizări de securitate, le va descărca și le va instala.|
@@ -1114,15 +1114,15 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officeclicktorunscenarioinstalltaskconfigure"></a>Office.ClickToRun.Scenario.InstallTaskConfigure
 
-Date despre instalări și inventar Office colectate atunci când programul de instalare Office plasează fișiere recent descărcate. Utilizat pentru a măsura succesul/eșecul unei instalări de Office.
+Datele despre instalare și inventar Office colectate atunci când programul de instalare Office plasează fișierele recent descărcate. Se utilizează pentru a măsura succesul/eșecul unei instalări Office.
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
+  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
+  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -1158,19 +1158,19 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
   - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
-  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -1178,7 +1178,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_SusClientID -** identificator de actualizare Office computer 
 
-  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
+  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
 
   - **Data\_TotalClientCabSize -** dimensiunea fișierului cab al clientului nostru 
 
@@ -1194,11 +1194,11 @@ Date despre instalări și inventar Office colectate atunci când programul de i
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
+  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
+  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -1222,7 +1222,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ErrorMessage -** mesaj de eroare despre ce nu a funcționat bine 
 
-  - **Data\_ErrorSource -** unde s-a produs eroarea 
+  - **Data\_ErrorSource -** unde s-a produs eroarea 
 
   - **Data\_ExceptionType -** excepția cu care am eșuat 
 
@@ -1234,19 +1234,19 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
   - **Data\_ScenarioName-** ce scenariu rulează. adică, instalare 
 
-  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -1254,7 +1254,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_SusClientID-** identificator de actualizare Office computer 
 
-  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
+  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
 
   - **Data\_TotalClientCabSize -** dimensiunea fișierului cab al clientului nostru 
 
@@ -1270,11 +1270,11 @@ Date despre instalări și inventar Office colectate atunci când programul de i
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
+  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm
+  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -1310,27 +1310,27 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
   - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
-  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
-  - **Data\_SqmMachineID -** ID unic de computer utilizat de Windows SQM 
+  - **Data\_SqmMachineID -** ID unic de computer utilizat de Windows SQM 
 
   - **Data\_SusClientID-** identificator de actualizare Office computer 
 
-  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
+  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
 
   - **Data\_TotalClientCabSize -** dimensiunea fișierului cab al clientului nostru 
 
@@ -1346,11 +1346,11 @@ Date despre instalări și inventar Office colectate atunci când programul de i
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
+  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
+  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -1374,7 +1374,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ErrorMessage -** mesaj de eroare despre ce nu a funcționat bine 
 
-  - **Data\_ErrorSource -** unde s-a produs eroarea 
+  - **Data\_ErrorSource -** unde s-a produs eroarea 
 
   - **Data\_ExceptionType -** excepția cu care am eșuat 
 
@@ -1386,27 +1386,27 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
   - **Data\_ScenarioName -** ce scenariu rulează. adică, instalare
 
-  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
-  - **Data\_SqmMachineID -** ID unic de computer utilizat de Windows SQM 
+  - **Data\_SqmMachineID -** ID unic de computer utilizat de Windows SQM 
 
   - **Data\_SusClientID-** identificator de actualizare Office computer 
 
-  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
+  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
 
   - **Data\_TotalClientCabSize -** dimensiunea fișierului cab al clientului nostru 
 
@@ -1422,11 +1422,11 @@ Date despre instalări și inventar Office colectate atunci când programul de i
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
+  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
+  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -1462,27 +1462,27 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
   - **Data\_ScenarioName -** ce scenariu rulează, adică instalare
 
-  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
-  - **Data\_SqmMachineID -** ID unic de computer utilizat de Windows SQM 
+  - **Data\_SqmMachineID -** ID unic de computer utilizat de Windows SQM 
 
   - **Data\_SusClientID-** identificator de actualizare Office computer 
 
-  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
+  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
 
   - **Data\_TotalClientCabSize -** dimensiunea fișierului cab al clientului nostru 
 
@@ -1498,11 +1498,11 @@ Date despre instalări și inventar Office colectate atunci când programul de i
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
+  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm
+  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -1538,27 +1538,27 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
-  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
-  - **Data\_SqmMachineID -** ID unic de computer utilizat de Windows SQM
+  - **Data\_SqmMachineID -** ID unic de computer utilizat de Windows SQM
 
   - **Data\_SusClientID-** identificator de actualizare Office computer 
 
-  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
+  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
 
   - **Data\_TotalClientCabSize -** dimensiunea fișierului cab al clientului nostru 
 
@@ -1574,11 +1574,11 @@ Date despre instalări și inventar Office colectate atunci când programul de i
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
+  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm
+  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -1614,19 +1614,19 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează, adică instalare
+  - **Data\_ScenarioName -** ce scenariu rulează, adică instalare
 
-  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -1634,7 +1634,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_SusClientID-** identificator de actualizare Office computer 
 
-  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
+  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
 
   - **Data\_TotalClientCabSize -** dimensiunea fișierului cab al clientului nostru 
 
@@ -1646,15 +1646,15 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officeclicktorunscenarioinstalltaskmigrate"></a>Office.ClickToRun.Scenario.InstallTaskMigrate
 
-Date despre instalări și inventar Office colectate atunci când programul de instalare migrează setările de la versiunile mai vechi de Office. Utilizat pentru a măsura succesul/eșecul instalării Office.
+Datele despre instalare și inventar Office colectate atunci când Office Installer migrează setări din versiuni mai vechi de Office. Se utilizează pentru a măsura succesul/eșecul instalării Office.
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
+  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm
+  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -1678,7 +1678,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_ErrorMessage -** mesaj de eroare despre ce nu a funcționat bine 
 
-  - **Data\_ErrorSource – -** unde s-a produs eroarea
+  - **Data\_ErrorSource – -** unde s-a produs eroarea
 
   - **Data\_ExceptionType -** excepția cu care am eșuat 
 
@@ -1690,27 +1690,27 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează, adică instalare
+  - **Data\_ScenarioName -** ce scenariu rulează, adică instalare
 
-  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
-  - **Data\_SqmMachineID -** ID unic de computer utilizat de Windows SQM
+  - **Data\_SqmMachineID -** ID unic de computer utilizat de Windows SQM
 
   - **Data\_SusClientID -** identificator de actualizare Office computer
 
-  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
+  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
 
   - **Data\_TotalClientCabSize -** dimensiunea fișierului cab al clientului nostru 
 
@@ -1726,11 +1726,11 @@ Date despre instalări și inventar Office colectate atunci când programul de i
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
+  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm
+  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -1766,19 +1766,19 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
-  - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
+  - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
-  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -1786,7 +1786,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_SusClientID-** identificator de actualizare Office computer 
 
-  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
+  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
 
   - **Data\_TotalClientCabSize -** dimensiunea fișierului cab al clientului nostru 
 
@@ -1802,11 +1802,11 @@ Date despre instalări și inventar Office colectate atunci când programul de d
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
+  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
+  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -1842,27 +1842,27 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
   - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
-  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
-  - **Data\_SqmMachineID -** ID unic de computer utilizat de Windows SQM
+  - **Data\_SqmMachineID -** ID unic de computer utilizat de Windows SQM
 
   - **Data\_SusClientID-** identificator de actualizare Office computer 
 
-  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
+  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
 
   - **Data\_TotalClientCabSize -** dimensiunea fișierului cab al clientului nostru 
 
@@ -1878,11 +1878,11 @@ Date despre instalări și inventar Office colectate atunci când programul de i
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
+  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -**  la ce versiune Office 15 actualizăm 
+  - **Data\_15\_UpdateVersion -**  la ce versiune Office 15 actualizăm 
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -1892,7 +1892,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_16\_UpdateVersion-** ce versiune de Office 16 actualizați la 
 
-  - **Data\_16\_Version -** versiunea Office 16 
+  - **Data\_16\_Version -** versiunea Office 16 
 
   - **Data\_AddingFixedProducts-** produsele pe care le adăugăm 
 
@@ -1918,19 +1918,19 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
   - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
-  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -1938,7 +1938,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_SusClientID -** identificator de actualizare Office computer 
 
-  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
+  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
 
   - **Data\_TotalClientCabSize -** dimensiunea fișierului cab al clientului nostru 
 
@@ -1954,11 +1954,11 @@ Date despre instalări și inventar Office colectate atunci când programul de i
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
+  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
+  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -1994,19 +1994,19 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
   - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
-  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -2014,7 +2014,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_SusClientID-** identificator de actualizare Office computer 
 
-  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
+  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
 
   - **Data\_TotalClientCabSize -** dimensiunea fișierului cab al clientului nostru 
 
@@ -2030,11 +2030,11 @@ Date despre instalări și inventar Office colectate atunci când clientul de re
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
+  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
+  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -2064,25 +2064,25 @@ Se colectează următoarele câmpuri:
 
   - **Data\_IsErrorCodeIgnorable -** dacă codul de eroare cu care am eșuat poate fi ignorat 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth -** dacă considerăm că codul de eroare poate fi ignorat 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth -** dacă considerăm că codul de eroare poate fi ignorat 
 
   - **Data\_NewestPackageVersion -** cea mai nouă versiune de Office de pe computer 
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
   - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
-  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -2090,7 +2090,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_SusClientID-** identificator de actualizare Office computer 
 
-  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
+  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
 
   - **Data\_TotalClientCabSize -** dimensiunea fișierului cab al clientului nostru 
 
@@ -2106,11 +2106,11 @@ Date despre instalări și inventar Office colectate atunci când clientul de re
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
+  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
+  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -2146,19 +2146,19 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
   - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
-  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -2166,7 +2166,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_SusClientID-** identificator de actualizare Office computer 
 
-  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
+  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
 
   - **Data\_TotalClientCabSize -** dimensiunea fișierului cab al clientului nostru 
 
@@ -2182,11 +2182,11 @@ Date despre instalări și inventar Office colectate atunci când clientul de re
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
+  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
+  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -2216,25 +2216,25 @@ Se colectează următoarele câmpuri:
 
   - **Data\_IsErrorCodeIgnorable -** dacă codul de eroare cu care am eșuat poate fi ignorat 
 
-  - **Data\_IsErrorCodeIgnorableForScenarioHealth -** dacă considerăm că codul de eroare poate fi ignorat 
+  - **Data\_IsErrorCodeIgnorableForScenarioHealth -** dacă considerăm că codul de eroare poate fi ignorat 
 
   - **Data\_NewestPackageVersion -** cea mai nouă versiune de Office de pe computer 
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
   - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
-  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -2242,7 +2242,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_SusClientID-** identificator de actualizare Office computer 
 
-  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
+  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
 
   - **Data\_TotalClientCabSize -** dimensiunea fișierului cab al clientului nostru 
 
@@ -2258,11 +2258,11 @@ Date despre instalări și inventar Office colectate atunci când clientul de re
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
+  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
+  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -2298,19 +2298,19 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
   - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
-  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -2318,7 +2318,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_SusClientID-** identificator de actualizare Office computer 
 
-  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
+  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
 
   - **Data\_TotalClientCabSize -** dimensiunea fișierului cab al clientului nostru 
 
@@ -2330,15 +2330,15 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officeclicktorunscenarioupdatetaskintegrateupdate"></a>Office.ClickToRun.Scenario.UpdateTaskIntegrateupdate 
 
-Date despre instalări și inventar Office colectate atunci când clientul Clic și Pornire actualizează licențe, dacă este necesar. Utilizat pentru a măsura succesul/eșecul actualizării Office.
+Date despre instalări și inventar Office colectate atunci când clientul Clic și Pornire actualizează licențe, dacă este necesar. Utilizat pentru a măsura succesul / eșecul actualizării Office.
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
+  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
+  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -2374,19 +2374,19 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
   - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
-  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -2394,7 +2394,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_SusClientID-** identificator de actualizare Office computer 
 
-  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
+  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
 
   - **Data\_TotalClientCabSize -** dimensiunea fișierului cab al clientului nostru 
 
@@ -2410,11 +2410,11 @@ Date despre instalări și inventar Office colectate atunci când clientul Clic 
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
+  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
+  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -2450,19 +2450,19 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
   - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
-  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -2470,7 +2470,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_SusClientID-** identificator de actualizare Office computer 
 
-  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
+  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
 
   - **Data\_TotalClientCabSize -** dimensiunea fișierului cab al clientului nostru 
 
@@ -2486,11 +2486,11 @@ Date despre instalări și inventar Office colectate atunci când clientul Clic 
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
+  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
+  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -2536,27 +2536,27 @@ Se colectează următoarele câmpuri:
 
   - **Data\_PackageOperationSuccessful -** adevărat dacă am finalizat cu succes activitatea noastră în pachetul Office
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
   - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
-  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
-  - **Data\_SqmMachineID -** ID unic de computer utilizat de Windows SQM
+  - **Data\_SqmMachineID -** ID unic de computer utilizat de Windows SQM
 
   - **Data\_SusClientID -** identificator de actualizare Office computer 
 
-  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
+  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
 
   - **Data\_TotalClientCabSize -** dimensiunea fișierului cab al clientului nostru 
 
@@ -2574,11 +2574,11 @@ Date despre instalări și inventar Office colectate atunci când clientul Clic 
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
+  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
+  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -2614,27 +2614,27 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
   - **Data\_ScenarioName-** ce scenariu rulează. adică, instalare 
 
-  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
-  - **Data\_SqmMachineID -** ID unic de computer utilizat de Windows SQM
+  - **Data\_SqmMachineID -** ID unic de computer utilizat de Windows SQM
 
   - **Data\_SusClientID-** identificator de actualizare Office computer 
 
-  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
+  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
 
   - **Data\_TotalClientCabSize -** dimensiunea fișierului cab al clientului nostru 
 
@@ -2650,11 +2650,11 @@ Date despre instalări și inventar Office colectate atunci când clientul Clic 
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
+  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
+  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -2698,19 +2698,19 @@ Se colectează următoarele câmpuri:
 
   - **Data\_PackageUpdateAvailable -** adevărat dacă avem o nouă versiune de Office disponibilă
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
   - **Data\_ScenarioName -** ce scenariu rulează, adică instalare
 
-  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -2718,7 +2718,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_SusClientID -** identificator de actualizare Office computer 
 
-  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
+  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
 
   - **Data\_TotalClientCabSize -** dimensiunea fișierului cab al clientului nostru 
 
@@ -2730,15 +2730,15 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officeclicktorunscenarioupdatetaskupdatedownload"></a>Office.ClickToRun.Scenario.UpdateTaskUpdatedownload
 
-Date despre instalări și inventar Office colectate atunci când clientul Clic și Pornire descarcă o actualizare nouă. Utilizat pentru a măsura succesul/eșecul actualizării Office.
+Date despre instalări și inventar Office colectate atunci când clientul Clic și Pornire descarcă o nouă actualizare. Utilizat pentru a măsura succesul / eșecul actualizării Office.
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
+  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -**  la ce versiune Office 15 actualizăm 
+  - **Data\_15\_UpdateVersion -**  la ce versiune Office 15 actualizăm 
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -2786,19 +2786,19 @@ Se colectează următoarele câmpuri:
 
   - **Data\_PipelineExitCode -** codul de ieșire returnat de canalul de fișier 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
   - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
-  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -2806,7 +2806,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_SusClientID-** identificator de actualizare Office computer 
 
-  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
+  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
 
   - **Data\_TotalClientCabSize -** dimensiunea fișierului cab al clientului nostru 
 
@@ -2822,11 +2822,11 @@ Date despre instalări și inventar Office colectate atunci când clientul Clic 
 
 Se colectează următoarele câmpuri:
 
-  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
+  - **Data\_15\_SourceType -** unde se află sursa Office 15, adică CDN sau local 
 
   - **Data\_15\_UpdatesEnabled -** dacă sunt activate actualizările Office 15 
 
-  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
+  - **Data\_15\_UpdateVersion -** la ce versiune Office 15 actualizăm 
 
   - **Data\_15\_Version -** versiunea Office 15 
 
@@ -2862,19 +2862,19 @@ Se colectează următoarele câmpuri:
 
   - **Data\_OldestPackageVersion -** cea mai veche versiune de Office de pe computer 
 
-  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
+  - **Data\_ProductsToAdd -** ce produse Office adăugăm 
 
   - **Data\_ProductsToRemove-** ce produse Office eliminăm 
 
   - **Data\_RemovingFixedProducts-** produsele pe care le eliminăm 
 
-  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
+  - **Data\_RemovingProducts -** produsele pe care ni s-a solicitat să le eliminăm 
 
   - **Data\_ScenarioInstanceID -** GUID unic pentru scenariul care rulează 
 
   - **Data\_ScenarioName -** ce scenariu rulează, adică instalare 
 
-  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
+  - **Data\_ScenarioSubType -** Ce tip de scenariu rulăm, adică Dezinstalare, Reinstalare 
 
   - **Data\_SourceType -** unde se află sursa noastră, adică CDN 
 
@@ -2882,7 +2882,7 @@ Se colectează următoarele câmpuri:
 
   - **Data\_SusClientID -** identificator de actualizare Office computer 
 
-  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
+  - **Data\_TaskState -** care este starea activității, cum ar fi rulare sau anulat 
 
   - **Data\_TotalClientCabSize -** dimensiunea fișierului cab al clientului nostru 
 
@@ -3137,13 +3137,13 @@ Raportează acțiunile cu impact realizate de computer, așa cum sunt determinat
 
 - **CleanFireflyAction –**   „adevărat” dacă activitatea CleanFireflyAction este programată să ruleze în timpul acestei instalări
 
-- **CleanO15Action –**   „adevărat” dacă activitatea CleanO15Action este programată să ruleze în timpul acestei instalări
+- **CleanO15Action –**   „adevărat” dacă activitatea CleanO15Action este programată să ruleze în timpul acestei instalări
 
 - **CMDMode -** Șirul prietenos care corespunde comutatorului de mod general care a fost detectat în argumentele cmd transmise către exe. Posibilitățile sunt: autorun, configurare, consumator, descărcare, ajutor, arhivator
 
 - **DeliveryMechanism –**   Ghid-ul „FFNRoot” extras din Descriptorul de versiune XML (ștampilat de RDX), care ne informează de la ce audiență/canal a venit sursa de compilare
 
-- **DownloadC2RClientAction -** „adevărat” dacă activitatea DownloadC2RClientAction este programată să ruleze în timpul acestei instalări
+- **DownloadC2RClientAction -** „adevărat” dacă activitatea DownloadC2RClientAction este programată să ruleze în timpul acestei instalări
 
 - **ErrorCode -** Valoarea întreagă asociată cu o excepție netratată
 
@@ -3155,9 +3155,9 @@ Raportează acțiunile cu impact realizate de computer, așa cum sunt determinat
 
 - **ExitCode -**   valoarea întreagă asociată cu rezultatul rulării fazei de executare a aplicației de pregătire, indicând succesul comparativ cu anumite tipuri de erori
 
-- **LaunchAction –**  „adevărat” dacă activitatea LaunchAction este programată să ruleze în timpul acestei instalări
+- **LaunchAction –**  „adevărat” dacă activitatea LaunchAction este programată să ruleze în timpul acestei instalări
 
-- **LaunchUpdateAction –**  „adevărat” dacă activitatea LaunchUpdateAction este programată să ruleze în timpul acestei instalări
+- **LaunchUpdateAction –**  „adevărat” dacă activitatea LaunchUpdateAction este programată să ruleze în timpul acestei instalări
 
 - **PreReqResult –**  valoarea de enumerare întreagă a rezultatului atunci când s-au efectuat verificări PreReq (acceptare/respingere/rerulare)
 
@@ -3596,6 +3596,24 @@ Se colectează următoarele câmpuri:
 
   - **DwEulaId** - identificator numeric al tipului de Termeni ai licenței care au fost acceptați de către utilizator
 
+
+### <a name="officelicensingactivatedeviceentitlement"></a>Office.Licensing.ActivateDeviceEntitlement
+
+Acest eveniment se declanșează atunci când încercăm să activăm o ofertă Office permanentă bazată pe dispozitive pentru utilizator. Utilizăm aceste date pentru a monitoriza starea sistemelor și a serviciilor.
+
+Se colectează următoarele câmpuri: 
+
+- **Activity_Success** - ne spune dacă dispozitivul este licențiat cu o ofertă Office permanentă bazată pe dispozitiv.
+
+- **Data_Count** - ne spune numărul de drepturi Office permanente bazate pe dispozitive asociate cu dispozitivul. Din punct de vedere tehnic, nu ar trebui să existe mai mult de unul.
+
+- **Data_EligibleEntitlementsCount** - ne spune numărul de drepturi eligibile. Deoarece serviciul va returna toate drepturile de dispozitiv asociate dispozitivului, dar trebuie să verificăm acele oferte relevante pentru aplicația Office care rulează.
+
+- **Data_Errors** - un șir cu o listă de erori în timp ce preluam licențele pentru drepturi, separate prin virgulă.
+
+- **Data_LicensedEntitlementsCount** - ne spune numărul de drepturi pentru care preluam cu succes o licență. Ar putea exista erori de drepturi care să ne determine să nu putem obține o licență. 
+
+
 ### <a name="officelicensingactivation"></a>Office.Licensing.Activation 
 
 După configurarea licenței pe computer, încercăm să activăm licența prin apelarea serviciului AVS. Astfel se raportează rezultatul apelului de activare
@@ -3636,7 +3654,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officelicensingdialogswebviewdialogclose"></a>Office.Licensing.Dialogs.WebViewDialog.Close
  
-Acest eveniment este utilizat drept semnal care ne informează dacă experiența de achiziționare în cadrul aplicației se închide de către utilizator sau de către aplicație. Datele sunt utilizate pentru a monitoriza și a alerta starea fluxului de achiziționare în cadrul aplicației, pentru a vă asigura funcționalitatea conform așteptărilor.  
+Acest eveniment este utilizat ca semnal pentru a ne spune că experiența de cumpărare în cadrul aplicației este închisă fie de către utilizator, fie de aplicație. Datele sunt utilizate pentru a monitoriza și a avertiza cu privire la starea fluxului de cumpărare în cadrul aplicației, pentru a asigura că funcționează conform așteptărilor.  
  
 Se colectează următoarele câmpuri:
  
@@ -3806,6 +3824,19 @@ Se colectează următoarele câmpuri:
   - **LicenseStatus** - starea licenței Office pe care o folosește utilizatorul
 
   - **MachineKey** - identificator alfanumeric al cheii de licență care a fost emise pentru utilizator
+
+### <a name="officelicensinglaunchsetupoffice"></a>Office.Licensing.LaunchSetupOffice
+
+Acest eveniment se declanșează atunci când valorificăm o ofertă Office pentru utilizatorul care fie a cumpărat un dispozitiv la pachet cu o autorizare prealabilă Office OEM, fie a introdus o cheie de produs. Utilizăm aceste date pentru a monitoriza starea sistemelor și a serviciilor.
+
+Se colectează următoarele câmpuri:
+
+- **Activity_Result_Tag** - ne spune cum am finalizat acest eveniment.
+
+- **Data_DialogResult** - ne spune rezultatul general al procesului de valorificare.
+
+- **Data_Scenario** - ne spune scenariul pentru care a avut loc valorificarea.
+
 
 ### <a name="officelicensinglicensingbar"></a>Office.Licensing.LicensingBar
 
@@ -4691,6 +4722,48 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
+
+### <a name="cataloginvalid"></a>catalog.invalid
+
+Acest eveniment înregistrează o condiție de eroare care indică catalogul de manifest nevalid descărcat. Utilizăm acest eveniment pentru a ne asigura că nu există erori în fișierele manifest publicate. 
+
+Se colectează următoarele câmpuri:
+
+- **App** – procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** – versiunea aplicației
+
+- **CatalogFile** – Numele fișierului din catalog care a determinat condiția de eroare.
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - Țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** – Versiunea sistemului de operare
+
+- **Event_ReceivedTime** - Ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowTocheck** - preferința pentru verificarea actualizărilor
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **SessionId** - identificatorul pentru sesiune
+
+
 ### <a name="cloningtaskbegin"></a>cloningtask.begin
 
 Acest eveniment indică începutul activității de clonare anterioare actualizării aplicațiilor. Utilizăm acest eveniment împreună cu evenimentul cloningtask.status, pentru a determina volumul de erori de clonare, în scopul de a stabili dacă caracteristica de clonare ar trebui să fie limitată pe diferite canale de public.
@@ -5192,7 +5265,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="controllercheckwindowupdatecheck"></a>controller.checkwindow.updatecheck
 
-Acest eveniment indică faptul că a fost efectuată o verificare a actualizărilor. Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite corect, pentru a optimiza încărcarea serviciilor și pentru a defini frecvența de verificare a actualizărilor. De asemenea, dorim să optimizăm cadență noastră de lansare pe baza așteptărilor utilizatorilor față de actualizări.
+Acest eveniment indică faptul că a fost efectuată o verificare a actualizărilor. Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite corect, pentru a optimiza încărcările serviciilor și pentru a defini cât de frecvente ar trebui să fie verificările actualizărilor noastre. De asemenea, dorim să ne optimizăm cadența de lansare pe baza așteptărilor utilizatorilor față de actualizări.
 
 Se colectează următoarele câmpuri:
 
@@ -5233,7 +5306,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="controllercheckwindowupdatecheckcancel"></a>controller.checkwindow.updatecheckcancel
 
-Acest eveniment indică faptul că procesul de verificare a actualizărilor a fost anulat (de către utilizator sau de către sistem). Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite corect, pentru a optimiza încărcarea serviciilor și pentru a defini frecvența de verificare a actualizărilor. De asemenea, dorim să optimizăm cadență noastră de lansare pe baza așteptărilor utilizatorilor față de actualizări.
+Acest eveniment denotă faptul că procesul de verificare a actualizărilor a fost anulat (fie de către utilizator, fie de sistem). Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite corect, pentru a optimiza încărcările serviciilor și pentru a defini cât de frecvente ar trebui să fie verificările actualizărilor noastre. De asemenea, dorim să ne optimizăm cadența de lansare pe baza așteptărilor utilizatorilor față de actualizări.
 
 Se colectează următoarele câmpuri:
 
@@ -5274,7 +5347,7 @@ Se colectează următoarele câmpuri:
     
 ### <a name="controllercheckwindowupdatecheckcanceluser"></a>controller.checkwindow.updatecheckcanceluser
 
-Acest eveniment indică faptul că procesul de verificare a actualizărilor a fost anulat de către utilizator.  Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite corect, pentru a optimiza încărcarea serviciilor și pentru a defini frecvența de verificare a actualizărilor. De asemenea, dorim să optimizăm cadență noastră de lansare pe baza așteptărilor utilizatorilor față de actualizări.
+Acest eveniment indică faptul că procesul de verificare a actualizărilor a fost anulat de către utilizator. Utilizam acest eveniment pentru a ne asigura că actualizările sunt oferite corect, pentru a optimiza încărcările serviciilor și pentru a defini cât de frecvente ar trebui să fie verificările actualizărilor noastre. De asemenea, dorim să optimizăm cadența de lansare pe baza așteptărilor utilizatorilor față de actualizări.
 
 Se colectează următoarele câmpuri:
 
@@ -5315,7 +5388,7 @@ Se colectează următoarele câmpuri:
     
 ### <a name="controllercheckwindowupdatesfound"></a>controller.checkwindow.updatesfound
 
-Acest eveniment indică faptul că în urma procesului de verificare a actualizărilor nu au fost găsite actualizări.  Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite corect.
+Acest eveniment denotă faptul că procesul de verificare a actualizărilor a avut ca rezultat actualizări găsite. Utilizăm acest eveniment pentru a ne asigura că actualizările sunt oferite corect.
 
 Se colectează următoarele câmpuri:
 
@@ -5807,7 +5880,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="controllerdownloadwindownetworkunavailablealert"></a>controller.downloadwindow.networkunavailablealert
 
-Acest eveniment indică faptul că conectivitatea la rețea a fost pierdută în timpul descărcării actualizărilor.  Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
+Acest eveniment denotă faptul că conectivitatea la rețea s-a pierdut în timpul descărcării actualizărilor.  Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează conform așteptărilor și pentru a ajuta la depanarea erorilor.
 
 Se colectează următoarele câmpuri:
 
@@ -6052,7 +6125,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="controllerdownloadwindowupdatesuccessful"></a>controller.downloadwindow.updatesuccessful
 
-Acest eveniment indică faptul că toate actualizările din lotul actual au fost efectuate cu succes. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
+Acest eveniment indică faptul că toate actualizările din lotul actual au avut succes. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează conform așteptărilor și pentru a ajuta la depanarea erorilor.
 
 Se colectează următoarele câmpuri:
 
@@ -6093,7 +6166,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="controllerdownloadwindowuserpaused"></a>controller.downloadwindow.userpaused
 
-Acest eveniment indică faptul că toate actualizările din lotul actual au fost efectuate cu succes. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
+Acest eveniment indică faptul că toate actualizările din lotul actual au avut succes. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează conform așteptărilor și pentru a ajuta la depanarea erorilor.
 
 Se colectează următoarele câmpuri:
 
@@ -7527,7 +7600,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="downloadmgrdownloadstart"></a>downloadmgr.downloadstart
 
-Acest eveniment înregistrează actualizarea care urmează să fie descărcată. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
+Acest eveniment înregistrează actualizarea care urmează să fie descărcată. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează conform așteptărilor și pentru a ajuta la depanarea erorilor.
  
 Se colectează următoarele câmpuri:
 
@@ -7832,7 +7905,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="fbacheckforupdate"></a>fba.checkforupdate
 
-Acest eveniment indică faptul că un proces de fundal caută actualizări. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
+Acest eveniment indică faptul că un proces de fundal verifică actualizările. Folosim acest eveniment pentru a ne asigura că procesul de actualizare funcționează conform așteptărilor și pentru a ajuta la depanarea erorilor.
  
 Se colectează următoarele câmpuri:
 
@@ -8233,7 +8306,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="fbalaunchstatus"></a>fba.launchstatus
 
-Acest eveniment înregistrează erorile Daemon ale MAU în timpul încercării de lansare. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
+Acest eveniment înregistrează eșecurile daemonului MAU în timp ce încearcă să se lanseze. Folosim acest eveniment pentru a ne asigura că procesul de actualizare funcționează conform așteptărilor și pentru a ajuta la depanarea erorilor.
  
 Se colectează următoarele câmpuri:
 
@@ -8523,7 +8596,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="fbasilentupdateoptin"></a>fba.silentupdateoptin
 
-Acest eveniment indică faptul că utilizatorul optează pentru actualizările silențioase. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
+Acest eveniment indică faptul că utilizatorul optează pentru actualizări silențioase. Folosim acest eveniment pentru a ne asigura că procesul de actualizare funcționează conform așteptărilor și pentru a ajuta la depanarea erorilor.
  
 Se colectează următoarele câmpuri:
 
@@ -8645,7 +8718,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="fbaterminate"></a>fba.terminate
 
-Acest eveniment indică faptul că Daemon MAU s-a oprit normal. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
+Acest eveniment indică faptul că demonul MAU s-a terminat în mod normal. Folosim acest eveniment pentru a ne asigura că procesul de actualizare funcționează conform așteptărilor și pentru a ajuta la depanarea erorilor.
  
 Se colectează următoarele câmpuri:
 
@@ -8686,7 +8759,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="fbaupdatefound"></a>fba.updatefound
 
-Acest eveniment indică faptul că Daemon MAU a găsit actualizări disponibile oferite. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
+Acest eveniment indică faptul că demonul MAU a găsit actualizări disponibile pentru a oferi. Folosim acest eveniment pentru a ne asigura că procesul de actualizare funcționează conform așteptărilor și pentru a ajuta la depanarea erorilor.
  
 Se colectează următoarele câmpuri:
 
@@ -9065,7 +9138,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="fbasilentupdatedownload"></a>fbasilentupdate.download
 
-Acest eveniment indică faptul că se descarcă o actualizare. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
+Acest eveniment denotă faptul că o actualizare este în curs de descărcare. Folosim acest eveniment pentru a ne asigura că procesul de actualizare funcționează conform așteptărilor și pentru a ajuta la depanarea erorilor.
  
 Se colectează următoarele câmpuri:
 
@@ -9323,7 +9396,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="fbasilentupdateinstallcomplete"></a>fbasilentupdate.installcomplete
 
-Acest eveniment indică faptul că toate actualizările din grup au fost instalate. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
+Acest eveniment indică faptul că toate actualizările din lot au terminat instalarea. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează conform așteptărilor și pentru a ajuta la depanarea erorilor.
  
 Se colectează următoarele câmpuri:
 
@@ -10994,7 +11067,7 @@ Se colectează următoarele câmpuri:
     
 ### <a name="installstatuscodesign"></a>installstatus.codesign
 
-Acest eveniment înregistrează starea binară a semnăturii codului pentru sistemul de operare. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
+Acest eveniment înregistrează starea binară a semnăturii codului pentru sistemul de operare. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează conform așteptărilor și pentru a ajuta la depanarea erorilor.
  
 Se colectează următoarele câmpuri:
 
@@ -11035,7 +11108,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="installstatusdaemon"></a>installstatus.daemon
 
-Acest eveniment înregistrează starea aplicației Daemon Microsoft Autoupdate. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
+Acest eveniment înregistrează starea aplicației daemon Actualizare automată Microsoft. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează conform așteptărilor și pentru a ajuta la depanarea erorilor.
  
 Se colectează următoarele câmpuri:
 
@@ -11082,7 +11155,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="installstatushelper"></a>installstatus.helper
 
-Acest eveniment înregistrează starea instrumentului de ajutor Daemon Microsoft Actualizare automată. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
+Acest eveniment înregistrează starea instrumentului de asistență Actualizare automată Microsoft. Folosim acest eveniment pentru a ne asigura că procesul de actualizare funcționează conform așteptărilor și pentru a ajuta la depanarea erorilor.
  
 Se colectează următoarele câmpuri:
 
@@ -11451,7 +11524,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="installupdatestaskretryfail"></a>installupdatestask.retryfail
 
-Acest eveniment indică faptul că au fost întâmpinate erori în timpul procesului de reîncercare a instalării. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
+Acest eveniment indică faptul că au fost întâmpinate erori în timpul procesului de reîncercare a instalării. Folosim acest eveniment pentru a ne asigura că procesul de actualizare funcționează conform așteptărilor și pentru a ajuta la depanarea erorilor.
  
 Se colectează următoarele câmpuri:
 
@@ -13130,6 +13203,47 @@ Se colectează următoarele câmpuri:
 
 - **SessionId** - identificatorul pentru sesiune
 
+### <a name="updateclonedisablereason"></a>update.clonedisablereason
+
+Acest eveniment înregistrează o condiție indicând că o caracteristică Install-On-Clone este dezactivată pentru o anumită actualizare. Utilizăm acest eveniment pentru a monitoriza starea caracteristicii Install-On-Clone și pentru a furniza un serviciu îmbunătățit.
+
+Se colectează următoarele câmpuri:
+
+- **App** – procesul aplicației care trimite evenimentul
+
+- **AppInfo_Language** - limba în care rulează aplicația
+
+- **AppVersionLong** – versiunea aplicației
+
+- **Channel** - preferința pentru public
+
+- **Device_NetworkCountry** - Țara dispozitivului (pe baza adresei IP)
+
+- **DeviceID** - identificatorul dispozitivului
+
+- **DeviceInfo_Model** - modelul hardware al dispozitivului
+
+- **DeviceInfo_NetworkType** - tipul de rețea (Wi-Fi, cu fir, necunoscut)
+
+- **DeviceInfo_OsBuild** – Versiunea sistemului de operare
+
+- **Event_ReceivedTime** - Ora la care s-a primit telemetria
+
+- **EventInfo_Name** - numele evenimentului de telemetrie în curs de înregistrare
+
+- **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
+
+- **HowTocheck** - preferința pentru verificarea actualizărilor
+
+- **PipelineInfo_ClientCountry** - țara dispozitivului (pe baza adresei IP)
+
+- **PipelineInfo_ClientIp** - primii 3 octeți ai adresei IP
+
+- **Reason** - Motivul pentru care Instalați pe clonare este dezactivată pentru această actualizare.
+
+- **SessionId** - Identificatorul pentru sesiune
+
+
 ### <a name="updatedownloadbegin"></a>update.download.begin 
 
 Acest eveniment indică începutul procesului de actualizare a aplicației. Acesta face parte dintr-o pâlnie actualizată și este utilizată pentru a determina starea de funcționare a actualizărilor aplicației. 
@@ -13430,6 +13544,8 @@ Se colectează următoarele câmpuri:
 
 - **EventInfo_Time** - ora la care a avut loc evenimentul înregistrat 
 
+- **ForcedUpdate** - Indicarea șirului dacă o actualizare este forțată de administratorul IT
+
 - **HowToCheck** - cum se verifică setările
 
 - **Payload** - indică dacă vizualizarea statusului a fost afișată în timpul procesului de instalare
@@ -13699,7 +13815,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="updatecoreappregistration"></a>updatecore.appregistration
 
-Acest eveniment înregistrează încercările de înregistrare a unei aplicații și rezultatul/motivul. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
+Acest eveniment înregistrează încercări de a înregistra o aplicație și rezultatul / motivul. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează conform așteptărilor și pentru a ajuta la depanarea erorilor.
  
 Se colectează următoarele câmpuri:
 
@@ -13740,7 +13856,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="updatecoreloadinglaunchagent"></a>updatecore.loadinglaunchagent
 
-Acest eveniment indică faptul că Agentul de lansare este încărcat. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
+Acest eveniment indică faptul că Agentul de lansare este încărcat. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează conform așteptărilor și pentru a ajuta la depanarea erorilor.
  
 Se colectează următoarele câmpuri:
 
@@ -13820,7 +13936,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="updatecoreserverconnectionfail"></a>updatecore.server.connectionfail
 
-Acest eveniment înregistrează erorile întâmpinate în timp ce contactați CDN. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
+Acest eveniment înregistrează erorile întâmpinate în timp ce contactați CDN. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează conform așteptărilor și pentru a ajuta la depanarea erorilor.
  
 Se colectează următoarele câmpuri:
 
@@ -14187,7 +14303,7 @@ Se colectează următoarele câmpuri:
  
 ### <a name="updatefindercheckstart"></a>updatefinder.check.start
 
-Acest eveniment înregistrează fiecare moment în care inițiem o operațiune de verificare a actualizărilor. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
+Acest eveniment se înregistrează ori de câte ori inițiam o verificare a operațiunii de actualizare. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează conform așteptărilor și pentru a ajuta la depanarea erorilor.
  
 Se colectează următoarele câmpuri:
 
@@ -15090,7 +15206,7 @@ Se colectează următoarele câmpuri:
     
 ### <a name="updatemanagerupdatespending"></a>updatemanager.updatespending
 
-Acest eveniment indică faptul că s-au găsit actualizări și instalarea este în așteptare. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
+Acest eveniment indică faptul că s-au găsit actualizări și instalarea este în așteptare. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează conform așteptărilor și pentru a ajuta la depanarea erorilor.
  
 Se colectează următoarele câmpuri:
 
@@ -15220,7 +15336,7 @@ Se colectează următoarele câmpuri:
    
 ### <a name="webservicescheckforsilentupdates"></a>webservices.checkforsilentupdates
 
-Acest eveniment indică faptul că au fost găsiți candidați pentru actualizarea silențioasă. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
+Acest eveniment indică faptul că au fost găsiți candidați pentru actualizarea silențioasă. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează conform așteptărilor și pentru a ajuta la depanarea erorilor.
  
 Se colectează următoarele câmpuri:
 
@@ -15343,7 +15459,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="webservicesserviceresponse"></a>webservices.serviceresponse
 
-Acest eveniment înregistrează solicitările către serviciul MAU, timpii de răspuns și erorile. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează în mod corespunzător și pentru a ajuta la depanarea erorilor.
+Acest eveniment înregistrează solicitările către serviciul MAU, timpii de răspuns și erorile. Utilizăm acest eveniment pentru a ne asigura că procesul de actualizare funcționează conform așteptărilor și pentru a ajuta la depanarea erorilor.
  
 Se colectează următoarele câmpuri:
 
@@ -15546,7 +15662,7 @@ Se colectează următoarele câmpuri:
 
 ### <a name="officeonenotestoragenotebooksyncresult"></a>Office.OneNote.Storage.NotebookSyncResult
  
-Acest eveniment înregistrează rezultatul sincronizării blocnotesului. Acesta este utilizat pentru a afla de câte ținte de sincronizare unice este nevoie pentru calcularea scorului de sincronizare OneNote.
+Acest eveniment înregistrează rezultatul sincronizării blocnotesului. Este utilizat pentru a afla numărul țintelor de sincronizare unice la calcularea scorului de sincronizare OneNote.
  
 Se colectează următoarele câmpuri
 
