@@ -4,7 +4,7 @@
       "docset_name": "OfficeDocs-OfficeProPlus",
       "build_source_folder": "DeployOffice",
       "build_output_subfolder": "OfficeDocs-OfficeProPlus",
-      "locale": "ro-RO",
+      "locale": "ro-ro",
       "monikers": [],
       "moniker_ranges": [],
       "open_to_public_contributors": false,
@@ -18,35 +18,32 @@
       "version": 0
     }
   ],
-  "notification_subscribers": [
-    "mor-oitac-eng@moravia.com"
-  ],
-  "branches_to_filter": [
-    "live-sxs",
-    "master-sxs"
-  ],
-  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/OfficeDocs-DeployOffice",
-  "git_repository_branch_open_to_public_contributors": "live",
+  "notification_subscribers": ["mor-oitac-eng@moravia.com"],
+  "branches_to_filter": ["live-sxs","master-sxs"],
+  "continue_with_document_error": true,
+  "git_repository_url_open_to_public_contributors": "",
+  "git_repository_branch_open_to_public_contributors": "",
   "skip_source_output_uploading": false,
   "need_preview_pull_request": false,
   "contribution_branch_mappings": {},
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft.ro-RO",
+      "url": "https://github.com/Microsoft/templates.docs.msft.ro-ro",
       "branch": "master",
       "branch_mapping": {}
     },
     {
       "path_to_root": "DeployOffice/common",
-      "url": "https://github.com/MicrosoftDocs/OfficeDocs-pr",
+      "url": "https://github.com/MicrosoftDocs/OfficeDocs-pr.ro-ro",
       "branch": "live",
-      "branch_mapping": {}
+      "branch_mapping": {},
+      "include_in_build": true
     },
     {
-      "path_to_root": "_themes.pdf",
-      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
-      "branch": "master"
+    "path_to_root": "_themes.pdf",
+    "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+    "branch": "master"
     },
     {
       "path_to_root": "_repo.en-us",
@@ -58,21 +55,21 @@
       }
     }
   ],
-  "branch_target_mapping": {
-    "live": [
+    "branch_target_mapping": {
+     "live": [
       "Publish",
       "Pdf"
     ],
-    "live-sxs": [
+     "live": [
       "Publish",
       "Pdf"
     ]
   },
-  "Targets": {
-    "Pdf": {
-      "template_folder": "_themes.pdf"
-    }
-  },
+  "Targets": {  
+    "Pdf": {  
+    "template_folder": "_themes.pdf"  
+    }  
+   }, 
   "need_generate_pdf_url_template": true,
   "need_generate_pdf": true,
   "need_generate_intellisense": false,
