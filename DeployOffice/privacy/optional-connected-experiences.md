@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Privacy
 description: Le oferă administratorilor Office informații despre experiențe conectate opționale, inclusiv condițiile de utilizare care se aplică.
 hideEdit: true
-ms.openlocfilehash: 8a5f236c3dbb2cb3bb61a9a987f764880987a189
-ms.sourcegitcommit: 54b9d411bb6a021fb6db8df4acfb28287693c84c
+ms.openlocfilehash: 3583b22e9df50a3cdaff5e4cd3f6e695ab447498
+ms.sourcegitcommit: b906a2ca706cd4441964f09e1f4adf2e8b94d6be
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "51914957"
+ms.lasthandoff: 06/16/2021
+ms.locfileid: "52957659"
 ---
 # <a name="overview-of-optional-connected-experiences-in-office"></a>Prezentare generală a experiențelor conectate opționale în Office
 
@@ -28,7 +28,8 @@ ms.locfileid: "51914957"
 Dacă aveți un cont de la locul de muncă sau de la școală, este posibil ca administratorul organizației dvs. să vă fi oferit posibilitatea de a utiliza unul sau mai multe servicii cloud (denumite și „experiențe conectate opționale”) în timp ce utilizați aplicațiile Office, cum ar fi Word sau Excel, care sunt incluse în Aplicațiile Microsoft 365 pentru întreprindere (denumite anterior Office 365 ProPlus). Aceste servicii cloud sunt opționale. Depinde de dvs. dacă le utilizați sau nu. Ele vă sunt puse la dispoziție conform condițiilor din [Contractul de furnizare a serviciilor Microsoft](https://www.microsoft.com/servicesagreement) și [angajamentul de respectare a confidențialității](https://privacy.microsoft.com/). În unele cazuri, se pot aplica și alte condiții. Acest articol enumeră serviciile cu backup în cloud, explică mai în detaliu condițiile de utilizare și descrie cum le puteți dezactiva sau activa în orice moment.
 
 > [!NOTE]
-> Dacă sunteți administrator, consultați [controalele de administrator pentru experiențe conectate opționale](#admin-controls-for-optional-connected-experiences).
+> - Dacă sunteți administrator, consultați [controalele de administrator pentru experiențe conectate opționale](#admin-controls-for-optional-connected-experiences).
+> - Pentru Microsoft Teams, consultați [Prezentarea generală a experiențelor conectate opționale în Microsoft Teams](/microsoftteams/teams-privacy-oce-overview).
 
 ### <a name="if-you-use-these-services-what-terms-of-use-do-you-need-to-agree-to"></a>Dacă utilizați aceste servicii, cu ce condiții de utilizare trebuie să fiți de acord?
 
@@ -100,7 +101,7 @@ Pentru a determina dacă administratorul v-a oferit capacitatea de a utiliza exp
 
 Dacă utilizați Office pentru Mac, deschideți orice aplicație Office și selectați meniul de aplicații (cum ar fi Word sau Excel) > **Preferințe** > **Confidențialitate**. Această acțiune va deschide caseta de dialog Setări de confidențialitate de cont, unde puteți vizualiza opțiunile de confidențialitate.
 
-Pentru mai multe informații, consultați: [Setări de confidențialitate pentru cont](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b).
+Pentru mai multe informații, consultați: [Setări de confidențialitate pentru cont](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b).
 
 > [!NOTE]
 > Dacă administratorul organizației dvs. v-a oferit o versiune de licențiere în volum de Office 2019, Project 2019 sau Visio 2019, accesați **Fișier** > **Opțiuni** > **Centru de autorizare** > **Setări Centru de autorizare** > **Opțiuni de confidențialitate**. Acolo ar trebui să vedeți o casetă de selectare pentru **Activarea experiențelor conectate opționale**. Dacă nu vedeți această casetă de selectare în Project 2019 sau Visio 2019, alegeți **Setări de confidențialitate...** în caseta de dialog **Centru de autorizare**. Apoi, ar trebui să apară caseta de dialog **Setări de confidențialitate** cu o casetă de selectare pentru **Activați experiențele conectate opționale**.
@@ -111,7 +112,7 @@ Dacă administratorul v-a oferit capacitatea de a utiliza experiențe conectate 
 
 Dacă utilizați Office pentru Mac, deschideți orice aplicație Office și selectați meniul de aplicații (cum ar fi Word sau Excel) > **Preferințe** > **Confidențialitate**. Această acțiune va deschide caseta de dialog Setări de confidențialitate de cont, unde puteți vizualiza opțiunile de confidențialitate.
 
-Pentru mai multe informații, consultați: [Setări de confidențialitate pentru cont](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b).
+Pentru mai multe informații, consultați: [Setări de confidențialitate pentru cont](https://support.microsoft.com/office/3e7bc183-bf52-4fd0-8e6b-78978f7f121b).
 
 > [!NOTE]
 > Dacă administratorul organizației dvs. v-a oferit o versiune de licențiere în volum de Office 2019, Project 2019 sau Visio 2019, accesați **Fișier** > **Opțiuni** > **Centru de autorizare** > **Setări Centru de autorizare** > **Opțiuni de confidențialitate**. Acolo ar trebui să vedeți o casetă de selectare pentru **Activarea experiențelor conectate opționale**. Dacă nu vedeți această casetă de selectare în Project 2019 sau Visio 2019, alegeți **Setări de confidențialitate...** în caseta de dialog **Centru de autorizare**. Apoi, ar trebui să apară caseta de dialog **Setări de confidențialitate** cu o casetă de selectare pentru **Activați experiențele conectate opționale**.
