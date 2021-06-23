@@ -35,7 +35,7 @@
     },
     {
       "path_to_root": "DeployOffice/common",
-      "url": "https://github.com/MicrosoftDocs/OfficeDocs-pr.ro-ro",
+      "url": "https://github.com/MicrosoftDocs/OfficeDocs-pr",
       "branch": "live",
       "branch_mapping": {},
       "include_in_build": true
